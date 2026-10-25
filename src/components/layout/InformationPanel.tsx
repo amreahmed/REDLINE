@@ -2,8 +2,10 @@ import { Icon } from '../shared/Icon'
 import { ADVERTISED_CRS, MARS_LAYERS, TREK_DOCUMENTATION } from '../../data/marsLayers'
 import { layerStatusLabel } from '../../features/map/types'
 import type { LayerStatuses, LayerVisibility } from '../../features/map/types'
+import { MARS_GLOBE } from '../../data/marsGlobe'
+import type { ExplorerSummary } from '../../features/explorer/types'
 
-export function InformationPanel({ visibility, statuses }: { visibility: LayerVisibility; statuses: LayerStatuses }) {
+export function InformationPanel({ explorer, visibility, statuses }: { explorer: ExplorerSummary; visibility: LayerVisibility; statuses: LayerStatuses }) {
   return (
     <aside id="information-panel" className="panel sources-panel" aria-labelledby="information-heading">
       <div className="panel-heading flex items-center gap-3">
@@ -11,14 +13,22 @@ export function InformationPanel({ visibility, statuses }: { visibility: LayerVi
         <h2 id="information-heading">Sources & status</h2>
       </div>
       <div className="sources-content">
-        <p className="sources-intro helper">Two image products, served by NASA Mars Trek. Acquisition dates are not established for these mosaics.</p>
+        <details className="source-detail" open={!explorer.mapShown}>
+          <summary>NASA visual Mars overview</summary>
+          <p className="source-state" role="status">{explorer.globe.message}</p>
+          <p className="helper">Official glTF model, {(MARS_GLOBE.inspectedBytes / 1_000_000).toFixed(2)} MB at inspection, with embedded color and normal textures. Display lighting is illustrative.</p>
+          <p className="source-warning">No geographic model orientation is validated. The guided map handoff does not transfer a surface location. Neither model geometry nor textures are numerical elevation.</p>
+          <div className="source-links"><a href={MARS_GLOBE.sourceUrl} target="_blank" rel="noreferrer">NASA model</a><a href={MARS_GLOBE.usageUrl} target="_blank" rel="noreferrer">Usage guidance</a></div>
+          <p className="source-credit">Visual asset: {MARS_GLOBE.attribution}. REDLINE is not NASA-endorsed.</p>
+        </details>
+        <p className="sources-intro helper">MOLA context and Jezero CTX detail are image products from NASA Mars Trek. Acquisition dates are not established for these mosaics.</p>
         {MARS_LAYERS.map((layer) => {
           const status = statuses[layer.id]
           return (
             <details className="source-detail" key={layer.id} open>
               <summary>{layer.name}</summary>
               <p className="source-mission">{layer.mission}</p>
-              <p className="source-state">{layerStatusLabel(status, visibility[layer.id])}</p>
+              <p className="source-state">{!visibility[layer.id] ? 'Hidden by you' : status.phase === 'checking' ? 'Checking service metadata' : status.phase === 'unavailable' ? 'Service unavailable' : !explorer.mapShown ? 'Selected for map exploration' : status.coverage === 'outside' ? 'Outside coverage' : layer.id === 'ctx' && !explorer.localDetail ? 'Waiting for local zoom' : layerStatusLabel(status, true)}</p>
               <dl>
                 <dt>Resolution</dt><dd>{layer.resolution}</dd>
                 <dt>Service coverage (degrees)</dt><dd>{layer.extent[0].toFixed(4)} to {layer.extent[2].toFixed(4)} longitude<br />{layer.extent[1].toFixed(4)} to {layer.extent[3].toFixed(4)} latitude</dd>

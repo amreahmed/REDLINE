@@ -1,6 +1,6 @@
 # REDLINE
 
-REDLINE is an independent Mars exploration and hypothetical surface-route planning prototype. **Phase 2 adds an OpenLayers regional image map using NASA Mars Trek's MOLA color hillshade and preliminary Jezero CTX mosaic.** All six browser acceptance checks passed according to the user's manual test report. No terrain measurements or routing are implemented.
+REDLINE is an independent Mars exploration and hypothetical surface-route planning prototype. **One explorer viewport begins with NASA's visual 3D Mars overview, then uses zoom to enter real Mars Trek MOLA context and reveal Jezero CTX detail.** The handoff is explicitly guided: the model's geographic orientation is unvalidated, so no globe surface coordinate is transferred. All six unified explorer browser acceptance checks passed according to the user's manual report. No terrain measurements or routing are implemented.
 
 ## Setup and run
 
@@ -27,7 +27,21 @@ The production build is written to `dist/`. Open [http://127.0.0.1:4173](http://
 
 ESLint treats warnings as failures. Type checking covers the application, tests, and Vite configuration. Vitest exercises saved real capabilities XML, matrix/axis/coverage validation, the configured OpenLayers tile URL, and request/error/timeout/cancellation behavior. An XML DOM package is used only by tests. Tests do not fetch live data. No browser test runner is configured.
 
-### Phase 2 browser acceptance checklist
+### Unified Mars explorer
+
+The app opens on NASA's official textured overview. Drag to rotate and scroll/pinch to approach the globe, or use the same directional and zoom controls throughout exploration. Zooming in crosses a view-distance threshold and fades into the real map in the same viewport. The sidebar and source panel remain in place; there are no top-level globe/map tabs. With focus in the viewport, arrows rotate or pan, + / − zoom, and Home resets the overview or centers Jezero detail. There is no automatic rotation.
+
+**The initial zoom handoff enters Jezero context, regardless of the visible globe hemisphere.** Later handoffs resume the existing map center at a context zoom or closer. The explicit Jezero action always selects that documented map area. This is a navigation policy, not a surface-target picker or geographically registered fly-to. [Mesh/UV investigation and calibration requirements](docs/globe-alignment.md) explain why no surface pin or geographic transform is introduced.
+
+MOLA provides wider map context within its service bounds. Selected CTX appears only at local detail zoom and within its real Jezero coverage; panning outside leaves selected MOLA visible if available. Neither a disabled layer nor an unavailable service is silently replaced. Zooming out far enough returns to the overview when the model is ready. Different entry/rearm thresholds and a 360 ms input-locked fade prevent immediate switching back; reduced motion removes the fade. A failed globe leaves the real map available via **Explore map context**.
+
+Both renderers are retained within one viewport to preserve map choices and avoid reloading the model on each handoff. Only the active renderer receives input; tile layers stop rendering after the overview return settles. Resources are disposed on unmount/retry. The GLB loader still reports received bytes, validates the container, prepares embedded textures, and exposes timeout/error/retry states.
+
+The model is credited to **NASA/JPL-Caltech**, used under [NASA's published media guidance](https://www.nasa.gov/nasa-brand-center/images-and-media/). [Source documentation](docs/globe-source.md) records the official URL, actual HTTP/CORS results, embedded textures, attribution and limits. The model streams directly from NASA; no model or texture copy is bundled. Display lighting and mesh units are not scientific measurements.
+
+**Browser acceptance: PASS, based on the user's report of all six checks.** The [unified explorer verification record](docs/unified-explorer-verification.md) separates these manual results from automated checks. Browser automation remains blocked and was not bypassed; no agent-observed browser run is claimed. The passed display workflow does not establish geographic alignment. WebGL 2 is required only for the globe. The [earlier separate-view record](docs/globe-verification.md) is preserved as history.
+
+### Phase 2 browser acceptance checklist (checkpoint `9a66249`)
 
 1. Open the app and wait for real Jezero CTX imagery. Check the Network panel for the two NASA capabilities and successful tile requests; inspect the console for fatal errors.
 2. Hide CTX to reveal MOLA color hillshade, then toggle MOLA. With both hidden, the map must explain that no layers are selected.
@@ -84,9 +98,14 @@ Phase 1 was verified and committed as `a8c1d27`; its earlier five shell-only PAS
 ```text
 src/app/App.tsx                  Workspace, layer visibility, status
 src/components/layout/          Mission control, sources, About
-src/components/map/MarsMap.tsx   Map viewport and navigation controls
+src/components/map/MarsMap.tsx   Preserved standalone map component (not mounted)
+src/components/explorer/        Current single-viewport globe/map orchestration
+src/components/globe/           Preserved earlier standalone components (not mounted)
 src/data/marsLayers.ts           Two sourced image-layer definitions
+src/data/marsGlobe.ts            Official NASA visual-asset reference
 src/features/map/               Capabilities, angular grid, requests, controller, tests
+src/features/globe/             Lazy Three.js viewer and validated asset download
+src/features/explorer/          Transition state machine and layer presentation rules
 src/styles/index.css            Existing design plus map/source styles
 docs/data-sources.md             Exact service contracts and CRS qualification
 docs/evidence/phase-2/           Raw metadata and HTTP probe evidence (no image assets)
@@ -100,8 +119,8 @@ Vite, TypeScript, and ESLint configuration remain at the repository root. The Ph
 
 Both layers use identical inspected angular tile geometry. Trek's inconsistent `EPSG::104905` / `IAU2000::104905` labels and Earth-sized scale denominators are not passed to generic projection conversion. The app uses a custom service display grid. Precise native CTX latitude convention, fine cross-layer registration, and alignment with future targets or DEMs remain unverified. Quantitative overlays and measurements remain unavailable.
 
-These are rendered image products, not numerical elevation. No DEM processing, slope, hazards, routing, science targets, or 3D globe are included. No synthetic terrain or substitute map tiles are used. Zoom enlargement does not add source detail. Browser CORS can hide missing-tile HTTP status; opaque failures are explicitly reported as network/CORS failures. A bounding box does not guarantee complete interior coverage.
+These are rendered image products, not numerical elevation. No DEM processing, slope, hazards, routing or science targets are included. The separate 3D model is visual only and is never an input to calculations. No synthetic terrain or substitute map tiles are used. Zoom enlargement does not add source detail. Browser CORS can hide missing-tile HTTP status; opaque failures are explicitly reported as network/CORS failures. A bounding box does not guarantee complete interior coverage.
 
 Map images stream directly from NASA Mars Trek; no persistent tile cache or republished imagery is bundled. Product-specific credit is shown in the source panel and service attribution on the map. The original local wordmark, favicon, and interface icons are preserved. Dependencies and resolved versions are in `package-lock.json`. Dataset redistribution rights are not inferred from public service access.
 
-REDLINE is not an official NASA product, is not NASA-endorsed, and is not a certified human-safety system. Re-check official challenge rules before submission-related work. Phase 3 requires separate user approval.
+REDLINE is not an official NASA product, is not NASA-endorsed, and is not a certified human-safety system. Re-check official challenge rules before submission-related work. Further features require separate user approval.

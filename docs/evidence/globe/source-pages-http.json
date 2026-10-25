@@ -1,0 +1,41 @@
+{
+  "note": "Source/usage pages were read during verification; this record preserves HTTP retrieval metadata and hashes, not page contents. Publication dates are not inferred from request times.",
+  "sources": [
+    {
+      "url": "https://science.nasa.gov/resource/planet-mars-3d-model/",
+      "requestedAtUtc": "2026-10-25T17:22:37.616Z",
+      "finalUrl": "https://science.nasa.gov/resource/planet-mars-3d-model/",
+      "status": 200,
+      "contentType": "text/html; charset=UTF-8",
+      "decodedBodyBytes": 254337,
+      "sha256": "1b31c19438ea7d092790fbdc85405818e7256adf323f0eb0f48dc7e083cc242e"
+    },
+    {
+      "url": "https://science.nasa.gov/3d-resources/",
+      "requestedAtUtc": "2026-10-25T17:22:37.683Z",
+      "finalUrl": "https://science.nasa.gov/3d-resources/",
+      "status": 200,
+      "contentType": "text/html; charset=UTF-8",
+      "decodedBodyBytes": 389153,
+      "sha256": "48d1155ef69d673fe80e9d746bac3db4f90e612602b85ccd8ef02bfb81bfd41f"
+    },
+    {
+      "url": "https://www.nasa.gov/nasa-brand-center/images-and-media/",
+      "requestedAtUtc": "2026-10-25T17:22:37.684Z",
+      "finalUrl": "https://www.nasa.gov/nasa-brand-center/images-and-media/",
+      "status": 200,
+      "contentType": "text/html; charset=UTF-8",
+      "decodedBodyBytes": 311803,
+      "sha256": "d99fa2b7b4e43adc149d02af84783d8c42b1daebd400e530637eee811b535e5c"
+    },
+    {
+      "url": "https://www.nasa.gov/nasa-brand-center/",
+      "requestedAtUtc": "2026-10-25T17:22:37.685Z",
+      "finalUrl": "https://www.nasa.gov/nasa-brand-center/",
+      "status": 200,
+      "contentType": "text/html; charset=UTF-8",
+      "decodedBodyBytes": 288928,
+      "sha256": "72e9bd7b118372b80b4f2f98c19ca835ba4ac88c5162be54babbc690cf31fdc5"
+    }
+  ]
+}

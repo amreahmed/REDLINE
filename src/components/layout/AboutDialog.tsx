@@ -16,8 +16,8 @@ export function AboutDialog() {
         </div>
         <p id="about-description">A workspace for exploring Mars and understanding the evidence behind hypothetical surface-route planning.</p>
         <div className="dialog-scope">
-          <h3>Regional map preview</h3>
-          <p>Explore NASA Mars Trek’s MOLA shaded relief and preliminary Jezero CTX imagery. Service-grid coordinates are for image orientation; native CTX registration is not independently validated. No elevation, slope, hazard, or route calculations are included.</p>
+          <h3>Mars exploration preview</h3>
+          <p>Zoom from NASA’s visual Mars overview into real Mars Trek MOLA context and preliminary Jezero CTX detail. The guided handoff does not transfer a globe surface position: the model’s geographic orientation is unverified. Service-grid coordinates and native CTX registration retain their documented limitations. No elevation, slope, hazard, or route calculations are included.</p>
         </div>
         <p className="helper">REDLINE is an independent prototype, not an official NASA product or a certified human-safety system.</p>
       </dialog>

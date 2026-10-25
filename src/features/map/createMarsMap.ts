@@ -19,12 +19,17 @@ export type MarsMapController = {
   setVisibility: (visibility: LayerVisibility) => void
   retry: (id: LayerId) => void
   reset: () => void
+  refresh: () => void
+  setActive: (active: boolean) => void
+  enterContext: (atJezero: boolean, minimumZoom: number) => void
+  focusJezero: () => void
+  panBy: (horizontal: number, vertical: number) => void
   zoomBy: (delta: number) => void
   dispose: () => void
 }
 
 /** Owns the renderer lifecycle; no terrain or physical measurement APIs. */
-export function createMarsMap(target: HTMLElement, onStatus: (id: LayerId, status: LayerStatus) => void, onView: (status: ViewStatus) => void): MarsMapController {
+export function createMarsMap(target: HTMLElement, onStatus: (id: LayerId, status: LayerStatus) => void, onView: (status: ViewStatus) => void, options: { keyboard?: boolean } = {}): MarsMapController {
   const projection = createDisplayProjection()
   const view = new View({ projection, resolutions: Array.from({ length: MAX_LEVEL + 1 }, (_, z) => 0.703125 / 2 ** z), extent: WORLD_EXTENT, constrainOnlyCenter: true, enableRotation: false })
   const layers = new Map<LayerId, TileLayer<WMTS>>()
@@ -36,7 +41,7 @@ export function createMarsMap(target: HTMLElement, onStatus: (id: LayerId, statu
     view,
     layers: [...layers.values()],
     controls: [],
-    interactions: defaultInteractions({ altShiftDragRotate: false, pinchRotate: false }),
+    interactions: defaultInteractions({ altShiftDragRotate: false, pinchRotate: false, keyboard: options.keyboard }),
     maxTilesLoading: 8,
   })
 
@@ -122,7 +127,13 @@ export function createMarsMap(target: HTMLElement, onStatus: (id: LayerId, statu
     reportView()
   }
   map.on('moveend', reportView)
-  const resizeObserver = new ResizeObserver(() => { map.updateSize(); reportView() })
+  function refresh() {
+    if (!target.clientWidth || !target.clientHeight || disposed) return
+    map.updateSize()
+    reportView()
+  }
+  const jezeroCenter = () => [(JEZERO_EXTENT[0] + JEZERO_EXTENT[2]) / 2, (JEZERO_EXTENT[1] + JEZERO_EXTENT[3]) / 2]
+  const resizeObserver = new ResizeObserver(refresh)
   resizeObserver.observe(target)
   reset()
   for (const definition of MARS_LAYERS) void connect(definition)
@@ -131,6 +142,11 @@ export function createMarsMap(target: HTMLElement, onStatus: (id: LayerId, statu
     setVisibility: (visibility) => { for (const [id, layer] of layers) layer.setVisible(visibility[id]) },
     retry: (id) => { const definition = MARS_LAYERS.find((layer) => layer.id === id); if (definition && !disposed) void connect(definition) },
     reset,
+    refresh,
+    setActive: (active) => { view.cancelAnimations(); map.getInteractions().forEach((interaction) => interaction.setActive(active)); if (active) refresh() },
+    enterContext: (atJezero, minimumZoom) => { refresh(); if (atJezero) view.setCenter(jezeroCenter()); view.setZoom(atJezero ? minimumZoom : Math.max(minimumZoom, view.getZoom() ?? minimumZoom)); reportView() },
+    focusJezero: () => { view.setCenter(jezeroCenter()); view.setZoom(8); reportView() },
+    panBy: (horizontal, vertical) => { const resolution = view.getResolution() ?? 0; view.adjustCenter([horizontal * resolution * 128, -vertical * resolution * 128]); reportView() },
     zoomBy: (delta) => { view.setZoom(Math.max(0, Math.min(MAX_LEVEL, (view.getZoom() ?? 0) + delta))); reportView() },
     dispose: () => {
       disposed = true

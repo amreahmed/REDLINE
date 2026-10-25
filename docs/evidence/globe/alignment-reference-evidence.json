@@ -1,0 +1,77 @@
+{
+  "note": "Research references only. No geographic control-point fit to the GLB has been validated.",
+  "sources": [
+    {
+      "url": "https://science.nasa.gov/resource/planet-mars-3d-model/",
+      "requestedAtUtc": "2026-10-25T17:44:05.406Z",
+      "finalUrl": "https://science.nasa.gov/resource/planet-mars-3d-model/",
+      "status": 200,
+      "sha256": "1b31c19438ea7d092790fbdc85405818e7256adf323f0eb0f48dc7e083cc242e",
+      "excerpts": [
+        {
+          "term": "Planet Mars",
+          "found": true,
+          "excerpt": " Planet Mars, 3D Model - NASA Science Explore Search News &amp; Events News &amp; Events Recently Published Video Series on NASA+ Podcasts &amp; Audio Blogs Newsletters Social Media"
+        },
+        {
+          "term": "NASA/JPL-Caltech",
+          "found": true,
+          "excerpt": "e provided source April 27, 2019 Credit NASA/JPL-Caltech Language english Click (or touch) and drag to interact with this 3D model of Mars. Downloads glTF File (3D Model) Mar 8, 2024 (3.85 MB) USDZ File (3D Model) Mar 8,"
+        },
+        {
+          "term": "glTF",
+          "found": true,
+          "excerpt": "t with this 3D model of Mars. Downloads glTF File (3D Model) Mar 8, 2024 (3.85 MB) USDZ File (3D Model) Mar 8, 2024 (862.14 KB) National Aeronautics and Space Administration NASA explores the unknown in air and space, in"
+        }
+      ]
+    },
+    {
+      "url": "https://planetarynames.wr.usgs.gov/Page/MARS/system",
+      "requestedAtUtc": "2026-10-25T17:44:05.472Z",
+      "finalUrl": "https://planetarynames.wr.usgs.gov/Page/MARS/system",
+      "status": 200,
+      "sha256": "cee8dc6d2dfb7af69547f6b9e5be65a37389b644d591e90ce2072091fee1ae9f",
+      "excerpts": [
+        {
+          "term": "planetographic",
+          "found": true,
+          "excerpt": "stems on the feature name page webmaps: planetographic latitude with longitude increasing to the west, or planetocentric latitude with longitude increasing to the east. Both systems are approved for use on Mars by the In"
+        },
+        {
+          "term": "planetocentric",
+          "found": true,
+          "excerpt": "th longitude increasing to the west, or planetocentric latitude with longitude increasing to the east. Both systems are approved for use on Mars by the International Astronomical Union (Seidelmann and others 2002). Plane"
+        }
+      ]
+    },
+    {
+      "url": "https://planetarynames.wr.usgs.gov/Feature/4453",
+      "requestedAtUtc": "2026-10-25T17:44:05.474Z",
+      "finalUrl": "https://planetarynames.wr.usgs.gov/Feature/4453",
+      "status": 200,
+      "sha256": "35671c2e89284303025b82e99d28c6e78385ade515e0d057261a52ce7a0219b7",
+      "excerpts": [
+        {
+          "term": "Olympus Mons",
+          "found": true,
+          "excerpt": "structions News Basic Info Feature Name Olympus Mons Clean Name Olympus Mons Feature ID 4453 Target Mars Feature Type Mons, montes Location Control Network Coordinate System Planetocentric, +East, 0 - 360 Control Network"
+        },
+        {
+          "term": "Center Latitude",
+          "found": true,
+          "excerpt": "ngitude 220.70 &deg; Diameter 648.00 km Center Latitude 18.40 &deg; Center Longitude 226.00 &deg; WKT String MULTIPOLYGON (((231 13.5451558473, 220.7 13.5451558473, 220.7 23.5512197778, 231 23.5512197778, 231 13.54515584"
+        },
+        {
+          "term": "Coordinate System",
+          "found": true,
+          "excerpt": "e Mons, montes Location Control Network Coordinate System Planetocentric, +East, 0 - 360 Control Network --> Northmost Latitude 23.55 &deg; Southmost Latitude 13.55 &deg; Eastmost Longitude 231.00 &deg; Westmost Longitud"
+        },
+        {
+          "term": "Control Network",
+          "found": true,
+          "excerpt": "Mars Feature Type Mons, montes Location Control Network Coordinate System Planetocentric, +East, 0 - 360 Control Network --> Northmost Latitude 23.55 &deg; Southmost Latitude 13.55 &deg; Eastmost Longitude 231.00 &deg; W"
+        }
+      ]
+    }
+  ]
+}

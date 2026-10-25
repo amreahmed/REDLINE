@@ -1,0 +1,228 @@
+{
+  "sourceUrl": "https://science.nasa.gov/resource/planet-mars-3d-model/",
+  "sourcePageStatus": 200,
+  "downloadLink": "https://assets.science.nasa.gov/content/dam/science/psd/mars/resources/gltf_files/24881_Mars_1_6792.glb?emrc=6ade3a2c4de82",
+  "note": "HTTP/header and GLB structure evidence only. No browser rendering is established. Asset bytes were inspected in memory and were not saved to the repository.",
+  "records": [
+    {
+      "url": "https://assets.science.nasa.gov/content/dam/science/psd/mars/resources/gltf_files/24881_Mars_1_6792.glb?emrc=6ade3a2c4de82",
+      "requestedAtUtc": "2026-10-25T17:20:16.297Z",
+      "status": 200,
+      "finalUrl": "https://assets.science.nasa.gov/content/dam/science/psd/mars/resources/gltf_files/24881_Mars_1_6792.glb?emrc=6ade3a2c4de82",
+      "headers": {
+        "accept-ranges": "bytes",
+        "access-control-allow-origin": "*",
+        "age": "0",
+        "cache-control": "max-age=43200,stale-while-revalidate=300,stale-if-error=300",
+        "content-disposition": "attachment",
+        "content-encoding": "gzip",
+        "content-type": "model/gltf-binary",
+        "date": "Sun, 25 Oct 2026 17:20:16 GMT",
+        "etag": "\"3d8694-624c8b19a4300-gzip\"",
+        "last-modified": "Fri, 18 Oct 2024 23:30:52 GMT",
+        "server": "Apache",
+        "strict-transport-security": "max-age=43200; includeSubdomains;",
+        "vary": "Accept-Encoding",
+        "via": "1.1 ea24949bfe59da97264ba6734bb7ad2c.cloudfront.net (CloudFront)",
+        "x-amz-cf-id": "8eUtcu6lL2RVTqAONunK7WAV7HfIUhTPMuIAsWUgOeeqAZ16fSgmzQ==",
+        "x-amz-cf-pop": "CAI50-P1",
+        "x-cache": "Miss from cloudfront",
+        "x-content-type-options": "nosniff",
+        "x-dispatcher": "dispatcher1usgovwest1-29695207",
+        "x-frame-options": "SAMEORIGIN",
+        "x-vhost": "nasa-prod-publish"
+      },
+      "byteLength": 4032148,
+      "sha256": "0d27fc65fe3e6a5847cf0cd3a5c951538afdd49bd0513607d8a70e8ab1d8d7ac"
+    },
+    {
+      "url": "https://assets.science.nasa.gov/content/dam/science/psd/mars/resources/gltf_files/24881_Mars_1_6792.glb",
+      "requestedAtUtc": "2026-10-25T17:20:18.606Z",
+      "status": 200,
+      "finalUrl": "https://assets.science.nasa.gov/content/dam/science/psd/mars/resources/gltf_files/24881_Mars_1_6792.glb",
+      "headers": {
+        "accept-ranges": "bytes",
+        "access-control-allow-origin": "*",
+        "age": "2",
+        "cache-control": "max-age=43200,stale-while-revalidate=300,stale-if-error=300",
+        "content-disposition": "attachment",
+        "content-encoding": "gzip",
+        "content-type": "model/gltf-binary",
+        "date": "Sun, 25 Oct 2026 17:20:16 GMT",
+        "etag": "\"3d8694-624c8b19a4300-gzip\"",
+        "last-modified": "Fri, 18 Oct 2024 23:30:52 GMT",
+        "server": "Apache",
+        "strict-transport-security": "max-age=43200; includeSubdomains;",
+        "vary": "Accept-Encoding",
+        "via": "1.1 ea24949bfe59da97264ba6734bb7ad2c.cloudfront.net (CloudFront)",
+        "x-amz-cf-id": "Aw_HTrAzlpZEPUkP5LOCQRgbRIpSQ9ynQHE_7K32jZfGJQdfumk7Aw==",
+        "x-amz-cf-pop": "CAI50-P1",
+        "x-cache": "Hit from cloudfront",
+        "x-content-type-options": "nosniff",
+        "x-dispatcher": "dispatcher1usgovwest1-29695207",
+        "x-frame-options": "SAMEORIGIN",
+        "x-vhost": "nasa-prod-publish"
+      },
+      "byteLength": 4032148,
+      "sha256": "0d27fc65fe3e6a5847cf0cd3a5c951538afdd49bd0513607d8a70e8ab1d8d7ac"
+    }
+  ],
+  "textureInspection": {
+    "requestedAtUtc": "2026-10-25T17:21:17.178Z",
+    "url": "https://assets.science.nasa.gov/content/dam/science/psd/mars/resources/gltf_files/24881_Mars_1_6792.glb",
+    "status": 200,
+    "images": [
+      {
+        "bufferView": 4,
+        "mimeType": "image/png",
+        "name": "mars_norm.jpg",
+        "embeddedByteLength": 507991,
+        "signature": "89504e470d0a1a0a",
+        "width": 2048,
+        "height": 1536
+      },
+      {
+        "bufferView": 5,
+        "mimeType": "image/png",
+        "name": "mars_diff.jpg",
+        "embeddedByteLength": 3439176,
+        "signature": "89504e470d0a1a0a",
+        "width": 2048,
+        "height": 1536
+      }
+    ],
+    "externalUris": [],
+    "note": "Dimensions read from embedded PNG IHDR headers; this is not a browser decode/render test."
+  },
+  "inspectedAssetStructure": {
+    "glb": {
+      "magic": "glTF",
+      "version": 2,
+      "declaredLength": 4032148,
+      "chunks": [
+        {
+          "type": "JSON",
+          "length": 1432
+        },
+        {
+          "type": "BIN\u0000",
+          "length": 4030688
+        }
+      ]
+    },
+    "asset": {
+      "generator": "Khronos Blender glTF 2.0 I/O",
+      "version": "2.0"
+    },
+    "extensionsUsed": [],
+    "extensionsRequired": [],
+    "scenes": [
+      {
+        "name": "Scene",
+        "nodes": [
+          0
+        ]
+      }
+    ],
+    "nodes": [
+      {
+        "mesh": 0,
+        "name": "Cube.008"
+      }
+    ],
+    "meshes": [
+      {
+        "name": "Cube.001",
+        "primitives": [
+          {
+            "attributes": {
+              "POSITION": 0,
+              "NORMAL": 1,
+              "TEXCOORD_0": 2
+            },
+            "indices": 3,
+            "material": 0
+          }
+        ]
+      }
+    ],
+    "materials": [
+      {
+        "name": "Default OBJ.005",
+        "normalTexture": {
+          "index": 0,
+          "texCoord": 0
+        },
+        "pbrMetallicRoughness": {
+          "baseColorTexture": {
+            "index": 1,
+            "texCoord": 0
+          },
+          "metallicFactor": 0,
+          "roughnessFactor": 0.8999999761581421
+        }
+      }
+    ],
+    "textures": [
+      {
+        "source": 0
+      },
+      {
+        "source": 1
+      }
+    ],
+    "images": [
+      {
+        "bufferView": 4,
+        "mimeType": "image/png",
+        "name": "mars_norm.jpg"
+      },
+      {
+        "bufferView": 5,
+        "mimeType": "image/png",
+        "name": "mars_diff.jpg"
+      }
+    ],
+    "buffers": [
+      {
+        "byteLength": 4030688
+      }
+    ],
+    "accessors": [
+      {
+        "bufferView": 0,
+        "componentType": 5126,
+        "count": 2034,
+        "max": [
+          500.0000305175781,
+          497.0555725097656,
+          500.0000305175781
+        ],
+        "min": [
+          -500.0000305175781,
+          -497.0555725097656,
+          -500.0000305175781
+        ],
+        "type": "VEC3"
+      },
+      {
+        "bufferView": 1,
+        "componentType": 5126,
+        "count": 2034,
+        "type": "VEC3"
+      },
+      {
+        "bufferView": 2,
+        "componentType": 5126,
+        "count": 2034,
+        "type": "VEC2"
+      },
+      {
+        "bufferView": 3,
+        "componentType": 5123,
+        "count": 9216,
+        "type": "SCALAR"
+      }
+    ]
+  }
+}

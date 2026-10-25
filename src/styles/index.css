@@ -222,6 +222,51 @@ button:disabled { cursor: not-allowed; opacity: .5; }
 .source-warning { font-size: 11px; line-height: 1.8; color: #e6b35c; margin: 12px 0; }
 .sources-panel > .information-footer { margin-top: auto; }
 .coordinate-detail .helper { margin: 12px 0; }
+
+/* The NASA model is the overview's focal point; surrounding controls stay quiet. */
+.view-switch { display: flex; border: 1px solid var(--line); border-radius: 7px; padding: 3px; gap: 3px; background: var(--color-panel); }
+.view-switch button { display: flex; align-items: center; justify-content: center; gap: 8px; min-height: 40px; padding: 0 13px; border-radius: 4px; font-size: 12px; color: var(--color-muted); }
+.view-switch button[aria-pressed="true"] { background: var(--color-elevated); color: var(--color-ink); }
+.view-switch button[aria-pressed="true"] svg { color: var(--color-science); }
+.globe-viewport { min-height: 700px; }
+.globe-surface { position: relative; min-height: 450px; flex: 1; background: #0b0f14; }
+.globe-host { position: absolute; inset: 0; touch-action: none; }
+.globe-host canvas { display: block; }
+.globe-host:focus-visible { outline: 2px solid var(--color-science); outline-offset: -3px; }
+.globe-message { position: absolute; inset: 0; display: flex; flex-direction: column; justify-content: center; align-items: center; gap: 18px; padding: 28px; background: var(--color-space); text-align: center; }
+.globe-message > svg { color: var(--color-mars); }
+.globe-message p { font-size: 13px; line-height: 1.8; max-width: 300px; color: var(--color-muted); }
+.globe-actions { display: flex; flex-wrap: wrap; justify-content: center; gap: 7px; padding: 12px; border-top: 1px solid var(--line); }
+.globe-actions button { min-width: 40px; height: 44px; border: 1px solid var(--line); border-radius: 5px; font-size: 18px; }
+.open-region-button { width: 100%; margin-block: 20px 12px; padding: 12px; min-height: 44px; border: 1px solid #79533e; border-radius: 5px; color: #f0b599; background: #241c18; font-size: 12px; line-height: 1.6; }
+.globe-region { border-bottom: 0; }
+/* One canvas stage: only the active renderer receives input. */
+.explorer-viewport { min-height: 720px; }
+.explorer-toolbar { display: flex; align-items: center; flex-wrap: wrap; gap: 12px; }
+.explorer-toolbar .grid-button { margin-left: auto; }
+.exploration-stage { font-size: 11px; color: var(--color-science); }
+.explorer-surface { position: relative; flex: 1; min-height: 430px; background: var(--color-space); isolation: isolate; }
+.explorer-surface:focus-visible { outline: 2px solid var(--color-science); outline-offset: -3px; }
+.explorer-pane { position: absolute; inset: 0; opacity: 0; pointer-events: none; transition: opacity 360ms ease-in-out; }
+.explorer-pane[data-visible="true"] { opacity: 1; pointer-events: auto; }
+.explorer-pane[inert] { pointer-events: none; }
+.explorer-pane .globe-host, .explorer-pane .ol-host { width: 100%; height: 100%; }
+.explorer-surface .map-credit { z-index: 2; }
+.handoff-status { position: absolute; z-index: 3; bottom: 32px; left: 16px; right: 16px; padding: 10px 12px; border: 1px solid var(--line); border-radius: 5px; background: #121922ed; color: var(--color-ink); font-size: 12px; line-height: 1.6; pointer-events: none; }
+.explorer-navigation { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 8px; padding: 12px; border-top: 1px solid var(--line); }
+.explorer-navigation .globe-actions { border: 0; padding: 0; }
+.explorer-navigation > .grid-button { min-height: 44px; }
+@media (max-width: 760px) {
+  .view-switch { width: 100%; }
+  .view-switch button { flex: 1; min-height: 44px; }
+  .globe-viewport { min-height: 610px; }
+  .globe-surface { min-height: 340px; }
+  .globe-message .grid-button { max-width: 100%; }
+  .explorer-viewport { min-height: 650px; }
+  .explorer-surface { min-height: 340px; }
+  .explorer-navigation { justify-content: center; }
+  .explorer-navigation .globe-actions { gap: 5px; }
+}
 @media (max-width: 1100px) {
   .sources-content { max-height: 430px; }
   .real-map { min-height: 640px; }

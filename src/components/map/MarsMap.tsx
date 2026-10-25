@@ -8,13 +8,15 @@ import type { LayerId, LayerStatus, LayerStatuses, LayerVisibility, ViewStatus }
 import { Icon } from '../shared/Icon'
 
 type MarsMapProps = {
+  active: boolean
+  resetRequest: number
   visibility: LayerVisibility
   statuses: LayerStatuses
   retryRequest: { id: LayerId; sequence: number } | null
   onStatus: (id: LayerId, status: LayerStatus) => void
 }
 
-export function MarsMap({ visibility, statuses, retryRequest, onStatus }: MarsMapProps) {
+export function MarsMap({ active, resetRequest, visibility, statuses, retryRequest, onStatus }: MarsMapProps) {
   const targetRef = useRef<HTMLDivElement>(null)
   const controllerRef = useRef<MarsMapController | null>(null)
   const [view, setView] = useState<ViewStatus | null>(null)
@@ -33,13 +35,17 @@ export function MarsMap({ visibility, statuses, retryRequest, onStatus }: MarsMa
 
   useEffect(() => { controllerRef.current?.setVisibility(visibility) }, [visibility])
   useEffect(() => { if (retryRequest) controllerRef.current?.retry(retryRequest.id) }, [retryRequest])
+  useEffect(() => { if (active) controllerRef.current?.refresh() }, [active])
+  useEffect(() => {
+    if (resetRequest) { controllerRef.current?.reset(); targetRef.current?.focus() }
+  }, [resetRequest])
 
   const visible = MARS_LAYERS.filter((layer) => visibility[layer.id])
   const busy = visible.some((layer) => statuses[layer.id].phase === 'checking' || statuses[layer.id].pending > 0)
   const emptyMessage = startupError ?? viewportMessage(visibility, statuses)
 
   return (
-    <section className="map-viewport real-map" aria-labelledby="map-heading" data-grid="false">
+    <section className="map-viewport real-map" aria-labelledby="map-heading" data-grid="false" hidden={!active}>
       <div className="viewport-top map-toolbar flex items-center justify-between gap-3">
         <div className="viewport-label flex items-center gap-2"><Icon name="map" size={16} /><h1 id="map-heading">Jezero regional map</h1></div>
         <button className="grid-button" type="button" onClick={() => controllerRef.current?.reset()} disabled={!view} aria-label="Reset map to Jezero coverage">Reset view</button>
