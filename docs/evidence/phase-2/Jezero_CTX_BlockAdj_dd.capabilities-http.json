@@ -1,0 +1,45 @@
+{
+  "sourceUrl": "https://trek.nasa.gov/tiles/Mars/EQ/Jezero_CTX_BlockAdj_dd/1.0.0/WMTSCapabilities.xml",
+  "retrievedAtUtc": "2026-10-25T16:10:17.6641101Z",
+  "requestHeaders": {
+    "Origin": "http://127.0.0.1:5173"
+  },
+  "statusCode": 200,
+  "responseHeaders": {
+    "Date": [
+      "Sun, 25 Oct 2026 16:10:17 GMT"
+    ],
+    "Server": [
+      "Apache/2.4.65",
+      "(Unix)",
+      "OpenSSL/3.4.3"
+    ],
+    "Strict-Transport-Security": [
+      "max-age=31536000; includeSubDomains"
+    ],
+    "X-Content-Type-Options": [
+      "nosniff"
+    ],
+    "ETag": [
+      "\"2097-57c7d19bc19d0\""
+    ],
+    "Accept-Ranges": [
+      "bytes"
+    ],
+    "Access-Control-Allow-Origin": [
+      "*"
+    ],
+    "Content-Security-Policy": [
+      "frame-ancestors 'self' aelp.smartsparrow.com;"
+    ],
+    "Last-Modified": [
+      "Sat, 08 Dec 2018 06:47:08 GMT"
+    ],
+    "Content-Length": [
+      "8343"
+    ],
+    "Content-Type": [
+      "application/xml"
+    ]
+  }
+}

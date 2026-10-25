@@ -1,0 +1,94 @@
+{
+  "sourceUrl": "https://trek.nasa.gov/mars/TrekServices/ws/index/eq/searchItems?start=0&rows=2147483647&facetKeys=itemType%7CproductCat2%7CserviceTypes%7CthumbnailURLDir&facetValues=product%7C-%28DEM%20ConfidenceRaw%20Slope%29%7CMosaic%7C%5B%2A%20TO%20%2A%5D",
+  "retrievedAtUtc": "2026-10-25T16:09:45.0547610Z",
+  "requestHeaders": {
+    "Origin": "http://127.0.0.1:5173"
+  },
+  "statusCode": 200,
+  "responseHeaders": {
+    "Date": [
+      "Sun, 25 Oct 2026 16:09:43 GMT"
+    ],
+    "Server": [
+      "Apache/2.4.65",
+      "(Unix)",
+      "OpenSSL/3.4.3"
+    ],
+    "Strict-Transport-Security": [
+      "max-age=31536000; includeSubDomains"
+    ],
+    "X-Content-Type-Options": [
+      "nosniff"
+    ],
+    "Content-Security-Policy": [
+      "frame-ancestors 'self' aelp.smartsparrow.com;"
+    ],
+    "Transfer-Encoding": [
+      "chunked"
+    ],
+    "Content-Type": [
+      "application/json"
+    ]
+  },
+  "selection": "Unmodified catalog records for the two requested productLabel values; other catalog records omitted.",
+  "records": [
+    {
+      "item_DBID": "294180",
+      "item_UUID": "833ace00-106b-45d2-8144-aeb1bea43105",
+      "productLabel": "Mars_MGS_MOLA_ClrShade_merge_global_463m",
+      "title": "MGS MOLA, Global Color Hillshade",
+      "fileSize": [
+        3185511061
+      ],
+      "productCat1": "Topography",
+      "productCat2": "ColorHillshade",
+      "mission": "Mars Global Surveyor",
+      "trekProjection": "urn:ogc:def:crs:EPSG::104905",
+      "projection": "urn:ogc:def:crs:EPSG::104905",
+      "data_created_date": "2020-06-25T22:51:06Z",
+      "description": "This data was acquired using the Mars Orbiter Laser Altimeter instrument aboard NASA's Mars Global Surveyor spacecraft (MGS). MGS was launched on November 7, 1996 and arrived at Mars on September 11, 1997. It maintained a circular polar orbit, completing an orbital revolution every 117.65 minutes at an average altitude of 378 km (235 mi). Until November 2, 2006, MGS characterized and mapped Mars' surface features, properties, topography, composition, and processes, as well as studied Mars' weather and atmospheric structure.\n\nThe Mars Orbiter Laser Altimeter (MOLA) made precise measurements of the heights and depths of surface features on Mars. MOLA fired infrared laser pulses downward 10 times per second, and measured the time it took for the reflected pulses to return from the surface. Converting this data to a colorized hillshade makes it particularly easy to visualize surface topography. The image used for the base of this map represents more than 600 million measurements gathered between 1999 and 2001. The average accuracy of each point is originally ~100 meters in horizontal position and the total elevation uncertainty is at least Â±3 m.",
+      "itemType": "product",
+      "thumbnailURLDir": "https://trek.nasa.gov/tiles/Mars/EQ/Mars_MGS_MOLA_ClrShade_merge_global_463m/thumbnail/Mars_MGS_MOLA_ClrShade_merge_global_463m-",
+      "isContainer": false,
+      "searchable": true,
+      "coverage": "Global",
+      "serviceTypes": [
+        "Mosaic"
+      ],
+      "shape": "POLYGON ((-180.0 90.0,-180.0 -90.0000099503576,-179.999980099268 -90.0000099503576,-179.999980099268 90.0,-180.0 90.0))",
+      "bbox": "-180,-89.9991635,179.9983271,90",
+      "Resolution": 0,
+      "instrument": "MOLA",
+      "_version_": 1670513129642000384
+    },
+    {
+      "item_DBID": "293763",
+      "item_UUID": "afdc6b89-fc6a-4809-ab53-bf8d8251ade6",
+      "productLabel": "Jezero_CTX_BlockAdj_dd",
+      "title": "MRO CTX, Jezero Mosaic, Preliminary",
+      "fileSize": [
+        1614751404
+      ],
+      "productCat1": "Imagery",
+      "productCat2": "Mosaic",
+      "mission": "Mars Reconnaissance Orbiter",
+      "trekProjection": "urn:ogc:def:crs:EPSG::104905",
+      "projection": "urn:ogc:def:crs:EPSG::104905",
+      "data_created_date": "2020-08-03T18:28:05Z",
+      "description": "This data was acquired using the Context Camera aboard NASA's Mars Reconnaissance Orbiter spacecraft (MRO). MRO was launched on August 12, 2005 and arrived at Mars on March 10, 2006. It maintains a nearly circular orbit, completing an orbital revolution about every 112 minutes at an altitude of approximately 250 to 316 km or 155 to 196 miles. MRO carries a sophisticated suite of instruments used to analyze and map the landforms, stratigraphy, minerals, and ice of Mars.\n\nThe Context Camera (CTX) provides black-and-white images with resolutions up to 6 meters/pixel. It provides broader context maps for the higher resolution but narrower fields of view of the HiRISE camera, as well as for other instruments aboard MRO, and is useful for producing mosaicked images of larger areas on Mars' surface.",
+      "itemType": "product",
+      "thumbnailURLDir": "https://trek.nasa.gov/tiles/Mars/EQ/Jezero_CTX_BlockAdj_dd/thumbnail/Jezero_CTX_BlockAdj_dd-",
+      "isContainer": false,
+      "searchable": true,
+      "coverage": "Global",
+      "serviceTypes": [
+        "Mosaic"
+      ],
+      "shape": "POLYGON ((75.1537692298128 19.4453002570673,75.1537692298128 15.9058483770673,78.8717120578128 15.9058483770673,78.8717120578128 19.4453002570673,75.1537692298128 19.4453002570673))",
+      "bbox": "75.1537692,15.9058484,78.8717121,19.4453003",
+      "resolution": 0.0001,
+      "instrument": "CTX",
+      "_version_": 1675655342820687872
+    }
+  ]
+}

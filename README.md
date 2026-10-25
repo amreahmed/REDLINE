@@ -1,6 +1,6 @@
 # REDLINE
 
-REDLINE is an independent Mars exploration and hypothetical surface-route planning prototype. **Step 1 implements only the application foundation and initial mission-control UI shell.** The central viewport is explicitly labeled as a map placeholder; it displays no geographic or scientific data.
+REDLINE is an independent Mars exploration and hypothetical surface-route planning prototype. **Phase 2 adds an OpenLayers regional image map using NASA Mars Trek's MOLA color hillshade and preliminary Jezero CTX mosaic.** All six browser acceptance checks passed according to the user's manual test report. No terrain measurements or routing are implemented.
 
 ## Setup and run
 
@@ -18,63 +18,90 @@ Open [http://127.0.0.1:5173](http://127.0.0.1:5173). The server binds to loopbac
 ```powershell
 npm run lint
 npm run typecheck
+npm test
 npm run build
 npm run preview
 ```
 
 The production build is written to `dist/`. Open [http://127.0.0.1:4173](http://127.0.0.1:4173) for the local preview. Use Ctrl+C to stop either server.
 
-ESLint treats warnings as failures. Type checking covers the application and Vite configuration. There is no unit-test or end-to-end test runner configured in Step 1; use the browser smoke checklist below to verify the shell. Later calculation and data-integration milestones require their own relevant tests.
+ESLint treats warnings as failures. Type checking covers the application, tests, and Vite configuration. Vitest exercises saved real capabilities XML, matrix/axis/coverage validation, the configured OpenLayers tile URL, and request/error/timeout/cancellation behavior. An XML DOM package is used only by tests. Tests do not fetch live data. No browser test runner is configured.
 
-To smoke-test this shell, open it at desktop, tablet, and phone widths; hide and restore each panel; switch the display grid off and on; open About; close it with Escape; and navigate with Tab to check focus and keyboard activation. The page must show no horizontal overflow, fatal console errors, or scientific-data requests.
+### Phase 2 browser acceptance checklist
+
+1. Open the app and wait for real Jezero CTX imagery. Check the Network panel for the two NASA capabilities and successful tile requests; inspect the console for fatal errors.
+2. Hide CTX to reveal MOLA color hillshade, then toggle MOLA. With both hidden, the map must explain that no layers are selected.
+3. Drag and zoom the map; focus it and test arrow-key panning and + / − zoom. Use Reset view to return to the documented CTX extent. Verify controls and attribution remain visible while the map is focused.
+4. Leave only CTX visible and pan outside its footprint. Confirm an outside-coverage message and no fabricated imagery. The code's actual configured URL is tested against the independently probed level 9 / row 203 / column 732 tile.
+5. In browser developer tools, block the NASA tile origin or switch offline, then use Retry. Verify failure messages, readable source details, and recovery after restoring access. Also test MOLA unavailable while CTX is outside coverage. A browser network/CORS error must not be called a confirmed 404.
+6. Test panel visibility, About/Escape, keyboard focus, and desktop/tablet/phone layouts. Repeat the map journey against the production preview where possible.
 
 ### Verification status — 25 October 2026
 
-Executed with Node 26.3.1 and npm 11.16.0:
+Lint, typecheck, tests, and the production build were rerun successfully on 25 October 2026 immediately before preparing the Phase 2 checkpoint. The installation and server-start results below are retained from the earlier implementation run with Node 26.3.1 and npm 11.16.0.
 
 | Check | Observed result |
 | --- | --- |
-| `npm ci` | Exit 0; 184 packages installed. npm reported an upstream ESLint 9 deprecation warning. |
-| `npm run lint` | Exit 0; no errors or warnings from ESLint. |
-| `npm run typecheck` | Exit 0. |
-| `npm run build` | Exit 0; Vite generated the production HTML, CSS, and JavaScript. |
-| `npm run dev` | Vite started at `http://127.0.0.1:5173/`; HTTP checks returned 200 for the HTML, entry module, app, dialog, stylesheet, and favicon. |
-| `npm run preview` | Preview started at `http://127.0.0.1:4173/`; HTTP checks returned 200 for the production HTML, JavaScript, CSS, and favicon. |
-| Visual layout | PASS — user-reported manual browser smoke test. |
-| Button and dialog interactions | PASS — user-reported manual browser smoke test. |
-| Keyboard navigation | PASS — user-reported manual browser smoke test. |
-| Browser console | PASS — user-reported manual browser smoke test. |
-| Responsive layout | PASS — user-reported manual browser smoke test. |
+| `npm ci` | Exit 0; 233 packages installed, 234 audited, 0 vulnerabilities. The existing ESLint 9 dependency emits an upstream deprecation warning. The first attempt hit a Windows Vite file lock; stopping the local servers resolved it. |
+| `npm run lint` | Fresh checkpoint run: exit 0; no errors or warnings from ESLint. |
+| `npm run typecheck` | Fresh checkpoint run: exit 0. |
+| `npm test` | Fresh checkpoint run: exit 0; 32 tests passed across 5 files, 0 failures. |
+| `npm run build` | Final build exit 0; 180 modules, 27.62 kB CSS and 473.72 kB JavaScript (6.64 / 144.12 kB gzip). |
+| `npm run dev` | Restarted at `http://127.0.0.1:5173/`; Vite reported ready. Earlier HTTP probes returned 200 for the app and new map/controller modules. |
+| `npm run preview` | Started at `http://127.0.0.1:4173/`; Vite reported the preview URL. The user's report does not separately identify a production-preview browser run. |
+| Source HTTP probes | Both capabilities and sample imagery returned 200; an outside-coverage CTX tile returned 404. See the saved source evidence. |
+| Phase 2 browser acceptance | **PASS — user-reported manual verification of all six checks above.** See the results below. |
 
-Lint, type checking, and the production build were rerun before the Step 1 checkpoint. Browser evidence comes from the user's five explicit PASS results; automated browser control was unavailable because its approval service returned HTTP 503. Browser network inspection and a separate browser run against the production preview were not reported and are not claimed as verified. All existing scaffold files were preserved and refined in place.
+### Manual browser results — 25 October 2026
+
+The user reported: “I manually verified the Phase 2 browser acceptance checklist. All six checks passed in my browser.” Each result below records that report; none is an agent-observed browser test.
+
+| Checklist check | Reported result |
+| --- | --- |
+| 1. App loads real Jezero CTX imagery; NASA capabilities/tile requests succeed; no fatal console errors | **PASS — user-reported** |
+| 2. CTX and MOLA visibility controls work; MOLA is visible beneath CTX; both hidden produces the empty-layer message | **PASS — user-reported** |
+| 3. Drag/zoom, keyboard navigation, reset to Jezero coverage, and visible controls/attribution while focused | **PASS — user-reported** |
+| 4. CTX-only view outside its footprint shows the outside-coverage message without fabricated imagery | **PASS — user-reported** |
+| 5. Network failure, retry/recovery, readable source details, mixed unavailable/outside-coverage states, and honest network/CORS errors | **PASS — user-reported** |
+| 6. Panel visibility, About/Escape, keyboard focus, and desktop/tablet/phone layouts | **PASS — user-reported** |
+
+The browser automation tool remained blocked by a saved permission or managed policy. The manual report satisfies the Phase 2 browser acceptance gate; HTTP responses and unit tests are separate evidence. No browser version, precise viewport sizes, request trace, screenshots, or separate production-preview run were supplied, so those details are not inferred. Native CTX coordinate convention and fine registration remain unverified despite the browser PASS results.
+
+Phase 1 was verified and committed as `a8c1d27`; its earlier five shell-only PASS results are distinct from this Phase 2 report. An earlier transient missing-props HMR error occurred during interdependent edits. The final App supplies those props, and the user now reports the app/console check as PASS.
+
+**Phase 2 acceptance: PASS**, based on the fresh automated results and the six user-reported browser checks. The checkpoint message is `feat(map): add verified Jezero Mars map workspace`; its commit hash is available in Git history. No remote push or Phase 3 work is part of this milestone.
 
 ## Implemented
 
-- React + TypeScript + Vite, with Tailwind CSS through its Vite plugin.
-- Responsive dark workspace with a REDLINE header, mission-control sidebar, central map placeholder, and empty information panel.
-- Independent panel visibility controls and a display-grid toggle. These display preferences reset on a page reload.
-- Keyboard focus styling, a skip link, labeled controls, reduced-motion support, and a native modal About dialog.
-- Disabled region/layer controls with explanations of their unavailable state.
+- Existing React/TypeScript/Vite/Tailwind dark workspace and independent panel controls.
+- OpenLayers map controller, two layer switches, zoom, pointer/keyboard navigation, and reset to Jezero's advertised mosaic extent.
+- Live capabilities validation, independent requests/retry, timeouts/cancellation, coverage clipping, and explicit loading/empty/error states.
+- Source links, instrument and nominal-resolution context, credits, service bounds, and request counts labeled since load/retry.
+- An explicit angular service grid, with no Earth projection or scale-denominator conversion. The center readout is an image-grid position, not a validated science-target coordinate.
 
 ## Structure
 
 ```text
-src/app/App.tsx                       Workspace and transient display state
-src/components/layout/               Mission control, information, About
-src/components/map/MapPlaceholder.tsx Non-geographic empty viewport
-src/components/shared/Icon.tsx        Local interface vector icons
-src/styles/index.css                 Tailwind, design tokens, responsive layout
-public/favicon.svg                   Original REDLINE mark
+src/app/App.tsx                  Workspace, layer visibility, status
+src/components/layout/          Mission control, sources, About
+src/components/map/MarsMap.tsx   Map viewport and navigation controls
+src/data/marsLayers.ts           Two sourced image-layer definitions
+src/features/map/               Capabilities, angular grid, requests, controller, tests
+src/styles/index.css            Existing design plus map/source styles
+docs/data-sources.md             Exact service contracts and CRS qualification
+docs/evidence/phase-2/           Raw metadata and HTTP probe evidence (no image assets)
 ```
 
-Vite, TypeScript, and ESLint configuration are at the repository root. The implementation checklist is in `docs/superpowers/plans/2026-10-24-step-1-foundation.md`. The detailed product specification remains in `REDLINE_AI_Agent_Project_Spec.md`; repository working rules remain in `AGENTS.md`.
+Vite, TypeScript, and ESLint configuration remain at the repository root. The Phase 2 checklist is in `docs/superpowers/plans/2026-10-25-phase-2-mars-map.md`. The original placeholder component is preserved but is no longer mounted. The detailed specification remains in `REDLINE_AI_Agent_Project_Spec.md`; working rules remain in `AGENTS.md`.
 
 ## Data, attribution, and limitations
 
-**Data-backed layers: none in Step 1.** NASA and planetary datasets have not been integrated. No map projection, coordinate convention, DEM, observation, route, metric, or scientific calculation is implemented. The display grid is a visual layout aid, with no geographic coordinates or physical scale. There is no simulated terrain or route data.
+**Real source data, HTTP-verified:** NASA Mars Trek's `Mars_MGS_MOLA_ClrShade_merge_global_463m` and `Jezero_CTX_BlockAdj_dd` capabilities and representative image tiles. Browser rendering and interactions passed the user's manual acceptance test. See [source evidence and CRS resolution](docs/data-sources.md).
 
-Region and layer controls are intentionally disabled. The information panel remains empty because no features can be selected yet. OpenLayers, Three.js, data services, terrain processing, and routing are deferred to separately approved milestones.
+Both layers use identical inspected angular tile geometry. Trek's inconsistent `EPSG::104905` / `IAU2000::104905` labels and Earth-sized scale denominators are not passed to generic projection conversion. The app uses a custom service display grid. Precise native CTX latitude convention, fine cross-layer registration, and alignment with future targets or DEMs remain unverified. Quantitative overlays and measurements remain unavailable.
 
-The wordmark, favicon, and simple SVG interface icons are original local assets; no remote imagery, fonts, or icon library is loaded. The UI palette follows the existing project specification. Dependencies and their resolved versions are recorded in `package-lock.json`; their license metadata is supplied with the installed packages.
+These are rendered image products, not numerical elevation. No DEM processing, slope, hazards, routing, science targets, or 3D globe are included. No synthetic terrain or substitute map tiles are used. Zoom enlargement does not add source detail. Browser CORS can hide missing-tile HTTP status; opaque failures are explicitly reported as network/CORS failures. A bounding box does not guarantee complete interior coverage.
 
-REDLINE is not an official NASA product, is not NASA-endorsed, and is not a certified human-safety system. Re-check official challenge rules before submission-related work. Step 2 requires explicit user approval and fresh verification of the chosen data services before integration.
+Map images stream directly from NASA Mars Trek; no persistent tile cache or republished imagery is bundled. Product-specific credit is shown in the source panel and service attribution on the map. The original local wordmark, favicon, and interface icons are preserved. Dependencies and resolved versions are in `package-lock.json`. Dataset redistribution rights are not inferred from public service access.
+
+REDLINE is not an official NASA product, is not NASA-endorsed, and is not a certified human-safety system. Re-check official challenge rules before submission-related work. Phase 3 requires separate user approval.

@@ -1,0 +1,3 @@
+# Preserve saved NASA response formatting, including trailing spaces and line endings.
+docs/evidence/phase-2/Jezero_CTX_BlockAdj_dd.WMTSCapabilities.xml -text whitespace=-blank-at-eol
+docs/evidence/phase-2/Mars_MGS_MOLA_ClrShade_merge_global_463m.WMTSCapabilities.xml -text whitespace=-blank-at-eol
