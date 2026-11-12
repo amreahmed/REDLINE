@@ -22,7 +22,7 @@
   --line: #283440;
 }
 
-body { margin: 0; min-width: 320px; }
+body { margin: 0; min-width: 0; }
 button, select, input { font: inherit; }
 button { cursor: pointer; }
 button, a, select, input { -webkit-tap-highlight-color: transparent; }
