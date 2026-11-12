@@ -1,6 +1,6 @@
 # REDLINE
 
-REDLINE is an independent Mars exploration and hypothetical surface-route planning prototype. **One explorer viewport begins with NASA's visual 3D Mars overview, then uses zoom to enter real Mars Trek MOLA context and reveal Jezero CTX detail.** The handoff is explicitly guided: the model's geographic orientation is unvalidated, so no globe surface coordinate is transferred. All six unified explorer browser acceptance checks passed according to the user's manual report. No terrain measurements or routing are implemented.
+REDLINE is an independent Mars exploration and hypothetical surface-route planning prototype. **One explorer viewport combines NASA's visual Mars globe with real Mars Trek MOLA and Jezero CTX imagery.** The Jezero action coordinates a scripted camera approach, map crossfade and regional zoom. Agent browser verification on 13 November 2026 exercised the real journey, layer/coverage states, cancellation, source failure/recovery and responsive/reduced-motion controls in an isolated in-app browser. See the current verification record for the scope and test harness. No terrain measurements or routing are implemented.
 
 ## Setup and run
 
@@ -27,7 +27,19 @@ The production build is written to `dist/`. Open [http://127.0.0.1:4173](http://
 
 ESLint treats warnings as failures. Type checking covers the application, tests, and Vite configuration. Vitest exercises saved real capabilities XML, matrix/axis/coverage validation, the configured OpenLayers tile URL, and request/error/timeout/cancellation behavior. An XML DOM package is used only by tests. Tests do not fetch live data. No browser test runner is configured.
 
-### Unified Mars explorer
+### Cinematic Jezero approach — current implementation
+
+Choose **Explore Jezero** or the map's **Jezero detail** action. With the NASA globe ready, the sequence establishes a full-globe view, performs an eased scripted orbit and camera approach, fades to selected real map imagery, then zooms to the published approximate crater center **77.69°E, 18.41°N** at map zoom **10**. Further zoom uses the existing CTX levels 11–12. An action from the map first reveals the full overview before approaching again. The camera angles are display choices; they are not geographic coordinates or a validated Jezero orientation.
+
+The map fade waits for an actual rendered tile at the current matrix, rather than relying on accumulated download counts or cached lower-level parents. There are bounded context/detail waits with explicit fallback messages. This checks some visible source imagery, not complete coverage or positional accuracy. A final CTX wait can expire while leaving the centered map usable. The source panel retains independent loading, missing-tile, failure and retry information.
+
+The same MOLA and preliminary CTX sources, custom Mars grid and layer preferences are preserved. MOLA supplies context when selected and available; CTX gradually appears at local zoom inside its own footprint. CTX-only exploration skips the unavailable/hidden MOLA step; both-hidden stays an honest empty state. Gray imagery remains gray. Neither imagery nor the visual mesh becomes numerical elevation.
+
+**Skip animation** opens the destination directly. **Cancel** or Escape ends the approach and restores the overview when available; cancelling a return keeps the map. Reduced motion opens Jezero directly, and enabling it during animation finishes the transition without continued movement. Home remains a direct Jezero framing control while on the map. Zoom-out and **Return to overview** use a short reverse camera/fade sequence. Ordinary navigation is locked during transitions; layer choices and retry remain usable.
+
+The Jezero approach waits for the overview to finish preparing; direct map context remains available during loading. A failed model permits direct map navigation. No precise globe picking, Jezero surface pin, DEM processing or routing has been added. See [orientation decision](docs/globe-flight-orientation.md), [source audit](docs/terrain-detail-audit.md), and [the new verification record and six manual checks](docs/cinematic-jezero-verification.md).
+
+### Earlier unified explorer checkpoint (`d6da376`)
 
 The app opens on NASA's official textured overview. Drag to rotate and scroll/pinch to approach the globe, or use the same directional and zoom controls throughout exploration. Zooming in crosses a view-distance threshold and fades into the real map in the same viewport. The sidebar and source panel remain in place; there are no top-level globe/map tabs. With focus in the viewport, arrows rotate or pan, + / − zoom, and Home resets the overview or centers Jezero detail. There is no automatic rotation.
 

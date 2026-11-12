@@ -1,0 +1,499 @@
+[
+  {
+    "product": "Mars_MGS_MOLA_ClrShade_merge_global_463m",
+    "url": "https://trek.nasa.gov/tiles/Mars/EQ/Mars_MGS_MOLA_ClrShade_merge_global_463m/1.0.0/WMTSCapabilities.xml",
+    "requestedAtUtc": "2026-10-25T18:09:44.081921+00:00",
+    "requestHeaders": {
+      "Origin": "http://127.0.0.1:5173"
+    },
+    "status": 200,
+    "responseHeaders": {
+      "Date": "Sun, 25 Oct 2026 18:09:44 GMT",
+      "Server": "Apache/2.4.65 (Unix) OpenSSL/3.4.3",
+      "Strict-Transport-Security": "max-age=31536000; includeSubDomains",
+      "X-Content-Type-Options": "nosniff",
+      "Last-Modified": "Sat, 08 Dec 2018 06:47:07 GMT",
+      "ETag": "\"1b80-57c7d19b7992a\"",
+      "Accept-Ranges": "bytes",
+      "Content-Length": "7040",
+      "Access-Control-Allow-Origin": "*",
+      "Content-Type": "application/xml",
+      "Content-Security-Policy": "frame-ancestors 'self' aelp.smartsparrow.com;",
+      "Keep-Alive": "timeout=5, max=100",
+      "Connection": "Keep-Alive"
+    },
+    "byteLength": 7040,
+    "sha256": "2fb4722b5af0417980052354eab806cb9bdea003617548433cec8d8813d8d125",
+    "layer": {
+      "title": "Mars_MGS_MOLA_ClrShade_merge_global_463m",
+      "identifier": "Mars_MGS_MOLA_ClrShade_merge_global_463m",
+      "format": "image/jpeg",
+      "bounds": [
+        "-180.0 -89.9991635",
+        "179.9983271 90.0"
+      ],
+      "style": "default",
+      "resourceURLs": [
+        {
+          "format": "image/jpeg",
+          "resourceType": "tile",
+          "template": "https://trek.nasa.gov/tiles/Mars/EQ/Mars_MGS_MOLA_ClrShade_merge_global_463m/1.0.0//{Style}/{TileMatrixSet}/{TileMatrix}/{TileRow}/{TileCol}.jpg"
+        }
+      ]
+    },
+    "matrixSet": {
+      "identifier": "default028mm",
+      "supportedCRS": "urn:ogc:def:crs:EPSG::104905",
+      "matrices": [
+        {
+          "id": "0",
+          "scaleDenominator": "2.7922763629807472E+08",
+          "topLeftCorner": "-180.0 90.0",
+          "tileWidth": "256",
+          "tileHeight": "256",
+          "matrixWidth": "2.0",
+          "matrixHeight": "1.0",
+          "angularDegreesPerPixel": 0.703125
+        },
+        {
+          "id": "1",
+          "scaleDenominator": "1.3961381814903736E+08",
+          "topLeftCorner": "-180.0 90.0",
+          "tileWidth": "256",
+          "tileHeight": "256",
+          "matrixWidth": "4.0",
+          "matrixHeight": "2.0",
+          "angularDegreesPerPixel": 0.3515625
+        },
+        {
+          "id": "2",
+          "scaleDenominator": "6.9806909074518681E+07",
+          "topLeftCorner": "-180.0 90.0",
+          "tileWidth": "256",
+          "tileHeight": "256",
+          "matrixWidth": "8.0",
+          "matrixHeight": "4.0",
+          "angularDegreesPerPixel": 0.17578125
+        },
+        {
+          "id": "3",
+          "scaleDenominator": "3.4903454537259340E+07",
+          "topLeftCorner": "-180.0 90.0",
+          "tileWidth": "256",
+          "tileHeight": "256",
+          "matrixWidth": "16.0",
+          "matrixHeight": "8.0",
+          "angularDegreesPerPixel": 0.087890625
+        },
+        {
+          "id": "4",
+          "scaleDenominator": "1.7451727268629670E+07",
+          "topLeftCorner": "-180.0 90.0",
+          "tileWidth": "256",
+          "tileHeight": "256",
+          "matrixWidth": "32.0",
+          "matrixHeight": "16.0",
+          "angularDegreesPerPixel": 0.0439453125
+        },
+        {
+          "id": "5",
+          "scaleDenominator": "8.7258636343148351E+06",
+          "topLeftCorner": "-180.0 90.0",
+          "tileWidth": "256",
+          "tileHeight": "256",
+          "matrixWidth": "64.0",
+          "matrixHeight": "32.0",
+          "angularDegreesPerPixel": 0.02197265625
+        },
+        {
+          "id": "6",
+          "scaleDenominator": "4.3629318171574175E+06",
+          "topLeftCorner": "-180.0 90.0",
+          "tileWidth": "256",
+          "tileHeight": "256",
+          "matrixWidth": "128.0",
+          "matrixHeight": "64.0",
+          "angularDegreesPerPixel": 0.010986328125
+        },
+        {
+          "id": "7",
+          "scaleDenominator": "2.1814659085787088E+06",
+          "topLeftCorner": "-180.0 90.0",
+          "tileWidth": "256",
+          "tileHeight": "256",
+          "matrixWidth": "256.0",
+          "matrixHeight": "128.0",
+          "angularDegreesPerPixel": 0.0054931640625
+        }
+      ]
+    }
+  },
+  {
+    "product": "Jezero_CTX_BlockAdj_dd",
+    "url": "https://trek.nasa.gov/tiles/Mars/EQ/Jezero_CTX_BlockAdj_dd/1.0.0/WMTSCapabilities.xml",
+    "requestedAtUtc": "2026-10-25T18:09:44.082387+00:00",
+    "requestHeaders": {
+      "Origin": "http://127.0.0.1:5173"
+    },
+    "status": 200,
+    "responseHeaders": {
+      "Date": "Sun, 25 Oct 2026 18:09:44 GMT",
+      "Server": "Apache/2.4.65 (Unix) OpenSSL/3.4.3",
+      "Strict-Transport-Security": "max-age=31536000; includeSubDomains",
+      "X-Content-Type-Options": "nosniff",
+      "Last-Modified": "Sat, 08 Dec 2018 06:47:08 GMT",
+      "ETag": "\"2097-57c7d19bc19d0\"",
+      "Accept-Ranges": "bytes",
+      "Content-Length": "8343",
+      "Access-Control-Allow-Origin": "*",
+      "Content-Type": "application/xml",
+      "Content-Security-Policy": "frame-ancestors 'self' aelp.smartsparrow.com;",
+      "Keep-Alive": "timeout=5, max=100",
+      "Connection": "Keep-Alive"
+    },
+    "byteLength": 8343,
+    "sha256": "aeb623627236fc77bbe62c45a8db6e8c148cba7f70c02006eeb30c4fa377598c",
+    "layer": {
+      "title": "Jezero_CTX_BlockAdj_dd",
+      "identifier": "Jezero_CTX_BlockAdj_dd",
+      "format": "image/png",
+      "bounds": [
+        "75.1537692 15.9058484",
+        "78.8717121 19.4453003"
+      ],
+      "style": "default",
+      "resourceURLs": [
+        {
+          "format": "image/png",
+          "resourceType": "tile",
+          "template": "https://trek.nasa.gov/tiles/Mars/EQ/Jezero_CTX_BlockAdj_dd/1.0.0//{Style}/{TileMatrixSet}/{TileMatrix}/{TileRow}/{TileCol}.png"
+        }
+      ]
+    },
+    "matrixSet": {
+      "identifier": "default028mm",
+      "supportedCRS": "urn:ogc:def:crs:EPSG::104905",
+      "matrices": [
+        {
+          "id": "0",
+          "scaleDenominator": "2.7922763629807472E+08",
+          "topLeftCorner": "-180.0 90.0",
+          "tileWidth": "256",
+          "tileHeight": "256",
+          "matrixWidth": "2.0",
+          "matrixHeight": "1.0",
+          "angularDegreesPerPixel": 0.703125
+        },
+        {
+          "id": "1",
+          "scaleDenominator": "1.3961381814903736E+08",
+          "topLeftCorner": "-180.0 90.0",
+          "tileWidth": "256",
+          "tileHeight": "256",
+          "matrixWidth": "4.0",
+          "matrixHeight": "2.0",
+          "angularDegreesPerPixel": 0.3515625
+        },
+        {
+          "id": "2",
+          "scaleDenominator": "6.9806909074518681E+07",
+          "topLeftCorner": "-180.0 90.0",
+          "tileWidth": "256",
+          "tileHeight": "256",
+          "matrixWidth": "8.0",
+          "matrixHeight": "4.0",
+          "angularDegreesPerPixel": 0.17578125
+        },
+        {
+          "id": "3",
+          "scaleDenominator": "3.4903454537259340E+07",
+          "topLeftCorner": "-180.0 90.0",
+          "tileWidth": "256",
+          "tileHeight": "256",
+          "matrixWidth": "16.0",
+          "matrixHeight": "8.0",
+          "angularDegreesPerPixel": 0.087890625
+        },
+        {
+          "id": "4",
+          "scaleDenominator": "1.7451727268629670E+07",
+          "topLeftCorner": "-180.0 90.0",
+          "tileWidth": "256",
+          "tileHeight": "256",
+          "matrixWidth": "32.0",
+          "matrixHeight": "16.0",
+          "angularDegreesPerPixel": 0.0439453125
+        },
+        {
+          "id": "5",
+          "scaleDenominator": "8.7258636343148351E+06",
+          "topLeftCorner": "-180.0 90.0",
+          "tileWidth": "256",
+          "tileHeight": "256",
+          "matrixWidth": "64.0",
+          "matrixHeight": "32.0",
+          "angularDegreesPerPixel": 0.02197265625
+        },
+        {
+          "id": "6",
+          "scaleDenominator": "4.3629318171574175E+06",
+          "topLeftCorner": "-180.0 90.0",
+          "tileWidth": "256",
+          "tileHeight": "256",
+          "matrixWidth": "128.0",
+          "matrixHeight": "64.0",
+          "angularDegreesPerPixel": 0.010986328125
+        },
+        {
+          "id": "7",
+          "scaleDenominator": "2.1814659085787088E+06",
+          "topLeftCorner": "-180.0 90.0",
+          "tileWidth": "256",
+          "tileHeight": "256",
+          "matrixWidth": "256.0",
+          "matrixHeight": "128.0",
+          "angularDegreesPerPixel": 0.0054931640625
+        },
+        {
+          "id": "8",
+          "scaleDenominator": "1.0907329542893544E+06",
+          "topLeftCorner": "-180.0 90.0",
+          "tileWidth": "256",
+          "tileHeight": "256",
+          "matrixWidth": "512.0",
+          "matrixHeight": "256.0",
+          "angularDegreesPerPixel": 0.00274658203125
+        },
+        {
+          "id": "9",
+          "scaleDenominator": "5.4536647714467719E+05",
+          "topLeftCorner": "-180.0 90.0",
+          "tileWidth": "256",
+          "tileHeight": "256",
+          "matrixWidth": "1024.0",
+          "matrixHeight": "512.0",
+          "angularDegreesPerPixel": 0.001373291015625
+        },
+        {
+          "id": "10",
+          "scaleDenominator": "2.7268323857233860E+05",
+          "topLeftCorner": "-180.0 90.0",
+          "tileWidth": "256",
+          "tileHeight": "256",
+          "matrixWidth": "2048.0",
+          "matrixHeight": "1024.0",
+          "angularDegreesPerPixel": 0.0006866455078125
+        },
+        {
+          "id": "11",
+          "scaleDenominator": "1.3634161928616930E+05",
+          "topLeftCorner": "-180.0 90.0",
+          "tileWidth": "256",
+          "tileHeight": "256",
+          "matrixWidth": "4096.0",
+          "matrixHeight": "2048.0",
+          "angularDegreesPerPixel": 0.00034332275390625
+        },
+        {
+          "id": "12",
+          "scaleDenominator": "6.8170809643084649E+04",
+          "topLeftCorner": "-180.0 90.0",
+          "tileWidth": "256",
+          "tileHeight": "256",
+          "matrixWidth": "8192.0",
+          "matrixHeight": "4096.0",
+          "angularDegreesPerPixel": 0.000171661376953125
+        }
+      ]
+    }
+  },
+  {
+    "product": "JEZ_ctx_B_soc_008_orthoMosaic_6m_Eqc_latTs0_lon0",
+    "url": "https://trek.nasa.gov/tiles/Mars/EQ/JEZ_ctx_B_soc_008_orthoMosaic_6m_Eqc_latTs0_lon0/1.0.0/WMTSCapabilities.xml",
+    "requestedAtUtc": "2026-10-25T18:09:44.082648+00:00",
+    "requestHeaders": {
+      "Origin": "http://127.0.0.1:5173"
+    },
+    "status": 200,
+    "responseHeaders": {
+      "Date": "Sun, 25 Oct 2026 18:09:44 GMT",
+      "Server": "Apache/2.4.65 (Unix) OpenSSL/3.4.3",
+      "Strict-Transport-Security": "max-age=31536000; includeSubDomains",
+      "X-Content-Type-Options": "nosniff",
+      "Last-Modified": "Wed, 29 Jul 2020 23:17:47 GMT",
+      "ETag": "\"226a-5ab9cc38e0bda\"",
+      "Accept-Ranges": "bytes",
+      "Content-Length": "8810",
+      "Access-Control-Allow-Origin": "*",
+      "Content-Type": "application/xml",
+      "Content-Security-Policy": "frame-ancestors 'self' aelp.smartsparrow.com;",
+      "Keep-Alive": "timeout=5, max=100",
+      "Connection": "Keep-Alive"
+    },
+    "byteLength": 8810,
+    "sha256": "bb58f640da78bcc404a9109f613f2b3f0e3e683ff6625e8f48dcb23e602813b8",
+    "layer": {
+      "title": "JEZ_ctx_B_soc_008_orthoMosaic_6m_Eqc_latTs0_lon0",
+      "identifier": "JEZ_ctx_B_soc_008_orthoMosaic_6m_Eqc_latTs0_lon0",
+      "format": "image/png",
+      "bounds": [
+        "77.1604655 18.2110274",
+        "77.6991776 18.7211945"
+      ],
+      "style": "default",
+      "resourceURLs": [
+        {
+          "format": "image/png",
+          "resourceType": "tile",
+          "template": "https://trek.nasa.gov/tiles/Mars/EQ/JEZ_ctx_B_soc_008_orthoMosaic_6m_Eqc_latTs0_lon0/1.0.0//{Style}/{TileMatrixSet}/{TileMatrix}/{TileRow}/{TileCol}.png"
+        }
+      ]
+    },
+    "matrixSet": {
+      "identifier": "default028mm",
+      "supportedCRS": "urn:ogc:def:crs:EPSG::104905",
+      "matrices": [
+        {
+          "id": "0",
+          "scaleDenominator": "2.7922763629807472E+08",
+          "topLeftCorner": "-180.0 90.0",
+          "tileWidth": "256",
+          "tileHeight": "256",
+          "matrixWidth": "2.0",
+          "matrixHeight": "1.0",
+          "angularDegreesPerPixel": 0.703125
+        },
+        {
+          "id": "1",
+          "scaleDenominator": "1.3961381814903736E+08",
+          "topLeftCorner": "-180.0 90.0",
+          "tileWidth": "256",
+          "tileHeight": "256",
+          "matrixWidth": "4.0",
+          "matrixHeight": "2.0",
+          "angularDegreesPerPixel": 0.3515625
+        },
+        {
+          "id": "2",
+          "scaleDenominator": "6.9806909074518681E+07",
+          "topLeftCorner": "-180.0 90.0",
+          "tileWidth": "256",
+          "tileHeight": "256",
+          "matrixWidth": "8.0",
+          "matrixHeight": "4.0",
+          "angularDegreesPerPixel": 0.17578125
+        },
+        {
+          "id": "3",
+          "scaleDenominator": "3.4903454537259340E+07",
+          "topLeftCorner": "-180.0 90.0",
+          "tileWidth": "256",
+          "tileHeight": "256",
+          "matrixWidth": "16.0",
+          "matrixHeight": "8.0",
+          "angularDegreesPerPixel": 0.087890625
+        },
+        {
+          "id": "4",
+          "scaleDenominator": "1.7451727268629670E+07",
+          "topLeftCorner": "-180.0 90.0",
+          "tileWidth": "256",
+          "tileHeight": "256",
+          "matrixWidth": "32.0",
+          "matrixHeight": "16.0",
+          "angularDegreesPerPixel": 0.0439453125
+        },
+        {
+          "id": "5",
+          "scaleDenominator": "8.7258636343148351E+06",
+          "topLeftCorner": "-180.0 90.0",
+          "tileWidth": "256",
+          "tileHeight": "256",
+          "matrixWidth": "64.0",
+          "matrixHeight": "32.0",
+          "angularDegreesPerPixel": 0.02197265625
+        },
+        {
+          "id": "6",
+          "scaleDenominator": "4.3629318171574175E+06",
+          "topLeftCorner": "-180.0 90.0",
+          "tileWidth": "256",
+          "tileHeight": "256",
+          "matrixWidth": "128.0",
+          "matrixHeight": "64.0",
+          "angularDegreesPerPixel": 0.010986328125
+        },
+        {
+          "id": "7",
+          "scaleDenominator": "2.1814659085787088E+06",
+          "topLeftCorner": "-180.0 90.0",
+          "tileWidth": "256",
+          "tileHeight": "256",
+          "matrixWidth": "256.0",
+          "matrixHeight": "128.0",
+          "angularDegreesPerPixel": 0.0054931640625
+        },
+        {
+          "id": "8",
+          "scaleDenominator": "1.0907329542893544E+06",
+          "topLeftCorner": "-180.0 90.0",
+          "tileWidth": "256",
+          "tileHeight": "256",
+          "matrixWidth": "512.0",
+          "matrixHeight": "256.0",
+          "angularDegreesPerPixel": 0.00274658203125
+        },
+        {
+          "id": "9",
+          "scaleDenominator": "5.4536647714467719E+05",
+          "topLeftCorner": "-180.0 90.0",
+          "tileWidth": "256",
+          "tileHeight": "256",
+          "matrixWidth": "1024.0",
+          "matrixHeight": "512.0",
+          "angularDegreesPerPixel": 0.001373291015625
+        },
+        {
+          "id": "10",
+          "scaleDenominator": "2.7268323857233860E+05",
+          "topLeftCorner": "-180.0 90.0",
+          "tileWidth": "256",
+          "tileHeight": "256",
+          "matrixWidth": "2048.0",
+          "matrixHeight": "1024.0",
+          "angularDegreesPerPixel": 0.0006866455078125
+        },
+        {
+          "id": "11",
+          "scaleDenominator": "1.3634161928616930E+05",
+          "topLeftCorner": "-180.0 90.0",
+          "tileWidth": "256",
+          "tileHeight": "256",
+          "matrixWidth": "4096.0",
+          "matrixHeight": "2048.0",
+          "angularDegreesPerPixel": 0.00034332275390625
+        },
+        {
+          "id": "12",
+          "scaleDenominator": "6.8170809643084649E+04",
+          "topLeftCorner": "-180.0 90.0",
+          "tileWidth": "256",
+          "tileHeight": "256",
+          "matrixWidth": "8192.0",
+          "matrixHeight": "4096.0",
+          "angularDegreesPerPixel": 0.000171661376953125
+        },
+        {
+          "id": "13",
+          "scaleDenominator": "3.4085404821542324E+04",
+          "topLeftCorner": "-180.0 90.0",
+          "tileWidth": "256",
+          "tileHeight": "256",
+          "matrixWidth": "16384.0",
+          "matrixHeight": "8192.0",
+          "angularDegreesPerPixel": 8.58306884765625e-05
+        }
+      ]
+    }
+  }
+]

@@ -1,0 +1,187 @@
+{
+  "receiptFilesVerified": 39,
+  "imagesDecoded": [
+    {
+      "file": "ctx-controlled-east-boundary-z12-r1629-c5864.png",
+      "size": [
+        256,
+        256
+      ],
+      "fullyTransparentPixels": 59136,
+      "visiblePixels": 6400,
+      "grayscaleVerified": true
+    },
+    {
+      "file": "ctx-controlled-jezero-z12-r1629-c5863.png",
+      "size": [
+        256,
+        256
+      ],
+      "fullyTransparentPixels": 0,
+      "visiblePixels": 65536,
+      "grayscaleVerified": true
+    },
+    {
+      "file": "ctx-controlled-jezero-z13-r3258-c11727.png",
+      "size": [
+        256,
+        256
+      ],
+      "fullyTransparentPixels": 0,
+      "visiblePixels": 65536,
+      "grayscaleVerified": true
+    },
+    {
+      "file": "ctx-controlled-overlap-z10-r406-c1464.png",
+      "size": [
+        256,
+        256
+      ],
+      "fullyTransparentPixels": 0,
+      "visiblePixels": 65536,
+      "grayscaleVerified": true
+    },
+    {
+      "file": "ctx-controlled-overlap-z12-r1627-c5859.png",
+      "size": [
+        256,
+        256
+      ],
+      "fullyTransparentPixels": 0,
+      "visiblePixels": 65536,
+      "grayscaleVerified": true
+    },
+    {
+      "file": "ctx-controlled-overlap-z13-r3254-c11719.png",
+      "size": [
+        256,
+        256
+      ],
+      "fullyTransparentPixels": 0,
+      "visiblePixels": 65536,
+      "grayscaleVerified": true
+    },
+    {
+      "file": "ctx-mola-jezero-z7-r50-c183.jpg",
+      "size": [
+        256,
+        256
+      ],
+      "fullyTransparentPixels": 0,
+      "visiblePixels": 65536,
+      "grayscaleVerified": false
+    },
+    {
+      "file": "ctx-preliminary-jezero-z10-r407-c1465.png",
+      "size": [
+        256,
+        256
+      ],
+      "fullyTransparentPixels": 0,
+      "visiblePixels": 65536,
+      "grayscaleVerified": true
+    },
+    {
+      "file": "ctx-preliminary-jezero-z12-r1629-c5863.png",
+      "size": [
+        256,
+        256
+      ],
+      "fullyTransparentPixels": 0,
+      "visiblePixels": 65536,
+      "grayscaleVerified": true
+    },
+    {
+      "file": "ctx-preliminary-jezero-z8-r101-c366.png",
+      "size": [
+        256,
+        256
+      ],
+      "fullyTransparentPixels": 0,
+      "visiblePixels": 65536,
+      "grayscaleVerified": true
+    },
+    {
+      "file": "ctx-preliminary-overlap-z10-r406-c1464.png",
+      "size": [
+        256,
+        256
+      ],
+      "fullyTransparentPixels": 0,
+      "visiblePixels": 65536,
+      "grayscaleVerified": true
+    },
+    {
+      "file": "ctx-preliminary-overlap-z12-r1627-c5859.png",
+      "size": [
+        256,
+        256
+      ],
+      "fullyTransparentPixels": 0,
+      "visiblePixels": 65536,
+      "grayscaleVerified": true
+    },
+    {
+      "file": "ctx-preliminary-west-boundary-z12-r1629-c5806.png",
+      "size": [
+        256,
+        256
+      ],
+      "fullyTransparentPixels": 10496,
+      "visiblePixels": 55040,
+      "grayscaleVerified": true
+    },
+    {
+      "file": "hirise-closeup-within-z15-upper-left-z17.png",
+      "size": [
+        256,
+        256
+      ],
+      "fullyTransparentPixels": 0,
+      "visiblePixels": 65536,
+      "grayscaleVerified": true
+    },
+    {
+      "file": "hirise-northwest-coverage-boundary-z10.png",
+      "size": [
+        256,
+        256
+      ],
+      "fullyTransparentPixels": 65536,
+      "visiblePixels": 0,
+      "grayscaleVerified": true
+    },
+    {
+      "file": "hirise-published-JPL-projection-center-z12.png",
+      "size": [
+        256,
+        256
+      ],
+      "fullyTransparentPixels": 0,
+      "visiblePixels": 65536,
+      "grayscaleVerified": true
+    },
+    {
+      "file": "hirise-published-JPL-projection-center-z15.png",
+      "size": [
+        256,
+        256
+      ],
+      "fullyTransparentPixels": 0,
+      "visiblePixels": 65536,
+      "grayscaleVerified": true
+    },
+    {
+      "file": "hirise-published-JPL-projection-center-z17.png",
+      "size": [
+        256,
+        256
+      ],
+      "fullyTransparentPixels": 0,
+      "visiblePixels": 65536,
+      "grayscaleVerified": true
+    }
+  ],
+  "renderTraceInputsUnchanged": 10,
+  "status": "PASS: saved evidence integrity and source-image decode only; no browser test"
+}

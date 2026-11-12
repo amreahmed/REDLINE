@@ -19,9 +19,10 @@ export function MissionControl({ explorer, onJezero, visibility, statuses, onTog
           <Icon name="pin" />
         </div>
         <p className="region-name">Jezero</p>
-        <p className="helper">Zoom from the overview into MOLA context, then closer to Jezero for CTX imagery.</p>
-        <button className="open-region-button" type="button" disabled={explorer.phase === 'entering-map' || explorer.phase === 'entering-overview'} onClick={onJezero}>{explorer.mapShown ? 'Jezero detail' : 'Explore Jezero context'}</button>
-        <p className="helper">Globe positions are not georeferenced. The first handoff enters Jezero; later zoom handoffs resume the map area.</p>
+        <p className="helper">Take a scripted approach from the full Mars overview into real Jezero imagery.</p>
+        <button className="open-region-button" type="button" disabled={explorer.globe.phase === 'loading' || explorer.phase === 'entering-map' || explorer.phase === 'entering-overview' || explorer.phase === 'flying-to-jezero'} onClick={onJezero}>{explorer.mapShown ? 'Jezero detail' : 'Explore Jezero'}</button>
+        {explorer.globe.phase === 'loading' && <p className="helper">The NASA overview is preparing. Map context remains available while it loads.</p>}
+        <p className="helper">The globe rotation is approximate. The map arrives at the published crater center; your layer choices stay selected.</p>
       </section>
       <section className="panel-section" aria-labelledby="layers-heading">
         <div className="section-title flex items-center justify-between">

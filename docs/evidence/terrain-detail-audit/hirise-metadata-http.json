@@ -1,0 +1,81 @@
+[
+  {
+    "file": "hirise-usgs-product.html",
+    "url": "https://astrogeology.usgs.gov/search/map/mars_2020_terrain_relative_navigation_hirise_orthorectified_image_mosaic",
+    "retrievedAtUtc": "2026-10-25T18:11:30.394Z",
+    "status": 200,
+    "headers": {
+      "cache-control": "public, max-age=0, must-revalidate",
+      "cf-cache-status": "MISS",
+      "cf-ray": "a5032f1b2e2e1305-MRS",
+      "content-encoding": "gzip",
+      "content-type": "text/html; charset=utf-8",
+      "date": "Sun, 25 Oct 2026 18:11:29 GMT",
+      "last-modified": "Sun, 25 Oct 2026 18:11:29 GMT",
+      "server": "cloudflare",
+      "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
+      "x-content-type-options": "nosniff"
+    },
+    "bytes": 34661,
+    "sha256": "29b318b949f2a3dc596d79db867442edb85fefe7daff70e3ee7d2a0889e1b215"
+  },
+  {
+    "file": "hirise-trek-metadata.html",
+    "url": "https://trek.nasa.gov/mars/TrekWS/rest/cat/metadata/fgdc/html?label=JEZ_hirise_soc_006_orthoMosaic_25cm_Eqc_latTs0_lon0_first_dd",
+    "retrievedAtUtc": "2026-10-25T18:11:30.260Z",
+    "status": 200,
+    "headers": {
+      "connection": "Keep-Alive",
+      "content-security-policy": "frame-ancestors 'self' aelp.smartsparrow.com;",
+      "content-type": "text/html",
+      "date": "Sun, 25 Oct 2026 18:11:29 GMT",
+      "keep-alive": "timeout=5, max=100",
+      "server": "Apache/2.4.65 (Unix) OpenSSL/3.4.3",
+      "strict-transport-security": "max-age=31536000; includeSubDomains",
+      "transfer-encoding": "chunked",
+      "x-content-type-options": "nosniff"
+    },
+    "bytes": 5641,
+    "sha256": "f47f55e520c2c15ebbe94653a7eef82d47fdf26d9e0e7cf82a6897bf71044a33"
+  },
+  {
+    "file": "hirise-trek-abstract.html",
+    "url": "https://trek.nasa.gov/mars/TrekWS/rest/cat/abstract?label=JEZ_hirise_soc_006_orthoMosaic_25cm_Eqc_latTs0_lon0_first_dd",
+    "retrievedAtUtc": "2026-10-25T18:11:30.257Z",
+    "status": 200,
+    "headers": {
+      "connection": "Keep-Alive",
+      "content-security-policy": "frame-ancestors 'self' aelp.smartsparrow.com;",
+      "content-type": "text/plain",
+      "date": "Sun, 25 Oct 2026 18:11:29 GMT",
+      "keep-alive": "timeout=5, max=100",
+      "server": "Apache/2.4.65 (Unix) OpenSSL/3.4.3",
+      "strict-transport-security": "max-age=31536000; includeSubDomains",
+      "transfer-encoding": "chunked",
+      "x-content-type-options": "nosniff"
+    },
+    "bytes": 997,
+    "sha256": "ddfaa0353740e208ce9ff7356bcffa19e58b7ccf030542ee93cfd39327f32b74"
+  },
+  {
+    "file": "hirise-usgs-directory.html",
+    "url": "https://asc-pds-services.s3.us-west-2.amazonaws.com/mosaic/mars2020_trn/HiRISE/index.html",
+    "retrievedAtUtc": "2026-10-25T18:11:30.290Z",
+    "status": 200,
+    "headers": {
+      "accept-ranges": "bytes",
+      "content-length": "14486",
+      "content-type": "text/html",
+      "date": "Sun, 25 Oct 2026 18:11:30 GMT",
+      "etag": "\"86d6f205a95990b368802f1437b70aff\"",
+      "last-modified": "Sat, 20 Apr 2024 00:00:28 GMT",
+      "server": "AmazonS3",
+      "x-amz-id-2": "ErexJJrDSNrME82JfK75wi0/EVMLSys7pLG8bO+yhFcwwQ/gHYJ6MBny/o6KhUr796OKxJh2Sb8=",
+      "x-amz-request-id": "RY5PXAG7ZKEF684P",
+      "x-amz-server-side-encryption": "AES256",
+      "x-amz-version-id": "null"
+    },
+    "bytes": 14486,
+    "sha256": "9636208f23e1a02b3d787dec867f8649ce50b4f0d4c176a6d8448aa92cf52cc5"
+  }
+]

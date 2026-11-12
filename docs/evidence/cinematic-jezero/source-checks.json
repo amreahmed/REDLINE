@@ -1,0 +1,113 @@
+{
+  "method": "External source HTTP requests and Pillow image decode only; not requests captured from REDLINE browser",
+  "probes": [
+    {
+      "label": "MOLA context",
+      "url": "https://trek.nasa.gov/tiles/Mars/EQ/Mars_MGS_MOLA_ClrShade_merge_global_463m/1.0.0//default/default028mm/4/6/22.jpg",
+      "retrievedUTC": "2026-10-25T18:54:10.334320+00:00",
+      "status": 200,
+      "headers": {
+        "Date": "Sun, 25 Oct 2026 18:54:09 GMT",
+        "Server": "Apache/2.4.65 (Unix) OpenSSL/3.4.3",
+        "Strict-Transport-Security": "max-age=31536000; includeSubDomains",
+        "X-Content-Type-Options": "nosniff",
+        "Last-Modified": "Tue, 27 Jun 2017 02:05:54 GMT",
+        "ETag": "\"12775-552e781f12cf8\"",
+        "Accept-Ranges": "bytes",
+        "Content-Length": "75637",
+        "Access-Control-Allow-Origin": "*",
+        "Content-Type": "image/jpeg",
+        "Content-Security-Policy": "frame-ancestors 'self' aelp.smartsparrow.com;",
+        "Connection": "close"
+      },
+      "bytes": 75637,
+      "sha256": "91387c643c5f737a5fb6ae5c32625f1c91569d51b439664bb222417b9b8e09de",
+      "dimensions": [
+        256,
+        256
+      ],
+      "mode": "RGB"
+    },
+    {
+      "label": "CTX 10",
+      "url": "https://trek.nasa.gov/tiles/Mars/EQ/Jezero_CTX_BlockAdj_dd/1.0.0//default/default028mm/10/407/1465.png",
+      "retrievedUTC": "2026-10-25T18:54:10.321788+00:00",
+      "status": 200,
+      "headers": {
+        "Date": "Sun, 25 Oct 2026 18:54:09 GMT",
+        "Server": "Apache/2.4.65 (Unix) OpenSSL/3.4.3",
+        "Strict-Transport-Security": "max-age=31536000; includeSubDomains",
+        "X-Content-Type-Options": "nosniff",
+        "Last-Modified": "Thu, 03 Nov 2016 02:49:54 GMT",
+        "ETag": "\"ed6b-5405c9cc2ccc7\"",
+        "Accept-Ranges": "bytes",
+        "Content-Length": "60779",
+        "Access-Control-Allow-Origin": "*",
+        "Content-Type": "image/png",
+        "Content-Security-Policy": "frame-ancestors 'self' aelp.smartsparrow.com;",
+        "Connection": "close"
+      },
+      "bytes": 60779,
+      "sha256": "4691a7de13825bd6655a516034896bc2db714fedeee335ba43724a18977a3c9a",
+      "dimensions": [
+        256,
+        256
+      ],
+      "mode": "LA"
+    },
+    {
+      "label": "CTX 11",
+      "url": "https://trek.nasa.gov/tiles/Mars/EQ/Jezero_CTX_BlockAdj_dd/1.0.0//default/default028mm/11/814/2931.png",
+      "retrievedUTC": "2026-10-25T18:54:10.339855+00:00",
+      "status": 200,
+      "headers": {
+        "Date": "Sun, 25 Oct 2026 18:54:09 GMT",
+        "Server": "Apache/2.4.65 (Unix) OpenSSL/3.4.3",
+        "Strict-Transport-Security": "max-age=31536000; includeSubDomains",
+        "X-Content-Type-Options": "nosniff",
+        "Last-Modified": "Thu, 03 Nov 2016 02:50:04 GMT",
+        "ETag": "\"f36c-5405c9d50c589\"",
+        "Accept-Ranges": "bytes",
+        "Content-Length": "62316",
+        "Access-Control-Allow-Origin": "*",
+        "Content-Type": "image/png",
+        "Content-Security-Policy": "frame-ancestors 'self' aelp.smartsparrow.com;",
+        "Connection": "close"
+      },
+      "bytes": 62316,
+      "sha256": "f1b38585d0660f00349cecac223ca4fe146968504da3c9ef0b9937374eacc82e",
+      "dimensions": [
+        256,
+        256
+      ],
+      "mode": "LA"
+    },
+    {
+      "label": "CTX 12",
+      "url": "https://trek.nasa.gov/tiles/Mars/EQ/Jezero_CTX_BlockAdj_dd/1.0.0//default/default028mm/12/1629/5863.png",
+      "retrievedUTC": "2026-10-25T18:54:10.311639+00:00",
+      "status": 200,
+      "headers": {
+        "Date": "Sun, 25 Oct 2026 18:54:09 GMT",
+        "Server": "Apache/2.4.65 (Unix) OpenSSL/3.4.3",
+        "Strict-Transport-Security": "max-age=31536000; includeSubDomains",
+        "X-Content-Type-Options": "nosniff",
+        "Last-Modified": "Thu, 03 Nov 2016 02:50:20 GMT",
+        "ETag": "\"eecb-5405c9e4d6579\"",
+        "Accept-Ranges": "bytes",
+        "Content-Length": "61131",
+        "Access-Control-Allow-Origin": "*",
+        "Content-Type": "image/png",
+        "Content-Security-Policy": "frame-ancestors 'self' aelp.smartsparrow.com;",
+        "Connection": "close"
+      },
+      "bytes": 61131,
+      "sha256": "a82b36ba3b623ec97eb5f28233df1c8e5390e75665cefac9812ec863e7def635",
+      "dimensions": [
+        256,
+        256
+      ],
+      "mode": "LA"
+    }
+  ]
+}

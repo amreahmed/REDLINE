@@ -3,18 +3,21 @@ import OlMap from 'ol/Map'
 import TileState from 'ol/TileState'
 import View from 'ol/View'
 import { defaults as defaultInteractions } from 'ol/interaction/defaults'
-import TileLayer from 'ol/layer/Tile'
 import type Tile from 'ol/Tile'
-import type WMTS from 'ol/source/WMTS'
 import { JEZERO_EXTENT, MARS_LAYERS } from '../../data/marsLayers'
+import { JEZERO_CONTEXT_ZOOM, JEZERO_DETAIL_ZOOM } from '../../data/jezero'
 import { readCapabilities } from './capabilities'
 import { coverageForView, MAX_LEVEL, WORLD_EXTENT } from './grid'
 import { createDisplayProjection, createTileSource } from './mapProjection'
 import { requestTile, requestXml, ResourceError } from './requests'
 import { initialLayerStatus } from './types'
+import { clampApproachZoom, clampDetailOpacity, jezeroCenter } from './jezeroView'
+import { FrameAwareTileLayer } from './FrameAwareTileLayer'
+import { createAlphaSupport } from './frameReadiness'
+import type { ImageSupport } from './frameReadiness'
 import type { Bounds, LayerDefinition, LayerId, LayerStatus, LayerVisibility, ViewStatus } from './types'
 
-type LayerRun = { abort: AbortController; status: LayerStatus }
+type LayerRun = { abort: AbortController; status: LayerStatus; imageSupport: WeakMap<Tile, ImageSupport> }
 export type MarsMapController = {
   setVisibility: (visibility: LayerVisibility) => void
   retry: (id: LayerId) => void
@@ -23,6 +26,10 @@ export type MarsMapController = {
   setActive: (active: boolean) => void
   enterContext: (atJezero: boolean, minimumZoom: number) => void
   focusJezero: () => void
+  prepareJezeroApproach: () => void
+  setApproachZoom: (zoom: number) => void
+  setDetailOpacity: (opacity: number) => void
+  hasRenderedImagery: (id?: LayerId) => boolean
   panBy: (horizontal: number, vertical: number) => void
   zoomBy: (delta: number) => void
   dispose: () => void
@@ -32,10 +39,11 @@ export type MarsMapController = {
 export function createMarsMap(target: HTMLElement, onStatus: (id: LayerId, status: LayerStatus) => void, onView: (status: ViewStatus) => void, options: { keyboard?: boolean } = {}): MarsMapController {
   const projection = createDisplayProjection()
   const view = new View({ projection, resolutions: Array.from({ length: MAX_LEVEL + 1 }, (_, z) => 0.703125 / 2 ** z), extent: WORLD_EXTENT, constrainOnlyCenter: true, enableRotation: false })
-  const layers = new Map<LayerId, TileLayer<WMTS>>()
+  const layers = new Map<LayerId, FrameAwareTileLayer>()
   const runs = new Map<LayerId, LayerRun>()
   let disposed = false
-  for (const definition of MARS_LAYERS) layers.set(definition.id, new TileLayer<WMTS>({ extent: definition.extent, cacheSize: 128 }))
+  let alphaCanvas: HTMLCanvasElement | undefined
+  for (const definition of MARS_LAYERS) layers.set(definition.id, new FrameAwareTileLayer({ extent: definition.extent, cacheSize: 128 }))
   const map = new OlMap({
     target,
     view,
@@ -66,6 +74,21 @@ export function createMarsMap(target: HTMLElement, onStatus: (id: LayerId, statu
       await image.decode()
       signal.throwIfAborted()
       if (image.naturalWidth !== 256 || image.naturalHeight !== 256) throw new ResourceError('content', 'Unexpected tile dimensions; imagery was not displayed.')
+      // Alpha is only a display-readiness check; grayscale values are never terrain data.
+      let support: ImageSupport = { hasPixels: definition.format === 'image/jpeg' }
+      if (!support.hasPixels) {
+        try {
+          alphaCanvas ??= document.createElement('canvas')
+          alphaCanvas.width = 256
+          alphaCanvas.height = 256
+          const context = alphaCanvas.getContext('2d', { willReadFrequently: true })
+          if (context) { context.drawImage(image, 0, 0); support = createAlphaSupport(context.getImageData(0, 0, 256, 256).data, 256, 256) }
+        } catch {
+          // A readback restriction must not invent readiness or block normal imagery rendering.
+          support = { hasPixels: false }
+        }
+      }
+      if (support.hasPixels) run.imageSupport.set(tile, support)
       tile.setImage(image)
       run.status.loaded++
     } catch (error) {
@@ -88,11 +111,12 @@ export function createMarsMap(target: HTMLElement, onStatus: (id: LayerId, statu
 
   async function connect(definition: LayerDefinition) {
     const layer = layers.get(definition.id)!
+    layer.invalidateFrame()
     runs.get(definition.id)?.abort.abort()
     const oldSource = layer.getSource()
     layer.setSource(null)
     oldSource?.dispose()
-    const run: LayerRun = { abort: new AbortController(), status: initialLayerStatus() }
+    const run: LayerRun = { abort: new AbortController(), status: initialLayerStatus(), imageSupport: new WeakMap() }
     runs.set(definition.id, run)
     emit(definition, run)
     try {
@@ -132,20 +156,44 @@ export function createMarsMap(target: HTMLElement, onStatus: (id: LayerId, statu
     map.updateSize()
     reportView()
   }
-  const jezeroCenter = () => [(JEZERO_EXTENT[0] + JEZERO_EXTENT[2]) / 2, (JEZERO_EXTENT[1] + JEZERO_EXTENT[3]) / 2]
+  function setApproachZoom(zoom: number) {
+    if (disposed) return
+    view.setCenter(jezeroCenter())
+    view.setZoom(clampApproachZoom(zoom))
+    reportView()
+  }
+
+  function hasRenderedImagery(id?: LayerId) {
+    if (disposed) return false
+    const size = map.getSize()
+    const center = view.getCenter()
+    const resolution = view.getResolution()
+    if (!size || !center || !resolution || size[0] <= 0 || size[1] <= 0) return false
+    const current = { center: [center[0], center[1]] as [number, number], resolution, size: [size[0], size[1]] as [number, number] }
+    const extent = view.calculateExtent(size) as Bounds
+    return [...layers].some(([layerId, layer]) => {
+      const run = runs.get(layerId)
+      return (!id || layerId === id) && !!run && !run.abort.signal.aborted && layer.hasCurrentImagery(current, extent, run.imageSupport)
+    })
+  }
+
   const resizeObserver = new ResizeObserver(refresh)
   resizeObserver.observe(target)
   reset()
   for (const definition of MARS_LAYERS) void connect(definition)
 
   return {
-    setVisibility: (visibility) => { for (const [id, layer] of layers) layer.setVisible(visibility[id]) },
+    setVisibility: (visibility) => { if (!disposed) for (const [id, layer] of layers) { if (layer.getVisible() !== visibility[id]) layer.invalidateFrame(); layer.setVisible(visibility[id]) } },
     retry: (id) => { const definition = MARS_LAYERS.find((layer) => layer.id === id); if (definition && !disposed) void connect(definition) },
     reset,
     refresh,
     setActive: (active) => { view.cancelAnimations(); map.getInteractions().forEach((interaction) => interaction.setActive(active)); if (active) refresh() },
     enterContext: (atJezero, minimumZoom) => { refresh(); if (atJezero) view.setCenter(jezeroCenter()); view.setZoom(atJezero ? minimumZoom : Math.max(minimumZoom, view.getZoom() ?? minimumZoom)); reportView() },
-    focusJezero: () => { view.setCenter(jezeroCenter()); view.setZoom(8); reportView() },
+    focusJezero: () => { if (!disposed) { view.cancelAnimations(); view.setCenter(jezeroCenter()); view.setZoom(JEZERO_DETAIL_ZOOM); reportView() } },
+    prepareJezeroApproach: () => { if (!disposed) { view.cancelAnimations(); for (const layer of layers.values()) layer.invalidateFrame(); refresh(); setApproachZoom(JEZERO_CONTEXT_ZOOM) } },
+    setApproachZoom,
+    setDetailOpacity: (opacity) => { if (!disposed) layers.get('ctx')?.setOpacity(clampDetailOpacity(opacity)) },
+    hasRenderedImagery,
     panBy: (horizontal, vertical) => { const resolution = view.getResolution() ?? 0; view.adjustCenter([horizontal * resolution * 128, -vertical * resolution * 128]); reportView() },
     zoomBy: (delta) => { view.setZoom(Math.max(0, Math.min(MAX_LEVEL, (view.getZoom() ?? 0) + delta))); reportView() },
     dispose: () => {
@@ -153,6 +201,7 @@ export function createMarsMap(target: HTMLElement, onStatus: (id: LayerId, statu
       resizeObserver.disconnect()
       for (const run of runs.values()) run.abort.abort()
       for (const layer of layers.values()) layer.getSource()?.dispose()
+      if (alphaCanvas) { alphaCanvas.width = 0; alphaCanvas.height = 0; alphaCanvas = undefined }
       map.setTarget(undefined)
       map.dispose()
     },

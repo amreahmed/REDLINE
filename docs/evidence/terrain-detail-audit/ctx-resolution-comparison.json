@@ -1,0 +1,47 @@
+{
+  "scope": "Calculated display-grid sampling using the documented 3396190 m Mars sphere; not measured ground resolving power, source resolution or DEM data. East-west ground spacing varies with latitude.",
+  "formula": "degreesPerPixel = 0.703125 / 2^z; nominalSphereMetresPerPixel = degreesPerPixel * pi * 3396190 / 180",
+  "rows": [
+    {
+      "tileMatrix": 7,
+      "degreesPerPixel": 0.0054931640625,
+      "nominalSphereMetresPerPixel": 325.60563825058347
+    },
+    {
+      "tileMatrix": 8,
+      "degreesPerPixel": 0.00274658203125,
+      "nominalSphereMetresPerPixel": 162.80281912529173
+    },
+    {
+      "tileMatrix": 9,
+      "degreesPerPixel": 0.001373291015625,
+      "nominalSphereMetresPerPixel": 81.40140956264587
+    },
+    {
+      "tileMatrix": 10,
+      "degreesPerPixel": 0.0006866455078125,
+      "nominalSphereMetresPerPixel": 40.70070478132293
+    },
+    {
+      "tileMatrix": 11,
+      "degreesPerPixel": 0.00034332275390625,
+      "nominalSphereMetresPerPixel": 20.350352390661467
+    },
+    {
+      "tileMatrix": 12,
+      "degreesPerPixel": 0.000171661376953125,
+      "nominalSphereMetresPerPixel": 10.175176195330733
+    },
+    {
+      "tileMatrix": 13,
+      "degreesPerPixel": 8.58306884765625e-05,
+      "nominalSphereMetresPerPixel": 5.087588097665367
+    }
+  ],
+  "molaNativeSourcePixelsPerDegree": 128,
+  "molaMaxServicePixelsPerDegree": 182.04444444444445,
+  "molaMaxServiceResamplingFactor": 1.4222222222222223,
+  "controlledSourcePixelMetres": 6,
+  "controlledSourceDegreesPerPixel": 0.00010122362914869109,
+  "controlledMaxServiceSourceResamplingFactor": 1.1793407573135324
+}

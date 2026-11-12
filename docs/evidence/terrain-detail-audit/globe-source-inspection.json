@@ -1,0 +1,81 @@
+{
+  "inspection": "HTTP and binary-source inspection only; no REDLINE browser or GPU inspection",
+  "http": {
+    "url": "https://assets.science.nasa.gov/content/dam/science/psd/mars/resources/gltf_files/24881_Mars_1_6792.glb",
+    "status": 200,
+    "headers": {
+      "Content-Type": "model/gltf-binary",
+      "Content-Length": "4032148",
+      "Connection": "close",
+      "Server": "Apache",
+      "X-Dispatcher": "dispatcher2usgovwest1-29695207",
+      "X-Vhost": "nasa-prod-publish",
+      "Strict-Transport-Security": "max-age=43200; includeSubdomains;",
+      "Content-Disposition": "attachment",
+      "X-Content-Type-Options": "nosniff",
+      "Last-Modified": "Fri, 18 Oct 2024 23:30:52 GMT",
+      "Accept-Ranges": "bytes",
+      "X-Frame-Options": "SAMEORIGIN",
+      "Access-Control-Allow-Origin": "*",
+      "Date": "Sun, 25 Oct 2026 18:11:29 GMT",
+      "Cache-Control": "max-age=43200,stale-while-revalidate=300,stale-if-error=300",
+      "ETag": "\"3d8694-624c8b19a4300\"",
+      "Vary": "Accept-Encoding",
+      "X-Cache": "RefreshHit from cloudfront",
+      "Via": "1.1 5c2922fd186e415d593827024a9b9782.cloudfront.net (CloudFront)",
+      "X-Amz-Cf-Pop": "CAI50-P1",
+      "X-Amz-Cf-Id": "R_FXUzKCIciwWCs6LQckfqTiPHX6YcJbk5KHYhVO7rfBNKSaiSSQpQ=="
+    },
+    "retrievedUTC": "2026-10-25T18:11:31.610079+00:00"
+  },
+  "sha256": "0d27fc65fe3e6a5847cf0cd3a5c951538afdd49bd0513607d8a70e8ab1d8d7ac",
+  "bytes": 4032148,
+  "glbVersion": 2,
+  "declaredBytes": 4032148,
+  "meshes": 1,
+  "vertices": 2034,
+  "triangles": 3072,
+  "images": [
+    {
+      "name": "mars_norm.jpg",
+      "mimeType": "image/png",
+      "bytes": 507991,
+      "pngSignature": "89504e470d0a1a0a",
+      "widthHeight": [
+        2048,
+        1536
+      ]
+    },
+    {
+      "name": "mars_diff.jpg",
+      "mimeType": "image/png",
+      "bytes": 3439176,
+      "pngSignature": "89504e470d0a1a0a",
+      "widthHeight": [
+        2048,
+        1536
+      ]
+    }
+  ],
+  "assetMetadata": {
+    "generator": "Khronos Blender glTF 2.0 I/O",
+    "version": "2.0"
+  },
+  "materials": [
+    {
+      "name": "Default OBJ.005",
+      "normalTexture": {
+        "index": 0,
+        "texCoord": 0
+      },
+      "pbrMetallicRoughness": {
+        "baseColorTexture": {
+          "index": 1,
+          "texCoord": 0
+        },
+        "metallicFactor": 0,
+        "roughnessFactor": 0.8999999761581421
+      }
+    }
+  ]
+}

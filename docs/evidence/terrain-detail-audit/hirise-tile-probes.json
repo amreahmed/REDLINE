@@ -1,0 +1,551 @@
+{
+  "note": "Direct external source probes, not browser rendering. Published JPL projection center is a navigation reference, not a newly measured physical target. Outside probes deliberately test missing coverage.",
+  "matrices": [
+    {
+      "id": "0",
+      "scaleDenominator": 279227636.2980747,
+      "origin": [
+        -180,
+        90
+      ],
+      "tileWidth": 256,
+      "tileHeight": 256,
+      "matrixWidth": 2,
+      "matrixHeight": 1,
+      "degreesPerPixel": 0.703125,
+      "meridionalMetersPerPixel": 41677.521696074684
+    },
+    {
+      "id": "1",
+      "scaleDenominator": 139613818.14903736,
+      "origin": [
+        -180,
+        90
+      ],
+      "tileWidth": 256,
+      "tileHeight": 256,
+      "matrixWidth": 4,
+      "matrixHeight": 2,
+      "degreesPerPixel": 0.3515625,
+      "meridionalMetersPerPixel": 20838.760848037342
+    },
+    {
+      "id": "2",
+      "scaleDenominator": 69806909.07451868,
+      "origin": [
+        -180,
+        90
+      ],
+      "tileWidth": 256,
+      "tileHeight": 256,
+      "matrixWidth": 8,
+      "matrixHeight": 4,
+      "degreesPerPixel": 0.17578125,
+      "meridionalMetersPerPixel": 10419.380424018671
+    },
+    {
+      "id": "3",
+      "scaleDenominator": 34903454.53725934,
+      "origin": [
+        -180,
+        90
+      ],
+      "tileWidth": 256,
+      "tileHeight": 256,
+      "matrixWidth": 16,
+      "matrixHeight": 8,
+      "degreesPerPixel": 0.087890625,
+      "meridionalMetersPerPixel": 5209.6902120093355
+    },
+    {
+      "id": "4",
+      "scaleDenominator": 17451727.26862967,
+      "origin": [
+        -180,
+        90
+      ],
+      "tileWidth": 256,
+      "tileHeight": 256,
+      "matrixWidth": 32,
+      "matrixHeight": 16,
+      "degreesPerPixel": 0.0439453125,
+      "meridionalMetersPerPixel": 2604.8451060046677
+    },
+    {
+      "id": "5",
+      "scaleDenominator": 8725863.634314835,
+      "origin": [
+        -180,
+        90
+      ],
+      "tileWidth": 256,
+      "tileHeight": 256,
+      "matrixWidth": 64,
+      "matrixHeight": 32,
+      "degreesPerPixel": 0.02197265625,
+      "meridionalMetersPerPixel": 1302.4225530023339
+    },
+    {
+      "id": "6",
+      "scaleDenominator": 4362931.817157418,
+      "origin": [
+        -180,
+        90
+      ],
+      "tileWidth": 256,
+      "tileHeight": 256,
+      "matrixWidth": 128,
+      "matrixHeight": 64,
+      "degreesPerPixel": 0.010986328125,
+      "meridionalMetersPerPixel": 651.2112765011669
+    },
+    {
+      "id": "7",
+      "scaleDenominator": 2181465.908578709,
+      "origin": [
+        -180,
+        90
+      ],
+      "tileWidth": 256,
+      "tileHeight": 256,
+      "matrixWidth": 256,
+      "matrixHeight": 128,
+      "degreesPerPixel": 0.0054931640625,
+      "meridionalMetersPerPixel": 325.60563825058347
+    },
+    {
+      "id": "8",
+      "scaleDenominator": 1090732.9542893544,
+      "origin": [
+        -180,
+        90
+      ],
+      "tileWidth": 256,
+      "tileHeight": 256,
+      "matrixWidth": 512,
+      "matrixHeight": 256,
+      "degreesPerPixel": 0.00274658203125,
+      "meridionalMetersPerPixel": 162.80281912529173
+    },
+    {
+      "id": "9",
+      "scaleDenominator": 545366.4771446772,
+      "origin": [
+        -180,
+        90
+      ],
+      "tileWidth": 256,
+      "tileHeight": 256,
+      "matrixWidth": 1024,
+      "matrixHeight": 512,
+      "degreesPerPixel": 0.001373291015625,
+      "meridionalMetersPerPixel": 81.40140956264587
+    },
+    {
+      "id": "10",
+      "scaleDenominator": 272683.2385723386,
+      "origin": [
+        -180,
+        90
+      ],
+      "tileWidth": 256,
+      "tileHeight": 256,
+      "matrixWidth": 2048,
+      "matrixHeight": 1024,
+      "degreesPerPixel": 0.0006866455078125,
+      "meridionalMetersPerPixel": 40.70070478132293
+    },
+    {
+      "id": "11",
+      "scaleDenominator": 136341.6192861693,
+      "origin": [
+        -180,
+        90
+      ],
+      "tileWidth": 256,
+      "tileHeight": 256,
+      "matrixWidth": 4096,
+      "matrixHeight": 2048,
+      "degreesPerPixel": 0.00034332275390625,
+      "meridionalMetersPerPixel": 20.350352390661467
+    },
+    {
+      "id": "12",
+      "scaleDenominator": 68170.80964308465,
+      "origin": [
+        -180,
+        90
+      ],
+      "tileWidth": 256,
+      "tileHeight": 256,
+      "matrixWidth": 8192,
+      "matrixHeight": 4096,
+      "degreesPerPixel": 0.000171661376953125,
+      "meridionalMetersPerPixel": 10.175176195330733
+    },
+    {
+      "id": "13",
+      "scaleDenominator": 34085.404821542324,
+      "origin": [
+        -180,
+        90
+      ],
+      "tileWidth": 256,
+      "tileHeight": 256,
+      "matrixWidth": 16384,
+      "matrixHeight": 8192,
+      "degreesPerPixel": 0.0000858306884765625,
+      "meridionalMetersPerPixel": 5.087588097665367
+    },
+    {
+      "id": "14",
+      "scaleDenominator": 17042.702410771162,
+      "origin": [
+        -180,
+        90
+      ],
+      "tileWidth": 256,
+      "tileHeight": 256,
+      "matrixWidth": 32768,
+      "matrixHeight": 16384,
+      "degreesPerPixel": 0.00004291534423828125,
+      "meridionalMetersPerPixel": 2.5437940488326833
+    },
+    {
+      "id": "15",
+      "scaleDenominator": 8521.351205385581,
+      "origin": [
+        -180,
+        90
+      ],
+      "tileWidth": 256,
+      "tileHeight": 256,
+      "matrixWidth": 65536,
+      "matrixHeight": 32768,
+      "degreesPerPixel": 0.000021457672119140625,
+      "meridionalMetersPerPixel": 1.2718970244163417
+    },
+    {
+      "id": "16",
+      "scaleDenominator": 4260.675602692791,
+      "origin": [
+        -180,
+        90
+      ],
+      "tileWidth": 256,
+      "tileHeight": 256,
+      "matrixWidth": 131072,
+      "matrixHeight": 65536,
+      "degreesPerPixel": 0.000010728836059570312,
+      "meridionalMetersPerPixel": 0.6359485122081708
+    },
+    {
+      "id": "17",
+      "scaleDenominator": 2130.3378013463953,
+      "origin": [
+        -180,
+        90
+      ],
+      "tileWidth": 256,
+      "tileHeight": 256,
+      "matrixWidth": 262144,
+      "matrixHeight": 131072,
+      "degreesPerPixel": 0.000005364418029785156,
+      "meridionalMetersPerPixel": 0.3179742561040854
+    }
+  ],
+  "probes": [
+    {
+      "label": "published-JPL-projection-center-z12",
+      "coordinate": [
+        77.4298,
+        18.4663
+      ],
+      "z": 12,
+      "row": 1627,
+      "col": 5857,
+      "file": "hirise-published-JPL-projection-center-z12.png",
+      "url": "https://trek.nasa.gov/tiles/Mars/EQ/JEZ_hirise_soc_006_orthoMosaic_25cm_Eqc_latTs0_lon0_first_dd/1.0.0//default/default028mm/12/1627/5857.png",
+      "retrievedAtUtc": "2026-10-25T18:12:27.581Z",
+      "status": 200,
+      "headers": {
+        "accept-ranges": "bytes",
+        "access-control-allow-origin": "*",
+        "connection": "Keep-Alive",
+        "content-length": "57973",
+        "content-security-policy": "frame-ancestors 'self' aelp.smartsparrow.com;",
+        "content-type": "image/png",
+        "date": "Sun, 25 Oct 2026 18:12:26 GMT",
+        "etag": "\"e275-5ab9e36ede19a\"",
+        "keep-alive": "timeout=5, max=100",
+        "last-modified": "Thu, 30 Jul 2020 01:01:38 GMT",
+        "server": "Apache/2.4.65 (Unix) OpenSSL/3.4.3",
+        "strict-transport-security": "max-age=31536000; includeSubDomains",
+        "x-content-type-options": "nosniff"
+      },
+      "bytes": 57973,
+      "sha256": "0aa9ef1ac5daef4969b4935ca530ce26fa59fc78cb3bd36620c88d194098de33",
+      "png": {
+        "width": 256,
+        "height": 256,
+        "bitDepth": 8,
+        "colorType": 4
+      },
+      "decoded": {
+        "width": 256,
+        "height": 256,
+        "pixelEncoding": "8-bit grayscale plus alpha",
+        "zeroAlpha": 0,
+        "fullAlpha": 65536,
+        "otherAlpha": 0,
+        "minValidGray": 0,
+        "maxValidGray": 255,
+        "distinctValidGrayLevels": 255
+      }
+    },
+    {
+      "label": "published-JPL-projection-center-z15",
+      "coordinate": [
+        77.4298,
+        18.4663
+      ],
+      "z": 15,
+      "row": 13022,
+      "col": 46863,
+      "file": "hirise-published-JPL-projection-center-z15.png",
+      "url": "https://trek.nasa.gov/tiles/Mars/EQ/JEZ_hirise_soc_006_orthoMosaic_25cm_Eqc_latTs0_lon0_first_dd/1.0.0//default/default028mm/15/13022/46863.png",
+      "retrievedAtUtc": "2026-10-25T18:12:27.548Z",
+      "status": 200,
+      "headers": {
+        "accept-ranges": "bytes",
+        "access-control-allow-origin": "*",
+        "connection": "Keep-Alive",
+        "content-length": "42527",
+        "content-security-policy": "frame-ancestors 'self' aelp.smartsparrow.com;",
+        "content-type": "image/png",
+        "date": "Sun, 25 Oct 2026 18:12:26 GMT",
+        "etag": "\"a61f-5ab9e38ad406d\"",
+        "keep-alive": "timeout=5, max=100",
+        "last-modified": "Thu, 30 Jul 2020 01:02:07 GMT",
+        "server": "Apache/2.4.65 (Unix) OpenSSL/3.4.3",
+        "strict-transport-security": "max-age=31536000; includeSubDomains",
+        "x-content-type-options": "nosniff"
+      },
+      "bytes": 42527,
+      "sha256": "910b5b8944f25200c72f8bfc3f64246bb0407f4fde3a1f8eb836e4836b28276f",
+      "png": {
+        "width": 256,
+        "height": 256,
+        "bitDepth": 8,
+        "colorType": 4
+      },
+      "decoded": {
+        "width": 256,
+        "height": 256,
+        "pixelEncoding": "8-bit grayscale plus alpha",
+        "zeroAlpha": 0,
+        "fullAlpha": 65536,
+        "otherAlpha": 0,
+        "minValidGray": 38,
+        "maxValidGray": 150,
+        "distinctValidGrayLevels": 111
+      }
+    },
+    {
+      "label": "published-JPL-projection-center-z17",
+      "coordinate": [
+        77.4298,
+        18.4663
+      ],
+      "z": 17,
+      "row": 52089,
+      "col": 187454,
+      "file": "hirise-published-JPL-projection-center-z17.png",
+      "url": "https://trek.nasa.gov/tiles/Mars/EQ/JEZ_hirise_soc_006_orthoMosaic_25cm_Eqc_latTs0_lon0_first_dd/1.0.0//default/default028mm/17/52089/187454.png",
+      "retrievedAtUtc": "2026-10-25T18:12:27.397Z",
+      "status": 200,
+      "headers": {
+        "accept-ranges": "bytes",
+        "access-control-allow-origin": "*",
+        "connection": "Keep-Alive",
+        "content-length": "28343",
+        "content-security-policy": "frame-ancestors 'self' aelp.smartsparrow.com;",
+        "content-type": "image/png",
+        "date": "Sun, 25 Oct 2026 18:12:26 GMT",
+        "etag": "\"6eb7-5ab9e3f17715a\"",
+        "keep-alive": "timeout=5, max=100",
+        "last-modified": "Thu, 30 Jul 2020 01:03:55 GMT",
+        "server": "Apache/2.4.65 (Unix) OpenSSL/3.4.3",
+        "strict-transport-security": "max-age=31536000; includeSubDomains",
+        "x-content-type-options": "nosniff"
+      },
+      "bytes": 28343,
+      "sha256": "2d663851011880ac42e7b8c3a3d6e475d14dc7d9512c4a6a802807b8548576b8",
+      "png": {
+        "width": 256,
+        "height": 256,
+        "bitDepth": 8,
+        "colorType": 4
+      },
+      "decoded": {
+        "width": 256,
+        "height": 256,
+        "pixelEncoding": "8-bit grayscale plus alpha",
+        "zeroAlpha": 0,
+        "fullAlpha": 65536,
+        "otherAlpha": 0,
+        "minValidGray": 79,
+        "maxValidGray": 128,
+        "distinctValidGrayLevels": 48
+      }
+    },
+    {
+      "label": "current-app-bbox-center-outside-z12",
+      "coordinate": [
+        77.01274065,
+        17.67557435
+      ],
+      "z": 12,
+      "row": 1645,
+      "col": 5848,
+      "file": "hirise-current-app-bbox-center-outside-z12.txt",
+      "url": "https://trek.nasa.gov/tiles/Mars/EQ/JEZ_hirise_soc_006_orthoMosaic_25cm_Eqc_latTs0_lon0_first_dd/1.0.0//default/default028mm/12/1645/5848.png",
+      "retrievedAtUtc": "2026-10-25T18:12:27.193Z",
+      "status": 404,
+      "headers": {
+        "connection": "Keep-Alive",
+        "content-length": "196",
+        "content-security-policy": "frame-ancestors 'self' aelp.smartsparrow.com;",
+        "content-type": "text/html; charset=iso-8859-1",
+        "date": "Sun, 25 Oct 2026 18:12:26 GMT",
+        "keep-alive": "timeout=5, max=100",
+        "server": "Apache/2.4.65 (Unix) OpenSSL/3.4.3",
+        "strict-transport-security": "max-age=31536000; includeSubDomains",
+        "x-content-type-options": "nosniff"
+      },
+      "bytes": 196,
+      "sha256": "80c3fe2ae1062abf56456f52518bd670f9ec3917b7f85e152b347ac6b6faf880",
+      "png": null,
+      "errorBody": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\n<html><head>\n<title>404 Not Found</title>\n</head><body>\n<h1>Not Found</h1>\n<p>The requested URL was not found on this server.</p>\n</body></html>\n"
+    },
+    {
+      "label": "gazetteer-crater-center-outside-z12",
+      "coordinate": [
+        77.69,
+        18.41
+      ],
+      "z": 12,
+      "row": 1629,
+      "col": 5863,
+      "file": "hirise-gazetteer-crater-center-outside-z12.txt",
+      "url": "https://trek.nasa.gov/tiles/Mars/EQ/JEZ_hirise_soc_006_orthoMosaic_25cm_Eqc_latTs0_lon0_first_dd/1.0.0//default/default028mm/12/1629/5863.png",
+      "retrievedAtUtc": "2026-10-25T18:12:27.189Z",
+      "status": 404,
+      "headers": {
+        "connection": "Keep-Alive",
+        "content-length": "196",
+        "content-security-policy": "frame-ancestors 'self' aelp.smartsparrow.com;",
+        "content-type": "text/html; charset=iso-8859-1",
+        "date": "Sun, 25 Oct 2026 18:12:26 GMT",
+        "keep-alive": "timeout=5, max=100",
+        "server": "Apache/2.4.65 (Unix) OpenSSL/3.4.3",
+        "strict-transport-security": "max-age=31536000; includeSubDomains",
+        "x-content-type-options": "nosniff"
+      },
+      "bytes": 196,
+      "sha256": "80c3fe2ae1062abf56456f52518bd670f9ec3917b7f85e152b347ac6b6faf880",
+      "png": null,
+      "errorBody": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\n<html><head>\n<title>404 Not Found</title>\n</head><body>\n<h1>Not Found</h1>\n<p>The requested URL was not found on this server.</p>\n</body></html>\n"
+    },
+    {
+      "label": "northwest-coverage-boundary-z10",
+      "z": 10,
+      "row": 405,
+      "col": 1463,
+      "selection": "Tile containing advertised northwest coverage corner; explicit boundary probe.",
+      "file": "hirise-northwest-coverage-boundary-z10.png",
+      "url": "https://trek.nasa.gov/tiles/Mars/EQ/JEZ_hirise_soc_006_orthoMosaic_25cm_Eqc_latTs0_lon0_first_dd/1.0.0//default/default028mm/10/405/1463.png",
+      "retrievedAtUtc": "2026-10-25T18:14:12.228Z",
+      "status": 200,
+      "headers": {
+        "accept-ranges": "bytes",
+        "access-control-allow-origin": "*",
+        "connection": "Keep-Alive",
+        "content-length": "206",
+        "content-security-policy": "frame-ancestors 'self' aelp.smartsparrow.com;",
+        "content-type": "image/png",
+        "date": "Sun, 25 Oct 2026 18:14:11 GMT",
+        "etag": "\"ce-5ab9e36e25f7d\"",
+        "keep-alive": "timeout=5, max=100",
+        "last-modified": "Thu, 30 Jul 2020 01:01:37 GMT",
+        "server": "Apache/2.4.65 (Unix) OpenSSL/3.4.3",
+        "strict-transport-security": "max-age=31536000; includeSubDomains",
+        "x-content-type-options": "nosniff"
+      },
+      "bytes": 206,
+      "sha256": "f3b96c03e5c13b5e5bb072beb4e91b56415cd8f51ea79a85f1b8891cc9f9c3a7",
+      "png": {
+        "width": 256,
+        "height": 256,
+        "bitDepth": 8,
+        "colorType": 4
+      },
+      "decoded": {
+        "width": 256,
+        "height": 256,
+        "pixelEncoding": "8-bit grayscale plus alpha",
+        "zeroAlpha": 65536,
+        "fullAlpha": 0,
+        "otherAlpha": 0,
+        "minValidGray": null,
+        "maxValidGray": null,
+        "distinctValidGrayLevels": 0
+      }
+    },
+    {
+      "label": "closeup-within-z15-upper-left-z17",
+      "z": 17,
+      "row": 52088,
+      "col": 187452,
+      "selection": "Upper-left z17 descendant of inspected z15 tile 13022/46863; source-image comparison probe, not a named target.",
+      "file": "hirise-closeup-within-z15-upper-left-z17.png",
+      "url": "https://trek.nasa.gov/tiles/Mars/EQ/JEZ_hirise_soc_006_orthoMosaic_25cm_Eqc_latTs0_lon0_first_dd/1.0.0//default/default028mm/17/52088/187452.png",
+      "retrievedAtUtc": "2026-10-25T18:14:12.647Z",
+      "status": 200,
+      "headers": {
+        "accept-ranges": "bytes",
+        "access-control-allow-origin": "*",
+        "connection": "Keep-Alive",
+        "content-length": "32497",
+        "content-security-policy": "frame-ancestors 'self' aelp.smartsparrow.com;",
+        "content-type": "image/png",
+        "date": "Sun, 25 Oct 2026 18:14:11 GMT",
+        "etag": "\"7ef1-5ab9e49fcd6f6\"",
+        "keep-alive": "timeout=5, max=99",
+        "last-modified": "Thu, 30 Jul 2020 01:06:58 GMT",
+        "server": "Apache/2.4.65 (Unix) OpenSSL/3.4.3",
+        "strict-transport-security": "max-age=31536000; includeSubDomains",
+        "x-content-type-options": "nosniff"
+      },
+      "bytes": 32497,
+      "sha256": "abde4e620714428a6fe861579719a58250e7db1e65697e603195b4d221df148c",
+      "png": {
+        "width": 256,
+        "height": 256,
+        "bitDepth": 8,
+        "colorType": 4
+      },
+      "decoded": {
+        "width": 256,
+        "height": 256,
+        "pixelEncoding": "8-bit grayscale plus alpha",
+        "zeroAlpha": 0,
+        "fullAlpha": 65536,
+        "otherAlpha": 0,
+        "minValidGray": 34,
+        "maxValidGray": 135,
+        "distinctValidGrayLevels": 102
+      }
+    }
+  ]
+}

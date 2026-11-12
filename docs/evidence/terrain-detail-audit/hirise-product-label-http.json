@@ -1,0 +1,65 @@
+[
+  {
+    "file": "hirise-JEZ_hirise_soc_006_orthoMosaic_25cm_Eqc_latTs0_lon0_first.lbl",
+    "url": "https://asc-pds-services.s3.us-west-2.amazonaws.com/mosaic/mars2020_trn/HiRISE/JEZ_hirise_soc_006_orthoMosaic_25cm_Eqc_latTs0_lon0_first.lbl",
+    "retrievedAtUtc": "2026-10-25T18:12:27.193Z",
+    "status": 200,
+    "headers": {
+      "accept-ranges": "bytes",
+      "content-length": "1458",
+      "content-type": "binary/octet-stream",
+      "date": "Sun, 25 Oct 2026 18:12:26 GMT",
+      "etag": "\"13d890db4662851c669977dd322f0b88\"",
+      "last-modified": "Thu, 10 Nov 2022 21:40:46 GMT",
+      "server": "AmazonS3",
+      "x-amz-id-2": "s4ULkGgzq9SoykQ1Xuh3BFnK76MtK9qf6qHO2gRrM8dJ7iaLqpB+hH7j2FqVEkX0C6GrL2Q9l9b/HWgVPQf47mPFnH6Q26l8",
+      "x-amz-request-id": "ARPQV2PTD5JQATHN",
+      "x-amz-storage-class": "STANDARD_IA",
+      "x-amz-version-id": "null"
+    },
+    "bytes": 1458,
+    "sha256": "bae9b7686951ba3ce580152b71bde1d5fcce0e09cfae724a9d49dc5084b64988"
+  },
+  {
+    "file": "hirise-JEZ_hirise_soc_006_orthoMosaic_25cm_Eqc_latTs0_lon0_first_pds3.lbl",
+    "url": "https://asc-pds-services.s3.us-west-2.amazonaws.com/mosaic/mars2020_trn/HiRISE/JEZ_hirise_soc_006_orthoMosaic_25cm_Eqc_latTs0_lon0_first_pds3.lbl",
+    "retrievedAtUtc": "2026-10-25T18:12:27.176Z",
+    "status": 200,
+    "headers": {
+      "accept-ranges": "bytes",
+      "content-length": "2292",
+      "content-type": "binary/octet-stream",
+      "date": "Sun, 25 Oct 2026 18:12:26 GMT",
+      "etag": "\"b8b3b48e2b42c02beda5c43b21536f06\"",
+      "last-modified": "Thu, 10 Nov 2022 21:47:06 GMT",
+      "server": "AmazonS3",
+      "x-amz-id-2": "TQCqMQxOWxTzj38qWAZPzHKmIMPSzq9p9Q4MyrH0Wk7fiyuhinxL/dB33nYSarcvcD53KneOotEO+9bY1qJWJ7dkL6x72BcJ",
+      "x-amz-request-id": "ARPKF87Y6R9M339W",
+      "x-amz-storage-class": "STANDARD_IA",
+      "x-amz-version-id": "null"
+    },
+    "bytes": 2292,
+    "sha256": "2442775e52bca86242c3861ab913662df10b548dc7992129c79ece9a33261f44"
+  },
+  {
+    "file": "hirise-JEZ_hirise_soc_006_orthoMosaic_25cm_Eqc_latTs0_lon0_first_dd.vrt",
+    "url": "https://asc-pds-services.s3.us-west-2.amazonaws.com/mosaic/mars2020_trn/HiRISE/JEZ_hirise_soc_006_orthoMosaic_25cm_Eqc_latTs0_lon0_first_dd.vrt",
+    "retrievedAtUtc": "2026-10-25T18:12:27.194Z",
+    "status": 200,
+    "headers": {
+      "accept-ranges": "bytes",
+      "content-length": "2840",
+      "content-type": "binary/octet-stream",
+      "date": "Sun, 25 Oct 2026 18:12:26 GMT",
+      "etag": "\"d8f07c6ac67574637b7c54305e5cc15c\"",
+      "last-modified": "Thu, 10 Nov 2022 21:47:03 GMT",
+      "server": "AmazonS3",
+      "x-amz-id-2": "Ysdp0v2jZR8+Go+fIJUFt1Zd6oB5mULslUz8BXgaQJnWn8G8sSXNWS65PL34rq7z21P+1+FXYgQlOj3YxNFRcfn4q4vjS03d",
+      "x-amz-request-id": "ARPNT2XYCH9VGTG5",
+      "x-amz-storage-class": "STANDARD_IA",
+      "x-amz-version-id": "null"
+    },
+    "bytes": 2840,
+    "sha256": "8bba8cb9e1f44ba21690e7206df8e07f6afdd13381aa9ee2a31fcf94cfa2d1db"
+  }
+]

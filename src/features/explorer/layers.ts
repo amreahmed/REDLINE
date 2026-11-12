@@ -1,6 +1,11 @@
 import { viewportMessage } from '../map/types'
 import type { Coverage, LayerStatuses, LayerVisibility } from '../map/types'
 
+/** A deliberate empty context remains usable; it cannot satisfy an imagery gate. */
+export function contextCanOpenWithoutImagery(preferences: LayerVisibility, localDetail: boolean, coverage: Coverage) {
+  return !preferences.mola && (!preferences.ctx || !localDetail || coverage === 'outside')
+}
+
 /** Presentation only; the map still clips imagery and handles each service's failures. */
 export function explorerLayerVisibility(preferences: LayerVisibility, mapActive: boolean, localDetail: boolean, ctxCoverage: Coverage): LayerVisibility {
   return {

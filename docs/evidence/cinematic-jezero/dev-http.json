@@ -1,0 +1,24 @@
+{
+  "method": "HTTP server/module availability only; no browser, console or animation inspection",
+  "checkedUTC": "2026-10-25T18:54:10.440762+00:00",
+  "responses": [
+    {
+      "url": "http://127.0.0.1:5173/",
+      "status": 200,
+      "bytes": 896,
+      "contentType": "text/html"
+    },
+    {
+      "url": "http://127.0.0.1:5173/src/components/explorer/MarsExplorer.tsx",
+      "status": 200,
+      "bytes": 71698,
+      "contentType": "text/javascript"
+    },
+    {
+      "url": "http://127.0.0.1:5173/src/features/explorer/jezeroFlight.ts",
+      "status": 200,
+      "bytes": 10278,
+      "contentType": "text/javascript"
+    }
+  ]
+}

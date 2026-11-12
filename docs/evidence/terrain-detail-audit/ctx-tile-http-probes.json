@@ -1,0 +1,697 @@
+[
+  {
+    "label": "mola-jezero",
+    "product": "Mars_MGS_MOLA_ClrShade_merge_global_463m",
+    "tileMatrix": 7,
+    "tileRow": 50,
+    "tileCol": 183,
+    "probeLonLat": [
+      77.69,
+      18.41
+    ],
+    "probeMeaning": "USGS Gazetteer Jezero center [77.69,18.41]",
+    "tileBounds": [
+      77.34375,
+      18.28125,
+      78.75,
+      19.6875
+    ],
+    "url": "https://trek.nasa.gov/tiles/Mars/EQ/Mars_MGS_MOLA_ClrShade_merge_global_463m/1.0.0//default/default028mm/7/50/183.jpg",
+    "requestedAtUtc": "2026-10-25T18:12:46.861353+00:00",
+    "requestHeaders": {
+      "Origin": "http://127.0.0.1:5173"
+    },
+    "status": 200,
+    "responseHeaders": {
+      "Date": "Sun, 25 Oct 2026 18:12:46 GMT",
+      "Server": "Apache/2.4.65 (Unix) OpenSSL/3.4.3",
+      "Strict-Transport-Security": "max-age=31536000; includeSubDomains",
+      "X-Content-Type-Options": "nosniff",
+      "Last-Modified": "Tue, 27 Jun 2017 02:08:55 GMT",
+      "ETag": "\"f63f-552e78cbf3254\"",
+      "Accept-Ranges": "bytes",
+      "Content-Length": "63039",
+      "Access-Control-Allow-Origin": "*",
+      "Content-Type": "image/jpeg",
+      "Content-Security-Policy": "frame-ancestors 'self' aelp.smartsparrow.com;",
+      "Keep-Alive": "timeout=5, max=100",
+      "Connection": "Keep-Alive"
+    },
+    "byteLength": 63039,
+    "sha256": "b668d3e164feb9c9bb623940680c7088572236ab5aab57685a39e6d9f92bee99",
+    "file": "ctx-mola-jezero-z7-r50-c183.jpg",
+    "headerHex": "ffd8ffe000104a4649460001"
+  },
+  {
+    "label": "preliminary-jezero",
+    "product": "Jezero_CTX_BlockAdj_dd",
+    "tileMatrix": 8,
+    "tileRow": 101,
+    "tileCol": 366,
+    "probeLonLat": [
+      77.69,
+      18.41
+    ],
+    "probeMeaning": "USGS Gazetteer Jezero center [77.69,18.41]",
+    "tileBounds": [
+      77.34375,
+      18.28125,
+      78.046875,
+      18.984375
+    ],
+    "url": "https://trek.nasa.gov/tiles/Mars/EQ/Jezero_CTX_BlockAdj_dd/1.0.0//default/default028mm/8/101/366.png",
+    "requestedAtUtc": "2026-10-25T18:12:46.862233+00:00",
+    "requestHeaders": {
+      "Origin": "http://127.0.0.1:5173"
+    },
+    "status": 200,
+    "responseHeaders": {
+      "Date": "Sun, 25 Oct 2026 18:12:46 GMT",
+      "Server": "Apache/2.4.65 (Unix) OpenSSL/3.4.3",
+      "Strict-Transport-Security": "max-age=31536000; includeSubDomains",
+      "X-Content-Type-Options": "nosniff",
+      "Last-Modified": "Thu, 03 Nov 2016 02:49:52 GMT",
+      "ETag": "\"ec10-5405c9ca0ede8\"",
+      "Accept-Ranges": "bytes",
+      "Content-Length": "60432",
+      "Access-Control-Allow-Origin": "*",
+      "Content-Type": "image/png",
+      "Content-Security-Policy": "frame-ancestors 'self' aelp.smartsparrow.com;",
+      "Keep-Alive": "timeout=5, max=100",
+      "Connection": "Keep-Alive"
+    },
+    "byteLength": 60432,
+    "sha256": "f48e84d9058b2f9a47d46a15ad1a305f6127739d1b0d25d81ef7fa53eca305e6",
+    "file": "ctx-preliminary-jezero-z8-r101-c366.png",
+    "pngHeader": {
+      "width": 256,
+      "height": 256,
+      "bitDepth": 8,
+      "colorType": 4
+    }
+  },
+  {
+    "label": "preliminary-jezero",
+    "product": "Jezero_CTX_BlockAdj_dd",
+    "tileMatrix": 10,
+    "tileRow": 407,
+    "tileCol": 1465,
+    "probeLonLat": [
+      77.69,
+      18.41
+    ],
+    "probeMeaning": "USGS Gazetteer Jezero center [77.69,18.41]",
+    "tileBounds": [
+      77.51953125,
+      18.28125,
+      77.6953125,
+      18.45703125
+    ],
+    "url": "https://trek.nasa.gov/tiles/Mars/EQ/Jezero_CTX_BlockAdj_dd/1.0.0//default/default028mm/10/407/1465.png",
+    "requestedAtUtc": "2026-10-25T18:12:46.862603+00:00",
+    "requestHeaders": {
+      "Origin": "http://127.0.0.1:5173"
+    },
+    "status": 200,
+    "responseHeaders": {
+      "Date": "Sun, 25 Oct 2026 18:12:46 GMT",
+      "Server": "Apache/2.4.65 (Unix) OpenSSL/3.4.3",
+      "Strict-Transport-Security": "max-age=31536000; includeSubDomains",
+      "X-Content-Type-Options": "nosniff",
+      "Last-Modified": "Thu, 03 Nov 2016 02:49:54 GMT",
+      "ETag": "\"ed6b-5405c9cc2ccc7\"",
+      "Accept-Ranges": "bytes",
+      "Content-Length": "60779",
+      "Access-Control-Allow-Origin": "*",
+      "Content-Type": "image/png",
+      "Content-Security-Policy": "frame-ancestors 'self' aelp.smartsparrow.com;",
+      "Keep-Alive": "timeout=5, max=100",
+      "Connection": "Keep-Alive"
+    },
+    "byteLength": 60779,
+    "sha256": "4691a7de13825bd6655a516034896bc2db714fedeee335ba43724a18977a3c9a",
+    "file": "ctx-preliminary-jezero-z10-r407-c1465.png",
+    "pngHeader": {
+      "width": 256,
+      "height": 256,
+      "bitDepth": 8,
+      "colorType": 4
+    }
+  },
+  {
+    "label": "preliminary-jezero",
+    "product": "Jezero_CTX_BlockAdj_dd",
+    "tileMatrix": 12,
+    "tileRow": 1629,
+    "tileCol": 5863,
+    "probeLonLat": [
+      77.69,
+      18.41
+    ],
+    "probeMeaning": "USGS Gazetteer Jezero center [77.69,18.41]",
+    "tileBounds": [
+      77.6513671875,
+      18.369140625,
+      77.6953125,
+      18.4130859375
+    ],
+    "url": "https://trek.nasa.gov/tiles/Mars/EQ/Jezero_CTX_BlockAdj_dd/1.0.0//default/default028mm/12/1629/5863.png",
+    "requestedAtUtc": "2026-10-25T18:12:46.862998+00:00",
+    "requestHeaders": {
+      "Origin": "http://127.0.0.1:5173"
+    },
+    "status": 200,
+    "responseHeaders": {
+      "Date": "Sun, 25 Oct 2026 18:12:46 GMT",
+      "Server": "Apache/2.4.65 (Unix) OpenSSL/3.4.3",
+      "Strict-Transport-Security": "max-age=31536000; includeSubDomains",
+      "X-Content-Type-Options": "nosniff",
+      "Last-Modified": "Thu, 03 Nov 2016 02:50:20 GMT",
+      "ETag": "\"eecb-5405c9e4d6579\"",
+      "Accept-Ranges": "bytes",
+      "Content-Length": "61131",
+      "Access-Control-Allow-Origin": "*",
+      "Content-Type": "image/png",
+      "Content-Security-Policy": "frame-ancestors 'self' aelp.smartsparrow.com;",
+      "Keep-Alive": "timeout=5, max=100",
+      "Connection": "Keep-Alive"
+    },
+    "byteLength": 61131,
+    "sha256": "a82b36ba3b623ec97eb5f28233df1c8e5390e75665cefac9812ec863e7def635",
+    "file": "ctx-preliminary-jezero-z12-r1629-c5863.png",
+    "pngHeader": {
+      "width": 256,
+      "height": 256,
+      "bitDepth": 8,
+      "colorType": 4
+    }
+  },
+  {
+    "label": "controlled-jezero",
+    "product": "JEZ_ctx_B_soc_008_orthoMosaic_6m_Eqc_latTs0_lon0",
+    "tileMatrix": 12,
+    "tileRow": 1629,
+    "tileCol": 5863,
+    "probeLonLat": [
+      77.69,
+      18.41
+    ],
+    "probeMeaning": "USGS Gazetteer Jezero center [77.69,18.41]",
+    "tileBounds": [
+      77.6513671875,
+      18.369140625,
+      77.6953125,
+      18.4130859375
+    ],
+    "url": "https://trek.nasa.gov/tiles/Mars/EQ/JEZ_ctx_B_soc_008_orthoMosaic_6m_Eqc_latTs0_lon0/1.0.0//default/default028mm/12/1629/5863.png",
+    "requestedAtUtc": "2026-10-25T18:12:47.877136+00:00",
+    "requestHeaders": {
+      "Origin": "http://127.0.0.1:5173"
+    },
+    "status": 200,
+    "responseHeaders": {
+      "Date": "Sun, 25 Oct 2026 18:12:47 GMT",
+      "Server": "Apache/2.4.65 (Unix) OpenSSL/3.4.3",
+      "Strict-Transport-Security": "max-age=31536000; includeSubDomains",
+      "X-Content-Type-Options": "nosniff",
+      "Last-Modified": "Wed, 29 Jul 2020 23:17:37 GMT",
+      "ETag": "\"b0f2-5ab9cc2ed784c\"",
+      "Accept-Ranges": "bytes",
+      "Content-Length": "45298",
+      "Access-Control-Allow-Origin": "*",
+      "Content-Type": "image/png",
+      "Content-Security-Policy": "frame-ancestors 'self' aelp.smartsparrow.com;",
+      "Keep-Alive": "timeout=5, max=100",
+      "Connection": "Keep-Alive"
+    },
+    "byteLength": 45298,
+    "sha256": "efaac395709ed500c6d87c094a0569908aeb09307fcdaa14cf85f782db35fa16",
+    "file": "ctx-controlled-jezero-z12-r1629-c5863.png",
+    "pngHeader": {
+      "width": 256,
+      "height": 256,
+      "bitDepth": 8,
+      "colorType": 4
+    }
+  },
+  {
+    "label": "controlled-jezero",
+    "product": "JEZ_ctx_B_soc_008_orthoMosaic_6m_Eqc_latTs0_lon0",
+    "tileMatrix": 13,
+    "tileRow": 3258,
+    "tileCol": 11727,
+    "probeLonLat": [
+      77.69,
+      18.41
+    ],
+    "probeMeaning": "USGS Gazetteer Jezero center [77.69,18.41]",
+    "tileBounds": [
+      77.67333984375,
+      18.39111328125,
+      77.6953125,
+      18.4130859375
+    ],
+    "url": "https://trek.nasa.gov/tiles/Mars/EQ/JEZ_ctx_B_soc_008_orthoMosaic_6m_Eqc_latTs0_lon0/1.0.0//default/default028mm/13/3258/11727.png",
+    "requestedAtUtc": "2026-10-25T18:12:47.879868+00:00",
+    "requestHeaders": {
+      "Origin": "http://127.0.0.1:5173"
+    },
+    "status": 200,
+    "responseHeaders": {
+      "Date": "Sun, 25 Oct 2026 18:12:47 GMT",
+      "Server": "Apache/2.4.65 (Unix) OpenSSL/3.4.3",
+      "Strict-Transport-Security": "max-age=31536000; includeSubDomains",
+      "X-Content-Type-Options": "nosniff",
+      "Last-Modified": "Wed, 29 Jul 2020 23:17:39 GMT",
+      "ETag": "\"7ec9-5ab9cc30e2ad6\"",
+      "Accept-Ranges": "bytes",
+      "Content-Length": "32457",
+      "Access-Control-Allow-Origin": "*",
+      "Content-Type": "image/png",
+      "Content-Security-Policy": "frame-ancestors 'self' aelp.smartsparrow.com;",
+      "Keep-Alive": "timeout=5, max=100",
+      "Connection": "Keep-Alive"
+    },
+    "byteLength": 32457,
+    "sha256": "04234ddf68aeee1571fd5fed0e14691d21d191aefc1bab39e70c429d714cb925",
+    "file": "ctx-controlled-jezero-z13-r3258-c11727.png",
+    "pngHeader": {
+      "width": 256,
+      "height": 256,
+      "bitDepth": 8,
+      "colorType": 4
+    }
+  },
+  {
+    "label": "preliminary-overlap",
+    "product": "Jezero_CTX_BlockAdj_dd",
+    "tileMatrix": 10,
+    "tileRow": 406,
+    "tileCol": 1464,
+    "probeLonLat": [
+      77.5,
+      18.5
+    ],
+    "probeMeaning": "Arbitrary source-overlap grid test point, not a scientific target",
+    "tileBounds": [
+      77.34375,
+      18.45703125,
+      77.51953125,
+      18.6328125
+    ],
+    "url": "https://trek.nasa.gov/tiles/Mars/EQ/Jezero_CTX_BlockAdj_dd/1.0.0//default/default028mm/10/406/1464.png",
+    "requestedAtUtc": "2026-10-25T18:12:47.902564+00:00",
+    "requestHeaders": {
+      "Origin": "http://127.0.0.1:5173"
+    },
+    "status": 200,
+    "responseHeaders": {
+      "Date": "Sun, 25 Oct 2026 18:12:47 GMT",
+      "Server": "Apache/2.4.65 (Unix) OpenSSL/3.4.3",
+      "Strict-Transport-Security": "max-age=31536000; includeSubDomains",
+      "X-Content-Type-Options": "nosniff",
+      "Last-Modified": "Thu, 03 Nov 2016 02:49:53 GMT",
+      "ETag": "\"f870-5405c9cad0f98\"",
+      "Accept-Ranges": "bytes",
+      "Content-Length": "63600",
+      "Access-Control-Allow-Origin": "*",
+      "Content-Type": "image/png",
+      "Content-Security-Policy": "frame-ancestors 'self' aelp.smartsparrow.com;",
+      "Keep-Alive": "timeout=5, max=100",
+      "Connection": "Keep-Alive"
+    },
+    "byteLength": 63600,
+    "sha256": "6dbd5d2f00f0676f8f821c3830cf2b8c321a68b16e4ef2b96050103feaf90895",
+    "file": "ctx-preliminary-overlap-z10-r406-c1464.png",
+    "pngHeader": {
+      "width": 256,
+      "height": 256,
+      "bitDepth": 8,
+      "colorType": 4
+    }
+  },
+  {
+    "label": "preliminary-overlap",
+    "product": "Jezero_CTX_BlockAdj_dd",
+    "tileMatrix": 12,
+    "tileRow": 1627,
+    "tileCol": 5859,
+    "probeLonLat": [
+      77.5,
+      18.5
+    ],
+    "probeMeaning": "Arbitrary source-overlap grid test point, not a scientific target",
+    "tileBounds": [
+      77.4755859375,
+      18.45703125,
+      77.51953125,
+      18.5009765625
+    ],
+    "url": "https://trek.nasa.gov/tiles/Mars/EQ/Jezero_CTX_BlockAdj_dd/1.0.0//default/default028mm/12/1627/5859.png",
+    "requestedAtUtc": "2026-10-25T18:12:47.914718+00:00",
+    "requestHeaders": {
+      "Origin": "http://127.0.0.1:5173"
+    },
+    "status": 200,
+    "responseHeaders": {
+      "Date": "Sun, 25 Oct 2026 18:12:47 GMT",
+      "Server": "Apache/2.4.65 (Unix) OpenSSL/3.4.3",
+      "Strict-Transport-Security": "max-age=31536000; includeSubDomains",
+      "X-Content-Type-Options": "nosniff",
+      "Last-Modified": "Thu, 03 Nov 2016 02:50:21 GMT",
+      "ETag": "\"ce18-5405c9e55c174\"",
+      "Accept-Ranges": "bytes",
+      "Content-Length": "52760",
+      "Access-Control-Allow-Origin": "*",
+      "Content-Type": "image/png",
+      "Content-Security-Policy": "frame-ancestors 'self' aelp.smartsparrow.com;",
+      "Keep-Alive": "timeout=5, max=100",
+      "Connection": "Keep-Alive"
+    },
+    "byteLength": 52760,
+    "sha256": "df21b0dbb1e0fc5b5dfee23c6732a97a3f9c32569b21271925216473c9459baa",
+    "file": "ctx-preliminary-overlap-z12-r1627-c5859.png",
+    "pngHeader": {
+      "width": 256,
+      "height": 256,
+      "bitDepth": 8,
+      "colorType": 4
+    }
+  },
+  {
+    "label": "preliminary-overlap",
+    "product": "Jezero_CTX_BlockAdj_dd",
+    "tileMatrix": 13,
+    "tileRow": 3254,
+    "tileCol": 11719,
+    "probeLonLat": [
+      77.5,
+      18.5
+    ],
+    "probeMeaning": "Arbitrary source-overlap grid test point, not a scientific target",
+    "tileBounds": [
+      77.49755859375,
+      18.47900390625,
+      77.51953125,
+      18.5009765625
+    ],
+    "url": "https://trek.nasa.gov/tiles/Mars/EQ/Jezero_CTX_BlockAdj_dd/1.0.0//default/default028mm/13/3254/11719.png",
+    "requestedAtUtc": "2026-10-25T18:12:48.789677+00:00",
+    "requestHeaders": {
+      "Origin": "http://127.0.0.1:5173"
+    },
+    "status": 404,
+    "responseHeaders": {
+      "Date": "Sun, 25 Oct 2026 18:12:48 GMT",
+      "Server": "Apache/2.4.65 (Unix) OpenSSL/3.4.3",
+      "Strict-Transport-Security": "max-age=31536000; includeSubDomains",
+      "X-Content-Type-Options": "nosniff",
+      "Content-Length": "196",
+      "Content-Type": "text/html; charset=iso-8859-1",
+      "Content-Security-Policy": "frame-ancestors 'self' aelp.smartsparrow.com;",
+      "Keep-Alive": "timeout=5, max=100",
+      "Connection": "Keep-Alive"
+    },
+    "byteLength": 196,
+    "sha256": "80c3fe2ae1062abf56456f52518bd670f9ec3917b7f85e152b347ac6b6faf880",
+    "errorBodyPrefix": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\n<html><head>\n<title>404 Not Found</title>\n</head><body>\n<h1>Not Found</h1>\n<p>The requested URL was not found"
+  },
+  {
+    "label": "controlled-overlap",
+    "product": "JEZ_ctx_B_soc_008_orthoMosaic_6m_Eqc_latTs0_lon0",
+    "tileMatrix": 10,
+    "tileRow": 406,
+    "tileCol": 1464,
+    "probeLonLat": [
+      77.5,
+      18.5
+    ],
+    "probeMeaning": "Arbitrary source-overlap grid test point, not a scientific target",
+    "tileBounds": [
+      77.34375,
+      18.45703125,
+      77.51953125,
+      18.6328125
+    ],
+    "url": "https://trek.nasa.gov/tiles/Mars/EQ/JEZ_ctx_B_soc_008_orthoMosaic_6m_Eqc_latTs0_lon0/1.0.0//default/default028mm/10/406/1464.png",
+    "requestedAtUtc": "2026-10-25T18:12:48.884015+00:00",
+    "requestHeaders": {
+      "Origin": "http://127.0.0.1:5173"
+    },
+    "status": 200,
+    "responseHeaders": {
+      "Date": "Sun, 25 Oct 2026 18:12:48 GMT",
+      "Server": "Apache/2.4.65 (Unix) OpenSSL/3.4.3",
+      "Strict-Transport-Security": "max-age=31536000; includeSubDomains",
+      "X-Content-Type-Options": "nosniff",
+      "Last-Modified": "Wed, 29 Jul 2020 23:17:36 GMT",
+      "ETag": "\"e94e-5ab9cc2e34cd9\"",
+      "Accept-Ranges": "bytes",
+      "Content-Length": "59726",
+      "Access-Control-Allow-Origin": "*",
+      "Content-Type": "image/png",
+      "Content-Security-Policy": "frame-ancestors 'self' aelp.smartsparrow.com;",
+      "Keep-Alive": "timeout=5, max=100",
+      "Connection": "Keep-Alive"
+    },
+    "byteLength": 59726,
+    "sha256": "0523ee09adb200efb219035e9986f098eddfa8d7f17dd880f554d1dfe1ce15a9",
+    "file": "ctx-controlled-overlap-z10-r406-c1464.png",
+    "pngHeader": {
+      "width": 256,
+      "height": 256,
+      "bitDepth": 8,
+      "colorType": 4
+    }
+  },
+  {
+    "label": "controlled-overlap",
+    "product": "JEZ_ctx_B_soc_008_orthoMosaic_6m_Eqc_latTs0_lon0",
+    "tileMatrix": 12,
+    "tileRow": 1627,
+    "tileCol": 5859,
+    "probeLonLat": [
+      77.5,
+      18.5
+    ],
+    "probeMeaning": "Arbitrary source-overlap grid test point, not a scientific target",
+    "tileBounds": [
+      77.4755859375,
+      18.45703125,
+      77.51953125,
+      18.5009765625
+    ],
+    "url": "https://trek.nasa.gov/tiles/Mars/EQ/JEZ_ctx_B_soc_008_orthoMosaic_6m_Eqc_latTs0_lon0/1.0.0//default/default028mm/12/1627/5859.png",
+    "requestedAtUtc": "2026-10-25T18:12:48.897317+00:00",
+    "requestHeaders": {
+      "Origin": "http://127.0.0.1:5173"
+    },
+    "status": 200,
+    "responseHeaders": {
+      "Date": "Sun, 25 Oct 2026 18:12:48 GMT",
+      "Server": "Apache/2.4.65 (Unix) OpenSSL/3.4.3",
+      "Strict-Transport-Security": "max-age=31536000; includeSubDomains",
+      "X-Content-Type-Options": "nosniff",
+      "Last-Modified": "Wed, 29 Jul 2020 23:17:37 GMT",
+      "ETag": "\"9942-5ab9cc2ec7b99\"",
+      "Accept-Ranges": "bytes",
+      "Content-Length": "39234",
+      "Access-Control-Allow-Origin": "*",
+      "Content-Type": "image/png",
+      "Content-Security-Policy": "frame-ancestors 'self' aelp.smartsparrow.com;",
+      "Keep-Alive": "timeout=5, max=100",
+      "Connection": "Keep-Alive"
+    },
+    "byteLength": 39234,
+    "sha256": "f2da5df27a6cba14e0dc1c02f12f234bb7e470d37b20f19fef43e31ddce28ec3",
+    "file": "ctx-controlled-overlap-z12-r1627-c5859.png",
+    "pngHeader": {
+      "width": 256,
+      "height": 256,
+      "bitDepth": 8,
+      "colorType": 4
+    }
+  },
+  {
+    "label": "controlled-overlap",
+    "product": "JEZ_ctx_B_soc_008_orthoMosaic_6m_Eqc_latTs0_lon0",
+    "tileMatrix": 13,
+    "tileRow": 3254,
+    "tileCol": 11719,
+    "probeLonLat": [
+      77.5,
+      18.5
+    ],
+    "probeMeaning": "Arbitrary source-overlap grid test point, not a scientific target",
+    "tileBounds": [
+      77.49755859375,
+      18.47900390625,
+      77.51953125,
+      18.5009765625
+    ],
+    "url": "https://trek.nasa.gov/tiles/Mars/EQ/JEZ_ctx_B_soc_008_orthoMosaic_6m_Eqc_latTs0_lon0/1.0.0//default/default028mm/13/3254/11719.png",
+    "requestedAtUtc": "2026-10-25T18:12:48.924412+00:00",
+    "requestHeaders": {
+      "Origin": "http://127.0.0.1:5173"
+    },
+    "status": 200,
+    "responseHeaders": {
+      "Date": "Sun, 25 Oct 2026 18:12:48 GMT",
+      "Server": "Apache/2.4.65 (Unix) OpenSSL/3.4.3",
+      "Strict-Transport-Security": "max-age=31536000; includeSubDomains",
+      "X-Content-Type-Options": "nosniff",
+      "Last-Modified": "Wed, 29 Jul 2020 23:17:47 GMT",
+      "ETag": "\"707d-5ab9cc388de3f\"",
+      "Accept-Ranges": "bytes",
+      "Content-Length": "28797",
+      "Access-Control-Allow-Origin": "*",
+      "Content-Type": "image/png",
+      "Content-Security-Policy": "frame-ancestors 'self' aelp.smartsparrow.com;",
+      "Keep-Alive": "timeout=5, max=100",
+      "Connection": "Keep-Alive"
+    },
+    "byteLength": 28797,
+    "sha256": "c4567c61eb2a846077be9e87fb4581b4019300de99605e854fb2959f21189e06",
+    "file": "ctx-controlled-overlap-z13-r3254-c11719.png",
+    "pngHeader": {
+      "width": 256,
+      "height": 256,
+      "bitDepth": 8,
+      "colorType": 4
+    }
+  },
+  {
+    "label": "controlled-at-current-focus",
+    "product": "JEZ_ctx_B_soc_008_orthoMosaic_6m_Eqc_latTs0_lon0",
+    "tileMatrix": 12,
+    "tileRow": 1645,
+    "tileCol": 5848,
+    "probeLonLat": [
+      77.01274065,
+      17.67557435
+    ],
+    "probeMeaning": "Existing application mosaic-midpoint shortcut, not Jezero crater center",
+    "tileBounds": [
+      76.9921875,
+      17.666015625,
+      77.0361328125,
+      17.7099609375
+    ],
+    "url": "https://trek.nasa.gov/tiles/Mars/EQ/JEZ_ctx_B_soc_008_orthoMosaic_6m_Eqc_latTs0_lon0/1.0.0//default/default028mm/12/1645/5848.png",
+    "requestedAtUtc": "2026-10-25T18:12:49.417462+00:00",
+    "requestHeaders": {
+      "Origin": "http://127.0.0.1:5173"
+    },
+    "status": 404,
+    "responseHeaders": {
+      "Date": "Sun, 25 Oct 2026 18:12:49 GMT",
+      "Server": "Apache/2.4.65 (Unix) OpenSSL/3.4.3",
+      "Strict-Transport-Security": "max-age=31536000; includeSubDomains",
+      "X-Content-Type-Options": "nosniff",
+      "Content-Length": "196",
+      "Content-Type": "text/html; charset=iso-8859-1",
+      "Content-Security-Policy": "frame-ancestors 'self' aelp.smartsparrow.com;",
+      "Keep-Alive": "timeout=5, max=100",
+      "Connection": "Keep-Alive"
+    },
+    "byteLength": 196,
+    "sha256": "80c3fe2ae1062abf56456f52518bd670f9ec3917b7f85e152b347ac6b6faf880",
+    "errorBodyPrefix": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\n<html><head>\n<title>404 Not Found</title>\n</head><body>\n<h1>Not Found</h1>\n<p>The requested URL was not found"
+  },
+  {
+    "label": "controlled-east-boundary",
+    "product": "JEZ_ctx_B_soc_008_orthoMosaic_6m_Eqc_latTs0_lon0",
+    "tileMatrix": 12,
+    "tileRow": 1629,
+    "tileCol": 5864,
+    "probeLonLat": [
+      77.6991776,
+      18.41
+    ],
+    "probeMeaning": "Advertised coverage boundary at the Gazetteer Jezero latitude, not a science target",
+    "tileBounds": [
+      77.6953125,
+      18.369140625,
+      77.7392578125,
+      18.4130859375
+    ],
+    "url": "https://trek.nasa.gov/tiles/Mars/EQ/JEZ_ctx_B_soc_008_orthoMosaic_6m_Eqc_latTs0_lon0/1.0.0//default/default028mm/12/1629/5864.png",
+    "requestedAtUtc": "2026-10-25T18:17:24.296175+00:00",
+    "requestHeaders": {
+      "Origin": "http://127.0.0.1:5173"
+    },
+    "status": 200,
+    "responseHeaders": {
+      "Date": "Sun, 25 Oct 2026 18:17:24 GMT",
+      "Server": "Apache/2.4.65 (Unix) OpenSSL/3.4.3",
+      "Strict-Transport-Security": "max-age=31536000; includeSubDomains",
+      "X-Content-Type-Options": "nosniff",
+      "Last-Modified": "Wed, 29 Jul 2020 23:17:37 GMT",
+      "ETag": "\"16a1-5ab9cc2f36eea\"",
+      "Accept-Ranges": "bytes",
+      "Content-Length": "5793",
+      "Access-Control-Allow-Origin": "*",
+      "Content-Type": "image/png",
+      "Content-Security-Policy": "frame-ancestors 'self' aelp.smartsparrow.com;",
+      "Keep-Alive": "timeout=5, max=100",
+      "Connection": "Keep-Alive"
+    },
+    "byteLength": 5793,
+    "sha256": "dad4a4ef143049e2c15d38de30350226c57e9cce1f8f5ed14743b89655794dbd",
+    "file": "ctx-controlled-east-boundary-z12-r1629-c5864.png",
+    "pngHeader": {
+      "width": 256,
+      "height": 256,
+      "bitDepth": 8,
+      "colorType": 4
+    }
+  },
+  {
+    "label": "preliminary-west-boundary",
+    "product": "Jezero_CTX_BlockAdj_dd",
+    "tileMatrix": 12,
+    "tileRow": 1629,
+    "tileCol": 5806,
+    "probeLonLat": [
+      75.1537692,
+      18.41
+    ],
+    "probeMeaning": "Advertised coverage boundary at the Gazetteer Jezero latitude, not a science target",
+    "tileBounds": [
+      75.146484375,
+      18.369140625,
+      75.1904296875,
+      18.4130859375
+    ],
+    "url": "https://trek.nasa.gov/tiles/Mars/EQ/Jezero_CTX_BlockAdj_dd/1.0.0//default/default028mm/12/1629/5806.png",
+    "requestedAtUtc": "2026-10-25T18:17:25.754745+00:00",
+    "requestHeaders": {
+      "Origin": "http://127.0.0.1:5173"
+    },
+    "status": 200,
+    "responseHeaders": {
+      "Date": "Sun, 25 Oct 2026 18:17:25 GMT",
+      "Server": "Apache/2.4.65 (Unix) OpenSSL/3.4.3",
+      "Strict-Transport-Security": "max-age=31536000; includeSubDomains",
+      "X-Content-Type-Options": "nosniff",
+      "Last-Modified": "Thu, 03 Nov 2016 02:50:32 GMT",
+      "ETag": "\"873a-5405c9f05ab95\"",
+      "Accept-Ranges": "bytes",
+      "Content-Length": "34618",
+      "Access-Control-Allow-Origin": "*",
+      "Content-Type": "image/png",
+      "Content-Security-Policy": "frame-ancestors 'self' aelp.smartsparrow.com;",
+      "Keep-Alive": "timeout=5, max=100",
+      "Connection": "Keep-Alive"
+    },
+    "byteLength": 34618,
+    "sha256": "9c1623f7d930e4ac9ed802be634eba48889c0995325dd4a25359b6bc38793a86",
+    "file": "ctx-preliminary-west-boundary-z12-r1629-c5806.png",
+    "pngHeader": {
+      "width": 256,
+      "height": 256,
+      "bitDepth": 8,
+      "colorType": 4
+    }
+  }
+]

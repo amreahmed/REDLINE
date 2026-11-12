@@ -1,0 +1,901 @@
+{
+  "auditedAtUtc": "2026-10-25T18:13:36.378Z",
+  "gitHead": "d6da376a3e12991cba7a3a08a27fe9ee2d22b4b7",
+  "runtime": "v26.3.1",
+  "method": "Actual application parser/projection/source functions loaded in Vite SSR; installed OpenLayers View, tile-grid selection and source URL APIs executed in Node. No browser, canvas, tile fetch, or actual viewport measurement.",
+  "rendererRule": "ol/renderer/canvas/TileLayer.js selects getZForResolution(viewResolution, source.zDirection), then scales by (tileResolution / viewResolution) * devicePixelRatio / sourceTilePixelRatio.",
+  "projection": {
+    "code": "REDLINE:MARS-TREK-DISPLAY",
+    "units": "degrees",
+    "axisOrientation": "enu",
+    "extent": [
+      -180,
+      -90,
+      180,
+      90
+    ],
+    "metersPerUnit": 59274.69752330622
+  },
+  "viewResolutionsDegreesPerCssPixel": [
+    0.703125,
+    0.3515625,
+    0.17578125,
+    0.087890625,
+    0.0439453125,
+    0.02197265625,
+    0.010986328125,
+    0.0054931640625,
+    0.00274658203125,
+    0.001373291015625,
+    0.0006866455078125,
+    0.00034332275390625,
+    0.000171661376953125
+  ],
+  "currentShortcut": {
+    "center": [
+      77.01274065,
+      17.675574349999998
+    ],
+    "mapDetailZoom": 8,
+    "initialContextZoom": 4,
+    "extentUsedForMidpoint": [
+      75.1537692,
+      15.9058484,
+      78.8717121,
+      19.4453003
+    ]
+  },
+  "geographicReference": {
+    "label": "USGS Gazetteer Jezero crater center (navigation reference, not a pixel registration assertion)",
+    "longitudeLatitude": [
+      77.69,
+      18.41
+    ],
+    "convention": "Planetocentric latitude, positive-east longitude 0–360; this positive longitude is unchanged in a -180–180 domain.",
+    "url": "https://planetarynames.wr.usgs.gov/Feature/14300",
+    "qualification": "Native preliminary CTX latitude convention and precise image registration remain unverified. This is an angular comparison only."
+  },
+  "layers": [
+    {
+      "id": "mola",
+      "productId": "Mars_MGS_MOLA_ClrShade_merge_global_463m",
+      "renderOrderBottomToTop": 0,
+      "opacity": 1,
+      "zIndex": null,
+      "extentClip": [
+        -180,
+        -89.9991635,
+        179.9983271,
+        90
+      ],
+      "interpolate": true,
+      "zDirection": 0,
+      "matrixSet": "default028mm",
+      "tileGridMinZoom": 0,
+      "tileGridMaxZoom": 7,
+      "tileSize": 256,
+      "sourceTilePixelRatioAtDeviceRatio1": 1,
+      "sourceTilePixelRatioAtDeviceRatio2": 1,
+      "wrapX": false,
+      "capabilitiesEvidencePath": "docs/evidence/terrain-detail-audit/ctx-Mars_MGS_MOLA_ClrShade_merge_global_463m.WMTSCapabilities.xml",
+      "capabilitiesSha256": "2fb4722b5af0417980052354eab806cb9bdea003617548433cec8d8813d8d125",
+      "selectedLevels": [
+        {
+          "viewZoom": 4,
+          "viewResolutionDegreesPerCssPixel": 0.0439453125,
+          "requestedMatrixIdentifier": "4",
+          "sourceResolutionDegreesPerTilePixel": 0.0439453125,
+          "sourcePixelScaleInCssPixels": 1,
+          "sourcePixelScaleInDevicePixelsAtDpr2": 2,
+          "shortcutTileCoordinateZColumnRow": [
+            4,
+            22,
+            6
+          ],
+          "shortcutTileExtent": [
+            67.5,
+            11.25,
+            78.75,
+            22.5
+          ],
+          "generatedUrlAtShortcut": "https://trek.nasa.gov/tiles/Mars/EQ/Mars_MGS_MOLA_ClrShade_merge_global_463m/1.0.0//default/default028mm/4/6/22.jpg",
+          "referenceTileCoordinateZColumnRow": [
+            4,
+            22,
+            6
+          ],
+          "generatedUrlAtReference": "https://trek.nasa.gov/tiles/Mars/EQ/Mars_MGS_MOLA_ClrShade_merge_global_463m/1.0.0//default/default028mm/4/6/22.jpg"
+        },
+        {
+          "viewZoom": 6.25,
+          "viewResolutionDegreesPerCssPixel": 0.009238363937113563,
+          "requestedMatrixIdentifier": "6",
+          "sourceResolutionDegreesPerTilePixel": 0.010986328125,
+          "sourcePixelScaleInCssPixels": 1.189207115002721,
+          "sourcePixelScaleInDevicePixelsAtDpr2": 2.378414230005442,
+          "shortcutTileCoordinateZColumnRow": [
+            6,
+            91,
+            25
+          ],
+          "shortcutTileExtent": [
+            75.9375,
+            16.875,
+            78.75,
+            19.6875
+          ],
+          "generatedUrlAtShortcut": "https://trek.nasa.gov/tiles/Mars/EQ/Mars_MGS_MOLA_ClrShade_merge_global_463m/1.0.0//default/default028mm/6/25/91.jpg",
+          "referenceTileCoordinateZColumnRow": [
+            6,
+            91,
+            25
+          ],
+          "generatedUrlAtReference": "https://trek.nasa.gov/tiles/Mars/EQ/Mars_MGS_MOLA_ClrShade_merge_global_463m/1.0.0//default/default028mm/6/25/91.jpg"
+        },
+        {
+          "viewZoom": 6.75,
+          "viewResolutionDegreesPerCssPixel": 0.006532509787002252,
+          "requestedMatrixIdentifier": "7",
+          "sourceResolutionDegreesPerTilePixel": 0.0054931640625,
+          "sourcePixelScaleInCssPixels": 0.8408964152537145,
+          "sourcePixelScaleInDevicePixelsAtDpr2": 1.681792830507429,
+          "shortcutTileCoordinateZColumnRow": [
+            7,
+            182,
+            51
+          ],
+          "shortcutTileExtent": [
+            75.9375,
+            16.875,
+            77.34375,
+            18.28125
+          ],
+          "generatedUrlAtShortcut": "https://trek.nasa.gov/tiles/Mars/EQ/Mars_MGS_MOLA_ClrShade_merge_global_463m/1.0.0//default/default028mm/7/51/182.jpg",
+          "referenceTileCoordinateZColumnRow": [
+            7,
+            183,
+            50
+          ],
+          "generatedUrlAtReference": "https://trek.nasa.gov/tiles/Mars/EQ/Mars_MGS_MOLA_ClrShade_merge_global_463m/1.0.0//default/default028mm/7/50/183.jpg"
+        },
+        {
+          "viewZoom": 7,
+          "viewResolutionDegreesPerCssPixel": 0.0054931640625,
+          "requestedMatrixIdentifier": "7",
+          "sourceResolutionDegreesPerTilePixel": 0.0054931640625,
+          "sourcePixelScaleInCssPixels": 1,
+          "sourcePixelScaleInDevicePixelsAtDpr2": 2,
+          "shortcutTileCoordinateZColumnRow": [
+            7,
+            182,
+            51
+          ],
+          "shortcutTileExtent": [
+            75.9375,
+            16.875,
+            77.34375,
+            18.28125
+          ],
+          "generatedUrlAtShortcut": "https://trek.nasa.gov/tiles/Mars/EQ/Mars_MGS_MOLA_ClrShade_merge_global_463m/1.0.0//default/default028mm/7/51/182.jpg",
+          "referenceTileCoordinateZColumnRow": [
+            7,
+            183,
+            50
+          ],
+          "generatedUrlAtReference": "https://trek.nasa.gov/tiles/Mars/EQ/Mars_MGS_MOLA_ClrShade_merge_global_463m/1.0.0//default/default028mm/7/50/183.jpg"
+        },
+        {
+          "viewZoom": 7.5,
+          "viewResolutionDegreesPerCssPixel": 0.0038842535587639937,
+          "requestedMatrixIdentifier": "7",
+          "sourceResolutionDegreesPerTilePixel": 0.0054931640625,
+          "sourcePixelScaleInCssPixels": 1.4142135623730951,
+          "sourcePixelScaleInDevicePixelsAtDpr2": 2.8284271247461903,
+          "shortcutTileCoordinateZColumnRow": [
+            7,
+            182,
+            51
+          ],
+          "shortcutTileExtent": [
+            75.9375,
+            16.875,
+            77.34375,
+            18.28125
+          ],
+          "generatedUrlAtShortcut": "https://trek.nasa.gov/tiles/Mars/EQ/Mars_MGS_MOLA_ClrShade_merge_global_463m/1.0.0//default/default028mm/7/51/182.jpg",
+          "referenceTileCoordinateZColumnRow": [
+            7,
+            183,
+            50
+          ],
+          "generatedUrlAtReference": "https://trek.nasa.gov/tiles/Mars/EQ/Mars_MGS_MOLA_ClrShade_merge_global_463m/1.0.0//default/default028mm/7/50/183.jpg"
+        },
+        {
+          "viewZoom": 8,
+          "viewResolutionDegreesPerCssPixel": 0.00274658203125,
+          "requestedMatrixIdentifier": "7",
+          "sourceResolutionDegreesPerTilePixel": 0.0054931640625,
+          "sourcePixelScaleInCssPixels": 2,
+          "sourcePixelScaleInDevicePixelsAtDpr2": 4,
+          "shortcutTileCoordinateZColumnRow": [
+            7,
+            182,
+            51
+          ],
+          "shortcutTileExtent": [
+            75.9375,
+            16.875,
+            77.34375,
+            18.28125
+          ],
+          "generatedUrlAtShortcut": "https://trek.nasa.gov/tiles/Mars/EQ/Mars_MGS_MOLA_ClrShade_merge_global_463m/1.0.0//default/default028mm/7/51/182.jpg",
+          "referenceTileCoordinateZColumnRow": [
+            7,
+            183,
+            50
+          ],
+          "generatedUrlAtReference": "https://trek.nasa.gov/tiles/Mars/EQ/Mars_MGS_MOLA_ClrShade_merge_global_463m/1.0.0//default/default028mm/7/50/183.jpg"
+        },
+        {
+          "viewZoom": 9,
+          "viewResolutionDegreesPerCssPixel": 0.001373291015625,
+          "requestedMatrixIdentifier": "7",
+          "sourceResolutionDegreesPerTilePixel": 0.0054931640625,
+          "sourcePixelScaleInCssPixels": 4,
+          "sourcePixelScaleInDevicePixelsAtDpr2": 8,
+          "shortcutTileCoordinateZColumnRow": [
+            7,
+            182,
+            51
+          ],
+          "shortcutTileExtent": [
+            75.9375,
+            16.875,
+            77.34375,
+            18.28125
+          ],
+          "generatedUrlAtShortcut": "https://trek.nasa.gov/tiles/Mars/EQ/Mars_MGS_MOLA_ClrShade_merge_global_463m/1.0.0//default/default028mm/7/51/182.jpg",
+          "referenceTileCoordinateZColumnRow": [
+            7,
+            183,
+            50
+          ],
+          "generatedUrlAtReference": "https://trek.nasa.gov/tiles/Mars/EQ/Mars_MGS_MOLA_ClrShade_merge_global_463m/1.0.0//default/default028mm/7/50/183.jpg"
+        },
+        {
+          "viewZoom": 10,
+          "viewResolutionDegreesPerCssPixel": 0.0006866455078125,
+          "requestedMatrixIdentifier": "7",
+          "sourceResolutionDegreesPerTilePixel": 0.0054931640625,
+          "sourcePixelScaleInCssPixels": 8,
+          "sourcePixelScaleInDevicePixelsAtDpr2": 16,
+          "shortcutTileCoordinateZColumnRow": [
+            7,
+            182,
+            51
+          ],
+          "shortcutTileExtent": [
+            75.9375,
+            16.875,
+            77.34375,
+            18.28125
+          ],
+          "generatedUrlAtShortcut": "https://trek.nasa.gov/tiles/Mars/EQ/Mars_MGS_MOLA_ClrShade_merge_global_463m/1.0.0//default/default028mm/7/51/182.jpg",
+          "referenceTileCoordinateZColumnRow": [
+            7,
+            183,
+            50
+          ],
+          "generatedUrlAtReference": "https://trek.nasa.gov/tiles/Mars/EQ/Mars_MGS_MOLA_ClrShade_merge_global_463m/1.0.0//default/default028mm/7/50/183.jpg"
+        },
+        {
+          "viewZoom": 11,
+          "viewResolutionDegreesPerCssPixel": 0.00034332275390625,
+          "requestedMatrixIdentifier": "7",
+          "sourceResolutionDegreesPerTilePixel": 0.0054931640625,
+          "sourcePixelScaleInCssPixels": 16,
+          "sourcePixelScaleInDevicePixelsAtDpr2": 32,
+          "shortcutTileCoordinateZColumnRow": [
+            7,
+            182,
+            51
+          ],
+          "shortcutTileExtent": [
+            75.9375,
+            16.875,
+            77.34375,
+            18.28125
+          ],
+          "generatedUrlAtShortcut": "https://trek.nasa.gov/tiles/Mars/EQ/Mars_MGS_MOLA_ClrShade_merge_global_463m/1.0.0//default/default028mm/7/51/182.jpg",
+          "referenceTileCoordinateZColumnRow": [
+            7,
+            183,
+            50
+          ],
+          "generatedUrlAtReference": "https://trek.nasa.gov/tiles/Mars/EQ/Mars_MGS_MOLA_ClrShade_merge_global_463m/1.0.0//default/default028mm/7/50/183.jpg"
+        },
+        {
+          "viewZoom": 12,
+          "viewResolutionDegreesPerCssPixel": 0.000171661376953125,
+          "requestedMatrixIdentifier": "7",
+          "sourceResolutionDegreesPerTilePixel": 0.0054931640625,
+          "sourcePixelScaleInCssPixels": 32,
+          "sourcePixelScaleInDevicePixelsAtDpr2": 64,
+          "shortcutTileCoordinateZColumnRow": [
+            7,
+            182,
+            51
+          ],
+          "shortcutTileExtent": [
+            75.9375,
+            16.875,
+            77.34375,
+            18.28125
+          ],
+          "generatedUrlAtShortcut": "https://trek.nasa.gov/tiles/Mars/EQ/Mars_MGS_MOLA_ClrShade_merge_global_463m/1.0.0//default/default028mm/7/51/182.jpg",
+          "referenceTileCoordinateZColumnRow": [
+            7,
+            183,
+            50
+          ],
+          "generatedUrlAtReference": "https://trek.nasa.gov/tiles/Mars/EQ/Mars_MGS_MOLA_ClrShade_merge_global_463m/1.0.0//default/default028mm/7/50/183.jpg"
+        }
+      ]
+    },
+    {
+      "id": "ctx",
+      "productId": "Jezero_CTX_BlockAdj_dd",
+      "renderOrderBottomToTop": 1,
+      "opacity": 1,
+      "zIndex": null,
+      "extentClip": [
+        75.1537692,
+        15.9058484,
+        78.8717121,
+        19.4453003
+      ],
+      "interpolate": true,
+      "zDirection": 0,
+      "matrixSet": "default028mm",
+      "tileGridMinZoom": 0,
+      "tileGridMaxZoom": 12,
+      "tileSize": 256,
+      "sourceTilePixelRatioAtDeviceRatio1": 1,
+      "sourceTilePixelRatioAtDeviceRatio2": 1,
+      "wrapX": false,
+      "capabilitiesEvidencePath": "docs/evidence/terrain-detail-audit/ctx-Jezero_CTX_BlockAdj_dd.WMTSCapabilities.xml",
+      "capabilitiesSha256": "aeb623627236fc77bbe62c45a8db6e8c148cba7f70c02006eeb30c4fa377598c",
+      "selectedLevels": [
+        {
+          "viewZoom": 4,
+          "viewResolutionDegreesPerCssPixel": 0.0439453125,
+          "requestedMatrixIdentifier": "4",
+          "sourceResolutionDegreesPerTilePixel": 0.0439453125,
+          "sourcePixelScaleInCssPixels": 1,
+          "sourcePixelScaleInDevicePixelsAtDpr2": 2,
+          "shortcutTileCoordinateZColumnRow": [
+            4,
+            22,
+            6
+          ],
+          "shortcutTileExtent": [
+            67.5,
+            11.25,
+            78.75,
+            22.5
+          ],
+          "generatedUrlAtShortcut": "https://trek.nasa.gov/tiles/Mars/EQ/Jezero_CTX_BlockAdj_dd/1.0.0//default/default028mm/4/6/22.png",
+          "referenceTileCoordinateZColumnRow": [
+            4,
+            22,
+            6
+          ],
+          "generatedUrlAtReference": "https://trek.nasa.gov/tiles/Mars/EQ/Jezero_CTX_BlockAdj_dd/1.0.0//default/default028mm/4/6/22.png"
+        },
+        {
+          "viewZoom": 6.25,
+          "viewResolutionDegreesPerCssPixel": 0.009238363937113563,
+          "requestedMatrixIdentifier": "6",
+          "sourceResolutionDegreesPerTilePixel": 0.010986328125,
+          "sourcePixelScaleInCssPixels": 1.189207115002721,
+          "sourcePixelScaleInDevicePixelsAtDpr2": 2.378414230005442,
+          "shortcutTileCoordinateZColumnRow": [
+            6,
+            91,
+            25
+          ],
+          "shortcutTileExtent": [
+            75.9375,
+            16.875,
+            78.75,
+            19.6875
+          ],
+          "generatedUrlAtShortcut": "https://trek.nasa.gov/tiles/Mars/EQ/Jezero_CTX_BlockAdj_dd/1.0.0//default/default028mm/6/25/91.png",
+          "referenceTileCoordinateZColumnRow": [
+            6,
+            91,
+            25
+          ],
+          "generatedUrlAtReference": "https://trek.nasa.gov/tiles/Mars/EQ/Jezero_CTX_BlockAdj_dd/1.0.0//default/default028mm/6/25/91.png"
+        },
+        {
+          "viewZoom": 6.75,
+          "viewResolutionDegreesPerCssPixel": 0.006532509787002252,
+          "requestedMatrixIdentifier": "7",
+          "sourceResolutionDegreesPerTilePixel": 0.0054931640625,
+          "sourcePixelScaleInCssPixels": 0.8408964152537145,
+          "sourcePixelScaleInDevicePixelsAtDpr2": 1.681792830507429,
+          "shortcutTileCoordinateZColumnRow": [
+            7,
+            182,
+            51
+          ],
+          "shortcutTileExtent": [
+            75.9375,
+            16.875,
+            77.34375,
+            18.28125
+          ],
+          "generatedUrlAtShortcut": "https://trek.nasa.gov/tiles/Mars/EQ/Jezero_CTX_BlockAdj_dd/1.0.0//default/default028mm/7/51/182.png",
+          "referenceTileCoordinateZColumnRow": [
+            7,
+            183,
+            50
+          ],
+          "generatedUrlAtReference": "https://trek.nasa.gov/tiles/Mars/EQ/Jezero_CTX_BlockAdj_dd/1.0.0//default/default028mm/7/50/183.png"
+        },
+        {
+          "viewZoom": 7,
+          "viewResolutionDegreesPerCssPixel": 0.0054931640625,
+          "requestedMatrixIdentifier": "7",
+          "sourceResolutionDegreesPerTilePixel": 0.0054931640625,
+          "sourcePixelScaleInCssPixels": 1,
+          "sourcePixelScaleInDevicePixelsAtDpr2": 2,
+          "shortcutTileCoordinateZColumnRow": [
+            7,
+            182,
+            51
+          ],
+          "shortcutTileExtent": [
+            75.9375,
+            16.875,
+            77.34375,
+            18.28125
+          ],
+          "generatedUrlAtShortcut": "https://trek.nasa.gov/tiles/Mars/EQ/Jezero_CTX_BlockAdj_dd/1.0.0//default/default028mm/7/51/182.png",
+          "referenceTileCoordinateZColumnRow": [
+            7,
+            183,
+            50
+          ],
+          "generatedUrlAtReference": "https://trek.nasa.gov/tiles/Mars/EQ/Jezero_CTX_BlockAdj_dd/1.0.0//default/default028mm/7/50/183.png"
+        },
+        {
+          "viewZoom": 7.5,
+          "viewResolutionDegreesPerCssPixel": 0.0038842535587639937,
+          "requestedMatrixIdentifier": "8",
+          "sourceResolutionDegreesPerTilePixel": 0.00274658203125,
+          "sourcePixelScaleInCssPixels": 0.7071067811865476,
+          "sourcePixelScaleInDevicePixelsAtDpr2": 1.4142135623730951,
+          "shortcutTileCoordinateZColumnRow": [
+            8,
+            365,
+            102
+          ],
+          "shortcutTileExtent": [
+            76.640625,
+            17.578125,
+            77.34375,
+            18.28125
+          ],
+          "generatedUrlAtShortcut": "https://trek.nasa.gov/tiles/Mars/EQ/Jezero_CTX_BlockAdj_dd/1.0.0//default/default028mm/8/102/365.png",
+          "referenceTileCoordinateZColumnRow": [
+            8,
+            366,
+            101
+          ],
+          "generatedUrlAtReference": "https://trek.nasa.gov/tiles/Mars/EQ/Jezero_CTX_BlockAdj_dd/1.0.0//default/default028mm/8/101/366.png"
+        },
+        {
+          "viewZoom": 8,
+          "viewResolutionDegreesPerCssPixel": 0.00274658203125,
+          "requestedMatrixIdentifier": "8",
+          "sourceResolutionDegreesPerTilePixel": 0.00274658203125,
+          "sourcePixelScaleInCssPixels": 1,
+          "sourcePixelScaleInDevicePixelsAtDpr2": 2,
+          "shortcutTileCoordinateZColumnRow": [
+            8,
+            365,
+            102
+          ],
+          "shortcutTileExtent": [
+            76.640625,
+            17.578125,
+            77.34375,
+            18.28125
+          ],
+          "generatedUrlAtShortcut": "https://trek.nasa.gov/tiles/Mars/EQ/Jezero_CTX_BlockAdj_dd/1.0.0//default/default028mm/8/102/365.png",
+          "referenceTileCoordinateZColumnRow": [
+            8,
+            366,
+            101
+          ],
+          "generatedUrlAtReference": "https://trek.nasa.gov/tiles/Mars/EQ/Jezero_CTX_BlockAdj_dd/1.0.0//default/default028mm/8/101/366.png"
+        },
+        {
+          "viewZoom": 9,
+          "viewResolutionDegreesPerCssPixel": 0.001373291015625,
+          "requestedMatrixIdentifier": "9",
+          "sourceResolutionDegreesPerTilePixel": 0.001373291015625,
+          "sourcePixelScaleInCssPixels": 1,
+          "sourcePixelScaleInDevicePixelsAtDpr2": 2,
+          "shortcutTileCoordinateZColumnRow": [
+            9,
+            731,
+            205
+          ],
+          "shortcutTileExtent": [
+            76.9921875,
+            17.578125,
+            77.34375,
+            17.9296875
+          ],
+          "generatedUrlAtShortcut": "https://trek.nasa.gov/tiles/Mars/EQ/Jezero_CTX_BlockAdj_dd/1.0.0//default/default028mm/9/205/731.png",
+          "referenceTileCoordinateZColumnRow": [
+            9,
+            732,
+            203
+          ],
+          "generatedUrlAtReference": "https://trek.nasa.gov/tiles/Mars/EQ/Jezero_CTX_BlockAdj_dd/1.0.0//default/default028mm/9/203/732.png"
+        },
+        {
+          "viewZoom": 10,
+          "viewResolutionDegreesPerCssPixel": 0.0006866455078125,
+          "requestedMatrixIdentifier": "10",
+          "sourceResolutionDegreesPerTilePixel": 0.0006866455078125,
+          "sourcePixelScaleInCssPixels": 1,
+          "sourcePixelScaleInDevicePixelsAtDpr2": 2,
+          "shortcutTileCoordinateZColumnRow": [
+            10,
+            1462,
+            411
+          ],
+          "shortcutTileExtent": [
+            76.9921875,
+            17.578125,
+            77.16796875,
+            17.75390625
+          ],
+          "generatedUrlAtShortcut": "https://trek.nasa.gov/tiles/Mars/EQ/Jezero_CTX_BlockAdj_dd/1.0.0//default/default028mm/10/411/1462.png",
+          "referenceTileCoordinateZColumnRow": [
+            10,
+            1465,
+            407
+          ],
+          "generatedUrlAtReference": "https://trek.nasa.gov/tiles/Mars/EQ/Jezero_CTX_BlockAdj_dd/1.0.0//default/default028mm/10/407/1465.png"
+        },
+        {
+          "viewZoom": 11,
+          "viewResolutionDegreesPerCssPixel": 0.00034332275390625,
+          "requestedMatrixIdentifier": "11",
+          "sourceResolutionDegreesPerTilePixel": 0.00034332275390625,
+          "sourcePixelScaleInCssPixels": 1,
+          "sourcePixelScaleInDevicePixelsAtDpr2": 2,
+          "shortcutTileCoordinateZColumnRow": [
+            11,
+            2924,
+            822
+          ],
+          "shortcutTileExtent": [
+            76.9921875,
+            17.666015625,
+            77.080078125,
+            17.75390625
+          ],
+          "generatedUrlAtShortcut": "https://trek.nasa.gov/tiles/Mars/EQ/Jezero_CTX_BlockAdj_dd/1.0.0//default/default028mm/11/822/2924.png",
+          "referenceTileCoordinateZColumnRow": [
+            11,
+            2931,
+            814
+          ],
+          "generatedUrlAtReference": "https://trek.nasa.gov/tiles/Mars/EQ/Jezero_CTX_BlockAdj_dd/1.0.0//default/default028mm/11/814/2931.png"
+        },
+        {
+          "viewZoom": 12,
+          "viewResolutionDegreesPerCssPixel": 0.000171661376953125,
+          "requestedMatrixIdentifier": "12",
+          "sourceResolutionDegreesPerTilePixel": 0.000171661376953125,
+          "sourcePixelScaleInCssPixels": 1,
+          "sourcePixelScaleInDevicePixelsAtDpr2": 2,
+          "shortcutTileCoordinateZColumnRow": [
+            12,
+            5848,
+            1645
+          ],
+          "shortcutTileExtent": [
+            76.9921875,
+            17.666015625,
+            77.0361328125,
+            17.7099609375
+          ],
+          "generatedUrlAtShortcut": "https://trek.nasa.gov/tiles/Mars/EQ/Jezero_CTX_BlockAdj_dd/1.0.0//default/default028mm/12/1645/5848.png",
+          "referenceTileCoordinateZColumnRow": [
+            12,
+            5863,
+            1629
+          ],
+          "generatedUrlAtReference": "https://trek.nasa.gov/tiles/Mars/EQ/Jezero_CTX_BlockAdj_dd/1.0.0//default/default028mm/12/1629/5863.png"
+        }
+      ]
+    }
+  ],
+  "visibilityCases": [
+    {
+      "zoom": 4,
+      "coverage": "inside",
+      "localDetail": false,
+      "effective": {
+        "mola": true,
+        "ctx": false
+      }
+    },
+    {
+      "zoom": 7,
+      "coverage": "inside",
+      "localDetail": true,
+      "effective": {
+        "mola": true,
+        "ctx": true
+      }
+    },
+    {
+      "zoom": 8,
+      "coverage": "inside",
+      "localDetail": true,
+      "effective": {
+        "mola": true,
+        "ctx": true
+      }
+    },
+    {
+      "zoom": 12,
+      "coverage": "inside",
+      "localDetail": true,
+      "effective": {
+        "mola": true,
+        "ctx": true
+      }
+    },
+    {
+      "zoom": 12,
+      "coverage": "partial",
+      "localDetail": true,
+      "effective": {
+        "mola": true,
+        "ctx": true
+      }
+    },
+    {
+      "zoom": 12,
+      "coverage": "outside",
+      "localDetail": true,
+      "effective": {
+        "mola": true,
+        "ctx": false
+      }
+    }
+  ],
+  "simulatedViewports": [
+    {
+      "description": "Illustrative dimensions only; not an observed app viewport.",
+      "cssPixelSize": [
+        960,
+        600
+      ],
+      "zoom": 4,
+      "center": [
+        77.01274065,
+        17.675574349999998
+      ],
+      "extent": [
+        55.91899065,
+        4.491980599999998,
+        98.10649065,
+        30.859168099999998
+      ],
+      "preliminaryCtxBoundingBoxCoverage": "partial",
+      "referenceCraterCenterInViewport": true,
+      "referenceCraterCenterCssPixel": [
+        495.41141276444444,
+        283.28773631999996
+      ]
+    },
+    {
+      "description": "Illustrative dimensions only; not an observed app viewport.",
+      "cssPixelSize": [
+        960,
+        600
+      ],
+      "zoom": 8,
+      "center": [
+        77.01274065,
+        17.675574349999998
+      ],
+      "extent": [
+        75.694381275,
+        16.851599740624998,
+        78.331100025,
+        18.499548959374998
+      ],
+      "preliminaryCtxBoundingBoxCoverage": "inside",
+      "referenceCraterCenterInViewport": true,
+      "referenceCraterCenterCssPixel": [
+        726.5826042311111,
+        32.60378111999921
+      ]
+    },
+    {
+      "description": "Illustrative dimensions only; not an observed app viewport.",
+      "cssPixelSize": [
+        960,
+        600
+      ],
+      "zoom": 10,
+      "center": [
+        77.01274065,
+        17.675574349999998
+      ],
+      "extent": [
+        76.68315080625,
+        17.469580697656248,
+        77.34233049375,
+        17.881568002343748
+      ],
+      "preliminaryCtxBoundingBoxCoverage": "inside",
+      "referenceCraterCenterInViewport": false,
+      "referenceCraterCenterCssPixel": [
+        1466.3304169244443,
+        -769.5848755200032
+      ]
+    },
+    {
+      "description": "Illustrative dimensions only; not an observed app viewport.",
+      "cssPixelSize": [
+        960,
+        600
+      ],
+      "zoom": 12,
+      "center": [
+        77.01274065,
+        17.675574349999998
+      ],
+      "extent": [
+        76.9303431890625,
+        17.62407593691406,
+        77.0951381109375,
+        17.727072763085935
+      ],
+      "preliminaryCtxBoundingBoxCoverage": "inside",
+      "referenceCraterCenterInViewport": false,
+      "referenceCraterCenterCssPixel": [
+        4425.321667697777,
+        -3978.3395020800126
+      ]
+    },
+    {
+      "description": "Illustrative dimensions only; not an observed app viewport.",
+      "cssPixelSize": [
+        390,
+        430
+      ],
+      "zoom": 4,
+      "center": [
+        77.01274065,
+        17.675574349999998
+      ],
+      "extent": [
+        68.4434047125,
+        8.227332162499998,
+        85.5820765875,
+        27.123816537499998
+      ],
+      "preliminaryCtxBoundingBoxCoverage": "partial",
+      "referenceCraterCenterInViewport": true,
+      "referenceCraterCenterCssPixel": [
+        210.41141276444444,
+        198.28773631999996
+      ]
+    },
+    {
+      "description": "Illustrative dimensions only; not an observed app viewport.",
+      "cssPixelSize": [
+        390,
+        430
+      ],
+      "zoom": 8,
+      "center": [
+        77.01274065,
+        17.675574349999998
+      ],
+      "extent": [
+        76.47715715390625,
+        17.085059213281248,
+        77.54832414609375,
+        18.266089486718748
+      ],
+      "preliminaryCtxBoundingBoxCoverage": "inside",
+      "referenceCraterCenterInViewport": false,
+      "referenceCraterCenterCssPixel": [
+        441.5826042311111,
+        -52.39621888000079
+      ]
+    },
+    {
+      "description": "Illustrative dimensions only; not an observed app viewport.",
+      "cssPixelSize": [
+        390,
+        430
+      ],
+      "zoom": 10,
+      "center": [
+        77.01274065,
+        17.675574349999998
+      ],
+      "extent": [
+        76.87884477597656,
+        17.52794556582031,
+        77.14663652402344,
+        17.823203134179685
+      ],
+      "preliminaryCtxBoundingBoxCoverage": "inside",
+      "referenceCraterCenterInViewport": false,
+      "referenceCraterCenterCssPixel": [
+        1181.3304169244443,
+        -854.5848755200032
+      ]
+    },
+    {
+      "description": "Illustrative dimensions only; not an observed app viewport.",
+      "cssPixelSize": [
+        390,
+        430
+      ],
+      "zoom": 12,
+      "center": [
+        77.01274065,
+        17.675574349999998
+      ],
+      "extent": [
+        76.97926668149414,
+        17.638667153955076,
+        77.04621461850586,
+        17.71248154604492
+      ],
+      "preliminaryCtxBoundingBoxCoverage": "inside",
+      "referenceCraterCenterInViewport": false,
+      "referenceCraterCenterCssPixel": [
+        4140.321667697777,
+        -4063.3395020800126
+      ]
+    }
+  ],
+  "sourceHashes": {
+    "src/data/marsLayers.ts": "777187ad7ba01240c1b7ace28c706bd5619f1aba3fb1fec0721bf0bd92889eec",
+    "src/features/map/createMarsMap.ts": "39036565fb548a671ddd03caa313f227de4ca8c889637b911222d60d9f3913ef",
+    "src/features/map/mapProjection.ts": "f0d03c6e431713f11e3de4e977283373c889d5a209f30861ea28c07611f16307",
+    "src/features/map/capabilities.ts": "1850f209067f2a641ffdb9f3ac5c67366b2e230c38b66cf6d099cd88c58e596c",
+    "src/features/explorer/transition.ts": "f7656de4bef7dd1700822c625f069e7e6de7f85e0a2e064a0cf1aa3255ea3398",
+    "src/features/explorer/layers.ts": "8d864c002e578658a7fa759558dd047f09a52e38706e095b988347b8557ecf44",
+    "src/components/explorer/MarsExplorer.tsx": "d969641b2f251c3be440817f20eb87f90bc06335463f01a2fa6deacfc87f976d",
+    "src/features/globe/createMarsGlobe.ts": "5c291697cef9c669b37414a284a049cdbd78ecbe7244259b294586852890a31e",
+    "src/styles/index.css": "cf28a2e06f59dceb0e34ea9283b3989465af455861f7b623f82b02874466ac74",
+    "node_modules/ol/renderer/canvas/TileLayer.js": "822185b7ee983aa77e3c4722d822972c218fbac4651a51eb31b8354c1178f2de"
+  },
+  "limitations": [
+    "Generated tile URLs are configuration evidence, not browser network capture.",
+    "Simulated viewport dimensions are explicitly illustrative; actual browser viewport, zoom, DPR, cached/interim tiles, and GPU rendering were not observed.",
+    "Angular sample spacing does not prove effective native source resolution or pixel registration.",
+    "A rectangular service bound does not establish valid pixels throughout its interior.",
+    "No numerical elevation, terrain metric, or route is derived."
+  ]
+}

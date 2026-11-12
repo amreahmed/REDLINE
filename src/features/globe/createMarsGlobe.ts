@@ -3,9 +3,22 @@ import type { Object3D } from 'three'
 import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js'
 import { OrbitControls } from 'three/addons/controls/OrbitControls.js'
 import { fetchGlobeAsset, GlobeAssetError } from './asset'
+import { overviewDistanceForAspect, sampleApproachPose, sampleOverviewPose } from './flightPose'
+import type { GlobeOrbitPose } from './flightPose'
 
 export type GlobeStatus = { phase: 'loading' | 'ready' | 'error'; message: string }
-export type GlobeController = { rotate: (horizontal: number, vertical: number) => void; zoom: (factor: number) => void; reset: () => void; retreat: () => void; setActive: (active: boolean) => void; dispose: () => void }
+export type GlobeController = {
+  rotate: (horizontal: number, vertical: number) => void
+  zoom: (factor: number) => void
+  reset: () => void
+  retreat: () => void
+  beginApproach: () => void
+  setOverviewProgress: (progress: number) => void
+  setApproachProgress: (progress: number) => void
+  endApproach: () => void
+  setActive: (active: boolean) => void
+  dispose: () => void
+}
 
 function releaseModel(root: Object3D) {
   const textures = new Set<Texture>()
@@ -43,6 +56,7 @@ export function createMarsGlobe(host: HTMLElement, onStatus: (status: GlobeStatu
   let disposed = false
   let ready = false
   let active = true
+  let approach: { start: GlobeOrbitPose; overview: GlobeOrbitPose } | undefined
   let model: Object3D | undefined
   let decodeTimer: ReturnType<typeof setTimeout> | undefined
   const abort = new AbortController()
@@ -50,7 +64,7 @@ export function createMarsGlobe(host: HTMLElement, onStatus: (status: GlobeStatu
   function render() {
     if (!disposed && ready) {
       renderer.render(scene, camera)
-      if (active) onDistance?.(camera.position.length())
+      if (active && !approach) onDistance?.(camera.position.length())
     }
   }
   function resize() {
@@ -61,14 +75,45 @@ export function createMarsGlobe(host: HTMLElement, onStatus: (status: GlobeStatu
     renderer.setSize(width, height)
     render()
   }
-  function overviewDistance() { return Math.min(7, Math.max(3.8, 1.35 / Math.sin(Math.atan(Math.tan(20 * Math.PI / 180) * Math.min(camera.aspect, 1))))) }
+  function overviewDistance() { return overviewDistanceForAspect(camera.aspect) }
+  function endApproach() {
+    if (disposed) return
+    // Synchronize OrbitControls while flight feedback is still suppressed.
+    if (approach) controls.update()
+    approach = undefined
+    controls.enabled = active && ready
+  }
+  function setApproachProgress(value: number) {
+    if (!approach || !ready || disposed || !Number.isFinite(value)) return
+    applyPose(sampleApproachPose(approach.overview, value))
+  }
+  function setOverviewProgress(value: number) {
+    if (!approach || !ready || disposed || !Number.isFinite(value)) return
+    applyPose(sampleOverviewPose(approach.start, approach.overview.radius, value))
+  }
+  function applyPose(pose: GlobeOrbitPose) {
+    camera.position.setFromSphericalCoords(pose.radius, pose.polar, pose.azimuth)
+    camera.lookAt(controls.target)
+    render()
+  }
+  function beginApproach() {
+    if (!ready || disposed || approach) return
+    // Capture once: resizing changes projection, never this flight's camera path.
+    const start = { azimuth: controls.getAzimuthalAngle(), polar: controls.getPolarAngle(), radius: camera.position.length() }
+    approach = { start, overview: { ...start, radius: overviewDistance() } }
+    controls.enabled = false
+  }
   function reset() {
+    if (disposed) return
+    endApproach()
     camera.position.set(0, 0, overviewDistance())
     controls.target.set(0, 0, 0)
     controls.update()
     render()
   }
   function fail(message: string) {
+    approach = undefined
+    controls.enabled = false
     ready = false
     renderer.clear()
     report({ phase: 'error', message })
@@ -128,7 +173,7 @@ export function createMarsGlobe(host: HTMLElement, onStatus: (status: GlobeStatu
 
   return {
     rotate: (horizontal, vertical) => {
-      if (!ready) return
+      if (!ready || disposed || approach) return
       // Orbit angles are view controls, not geodetic longitude or latitude.
       const radius = camera.position.length()
       const theta = controls.getAzimuthalAngle() + horizontal
@@ -137,15 +182,21 @@ export function createMarsGlobe(host: HTMLElement, onStatus: (status: GlobeStatu
       controls.update()
     },
     zoom: (factor) => {
-      if (!ready) return
+      if (!ready || disposed || approach) return
       camera.position.setLength(Math.max(controls.minDistance, Math.min(controls.maxDistance, camera.position.length() * factor)))
       controls.update()
     },
     reset,
-    retreat: () => { camera.position.setLength(overviewDistance()); controls.update(); render() },
-    setActive: (value) => { active = value; controls.enabled = value; if (value) { resize(); render() } },
+    retreat: () => { if (disposed) return; endApproach(); camera.position.setLength(overviewDistance()); controls.update(); render() },
+    beginApproach,
+    setOverviewProgress,
+    setApproachProgress,
+    endApproach,
+    setActive: (value) => { if (disposed) return; active = value; controls.enabled = value && ready && !approach; if (value) { resize(); render() } },
     dispose: () => {
+      if (disposed) return
       disposed = true
+      approach = undefined
       abort.abort()
       clearTimeout(decodeTimer)
       observer.disconnect()

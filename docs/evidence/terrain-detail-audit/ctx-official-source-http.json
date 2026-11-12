@@ -1,0 +1,163 @@
+[
+  {
+    "file": "ctx-controlled-source.lbl",
+    "url": "https://asc-pds-services.s3.us-west-2.amazonaws.com/mosaic/mars2020_trn/CTX/JEZ_ctx_B_soc_008_orthoMosaic_6m_Eqc_latTs0_lon0.lbl",
+    "finalUrl": "https://asc-pds-services.s3.us-west-2.amazonaws.com/mosaic/mars2020_trn/CTX/JEZ_ctx_B_soc_008_orthoMosaic_6m_Eqc_latTs0_lon0.lbl",
+    "requestedAtUtc": "2026-10-25T18:11:12.616308+00:00",
+    "status": 200,
+    "responseHeaders": {
+      "x-amz-id-2": "6QStcsIgWTs8IkYh6oRWwdwqApUkF1cK+LvovERvYk8YK1xDtlvmiALhm02JlBxlgJm/Jfr6AxA=",
+      "x-amz-request-id": "A0MK3MAF8GMARB5W",
+      "Date": "Sun, 25 Oct 2026 18:11:13 GMT",
+      "Last-Modified": "Thu, 10 Nov 2022 20:44:07 GMT",
+      "ETag": "\"823f2f8a9f335068279d99d5b14d4750\"",
+      "x-amz-storage-class": "STANDARD_IA",
+      "x-amz-version-id": "null",
+      "Accept-Ranges": "bytes",
+      "Content-Type": "binary/octet-stream",
+      "Content-Length": "1439",
+      "Server": "AmazonS3"
+    },
+    "byteLength": 1439,
+    "sha256": "a425525be2695ed727daf179563a5898cb2131691e8b21993426764abcf617ca"
+  },
+  {
+    "file": "ctx-controlled-source.xml",
+    "url": "https://asc-pds-services.s3.us-west-2.amazonaws.com/mosaic/mars2020_trn/CTX/JEZ_ctx_B_soc_008_orthoMosaic_6m_Eqc_latTs0_lon0.xml",
+    "finalUrl": "https://asc-pds-services.s3.us-west-2.amazonaws.com/mosaic/mars2020_trn/CTX/JEZ_ctx_B_soc_008_orthoMosaic_6m_Eqc_latTs0_lon0.xml",
+    "requestedAtUtc": "2026-10-25T18:11:12.617008+00:00",
+    "status": 200,
+    "responseHeaders": {
+      "x-amz-id-2": "r8lZAaGBsqwPpm8NBeyNj7IzZrzd2icdO6V+5CRMfqkDbZmwuSea++kVDYD3sKX57fqyrE/9OHg=",
+      "x-amz-request-id": "A0MZT4YY71PGGA30",
+      "Date": "Sun, 25 Oct 2026 18:11:13 GMT",
+      "Last-Modified": "Thu, 10 Nov 2022 20:44:30 GMT",
+      "ETag": "\"886c59824b3c50c375f508614521c5cd\"",
+      "x-amz-storage-class": "STANDARD_IA",
+      "x-amz-version-id": "null",
+      "Accept-Ranges": "bytes",
+      "Content-Type": "text/xml",
+      "Content-Length": "16025",
+      "Server": "AmazonS3"
+    },
+    "byteLength": 16025,
+    "sha256": "c8011a4aa19deebba164aba21ab2ea6326f5bdc7adc01b72bf7dda3d405a4226"
+  },
+  {
+    "file": "ctx-controlled-source-pds3.lbl",
+    "url": "https://asc-pds-services.s3.us-west-2.amazonaws.com/mosaic/mars2020_trn/CTX/JEZ_ctx_B_soc_008_orthoMosaic_6m_Eqc_latTs0_lon0_pds3.lbl",
+    "finalUrl": "https://asc-pds-services.s3.us-west-2.amazonaws.com/mosaic/mars2020_trn/CTX/JEZ_ctx_B_soc_008_orthoMosaic_6m_Eqc_latTs0_lon0_pds3.lbl",
+    "requestedAtUtc": "2026-10-25T18:11:12.617383+00:00",
+    "status": 200,
+    "responseHeaders": {
+      "x-amz-id-2": "JPUEclnoM+uJBV47XI11PTx8S3NI4EtNWUUIOLYBWU0qgGjBKWv6yTkckb7oy/4wXilzmDTohEs=",
+      "x-amz-request-id": "A0MXN8WJ0GPEKDE2",
+      "Date": "Sun, 25 Oct 2026 18:11:13 GMT",
+      "Last-Modified": "Thu, 10 Nov 2022 20:44:35 GMT",
+      "ETag": "\"b08e4b2cc5f0c9afb37720f25d269874\"",
+      "x-amz-storage-class": "STANDARD_IA",
+      "x-amz-version-id": "null",
+      "Accept-Ranges": "bytes",
+      "Content-Type": "binary/octet-stream",
+      "Content-Length": "2281",
+      "Server": "AmazonS3"
+    },
+    "byteLength": 2281,
+    "sha256": "9a4e1d99ce732d491681c661282bf95abdadaf354c7bec8652bb79e147a84b90"
+  },
+  {
+    "file": "ctx-controlled-source-dd.vrt",
+    "url": "https://asc-pds-services.s3.us-west-2.amazonaws.com/mosaic/mars2020_trn/CTX/JEZ_ctx_B_soc_008_orthoMosaic_6m_Eqc_latTs0_lon0_dd.vrt",
+    "finalUrl": "https://asc-pds-services.s3.us-west-2.amazonaws.com/mosaic/mars2020_trn/CTX/JEZ_ctx_B_soc_008_orthoMosaic_6m_Eqc_latTs0_lon0_dd.vrt",
+    "requestedAtUtc": "2026-10-25T18:11:12.617745+00:00",
+    "status": 200,
+    "responseHeaders": {
+      "x-amz-id-2": "yEyQ58lRejVUzYXsjMgw/QosdvrePXwDiUFkXfSA0vR+RQ6QlsgH7kQDlYT8pO1D7OrbVaLNe5c=",
+      "x-amz-request-id": "A0MWX22AD2KS8KMG",
+      "Date": "Sun, 25 Oct 2026 18:11:13 GMT",
+      "Last-Modified": "Thu, 10 Nov 2022 20:44:33 GMT",
+      "ETag": "\"626134322733eb517cd555294fbbba41\"",
+      "x-amz-storage-class": "STANDARD_IA",
+      "x-amz-version-id": "null",
+      "Accept-Ranges": "bytes",
+      "Content-Type": "binary/octet-stream",
+      "Content-Length": "2876",
+      "Server": "AmazonS3"
+    },
+    "byteLength": 2876,
+    "sha256": "08ebe6ba11aacb31ca62b65e8f411b3f01197bb7353ad08053e5b3e7e49d281b"
+  },
+  {
+    "file": "ctx-jezero-gazetteer.html",
+    "url": "https://planetarynames.wr.usgs.gov/Feature/14300",
+    "finalUrl": "https://planetarynames.wr.usgs.gov/Feature/14300",
+    "requestedAtUtc": "2026-10-25T18:11:13.380362+00:00",
+    "status": 200,
+    "responseHeaders": {
+      "Content-Type": "text/html; charset=utf-8",
+      "Transfer-Encoding": "chunked",
+      "Connection": "keep-alive",
+      "Date": "Sun, 25 Oct 2026 18:10:27 GMT",
+      "Strict-Transport-Security": "max-age=31536000; includeSubDomains",
+      "Content-Encoding": "gzip",
+      "Server": "nginx",
+      "Permissions-Policy": "browsing-topics=()",
+      "Referrer-Policy": "strict-origin-when-cross-origin",
+      "X-Frame-Options": "SAMEORIGIN",
+      "X-Content-Type-Options": "nosniff",
+      "X-XSS-Protection": "1; mode=block",
+      "Vary": "Accept-Encoding",
+      "X-Cache": "Hit from cloudfront",
+      "Via": "1.1 3b4be9f7cd333273a9f136c30c72d1f8.cloudfront.net (CloudFront)",
+      "X-Amz-Cf-Pop": "MRS52-P3",
+      "X-Amz-Cf-Id": "o2IKFGsXDnVJnGCMNALCBq78Vj_9SySMlsfqGg6OvO0m1mTG-lTkBQ==",
+      "Age": "45"
+    },
+    "byteLength": 82113,
+    "sha256": "9873e065abaa1f6efbca406a19fdf0acd754c49248b8e1cedab3dae9a5148c25"
+  },
+  {
+    "file": "ctx-mola-usgs-product.html",
+    "url": "https://astrogeology.usgs.gov/search/map/mars_mgs_mola_global_color_shaded_relief_463m",
+    "finalUrl": "https://astrogeology.usgs.gov/search/map/mars_mgs_mola_global_color_shaded_relief_463m",
+    "requestedAtUtc": "2026-10-25T18:11:13.385809+00:00",
+    "status": 200,
+    "responseHeaders": {
+      "Date": "Sun, 25 Oct 2026 18:11:13 GMT",
+      "Content-Type": "text/html; charset=utf-8",
+      "Transfer-Encoding": "chunked",
+      "Connection": "keep-alive",
+      "Cache-Control": "public, max-age=0, must-revalidate",
+      "Server": "cloudflare",
+      "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
+      "X-Content-Type-Options": "nosniff",
+      "set-cookie": "__cf_bm=P5RtTTJ9WlOeg0JgeottAWx_JEcuw_ONsuFZgMKxJic-1792951873.0207164-1.0.1.1-IgcKif.X2st5M7OOKGK.fCuU85DTkdUM3Ih1zmHXAY.F3P93j0J.9EVrUiObVE.BKpPn6xui4Ycr3QjJH73E9TZzXhsOhNG05l_pRV7TBEmco2Qn.NlLZEIN25k_Qk_9; HttpOnly; SameSite=None; Secure; Path=/; Domain=usgs.gov; Expires=Sun, 25 Oct 2026 18:41:13 GMT",
+      "last-modified": "Sun, 25 Oct 2026 18:11:13 GMT",
+      "cf-cache-status": "EXPIRED",
+      "Content-Encoding": "gzip",
+      "CF-RAY": "a5032eb65eace244-MRS"
+    },
+    "byteLength": 34559,
+    "sha256": "aebb58335a078f84ee43acf6a0203828813000d2c129cc267ce48704d72b860a"
+  },
+  {
+    "file": "ctx-controlled-trek-metadata.html",
+    "url": "https://trek.nasa.gov/mars/TrekWS/rest/cat/metadata/fgdc/html?label=JEZ_ctx_B_soc_008_orthoMosaic_6m_Eqc_latTs0_lon0",
+    "finalUrl": "https://trek.nasa.gov/mars/TrekWS/rest/cat/metadata/fgdc/html?label=JEZ_ctx_B_soc_008_orthoMosaic_6m_Eqc_latTs0_lon0",
+    "requestedAtUtc": "2026-10-25T18:11:13.409902+00:00",
+    "status": 200,
+    "responseHeaders": {
+      "Date": "Sun, 25 Oct 2026 18:11:13 GMT",
+      "Server": "Apache/2.4.65 (Unix) OpenSSL/3.4.3",
+      "Strict-Transport-Security": "max-age=31536000; includeSubDomains",
+      "X-Content-Type-Options": "nosniff",
+      "Content-Type": "text/html",
+      "Content-Security-Policy": "frame-ancestors 'self' aelp.smartsparrow.com;",
+      "Keep-Alive": "timeout=5, max=100",
+      "Connection": "Keep-Alive",
+      "Transfer-Encoding": "chunked"
+    },
+    "byteLength": 6415,
+    "sha256": "4d3b57efa14dc58fe5b17731bfa48263ed8ce6690e230f565dd0c200d5298f43"
+  }
+]

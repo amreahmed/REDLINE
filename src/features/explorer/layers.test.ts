@@ -1,7 +1,7 @@
 import { describe, expect, it } from 'vitest'
 import type { Coverage, LayerVisibility } from '../map/types'
 import { initialLayerStatus } from '../map/types'
-import { explorerLayerVisibility, explorerViewportMessage } from './layers'
+import { contextCanOpenWithoutImagery, explorerLayerVisibility, explorerViewportMessage } from './layers'
 
 type VisibilityCase = {
   name: string
@@ -26,6 +26,13 @@ const cases: VisibilityCase[] = [
 ]
 
 describe('explorer image-layer presentation', () => {
+  it('allows honest empty CTX context without deadlocking the image-readiness gate', () => {
+    expect(contextCanOpenWithoutImagery({ mola: false, ctx: true }, false, 'inside')).toBe(true)
+    expect(contextCanOpenWithoutImagery({ mola: false, ctx: true }, true, 'outside')).toBe(true)
+    expect(contextCanOpenWithoutImagery({ mola: false, ctx: false }, true, 'inside')).toBe(true)
+    expect(contextCanOpenWithoutImagery({ mola: false, ctx: true }, true, 'inside')).toBe(false)
+    expect(contextCanOpenWithoutImagery({ mola: true, ctx: true }, false, 'inside')).toBe(false)
+  })
   it.each(cases)('$name', ({ preferences, mapActive, localDetail, coverage, expected }) => {
     expect(explorerLayerVisibility(preferences, mapActive, localDetail, coverage)).toEqual(expected)
   })
