@@ -1,0 +1,47 @@
+Object = IsisCube
+  Object = Core
+    StartByte = 42552
+    ^Core     = J03_045994_1986_J03_046060_1986_20m_slope_20m.tif
+    Format    = BandSequential
+
+    Group = Dimensions
+      Samples = 2093
+      Lines   = 5235
+      Bands   = 1
+    End_Group
+
+    Group = Pixels
+      Type       = Real
+      ByteOrder  = Lsb
+      Base       = 0.0
+      Multiplier = 1.0
+    End_Group
+  End_Object
+
+  Group = Mapping
+    TargetName           = Mars
+    EquatorialRadius     = 3396190.0 <meters>
+    PolarRadius          = 3396190.0 <meters>
+    LatitudeType         = Planetocentric
+    LongitudeDirection   = PositiveEast
+    LongitudeDomain      = 180
+    MinimumLatitude      = 17.5357701886748991
+    MinimumLongitude     = 77.0825959466134663
+    MaximumLatitude      = 19.3199006547793957
+    MaximumLongitude     = 77.7959073249433004
+    ProjectionName       = Equirectangular
+    CenterLongitude      = 180.0
+    CenterLatitude       = 0.0
+    CenterLatitudeRadius = 3396190.0
+    UpperLeftCornerX     = -6100397.99514837563
+    UpperLeftCornerY     = 1145181.26749237487
+    PixelResolution      = 20.201297749849001 <meters/pixel>
+    Scale                = 2934.20245854003497 <pixels/degree>
+  End_Group
+End_Object
+
+Object = Label
+  Bytes = 1281             
+End_Object
+
+End

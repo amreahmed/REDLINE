@@ -1,0 +1,1291 @@
+--- Page 1 ---
+Topography of Mars from global mapping by HRSC high-resolution digital terrain
+models and orthoimages: Characteristics and performance
+K. Gwinner a,⁎, F. Scholten a, F. Preusker a, S. Elgner a, T. Roatsch a, M. Spiegel b, R. Schmidt c, J. Oberst a,
+R. Jaumann a, C. Heipke c
+a Institute of Planetary Research, German Aerospace Center (DLR), Rutherfordstr. 2, D-12489 Berlin, Germany
+b Photogrammetry and Remote Sensing, Technische Universität München, Arcisstr. 21, D-80333 München, Germany
+c Institute of Photogrammetry and GeoInformation, Leibniz Universität Hannover, Nienburger Str. 1, D-30167 Hannover, Germany
+a b s t r a c t
+a r t i c l e
+i n f o
+Article history:
+Accepted 2 November 2009
+Available online xxxx
+Keywords:
+Mars
+global planetary mapping
+stereo imaging
+digital terrain model
+orthoimage
+We report on the results of the Mars Express High-Resolution Stereo Camera (HRSC) experiment pertaining
+to one of its major aims, mapping the surface of Mars by high-resolution digital terrain models (DTM, up to
+50 m grid spacing) and orthoimages (up to 12.5 m resolution). We introduce the speciﬁcations and
+characteristics of these data products and give an overview of the procedures that have been developed and
+are applied for their derivation. We also address the performance characteristics of the mapping project
+related to different aspects of internal accuracy, accuracy with respect to the global reference system, and
+regional aspects. Using adaptive processing techniques for terrain reconstruction and a revised approach to
+the improvement of orientation data, a mean precision of the resulting 3D points of about 12 m is obtained,
+exceeding the mean ground resolution of the stereo images. Using Mars Orbiter Laser Altimeter (MOLA) data,
+the HRSC models are ﬁrmly tied to the global reference system at the scale of the HRSC DTM grid spacing in
+the lateral dimension, and to within few meters vertically. HRSC high-resolution DTMs are typically
+generated using a grid size of about 2 times the mean ground resolution, but usually not larger than 3 times
+the mean ground resolution, and not smaller than 3 times the precision of the integrated 3D points derived
+from stereo image analysis. Statistically, every grid cell is based on at least one measured 3D point. Thus,
+horizontal DTM resolution is well established with regard to the precision and density of the derived 3D
+points, while the concurrent aim of a detailed terrain representation at maximum possible resolution is
+pursued. Comparison with the DTM derived from MOLA data allows us to identify speciﬁc advancements
+related to this updated view of Martian topography. We also address the mapping performance of HRSC in
+comparison to MOLA with respect to latitude and to different surface types and morphologies. Finally,
+comparison with MOLA highlights typical complementarities of the two different approaches for mapping
+planetary surfaces.
+© 2009 Elsevier B.V. All rights reserved.
+1. Introduction
+Detailed mapping of topography is central to the understanding of
+the processes shaping the surfaces of the planets. For Mars, extensive
+earlier topographic mapping efforts were based on image data
+obtained by the Viking Orbiter spacecraft (Snyder, 1979; Wu and
+Doyle, 1990), and in particular on manual measurements by operators
+(Greeley and Batson, 1990). With increased availability of computer
+power, also digital models have been derived, mainly with resolutions
+at km-scale, and higher resolution was achieved in local areas
+(Thornhill et al., 1993). As emphasis was on completeness of the
+surface coverage as such, much of the stereo coverage of Viking was
+obtained only by chance.
+Accurate surface topography was obtained by the Mars Orbiter
+Laser Altimeter (MOLA) instrument on Mars Global Surveyor (Smith
+et al., 2001). MOLA heights are observed along separate measurement
+proﬁles, in contrast to the area-based approach represented by stereo
+imaging. MOLA proﬁles provide a vertical accuracy on the order of
+meters, depending on signal quality and terrain roughness, and a
+horizontal uncertainty of smaller than 100 m (Neumann et al., 2003).
+MOLA surface spots have a nominal diameter of 168 m from 400 km
+orbit height, and a shot spacing of 300 m (Smith et al., 2001). The
+individual measurement tracks overlap near the poles, but gaps
+between tracks amount to about 4 km near the equator. For the global
+raster DTM product (1/128° raster, i.e. 463 m grid spacing at the
+equator, PDS dataset MGS-M-MOLA-5-MEGDR-L3-V1.0, http://pds-
+geosciences.wustl.edu/missions/mgs/megdr.html), a horizontal
+Earth and Planetary Science Letters xxx (2009) xxx–xxx
+⁎ Corresponding author. Tel.: +49 30 67055 310; fax: +49 30 67055 402.
+E-mail address: Klaus.Gwinner@dlr.de (K. Gwinner).
+EPSL-10084; No of Pages 14
+0012-821X/$ – see front matter © 2009 Elsevier B.V. All rights reserved.
+doi:10.1016/j.epsl.2009.11.007
+Contents lists available at ScienceDirect
+Earth and Planetary Science Letters
+journal homepage: www.elsevier.com/locate/epsl
+ARTICLE IN PRESS
+Please cite this article as: Gwinner, K., et al., Topography of Mars from global mapping by HRSC high-resolution digital terrain models and
+orthoimages: Characteristics and performance, Earth Planet. Sci. Lett. (2009), doi:10.1016/j.epsl.2009.11.007
+
+--- Page 2 ---
+accuracy of about 200 m and a vertical accuracy on the order of 10 m
+can be expected on average.
+The High-Resolution Stereo Camera (HRSC; Neukum et al., 2004;
+Jaumann et al., 2007) onboard the European mission Mars Express
+(MEX) is the ﬁrst planetary sensor system which has a built-in stereo
+functionality and is speciﬁcally designed for photogrammetric mapping.
+HRSC is a multi-line pushbroom stereo camera providing up to 5
+panchromatic multi-angle observations of the surface during each Mars
+orbit. Simultaneously, multi-spectral imagery is acquired by four CCD
+lines equipped with spectral ﬁlters (near-infrared, red, green, blue). A
+nominal ground resolution of up to 10 m/pixel is achieved. Beyond
+stereo capability, HRSC data are unique since a single imaging sequence
+covers very large areas (typically on the order of 104–105 km2) at high
+image resolution. By imaging sequence we denote the set of
+synchronous HRSC stereo and color images for the same ground track.
+The capability of simultaneous acquisition of stereo imagery avoids the
+difﬁculties related to changes of imaging conditions which may occur
+between successive orbital passes and makes pointing maneuvers for
+obtaining stereo coverage unnecessary.
+Recently, stereo imagery of even higher resolution has become
+available. Mars Global Surveyor has provided stereoscopic coverage
+with its wide-angle camera at 225 m/pixel and stereo coverage by its
+narrow-angle device for selected areas of interest (Malin and Edgett,
+2001; Kirk et al., 2003; Yoon and Shan, 2005). The HiRISE experiment
+onboard Mars Reconnaissance Orbiter is acquiring stereo imagery for
+∼0.1% of the surface at meter-scale resolution (McEwen et al., 2007;
+Kirk et al., 2007). Stereo coverage is obtained by tilting the spacecraft
+in consecutive orbits in both cases. However, because of the lack in
+lateral coverage, the data do not provide the basis for a global
+mapping attempt.
+In this paper we address the achievements of the HRSC experiment
+onboard Mars Express (Neukum et al., 2004) relative to the global
+mapping of the topography of Mars by high-resolution DTMs and
+orthoimages. These data products are also called Level-4 products,
+according to HRSC experiment nomenclature. After a preparatory
+phase that was dedicated to the performance analysis and reﬁnement
+of HRSC 3D processing (Heipke et al., 2004; Albertz et al., 2005;
+Gwinner et al., 2005, 2009; Scholten et al., 2005; Kirk et al., 2006;
+Spiegel, 2007a,b) and comparison with alternative approaches to
+HRSC photogrammetric processing (Heipke et al., 2007), a mapping
+program for systematic derivation of HRSC Level-4 products has been
+established and started at the German Aerospace Center (DLR) in
+2007 (Gwinner et al., 2008).
+The purpose of this paper is to introduce the general speciﬁcations of
+the HRSC high-level photogrammetric data products for Mars and to
+give an overview of the procedures applied for their derivation. Among
+the different methods involved (Gwinner et al., 2009), the presentation
+of the procedure for improvement of exterior orientation data, some
+aspects of which have not been described previously, is addressed in
+more detail. We will then analyze the performance characteristics of the
+overall mapping project related to image resolution, absolute accuracy,
+the internal accuracy of the DTMs, i.e. the level of detail achieved by the
+topographic reconstruction, and corresponding regional aspects. Finally,
+we derive some general conclusions with respect to the updated view of
+Martian topography, and its comparison with the existing global DTM
+derived from laser altimetry proﬁles of the MOLA instrument.
+Comparison of MOLA results with HRSC DTMs is of speciﬁc interest
+also because of the current trend in planetary exploration to include
+both, laser instruments and imaging sensors with stereo capabilities for
+orbiter missions (e.g. Selene, Messenger, Lunar Reconnaissance Orbiter,
+BepiColombo).
+2. HRSC data properties and coverage
+Photogrammetric analysis of HRSC data uses so-called Level-2
+data, i.e. decompressed and radiometrically calibrated imagery
+(Jaumann et al., 2007). The radiometric calibration of the image
+data comprises ﬂat-ﬁelding and absolute ﬂux calibration. The
+geometric calibration parameters of the camera have been deter-
+mined from laboratory measurements before the launch (Jaumann
+et al., 2007) and have been checked and improved based on HRSC data
+from orbit (Spiegel, 2007b). Using 46 selected orbits systematic errors
+in the image coordinates of the tie-points have been removed by
+improving the coordinates x0, y0 of the focal point in a self-calibrating
+bundle adjustment, i.e. the parameters of the exterior orientation and
+the coordinates of the focal point were determined simultaneously.
+The image data are also amended by orbit and pointing data. These
+base data are available via the PSA (Planetary Science Archive) and PDS
+(Planetary Data System) catalogues (http://www.rssd.esa.int/PSA,
+http://pds-geosciences.wustl.edu/missions/mars_express/hrsc.htm).
+HRSC imagery is compressed onboard by a lossy, JPEG-based
+discrete cosine transform (DCT) compression with average compres-
+sion factors of 4–40 that affects the effective ground resolution of the
+images (Jaumann et al., 2007; Gwinner et al., 2009). Permanent effects
+of compression on the images comprise image block artifacts
+(through separate compression of non-overlapping 8×8 image
+windows) and manipulation of the spectral domain by encoding
+transform parameters with reduced accuracy. Compression effects are
+stronger on low-contrast areas and need to be speciﬁcally addressed
+during the process of DTM generation in order to reduce errors (see
+Section 4.2 and Gwinner et al., 2009).
+In addition to Level-2 data and Level-4 data (HRSC high-resolution
+DTMs and orthoimages), so-called Level-3 data are available. These
+are map projected image data, but rectiﬁcation is based on the terrain
+representation provided by the MOLA DTM, not on higher-resolution
+HRSC DTM (see Section 4.3).
+At the time of writing, the derivation of HRSC high-resolution
+DTMs and orthoimages for the complete HRSC dataset is an ongoing
+process, as is the mission itself. Currently, HRSC nadir channel data
+acquired by the regional mapping mode cover 115 million km2, or
+about 79.3% of the surface of Mars. The datasets considered in
+Sections 5 and 6 comprise all imaging sequences for which the
+processing has been ﬁnished before December 2008. The highest
+respective MEX orbit number is 2217, which is close to the end of the
+nominal mission phase (2004–2005). Thus, the available product
+datasets already allow us to assess the mapping performance of HRSC
+from a global perspective, since they cover a substantial fraction of the
+surface of Mars, the full latitude range, and the full range of typical
+mean ground resolutions of the HRSC stereo channels (Fig. 1). Note
+that, because of limitations to data volume, HRSC stereo images are
+often acquired with lower resolution than the nadir channel images.
+Fig. 1. Mean HRSC stereo image ground resolution vs. latitude of the center of the image
+sequence. Local averages and standard deviations are indicated. Only stereo imaging
+sequences corresponding to the HRSC high-resolution DTM and orthoimage datasets
+considered in this paper are shown.
+2
+K. Gwinner et al. / Earth and Planetary Science Letters xxx (2009) xxx–xxx
+ARTICLE IN PRESS
+Please cite this article as: Gwinner, K., et al., Topography of Mars from global mapping by HRSC high-resolution digital terrain models and
+orthoimages: Characteristics and performance, Earth Planet. Sci. Lett. (2009), doi:10.1016/j.epsl.2009.11.007
+
+--- Page 3 ---
+3. HRSC Level-4 product speciﬁcations and PDS speciﬁcations
+The data products of the systematic HRSC Level-4 processing
+(Table 1) are 8 bit orthoimages for the nadir channel and the 4 color
+channels and 16 bit DTMs (1 m numeric height resolution). They are
+originally created in VICAR format (see Scholten et al., 2005) and then
+formatted according to PDS speciﬁcations. The map scales of the
+orthoimages adhere to standard resolutions (12.5, 25, 50…m/pixel),
+depending on the ground resolution of the respective image. For the
+speciﬁcation of the DTM spatial resolution, the quality of image and
+orientation data is also decisive (see Section 5.2). Most frequently, a
+grid spacing of about 2 times the mean stereo resolution can be used
+(up to 50 m). The principal geometric reference for both planimetry
+and height is a sphere of radius r=3396.0 km as deﬁned by the MOLA
+team (Smith et al., 2001). In addition to the spheroid DTM, an areoid
+DTM is produced. Again in agreement with the datum used by the
+MOLA team, the areoid DTM represents heights above an equipoten-
+tial surface described by the potential model GMM3 (PDS dataset
+MGS-M-MOLA-5-MEGDR-L3-V1.0). The areoid is the Martian analog
+to the geoid known in terrestrial geodesy. Being referred to the gravity
+potential ﬁeld, the areoid DTM may better serve the purposes of
+speciﬁc geoscientiﬁc studies, e.g. those addressing gravity-driven
+processes or regional slope angles. On the other hand, due to its
+simple and entirely geometric deﬁnition, the spheroid reference
+system allows for straightforward transformation to other reference
+systems (such as possible future updates of the potential model for
+Mars). The map projection is Sinusoidal for latitudes between ±85°
+and Polar-Stereographic for polar areas.
+Adjustment of orientation data and the systematic derivation of
+HRSC high-resolution Level-4 data products apply to all HRSC stereo
+imaging sequences, except limb observations and Phobos and Deimos
+observations. Processing is performed orbit by orbit, beginning from
+the ﬁrst orbits. The data products are supplied periodically to PSA and
+PDS and are made available to the public through these archives after
+their validation.
+The formats and labeling of the HRSC data available through these
+websites (see Section 2) comply with PDS standards. Speciﬁc
+keywords related to the vertical datum and to the numeric
+representation of heights that are used for the DTMs are currently
+under review by PDS and are therefore listed as “MEX-speciﬁc”
+keywords in the PDS DTM label.
+Fig. 2 shows an example of a HRSC Level-4 dataset, a combined
+representation of DTM and color orthoimages for one imaging
+sequence in a perspective view of Valles Marineris.
+4. Approach for systematic derivation of data products
+The MEX HRSC experiment has provided a large amount of stereo
+data on single orbital passes. The conditions under which these data have
+been acquired cause a variation of image quality and of the accuracy of
+the a priori orbit and pointing data (Jaumann et al., 2007; Gwinner et al.,
+2009). The systematic derivation of HRSC high-resolution Level-4 data
+products for the entire dataset, with high internal consistency and with
+high absolute accuracy with respect to global reference data (MOLA) has
+to accomplish two core issues of data analysis.
+For one, a central pre-requisite is an operational photogrammetric
+processing system that allows for the systematic, robust, and accurate
+reconstruction of the orientation data for each orbit, irrespective of
+variable conditions. In Section 4.1, we report on the conception and
+implementation of the procedure applied for the adjustment of MEX
+HRSC data.
+The second core issue is a reliable procedure for 3D surface
+reconstruction at high resolution. It directly leads to the generation of
+the DTM which in turn forms the basis for the calculation of
+orthoimages. The methodology and procedures for the derivation of
+high-resolution DTMs from HRSC data by the experiment team have
+been described and analyzed in detail in Gwinner et al. (2009) and
+will be brieﬂy summarized in Section 4.2.
+4.1. Improvement of orbit and pointing data
+The procedure for adjustment of MEX HRSC orientation data in the
+framework of systematic Level-4 processing is built on comprehen-
+sive experience gained on the improvement of orientation data for
+airborne HRSC imagery and other airborne multi-line sensors
+(Scholten et al, 2002; Scholten and Gwinner, 2004) and on extensive
+previous results of multi-line bundle adjustment of MEX HRSC data
+(Heipke et al., 2004; Spiegel 2007a,b; Schmidt 2008). Since we have
+also integrated developments that have not been presented else-
+where, we will address this part in more detail.
+Bundle adjustment is a technique for reconstructing the imaging
+geometry based on a set of tie-points that are used simultaneously in a
+least-squares adjustment. Tie-points are identical (homologous) points
+in the different stereo channels and are identiﬁed by automated image
+matching techniques for HRSC stereo processing (Schmidt, 2008).
+Table 1
+Overview of the main HRSC Level-4 data product speciﬁcations.
+DTM
+Orthoimage
+Product subtypes
+Spheroid DTM
+Panchromatic (nadir), red, green, blue and near-infrared
+channel orthoimages
+Areoid DTM
+Data format
+16 bit, numeric height resolution 1 m
+8 bit
+Spatial resolution
+50 m/75 m/100 m/… depending on quality of image and
+orientation data
+12.5 m/25 m/50 m… depending on ground resolution
+Reference bodies for height
+Spheroid r=3396 km and GMM3-derived equipotential
+surface (areoid DTM)
+n/a
+Ref. body for map projection
+Spheroid r=3396 km
+Spheroid r=3396 km
+Map projection
+Sinusoidal (±85° latitude)
+Sinusoidal (±85° latitude)
+Polar-Stereographic (polar areas)
+Polar-Stereographic (polar areas)
+Fig. 2. Example of a combined HRSC high-resolution data product. Perspective view of
+Valles Marineris, MEX orbit 2039, from HRSC DTM and orthoimage.
+3
+K. Gwinner et al. / Earth and Planetary Science Letters xxx (2009) xxx–xxx
+ARTICLE IN PRESS
+Please cite this article as: Gwinner, K., et al., Topography of Mars from global mapping by HRSC high-resolution digital terrain models and
+orthoimages: Characteristics and performance, Earth Planet. Sci. Lett. (2009), doi:10.1016/j.epsl.2009.11.007
+
+--- Page 4 ---
+Within multi-line bundle adjustment (see Hofmann et al. 1984 and
+Müller 1991 for the original formulation; and Grün & Zhang 2003 and
+Spiegel, 2007a, for more recent work), the exterior orientation
+parameters are modeled as connected 3rd order polynomials based on
+so-called orientation images (points within the imaging sequence for
+which orientation parameters are determined). A Gauss–Markov model
+is then applied to minimize the sum of the squared residuals of the
+observations (tie-point coordinates, camera calibration, exterior orien-
+tation parameters etc.).
+Developments for multi-line bundle adjustment of HRSC data
+based on this approach yielded a signiﬁcant improvement of the
+nominal orientation for most orbits (Spiegel, 2007a). However,
+examination of the resulting orientation data sets indicated, that in
+some cases the time interval between successive orientation images
+was too long for modeling existing high-resolution angular orienta-
+tion errors. As a consequence, observed angular deviations from
+nominal pointing with frequencies of 0.1–0.2 Hz and substantial
+amplitudes up to 10 times HRSC's instantaneous ﬁeld of view (IFOV)
+could not be corrected. If such effects are not modeled, they induce
+inconsistencies between the stereo channels, which affects the
+subsequent modeling of 3D points and thus can degrade resulting
+DTMs or at least hinder the full exploitation of the available stereo
+information. Choosing a shorter time interval between orientation
+images within bundle adjustment has led to improvements, but is not
+available as an operational solution at present.
+Therefore, an extended overall approach to the improvement of
+orientation data has been adopted, that includes 1) bundle adjustment
+results, 2) a new approach for the photogrammetric adjustment, which
+models all observed inconsistencies of the nominal orientation and
+minimizes lateral and vertical offsets between HRSC DTM products and
+the MOLA dataset, and 3) a standardized testing and evaluation
+procedure for selecting the most reliable optimization result. The
+central idea of the revised adjustment process is the exploitation of the
+enormous amount of redundant high-resolution stereo information,
+which HRSC provides by its 5 panchromatic channels for the entire
+image swaths. The goal is the precise correction of the orientation angles
+in steps of 1 Hz (5–10 times higher than the frequencies of the observed
+phenomena), and the minimization of lateral and vertical deviations
+from MOLA by these corrections and by shifting the MEX orbit.
+The newly developed sequential photogrammetric adjustment
+procedure (in the following called SPA) combines global optimization
+techniques with knowledge-based analysis of residuals at multi-ray
+intersections in an automated process. It investigates the highly over-
+determined multi-stereo forward ray intersections for many 3D
+points in order to retrieve robust correction values for the related
+angular orientation parameters continuously over the entire time
+interval of data acquisition within an orbit. In addition, the MOLA DTM
+is used as reference in order to enforce a best absolute ﬁt of the HRSC
+model, both, laterally and vertically. Lateral and vertical displace-
+ments of the HRSC surface model are derived with SPA by analyzing
+the statistics of HRSC deviations to the MOLA data set over the entire
+area. SPA is applied in the same way, i.e. without any case-speciﬁc
+adaptation, to both, available bundle adjustment results (Spiegel,
+2007a,b; Schmidt et al, 2008), as well as nominal MEX HRSC
+orientation data based on nominal pointing and reconstructed orbit
+data. Fig. 3 provides a sketch of the SPA procedure.
+Through a systematic analysis of speciﬁc quality ﬁgures obtained
+during the SPA procedure, the best solution among different
+adjustment results is selected as the ﬁnal adjusted orientation data
+set. These quality measures refer to the internal accuracy as well as
+deviations from MOLA data. Both, quantitative criteria as well as
+qualitative criteria evaluated by visual inspection of parameter maps
+are applied. In particular, the selected orientation data should provide
+– the best internal accuracy (smallest mean forward ray intersection
+error),
+– the most homogeneous spatial distribution of accuracy (e.g.
+elimination of the effects of high-frequency variation of orienta-
+tion angles), and
+– the best ﬁt to MOLA, including the smallest residual along-track
+variation of the vertical deviations from MOLA.
+Orientation data consist of 3 components for position, X,Y,Z, i.e. the
+spacecraft/camera position in the Mars-ﬁxed coordinate system xm,
+ym,zm, and 3 angular pointing components that deﬁne the rotation
+matrix Rm2c(ϕ,ω,κ), i.e. rotations around the ym,xm,zm-axes from the
+Mars-ﬁxed coordinate system to the actual camera system xc,yc,zc.
+These 6 components vary in time during the entire HRSC imaging
+sequence. Within SPA the rotation Rm2c is typically split into two
+subsequent rotations. The ﬁrst rotation Rm2l(ϕ,λ) is a function of the
+local latitude and longitude and deﬁnes the rotation of the Mars-ﬁxed
+coordinate system to a local tangential system xl,yl,zl (with its axes co-
+aligned to the nominal spacecraft navigation and camera axis in the
+nadir-pointing case) at the respective epoch. The second rotation Rl2c
+(pitch,roll,yaw) deﬁnes the rotation of the nominal local tangential
+system around its yl,xl,zl-axis to the actual camera system. Camera
+calibration data (focal length and CCD positions in the focal plane) are
+also integrated in the SPA process, but in contrast to the orientation
+data they are used as ﬁxed values.
+An aspect of prime importance in the conception of SPA is a high
+number of tie-points. We aim at several hundred points for each
+second of the imaging duration (i.e. a few hundred thousand points
+for each entire orbit) in order to achieve high redundancy. Area-based
+multi-image matching is used for this task. Recall that SPA is
+fundamentally based upon this high redundancy, whereas the
+precision of each single point is fairly uncritical.
+Each tie-point consists of up to 5 stereo observations (line/sample
+image coordinates of each stereo channel). In the ﬁrst step of SPA, the
+forward ray intersection error of each point is used as the criterion for
+the optimization of orientation angles. SPA determines optimal
+correction values for the orientation angles by varying pitch, yaw,
+and ﬁnally roll for each tie-point. Recorded as a function of time, these
+values serve to construct correction tables for the orientation angles
+over the entire orbit. Subsequently, the distance of each imaging ray
+from the mean intersection point is investigated and additional
+corrections for the orientation angles are derived from across-track
+and along-track residuals.
+Fig. 3. SPA ﬂow chart. Note that a priori orientation input data may represent nominal
+orientation or orientation already improved by bundle adjustment.
+4
+K. Gwinner et al. / Earth and Planetary Science Letters xxx (2009) xxx–xxx
+ARTICLE IN PRESS
+Please cite this article as: Gwinner, K., et al., Topography of Mars from global mapping by HRSC high-resolution digital terrain models and
+orthoimages: Characteristics and performance, Earth Planet. Sci. Lett. (2009), doi:10.1016/j.epsl.2009.11.007
+
+--- Page 5 ---
+Correction tables within SPA are quantized to 1 Hz. Hence, angular
+variations with frequencies lower than 0.5 Hz can be represented. It is
+not necessary to go beyond this value, since there has been no
+indication of higher frequencies for MEX's true orientation.
+Fig. 4 provides an example of high-frequency variability of
+orientation angles within an orbit and their compensation in the
+different orientation versions.
+Lateral deviations of the HRSC topography models, deﬁned by the
+resulting object point clouds, are determined by a comparison of HRSC
+and MOLA raster DTMs. The HRSC model (gridded to 50/100 m) is
+shifted in sub-raster steps across the over-sampled MOLA data,
+registered to the same grid. Those along-track and across-track shifts
+yielding the smallest overall variance of the height differences at all
+grid points deﬁne the lateral correction values. The vertical offset
+correction value is the median of the ﬁnal height differences (using
+the median, rather than the mean, minimizes the inﬂuence of bad
+points, e.g. caused by atmospheric dust). Lateral and vertical offsets
+are transformed to orbital shifts in the Mars-ﬁxed XYZ coordinate
+frame. Residual local or regional trends within the height differences
+are further minimized by correction of the pitch angle for the
+respective stereo sensor observation times.
+Finally, since for single image tracks the along-track stereo
+geometry does not allow for a robust detection of a general roll tilt
+of the entire HRSC model along the ﬂight direction axis xc without any
+ground reference, an analysis of the residual height differences to
+MOLA is used for the determination and correction of such tilts.
+Across-track shifts, which are implied by these tilt corrections, are
+compensated by the respective orbital shift.
+Because each single optimization step changes the overall
+geometry and has an effect on the remaining parameters, SPA is an
+iterative process. The iteration stops, if within an iteration
+– correction table updates improve the overall multi-ray intersec-
+tion error by less than 1%, and
+– lateral shifts are smaller than 25 m (half of the smallest HRSC DTM
+grid size), and
+– the vertical offset and regional deviations to MOLA are smaller
+than 2 m, and
+– the roll offset correction does not exceed the HRSC IFOV (0.0023°).
+A typical example for the achieved improvement of internal
+consistency and absolute reference to MOLA is given in Fig. 5.
+4.2. Derivation of digital terrain models
+The derivation of HRSC high-resolution DTMs includes the
+generation of a dense set of accurate 3D points, and an interpolation
+technique that allows for the generation of a detailed continuous
+surface representation from these points, where variations in data
+density and precision are being taken into account. Previous
+experiments on generating high-resolution DTMs from HRSC data
+(Gwinner et al., 2009) and a systematic test in comparison with
+alternative approaches to HRSC stereo processing (Heipke et al., 2007)
+have shown that this process has to integrate adaptive processing
+components and efﬁcient internal mechanisms for quality control in
+order to achieve optimal results. Due to the large data volumes
+involved, the procedure also has to work highly automatically. Since
+the methods and techniques applied for DTM generation within the
+systematic HRSC Level-4 processing are reported and analyzed in
+detail in Gwinner et al. (2009), we limit the description of the
+procedure to a short overview here. Subsequently, since they play an
+important role for the matching of HRSC stereo images, we brieﬂy
+consider the effects of compression and image contrast on the 3D
+processing.
+The generation of a dense set of homologous image points for the
+stereo images is based on sub-pixel multi-image matching using
+pyramid-based least-squares correlation after pre-processing by
+adaptive (variable bandwidth) Gaussian low pass ﬁltering of the
+stereo images to reduce the effects of image compression and noise.
+Multi-image matching is organized as a two-stage process. We
+introduce an indirect epipolar constraint by reducing the search
+areas to the actually expected residual parallaxes in rectiﬁed stereo
+images. These are produced by ortho-rectiﬁcation using an interme-
+diate HRSC DTM with low resolution compared to the imagery.
+Image matching typically results in datasets comprising 107 to 108
+points for a single imaging sequence. Reconstruction of 3D coordi-
+nates for these points by least-squares forward intersection is
+followed by blunder elimination (using constraints on the number
+of stereo observations and thresholding of the intersection error), and
+Fig. 4. Forward ray intersection error map, MEX orbit 2075, top: nadir image, ﬂight direction from left to right. Intersection error in meters, and scaled to the HRSC IFOV resolution,
+a) using nominal orientation data, b) using bundle adjustment results, with time interval between successive orientation images being too long, c) using ﬁnal SPA orientation results.
+Black areas: no points because of insufﬁcient image contrast.
+5
+K. Gwinner et al. / Earth and Planetary Science Letters xxx (2009) xxx–xxx
+ARTICLE IN PRESS
+Please cite this article as: Gwinner, K., et al., Topography of Mars from global mapping by HRSC high-resolution digital terrain models and
+orthoimages: Characteristics and performance, Earth Planet. Sci. Lett. (2009), doi:10.1016/j.epsl.2009.11.007
+
+--- Page 6 ---
+ﬁnally by DTM grid interpolation (distance weighted averaging within
+a local interpolation radius). The overall process involves automatic
+procedures in combination with standardized quality checks.
+The variable deﬁnition of the DTM grid spacing (Table 1) is
+motivated by the aim of an approximately constant density of 3D
+points entering a grid cell and a low percentage of data gaps closed by
+interpolation (grid ﬁlling rate), while the quality of the input data is
+variable in terms of mainly ground resolution and image contrast
+(quite often reduced due to atmospheric conditions met by HRSC on
+Mars; see Hoekzema et al., 2009-this issue). A general guideline for
+the selection of the grid spacing is the highest matching resolution
+applied successfully during parameter tests. However, within an
+interactive step, also the spatial distribution and quality of the
+obtained object points are evaluated and contribute to the ﬁnal
+selection of the grid spacing.
+Adaptive, space-variant ﬁltering of HRSC stereo images (Gwinner
+et al., 2005, 2009) allows us to maintain the success rate of image
+correlation close to the rate that could be expected for non-
+compressed data, as suggested by analysis of test images from Mars
+orbit that have not been compressed. For comparison purposes,
+another regular (i.e. compressed) imaging sequence acquired under
+very similar conditions exists (Fig. 6). The matching success rate
+obtained for the compressed data after adaptive ﬁltering was reduced
+by 2% and 8%, for the two most frequently used matching resolutions,
+in comparison to the no-compression dataset. Conversely, compres-
+sion was found to reduce the number of useful point determinations
+by as much as 40 and 30%, at the same resolutions, when no image
+ﬁltering was applied to the compressed images. In addition, the
+deviation of resulting DTM heights from those of the no-compression
+case is reduced by adaptive ﬁltering by about 10% (standard deviation
+of height difference 15.6 m and 13.9 m, respectively). From the
+standard deviation with MOLA DTM heights, the magnitude of the
+residual contribution of compression-related noise to the DTM after
+adaptive ﬁltering can be estimated as few meters. This is a small
+Fig. 5. a) MEX orbit #2258, ﬂight direction from left to right. Top: nadir image, center: forward ray intersection error using nominal orientation, bottom: error using ﬁnal SPA
+orientation results. b) SPA corrections of orientation angles pitch (left), roll (center), and yaw (right) over the complete imaging time interval of MEX orbit 2258. c) Large scale
+deviations of HRSC topography from MOLA, MEX orbit 2258, from interpolated MOLA raster. Top: using nominal orientation, center: using ﬁnal SPA orientation results, bottom:
+deviations at MOLA tracks only. Deviations given in meters and scaled to the mean stereo resolution. Note that SPA results in the removal of wave-shaped, large scale offset variations
+and a laterally homogeneous minimization of vertical residuals.
+6
+K. Gwinner et al. / Earth and Planetary Science Letters xxx (2009) xxx–xxx
+ARTICLE IN PRESS
+Please cite this article as: Gwinner, K., et al., Topography of Mars from global mapping by HRSC high-resolution digital terrain models and
+orthoimages: Characteristics and performance, Earth Planet. Sci. Lett. (2009), doi:10.1016/j.epsl.2009.11.007
+
+--- Page 7 ---
+fraction of the total deviation of the no-compression result from
+MOLA (standard deviation of 22.2 m without compression; 24.9 m for
+the case of compression and adaptive ﬁltering; refer to Section 6 for
+typical deviation values to MOLA).
+Finally, experiments with non-adaptive approaches to image
+ﬁltering (i.e. applying ﬁxed ﬁlter sizes) showed that these may
+degrade the accuracy and reliability of the image matching at high
+resolution signiﬁcantly (Gwinner et al., 2009), because the constant
+ﬁltering bandwidth does not properly account for the high variability
+of textural properties and compression features of HRSC imagery.
+Image matching depends substantially on image contrast. For this
+reason, consideration has to be given to possible limitations of stereo
+processing by image contrast. Note that HRSC is an 8-bit camera, that
+compression also affects the radiometric resolution of the data, and
+that the contrast observed from Mars orbit is often strongly reduced
+by the atmosphere. Fig. 7 presents the mean intersection error that
+was achieved within the stereo analysis of each of more than 200
+imaging sequences of the nominal mission that allowed for deriving
+high-resolution DTMs, as a function of the mean image contrast of the
+respective stereo images. Contrast is deﬁned here as the dynamic
+range per image line, measured in digital numbers (DN), and averaged
+over all image lines of the respective stereo images. Fig. 7 shows that
+sub-pixel accuracy can be achieved for the full range of image
+contrasts that are encountered (see Fig. 2 for comparison with the
+range of stereo ground resolutions). A sharp lower boundary
+delimiting the distribution of the data points is present for contrast
+values of about 30 DN and smaller, but not for contrast values greater
+than 30 DN. This suggests that only for a sub-set of image data
+belonging to this contrast range b30 DN, the contrast was the decisive
+limiting factor for further improvement of sub-pixel accuracy during
+the matching process. From this and from the absence of a general
+correlation between contrast and precision, we can infer that no
+signiﬁcant contrast-related limitation of 3D precision is present, at
+least for contrast values larger than about 30 DN, which is a value that
+is achieved by a large percentage of the datasets.
+4.3. Orthoimages
+HRSC orthoimages are high-level topographic data products
+obtained by rectiﬁcation of the images based on the high-resolution
+DTMs (see Scholten et al., 2005, for more information on this
+differential rectiﬁcation process). For this reason, Level-4 HRSC
+orthoimages are available exclusively for areas covered by HRSC
+high-resolution DTMs. Orthoimages provide the metric properties of a
+map and complement the continuous description of surface topogra-
+phy represented in the DTM. The horizontal resolution of the
+orthoimages (Table 1) is directly linked to the best ground resolution
+within the original image. The rectiﬁcation process makes use of the
+same improved orientation data as the DTM processing and therefore
+the orthoimages are co-registered to MOLA in the same way. The only
+additional pre-processing step for orthoimages with respect to the
+calibrated Level-2 image consists of a histogram-based linear contrast
+stretch. This does not affect the linear metrics of the radiometric
+calibration, and is applied independently for each image channel.
+The improvement of horizontal position accuracy of the Level-4
+orthoimage as compared to the Level-3 image data product (which is
+rectiﬁed using the MOLA 463 m DTM instead of the high-resolution
+HRSC DTM) is illustrated in Fig. 8. For this purpose, the Level-3 image
+was recalculated using the improved orientation data obtained during
+the systematic Level-4 processing. Since the radiometric pre-proces-
+sing and the orientation data applied, therefore, are identical for both
+datasets, the larger color differences visible in Fig. 8 that occur
+prevalently in areas with strong topographic relief can be directly
+related to color seams in the Level-3 image. These are caused by the
+less detailed height information provided by the MOLA data used for
+Fig. 6. Effect of image compression on the DTM results. Left: DTM from compressed data after adaptive ﬁltering of the stereo images (MEX orbit 3047). Center: the same area using
+images without compression (MEX orbit 3036). Right: MOLA DTM for comparison. Note that the completeness of surface representation is nearly unaffected in the compression plus
+ﬁltering case, while the noise on smooth surfaces (well represented in the MOLA DTM) is moderately increased.
+Fig. 7. Contrast as a limiting factor for point precision. Mean intersection error, derived
+for each of more than 200 stereo datasets of the nominal mission that have yielded
+high-resolution DTMs, is plotted vs. the mean image contrast of the respective dataset.
+Note that precision appears to be independent of contrast for values N30 DN, and sub-
+pixel precision is principally possible for all observed contrast values.
+7
+K. Gwinner et al. / Earth and Planetary Science Letters xxx (2009) xxx–xxx
+ARTICLE IN PRESS
+Please cite this article as: Gwinner, K., et al., Topography of Mars from global mapping by HRSC high-resolution digital terrain models and
+orthoimages: Characteristics and performance, Earth Planet. Sci. Lett. (2009), doi:10.1016/j.epsl.2009.11.007
+
+--- Page 8 ---
+the Level-3 processing, which, due to the different observation
+geometries among the color channels, leads to horizontal displace-
+ments on the order of the pixel size.
+5. Overall performance characteristics
+5.1. Adjustment of orientation data
+The datasets considered in the following sections comprise stereo
+imaging sequences for which the processing has been ﬁnished before
+December 2008, i.e. orbit numbers before MEX orbit 2217. The total
+number of HRSC stereo imaging sequences for Mars (excluding limb
+observations) up to MEX orbit 2217 is 737. The results of orientation
+adjustment by SPA for these datasets can be grouped as follows:
+Total number of orbits with SPA results
+676 (92%)
+– using initial values based on nominal orientation:
+264 (39%)
+– using initial values based on bundle adjustment:
+365 (54%)
+– using bundle adjustment results as they are:
+47 (7%)
+Total number of sequences without any SPA results:
+61 (8%)
+Failures to derive SPA results are mainly caused by image
+degradation (e.g. atmospheric dust, strong image compression,
+image gaps, etc). The total number of available bundle adjustment
+results for the same orbit range is 544 (or 74% of all datasets).
+Fig. 9 displays the overall improvement of the forward ray
+intersection error by SPA. On average, SPA increases the internal
+geometric consistency within an orbit by about 34% to pixel or sub-
+pixel accuracy. The mean forward ray intersection error could be
+reduced from 2.47 to 1.64 nadir pixels, or 1.13 to 0.74 mean stereo
+pixels. The mean ground resolution of the nadir channel of all
+processed orbits is 20 m/pixel, the mean stereo resolution is 43 m/
+pixel. Note, that these statistics for the internal accuracy, as well as the
+vertical residuals to MOLA stated below (Fig. 11), have been derived
+from SPA points. As pointed out earlier, these points do not fully
+exploit HRSC's stereo processing potential based on additional
+processing steps as described in Section 4.2. Therefore, accuracy
+statistics will be considered further in the context of the ﬁnal high-
+resolution DTM processing (Section 5.2).
+A further criterion for the success of the SPA process is the orbit-
+wise referencing to the global MOLA data set by the correction of
+lateral and vertical displacements of the resulting HRSC topography
+models. Fig. 10 illustrates the magnitudes of the corrections for all
+datasets. For about 90% of the orbits the corrections are smaller than
+200 m along-track, 200 m across-track, and up to 100 m vertically.
+Other orbits require greater corrections, up to or even more than
+1 km, in particular after safe-mode conditions and when the MEX
+spacecraft is near eclipses. In these cases, tracking of the spacecraft
+signal is impossible or can only provide degraded orbit data as initial
+information.
+Fig. 8. MEX orbit 2039, Valles Marineris. Left: HRSC Level-4 red-green-blue orthoimage. Center: corresponding HRSC Level-3 orthoimage, based on MOLA DTM, and showing color
+seams in steep terrain that result from less detailed height information. Right: difference image of the Level-3 and Level-4 images.
+Fig. 9. Forward ray intersection error of all mapping orbits optimized by SPA, using nominal orientation (gray) and SPA results (black). Error scaled to mean nadir resolution (left) as
+well as to the mean stereo resolution (right) of the respective imaging sequences.
+8
+K. Gwinner et al. / Earth and Planetary Science Letters xxx (2009) xxx–xxx
+ARTICLE IN PRESS
+Please cite this article as: Gwinner, K., et al., Topography of Mars from global mapping by HRSC high-resolution digital terrain models and
+orthoimages: Characteristics and performance, Earth Planet. Sci. Lett. (2009), doi:10.1016/j.epsl.2009.11.007
+
+--- Page 9 ---
+The quality of all optimized HRSC data sets with respect to the
+achieved vertical ﬁt to MOLA is shown in Fig. 11. Note that all residuals
+are generally the result of HRSC and MOLA height uncertainties as
+well as – compared to HRSC – MOLA's low lateral resolution. These
+points will be further investigated based on the high-resolution DTM
+product (Section 6).
+The left part of Fig. 11 shows that, using all SPA points, the nominal
+MEX orientation constitutes a broad peak of residual vertical offsets to
+MOLA, centered at about 12 m. The standard deviation is 140 m. With
+SPA optimization the curve is well centered around zero, and the
+absolute values of vertical differences have also decreased signiﬁ-
+cantly. The residuals over all points now show a standard deviation of
+87 m. In the right part of Fig. 11, we consider the mean vertical
+residuals of each individual imaging sequence separately. The
+standard deviation of 1.9 m suggests that the accuracy of the vertical
+ﬁt to MOLA can be expected to be better than 4 m, i.e. approximately
+10% of the mean stereo resolution, for almost all of the MEX HRSC
+orbits.
+A ﬁnal test of the lateral adjustment to MOLA is performed for each
+imaging sequence on the basis of the ﬁnal HRSC high-resolution DTM.
+The residual shifts determined for all datasets during these tests show
+a standard deviation of 0.53 HRSC grid cells for both line and sample
+direction. Accordingly, the lateral deviations from MOLA can be
+expected to be smaller than the grid spacing of the respective HRSC
+DTM in most cases and smaller than 1.5 grid cells for almost all
+datasets. In length units, we obtain a standard deviation of 62 m for
+the line direction and 56 m for the sample direction (see also
+histograms Fig. 12). Thus, the horizontal uncertainty amounts to a
+fraction of the MOLA grid size. A value smaller than 100 m can be
+expected for most HRSC DTMs. Note that these values are on the order
+of the estimated horizontal uncertainty of the MOLA data product
+itself (b100 m; Neumann et al., 2003). It is also important to note that
+these residual offsets represent the uncertainty of position in terms of
+a rigid translation of the entire HRSC models with respect to an
+external reference (MOLA). They have to be distinguished from the
+internal lateral precision of the HRSC model, which corresponds to the
+precision of the HRSC 3D points and is more accurate in general.
+5.2. DTMs and orthoimages
+The statistics presented in Table 2 report on relevant quality
+parameters related to 3D accuracy, spatial resolution, and coverage, as
+they have been achieved for the entire product dataset. For the sake of
+completeness, also the statistics related to orthoimage resolution are
+reported, although they, by deﬁnition, directly reﬂect the ground
+resolutions of the respective raw images.
+Recall that the constitutive requirements for the generation of
+raster DTM at a given resolution are related to an appropriate density
+and precision of the available 3D points. A measure for HRSC point
+precision is provided by the 3D error derived from the quality of
+multi-ray forward intersection. The average 3D intersection error
+calculated from the mean values of all datasets is 12.9 m (Table 2).
+About 40% of the DTMs have a mean intersection error of better than
+10 m, and about 95% of better than 25 m. Note that lower point
+precision generally has to be compensated by increasing the extent of
+local ﬁltering operations during DTM interpolation and thus by a
+reduction of effective spatial resolution.
+The geometric interpretation of the 3D intersection error is the
+length of a vector deﬁned by the precision values related to each of the
+three coordinates of a global Cartesian reference system. The 3D error
+can therefore be interpreted as an upper limit for the relative error of
+each of the local north, south and height position components.
+Furthermore, results of bundle block adjustment have shown that the
+vertical error component is about 0.9 times the 3D error, and the 2D
+planimetric (x,y) error component is about 0.43 times the 3D error for
+HRSC (Schmidt et al., 2005). Accordingly, the average 3D error
+obtained from all datasets (12.9 m, Table 2) can be translated to a
+mean height error of 11.6 m and a mean planimetric error of 5.5 m.
+The mean 3D intersection error can also serve as an estimate for
+the planimetric precision of the orthoimages. Taking into account that
+up to 5 stereo observations contribute to a 3D point, and thus to its
+error, and using again the relationship between planimetric and total
+3D error from Schmidt et al. (2005), the mean planimetric precision
+for a single stereo sensor is about 95% of the 3D error. Therefore, and
+because the mean off-nadir angle of the sensors used for ortho-
+rectiﬁcation (near-infrared, red, green, blue, panchromatic nadir;
+6.4°) is smaller than the mean off-nadir angle of the ﬁve stereo
+sensors used for point determination (12.7°), the 3D error represents
+also a reliable upper limit for the planimetric precision of HRSC
+orthoimages. This means that the sub-pixel precision achieved with
+respect to the stereo images can be applied also for the Level-4
+orthoimages. Note, however, that signiﬁcant local DTM errors can lead
+to local distortions of orthoimages, as exempliﬁed by color seams in
+the Level-3 image presented in Fig. 8.
+Fig. 10. Distribution of along-track (left), across-track (center), and vertical (right) corrections by SPA.
+Fig. 11. Statistics for vertical adjustment to MOLA. Left: distribution of vertical residuals to MOLA of all HRSC SPA points at MOLA tracks only, before (gray) and after (black)
+optimization. Right: distribution of mean vertical residuals of single orbits after optimization.
+9
+K. Gwinner et al. / Earth and Planetary Science Letters xxx (2009) xxx–xxx
+ARTICLE IN PRESS
+Please cite this article as: Gwinner, K., et al., Topography of Mars from global mapping by HRSC high-resolution digital terrain models and
+orthoimages: Characteristics and performance, Earth Planet. Sci. Lett. (2009), doi:10.1016/j.epsl.2009.11.007
+
+--- Page 10 ---
+Concerning the general limitation of DTM resolution by point
+density, we note from Table 2 that the average number of 3D points
+that fall into one raster cell of the DTM grid is larger than 1.5 for
+almost all datasets (about 5±3 points, on average). Moreover, the
+grid ﬁlling rates (i.e. the fraction of grid cells that actually contain
+measured 3D points) obtained for all DTM datasets are in line with
+previous results based on a smaller dataset (Gwinner et al., 2009) and
+show acceptable minimum values for those DTMs that had to be
+generated from comparatively less dense 3D point sets. About 85% of
+the datasets have a ﬁlling rate of better than 0.5, and 5% of better than
+0.94. These numbers support the appropriateness of the chosen grid
+spacing values (and its variation).
+Note that, although Gwinner et al. (2009) have demonstrated that
+the lateral point coverage is improved signiﬁcantly by applying
+adaptive processing techniques, the occurrence of matching gaps
+cannot be completely avoided (see also Kirk et al., 2006; Heipke et al.,
+2007). Image inspection and comparison with the MOLA DTM suggest
+that the gaps are typically related to environmental conditions and to
+a small number of speciﬁc surface types (see Section 6).
+Since the above mentioned requirements of sufﬁcient point
+density and precision principally tend towards a reduction of DTM
+resolution in favor of increased reliability and coverage, it is of interest
+to consider to what extent the concurrent aim of a detailed terrain
+representation at maximum possible resolution is achieved. Fig. 13
+contrasts the actually adopted grid spacing for each DTM with the
+respective ground resolution, point precision, and point density per
+surface area.
+The grid spacing is seen to follow clear trends towards smaller grid
+spacing for each of these parameters, i.e. for higher ground resolution,
+lower intersection error, and higher point density. The scatter of the
+values is a consequence of the concurrent impact of a number of
+different parameters. As rules-of-thumb, the DTM grid spacing reﬂects
+about two times the mean stereo ground resolution and 7 times the
+intersection error.
+It is also instructive to consider the limiting cases apparent from
+Fig. 13. The upper boundary for the DTM grid size is quite well deﬁned
+with respect to the mean stereo resolution (factor of about 3),
+whereas the lower boundary of the DTM grid spacing is marked by a
+minimum number of points per surface area of approximately 1 point
+per grid cell (e.g. 100 pts/km2 is the lowest point density that was
+used to generate a DTM with 100 m grid spacing). Conversely, the
+lower boundary of the DTM grid spacing is not well deﬁned with
+respect to the mean stereo resolution. This is expected because of the
+occurrence of exceptionally high sub-pixel accuracy (0.1–0.2 mean
+stereo pixels) under speciﬁc conditions (e.g. very clear atmosphere,
+low resolution image sequences with very good contrast and
+orientation data, etc.). Finally, we note that in almost all cases the
+chosen grid spacing is more than 3 times larger than the intersection
+errors. This provides adequate safety against the occurrence of
+misregistered 3D points and complies with common practice in
+Earth remote sensing. On the other hand, the average factor of about 7
+between intersection error and grid spacing is quite high and
+indicates that HRSC DTM generation for Mars is mainly limited by
+point density, not point accuracy.
+Nevertheless, with a number of 1.5 million to 250 million 3D
+points for each dataset, also the point density can be considered to
+achieve a high standard. All DTMs reported here are based on a total of
+more than 18 billion points. Relative to the planet surface, the average
+point number per DTM dataset is 723 pts/km2 (i.e. one point every
+37 m) with a 90% range of between 75 pts/km2 and 1925 pts/km2,
+where lower values correspond to DTMs that have a larger grid
+spacing (Fig. 13). Note, however, that the horizontal distribution of
+these points can show density variations caused by the dependency of
+stereo image matching on image texture.
+By December 2008, high-resolution Level-4 data products for 549
+imaging sequences have been completed. They cover a surface of
+about 30 million km2. For part of the remaining additional imaging
+sequences with valid SPA results, high-resolution processing was
+unsuccessful because of insufﬁcient surface visibility due to atmo-
+spheric phenomena (clouds, dust, haze) or because of signiﬁcant data
+losses producing image gaps. For another part, high-resolution
+processing is currently not ﬁnished.
+Fig. 12. Quality of lateral adjustment to MOLA. Distribution of residual shift estimates in kilometers for along-track (left) and across-track (right) direction.
+Table 2
+Average values and variation of the main quality parameters for the data products of the nominal mission.
+Average
+Standard deviation
+5th percentile
+95th percentile
+Mean intersection error [m]
+12.9
+6.3
+6.2
+25.1
+Sub-pixel accuracy [ ] (relative to mean nadir resol.)
+0.67
+0.23
+0.36
+1.10
+Sub-pixel accuracy [ ] (relative to mean stereo resol.)
+0.30
+0.11
+0.16
+0.53
+DTM 3D point density [points/grid cell]
+4.5
+3.2
+1.5
+9.5
+DTM 3D point density [points/km2]
+723
+688
+75
+1925
+DTM grid filling rate [ ]
+0.70
+0.16
+0.41
+0.94
+DTM grid spacing [m]
+93.1
+37.6
+50
+175
+Orthoimage resolution (panchromatic) [m]
+16.9
+9.7
+12.5
+50
+Orthoimage resolution (color) [m]
+80.8
+38.9
+50
+100
+10
+K. Gwinner et al. / Earth and Planetary Science Letters xxx (2009) xxx–xxx
+ARTICLE IN PRESS
+Please cite this article as: Gwinner, K., et al., Topography of Mars from global mapping by HRSC high-resolution digital terrain models and
+orthoimages: Characteristics and performance, Earth Planet. Sci. Lett. (2009), doi:10.1016/j.epsl.2009.11.007
+
+--- Page 11 ---
+6. Comparison between HRSC high-resolution DTM and MOLA
+After accurate adjustment of the HRSC model to MOLA, the
+remaining deviation of height values between the two dataset can be
+ascribed to measurement uncertainty on both sides as well as
+systematic differences in the representation of topographic detail.
+Comparison of both DTMs offers the possibility to assess additional
+quality aspects of HRSC DTMs. Moreover, it is of interest to investigate
+the complementarities and the speciﬁc strengths of the two datasets —
+in view of the topography of Mars and as representatives of their
+instrument types. Similarly, future comparison with DTM datasets
+derived from Mars Global Surveyor and HiRISE data, which were not
+available for the work presented in this paper, will be of interest.
+Table 3 shows 1) the presence of considerable height differences
+between the MOLA and HRSC DTM datasets in terms of standard
+deviation and mean absolute value, and 2) the signiﬁcant reduction of
+the standard deviation of the differences when data gaps ﬁlled by
+interpolation (in both datasets) are excluded.
+Following Heipke et al. (2007), the deviation of heights along MOLA
+measurement tracks can be interpreted as an error measure for HRSC
+DTMs. By this, we ﬁnd a mean uncertainty of height in terms of standard
+deviation of 39.7 m over all HRSC DTM products, with a spread
+(standard deviation) of 26.5 m among the different HRSC datasets,
+and with a range of about 16.2 m to 81.2 m (Table 3). Excluding data
+gaps from the analysis also for the case of the HRSC DTM leads to a
+general reduction of the deviation, e.g. an average standard deviation of
+34.5 m. Both values are about twice as high as would be expected from
+the internal estimates of the height error of the two datasets (both about
+10 m), a discrepancy that has been also observed by comparison of
+height proﬁles derived from MOLA and HRSC (Gwinner et al., 2009). In
+difference maps, larger height differences are often associated with
+prominent relief features (Fig. 14, right side), suggesting that there are
+in fact systematic differences in resolving relief elements characterized
+by high terrain curvature. Sampling effects due to the considerable
+difference in spatial resolution between the two data sets might explain
+this discrepancy. The distance between single MOLA shots is 300 m
+along-track, the nominal spot diameter is 168 m. Testing this hypothesis
+would have to rely on suitable external high-resolution DTM.
+Table 3 and Fig. 15 indicate evident differences between HRSC and
+MOLA with respect to the interpolation of gap areas. Measurement
+gaps, i.e. gaps in the lateral coverage of the surface by height
+measurements, are present for both datasets. They reﬂect the
+completeness of the surface reconstruction by the speciﬁc technique.
+Relative to the case where all measurement gaps are excluded (i.e.
+masked out) during the determination of height differences, the
+height deviation increases by about 15%, when interpolation areas of
+HRSC (but not MOLA) are included. In the opposite case, when
+interpolation areas of MOLA (but not HRSC) are included, there is a
+larger increase by about 40%, and the values approach the case where
+interpolation areas are included in the analysis on both sides. The local
+presence of large height differences between MOLA and HRSC, which
+occur in elongated areas aligned with the measurement tracks of
+MOLA, has been described elsewhere (Heipke et al., 2007; Gwinner
+et al., 2009; see also Fig. 14).
+The increased deviation related to MOLA gaps depends on latitude
+(Fig. 15). It continuously increases from the poles (where MOLA
+tracks show very dense spacing) towards the equator. For latitudes
+within ±20°, the deviation is almost doubled due to the frequent
+occurrence of large MOLA gaps.
+Fig. 13. Achieved DTM grid spacing as a function of ground resolution, intersection
+error, and point density.
+Table 3
+Height difference MOLA-HRSC, and its dependency on interpolated measurement gaps.
+Measure of deviation
+Standard
+deviation
+Mean absolute
+value of difference
+Average, 5th and 95th percentiles
+Height differences MOLA tracks vs. HRSC DTM
+(without gaps ﬁlling by interpolation) [m]
+34.5
+24.1
+16.2/58.7
+11.2/43.7
+Height differences MOLA tracks vs. HRSC DTM [m]
+39.7
+24.9
+16.2/81.2
+11.2/48.7
+Height differences MOLA DTM vs. HRSC DTM
+(without gaps ﬁlling by interpolation) [m]
+48.3
+29.9
+20.7/91.2
+13.7/56.2
+Height differences MOLA DTM vs. HRSC DTM [m]
+49.9
+29.2
+21.2/93.7
+13.7/53.7
+First numbers are average values for all datasets, followed by respective minimum and
+maximum values (5th and 95th percentiles). “Track-to-no gaps ﬁll” case: differences at
+MOLA measurement tracks only, and excluding HRSC data gaps. “Grid-to-no gaps ﬁll case”:
+differences between both DTM, excluding HRSC data gaps. “Track-to-grid” case: differences
+at MOLA measurement tracks only, without excluding HRSC data gaps ﬁlled by interpolation.
+“Grid-to-grid” case: differences of the DTM without excluding any data gaps.
+11
+K. Gwinner et al. / Earth and Planetary Science Letters xxx (2009) xxx–xxx
+ARTICLE IN PRESS
+Please cite this article as: Gwinner, K., et al., Topography of Mars from global mapping by HRSC high-resolution digital terrain models and
+orthoimages: Characteristics and performance, Earth Planet. Sci. Lett. (2009), doi:10.1016/j.epsl.2009.11.007
+
+--- Page 12 ---
+Conversely, the deviation that can be related to interpolated areas in
+HRSC is smaller and does not follow any apparent latitude dependency.
+This allows us to conclude that interpolation areas have a comparatively
+small impact on the quality of HRSC DTMs, although these in factcontain
+a not negligible fraction of such areas (see Section 5.2).
+The low interpolation errors observed for the HRSC DTMs suggest
+that a) typical gap areas, by their nature, are smooth enough to allow
+for low interpolation errors, which in fact frequently accords with
+visual inspection, and that b) the immediate vicinity of the gaps is
+usually well represented in the DTM by accurate height values, which
+Fig. 14. Difference maps between MOLA and HRSC DTMs, with and without excluding data gaps. Left side: shaded relief maps for comparison. Note that the persisting height
+deviation observed when measurement gaps on both sides are excluded can be often associated with prominent relief elements such as narrow valleys and ridges, etc. Ophir Labes,
+Valles Marineris, south is up.
+Fig. 15. Standard deviation of height difference MOLA-HRSC vs. latitude of the center of the HRSC DTM. “Track-to-no gaps ﬁll” case: differences at MOLA measurement tracks only,
+and excluding HRSC data gaps. “Grid-to-no gaps ﬁll case”: differences between both DTM, excluding HRSC data gaps. “Track-to-grid” case: differences at MOLA measurement tracks
+only, without excluding HRSC data gaps. “Grid-to-grid” case: differences of the DTM without excluding any data gaps.
+12
+K. Gwinner et al. / Earth and Planetary Science Letters xxx (2009) xxx–xxx
+ARTICLE IN PRESS
+Please cite this article as: Gwinner, K., et al., Topography of Mars from global mapping by HRSC high-resolution digital terrain models and
+orthoimages: Characteristics and performance, Earth Planet. Sci. Lett. (2009), doi:10.1016/j.epsl.2009.11.007
+
+--- Page 13 ---
+allows for well-constrained interpolation. The results also suggest that
+height proﬁles (i.e. cross sections) that do not follow MOLA tracks
+should usually be more reliable when extracted from HRSC DTM,
+except for high latitude areas (latitudes beyond about ±70°).
+Comparison with MOLA for many datasets suggests that there are
+mainly just two surface types that frequently show poor image
+texture causing failures of matching HRSC images from Mars orbit:
+level (or very smoothly undulated), dust covered terrain, and bare ice
+surfaces. On the contrary, many of the examples of HRSC DTM gaps are
+found to be related (or also related), to particular environmental
+conditions, in particular to local atmospheric phenomena (clouds,
+dust, strong haze), solar elevation angles close to 90°, or deep cast
+shadows (met quite rarely, however, because of the scattering
+properties of the atmosphere of Mars). In contrast, the observation
+gaps in the MOLA dataset are primarily related to the orbit tracks and
+are thus of a more systematic nature.
+7. Summary and conclusions
+In this paper we have reported on the achievements of the HRSC
+experiment onboard Mars Express relative to one of its major aims, the
+mapping of the topography of Mars by high-resolution DTMs and
+orthoimages. A mapping program for the exploitation of the complete
+HRSC dataset has been initiated, and has allowed by now to provide high-
+resolution products for most of the datasets acquired in the nominal
+mission.
+Adjusted orientation data are derived from a priori camera
+position and pointing within a speciﬁcally designed photogrammetric
+optimization process for each HRSC imaging sequence. A priori
+information can consist of nominal orientation and reconstructed
+orbit data, or of results from bundle adjustment. Pointing information
+is continuously optimized so that the multi-ray intersection error over
+the entire imaging sequence is minimized and a consistent 3D model
+is achieved. Applying the techniques for image ﬁltering, point
+determination at high resolution and for quality control involved in
+the DTM processing, a mean precision of the resulting 3D points better
+than the mean resolution of the stereo images was achieved for all
+product datasets. On average, we obtain a sub-pixel precision of 30%
+of the mean stereo image resolution. 90% of the datasets are within
+the range 15 to 50% of the mean stereo image resolution. This
+corresponds to an average intersection error of 12.6 m, where 95% of
+the datasets yield values better than 25 m, and 5% of the imaging
+sequences provide mean intersection errors of better than 6 m.
+While the intersection error provides a measure for the internal
+consistency of the HRSC models, the absolute accuracy of their
+registration in global coordinates is related to the quality of the
+adjustment to MOLA data. Absolute referencing of the HRSC models
+by adjustment to MOLA data is achieved by lateral and vertical offset
+corrections of the orbit position parameters, as well as by eliminating
+across-track tilt angle biases. The horizontal co-registration with
+MOLA is typically better than 100 m for most HRSC DTMs. This is a
+fraction of the highest resolution MOLA grid size. Vertical offsets are
+reduced to less than 4 m for almost all orbits. The applied sequential
+photogrammetric adjustment procedure (SPA) succeeds to detect,
+model and correct for high-frequency angular variations of the
+platform attitude based on the stereo pushbroom imagery.
+The generation of high-resolution DTM from HRSC data, which has
+been the subject of extensive experimental studies during the recent
+years, yields results that are in line with the characteristics expected
+from the previous results, and partly surpass these. HRSC high-
+resolution DTMs are typically generated at a grid size of 2 times the
+mean ground resolution of the stereo images (up to 50 m DTM grid
+spacing). The grid size is usually not larger than 3 times the mean
+ground resolution of the images. The DTM grid spacing is also generally
+more than 3 times larger than the precision of the integrated 3D points
+(reported above), which provides high safety against misregistration of
+height values. Statistically, every grid cell of a HRSC DTM is based on at
+least one measured 3D point. Speciﬁc tests have also shown that the
+precision of the 3D points is only marginally limited by the available
+image contrast of HRSC images (compressed 8-bit data). Moreover, the
+major effects of compression can be effectively compensated by
+appropriate adaptive processing techniques.
+Comparing DTMs obtained from laser altimetry data and from stereo
+camera data, we conclude that the speciﬁc strengths of the two
+approaches complement each other distinctively, which conﬁrms the
+current trend to include both instrument types on planetary exploration
+missions. While HRSC stereo images allow for a more detailed terrain
+reconstruction that is degraded by interpolation artifacts on measure-
+ment gaps to a surprisingly low degree (contribution of about 15% to the
+overall height uncertainty), altimetry proﬁles provide a straightforward
+means to obtain global shape parameters that can serve as a basis for co-
+registering other data and deriving global reference systems. Since on
+Mars morphological features typically contribute much stronger to the
+visible surface diversity in the panchromatic spectral range of HRSC than
+albedo variations that are not connected to morphological changes, we
+note also a duality related to relief strength, where HRSC DTM usually
+provides a more accurate representation of areas with strong relief,
+whereas the MOLA DTM is often more reliable on level and very smooth
+terrain as well as on ice surfaces. In the former areas, altimeter heights
+themselves are even more accurate than for sloping terrain, while stereo
+image correlation may fail completely if no albedo features or
+morphologic features are visible.
+Further complementarity is related to latitude. It mainly derives
+from the close spacing of orbit ground tracks at high latitudes, and
+thus high reliability of the MOLA DTM. In the equatorial zone, MOLA is
+affected by marked interpolation artifacts that are well represented in
+differences with HRSC heights. On the contrary, the best HRSC results
+in terms of resolution, point precision and point density are most
+often (but not exclusively) found at lower latitudes, while the same
+parameters show a moderate tendency towards lower precision and
+coverage for higher latitudes.
+In view of the global mapping of Mars by HRSC, we conclude that
+the necessary techniques are well established and the existing results
+are encouraging. The goal of global coverage by HRSC high-level data
+products of course depends on the further progression of the MEX
+mission. Only few regions on Mars have shown very unfavorable
+imaging conditions repeatedly in the past.
+HRSC represents an example of a novel camera type applied in
+planetary science. Its built-in stereo capability most naturally leads the
+focus of interest towards the derived DTM as the primary result of HRSC
+3Dprocessing. However, due to their high quality of co-registrationwith
+the corresponding DTM, also the orthoimages provide a novel data
+source that enables new opportunities for 3D analysis in planetary
+remote sensing.
+Acknowledgements
+We gratefully acknowledge the support of the participants of the
+HRSC experiment teams of DLR and Freie Universität Berlin, and of the
+Mars Express Project teams at ESTEC and ESOC. We also thank for the
+thoughtful comments by the members of the HRSC Co-Investigator
+Team, in particular by Marita Wählisch, as well as by an anonymous
+reviewer and by Gabriele Cremonese.
+References
+Albertz, J., Attwenger, M., Barrett, J., Casley, S., Dorninger, P., Dorrer, E., Ebner, H.,
+Gehrke, S., Giese, B., Gwinner, K., Heipke, C., Howington-Kraus, E., Kirk, R.L.,
+Lehmann, H., Mayer, H., Muller, J.-P., Oberst, J., Ostrovskiy, A., Renter, J., Reznik, S.,
+Schmidt, R., Scholten, F., Spiegel, M., Wählisch, M., Neukum, G., the HRSC Co-
+Investigator Team, 2005. HRSC on Mars Express — photogrammetric and
+cartographic research. Photogramm. Eng. Remote Sensing 71 (10), 1153–1166.
+Greeley, R., Batson, R.M., 1990. Planetary Mapping: Cambridge Planetary Sciences
+Series, vol. 6.
+13
+K. Gwinner et al. / Earth and Planetary Science Letters xxx (2009) xxx–xxx
+ARTICLE IN PRESS
+Please cite this article as: Gwinner, K., et al., Topography of Mars from global mapping by HRSC high-resolution digital terrain models and
+orthoimages: Characteristics and performance, Earth Planet. Sci. Lett. (2009), doi:10.1016/j.epsl.2009.11.007
+
+--- Page 14 ---
+Grün, A., Zhang, L., 2003. Sensor modelling for aerial triangulation with three-line-
+scanner (TLS) imagery. Photogramm. Fernerkund. Geoinf. 2, 85–98.
+Gwinner, K., Scholten, F., Spiegel, M., Schmidt, R., Giese, B., Oberst, J., Jaumann, R.,
+Neukum, G., the HRSC Co-Investigator Team, 2005. Hochauﬂösende digitale
+Geländemodelle auf der Grundlage von Mars Express HRSC-Daten. Photogramm.
+Fernerkund. Geoinf. 5, 387–394.
+Gwinner, K., Roatsch, T., Matz, K.-D., Scholten, F., Elgner, S., Preusker, F., Oberst, J.,
+Jaumann, R., Heather, D., Neukum, G., 2008. Archival stereo data products of the
+HRSC experiment onboard Mars Express. 39th Lunar and Planetary Science
+Conference, Houston, Texas (Lunar and Planetary Institute), abstract #2373.
+Gwinner, K., Scholten, F., Spiegel, M., Schmidt, R., Giese, B., Oberst, J., Oberst, J., Jaumann,
+R., Heipke, C., Neukum, G., 2009. Derivation and validation of high-resolution
+digital terrain models from Mars Express HRSC-data. Photogrammetric Engineer-
+ing and Remote Sensing 75 (9), 1127–1142.
+Heipke, C., Schmidt, R., Brand, R., Oberst, J., Neukum, G., the HRSC Co-Investigator Team,
+2004. Performance of automatic tie point extraction using HRSC imagery of the
+Mars Express Mission. Int. Arch. Photogramm. Remote Sens. XXXV (B4), 846–851.
+Heipke, C., Oberst, J., Albertz, J., Attwenger, M., Dorninger, P., Dorrer, E., Ewe, M., Gehrke,
+S., Gwinner, K., Hirschmüller, H., Kim, J.R., Kirk, R.L., Mayer, H., Muller, J.-P.,
+Rengarajan, R., Rentsch, M., Schmidt, R., Scholten, F., Shan, J., Spiegel, M., Wählisch,
+M., Neukum, G., 2007. Evaluating planetary digital terrain models — the HRSC DTM
+test. Planet. Space Sci. 55, 2173–2191.
+Hoekzema, N., Garcia Comas, M., Petrova, E., Stenzel, O.J., Gwinner, K., Keller, H.U.,
+2009-this issue. The dust-scale height of the Martian atmosphere in Valles
+Marineris from HRSC stereo images.
+Hofmann, O., Nave, P., Ebner, H., 1984. DPS — a digital photogrammetric system for
+producing digital elevation models and orthophotos by means of linear array
+scanner imagery. Photogramm. Eng. Remote Sens. 50 (8), 1135–1142.
+Jaumann, R., Neukum, G., Behnke, T., Duxbury, T.C., Flohrer, J., v. Gasselt, S., Giese, B.,
+Gwinner, K., Hauber, E., Hoffmann, H., Köhler, U., Matz, K.-D., McCord, T.B., Mertens,
+V., Oberst, J., Pischel, R., Reiss, D., Roatsch, T., Saiger, P., Scholten, F., Schwarz, G.,
+Stephan, K., Wählisch, M., 2007. The High Resolution Stereo Camera (HRSC)
+experiment on Mars Express: instrument aspects and experiment conduct from
+interplanetary cruise through the nominal mission. Planet. Space Sci. 55, 928–952.
+Kirk, R.L., Howington-Kraus, E., Redding, B., Galuszka, D., Hare, T.M., Archinal, B.A.,
+Soderblom, L.A., Barrett, J.M., 2003. High-resolution topomapping of candidate MER
+landing sites with Mars Orbiter Camera narrow-angle images. J. Geophys. Res. 108
+(E12). doi:10.1029/2003JE002131.
+Kirk, R.L., Howington-Kraus, E., Galuszka, D., Redding, B., Hare, T.M., 2006. Topomap-
+ping of Mars with HRSC images, ISIS, and a commercial stereo workstation. Int.
+Arch. Photogramm. Remote Sens. 36 (4A), 293–298.
+Kirk, R.L., Howington-Kraus, E., Rosiek, M.R., Cook, D., Anderson, J., Becker, K., Archinal,
+B.A., Keszthelyi, L., King, R., McEwen, A.S., HiRISE Team, 2007. Ultrahigh resolution
+topographic mapping of Mars with HiRISE stereo images: methods and ﬁrst results.
+38th Lunar and Planetary Science Conference, Houston, Texas (Lunar and Planetary
+Institute), Abstract #1428.
+Malin, M.C, Edgett, K.S., 2001. Mars global surveyor Mars Orbiter Camera: interplan-
+etary cruise through primary mission. J. Geophys. Res. 106 (E10), 23429–23570.
+McEwen, A., Eliason, E., Bergstrom, J., Bridges, N., Hansen, C., Delamere, W., Grant, J.,
+Gulick, V., Herkenhoff, K., Keszthelyi, L., Kirk, R., Mellon, M., Squyres, S., Thomas, N.,
+Weitz, C., 2007. Mars Reconnaissance Orbiters's high resolution imaging science
+experiment (HiRISE). J. Geophys. Res. 112, E05S02. doi:10.1029/2005JE002605.
+Müller, F., 1991. Photogrammetrische Punktbestimmung mit Bilddaten digitaler
+Dreizeilenkameras. Ph.D. thesis, Deutsche Geodätische Kommission Ser. C, No.
+372, Verlag der Bayerischen Akademie der Wissenschaften, Munich, Germany.
+Neukum, G., Jaumann, R., HRSC Co-Investigator Team, 2004. HRSC: the High Resolution
+Stereo Camera of Mars Express, ESA Special Publications, SP-1240.
+Neumann, G.A., Lemoine, F.G., Smith, D.E., Zuber, M.T., 2003. The Mars Orbiter Laser
+Altimeter archive: ﬁnal precision experiment data record release and status of
+radiometry. 34th Lunar and Planetary Science Conference, Houston, Texas (Lunar
+and Planetary Institute), Abstract #1778.
+Schmidt, R., Heipke, C., Brand, R., Neukum, G., 2005. Automatische Bestimmung von
+Verknüpfungspunkten in HRSC-Bildern der Mars Express Mission. Photogramm.
+Fernerkund. Geoinf. 5, 373–379.
+Schmidt, R., 2008: Automatische Bestimmung von Verknüpfungspunkten für HRSC-Bilder
+der Mars Express-Mission. Ph.D. thesis, DGK C, No. 623, Verlag der Bayerischen
+Akademie der Wissenschaften, Munich, Germany. (http://129.187.165.2/typo3_dgk/
+docs/c-623.pdf).
+Schmidt, R., Spiegel, M., Heipke, C., Dumke, A., Neukum, G., HRSC Co-Investigator Team,
+2008. Operational determination of tie points and bundle adjustment of HRSC
+images of the Mars Express Mission. Int. Arch. Photogramm. Remote Sens. XXXVII
+(B4), 1025–1030.
+Scholten, F., Gwinner, K., 2004. Operational parallel processing in digital photogram-
+metry — strategy and results using different multi-line cameras. Int. Arch.
+Photogramm. Remote Sens. XXXV (B2), 408–413.
+Scholten, F., Gwinner, K., Wewel, F., 2002. Angewandte digitale photogrammetrie mit
+der HRSC. Photogramm. Fernerkund. Geoinf. 5, 317–332.
+Scholten, F., Gwinner, K., Roatsch, T., Matz, K.-D., Wählisch, M., Giese, B., Oberst, J.,
+Jaumann, R., Neukum, G., the HRSC Co-Investigator Team, 2005. Mars Express HRSC
+data processing — methods and operational aspects. Photogramm. Eng. Remote
+Sens. 71 (10), 1143–1152.
+Smith, D.E., Zuber, M.T., Frey, H.V., Garvin, J.B., Head, J.W., 2001. Mars Orbiter Laser
+Altimeter (MOLA): experiment summary after the ﬁrst year of global mapping of
+Mars. J. Geophys. Res. 106 (E10), 23689–23722.
+Snyder, C.W., 1979. The extended mission of Viking. J. Geophys. Res. 84, 7917–7933.
+Spiegel, M., 2007a. Kombinierte Ausgleichung der Mars Express HRSC Zeilenbilddaten
+und des Mars Global Surveyor MOLA DGM. Ph.D. thesis, DGK C, No. 610, Verlag der
+Bayerischen Akademie der Wissenschaften, Munich, Germany (http://129.187.165.2/
+typo3_dgk/docs/c-610.pdf).
+Spiegel, M., 2007b. Improvement of interior and exterior orientation of the three line
+camera HRSC with a simultaneous adjustment. Int. Arch. Photogramm. Remote
+Sens. 36 (3/W49B), 161–166.
+Thornhill, G.D., Rothery, D.A., Murray, J.B., Cook, A.C., Day, T., Muller, J.-P., Iliffe, J.C.,
+1993. Topography of Apollinaris Patera and Ma'adim Vallis: automated extraction
+of digital elevation models. J. Geophys. Res. 98 (E12), 23581–23587.
+Wu, S., Doyle, F., 1990. Topographic mapping. In: Greeley, R., Batson, R.M. (Eds.),
+Planetary Mapping: Cambridge Planetary Sciences Series, 6, pp. 169–207.
+Yoon, J.S., Shan, J., 2005. Combined adjustment of MOC stereo imagery and MOLA
+altimetry data. Photogramm. Eng. Remote Sens. 71 (10), 1179–1186.
+14
+K. Gwinner et al. / Earth and Planetary Science Letters xxx (2009) xxx–xxx
+ARTICLE IN PRESS
+Please cite this article as: Gwinner, K., et al., Topography of Mars from global mapping by HRSC high-resolution digital terrain models and
+orthoimages: Characteristics and performance, Earth Planet. Sci. Lett. (2009), doi:10.1016/j.epsl.2009.11.007

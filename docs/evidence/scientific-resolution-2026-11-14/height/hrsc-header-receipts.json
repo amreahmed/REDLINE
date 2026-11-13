@@ -1,0 +1,26 @@
+[
+  {
+    "file": "hrsc-dt5-header.bin",
+    "requestedUrl": "https://hrscteam.dlr.de/public/data/HMC30/MC13E/HMC_13E10_dt5.tif",
+    "finalUrl": "https://hrscteam.dlr.de/public/data/HMC30/MC13E/HMC_13E10_dt5.tif",
+    "startedAt": "2026-11-13T22:19:58.376Z",
+    "retrievedAt": "2026-11-13T22:19:59.086Z",
+    "status": 206,
+    "contentType": "image/tiff",
+    "contentRange": "bytes 0-65535/638313017",
+    "bytes": 65536,
+    "sha256": "8f014bd054082983db6aa4aee40f41fa99dbfe4d036324dda133941b9305cd8b"
+  },
+  {
+    "file": "hrsc-da5-header.bin",
+    "requestedUrl": "https://hrscteam.dlr.de/public/data/HMC30/MC13E/HMC_13E10_da5.tif",
+    "finalUrl": "https://hrscteam.dlr.de/public/data/HMC30/MC13E/HMC_13E10_da5.tif",
+    "startedAt": "2026-11-13T22:19:58.432Z",
+    "retrievedAt": "2026-11-13T22:19:59.003Z",
+    "status": 206,
+    "contentType": "image/tiff",
+    "contentRange": "bytes 0-65535/638313147",
+    "bytes": 65536,
+    "sha256": "9faf65867ef7a6e594985e640da8b50660c8706ecf7a09ffd2f9de72ecc052bd"
+  }
+]

@@ -1,0 +1,332 @@
+{
+  "purpose": "Same-geographic-position nearest native HRSC reference cells; different resolution and source lineage, not an exact pixel registration or per-cell uncertainty.",
+  "units": "m",
+  "hrscHorizontalSphereRadiusM": 3396000,
+  "sourceHorizontalSphereRadiusM": 3396190,
+  "probes": [
+    {
+      "coordinate": [
+        77.33676327999098,
+        18.523302286887112
+      ],
+      "ctxSourceCell": [
+        586,
+        522
+      ],
+      "ctxNativeM": -2377.045654296875,
+      "probeKind": "pinned native fixture",
+      "dt5": {
+        "row": 13605,
+        "column": 11661,
+        "valueM": -3869,
+        "centerLonLat": [
+          77.3366486811079,
+          18.52327335907335
+        ]
+      },
+      "da5": {
+        "row": 13605,
+        "column": 11661,
+        "valueM": -2365,
+        "centerLonLat": [
+          77.3366486811079,
+          18.52327335907335
+        ]
+      },
+      "hrscMeanings": {
+        "heightAbove3396190SphereM": -4059,
+        "areoidRadiusM": 3394496,
+        "ctxMinusAreoidHeightM": -12.045654296875,
+        "ctxMinusHeightAbove3396190SphereM": 1681.954345703125
+      }
+    },
+    {
+      "coordinate": [
+        77.42280336476735,
+        18.523302286887112
+      ],
+      "ctxSourceCell": [
+        586,
+        777
+      ],
+      "ctxNativeM": -2530.604248046875,
+      "probeKind": "pinned native fixture",
+      "dt5": {
+        "row": 13605,
+        "column": 11763,
+        "valueM": -4009,
+        "centerLonLat": [
+          77.42269357966994,
+          18.52327335907335
+        ]
+      },
+      "da5": {
+        "row": 13605,
+        "column": 11763,
+        "valueM": -2504,
+        "centerLonLat": [
+          77.42269357966994,
+          18.52327335907335
+        ]
+      },
+      "hrscMeanings": {
+        "heightAbove3396190SphereM": -4199,
+        "areoidRadiusM": 3394495,
+        "ctxMinusAreoidHeightM": -26.604248046875,
+        "ctxMinusHeightAbove3396190SphereM": 1668.395751953125
+      }
+    },
+    {
+      "coordinate": [
+        77.42280336476735,
+        18.437262202110723
+      ],
+      "ctxSourceCell": [
+        841,
+        777
+      ],
+      "ctxNativeM": -2540.54541015625,
+      "probeKind": "pinned native fixture",
+      "dt5": {
+        "row": 13707,
+        "column": 11763,
+        "valueM": -4034,
+        "centerLonLat": [
+          77.42269357966994,
+          18.4372284605113
+        ]
+      },
+      "da5": {
+        "row": 13707,
+        "column": 11763,
+        "valueM": -2544,
+        "centerLonLat": [
+          77.42269357966994,
+          18.4372284605113
+        ]
+      },
+      "hrscMeanings": {
+        "heightAbove3396190SphereM": -4224,
+        "areoidRadiusM": 3394510,
+        "ctxMinusAreoidHeightM": 3.45458984375,
+        "ctxMinusHeightAbove3396190SphereM": 1683.45458984375
+      }
+    },
+    {
+      "coordinate": [
+        77.33676327999098,
+        18.437262202110723
+      ],
+      "ctxSourceCell": [
+        841,
+        522
+      ],
+      "ctxNativeM": -2374.85400390625,
+      "probeKind": "pinned native fixture",
+      "dt5": {
+        "row": 13707,
+        "column": 11661,
+        "valueM": -3866,
+        "centerLonLat": [
+          77.3366486811079,
+          18.4372284605113
+        ]
+      },
+      "da5": {
+        "row": 13707,
+        "column": 11661,
+        "valueM": -2377,
+        "centerLonLat": [
+          77.3366486811079,
+          18.4372284605113
+        ]
+      },
+      "hrscMeanings": {
+        "heightAbove3396190SphereM": -4056,
+        "areoidRadiusM": 3394511,
+        "ctxMinusAreoidHeightM": 2.14599609375,
+        "ctxMinusHeightAbove3396190SphereM": 1681.14599609375
+      }
+    },
+    {
+      "coordinate": [
+        77.37995202842774,
+        18.48011353845034
+      ],
+      "ctxSourceCell": [
+        714,
+        650
+      ],
+      "ctxNativeM": -2489.27978515625,
+      "probeKind": "pinned native fixture",
+      "dt5": {
+        "row": 13656,
+        "column": 11712,
+        "valueM": -3921,
+        "centerLonLat": [
+          77.37967113038891,
+          18.480250909792325
+        ]
+      },
+      "da5": {
+        "row": 13656,
+        "column": 11712,
+        "valueM": -2424,
+        "centerLonLat": [
+          77.37967113038891,
+          18.480250909792325
+        ]
+      },
+      "hrscMeanings": {
+        "heightAbove3396190SphereM": -4111,
+        "areoidRadiusM": 3394503,
+        "ctxMinusAreoidHeightM": -65.27978515625,
+        "ctxMinusHeightAbove3396190SphereM": 1621.72021484375
+      }
+    },
+    {
+      "coordinate": [
+        77.3563331816264,
+        18.501707912668724
+      ],
+      "ctxSourceCell": [
+        650,
+        580
+      ],
+      "ctxNativeM": -2401.48681640625,
+      "probeKind": "pinned native fixture",
+      "dt5": {
+        "row": 13631,
+        "column": 11684,
+        "valueM": -3900,
+        "centerLonLat": [
+          77.3560509621562,
+          18.501340345714393
+        ]
+      },
+      "da5": {
+        "row": 13631,
+        "column": 11684,
+        "valueM": -2400,
+        "centerLonLat": [
+          77.3560509621562,
+          18.501340345714393
+        ]
+      },
+      "hrscMeanings": {
+        "heightAbove3396190SphereM": -4090,
+        "areoidRadiusM": 3394500,
+        "ctxMinusAreoidHeightM": -1.48681640625,
+        "ctxMinusHeightAbove3396190SphereM": 1688.51318359375
+      }
+    },
+    {
+      "coordinate": [
+        77.40694499620072,
+        18.45109609809438
+      ],
+      "ctxSourceCell": [
+        800,
+        730
+      ],
+      "ctxNativeM": -2542.51025390625,
+      "probeKind": "pinned native fixture",
+      "dt5": {
+        "row": 13691,
+        "column": 11744,
+        "valueM": -4017,
+        "centerLonLat": [
+          77.40666560836918,
+          18.450725699501422
+        ]
+      },
+      "da5": {
+        "row": 13691,
+        "column": 11744,
+        "valueM": -2525,
+        "centerLonLat": [
+          77.40666560836918,
+          18.450725699501422
+        ]
+      },
+      "hrscMeanings": {
+        "heightAbove3396190SphereM": -4207,
+        "areoidRadiusM": 3394508,
+        "ctxMinusAreoidHeightM": -17.51025390625,
+        "ctxMinusHeightAbove3396190SphereM": 1664.48974609375
+      }
+    },
+    {
+      "coordinate": [
+        77.36308142356964,
+        18.51857851752684
+      ],
+      "ctxSourceCell": [
+        600,
+        600
+      ],
+      "ctxNativeM": -2400.57861328125,
+      "probeKind": "additional native-grid audit location; not a landmark control",
+      "dt5": {
+        "row": 13611,
+        "column": 11692,
+        "valueM": -3906,
+        "centerLonLat": [
+          77.36279958165126,
+          18.51821189445205
+        ]
+      },
+      "da5": {
+        "row": 13611,
+        "column": 11692,
+        "valueM": -2403,
+        "centerLonLat": [
+          77.36279958165126,
+          18.51821189445205
+        ]
+      },
+      "hrscMeanings": {
+        "heightAbove3396190SphereM": -4096,
+        "areoidRadiusM": 3394497,
+        "ctxMinusAreoidHeightM": 2.42138671875,
+        "ctxMinusHeightAbove3396190SphereM": 1695.42138671875
+      }
+    },
+    {
+      "coordinate": [
+        77.4170673591156,
+        18.44434785615113
+      ],
+      "ctxSourceCell": [
+        820,
+        760
+      ],
+      "ctxNativeM": -2551.061279296875,
+      "probeKind": "additional native-grid audit location; not a landmark control",
+      "dt5": {
+        "row": 13699,
+        "column": 11756,
+        "valueM": -4032,
+        "centerLonLat": [
+          77.41678853761178,
+          18.443977080006363
+        ]
+      },
+      "da5": {
+        "row": 13699,
+        "column": 11756,
+        "valueM": -2541,
+        "centerLonLat": [
+          77.41678853761178,
+          18.443977080006363
+        ]
+      },
+      "hrscMeanings": {
+        "heightAbove3396190SphereM": -4222,
+        "areoidRadiusM": 3394509,
+        "ctxMinusAreoidHeightM": -10.061279296875,
+        "ctxMinusHeightAbove3396190SphereM": 1670.938720703125
+      }
+    }
+  ]
+}

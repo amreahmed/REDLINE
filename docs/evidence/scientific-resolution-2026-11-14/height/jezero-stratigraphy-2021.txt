@@ -1,0 +1,1341 @@
+Abstract  On February 18, 2021 NASA's Perseverance rover landed in Jezero crater, located at the 
+northwestern edge of the Isidis basin on Mars. The uppermost surface of the present-day crater floor is 
+dominated by a distinct geologic assemblage previously referred to as the dark-toned floor. It consists of 
+a smooth, dark-toned unit overlying and variably covering light-toned, roughly eroded deposits showing 
+evidence of discrete layers. In this study, we investigated the stratigraphic relations between materials 
+that comprise this assemblage, the main western delta deposit, as well as isolated mesas located east 
+of the main delta body that potentially represent delta remnants. A more detailed classification and 
+differentiation of crater floor units in Jezero and determination of their relative ages is vital for the 
+understanding of the geologic evolution of the crater system, and determination of the potential timeline 
+and environments of habitability. We have investigated unit contacts using topographic profiles and 
+DEMs as well as the distribution of small craters and fractures on the youngest portions of the crater floor. 
+Our results indicate that at least some of the deltaic deposition in Jezero postdates emplacement of the 
+uppermost surface of the crater floor assemblage. The inferred age of the floor assemblage can therefore 
+help to constrain the timing of the Jezero fluviolacustrine system, wherein at least some lake activity 
+postdates the age of the uppermost crater floor. We present hypotheses that can be tested by Perseverance 
+and can be used to advance our knowledge of the geologic evolution of the area.
+Plain Language Summary  On February 18, 2021 NASA's Perseverance rover landed in 
+Jezero crater on Mars. In the past, the crater was filled with water, forming a lake, and in the western 
+part of the crater an ancient delta is preserved. Part of the present-day crater floor has been interpreted 
+to represent a lava flow that was deposited after the lake dried out, meaning that the floor unit would be 
+younger than the western delta. In order to understand how the Jezero crater lake has developed over 
+time, including the potential timeline and environments of habitability, it is necessary to work out the 
+relations between the geologic units in Jezero crater. In this work, we have analyzed orbital images of 
+Jezero crater and reveal how the crater floor and delta deposits relate to each other in time. Our results 
+show that at least some of the deltaic deposits in Jezero overlie the youngest crater floor unit(s). It is 
+therefore possible to learn broadly when fluvial activity in the crater has been effective from the age of the 
+crater floor. Our work presents hypotheses that can be tested by Perseverance to advance our knowledge 
+of how the area has evolved geologically over time.
+HOLM-ALWMARK ET AL.
+© 2021. The Authors.
+This is an open access article under 
+the terms of the Creative Commons 
+Attribution-NonCommercial-NoDerivs 
+License, which permits use and 
+distribution in any medium, provided 
+the original work is properly cited, 
+the use is non-commercial and no 
+modifications or adaptations are made.
+Stratigraphic Relationships in Jezero Crater, Mars: 
+Constraints on the Timing of Fluvial-Lacustrine Activity 
+From Orbital Observations
+S. Holm-Alwmark1,2,3 , K. M. Kinch1 , M. D. Hansen1, S. Shahrzad4, K. Svennevig5 , 
+W. J. Abbey6, R. B. Anderson7 , F. J. Calef III6 , S. Gupta8, E. Hauber9 , 
+B. H. N. Horgan10 , L. C. Kah11 , J. Knade9, N. B. Miklusicak11, K. M. Stack6, V. Z. Sun6 , 
+J. D. Tarnas6, and C. Quantin-Nataf12
+1Niels Bohr Institute, University of Copenhagen, Copenhagen, Denmark, 2Natural History Museum Denmark, 
+University of Copenhagen, Copenhagen, Denmark, 3Department of Geology, Lund University, Lund, Sweden, 
+4School of Earth and Environment, University of Leeds, Leeds, UK, 5Geological Survey of Denmark and Greenland, 
+Copenhagen, Denmark, 6Jet Propulsion Laboratory, California Institute of Technology, Pasadena, CA, USA, 7U.S. 
+Geological Survey, Astrogeology Center, Flagstaff, AZ, USA, 8Department of Earth Science and Engineering, 
+Imperial College London, London, UK, 9German Aerospace Center, Institute of Planetary Research, Berlin, 
+Germany, 10Department of Earth, Atmospheric, and Planetary Sciences, Purdue University, West Lafayette, IN, USA, 
+11Department of Earth and Planetary Sciences, University of Tennessee-Knoxville, Knoxville, TN, USA, 12Laboratoire de 
+Géologie de Lyon -Terre, Planètes, Environnement, University of Lyon, Lyon, France
+Key Points:
+•  We have studied stratigraphic 
+relations between geologic units in 
+Jezero crater for determination of 
+relative age relations in the crater
+•  Topographic profiles and digital 
+elevation models indicate that 
+the western delta is on top of the 
+youngest crater floor unit(s)
+•  We thus place constraints on the 
+timeline of fluvial-lacustrine activity 
+in Jezero crater
+Correspondence to:
+S. Holm-Alwmark,
+sanna.alwmark@nbi.ku.dk
+Citation:
+Holm-Alwmark, S., Kinch, K. M.,  
+Hansen, M. D., Shahrzad, S.,  
+Svennevig, K., Abbey, W. J., et al. (2021). 
+Stratigraphic relationships in Jezero 
+crater, Mars: Constraints on the timing 
+of fluvial-lacustrine activity from orbital 
+observations. Journal of Geophysical 
+Research: Planets, 126, e2021JE006840. 
+https://doi.org/10.1029/2021JE006840
+Received 23 JAN 2021
+Accepted 8 JUN 2021
+10.1029/2021JE006840
+RESEARCH ARTICLE
+1 of 31
+Journal of Geophysical Research: Planets
+1. Introduction
+Jezero crater is the landing site for the Mars 2020 Perseverance rover mission. The Perseverance rover, 
+which landed on Mars on February 18, represents the first step in a multimission program to collect, cache, 
+and return samples from Mars to Earth (Farley et al.,  2020). The crater is ∼45 km in diameter and located 
+at the northwestern edge of the Isidis basin, in the Nili Fossae region of Mars (at 18.4°N, 77.7°E; Figure  1; 
+e.g., Bramble et al., 2017; Ehlmann, Mustard, Fassett, et al., 2008; Ehlmann, Mustard, Murchie, et al., 2008; 
+Fassett & Head, 2005; Goudge et al., 2015, 2017; Scheller & Ehlmann, 2020; Stack et al., 2020). The presence 
+of an inlet valley entering the crater and an outlet valley exiting the crater, together with the preservation 
+of a fluvial deltaic sedimentary body (the western delta) at the mouth of the inlet valley implies a pro -
+longed history of lacustrine activity within the crater (Figures 1c and 2; e.g., Fassett & Head, 2005; Goudge 
+HOLM-ALWMARK ET AL.
+10.1029/2021JE006840
+2 of 31
+Figure 1. (a) Regional overview map with MOLA elevation data (elevation in meters) of the area where Jezero crater is located (credit USGS Astrogeology 
+Science Center, Goddard Space Flight Center, NASA; https://planetarymaps.usgs.gov/mosaic/Mars_MGS_MOLA_ClrShade_merge_global_463m.tif). Elevation 
+in meters. (b) Color-coded elevation image of Jezero crater based on HRSC DEM and corresponding orthoimages. All elevations (in m) below Mars's areoid. (c) 
+HiRISE image mosaic close-up of the study area (Fergason, Galuszka, et al., 2020) with the Perseverance landing site marked with a star.
+Journal of Geophysical Research: Planets
+et al., 2015, 2017; Mangold et al., 2020; Salese, Kleinhans, et al., 2020; Schon et al., 2012; Stack et al., 2020). 
+Additional sedimentary fan deposits present in the northern part of the crater are highly eroded and it is 
+presently not clear whether those deposits are alluvial or deltaic in origin, to what extent deposits are linked 
+to the western delta, or to what extent they may represent a discrete delta linked to a northern river inlet 
+(e.g., Goudge et al., 2015; Horgan et al., 2020; Salese, Kleinhans, et al., 2020; Schon et al., 2012).
+Understanding the timing of deposition of sedimentary units in Jezero crater is vital to the understanding 
+of both hydrological and geologic history of the region, with broader implications for the entire planet. 
+Jezero crater contains a series of geomorphic/geologic units, including discrete, identifiable subunits, that 
+are distributed across the original crater floor (Table  1 and Figure  2; Stack et al.,  2020). Investigation of 
+contacts relations and the relative elevation of these discrete subunits permits a first-order hypothesis of 
+the organization of the stratigraphy—and therefore the relative age—of the subunits (Stack et al.,  2020). 
+Identified units include three morphologically distinct rough fractured units [crater floor fractured 1 (Cf-f-
+1), crater floor fractured 2 (Cf-f-2), and crater floor fractured rough (Cf-fr)], and an undifferentiated smooth 
+unit (Us; Figures  2 and  3). Us is a surficial unit that is interpreted to mantle bedrock in the map area of 
+Stack et al. (2020), e.g., on the crater rim, within and on the western delta in Jezero, and on the crater floor. 
+HOLM-ALWMARK ET AL.
+10.1029/2021JE006840
+3 of 31
+Figure 2. (a) Photogeologic map showing bedrock units and surficial cover of the undifferentiated smooth (Us) unit on the crater floor fractured rough unit 
+in the study area in Jezero crater. Note that the Us unit is a surficial unit that mantles bedrock in the map area of Stack et al. (2020), e.g., on the crater rim, on 
+the western delta, and on the crater floor but that this map only shows the extent of the most prominent cover of Us on the Cf-fr unit, as this is the focus of this 
+study. Note the higher-standing blue features, possible delta remnants, here referred to as delta-associated remnant deposits, to the east of the main delta body. 
+Units discussed in this paper are Cf-f-1: crater floor fractured 1, Cf-f-2: crater floor fractured 2, Cf-fr: crater floor fractured rough, Us: undifferentiated smooth. 
+Figure modified after Stack et al. (2020). Us unit extent after Sun and Stack (2020b). (b–d) Surface expression of the Cf-f-1, Cf-fr, and Us units in Jezero crater. 
+HiRISE image mosaic base (Fergason, Galuszka, et al., 2020). HiRISE, High Resolution Imaging Science Experiment.
+Journal of Geophysical Research: Planets
+Although Us units mapped by Stack et al. (2020) generally have uniform textures and tones (at map scale), 
+these deposits were likely not all deposited at the same time, are not comprised of the same material or de-
+posited in the same environment (Stack et al., 2020). Relations observed during detailed mapping suggests 
+that, in all cases, deposition/formation of the Us unit postdates deposition of the rough fractured units (Kah 
+et al., 2020; Stack et al., 2020; Warner, Schuyler, et al., 2020); the stratigraphic relationships among differen-
+tiated rough fractured units, however, remains poorly constrained.
+In previous studies, units identified here as Cf-fr and Us had been interpreted as a single, highly crater-re -
+taining unit (e.g., “volcanic floor unit,” “dark-toned mafic floor;” Goudge et al., 2015; Shahrzad et al., 2019), 
+which has allowed previous authors to determine its age through crater counting. Although crater-counting 
+ages have varied widely, from 3.45 Ga (Goudge et al., 2015) to 1.4 Ga (Schon et al., 2012), more recent works 
+(Shahrzad et al.,  2019; Warner, Schuyler, et al.,  2020) provide strong arguments for an early Amazonian 
+age [2.6 ± 0.5 Ga; Shahrzad et al.,  2019, 2.3 ± 0.2 Ga; Warner, Schuyler, et al., 2020; see also discussion in 
+Marchi (2021)]. In light of current mapping, we should remember that the 2.6 and 2.3 Ga dates represents 
+crater counting on a surface composed of two stratigraphically distinct subunits. That is, the Us is inter -
+preted as a dark mantling unit that variably drapes the surface of the light-toned Cf-fr unit by Stack et al. 
+(2020; Figures 2 and 3). Warner, Schuyler, et al. (2020b) interpreted the smooth upper subunit of the Cf-fr 
+[corresponding to Us in Stack et al. (2020)] in their study area in the center of the crater as a regolith. Crater 
+counting on in the central area of Jezero (Warner, Schuyler, et al.,  2020) indicate that the surface is not at 
+equilibrium with surface processes, as 20–70 m craters are being eroded faster than they are produced, and 
+recent work (Quantin-Nataf et al.,  2021) highlights spatial variation in the distribution of craters on the 
+floor unit in Jezero, of the sizes that were counted by Shahrzad et al. ( 2019). Quantin-Nataf et al. ( 2021) 
+showed that the youngest crater floor unit has a complex history of cover and later exhumation, complicat-
+ing interpretation of the crater statistics on the surface.
+The aim of this study is to characterize the stratigraphic relations between the youngest crater floor units 
+in Jezero crater (Cf-fr and Us), the western delta stratigraphic units, and a set of possible remnant deposits 
+forming isolated mesas close to the western delta scarp that may represent lacustrine or deltaic deposits as-
+sociated with the main delta (Figure 2). According to the interpretation that the dark floor unit (Cf-fr + Us) 
+represents the youngest deposits (Goudge et al.,  2015) inside of the crater, their emplacement age would 
+also define the timing of when fluvial activity inside Jezero crater ceased. We show how our new observa -
+tions can be used to place more robust temporal constraints on geologic events that characterize Jezero cra-
+ter. Finally, investigating specific features that modify units that make up the Jezero crater floor (e.g., crater 
+density distribution and the distribution of fractures), we extend our understanding of the origin of crater 
+floor units, and present detailed hypotheses that can be tested using the Perseverance rover.
+2. Background and Geological Setting
+The timing and nature of fluvial activity on Mars have been intensely debated (Kite,  2019; Palumbo 
+et al.,  2020, and references therein). Studies of a variety of Martian valley networks, e.g., Craddock and 
+Howard (2002), Howard, Craddock and Moore, (2005), Hoke and Hynek (2009), Hynek et al. (2010), Davis 
+et al. (2016), and Salese, McMahon, et al. (2020) strongly suggest an active hydrologic cycle with prolonged 
+periods of precipitation, suggesting a different climate on Mars in the past. Although the nature of the 
+HOLM-ALWMARK ET AL.
+10.1029/2021JE006840
+4 of 31
+Unit (this work; after Stack 
+et al., 2020)
+Schon 
+et al. (2012) Goudge et al. (2015) Shahrzad et al. (2019) Horgan et al. (2020)
+Sun and 
+Stack (2020b)
+Warner, 
+Schuyler, 
+et al. (2020)
+Undifferentiated smooth (US)
+Volcanic unit Volcanic floor unit Dark-toned (mafic) floor Mafic floor
+Dark mantle Regolith
+Crater floor fractured rough 
+(Cf-fr)
+Jezero floor unit Mafic floor 
+unit
+Crater floor fractured 1 (Cf-f-1)
+Basin fill Light-toned floor unit Light-toned floor unit Light-toned floor unit
+Lower etched —
+Crater floor fractured 2 (Cf-f-2) Upper etched —
+Table 1 
+Nomenclature of Crater-Fill Units in Jezero Used in This Study and Comparison With That Used in Examples of Older LiteratureJournal of Geophysical Research: Planets
+ancient Mars climate remains contested, e.g., Carr and Head ( 2003), and Howard et al. ( 2005), have pro-
+posed that rapid melting of snow or ice could produce discharges consistent with valley network morpholo-
+gies in the absence of a more traditional, warm fluvial system. Grau Galofre et al. (2020) recently suggested 
+that the majority of valley networks are a result of combined surface and subglacial runoff, relaxing the 
+requirement for warm surface conditions on the wet, ancient Mars. Regardless, such observations require 
+an atmosphere on Mars capable of maintaining an active hydrologic cycle that included water that was 
+stable on the surface.
+Jezero crater is inferred to have maintained a standing body of water associated with a time of ongoing 
+fluvial activity on Mars (Fassett & Head, 2008b). During this period, fluvial input along the western, and po-
+tentially northern, margins of the crater supplied drainage of surficial fluids from the surrounding regions 
+HOLM-ALWMARK ET AL.
+10.1029/2021JE006840
+5 of 31
+Figure 3. Close-up on HiRISE images (Fergason, Galuszka, et al., 2020) showing surface expression of the Us and Cf-fr units in Jezero crater, with decreasing 
+mantling (or presence of) the Us unit (highlighted by direction of arrows). (a) Smooth texture of the Us unit. (b) Transition from smooth Us-dominated surface 
+to heavily mantled Cf-fr unit. (c) Mantled. (d) Less mantling of Cf-fr unit with rough texture and crater retaining. (e) Rough texture of Cf-fr and with relatively 
+poor retention of craters and crater rims. North is up in all images. HiRISE, High Resolution Imaging Science Experiment.
+Journal of Geophysical Research: Planets
+(e.g., Mangold et al., 2020; Salese, Kleinhans, et al., 2020, and references therein); an outlet channel on the 
+eastern margin of Jezero may have resulted in episodic draining of the crater lake (Holo & Kite, 2017; Salese 
+et al., 2019; Salese, Kleinhans, et al., 2020). The duration of deltaic deposition and the persistence of lacus -
+trine activity in Jezero have been estimated to have occurred over several years to millions of years (Fassett 
+& Head, 2005; Goudge et al.,  2015; Lapôtre & Ielpi,  2020; Mangold et al.,  2020; Salese et al.,  2019; Salese, 
+Kleinhans, et al., 2020; Schon et al., 2012). In terms of the timing of aqueous activity, Mangold et al. (2020) 
+were unable to definitely determine an age of delta formation, but concluded that the latest delta-related 
+deposits formed during a period of reactivation of the lower sections of the fluvial valley that fed the west -
+ern delta in Jezero, and that this reactivation occurred sometime in the Late Noachian to Hesperian. Flu -
+vial activity that carved the older, upper part of the valley likely commenced during the Middle Noachian 
+(Mangold et al., 2020). Such an interpretation is consistent with observations from Irwin, Craddock, How -
+ard (2005), and Howard, Craddock & Moore (2005), Fassett and Head (2008a), Hoke and Hynek (2009), and 
+Mangold et al. (2020), who hypothesized that the majority of fluvial activity (and therefore paleolacustrine 
+activity; Fassett & Head, 2008b) on Mars peaked around the Noachian-Hesperian boundary, and terminated 
+soon thereafter. In the time since fluvial and lacustrine activity ended, most paleolake deposits, including 
+those within Jezero, have experienced significant geological modification by processes that may include vol-
+canism (Schon et al., 2012, and references therein), aeolian deposition, and erosion. Prior to the upcoming 
+in-situ investigation of Jezero crater by the Perseverance rover and potential sample return, critical analysis 
+of stratigraphic relationships in the surficial units of Jezero crater provides the best mechanism for building 
+a stratigraphic and temporal framework.
+The age of Jezero crater can be bracketed by the formation of the Isidis basin (3.96 ± 0.01 Ga; Werner, 2008) 
+and the emplacement of a regional olivine-carbonate unit that is inferred to be younger than Jezero crater 
+as it overlaps at least the northern rim of Jezero (3.82 ± 0.07 Ga; Goudge et al.,  2015; Mandon et al., 2020), 
+which places it in the Noachian period (see also Ehlmann et  al.,  2009; Goudge et  al.,  2015). The crater 
+presently has a shallow depth profile compared to fresh Martian impact craters (Garvin et al.,  2003; Schon 
+et al., 2012). The shallow depth profile suggests substantial crater-fill deposited on top of the original cra -
+ter floor, which has an estimated thickness of about 1 km (Ehlmann, Mustard, Fassett, et al.,  2008; Schon 
+et al., 2012). These deposits would be expected to include a combination of different materials, including 
+impact ejecta, volcanic deposits, lacustrine sediments, alluvial sediments, and aeolian deposits that cover 
+the primary impactites (if not previously removed by erosion) and the entire central uplift of the crater. 
+Using scaling relationships presented by Whitehead et al. ( 2010), the height of the central uplift of Jezero 
+can be estimated to 0.33 km (if crater diameter is 45 km), although it should be noted that central uplift 
+height relative to diameter of crater has been shown to vary greatly on Mars [see, e.g., discussion in Calef 
+et al. (2016)].
+2.1. Crater-Fill Units
+In this study, we follow the naming scheme defined by Stack et al. ( 2020; see also Figure  2). Table 1 sum-
+marizes the relevant units with the names used in this study, as well as names employed by a number of 
+previous authors.
+All crater-fill units in Jezero crater may have a more complicated history than would be inferred by con -
+tinuous deposition inside of the crater following the law of superposition. Following evidence from other 
+craters (e.g., Gale crater, Malin & Edgett,  2000; Watkins et al.,  2016), deposits may have been buried and 
+then later exhumed (see also Quantin-Nataf et al., 2021; Warner, Schuyler, et al., 2020), and the stratigraphic 
+succession in the crater is likely to contain a number of local to regional unconformities (Stack et al., 2020). 
+It is also possible that the units that can be observed from orbit may represent complex lateral interfingering 
+facies rather than traditional “layer cake” deposition (Stack et al.,  2020). The units that are recognized as 
+exposed Jezero crater floor are described below.
+2.1.1. Crater Floor Fractured 1 and 2
+Units Cf-f-1 and Cf-f-2 (Figure  2) are massive, light-toned units with meter-scale fractures. The contact 
+between the two is gradational. Stack et al. (2020) distinguishes the topographically higher Cf-f-2 from the 
+lower Cf-f-1 primarily by elevation, but also by the presence of small bumps and ridges that gives Cf-f-2 
+HOLM-ALWMARK ET AL.
+10.1029/2021JE006840
+6 of 31Journal of Geophysical Research: Planets
+a “pock-marked” texture. Previous publications (Goudge et  al.,  2015; 
+Horgan et al.,  2020), group the two units together as “light-toned floor” 
+or “basin fill” (Schon et al.,  2012). Cf-f-2 has textural and morphologi -
+cal similarities with the Cf-fr (described below), but Cf-f-2 is significant -
+ly less crater retaining than Cf-fr, at all crater scales. Spectrally, the Cf-f 
+units both display olivine and carbonate signatures, and so they are not 
+separated into two units by Horgan et al. (2020). The Cf-f units have been 
+interpreted as either a crater-filling material that is unique to Jezero by 
+Schon et al. (2012), or as part of the regionally extensive carbonate-bear-
+ing and olivine-bearing unit that is prevalent throughout the Isidis-Nili 
+Fossae region (Brown et al., 2020; Goudge et al., 2012; Kremer et al., 2019; 
+Mandon et al., 2020). Given that spectral signatures of the Cf-f units are 
+broadly similar to those in the regional olivine-carbonate unit in the Jeze-
+ro-area (Horgan et  al.,  2020), this indicates that there are two possible 
+scenarios for the units (Horgan et al., 2020): either that they represent re-
+worked sediments from the regional olivine-carbonate unit, or that they 
+are the local expression of this regional unit.
+2.1.2. Crater Floor Fractured Rough
+Cf-fr is a crater-retaining unit interpreted as bedrock that is more resistant 
+to erosion, and contains fractures at two distinct scales (fracture lengths 
+of meters-and of several hundreds of meters; Stack et al., 2020). This unit 
+has lobate margins and surrounds current and formerly higher-standing 
+outcrops of Cf-f-1. It covers much of the Jezero crater floor, and is partial-
+ly overlain by the Us unit, and appears to be underlain by Cf-f-1 (Stack 
+et al.,  2020). Previous workers have generally interpreted Cf-fr and the 
+overlying smooth mantle (Us) as the same unit with the names “dark-
+toned floor,” “mafic floor,” and “volcanic floor” all employed by different 
+authors (e.g., Goudge et al., 2015; Horgan et al., 2020; Schon et al., 2012; 
+Shahrzad et al.,  2019). The dark tone that has been associated with this 
+unit, and led to the name “dark-toned floor, mafic floor” etc. (Table 1), is 
+explained by Stack et al. (2020) as likely reflecting partial cover by a dark-
+er mantling unit (Us). Spectrally, the uppermost crater floor units (i.e., 
+both Cf-fr and Us) are characterized by a high-calcium pyroxene (HCP) 
+signal (Figure 4a; Horgan et al.,  2020). The HCP signal is interpreted to 
+be derived from the unit itself, in contrast to olivine-enriched streaks of 
+sediment extending across the unit that are likely derived from the Cf-f 
+units and low-calcium pyroxene (LCP) signal (Figure 4b) associated with 
+deposition of material eroded from the western delta and delta-associated 
+remnant deposits (Horgan et al., 2020).
+There are a variety of depositional mechanisms proposed for the Cf-fr 
+unit; igneous (e.g., Goudge et al., 2012, 2015; Schon et al., 2012) as well as 
+fluvial or aeolian sedimentary (Kah et al., 2020; Stack et al., 2020). Several 
+authors (e.g., Goudge et al., 2015; Horgan et al., 2020; Sun & Stack, 2020b) 
+have suggested a potential correlation between the crater floor unit and a 
+unit mapped outside of the crater, the Sun and Stack (2020b) Nili plains 2 
+unit and Bramble et al.'s (2017) mafic capping unit. If the Cf-fr unit is re-
+lated to the geographically widespread Nili Planum capping unit (see also 
+Hundal et al., 2020; Sun & Stack, 2020a, 2020b), the unit spans too large 
+a range in elevation for a volcanic flow to be a viable emplacement mechanism, whereas airfall deposition 
+could explain the range in elevation (Sun & Stack, 2020a, 2020b).
+A volcanic source for the Cf-fr (e.g., Goudge et al., 2012, 2015; Schon et al., 2012) was proposed based on the 
+observations that the unit is topographically smooth and has a low regional slope; has lobate margins, high 
+HOLM-ALWMARK ET AL.
+10.1029/2021JE006840
+7 of 31
+Figure 4. (a) Mafic spectral signatures from primary minerals showing 
+mineralogical differences between the delta, the Cf-fr + Us, and Cf-f units. 
+After Horgan et al. (2020). Green = low-calcium pyroxene, blue = high-
+calcium pyroxene, red = olivine and Fe-carbonates. Frame is the same 
+as in Figure 2b. (b) Distribution of spectral signals consistent with 
+low-calcium pyroxene in the western delta, crater floor units, and delta-
+associated deposits (blue is low, red is high). (c) THEMIS-derived thermal 
+inertia map of part of Jezero crater. Note the general low thermal inertia 
+of the area close to the western delta edge, where the Us unit is most 
+prominent (see Fergason et al., 2006).
+Journal of Geophysical Research: Planets
+thermal inertia, a high capacity to retain small craters; and has CRISM spectral signatures are consistent 
+with volcanic rocks on Mars (Goudge et al.,  2015; Horgan et al.,  2020). Horgan et al. ( 2020) hypothesized 
+that, if the unit is a locally sourced volcanic lava flow or tephra, the source could be either dikes and fissures 
+in the crater floor that are covered by the unit or an enigmatic conical and cratered edifice located adjacent 
+to the southeastern rim of Jezero. Crater retention and morphometry on the Cf-fr unit(s) indicate that the 
+rock is resistant (Warner, Schuyler, et al., 2020). Warner, Schuyler, et al. (2020) compared their observations 
+from Jezero with the resistant basaltic lava plain at the InSight landing site showing important similarities 
+in crater morphology and time scales of erosion between the units, with one notable difference, the thick -
+ness of the regolith, and suggested that the Cf-fr unit is possibly igneous rock.
+Other authors have suggested that a lack of textures expected from volcanic units on Mars such as platy 
+textures or ridges (Golder, Miklusicak, et al., 2020), a variety of intermixed surface textures, the embayment 
+of topographically high regions of crater fill, and enhanced mantling in regional topographic lows are more 
+consistent with a different mode of formation, such as a low viscosity flow or by airfall/aeolian deposition 
+[Golder, Miklusicak, et al., 2020; Grant & Schultz,  1990; Horgan et al.,  2020; Kah et al.,  2020; see also dis -
+cussion in Stack et al. ( 2020)], and that many of these features may arise from a relation with dark-toned 
+mantling material (i.e., the Us). It should be noted that the specific comparative textures lacking on the Cf-fr 
+unit used in the analysis by Golder, Miklusicak, et al. (2020) are associated with Amazonian-aged lava flows 
+(e.g., Golder, Burr & Kattenhorn,  2020; Jaeger et al.,  2010; Keszthelyi et al.,  2000), and primary volcanic 
+textures are not expected to be preserved over time scales that are relevant here. In fact, Golder, Miklusicak, 
+et al. (2020) noted that the textures on the unit were more similar to Hesperian to Noachian aged units in 
+the Eridania basin. At the InSight landing site only vague flow boundaries, and no primary surface textures 
+are associated with the basaltic material (the formation age of the smooth terrain covering the InSight land-
+ing ellipse is Early Amazonian; Warner, Grant, et al., 2020).
+2.1.3. Undifferentiated Smooth Surface Cover
+Us is a dark-toned mantling unit that overlies and drapes the Cf-fr unit. The unit is characterized by a rel -
+atively low thermal inertia (Figure  4c; see also Stack et al.,  2020). The Us unit has a smooth upper surface 
+and a complex relation with Cf-fr. Closer to the western delta deposit, the Us unit is inferred to be thicker, 
+as the surface has a smoother appearance (Figures 2 and 3) that lacks lighter-toned rough textures and large 
+craters (Stack et al., 2020). Stack et al. (2020) hypothesize that the unit may be a residual deposit from ash, 
+aeolian, or residual accumulation of sand, pebbles, and cobbles left after deflation of the landscape. Accord-
+ing to the hypothesis of Warner, Schuyler, et al. (2020), that the Us is a regolith at least in their investigated 
+area in the center of Jezero, enhanced mantling in topographic lows could result from enhanced preserva -
+tion of a smooth regolith in regions that are protected from wind deflation. According to this hypothesis, 
+the larger-scale transition from smoother to rougher texture is caused by incomplete regolith deflation or 
+exhumation of the Cf-fr unit. Areas of the Us unit with the smoothest appearance stand out as exhibiting 
+clear CRISM spectral signatures of HCP (Figure  4a). Because HCP signatures are rare on the delta and ab -
+sent in the Cf-f units, this may suggest a distinct source for Us materials (Horgan et al., 2020). There is also 
+a low-calcium pyroxene (LCP) spectral signature on the Us, especially prominent on the area closest to the 
+delta scarp (Figure 4b).
+Variations in surface textures on the Cf-fr and Us units are most obvious when it comes to smoothness (Fig-
+ures 2 and 3; see also, e.g., Golder, Miklusicak, et al., 2020; Kah et al., 2020; Stack et al., 2020). The smooth 
+texture is most prominent close to the edge of the western delta, and the smooth regions grade into regions 
+that expose progressively more of the underlying unit (Figure  3; see, e.g., Golder, Miklusicak, et al.,  2020; 
+Kah et al., 2020). Craters from the underlying unit are argued to be variably draped and show up as “ghost 
+craters” as the Us gets thicker by Kah et al. ( 2020). Warner, Schuyler, et al. (2020), on the other hand, de -
+scribe these as degraded features resulting from regolith development and aeolian infilling. Increased expo-
+sure of Cf-f1/2 unit is shown by CRISM signatures displaying stronger olivine signal and weaker pyroxene 
+signals (Horgan et al., 2020; see also Figure 4a).
+In this study, we analyzed features of the Cf-fr and Us units. Although these two units are clearly distinct, 
+ambiguities regarding the complex relation between these units and the nature of both units hinder broad-
+scale interpretation. For discussion purposes, we follow earlier work (e.g., Goudge et al.,  2015; Shahrzad 
+HOLM-ALWMARK ET AL.
+10.1029/2021JE006840
+8 of 31Journal of Geophysical Research: Planets
+et al.,  2019) and often lump these together. When discussed as a single composite unit, we refer to these 
+units as “the youngest crater floor units.”
+2.2. Western Delta Deposit
+The western delta in Jezero crater has been interpreted as a river delta deposit that built out into a lake that 
+existed in the crater (Ehlmann, Mustard, Fassett, et al.,  2008; Fassett & Head,  2005; Goudge et al.,  2017; 
+Schon et al., 2012). The deposit has a fan-like plan view geometry (Fassett & Head, 2005); its surface displays 
+pervasive layering and cross-cutting linear ridges that are interpreted as fluvial channel-belt deposits on its 
+surface (Goudge et al., 2018). The eastern edge of the western delta deposit forms a distinct erosional scarp 
+(Fassett & Head, 2005; Schon et al., 2012) that exposes internal layering within its walls. Schon et al. (2012) 
+estimate that the outer third of the delta complex, specifically delta front deposition and the prodelta de -
+posits that are potentially composed of the highest concentration of clay-size particles, have been largely 
+removed by aeolian erosion. Lakeward of the present-day delta edge, there are also numerous isolated hills 
+and mesas that have been interpreted as either remnants of delta deposits or isolated deposits of lacustrine 
+strata that were deposited at the same time as primary deltaic deposition (Fassett & Head,  2005; Schon 
+et al.,  2012; Stack et al.,  2020, Figure  2). Given the uncertainty associated with the genesis of these hills, 
+they are perhaps better described as “delta-associated sedimentary deposits” to leave open the possibility 
+that they may be lacustrine in origin rather than true delta remnants. Therefore, we will refer to these as 
+“delta-associated remnant deposits.”
+The first detailed studies of Jezero crater proposed that the dark crater floor material (Cf-fr and Us) was 
+emplaced after deltaic activity (Goudge et al., 2015; Schon et al., 2012; Figure 5). Goudge et al. (2015) placed 
+the Cf-fr and Us units stratigraphically higher than the delta on the basis that the units appear to embay 
+the western delta and the northern fan in Jezero. More recently, different temporal relationships between 
+the lithological units in Jezero have been proposed, including hypotheses that crater floor units could pre -
+date deltaic deposition (Ruff,  2017), or that they predate at least a portion of the delta deposits (Horgan 
+et al., 2020; Miklusicak et al., 2020; see also Sun & Stack, 2020a). Stack et al. (2020) presented four scenarios 
+for the stratigraphic relations of units within Jezero crater (Figure  5). One, their scenario 3, is consistent 
+with the previously published interpretation (i.e., Goudge et al., 2015), whereas the other three—including 
+the possibility that the Cf-fr was deposited before the delta, but the Us formed after delta deposition—re -
+quire more complex depositional relations, and suggest more complex age interpretations, between the 
+Jezero delta and other crater-fill units.
+3. Data and Methods
+We have studied geological features on the delta, Cf-fr, and Us units in Jezero crater on the Mars 2020 Ter-
+rain Relative Navigation HiRISE Orthorectified Image Mosaic (Fergason, Galuszka, et al.,  2020). The six 
+HiRISE stereo pairs on this mosaic include: Jezero_E: ESP_048908_1985 and ESP_048842_1985; Jezero_N: 
+HOLM-ALWMARK ET AL.
+10.1029/2021JE006840
+9 of 31
+Figure 5. Hypotheses for the stratigraphic relations between geologic units in Jezero crater presented by Goudge et al. (2015) and Stack et al. (2020). Cf-fr: 
+crater floor fractured rough unit. Us: undifferentiated smooth unit. Cf-f-1: crater floor fractured 1 unit. Cf-f-2: crater floor fractured 2 unit.
+Crater unknown contact
+Cf-f-1+2
+Delta
+Cf-fr(+Us)
+Goudge et al. (2015)
+unconformity
+Stack et al. (2020) #1
+Crater rim
+Cf-f-1
+Cf-f-2conformable
+contact
+Delta
+Cf-fr
+Crater rim
+Stack et al. (2020) #2
+Cf-f-1
+Cf-f-2
+Cf-fr
+Delta
+Crater rim
+Delta
+flooding
+surfaceCf-f-2 Cf-frCf-f-1
+Interfingering 
+facies
+Stack et al. (2020) #4
+Relative ageJournal of Geophysical Research: Planets
+ESP_037818_1990 and ESP_037330_1990; Jezero_C: ESP_046060_1985 and ESP_045994_1985; Jezero_DL: 
+PSP_003798_1985 and PSP_002387_1985; Jezero_W: ESP_042315_1985 and ESP_037396_1985; and Jeze -
+ro_CR: ESP_037119_1985 and ESP_036618_1985. All HiRISE image observations reported in this study 
+(except crater counting and fracture mapping, see below) were made on this image mosaic.
+3.1. Definitions
+In our stratigraphic analysis in Jezero crater, we focused on the nature of the geological contacts. We de -
+scribe the absence or presence of marginal depressions, i.e., “erosional moats,” at unit contacts. Erosional 
+moats are topographic depressions that result from differential erosion of adjacent geologic units. If high -
+er-standing relatively less resistant material is eroded, at the contact of an embaying, or surrounding, unit 
+with higher resistance, a moat appears as the topographically higher material is removed (see, e.g., Chap -
+man et al., 2010; Hauber et al., 2008; Ruff, 2017). For example, if lava flows up to an island of existing, less 
+resistant, material, a moat will appear at the unit contact as the older less resistant material is removed. 
+Ruff (2017) pointed out the similarities between such stratigraphic contacts in Gusev crater and Jezero cra-
+ter, with a focus on moats and “kipukas.” Kipukas are islands of higher-standing geologic material embayed 
+by younger lower-standing unit(s). We are not using the word kipuka in this work, because it implies both 
+a stratigraphic relationship between adjacent units, and a specific geologic origin (i.e., as a lava) of the em-
+baying unit, which in this case would be the youngest crater floor unit(s).
+3.2. Topographic Analysis/Profiles
+The image data that we have used in this study are from the Context Camera (CTX; Malin et al., 2007) and 
+High Resolution Imaging Science Experiment (HiRISE; McEwen et al., 2003) instruments on the Mars Re-
+connaissance Orbiter. Jezero crater was mapped with CTX images (5 m/px) as well as HiRISE visible image 
+basemap (25 cm/px) and derived digital elevation models (DEMs; 1 m/px; Fergason, Galuszka, et al., 2020; 
+Fergason, Hare, et al., 2020) acquired from web-based GIS tool CAMP (for source files for this tool, see Data 
+availability section below; see also Calef et al.,  2019; Stack et al., 2020). The data were processed in a Geo -
+graphical Information System (GIS) software (QGIS (http://qgis.osgeo.org) and ArcMap) and cross-section 
+profiles were constructed across unit boundaries.
+3.3. Fracture Mapping
+Occurrence of fractures on the Cf-fr and Us units were investigated on HiRISE images. Mapping was per -
+formed by marking fractures as polyline features in the GIS program ArcMap. A specific scale (1:3,000) 
+was used for consistency during mapping of the fractures, which is similar to the 1:5,000 scale used during 
+the mapping of Jezero crater by Miklusicak et al. ( 2020). The fractures were mapped on the area broadly 
+recognized as the “dark-toned floor” of Goudge et al. ( 2015), here interpreted as the combined Cf-fr and 
+Us. Mapped fractures represent a suite of through-going fractures, with lengths generally greater than tens 
+to hundreds of meters (e.g., Miklusicak et al.,  2020) Rather than presenting a thorough inventory of all 
+fractures, mapping here was performed with the purpose of getting an overview of the primary orientations 
+represented by easily visible fractures.
+3.4. Crater Counting
+The craters used for crater counting on three selected areas were mapped on HiRISE imagery (image IDs are 
+034495, area 1; 023168, area 2; 023524, area 3) in conjunction with HiRISE DEMs (McEwen et al.,  2003) in 
+ArcMap. Each crater was marked manually, using the CraterTools (Kneissl et al., 2011) plug-in to ArcMap. 
+Using this tool, all features that could be safely determined as craters above a minimum diameter of 10 m 
+were counted on the selected areas using three points along the crater rim to produce a circle.
+HOLM-ALWMARK ET AL.
+10.1029/2021JE006840
+10 of 31Journal of Geophysical Research: Planets
+3.5. Spectral Endmember Calculation
+CRISM band parameters from Viviano-Beck et  al.  ( 2014) to isolate CRISM pixels used for spectral end -
+member extraction. Band parameters were calculated for image HRL000040FF using the CRISM Analysis 
+Toolkit (CAT). We used the LCPINDEX2 parameter to illustrate the distribution of spectral signals consist-
+ent with LCP in the CRISM scene in Figure 4b.
+4. Results
+We analyzed the stratigraphic relations and reconstructed the sequence of events in Jezero crater by a series 
+of investigations: based (1) on observations from profiles extending from the delta out onto the crater floor, 
+(2) on crater counts, (3) on fracture patterns on the crater floor. For our discussion, we also use: (4) CRISM 
+spectral data and thermal inertia and (5) comparative studies of stratigraphic relations in other craters. Our 
+results are presented below.
+4.1. DEM Analysis and Profiles
+Boundaries between, and features of, units inside Jezero crater were investigated by cross-section profiles 
+and analysis of DEMs from HiRISE scenes (Figures  6 and  7). Since the Us unit is so thin ( ∼5 m; Golder, 
+Miklusicak, et al., 2020) elevation profiles likely reflect the topography of the Cf-fr unit, and not topographic 
+features that are related primarily to the Us unit.
+HOLM-ALWMARK ET AL.
+10.1029/2021JE006840
+11 of 31
+Figure 6. DEM of the study area in Jezero crater with the western delta in the left side of the image. Delta-associated 
+remnant deposits are higher-standing features on the crater floor and five of these, labeled A-F with white bold text, are 
+discussed in this work. Transects A-A′, B-B′, C-C′, and D-D′ represent the location of cross-sections shown in Figure 7. 
+White arrows point to topographic depressions (“moats”) at unit contacts, as discussed in the text. For data used to 
+produce the DEM, see Malin et al. (2007), Fergason, Hare, et al. (2020), and the Data availability section for more 
+information. DEM, digital elevation model.
+Journal of Geophysical Research: Planets
+HOLM-ALWMARK ET AL.
+10.1029/2021JE006840
+12 of 31
+Figure 7. (a–f) Topographic profiles (see locations in Figure 6) from the western delta in Jezero out onto the crater floor. Lower version of profile at 3 × vertical 
+exaggeration (VE). Colors of the line corresponds to the individual geologic units (see key). Possible past extensions of the delta are shown as blue dashed lines, 
+and the regional surface slope of the Cf-fr(+Us) unit is shown as beige dashed line.Journal of Geophysical Research: Planets
+The uppermost crater floor unit and the delta scarp are separated by 30–40 m in elevation, with the delta 
+having the higher elevation. The two units are separated by sedimentary cover resulting from erosion of the 
+steep delta scarp. The steepness of the western delta scarp immediately adjacent to the delta-crater floor 
+boundary varies between 6° and 27°. The contact between the delta scarp and the youngest crater floor units 
+includes both smooth and more abrupt transitions, but there is no clear evidence of a localized topographic 
+low (i.e., a “moat”) at the contact between the delta scarp and the youngest crater floor units.
+By contrast, the contact between Cf-f-1 and Cf-fr-Us is in some places characterized by distinct narrow 
+topographic moats (Figures 6, 7b and 7f). Such moats are more prevalent at the western side of these expo-
+sures; the eastern sides are more commonly covered by aeolian sediment, resulting from sediment transport 
+by a prevailing easterly wind (see Day & Dorn, 2019 for discussion on wind directions in Jezero; Figure 6). 
+Although these topographic moats are shallow (on the order of ∼10 m deep; compare Figure  7a with  7b, 
+and 7e with 7f), they form a prominent feature of these contacts (Figure 6).
+Low hillocks east of the delta scarp, here referred to as “delta-associated remnant deposits,” and labeled 
+A–F, are high-standing topographic features located on the crater floor, both close to the western delta 
+deposit, and somewhat further to the east (Figures  6 and  8). These sedimentary deposits show a range 
+of morphological expressions. Deposit A displays a cone-shaped cross-section profile and clear internal 
+stratification (Figure 8a), similar to deposit F (Figure  8b). Deposits located further to the east, specifically 
+B–D (Figures 8c–8e), also display internal stratification, but have less distinctive overall morphologies. The 
+deposits trap bedforms along their flank slopes, obscuring the contact to the crater floor. Still, in all instanc-
+es, the boundary between delta-associated remnant deposits and the adjacent Cf-fr-Us deposits is marked 
+by a smooth change in topographic slope on all sides. As with the edge of the main delta body, there is no 
+clear evidence of topographic moats at the boundary between delta-associated remnant deposits and the 
+youngest crater floor units.
+Our topographic analysis also shows that the youngest crater floor units adjacent to the delta edge slope 
+away from the delta edge, and the slope is the same as the slope of the present delta surface itself (Figures 7c 
+and 7d). The slope is observed along axes that are radial to the delta rather than uniform across the Cf-fr-Us 
+units. Regionally, the crater floor preferentially slopes north to south, rather than east to west (Figure 9).
+4.2. Fractures
+The crater floor in Jezero is fractured at two different spatial scales (Figures  10a and 10b). Small-scale po-
+lygonal fractures are prevalent across the Cf-fr unit, and through-going linear fractures that intersect both 
+Cf-fr and regions of the crater floor mantled by Us materials (Stack et al.,  2020). In this investigation, we 
+focus only on these through-going linear fractures. At the mapping scale we employed, the fractures are 
+typically between 1 and 2 m in width and range from a few hundred meter to more than 1 km in length. 
+Fracture intersections are often orthogonal, and show both offset and cross-cutting relationships (cf. Fig -
+ures 11a and 11b), which could indicate multiple fracture generations (Peacock et al.,  2018). More rarely, 
+fractures can terminate at the intersection with another fracture (Figure 11a), which may also indicate dif-
+ferent fracture generations. Fractures also appear to intersect the ejecta and rims of craters exposed in the 
+Cf-fr-Us units (cf. Figure  11c). These large, linear fractures show distinct differences in their distribution 
+across the Jezero crater floor. Most notably, large, linear fractures are recorded only within the region of the 
+crater floor defined by the combined Cf-fr and Us map units (Figure 10c). Fractures also appear to be more 
+concentrated along the delta front, and appear more sparsely to the SE. This distribution, however, does not 
+necessarily reflect a lack of fractures; fractures are more easily identifiable in regions near the delta front, 
+which are more heavily mantled by Us, and less easily identifiable in regions dominated by Cf-fr. Across the 
+crater floor, there is no clear orientation for these larger, linear fractures, although fractures with the longest 
+exposures favor a NW-SE orientation (Figure 10d; see also Miklusicak et al., 2020). In total, more than 1,700 
+fractures were mapped.
+More detailed examination of fractures in the NE region of the Jezero crater floor, where fracturing is most 
+dense, shows distinct patterns of fracture orientation between the edge of the western delta and the lobate 
+margins of the Cf-fr-Us units (Figure  10c), where fractures appear to parallel the delta scarp (Figures  10c 
+and 10d). A similar pattern was observed by Miklusicak et al. (2020), who showed that fracture orientation 
+HOLM-ALWMARK ET AL.
+10.1029/2021JE006840
+13 of 31Journal of Geophysical Research: Planets
+shown in the southern portion of Figure 10c inset also parallel the lobate margin of the Cf-fr-Us unit to the 
+southeast, and are consistent with a broader pattern of fractures that occur parallel to the lobate margin of 
+the Cf-fr-Us unit(s). We have not observed such a relationship between fracture orientation and the delta 
+edge further to the north, suggesting that apparent alignment of fractures to the delta front may simply re -
+flect that the delta scarp itself in that area has the same overall shape as the lobate margin of the Cf-fr and 
+outcrop of Cf-f-1 southeast of the delta scarp (Figures 1c and 2).
+An interesting relationship also occurs between the fractured Cf-fr-Us unit and outcroppings of the delta 
+and delta-associated remnant deposits. First, fractures typically approach the delta front at high angles, 
+HOLM-ALWMARK ET AL.
+10.1029/2021JE006840
+14 of 31
+Figure 8. Photos of delta-associated remnant deposits (HiRISE image mosaic; Fergason, Galuszka, et al., 2020). 
+(a) Deposit A, located just east of the western delta scarp. Note prominent cone-shape. Arrows point to internal 
+stratification and fracture that terminates at the base of the deposit. (b) Deposit F, located southeast of the western delta 
+scarp. Arrows point to internal stratification and fractures that terminate at the base of the deposit. (c) Deposits B–E, 
+located further east of the western delta scarp. (d) Close-up of deposit E, with arrow pointing to a fracture that crosses 
+the deposit. (e) Internal stratification in deposit C. North is up in all images. See Figure 1c for locations. HiRISE, High 
+Resolution Imaging Science Experiment.
+Journal of Geophysical Research: Planets
+where they either terminate abruptly or are buried by sediment either eroded from the delta edge or depos-
+ited along this topographic margin as aeolian dunes (Figure  11d; see also Miklusicak et al.,  2020). We also 
+observe that fractures do not cross delta-associated remnant deposits A and F (Figures 8a and 8b), but either 
+end at the base or terminate underneath the deposit, although at least some fractures are observed to cross 
+delta-associated remnant deposits located further to the east (Figure 8d).
+4.3. Craters
+The density of craters on the Cf-fr and Us units varies across the surface, which at least partially is caused 
+by presence, or extent of, the Us unit on Cf-fr. There is a marked difference apparent to the naked eye espe-
+cially near the western delta edge. All craters above a minimum diameter of 10 m were counted on three 
+different areas, not for quantitative reasons or for establishing an age, but for displaying the differences in 
+the number of small craters on different areas of the crater floor in Jezero (Figure  12). Craters that were 
+counted on the three selected areas are 10–370 m in diameter, and for each area the spread in crater diam -
+eters is 10–331 m (area 1), 10–370 m (area 2), and 16–352 m (area 3). Since the area counted is limited in 
+size (area 1: 15.35 km2, 2: 8.58 km2, 3: 8.19 km2), we are aware that there are limitations to our observations, 
+but comparisons between the areas is still possible, and we hope to resolve information about the local 
+HOLM-ALWMARK ET AL.
+10.1029/2021JE006840
+15 of 31
+Figure 9. Topographic map of part of Jezero crater showing the slope direction of the crater floor and the landing ellipse of the Mars 2020 mission. Red lines 
+are 50 m contours and colors correspond to topography (blue = low, green to yellow = moderate, red = high). Note that the crater floor preferentially slopes 
+north to south, rather than east to west.
+Journal of Geophysical Research: Planets
+HOLM-ALWMARK ET AL.
+10.1029/2021JE006840
+16 of 31
+Figure 10. (a) Examples of through-going linear fractures on the Cf-fr and Us units in Jezero crater. (b) Smaller-scale polygonal fracturing characterizing the 
+Cf-fr unit (a and b with HiRISE image mosaic as background; Fergason, Galuszka, et al., 2020). (c) Overview of mapped through-going linear fractures (in 
+yellow) on the Cf-fr and Us units in Jezero crater shown on CTX image. Mapped fractures are typically ∼1 m in width and ∼a few hundred m in length. The red 
+box in the bottom right corner is a close-up of the area where fractures have different directions than the general NW/SE direction on the unit. Black line after 
+Goudge et al. (2015), marking the “volcanic floor unit.” (d) Rose diagram showing the trends of the all the mapped fractures from (c). HiRISE, High Resolution 
+Imaging Science Experiment; CTX, Context Camera.
+60Journal of Geophysical Research: Planets
+HOLM-ALWMARK ET AL.
+10.1029/2021JE006840
+17 of 31
+Figure 11. Fractures on the Cf-fr and Us units on HiRISE image mosaic (Fergason, Galuszka, et al., 2020). (a) Close-up showing fractures with different general 
+directions. White arrows point to offset relations between possible different fracture generations. Black arrows point to abutting relations between (possible) 
+different fracture generations. (b) Close-up showing fractures that cross small impact crater on the crater floor. Arrows point to offset relations between 
+possible different generations of fractures. (c) Fractures crossing small impact craters on the Cf-fr unit. (d) Close-up of fractures at the delta scarp. Note lack of 
+reorientation before they disappear. See Figure 1c for location. HiRISE, High Resolution Imaging Science Experiment.
+Journal of Geophysical Research: Planets
+processes, or processes that affect only a small area [see discussion in, e.g., Kukkonen and Kostama (2018)]. 
+Closer to the delta scarp, only 154 craters were counted (corresponding to a frequency of ∼19 craters/km2; 
+Figure 12), and this is where the Us unit is most prominent. On the two other areas, labeled as 1 and 2, 1,028 
+(∼67 craters/km2) and 1,269 ( ∼148 craters/km2) craters were counted, corresponding to a difference of a 
+factor of ∼8, respectively.
+Small craters, 10–20 m in diameter, on the smooth surface immediately east of the delta scarp exhibit non-
+rocky rims and ejecta blankets. At crater sizes of 25–30 m, rims and ejecta appear rocky (Figure 13; compare 
+also Warner, Schuyler, et al., 2020).
+5. Interpretation and Discussion
+5.1. What Can Fractures on Cf-fr and Us Tell us About Stratigraphic Relations in Jezero Crater?
+Several observations regarding large, linear fractures observed in the Jezero crater floor may help us in -
+terpret stratigraphic relationships. First, these fractures intersect both the combined CF-fr + Us unit and, 
+critically, the crater rims and ejecta that are exposed within these units (Figure 11c). These observations in-
+dicate that fracture formation is younger than both the deposition and cratering age of these floor materials. 
+Second, on the regional scale, there appears to be no clear orientation to these large, linear fractures or any 
+clear pattern of their intersections. These observations suggest that the origin of these fractures results from 
+hydrofracture (i.e., the fracture of materials from the overpressuring of subsurface fluids; Gudmundsson 
+et al., 2002; Mandl, 2005; Philipp et al., 2013). Finally, on a more local scale, observation of an apparent re-
+lationship between fracture orientation and the lobate margins of the combined Cf-fr + Us unit (Figure 10, 
+see also Figures 2 and 6), provides critical data on the stress fields at the time of fracturing.
+The pattern and orientation of fractures results from both the mechanism of fracture formation and 
+the mechanical properties of the material being fractured (e.g., Goehring,  2013, and references therein; 
+HOLM-ALWMARK ET AL.
+10.1029/2021JE006840
+18 of 31
+Figure 12. Close-up of the northern part of the crater floor in Jezero crater (CTX image). Areas marked with blue are 
+areas where craters were counted. The areas are of similar size, but note the difference in number of craters counted in 
+the area to the west compared to the two areas to the east. Total number of counted craters in area 1: 1,028, 2: 1,269, 3: 
+154. Black line after Goudge et al. (2015), marking the “volcanic floor unit.” CTX, Context Camera.
+Journal of Geophysical Research: Planets
+Gudmundsson, 2011; Mandl, 2005). Fractures that result from tensional stresses within a single unit, such 
+as those that occur with cooling of igneous units, desiccation of water-rich sediment, or thermal expansion 
+and contraction tend to form discrete polygonal networks with a dominance of 120° intersection angles 
+(Goehring, 2013; Kronyak, Kah, Miklusicak et al.,  2019), and tectonic fractures are most easily recognized 
+by a clear pattern of orientation that relates to the tectonic stress field (e.g., Gudmundsson,  2011, and ref-
+erences therein). By contrast, hydrofracture events most commonly lack clear orientations, except when af-
+fected by stresses associated with the boundaries of a geologic unit (Gudmundsson et al., 2002; Mandl, 2005; 
+Philipp et al., 2013).
+Observations that fractures locally appear to be oriented both parallel and perpendicular to the lobate edges 
+of the Cf-fr + Us unit are consistent with differential stresses along the natural edge of the Cf-fr + Us unit 
+(cf. Miklusicak et al., 2020). If this is the case, then if the CF-fr + Us unit were younger than the Jezero delta 
+and delta-associated remnant deposits, we would expect to see a similar fracture pattern at these margins. 
+Such a fracture pattern, however, is not observed along the entire length of the delta front, suggesting that 
+the fracturing process (which must occur after primary deposition of the Cf-fr unit) was unaffected by the 
+presence of deltaic sediments. More commonly, we see fractures abruptly disappear under the bedform and 
+talus along the boundary of the delta scarp, with no changes in fracture orientation or morphology, even 
+when fractures can be seen traced between aeolian bedforms otherwise obscuring the contact (Figure 11d). 
+If the western delta was already deposited at the time of the fracturing process, the weight of the sediment 
+would be expected to create stress fields in the crater floor material leading to fracture reorientation, im -
+plying that deltaic sediments had yet to be deposited. We therefore suggest that these observations are most 
+consistent with a scenario in which the fractures continue underneath the delta and delta-associated rem -
+nant deposits, and were simply buried during deltaic sedimentation.
+Additionally, we do not observe propagation of fractures upward from the Jezero crater floor into overlying 
+sedimentary materials of the delta and delta-associated remnant deposits. It is common for the hydrofrac -
+tures to be affected by the mechanical properties of the rock units through which they propagate (Weert -
+man,  1980). Most commonly, hydrofractures are observed to terminate at contacts where the overlying 
+material has a strength sufficient to arrest fracture propagation (Gudmundsson & Brenner, 2001; Kronyak, 
+Kah, Edgett, et al.,  2019). The inferred fine-grained nature of sedimentary materials associated with the 
+HOLM-ALWMARK ET AL.
+10.1029/2021JE006840
+19 of 31
+Figure 13. Differences in roughness of ejecta and rim blockyness of small craters on the Us unit immediately adjacent 
+to the western delta scarp in Jezero crater. Note blockyness of ejecta associated with the fresh crater in the center of the 
+photo. See Figure 1c for location. HiRISE image mosaic (Fergason, Galuszka, et al., 2020). HiRISE, High Resolution 
+Imaging Science Experiment.
+Journal of Geophysical Research: Planets
+delta front and delta-associated remnant deposits (e.g., Goudge et al., 2017), however, and the extensive ero-
+sion of these units, suggest that the strength of these units would be insufficient to cause arrest of fracture 
+propagation. If, on the other hand, fractures formed after deposition of the delta and delta-associated rem -
+nant deposits, the absence of visible fractures in these units would suggest that materials were sufficient -
+ly weak that pressures rapidly dissipated via formation of abundant small-scale fractures. Such fractures 
+are not visible in orbital imaging, and our combined observations are more consistent with a scenario in 
+which deltaic deposits are wholly younger than the fractured crater floor. The alternative scenario presented 
+above, however, can be tested by the Perseverance rover when it reaches the delta front.
+5.2. What Can We Learn From Stratigraphic Relations in Other Craters?
+Investigation of the nature of, and stratigraphic relationships between, rock units in Gale crater by the Cu-
+riosity science team (e.g., Grotzinger et al.,  2015; Stack et al., 2016) resulted in the recognition of a former 
+standing body of water and an understanding that the body of water could have persisted for long enough 
+time to have been relevant for habitability. In Magong crater, Xanthe Terra, a flat, polygonally fractured floor 
+has been exposed where active erosion of the Sabrina Vallis fan results in a moat between the fan and the 
+crater floor unit (Knade et al., 2017, Figure 14). This moat marks the eroded margin of the fan, at least along 
+the entire southern and eastern sides (Knade et al., 2017) and it is interpreted that the dark-toned, mafic cra-
+ter floor unit is both younger than the fan and more erosionally resistant than the fan. These observations 
+thus allow constraints of stratigraphic relationships between fan and crater floor units in Magong crater. 
+We do not observe moats between the delta and youngest crater floor units in Jezero crater, either where 
+the delta is eroding away, exposing the underlying units, at the western delta scarp, or in association with 
+HOLM-ALWMARK ET AL.
+10.1029/2021JE006840
+20 of 31
+Figure 14. Magong crater, Xanthe Terra. (a) Merged HiRISE DEM showing the Sabrina Vallis fan and the mafic crater floor unit, with the moat separating 
+the two units. (b and c) Detail of the moat showing the exposed polygonally fractured unit in the moat that forms as the fan sediments erode. HiRISE, High 
+Resolution Imaging Science Experiment.
+Journal of Geophysical Research: Planets
+delta-associated remnant deposits (Figure  7). The Cf-fr and Us units consistently continue all the way up 
+to the sediment cover at the base of the western delta scarp, with no underlying unit exposed in between, 
+either because it is not present or is covered by sediments (see, e.g., Figures  8a and 8b). If such a moat is 
+present but obscured by talus and aeolian sediments, it is clear that there was very limited scarp retreat since 
+emplacement of the youngest crater floor unit (compare the exposed moat in Magong crater; Figure  14). 
+The youngest crater floor unit(s) either formed ∼2–2.5 Ga, or has been exposed since that time (Shahrzad 
+et al., 2019; Warner, Schuyler, et al., 2020), and insignificant scarp retreat since then is not consistent with 
+erosion rate estimates (e.g., Golombek & Bridges,  2000; Golombek et al., 2006; Ramirez et al., 2020), espe-
+cially of nonresistant deltaic material which is known to erode relatively fast given the lack of small craters 
+on the delta (Mangold et al., 2020). Moats at contacts between a young resistant unit overlying an older less 
+resistant unit in Gusev crater can be compared with features in Jezero (Ruff,  2017). Ruff (2017) noted the 
+presence of moats between kipukas and the crater floor lava flows in Gusev, and that such moats were also 
+present in Jezero, but only at contacts between the Cf-f unit and the Cf-fr/Us. Ruff (2017) suggested that one 
+explanation for the lack of moats at delta-associated remnant deposits can be explained by the hypothesis 
+that the delta is older than the floor if the rate of erosion of the embaying Cf-fr+Us unit keeps pace with or 
+outpaces that of the delta-associated remnant deposit material, which is inconsistent with observations of 
+crater retention between the units, and that the Cf-f erodes more easily than the delta-associated remnant 
+deposits. However, the lack of moats around the western delta and delta-associated remnant deposits in 
+Jezero (Figure  7) is also consistent with the current expression of the delta being younger than the floor 
+and overlying the floor units, something that was also noted by Ruff (2017). As a comparison, moats can be 
+easily observed around the western margins of the Cf-f-1 unit in a map showing elevation relationships in 
+Jezero (Figure 6). There are no western margins between the main western delta body and the crater floor 
+units, but moats are lacking on all sides of the delta-associated remnant deposits.
+Combined, the absence of an erosional moat and inferences based on fracture orientation are consistent 
+with a scenario in which at least some sedimentary rocks of the delta deposit postdate deposition (and po -
+tentially fracturing) of the youngest crater floor units.
+5.3. Constraining the Relative Timing of Events in Jezero
+The relative age of the western delta in Jezero has been estimated by buffered crater counting of river 
+valleys (Fassett & Head,  2008a) and by crater counts on the delta itself (Mangold et al.,  2020), but can be 
+further constrained by the inferred relation between deltaic sediments and the crater floor unit. Fassett and 
+Head (2008a) concluded based on buffered crater counts of inlet valleys, that fluvial activity ceased about 
+3.8 Ga, and Mangold et al. (2020) presented an age of the delta itself of 3.2–3.6 Ga based on crater counting. 
+These crater count ages would seem to argue that the delta predates emplacement of the youngest crater 
+floor unit (Cf-fr and Us), although the 3.2–3.6 Ga age for the delta is close to the age of the floor, if the full 
+age within error is considered [2.6 ± 0.5 Ga; Shahrzad et al.,  2019; see also discussion in Marchi ( 2021)]. 
+Dating small surface areas such as the Jezero western delta using crater counts involves significant uncer -
+tainty (Palucis et al., 2020; Warner et al., 2015; see also Quantin-Nataf et al., 2019).
+A late-stage reactivation of the proximal section of the fluvial system feeding sediment into Jezero has been 
+proposed from differences in valley morphology (Mangold et al.,  2020). Reactivation of the valley's lower 
+sections could lead to renewed progradation of the delta and sediment accumulation on the delta surface, 
+without significantly affecting the buffered crater counts on the valley system as also argued by Mangold 
+et al. (2020). Many craters on the delta surface are formed onto the youngest ridge-formed deposits inferred 
+to be former river channel-belt fill, and thus postdate the last phase of fluvial activity, but there are some 
+examples of craters on the delta that show possible evidence of modification by fluvial activity and thus may 
+predate some fluvial activity (Figure  15). We note, e.g., that there are channels that appear to cross craters 
+(Figure 15c), though more robust analysis is needed. Horgan et al. (2020) stated that the state of preservation 
+of the western delta deposit—by comparison to the northern crater-edge sedimentary package (northern 
+fan)—could potentially be explained by the uppermost exposures being significantly younger than strati -
+graphically lower deposits, or that they could be potentially older delta deposits preserved in the northern 
+part of the crater. This is consistent with the understanding that sporadic fluvial activity on Mars potentially 
+extended into the Hesperian/Amazonian (e.g., Goddard et al.,  2014; Grotzinger et al.,  2013, 2015; Hauber 
+HOLM-ALWMARK ET AL.
+10.1029/2021JE006840
+21 of 31Journal of Geophysical Research: Planets
+et al., 2013; Kite et al., 2019; Salese, Di Achille, et al., 2016; see also discussion below). A scenario of multi-
+ple episodes of deposition forming the western delta needs validation from observations on the surface in 
+Jezero, or could even require sample return. Nevertheless, we want to highlight here that discharge fluctu-
+ations leading to intermittency is likely a relevant factor if the delta developed over an extended period of 
+time, as opposed to Jezero lake formation due to a catastrophic event (see discussion in, Salese, Kleinhans, 
+et al., 2020). Such a scenario may also be consistent with distinct differences in the dominant primary min-
+eralogy observed in different delta facies, which could suggest major changes in the watershed geology over 
+extended periods of time (Horgan et al., 2020).
+The derived age of the floor can also be questioned. It is possible that the Cf-fr unit was covered at some 
+point, and has been gradually exposed for an extended period of time (Quantin-Nataf et al.,  2021; Warner, 
+Schuyler, et al., 2020). This would mean that an overlying protective unit(s) has prevented new craters from 
+forming on the Cf-fr unit and that the derived model age therefore represents an “exposure age” of the sur-
+face rather than continuous crater accumulation since the original deposition of the unit. The crater data 
+(Shahrzad et al., 2019; Warner, Schuyler, et al., 2020) indicate that the Cf-fr unit must have been mostly ex-
+humed and exposed to erosion by 2.0–2.5 Ga to explain the crater counts. Erosion of the unit is still ongoing, 
+explaining the abundance pattern of small craters observed by Warner, Schuyler, et al. ( 2020). If the Cf-fr 
+unit was in fact covered and has been exhumed, this leads to important constraints for Mars sample return 
+concerning potentially using this unit for tying the Martian crater chronology to an absolute age [e.g., Herd 
+et al., 2021, see also discussion in Shahrzad et al. (2019)].
+HOLM-ALWMARK ET AL.
+10.1029/2021JE006840
+22 of 31
+Figure 15. Craters on the western delta in Jezero. (a) Overview image of part of the delta. Note the large crater, Belva, 
+with a relatively well-preserved rim. (b) Examples of craters that potentially could predate a phase of fluvial activity 
+on the delta (marked with circles). (c) Crater with channel (?) crossing through. The arrow points to a ridge that marks 
+a potential channel. HiRISE image mosaic base (Fergason, Galuszka, et al., 2020). HiRISE, High Resolution Imaging 
+Science Experiment.
+Journal of Geophysical Research: Planets
+In summary, we cannot rule out a scenario where the delta postdates emplacement of the Cf-fr-Us units 
+based on the crater counts on the delta, or on the floor. We find that it is possible that the delta developed 
+over a protracted time period, with potentially several reactivation episodes. The last stage could have been 
+very much later (on the order of 0.5–1 Ga) than when delta deposition first started, based on the late-stage 
+reactivation scenario presented by Mangold et al. ( 2020) and significant differences in preservation state 
+between the western delta and northern fan in the crater.
+In the stratigraphic scenario proposed here (Figure  16), the original morphology of the Jezero impact cra -
+ter is obscured by crater-fill deposits. The youngest of these deposits are Cf-f-1 and Cf-f-2. These crater-fill 
+deposits were exposed at the surface long enough to become both cratered and eroded, forming relief along 
+the crater floor. The origin of Cf-fr is ambiguous, but the exact origin does not have an effect on the broad 
+temporal scenario proposed here. For example, Cf-fr could represent an extrusive volcanic deposit formed 
+during a paused episode of fluvial activity in Jezero, or an additional episode of fluvial or aeolian sedimen -
+tary emplacement, erosion, and cratering, wherein Cf-fr is more resistant to erosion than Cf-f-1 and 2, re -
+sulting in the formation of moats (e.g., Figures 7a, 7b, 7e and 7f). An alternative scenario has been proposed 
+by Kah et al. ( 2020) wherein Cf-fr represents the eroded upper surface of Cf-f-1 and Cf-f-2 that has been 
+made more resistant to erosion by the association with the Us unit. However, this hypothesis may not be 
+consistent with the spectral properties of the units as Cf-f exhibit strong olivine signatures, which are rare 
+in both Cf-fr and Us (Horgan et al., 2020).
+Regardless, in our scenario, the western delta is deposited on top of at least the Cf-fr unit (possibly along 
+with the Us unit), which in turn is followed by erosion of all units, including delta deposits, and formation 
+of delta-associated remnant deposits that can be observed today. We leave open the possibility that the 
+western delta may have formed through an extended series of depositional events, some predating Cf-fr 
+and some postdating Cf-fr, that event including the formation of the current expression of the delta, until 
+there is further understanding of the relationship between fractures and the delta edge. In either case, the 
+Cf-fr (and possibly Us) units were emplaced during a phase of ongoing (for fluvial sediments) or tempo -
+rarily paused (for aeolian sediments) lacustrine/fluvial activity. This scenario is similar to scenarios 2 and 
+4 described in Stack et al. (2020; Figure 5), and thus also similar to scenarios proposed by, e.g., Ruff (2017), 
+Horgan et al. ( 2020), and Miklusicak et al. ( 2020), although we have reinforced the “younger deltaic dep -
+osition-scenario” by investigation of stratigraphic relationships. Our scenario thus explains the relatively 
+well-preserved state of the western delta, the unit contacts observed between crater floor units and crater 
+floor units and delta deposits, and the varied surface texture of the crater floor in terms of smoothness. 
+Contradicting surface ages resulting from crater counting could potentially result from capping of the Cf-fr 
+unit preventing new craters from forming, although we have highlighted the significant uncertainty as -
+sociated with derived ages both of the Cf-fr unit and of the delta. Our scenario is also consistent with the 
+idea that Martian geological history is characterized by complex cycles of erosion of and deposition in 
+fluvial/lacustrine environments, with significant periods of hiatus (e.g., Edgett et al.,  2018; Kite, 2019; Kite 
+et al., 2017, 2019; Malin & Edgett, 2001; Salese, Ansan, et al., 2016).
+It is possible that the delta-associated remnant deposits A–F were deposited in deeper water, profundal lake 
+environments, even though they are tied to the same depositional system. Deposits B–E (located further 
+east of the western delta scarp; Figure  8) have somewhat different morphology than deposits A and F. 
+They have a more hummocky expression, in fact similar to the surface expression of the northern delta in 
+Jezero. Fractures can also be observed to cross delta-associated remnant deposits in this area further east 
+of the western delta scarp (Figure 8d), whereas fractures terminate at the base of deposits A and F and the 
+western delta (Figures 8a, 8b and 11d). This could be consistent with different timing of formation, possibly 
+because they represent basin fill deposits (i.e., profundal lake deposits) rather than “true” delta remnants. 
+Different timing, and mechanisms, of formation could also mean that the sedimentary rocks constituting 
+these deposits have different mechanical properties that lead to differences in tendency to fracture, causing 
+the observations that we have made. Given that these deposits are located further to the east, they are also 
+likely to have experienced increased weathering and erosion as well, which likely caused variations in mor-
+phological expression compared to deposits closer to the delta scarp.
+HOLM-ALWMARK ET AL.
+10.1029/2021JE006840
+23 of 31Journal of Geophysical Research: Planets
+HOLM-ALWMARK ET AL.
+10.1029/2021JE006840
+24 of 31
+Figure 16. Overview sketch of our scenario for a sequence of events in Jezero crater. The profile shown in c–g is 
+roughly along our A-A′ profile (Figure 7). Note that this figure does not take into account potential cover and later 
+exhumation of the Cf-fr unit, but is focused at showing the relation between the delta and Cf-fr. (a) Jezero crater forms 
+in the Noachian period (see main text). (b) The crater is eroded and postimpact deposits form, covering the central 
+uplift of the structure [modified after Osinski et al. (2018)]. The youngest crater-fill deposits at this stage are Cf-f-1 and 
+2. (c) Cf-f-1 and 2 are eroded, forming relief. (d) The crater floor fractured rough (Cf-fr) unit is emplaced. (e) Cf-fr and 
+Cf-f-1,2 are eroded, and between the three units, Cf-fr is the more resistant unit, leading to formation of topographic 
+depressions, moats, at the contacts between Cf-fr and Cf-f-1,2. (f) At the latest stage of fluvial/lacustrine activity in 
+the crater, the western delta extends out into the crater. (g) More erosion, including of the delta. This results in the 
+formation of delta remnants.
+Journal of Geophysical Research: Planets
+Elevation profiles presented here show that the delta and the delta-associated remnant deposits line up, so 
+we have used the deposits to estimate the potential past extent of the delta (Figure 7). The past extent of the 
+delta coincides with the prominent smoothness of the floor (i.e., the mapped extent of the Us surficial cover.
+5.4. Genesis of the Cf-fr and Us Crater Floor Units
+As stated above, the youngest crater floor units in Jezero crater have previously been grouped together, 
+and attributed to volcanism (preferably flow-related emplacement resulting in lobate margins; e.g., Goudge 
+et al., 2015; Ruff, 2017). In some more recent studies (e.g., Golder, Miklusicak, et al., 2020; Stack et al., 2020; 
+Sun & Stack,  2020b) other formational histories for the units were suggested. Edgett et al. ( 2018) pointed 
+out that crater-retaining sedimentary rock units on Mars can be confused with lava plains. Some important 
+observations on differences in lithological aspects of the units investigated here can be made from the ability 
+to retain craters [see discussion in, e.g., Warner, Grant, et al., 2020]. The delta materials are sedimentary, and 
+small craters do not preserve well on the delta (Mangold et al.,  2020) compared to the Cf-fr unit (Warner, 
+Schuyler, et al., 2020).
+HCP in the youngest crater floor unit(s) (Horgan et al.,  2020) distinguishes them from the other units in 
+Jezero crater, including the delta deposits. In fact, HCP-composition is associated with more evolved mag -
+ma compositions of Hesperian and Amazonian volcanics (Mangold et al., 2010; Mustard et al., 2005). While 
+HCP is unique to the Cf-fr in Jezero, it is observed as the main spectral signature of a regionally extensive 
+thin mantling unit, “the pitted capping unit,” outside of Jezero crater (Goudge et al., 2015). Thus, this sim-
+ilarity could either suggest a shared origin for the youngest crater floor units and the regional mantling de-
+posit, or that the HCP-bearing materials are sourced from aeolian reworking of these regional units (Horgan 
+et al., 2020). Alternatively, in a similar scenario, the HCP-bearing materials could be sourced from fluvial 
+reworking of those regional units.
+Our topographic profiles (Figure 7) show that the Cf-fr unit has a slope equivalent to that of the upper sur-
+face of the western delta. The inclination is along axes that are radial to the delta rather than uniform across 
+the unit. This slope toward the crater center may represent a primary paleo-depositional inclination of sed-
+iments laid down on the lake floor of the ancient delta-lacustrine sedimentary system, which would have 
+deepened to the east. The inclination direction that we observe is different from the general slope of the 
+crater floor in Jezero, which is preferentially from north to south rather than from east to west (Figure  9). 
+This is suggestive of a common origin of the Cf-fr and delta, although processes resulting in emplacement 
+of a material mantling existing topography, such as a volcanic deposit, could also be consistent with the 
+observation. Topography-mantling erupted material is typically thin tephra fall deposits or ash turbidites 
+on Earth, although mass flows that thicken into depressions and areally limited, valley-confined lava flows 
+can modify topography without forming all new relief (Manville et al., 2009). If the Cf-fr was emplaced as a 
+regionally extensive lava flow this observation is more difficult to explain, unless there has been significant 
+tectonic activity tilting the area postdeposition. To our knowledge, no such large-scale regional activity that 
+could cause such tilting has been discussed. Also, large-scale regional tectonic activity causing tilting as 
+observed by us would be expected to manifest itself as consistent tilt in one direction, rather than tilt radial 
+to the delta. Aside from these primary formation mechanisms there is also the possibility that differential 
+weathering and/or erosion has influenced the topography of the landscape, creating the observed regional 
+slope.
+Small craters are significantly less common on the areas that have more prominent mantling of the Us unit 
+(Figure 12), and these areas are preferentially located just east of the western delta edge. The material that 
+constitutes the Us has clear and distinct HCP signatures away from the delta, but near the delta edge the 
+signature is a mix of HCP and LCP (Figures 4a and 4b; see also Horgan et al., 2020), meaning that the Us is 
+delta-like in CRISM-signature close to the delta scarp. There is no HCP anywhere else in the crater, mean -
+ing that it is not likely that the material has an external source and was recently deposited as, e.g., aeolian 
+sediment. Given that the material has a spectral signature that is different than the delta itself (Horgan 
+et al., 2020), an origin as wind-blown material that exclusively originates from the delta is unlikely. This is 
+also inconsistent with predominant wind directions in Jezero, which are east to west (Day & Dorn,  2019). 
+The observations are suggestive of a scenario where the Us is an in-place unit (e.g., consistent with the 
+hypothesis of Warner, Schuyler, et al. (2020) where the unit is interpreted as regolith), although it could be 
+HOLM-ALWMARK ET AL.
+10.1029/2021JE006840
+25 of 31Journal of Geophysical Research: Planets
+locally deflated. The HCP signal could be sourced from the primary mineral composition of the Cf-fr unit. 
+The unit is unlikely to be sourced from deflation of the Cf-f units because deflation of this surface produces 
+sediments with strong olivine signatures (Horgan et al., 2020), so it must be a distinct unit. Given the distri-
+bution of pixels with absorptions consistent with more LCP-rich material, which are concentrated near the 
+western delta front and also around the delta-associated remnant deposits, it is likely that variations in LCP 
+modal abundance are changing the CRISM absorptions, with LCP-rich material derived from or preserved 
+by the eroding delta having higher abundance near the deltaic material. The LCP/HCP signatures of the 
+broader crater floor region (Horgan et al., 2020) correspond to a clearly arcuate region of low thermal inertia 
+(Figure 4c) that appears to possibly correspond with Us and, based on the arcuate shape, to the past extent 
+of the youngest delta deposits. The nonblocky nature of rims and ejecta of small craters formed onto the Us 
+just off the delta scarp (Figure 13) is constant with the thermal inertia observation of the Us unit.
+We find that erosion of the delta scarp could expose the Us unit which is stratigraphically higher than the 
+Cf-fr unit, or alternatively that the units are genetically related and that erosion of the delta edge leaves the 
+Us behind. Given the decreased mantling of craters toward the east by the Us (Kah et al., 2020), it is possible 
+that the Us has had a previously more extensive distribution but has eroded to expose the Cf-fr unit. A sur-
+face exposed on Mars for 2.5 Gyr (i.e., the age of the “dark-toned floor unit” in Jezero (Shahrzad et al., 2019), 
+should have a significant regolith cover (e.g., Hartmann et al.,  2001; Warner, Grant, et al.,  2020), unless 
+surface processes have removed the regolith or the surface was protected [e.g., covered; see discussion in 
+Rogers et al. (2018)]. Regardless of whether the hypothesis of Warner, Schuyler, et al. (2020), that Us is that 
+regolith, is correct or not, regolith is very thin or largely missing on the Cf-fr unit in the investigated area, 
+except for just off the delta scarp. This indicates that Cf-fr (and Us?) was either buried and later exhumed 
+(preventing a regolith from forming; see Quantin-Nataf et al., 2021) or that the unit has been stripped of its 
+regolith (see Warner, Schuyler, et al., 2020). These scenarios are both also consistent with observations of 
+crater distribution, as pointed out by us, with significant difference in crater density close to the delta and 
+also discussed by Warner, Schuyler, et al. (2020). A relation between the Us unit and the delta (or alterna -
+tively former cover by the delta) is strengthened by the clear association with the thickness of the smooth 
+unit increasing with proximity to delta, and the fact that undifferentiated smooth material also occurs on/
+in the delta (Stack et al.,  2020). A possible scenario is that Us could be formed by deposition of relatively 
+larger-sized particles after reactivations of the fluvial system after periods of dormancy [see discussion in 
+Mangold et al. (2020)]. In fact, the proximal part of the inlet channel has a spectral signature consistent with 
+presence of HCP (Horgan et al., 2020).
+5.5. Implications for the Aqueous History of Jezero
+Fluvial activity on Mars did not end with the demise of the late Noachian fluvial stage. In addition to large 
+outflow channels (Head,  2007, and references therein), evidence for at least episodic fluvial activity has 
+also been presented, e.g., in the form of reactivation of Noachian valleys (Baker & Partridge,  1986), im-
+pact-induced melting of ice (Morgan & Head, 2009), morphology of alluvial fans (Goddard et al., 2014; Kite 
+et al., 2017) and deltas around Chryse Planitia and the Aeolis region (Hauber et al., 2013), fluvial landforms 
+on fresh impact ejecta (Mangold, 2012), and estimations of runoff production over time (Kite et al.,  2019), 
+as well as evidence for lacustrine activity in Gale crater extending into the Hesperian era (e.g., Grotzinger 
+et al.,  2013, 2015). Late-stage reactivation of the downstream part of the fluvial system feeding sediment 
+into Jezero crater has also been proposed by Mangold et al. ( 2020). In the near-Jezero region, there is con -
+siderable evidence for fluvial activity extending well into the Hesperian illustrated, for instance, by the pres-
+ence of an alluvial fan inside of Hargraves crater (which is Hesperian in age; Goudge et al.,  2015; Mangold 
+et al., 2007), and observations of fluvial landforms in the Syrtis Major area [Mangold et al.,  2008; see also 
+discussion in Mangold et al. ( 2020)]. We suggest that at least one episode of fluvial reactivation happened 
+after deposition of the youngest lithified crater floor unit, here taken as the Cf-fr unit, because we show that 
+the youngest deltaic sediments clearly occur higher in the overall stratigraphy than the floor units.
+As discussed, the ages obtained from crater counting on the floor and western delta are not necessari -
+ly straight-forward to transfer to an estimate of the timing of fluvial activity in Jezero. Therefore, we are 
+limited to reporting that there was fluvial activity in the area after deposition of the youngest crater floor 
+units. Further support for late-stage fluvial deposition, even if short-lived and limited in terms of sediment 
+HOLM-ALWMARK ET AL.
+10.1029/2021JE006840
+26 of 31Journal of Geophysical Research: Planets
+volume delivery to the lake, is the general slope of the crater floor, which is more prominent from north 
+to south than from west to east (Figure  9). One possible explanation for this observation is that deposition 
+from the north had a greater impact on the crater floor geomorphology than deposition from the west that 
+resulted in the current expression of the western delta. Temporary late-stage fluvial activity on Mars has 
+been attributed to numerous processes, such as climate variations (Kite et al., 2017, 2019), volcanic activity 
+(Gulick, 1998; Gulick & Baker, 1990), and impact cratering (Goddard et al., 2014; Mangold, 2012; Salese, Di 
+Achille, et al., 2016; Segura et al., 2008), although the process inducing late fluvial activity in Jezero crater 
+specifically, is not presently known (Mangold et al.,  2020). Given that late-stage reactivation of the fluvial 
+system might not have happened during a time of more broadly habitable conditions, but rather during a 
+short-lived temporary humid episode (see references above), our observations are relevant for searching for 
+signs of past life in Jezero crater. Our observations also improve the understanding of crater floor materials 
+and their stratigraphy in Jezero, something that is essential for sample collection strategies (e.g., Farley 
+et al., 2020).
+We have presented hypotheses for the stratigraphic relations between and origin of units in Jezero crater 
+that ultimately will require in-situ investigation, or even sample return, for testing. Analysis of high-resolu-
+tion images, geochemical and spectral data, and ground-penetrating radar data acquired by instruments on 
+Perseverance will provide critical insights into the complex geologic history of Jezero crater.
+6. Conclusions
+We present new observations of the stratigraphic relationship between crater-fill units in and near the land-
+ing area for the Mars 2020 mission in Jezero crater. Analysis of topographic profiles and DEMs across the 
+western delta and crater floor units reveal that the present expression of the delta, i.e., the present delta 
+scarp and delta-associated remnant deposits, is younger than at least the youngest significant crater floor 
+unit (Cf-fr), and possibly also the thin mantling unit that is on top of it (Us). We present the following ob -
+servations in support of that hypothesis:
+1.  The boundary between the Cf-fr and Cf-f-1 units is characterized by shallow depressions, or “moats.” 
+Moats are lacking between delta scarp/associated remnant deposits and the Cf-fr unit. At the contact 
+between the youngest crater floor units and delta-associated remnant deposits, the floor goes right up to 
+the deposits without exposing another unit.
+2.  In addition, we find the youngest crater floor unit(s) slope away from the delta, and this inclination is 
+along axes that are radial to the delta rather than uniform across the unit. This may be consistent with a 
+shared origin, although, e.g., an overlying mantling unit draping existing topography cannot be excluded.
+3.  Fractures on the youngest crater floor units that are oriented roughly perpendicular to the delta scarp 
+abruptly end at the scarp, and we find that one possible explanation for this observation is that the frac-
+ture-forming event took place before the western delta was deposited.
+4.  Small craters are sparse on areas of the crater floor where the Us unit is most prominent (proximal to the 
+delta), indicating recent coverage of the Cf-fr unit close to the delta by some overlying unit.
+5.  CRISM data indicate that the smoothest areas of the youngest crater floor units stand out as having clear 
+signatures of high-calcium pyroxene (HCP). These areas that are proximal to the delta scarp are also are 
+delta-like in CRISM low-calcium pyroxene (LCP) spectral signature.
+6.  Compared to surrounding crater floor terrain, LCP absorptions are deeper in Us material near the west-
+ern delta front and surrounding the eastern delta remnants. Similarly strong LCP absorptions are also 
+present on the western delta surface. This observed distribution is consistent with LCP-bearing Us mate-
+rial in the crater floor assemblage being derived from or preserved by overlying deltaic material.
+7.  The HCP signatures of the broader crater floor region correspond to a clearly arcuate region of low 
+thermal inertia that appears to possibly correspond with Us and, based on the arcuate shape, to the past 
+extent of the youngest delta deposits.
+8.  Finally, we have also estimated the past minimum extent of the western delta in Jezero to have extended 
+further out compared to the present extent. This area corresponds to, at least, the smoothest area of the 
+Us, indicating that the scarcity of impact craters on the underlying unit near the delta is due to recent 
+coverage.
+HOLM-ALWMARK ET AL.
+10.1029/2021JE006840
+27 of 31Journal of Geophysical Research: Planets
+A scenario where a portion or all of the western delta postdates deposition of the youngest crater floor 
+unit(s) cannot be ruled out on the basis of results of crater counting on the delta and the floor because of the 
+limited area of the delta. In addition, the Cf-fr unit may have been protected from impact cratering during 
+period(s) since its formation.
+Crater-fill deposits in Jezero were deposited during a complex history with multiple fluvial episodes, and 
+the rocks do not only have great potential to shed light on the geologic evolution of Mars, but also hold key 
+information on the evolution of the early Martian climate, surface environments, and habitability.
+Data Availability Statement
+Maps of fractures and small craters reported in this work are available through Holm-Alwmark et al. (2021). 
+For HiRISE mosaic of Jezero crater, see Fergason, Galuszka, et  al.  ( 2020). For data used to produce the 
+DEM (Figure 6), see Fergason, Hare, et al. (2020), Malin et al. (2007); https://astrogeology.usgs.gov/search/
+map/Mars/Mars2020/JEZ_ctx_B_soc_008_DTM_MOLAtopography_DeltaGeoid_20m_Eqc_latTs0_lon0 . 
+CAMP source files “Web-based Spatial Data Infrastructure for Planetary Science Operations” are available 
+on GitHub at https://github.com/NASA-AMMOS/MMGIS.
+References
+Baker, V. R., & Partridge, J. B. (1986). Small Martian valleys: Pristine and degraded morphology. Journal of Geophysical Research , 91, 
+3561–3572. https://doi.org/10.1029/JB091iB03p03561
+Bramble, M. S., Mustard, J. F., & Salvatore, M. R. (2017). The geological history of Northeast Syrtis Major, Mars. Icarus, 293, 66–93. https://
+doi.org/10.1016/j.icarus.2017.03.030
+Brown, A. J., Viviano, C. E., & Goudge, T. A. (2020). Olivine-carbonate mineralogy of the Jezero crater region. Journal of Geophysical 
+Research: Planets, 125, e2019JE006011. https://doi.org/10.1029/2019JE006011
+Calef, F. J. III, Abarca, H. E., Soliman, T., Abercrombie, S. P., & Powell, M. W. (2019). Multi-mission geographic information system: An 
+open source solution for planetary science operations. Paper presented at 4th Planetary Data Workshop, Flagstaff, AZ, Abstract #7071.
+Calef, F. J., Newsom, H., Williams, J., Parker, T. J., Lamb, M., & Grotzinger, J. (2016). Gale crater morphology compared to other high cen-
+tral peak craters on Mars. Paper presented at 47th Lunar and Planetary Science Conference, Houston, TX, Abstract #2822.
+Carr, M. H., & Head, J. W. III (2003). Oceans on Mars: An assessment of the observational evidence and possible fate. Journal of Geophys-
+ical Research, 108(E5), 5042. https://doi.org/10.1029/2002JE001963
+Chapman, M. G., Neukum, G., Dumke, A., Michael, G., van Gasselt, S., Kneissl, T., et al. (2010). Noachian-Hesperian geologic history of 
+the Echus Chasma and Kasei Valles system on Mars: New data and interpretations. Earth and Planetary Science Letters, 294, 256–271. 
+https://doi.org/10.1016/j.epsl.2009.11.032
+Craddock, R. A., & Howard, A. D. (2002). The case for rainfall on a warm, wet early Mars. Journal of Geophysical Research, 107(E11), 5111. 
+https://doi.org/10.1029/2001JE001505
+Davis, J. M., Balme, M., Grindrod, P. M., Williams, R. M. E., & Gupta, S. (2016). Extensive Noachian fluvial systems in Arabia Terra: Impli-
+cations for early Martian climate. Geology, 44, 847–850. https://doi.org/10.1130/G38247.1
+Day, M., & Dorn, T. (2019). Wind in Jezero crater, Mars. Geophysical Research Letters, 46, 3099–3107. https://doi.org/10.1029/2019GL082218
+Edgett, K. S., Edgar, L. A., House, C. H., Grotzinger, J. P., Bennett, K. A., Newsom, H. E., et al. (2018). Multi-cycle sedimentary rocks on 
+Mars and implications. Paper presented at 49th Lunar and Planetary Science Conference, Houston, TX, Abstract #1669.
+Ehlmann, B. L., Mustard, J. F., Fassett, C. I., Schon, S. C., Head, J. W. III, Des Marais, D. J., et al. (2008). Clay minerals in delta deposits and 
+organic preservation potential on Mars. Nature Geoscience, 1, 355–358. https://doi.org/10.1038/ngeo207
+Ehlmann, B. L., Mustard, J. F., Murchie, S. L., Poulet, F., Bishop, J. L., Brown, A. J., et al. (2008). Orbital identification of carbonate-bearing 
+rocks on Mars. Science, 322, 1828–1832. https://doi.org/10.1126/science.1164759
+Ehlmann, B. L., Mustard, J. F., Swayze, G. A., Clark, R. N., Bishop, J. L., Pulet, F., et al. (2009). Identification of hydrated silicate minerals on 
+Mars using MRO-CRISM: Geologic context near Nili Fossae and implications for aqueous alteration. Journal of Geophysical Research, 
+114, E00D08. https://doi.org/10.1029/2009JE003339
+Farley, K. A., Williford, K. M., Stack, K. M., Bhartia, R., Chen, A., de la Torre, M., et al. (2020). Mars 2020 mission overview. Space Science 
+Reviews, 216, 142. https://doi.org/10.1007/s11214-020-00762-y
+Fassett, C. I., & Head, J. W. III (2005). Fluvial sedimentary deposits on Mars: Ancient deltas in a crater lake in the Nili Fossae region. Geo-
+physical Research Letters, 32, L14201. https://doi.org/10.1029/2005GL023456
+Fassett, C. I., & Head, J. W. III (2008a). The timing of Martian valley network activity: Constraints from buffered crater counting. Icarus, 
+195, 61–89. https://doi.org/10.1016/j.icarus.2007.12.009
+Fassett, C. I., & Head, J. W. III (2008b). Valley network-fed, open-basin lakes on Mars: Distribution and implications for Noachian surface 
+and subsurface hydrology. Icarus, 198, 37–56. https://doi.org/10.1016/j.icarus.2008.06.016
+Fergason, R. L., Christensen, P. R., & Kieffer, H. H. (2006). High-resolution thermal inertia derived from the thermal emission imaging sys-
+tem (THEMIS): Thermal model and applications. Journal of Geophysical Research, 111, E12004. https://doi.org/10.1029/2006JE002735
+Fergason, R. L., Galuszka, D. M., Hare, T. M., Mayer, D. P., & Redding, B. L. (2020). Mars 2020 terrain relative navigation HiRISE orthorec-
+tified image mosaic [data set]. U.S. Geological Survey. https://doi.org/10.5066/P9QJDP48
+Fergason, R. L., Hare, T. M., Mayer, D. P., Galuszka, D. M., Redding, B. L., Smith, E. D., et al. (2020). Mars 2020 terrain relative navigation 
+flight product generation: Digital terrain model and orthorectified image mosaics. Paper presented at 51st Lunar and Planetary Science 
+Conference, Houston, TX, Abstract #2020.
+Garvin, J. B., Sakimoto, S. E. H., & Frawley, J. J. (2003). Craters on Mars: Global geometric properties from gridded MOLA topography. 
+Paper presented at Sixth Internation Conference on Mars, Pasadena, CA, Abstract #3277.
+HOLM-ALWMARK ET AL.
+10.1029/2021JE006840
+28 of 31
+Acknowledgments
+Danish participation in the Mars 
+2020 project was supported by the 
+Carlsberg Foundation grant CF19-0023. 
+S. Holm-Alwmark is supported by an 
+International Postdoc grant from the 
+Swedish Research Council (Grant 2017-
+06388). J. D. Tarnas was supported by 
+a NASA Postdoctoral Fellowship. The 
+authors want to thank H. Dypvik and S. 
+Ruff for insightful discussions. We also 
+want to thank D. Tirsch for help with 
+the preparation of Figure 1b. Finally, 
+the authors acknowledge thorough and 
+constructive reviews by N. Warner, F. 
+Salese, and one anonymous reviewer, as 
+well as professional editorial handling 
+by D. Rogers.Journal of Geophysical Research: Planets
+Goddard, K., Warner, N. H., Gupta, S., & Kim, J. R. (2014). Mechanisms and timescales of fluvial activity at Mojave and other young Mar-
+tian craters. Journal of Geophysical Research: Planets, 119, 604–634. https://doi.org/10.1002/2013JE004564
+Goehring, L. (2013). Evolving fracture patterns: Columnar joints, mud cracks and polygonal terrain. Philosophical Transactions of the Royal 
+Society A, 371, 20120353. https://doi.org/10.1098/rsta.2012.0353
+Golder, K., Miklusicak, N., Spaulding, R., Atkins, J., Hicks, T., Shaver, E., & Kah, L. (2020). Behavioral characteristics of dark-toned crater 
+floor materials, Jezero crater: Implications for mode of emplacement. Paper presented at 51st Lunar and Planetary Science Conference, 
+Houston, TX, Abstract #1302.
+Golder, K. B., Burr, D. M., & Kattenhorn, S. A. (2020). Investigation of target property effects on crater populations in long lava flows: A 
+study in the Cerberus region, Mars, with implications for magma source identification. Icarus, 335, 113388. https://doi.org/10.1016/j.
+icarus.2019.113388
+Golombek, M. P., & Bridges, N. T. (2000). Erosion rates on Mars and implications for climate change: Constraints from the Pathfinder 
+landing site. Journal of Geophysical Research, 105, 1841–1853. https://doi.org/10.1029/1999JE001043
+Golombek, M. P., Grant, J. A., Crumpler, L. S., Greeley, R., Arvidson, R. E., Bell, J. F. III, et  al. (2006). Erosion rates at the Mars ex -
+ploration rover landing sites and long-term climate change on Mars. Journal of Geophysical Research , 111, E12S10. https://doi.
+org/10.1029/2006JE002754
+Goudge, T. A., Head, J. W., Mustard, J. F., & Fassett, C. I. (2012). An analysis of open-basin Lake deposits on Mars: Evidence for the 
+nature of associated lacustrine deposits and post-lacustrine modification processes. Icarus, 219, 211–229. https://doi.org/10.1016/j.
+icarus.2012.02.027
+Goudge, T. A., Milliken, R. E., Head, J. W., Mustard, J. F., & Fassett, C. I. (2017). Sedimentological evidence for a deltaic origin of the west-
+ern fan deposit in Jezero crater, Mars and implications for future exploration. Earth and Planetary Science Letters, 458, 357–365. https://
+doi.org/10.1016/j.epsl.2016.10.056
+Goudge, T. A., Mohrig, D., Cardenas, B. T., Hughes, C. M., & Fassett, C. I. (2018). Stratigraphy and paleohydrology of delta channel depos-
+its, Jezero crater, Mars. Icarus, 301, 58–75. https://doi.org/10.1016/j.icarus.2017.09.034
+Goudge, T. A., Mustard, J. F., Head, J. W., Fassett, C. I., & Wiseman, S. M. (2015). Assessing the mineralogy of the watershed and fan deposits of 
+the Jezero crater paleolake system, Mars. Journal of Geophysical Research: Planets, 120, 775–808. https://doi.org/10.1002/2014JE004782
+Grant, J. A., & Schultz, P. H. (1990). Gradational epochs on Mars: Evidence from west-northwest Isidis Basin and Electris. Icarus, 84, 
+166–195. https://doi.org/10.1016/0019-1035(90)90164-5
+Grau Galofre, A., Jellinek, A. M., & Osinski, G. R. (2020). Valley formation on early Mars by subglacial and fluvial erosion. Nature Geosci-
+ence, 13, 663–668. https://doi.org/10.1038/s41561-020-0618-x
+Grotzinger, J. P., Gupta, S., Malin, M. C., Rubin, D. M., Schieber, J., Siebach, K., et al. (2015). Deposition, exhumation, and paleoclimate of 
+an ancient lake deposit, Gale crater, Mars. Science, 350, aac7575. https://doi.org/10.1126/science.aac7575
+Grotzinger, J. P., Sumner, D. Y., Kah, L. C., Stack, K., Gupta, S., Edgar, L., et al. (2013). A Habitable fluvio-lacustrine environment at Yel-
+lowknife Bay, Gale Crater, Mars. Science, 343, 1242777. https://doi.org/10.1126/science.1242777
+Gudmundsson, A. (2011). Rock fractures in geological processes  (p. 578). Cambridge, UK: Cambridge University Press. https://doi.
+org/10.1017/CBO9780511975684
+Gudmundsson, A., & Brenner, S. L. (2001). How hydrofractures become arrested. Terra Nova , 13, 456–462. https://doi.
+org/10.1046/j.1365-3121.2001.00380.x
+Gudmundsson, A., Fjeldskaar, I., & Brenner, S. L. (2002). Propagation pathways and fluid transport of hydrofractures in joint -
+ed and layered rocks in geothermal fields. Journal of Volcanology and Geothermal Research , 116, 257–278. https://doi.org/10.1016/
+S0377-0273(02)00225-1
+Gulick, V. C. (1998). Magmatic intrusions and a hydrothermal origin for fluvial valleys on Mars. Journal of Geophysical Research , 103, 
+19365–19387. https://doi.org/10.1029/98JE01321
+Gulick, V. C., & Baker, V. R. (1990). Origin and evolution of valleys on Martian volcanoes. Journal of Geophysical Research , 95, 14325–
+14344. https://doi.org/10.1029/JB095iB09p14325
+Hartmann, W. K., Anguita, J., de la Casa, M. A., Berman, D. C., & Ryan, E. V. (2001). Martian cratering 7: The role of impact gardening. 
+Icarus, 149, 37–53. https://doi.org/10.1006/icar.2000.6532
+Hauber, E., Platz, T., Reiss, D., Le Deit, L., Kleinhans, M. G., Marra, W. A., et  al. (2013). Asynchronous formation of Hesperian and 
+Amazonian-aged deltas on Mars and implications for climate. Journal of Geophysical Research: Planets , 118, 1529–1544. https://doi.
+org/10.1002/jgre.20107
+Hauber, E., van Gasselt, S., Chapman, M. G., & Neukum, G. (2008). Geomorphic evidence for former lobate debris aprons at low latitudes 
+on Mars: Indicators of the Martian paleoclimate. Journal of Geophysical Research, 113, E02007. https://doi.org/10.1029/2007JE002897
+Head, J. (2007). The geology of Mars: New insights and outstanding questions. In M. Chapman (Ed.), The geology of Mars: Evidence from 
+Earth-based analogs (pp. 1–46). Cambridge, UK: Cambridge University Press. https://doi.org/10.1017/CBO9780511536014.002
+Herd, C. D. K., Bosak, T., Stack, K. M., Sun, V. Z., Benison, K. C., Cohen, B. A., et al. (2021). Sampling Mars: Notional caches from Mars 
+2020 strategic planning. Paper presented at 52nd Lunar and Planetary Science Conference, Houston, TX, Abstract #1987.
+Hoke, M. R. T., & Hynek, B. M. (2009). Roaming zones of precipitation on ancient Mars as recorded in valley networks. Journal of Geophys-
+ical Research, 114, E08002. https://doi.org/10.1029/2008JE003247
+Holm-Alwmark, S., Kinch, K. M., Hansen, M. D., Shahrzad, S., Svennevig, K., & Abbey, W. J. (2021). Data Repository: Stratigraphic relation-
+ships in Jezero crater, Mars—Constraints on the timing of fluvial-lacustrine activity from orbital observations. Harvard Dataverse. https://
+doi.org/10.7910/DVN/DGMT4H
+Holo, S. J., & Kite, E. S. (2017). Incision of the Jezero Crater outflow channel by fluvial sediment transport. Paper presented at Fourth 
+International Conference on Early Mars: Geologic, Hydrologic, and Climatic Evolution and the Implications for Life, Flagstaff, AZ, 
+Abstract ID 3007.
+Horgan, B. H. N., Anderson, R. B., Dromart, G., Amador, E. S., & Rice, M. S. (2020). The mineral diversity of Jezero crater: Evidence for 
+possible lacustrine carbonates on Mars. Icarus, 339, 113526. https://doi.org/10.1016/j.icarus.2019.113526
+Howard, A. D., Moore, J. M., & Irwin, R. P. III. (2005). An intense terminal epoch of widespread fluvial activity on early Mars: 1. Valley 
+network incision and associated deposits. Journal of Geophysical Research, 110, E12S14. https://doi.org/10.1029/2005JE002459
+Hundal, C. B., Mustard, J. F., & Kremer, C. H. (2020). Origin of the pitted capping unit IN NILI FOSSAE, MARS. Paper presented at the 
+51st Lunar and Planetary Science Conference, Abstract #1629.
+Hynek, B. M., Beach, M., & Hoke, M. R. T. (2010). Updated global map of Martian valley networks and implications for climate and hydro-
+logic processes. Journal of Geophysical Research, 115, E09008. https://doi.org/10.1029/2009JE003548
+HOLM-ALWMARK ET AL.
+10.1029/2021JE006840
+29 of 31Journal of Geophysical Research: Planets
+Irwin, R. P. III, Craddock, R. A., & Howard, A. D. (2005). Interior channels in Martian valley networks: Discharge and runoff production. 
+Geology, 33, 489–492. https://doi.org/10.1130/G21333.1
+Irwin, R. P. III, Howard, A. D., Craddock, R. A., & Moore, J. M. (2005). An intense terminal epoch of widespread fluvial activity on early Mars: 
+2. Increased runoff and paleolake development. Journal of Geophysical Research, 110, E12S15. https://doi.org/10.1029/2005JE002460
+Jaeger, W. L., Keszthelyi, L., Skinner, J. A. Jr., Milazzo, M. P., McEwen, A. S., Titus, T. N., et al. (2010). Emplacement of the youngest flood 
+lava on Mars: A short, turbulent story. Icarus, 205, 230–243. https://doi.org/10.1016/j.icarus.2009.09.011
+Kah, L., Scheller, E., Eide, S., Meyen, E., Jacob, S., Spaulding, R., et al. (2020). Depositional relationships between crater floor materials in 
+Jezero crater, Mars. Paper presented at 51st Lunar and Planetary Science Conference, Houston, TX, Abstract #1301.
+Keszthelyi, L., McEwen, S., & Thordarson, T. (2000). Terrestrial analogs and thermal models for Martian flood lavas. Journal of Geophysical 
+Research, 105, 15027–15049. https://doi.org/10.1029/1999JE001191
+Kite, E. S. (2019). Geologic constraints on early Mars climate. Space Science Reviews, 215, 10. https://doi.org/10.1007/s11214-018-0575-5
+Kite, E. S., Mayer, D. P., Wilson, S. A., Davis, J. M., Lucas, A. S., & Stucky de Quay, G. (2019). Persistence of intense, climate-driven runoff 
+late in Mars history. Science Advances, 5, eaav7710. https://doi.org/10.1126/sciadv.aav7710
+Kite, E. S., Sneed, J., Mayer, D. P., & Wilson, S. A. (2017). Persistent or repeated surface habitability on Mars during the late Hesperian—
+Amazonian. Geophysical Research Letters, 44, 3991–3999. https://doi.org/10.1002/2017GL072660
+Knade, J., Hauber, E., Platz, T., Le Deit, L., & Kinch, K. (2017). Detailed geological mapping of the fluvial deposits in Magong crater, Xanthe 
+Terra, Mars. Paper presented at European Planetary Science Congress, Riga, Latvia, Abstract ID 11.
+Kneissl, T., van Gasselt, S., & Neukum, G. (2011). Map-projection-independent crater size-frequency determination in GIS environments—
+New software tool for ArcGIS. Planetary and Space Science, 59, 1243–1254. https://doi.org/10.1016/j.pss.2010.03.015
+Kremer, C. H., Mustard, J. F., & Bramble, M. S. (2019). A widespread olivine-rich ash deposit on Mars. Geology, 47, 677–681. https://doi.
+org/10.1130/G45563.1
+Kronyak, R. E., Kah, L. C., Edgett, K. S., VanBommel, S. J., Thompson, L. M., Wiens, et al. (2019). Mineral-filled fractures as indicators 
+of multigenerational fluid flow in the Pahrump Hills Member of the Murray Formation, Gale crater, Mars. Earth and Space Science, 6, 
+238–265. https://doi.org/10.1029/2018EA000482
+Kronyak, R. E., Kah, L. C., Miklusicak, N. B., Edgett, K. S., Sun, V. Z., Bryk, A. B., et al. (2019). Extensive polygonal fracture network in sic-
+car point group strata: Fracture mechanisms and implications for fluid circulation in gale crater, Mars. Journal of Geophysical Research: 
+Planets, 124, 2613–2634. https://doi.org/10.1029/2019JE006125
+Kukkonen, S., & Kostama, V.-P. (2018). Usability of small impact craters on small surface areas in crater count dating: Analysing examples 
+from the Harmakhis Vallis outflow channel, Mars. Icarus, 305, 33–49. https://doi.org/10.1016/j.icarus.2018.01.004
+Lapôtre, M. G. A., & Ielpi, A. (2020). The pace of fluvial meanders on mars and implications for the western delta deposits of Jezero crater. 
+AGU Advances, 1, e2019AV000141. https://doi.org/10.1029/2019AV000141
+Malin, M. C., Bell, J. F. III, Cantor, B. A., Caplinger, M. A., Calvin, W. M., Clancy, R. T., et al. (2007). Context Camera Investigation on board 
+the Mars Reconnaissance Orbiter. Journal of Geophysical Research, 112, E05S04. https://doi.org/10.1029/2006JE002808
+Malin, M. C., & Edgett, K. S. (2000). Sedimentary rocks of early Mars. Science, 290, 1927–1937. https://doi.org/10.1126/science.290.5498.1927
+Malin, M. C., & Edgett, K. S. (2001). Mars global surveyor mars orbiter camera: Interplanetary cruise through primary mission. Journal of 
+Geophysical Research, 106, 23429–23570. https://doi.org/10.1029/2000JE001455
+Mandl, G. (2005). Rock joints: The mechanical genesis. Berlin, Germany: Springer.
+Mandon, L., Quantin-Nataf, C., Thollot, P., Mangold, N., Lozac'h, L., Dromart, G., et al. (2020). Refining the age, emplacement and altera-
+tion scenarios of the olivine-rich unit in the Nili Fossae region, Mars. Icarus, 336, 113436. https://doi.org/10.1016/j.icarus.2019.113436
+Mangold, N. (2012). Fluvial landforms on fresh ejecta craters. Planetary and Space Science , 62, 69–85. https://doi.org/10.1016/j.
+pss.2011.12.009
+Mangold, N., Ansan, V., Masson, P., Quantin, C., & Neukum, G. (2008). Geomorphic study of fluvial landforms on the northern Valles 
+Marineris plateau, Mars. Journal of Geophysical Research, 113, E08009. https://doi.org/10.1029/2007JE002985
+Mangold, N., Dromart, G., Ansan, V., Salese, F., Kleinhans, M. G., Massé, M., et al. (2020). Fluvial regimes, morphometry, and age of Jezero 
+crater paleolake inlet valleys and their exobiological significance for the 2020 rover mission landing site. Astrobiology, 20, 994–1013. 
+https://doi.org/10.1089/ast.2019.2132
+Mangold, N., Loizeau, D., Poulet, F., Ansan, V., Baratoux, D., LeMouelic, S., et  al. (2010). Mineralogy of recent volcanic plains in the 
+Tharsis region, Mars, and implications for platy-ridged flow composition. Earth and Planetary Science Letters, 294, 440–450. https://doi.
+org/10.1016/j.epsl.2009.07.036
+Mangold, N., Poulet, F., Mustard, J. F., Bibring, J.-P., Gondet, B., Langevin, Y., et  al. (2007). Mineralogy of the Nili Fossae region 
+with OMEGA/Mars Express data: 2. Aqueous alteration of the crust. Journal of Geophysical Research , 112, E08S04. https://doi.
+org/10.1029/2006JE002835
+Manville, V. K., Németh, K., & Kano, K. (2009). Source to sink: A review of three decades of progress in the understanding of volcaniclastic 
+processes, deposits, and hazards. Sedimentary Geology, 220, 136–161. https://doi.org/10.1016/j.sedgeo.2009.04.022
+Marchi, S. (2021). A mew Martian crater chronology: Implications for Jezero crater. The Astronomical Journal , 161, 187. https://doi.
+org/10.3847/1538-3881/abe417
+McEwen, A., Hansen, C., Bridges, N., Delamere, W. A., Eliason, E., Grant, J., et al. (2003). MRO's High Resolution Imaging Science Ex -
+periment (HiRISE): Science expectations. Paper presented at Sixth International Conference on Mars, Pasadena, CA, Abstract #3217.
+Miklusicak, N., Atkins, J., Boring, B., Hicks, T., Shaver, E., Spaulding, R., et al. (2020). Large fractures in Jezero crater: Implications for 
+understanding dark-toned crater floor materials. Paper presented at 51st Lunar and Planetary Science Conference, Houston, TX, Ab -
+stract #1303.
+Morgan, G. A., & Head, J. W. (2009). Sinton crater, Mars: Evidence for impact into a plateau icefield and melting to produce valley networks 
+at the Hesperian-Amazonian boundary. Icarus, 202, 39–59. https://doi.org/10.1016/j.icarus.2009.02.025
+Mustard, J. F., Poulet, F., Gendrin, A., Bibring, J. -P., Langevin, Y., Gondet, B., et al. (2005). Olivine and pyroxene diversity in the crust of 
+Mars. Science, 307, 1594–1597. https://doi.org/10.1126/science.1109098
+Osinski, G. R., Grieve, R. A. F., Bleacher, J., Neish, C. D., Pilles, E. A., & Tornabene, L. L. (2018). Igneous rocks formed by hypervelocity 
+impact. Journal of Volcanology and Geothermal Research, 353, 25–54. https://doi.org/10.1016/j.jvolgeores.2018.01.015
+Palucis, M. C., Jasper, J., Garczynski, B., & Dietrich, W. E. (2020). Quantitative assessment of uncertainties in modeled crater retention ages 
+on Mars. Icarus, 341, 113623. https://doi.org/10.1016/j.icarus.2020.113623
+Palumbo, A. M., Head, J. W., & Wilson, L. (2020). Rainfall on Noachian Mars: Nature, timing, and influence on geologic processes and 
+climate history. Icarus, 347, 113782. https://doi.org/10.1016/j.icarus.2020.113782
+HOLM-ALWMARK ET AL.
+10.1029/2021JE006840
+30 of 31Journal of Geophysical Research: Planets
+Peacock, D. C. P., Sanderson, D. J., & Rotevatn, A. (2018). Relationships between fractures. Journal of Structural Geology , 106, 41–53. 
+https://doi.org/10.1016/j.jsg.2017.11.010
+Philipp, S. L., Afşar, F., & Gudmundsson, A. (2013). Effects of mechanical layering on hydrofracture emplacement and fluid transport in 
+reservoirs. Frontiers in Earth Science, 1, 1–19. https://doi.org/10.3389/feart.2013.00004
+Quantin-Nataf, C., Craddock, R. A., Dubuffet, F., Lozac'h, L., & Martinot, M. (2019). Decline of crater obliteration rates during early Mar-
+tian history. Icarus, 317, 427–433. https://doi.org/10.1016/j.icarus.2018.08.005
+Quantin-Nataf, C., Holm-Alwmark, S., Lasue, J., Calef, F. J., Shuster, D., Kinch, K. M., et al. (2021). The complex exhumation history of 
+Jezero crater floor unit. Paper presented at 52nd Lunar and Planetary Science Conference, Houston, TX, Abstract #2034.
+Ramirez, R. M., Craddock, R. A., & Usui, T. (2020). Climate simulations of early Mars with estimated precipitation, runoff, and erosion 
+rates. Journal of Geophysical Research: Planets, 125, e2019JE006160. https://doi.org/10.1029/2019JE006160
+Rogers, A. D., Warner, N. H., Golombek, M. P., Head, J. W. III, & Cowart, J. C. (2018). Areally extensive surface bedrock exposures on Mars: 
+Many are clastic rocks, not lavas. Geophysical Research Letters, 45, 1767–1777. https://doi.org/10.1002/2018GL077030
+Ruff, S. W. (2017). Investigating the floor of paleolake Jezero by way of Gusev crater. Paper presented at the Fourth International Confer-
+ence on Early Mars. Flagstaff, AZ, Abstract #3076.
+Salese, F., Ansan, V., Mangold, N., Carter, J., Ody, A., Poulet, F., et al. (2016). A sedimentary origin for intercrater plains north of the Hellas 
+basin: Implications for climate conditions and erosion rates on early Mars. Journal of Geophysical Research: Planets , 121, 2239–2267. 
+https://doi.org/10.1002/2016JE005039
+Salese, F., Di Achille, G., Neesemann, A., Ori, G. G., & Hauber, E. (2016). Hydrological and sedimentary analyses of well-preserved 
+paleofluvial-paleolacustrine systems at Moa Valles, Mars. Journal of Geophysical Research: Planets , 121, 194–232. https://doi.
+org/10.1002/2015JE004891
+Salese, F., Kleinhans, M. G., Mangold, N., Ansan, V., McMahon, W., de Haas, T., & Dromart, G. (2020). Estimated minimum life span of the 
+Jezero fluvial delta (Mars). Astrobiology, 20, 977–993. https://doi.org/10.1089/ast.2020.2228
+Salese, F., Mangold, N., Kleinhans, M. G., de Haas, T., Ansan, V., & Dromart, G. (2019). Estimated minimum lifespan of the Jezero crater 
+delta, Mars. Paper presented at 50th Lunar and Planetary Science Conference, Houston, TX, Abstract #2107.
+Salese, F., McMahon, W. J., Balme, M. R., Ansan, V., Davis, J. M., & Kleinhans, M. G. (2020). Sustained fluvial deposition recorded in Mars' 
+Noachian stratigraphic record. Nature Communications, 11, 2067. https://doi.org/10.1038/s41467-020-15622-0
+Scheller, E. L., & Ehlmann, B. L. (2020). Composition, stratigraphy, and geological history of the Noachian basement surrounding the Isidis 
+impact basin. Journal of Geophysical Research: Planets, 125, e2019JE006190. https://doi.org/10.1029/2019JE006190
+Schon, S. C., Head, J. W., & Fassett, C. I. (2012). An overfilled lacustrine system and progradational delta in Jezero crater, Mars: Implica -
+tions for Noachian climate. Planetary and Space Science, 67, 28–45. https://doi.org/10.1016/j.pss.2012.02.003
+Segura, T. L., Toon, O. B., & Colaprete, A. (2008). Modeling the environmental effects of moderate-sized impacts on Mars. Journal of Geo-
+physical Research, 113, E11007. https://doi.org/10.1029/2008JE003147
+Shahrzad, S., Kinch, K. M., Goudge, T. A., Fassett, C. I., Needham, D. H., Quantin-Nataf, C., & Knudsen, C. P. (2019). Crater statistics on the 
+dark-toned, maﬁc ﬂoor unit in Jezero crater, Mars. Geophysical Research Letters, 46, 2408–2416. https://doi.org/10.1029/2018GL081402
+Stack, K. M., Edwards, C. S., Grotzinger, J. P., Gupta, S., Sumner, D. Y., Calef, F. J. III, et al. (2016). Comparing orbiter and rover im -
+age-based mapping of an ancient sedimentary environment, Aeolis Palus, Gale crater, Mars. Icarus, 280, 3–21. https://doi.org/10.1016/j.
+icarus.2016.02.024
+Stack, K. M., Williams, N. R., Calef, F. J. III, Sun, V. Z., Williford, K. H., Farley, K. A., et al. (2020). Geology of the Mars 2020 landing site, 
+Jezero crater, Mars: Insights from photo-geologic mapping by the Mars 2020 science team. Space Science Reviews, 216, 127. https://doi.
+org/10.1007/s11214-020-00739-x
+Sun, V. Z., & Stack, K. M. (2020a). Geologic map of Jezero Crater and the Nili Planum region, Mars (Map pamphlet 14 p., 1 sheet, scale 
+1:75,000). U.S. Geological Survey Scientific Investigations. https://doi.org/10.3133/sim3464
+Sun, V. Z., & Stack, K. M. (2020b). Geologic map of the Jezero and Nili Planum regions of Mars 2020. Paper presented at Annual Meeting 
+of Planetary Geologic Mappers, Abstract #7019.
+Viviano-Beck, C. E., Seelos, F. P., Murchie, S. L., Kahn, E. L., Seelos, K. D., Taylor, H. W., et al. (2014). Revised CRISM spectral parame -
+ters and summary products based on the currently detected mineral diversity on Mars. Journal of Geophysical Research: Planets , 119, 
+1403–1431. https://doi.org/10.1002/2014JE004627
+Warner, N. H., Grant, J. A., Wilson, S. A., Golombek, M. P., DeMott, A., Charalambous, C., et al. (2020). An impact crater origin for the 
+InSight landing site at Homestead hollow, Mars: Implications for near surface stratigraphy, surface processes, and erosion rates. Journal 
+of Geophysical Research: Planets, 125, e2019JE006333. https://doi.org/10.1029/2019JE006333
+Warner, N. H., Gupta, S., Calef, F. III, Grindrod, P., Boll, N., & Goddard, K. (2015). Minimum effective area for high resolution crater count-
+ing of Martian terrains. Icarus, 245, 198–240. https://doi.org/10.1016/j.icarus.2014.09.024
+Warner, N. H., Schuyler, A. J., Rogers, A. D., Golombek, M. P., Grant, J., Wilson, S., et al. (2020). Crater morphometry on the mafic floor 
+unit at Jezero crater, Mars: Comparisons to a known basaltic lava plain at the InSight landing site. Geophysical Research Letters , 47, 
+e2020GL089607. https://doi.org/10.1029/2020GL089607
+Watkins, J. A., Grotzinger, J., Stein, N., Banham, S. G., Gupta, S., Rubin, D., et al. (2016). Paleotopography of erosional unconformity, 
+base of Stimson formation, Gale crater, Mars. Paper presented at 47th Lunar and Planetary Science Conference, Houston, TX, Abstract 
+#2939.
+Weertman, J. (1980). The stopping of a rising, liquid-filled crack in the Earth's crust by a freely slipping horizontal joint. Journal of Geo -
+physical Research, 85, 967–976. https://doi.org/10.1029/JB085iB02p00967
+Werner, S. C. (2008). The early Martian evolution—Constraints from basin formation ages. Icarus, 195, 45–60. https://doi.org/10.1016/j.
+icarus.2007.12.008
+Whitehead, J., Grieve, R. A. F., Garvin, J. B., & Spray, J. G. (2010). The effects of crater degradation and target differences on the morphol-
+ogies of Martian complex craters. In W. U. Reimold, & R. L. Gibson (Eds.), Large meteorite impacts and planetary evolution IV (Vol. 465, 
+pp. 67–80). Geological Society of America Special Paper. https://doi.org/10.1130/2010.2465(05)
+HOLM-ALWMARK ET AL.
+10.1029/2021JE006840
+31 of 31

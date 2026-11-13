@@ -16,6 +16,26 @@ The footer separates **Terrain data**, **Scientific validation** and **Route com
 
 ### Scientific review and terrain arithmetic
 
+The 14 November [scientific-control milestone](docs/scientific-control-verification.md) adds reproducible archived rover-site controls and paired HRSC height comparisons. **21 of 41 fixed rover-site definitions map into the preserved crop**, but no image-space residuals or per-site uncertainty validate named-feature registration. The landing kernel's Gaussian latitude was correctly converted to planetocentric latitude; its landing position falls outside this crop. Fixed-site kernel coverage is not a visit date.
+
+Nine native comparisons against separately documented **50 m HRSC sphere/areoid products** reinforce the unresolved CTX height-reference conflict. CTX-minus-HRSC differences range from **−65.28 to +3.45 m** against areoid heights and **+1621.72 to +1695.42 m** against sphere heights expressed relative to the app's sphere. These are diagnostic comparisons across different source cells and processing, not accuracy bounds or a justified correction. HRSC shares the CTX control lineage. Sources now provides expandable **Registration evidence & next requirement** and **Height evidence & next requirement** with authoritative links; scientific status stays Partial and real DEM slopes/costs/routes remain unavailable. No production terrain asset, coordinate transform or algorithm was changed.
+
+Reproduce the new evidence without fetching provider data:
+
+```powershell
+node docs/evidence/scientific-resolution-2026-11-14/registration/fetch-control-sources.mjs --verify-saved
+node docs/evidence/scientific-resolution-2026-11-14/registration/fetch-places-sis.mjs --verify-saved
+uv run --offline --with spiceypy==8.4.0 --with rasterio python docs/evidence/scientific-resolution-2026-11-14/registration/inspect-spice-controls.py
+node docs/evidence/scientific-resolution-2026-11-14/height/fetch-new-evidence.mjs --verify-saved
+node docs/evidence/scientific-resolution-2026-11-14/height/probe-hrsc-headers.mjs --verify-saved
+node docs/evidence/scientific-resolution-2026-11-14/height/inspect-hrsc-ranges.mjs --verify-saved
+node docs/evidence/scientific-resolution-2026-11-14/height/sample-hrsc-controls.mjs --verify-saved
+uv run --offline --with rasterio --with numpy python docs/evidence/scientific-resolution-2026-11-14/height/inspect-alternatives.py --verify-saved
+node docs/evidence/scientific-resolution-2026-11-14/verify-method-evidence.mjs
+```
+
+The Node saved-evidence commands validate receipts/results without provider requests. The SPICE command regenerates deterministic audit JSON/comments and checks source hashes; it never modifies application terrain. Python evidence runtimes are optional build-time tools, and `--offline` requires those packages already cached (omit it for initial dependency installation). Normal app setup still requires only npm. Registration/height findings and their concrete remaining evidence requirements live under `docs/evidence/scientific-resolution-2026-11-14/`.
+
 Fresh authoritative feature records and native metadata validate coordinate conventions, source corners and cell-center mapping. They provide no independent landmark residuals or compatible MDIM 2.1 transformation. [The feature audit](docs/evidence/scientific-validation/feature-registration-audit.md) keeps that boundary explicit.
 
 The exact DEM metadata declares metre heights relative to the 3,396,190 m IAU sphere. Nine coarse numerical PDS MOLA probes disagree with that interpretation by **1.626–1.699 km**, while lying much closer to MOLA areoid topography. Different resolution, interpolation and statistical definitions prevent treating these probes as exact accuracy measurements or a validated conversion. [The height audit](docs/evidence/scientific-validation/height-reference-audit.md) records the conflict. No sample, datum label, crop or pinned asset hash was changed.

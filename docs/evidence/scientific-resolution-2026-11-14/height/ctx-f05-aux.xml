@@ -1,0 +1,15 @@
+<PAMDataset>
+  <Metadata>
+    <MDI key="GEOID">mola</MDI>
+  </Metadata>
+  <PAMRasterBand band="1">
+    <Metadata>
+      <MDI key="STATISTICS_APPROXIMATE">YES</MDI>
+      <MDI key="STATISTICS_MAXIMUM">-1384.0648193359</MDI>
+      <MDI key="STATISTICS_MEAN">-2253.0362647802</MDI>
+      <MDI key="STATISTICS_MINIMUM">-2633.7604980469</MDI>
+      <MDI key="STATISTICS_STDDEV">289.73153688261</MDI>
+      <MDI key="STATISTICS_VALID_PERCENT">71.57</MDI>
+    </Metadata>
+  </PAMRasterBand>
+</PAMDataset>

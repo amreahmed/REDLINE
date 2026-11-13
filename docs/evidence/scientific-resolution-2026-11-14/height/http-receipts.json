@@ -1,0 +1,222 @@
+[
+  {
+    "file": "jezero-stratigraphy-2021.pdf",
+    "requestedUrl": "https://elib.dlr.de/143146/1/Holm-Alwmark_et_al.Jezero_Floor_Stratigraphy.JGR_2021.pdf",
+    "finalUrl": "https://elib.dlr.de/143146/1/Holm-Alwmark_et_al.Jezero_Floor_Stratigraphy.JGR_2021.pdf",
+    "startedAt": "2026-11-13T22:12:53.994Z",
+    "retrievedAt": "2026-11-13T22:13:19.663Z",
+    "status": 200,
+    "contentType": "application/pdf",
+    "bytes": 13650758,
+    "sha256": "0398fd9ffecd405f9ed732a9e15f82639fb126cf53e3bd5a3b2b3eb219fe5801"
+  },
+  {
+    "file": "usgs-hirise-ard-docs.html",
+    "requestedUrl": "https://stac.astrogeology.usgs.gov/docs/data/mars/hirise_dtms/",
+    "finalUrl": "https://stac.astrogeology.usgs.gov/docs/data/mars/hirise_dtms/",
+    "startedAt": "2026-11-13T22:12:54.046Z",
+    "retrievedAt": "2026-11-13T22:12:54.393Z",
+    "status": 200,
+    "contentType": "text/html",
+    "bytes": 176888,
+    "sha256": "614a40f93806e878b0113d533720d16096f779f5192327fa5165e6b3ba174f3f"
+  },
+  {
+    "file": "hirise-dtm-about.html",
+    "requestedUrl": "https://www.uahirise.org/dtm/about.php",
+    "finalUrl": "https://www.uahirise.org/dtm/about.php",
+    "startedAt": "2026-11-13T22:12:54.047Z",
+    "retrievedAt": "2026-11-13T22:12:54.934Z",
+    "status": 200,
+    "contentType": "text/html; charset=UTF-8",
+    "bytes": 21189,
+    "sha256": "78bb364d79e616ceffa5179d1c7dd6ed0bb2ba529d0b9008571baee0ee902bc0"
+  },
+  {
+    "file": "hirise-rdr-sis.pdf",
+    "requestedUrl": "https://hirise-pds.lpl.arizona.edu/PDS4/DOCUMENT/HIRISE_RDR_SIS.PDF",
+    "finalUrl": "https://hirise-pds.lpl.arizona.edu/PDS4/DOCUMENT/HIRISE_RDR_SIS.PDF",
+    "startedAt": "2026-11-13T22:12:54.049Z",
+    "retrievedAt": "2026-11-13T22:13:01.238Z",
+    "status": 200,
+    "contentType": "application/pdf",
+    "bytes": 1260783,
+    "sha256": "3a097992dcc75123f41515ee626450a26b1fda2a1d720c9f5722e5ef6c4d535e"
+  },
+  {
+    "file": "hrsc-mc13e-quads.html",
+    "requestedUrl": "https://hrscteam.dlr.de/public/data/HMC30/quads.php?quad=mc13e",
+    "finalUrl": "https://hrscteam.dlr.de/public/data/HMC30/quads.php?quad=mc13e",
+    "startedAt": "2026-11-13T22:12:54.050Z",
+    "retrievedAt": "2026-11-13T22:12:54.535Z",
+    "status": 200,
+    "contentType": "text/html; charset=UTF-8",
+    "bytes": 12236,
+    "sha256": "47851836d1fc3953fe5d0f076bd8c2a5afbe00dc9e1600ce32e709008d6ee927"
+  },
+  {
+    "file": "ctx-f05-aux.xml",
+    "requestedUrl": "https://asc-pds-services.s3.us-west-2.amazonaws.com/mosaic/mars2020_trn/CTX/DTM_MOLAtopography_DeltaGeoid_20m_Jezero_F05X_v7pt1_Eqc_latTs0_lon0.tif.aux.xml",
+    "finalUrl": "https://asc-pds-services.s3.us-west-2.amazonaws.com/mosaic/mars2020_trn/CTX/DTM_MOLAtopography_DeltaGeoid_20m_Jezero_F05X_v7pt1_Eqc_latTs0_lon0.tif.aux.xml",
+    "startedAt": "2026-11-13T22:12:54.052Z",
+    "retrievedAt": "2026-11-13T22:12:54.991Z",
+    "status": 200,
+    "contentType": "binary/octet-stream",
+    "bytes": 498,
+    "sha256": "27434a435191914c4353be48ff8483ca164ea586a84a94966bf841701596a678"
+  },
+  {
+    "file": "ctx-dtm-history-response.xml",
+    "requestedUrl": "https://asc-pds-services.s3.us-west-2.amazonaws.com/mosaic/mars2020_trn/CTX/JEZ_ctx_B_soc_008_DTM_MOLAtopography_DeltaGeoid_20m_Eqc_latTs0_lon0.History.IsisCube",
+    "finalUrl": "https://asc-pds-services.s3.us-west-2.amazonaws.com/mosaic/mars2020_trn/CTX/JEZ_ctx_B_soc_008_DTM_MOLAtopography_DeltaGeoid_20m_Eqc_latTs0_lon0.History.IsisCube",
+    "startedAt": "2026-11-13T22:12:54.053Z",
+    "retrievedAt": "2026-11-13T22:12:55.490Z",
+    "status": 404,
+    "contentType": "application/xml",
+    "bytes": 379,
+    "sha256": "7af2bbe2b7bd8678231335a7e78479864878d3b69e03d1832bac50a67e458c9d"
+  },
+  {
+    "file": "ctx-dtm-aux-response.xml",
+    "requestedUrl": "https://asc-pds-services.s3.us-west-2.amazonaws.com/mosaic/mars2020_trn/CTX/JEZ_ctx_B_soc_008_DTM_MOLAtopography_DeltaGeoid_20m_Eqc_latTs0_lon0.tif.aux.xml",
+    "finalUrl": "https://asc-pds-services.s3.us-west-2.amazonaws.com/mosaic/mars2020_trn/CTX/JEZ_ctx_B_soc_008_DTM_MOLAtopography_DeltaGeoid_20m_Eqc_latTs0_lon0.tif.aux.xml",
+    "startedAt": "2026-11-13T22:12:54.054Z",
+    "retrievedAt": "2026-11-13T22:12:54.934Z",
+    "status": 404,
+    "contentType": "application/xml",
+    "bytes": 374,
+    "sha256": "a1032fe7db0b6b0b38e1ed89f2d0c0a0bcccd4172aec1974b2d9778c05d0709f"
+  },
+  {
+    "file": "ctx-f05-native.tif",
+    "requestedUrl": "https://asc-pds-services.s3.us-west-2.amazonaws.com/mosaic/mars2020_trn/CTX/DTM_MOLAtopography_DeltaGeoid_20m_Jezero_F05X_v7pt1_Eqc_latTs0_lon0.tif",
+    "finalUrl": "https://asc-pds-services.s3.us-west-2.amazonaws.com/mosaic/mars2020_trn/CTX/DTM_MOLAtopography_DeltaGeoid_20m_Jezero_F05X_v7pt1_Eqc_latTs0_lon0.tif",
+    "startedAt": "2026-11-13T22:12:54.054Z",
+    "retrievedAt": "2026-11-13T22:13:25.613Z",
+    "status": 200,
+    "contentType": "image/tiff",
+    "bytes": 10100597,
+    "sha256": "ea24819518708a36663c4ccbc3f2ead3e3c2f487763f722fb23ea8ca489c7425"
+  },
+  {
+    "file": "ctx-j03-native.tif",
+    "requestedUrl": "https://asc-pds-services.s3.us-west-2.amazonaws.com/mosaic/mars2020_trn/CTX/DTM_MOLAtopography_DeltaGeoid_20m_Jezero_J03X_v7pt1_Eqc_latTs0_lon0.tif",
+    "finalUrl": "https://asc-pds-services.s3.us-west-2.amazonaws.com/mosaic/mars2020_trn/CTX/DTM_MOLAtopography_DeltaGeoid_20m_Jezero_J03X_v7pt1_Eqc_latTs0_lon0.tif",
+    "startedAt": "2026-11-13T22:12:54.055Z",
+    "retrievedAt": "2026-11-13T22:13:30.172Z",
+    "status": 200,
+    "contentType": "image/tiff",
+    "bytes": 19773834,
+    "sha256": "679b577323548b7f5244125d84cfb77d601f89b74b1ef4058dcea51609c1885b"
+  },
+  {
+    "file": "ctx-j21-j22-native.tif",
+    "requestedUrl": "https://asc-pds-services.s3.us-west-2.amazonaws.com/mosaic/mars2020_trn/CTX/DTM_MOLAtopography_DeltaGeoid_20m_Jezero_J21_J22X_v7pt1_Eqc_latTs0_lon0.tif",
+    "finalUrl": "https://asc-pds-services.s3.us-west-2.amazonaws.com/mosaic/mars2020_trn/CTX/DTM_MOLAtopography_DeltaGeoid_20m_Jezero_J21_J22X_v7pt1_Eqc_latTs0_lon0.tif",
+    "startedAt": "2026-11-13T22:12:54.056Z",
+    "retrievedAt": "2026-11-13T22:13:20.828Z",
+    "status": 200,
+    "contentType": "image/tiff",
+    "bytes": 8331582,
+    "sha256": "e33ffc7d3c9af2cd60cd1756ac3a43762568f74e8c4b43b75dfd7c6e760ca241"
+  },
+  {
+    "file": "hrsc-readme.txt",
+    "requestedUrl": "https://hrscteam.dlr.de/public/data/HMC30/MC13E/AA_README_HMC30.txt",
+    "finalUrl": "https://hrscteam.dlr.de/public/data/HMC30/MC13E/AA_README_HMC30.txt",
+    "startedAt": "2026-11-13T22:12:54.057Z",
+    "retrievedAt": "2026-11-13T22:12:54.527Z",
+    "status": 200,
+    "contentType": "text/plain",
+    "bytes": 3144,
+    "sha256": "762209af4334682ad4ab8cf8fed74cfc0665503c85ea58031de7ce71bd8dc46c"
+  },
+  {
+    "file": "hrsc-tiling-naming.pdf",
+    "requestedUrl": "https://hrscteam.dlr.de/public/data/HMC30/MC13E/HMC30_tiling_scheme_and_file_naming.pdf",
+    "finalUrl": "https://hrscteam.dlr.de/public/data/HMC30/MC13E/HMC30_tiling_scheme_and_file_naming.pdf",
+    "startedAt": "2026-11-13T22:12:54.057Z",
+    "retrievedAt": "2026-11-13T22:13:02.216Z",
+    "status": 200,
+    "contentType": "application/pdf",
+    "bytes": 1002913,
+    "sha256": "7540d796b186dd497fda2cebc6da8dd3adfda4a203af770b9c89da89de096546"
+  },
+  {
+    "file": "hrsc-jezero-map-2021.pdf",
+    "requestedUrl": "https://www.hou.usra.edu/meetings/lpsc2021/pdf/2509.pdf",
+    "finalUrl": "https://www.hou.usra.edu/meetings/lpsc2021/pdf/2509.pdf",
+    "startedAt": "2026-11-13T22:12:54.057Z",
+    "retrievedAt": "2026-11-13T22:13:01.100Z",
+    "status": 200,
+    "contentType": "application/pdf",
+    "bytes": 3643866,
+    "sha256": "c70f7fc9b2a4e0222d803cbeae6b29c8ccba281598ab16f48ec01e9ecb45b4b8"
+  },
+  {
+    "file": "asp-dem-geoid-source.cc",
+    "requestedUrl": "https://raw.githubusercontent.com/NeoGeographyToolkit/StereoPipeline/master/src/asp/Tools/dem_geoid.cc",
+    "finalUrl": "https://raw.githubusercontent.com/NeoGeographyToolkit/StereoPipeline/master/src/asp/Tools/dem_geoid.cc",
+    "startedAt": "2026-11-13T22:12:54.058Z",
+    "retrievedAt": "2026-11-13T22:12:54.743Z",
+    "status": 200,
+    "contentType": "text/plain; charset=utf-8",
+    "bytes": 21975,
+    "sha256": "e44c9ebc5c95464ae7e96d3790b77d4640d44efd7eddcc3186f4f9b35da4f532"
+  },
+  {
+    "file": "hirise-stac-collection.json",
+    "requestedUrl": "https://stac.astrogeology.usgs.gov/api/collections/mro_hirise_controlled_socet_dtms",
+    "finalUrl": "https://stac.astrogeology.usgs.gov/api/collections/mro_hirise_controlled_socet_dtms",
+    "startedAt": "2026-11-13T22:26:59.047Z",
+    "retrievedAt": "2026-11-13T22:27:00.291Z",
+    "status": 404,
+    "contentType": "application/json; charset=utf-8",
+    "bytes": 45,
+    "sha256": "af4fd3811e63cce89b9eaf67f37b8cadff1f82194fcb9f1e0df2f8abeccfaa0f"
+  },
+  {
+    "file": "hirise-stac-crop-items.json",
+    "requestedUrl": "https://stac.astrogeology.usgs.gov/api/collections/mro_hirise_controlled_socet_dtms/items?bbox=77.33659457394239,18.437093496062143,77.42297207081594,18.523470992935692&limit=100",
+    "finalUrl": "https://stac.astrogeology.usgs.gov/api/collections/mro_hirise_controlled_socet_dtms/items?bbox=77.33659457394239,18.437093496062143,77.42297207081594,18.523470992935692&limit=100",
+    "startedAt": "2026-11-13T22:26:59.098Z",
+    "retrievedAt": "2026-11-13T22:27:00.390Z",
+    "status": 404,
+    "contentType": "application/json; charset=utf-8",
+    "bytes": 45,
+    "sha256": "af4fd3811e63cce89b9eaf67f37b8cadff1f82194fcb9f1e0df2f8abeccfaa0f"
+  },
+  {
+    "file": "stac-collections.json",
+    "requestedUrl": "https://stac.astrogeology.usgs.gov/api/collections",
+    "finalUrl": "https://stac.astrogeology.usgs.gov/api/collections",
+    "startedAt": "2026-11-13T22:28:11.356Z",
+    "retrievedAt": "2026-11-13T22:28:12.723Z",
+    "status": 200,
+    "contentType": "application/json; charset=utf-8",
+    "bytes": 64658,
+    "sha256": "1ef852a2cf239d04a9120279586e1b0e964b358d2410596b4e4da482673eb29b"
+  },
+  {
+    "file": "hirise-current-stac-collection.json",
+    "requestedUrl": "https://stac.astrogeology.usgs.gov/api/collections/mro_hirise_socet_dtms",
+    "finalUrl": "https://stac.astrogeology.usgs.gov/api/collections/mro_hirise_socet_dtms",
+    "startedAt": "2026-11-13T22:33:04.771Z",
+    "retrievedAt": "2026-11-13T22:33:05.489Z",
+    "status": 200,
+    "contentType": "application/json; charset=utf-8",
+    "bytes": 3471,
+    "sha256": "cd78ee81896c27f61a9884406c7de9c2cee3b6107a3ac9a7f6deb95d3b8c5742"
+  },
+  {
+    "file": "hirise-current-stac-crop-items.json",
+    "requestedUrl": "https://stac.astrogeology.usgs.gov/api/collections/mro_hirise_socet_dtms/items?bbox=77.33659457394239,18.437093496062143,77.42297207081594,18.523470992935692&limit=100",
+    "finalUrl": "https://stac.astrogeology.usgs.gov/api/collections/mro_hirise_socet_dtms/items?bbox=77.33659457394239,18.437093496062143,77.42297207081594,18.523470992935692&limit=100",
+    "startedAt": "2026-11-13T22:33:04.827Z",
+    "retrievedAt": "2026-11-13T22:33:06.467Z",
+    "status": 200,
+    "contentType": "application/geo+json; charset=utf-8",
+    "bytes": 20527,
+    "sha256": "00d527eb2904346bab6cb3daefbcfcc43f421853e78815a8214988500f21cfac"
+  }
+]

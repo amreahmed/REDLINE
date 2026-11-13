@@ -1,0 +1,140 @@
+[
+  {
+    "file": "mars2020-spice-archive.html",
+    "requestedUrl": "https://naif.jpl.nasa.gov/pub/naif/pds/pds4/mars2020/mars2020_spice/document/spiceds_v003.html",
+    "finalUrl": "https://naif.jpl.nasa.gov/pub/naif/pds/pds4/mars2020/mars2020_spice/document/spiceds_v003.html",
+    "retrievedUtc": "2026-11-13T22:14:41.447Z",
+    "status": 200,
+    "bytes": 48798,
+    "sha256": "f03b1023f688c2d703defa835b13ecc0ca7d0887fb4b9e6a29d99bb5f7c553e5",
+    "contentType": "text/html; charset=UTF-8",
+    "cors": null
+  },
+  {
+    "file": "spk-index.html",
+    "requestedUrl": "https://naif.jpl.nasa.gov/pub/naif/pds/pds4/mars2020/mars2020_spice/spice_kernels/spk/",
+    "finalUrl": "https://naif.jpl.nasa.gov/pub/naif/pds/pds4/mars2020/mars2020_spice/spice_kernels/spk/",
+    "retrievedUtc": "2026-11-13T22:14:41.507Z",
+    "status": 200,
+    "bytes": 25553,
+    "sha256": "1a874f9c1ec8a57943ca20eb72ef61303c857182a6226c30156e91e929263544",
+    "contentType": "text/html;charset=UTF-8",
+    "cors": null
+  },
+  {
+    "file": "fk-index.html",
+    "requestedUrl": "https://naif.jpl.nasa.gov/pub/naif/pds/pds4/mars2020/mars2020_spice/spice_kernels/fk/",
+    "finalUrl": "https://naif.jpl.nasa.gov/pub/naif/pds/pds4/mars2020/mars2020_spice/spice_kernels/fk/",
+    "retrievedUtc": "2026-11-13T22:14:41.508Z",
+    "status": 200,
+    "bytes": 12320,
+    "sha256": "6cb139a11629e2a49020eeed31ce612be2c170e5ed864880557e79fa9414e49b",
+    "contentType": "text/html;charset=UTF-8",
+    "cors": null
+  },
+  {
+    "file": "pck-index.html",
+    "requestedUrl": "https://naif.jpl.nasa.gov/pub/naif/pds/pds4/mars2020/mars2020_spice/spice_kernels/pck/",
+    "finalUrl": "https://naif.jpl.nasa.gov/pub/naif/pds/pds4/mars2020/mars2020_spice/spice_kernels/pck/",
+    "retrievedUtc": "2026-11-13T22:14:41.509Z",
+    "status": 200,
+    "bytes": 12320,
+    "sha256": "bc3a7ef8edfcfe641b741277c68c50ca3b095f0d42eff91090861d3306181f8a",
+    "contentType": "text/html;charset=UTF-8",
+    "cors": null
+  },
+  {
+    "file": "m2020_ls_ops210303_iau2000_v1.bsp",
+    "requestedUrl": "https://naif.jpl.nasa.gov/pub/naif/pds/pds4/mars2020/mars2020_spice/spice_kernels/spk/m2020_ls_ops210303_iau2000_v1.bsp",
+    "finalUrl": "https://naif.jpl.nasa.gov/pub/naif/pds/pds4/mars2020/mars2020_spice/spice_kernels/spk/m2020_ls_ops210303_iau2000_v1.bsp",
+    "retrievedUtc": "2026-11-13T22:14:41.510Z",
+    "status": 200,
+    "bytes": 7168,
+    "sha256": "ddc80b3a864d1d94a4e11c25778fcb28e67d5a44f7a8dc3fa1588699fa68be64",
+    "contentType": "model/vnd.valve.source.compiled-map",
+    "cors": null
+  },
+  {
+    "file": "m2020_ls_ops210303_iau2000_v1.xml",
+    "requestedUrl": "https://naif.jpl.nasa.gov/pub/naif/pds/pds4/mars2020/mars2020_spice/spice_kernels/spk/m2020_ls_ops210303_iau2000_v1.xml",
+    "finalUrl": "https://naif.jpl.nasa.gov/pub/naif/pds/pds4/mars2020/mars2020_spice/spice_kernels/spk/m2020_ls_ops210303_iau2000_v1.xml",
+    "retrievedUtc": "2026-11-13T22:14:41.510Z",
+    "status": 200,
+    "bytes": 3608,
+    "sha256": "39d905de5a8ff8745a15933982a1350eeb87241a09c3bb4d9201667d4650a0ea",
+    "contentType": "text/xml",
+    "cors": null
+  },
+  {
+    "file": "m2020_v04.tf",
+    "requestedUrl": "https://naif.jpl.nasa.gov/pub/naif/pds/pds4/mars2020/mars2020_spice/spice_kernels/fk/m2020_v04.tf",
+    "finalUrl": "https://naif.jpl.nasa.gov/pub/naif/pds/pds4/mars2020/mars2020_spice/spice_kernels/fk/m2020_v04.tf",
+    "retrievedUtc": "2026-11-13T22:14:41.511Z",
+    "status": 200,
+    "bytes": 142335,
+    "sha256": "b48a472f95e3e895ec96f287090f8d262734e63e38617bc76cb0f36fc9537936",
+    "contentType": "text/plain; charset=UTF-8",
+    "cors": null
+  },
+  {
+    "file": "pck00010.tpc",
+    "requestedUrl": "https://naif.jpl.nasa.gov/pub/naif/pds/pds4/mars2020/mars2020_spice/spice_kernels/pck/pck00010.tpc",
+    "finalUrl": "https://naif.jpl.nasa.gov/pub/naif/pds/pds4/mars2020/mars2020_spice/spice_kernels/pck/pck00010.tpc",
+    "retrievedUtc": "2026-11-13T22:14:41.511Z",
+    "status": 200,
+    "bytes": 126143,
+    "sha256": "59468328349aa730d18bf1f8d7e86efe6e40b75dfb921908f99321b3a7a701d2",
+    "contentType": "text/plain; charset=UTF-8",
+    "cors": null
+  },
+  {
+    "file": "naif0012.tls",
+    "requestedUrl": "https://naif.jpl.nasa.gov/pub/naif/pds/pds4/mars2020/mars2020_spice/spice_kernels/lsk/naif0012.tls",
+    "finalUrl": "https://naif.jpl.nasa.gov/pub/naif/pds/pds4/mars2020/mars2020_spice/spice_kernels/lsk/naif0012.tls",
+    "retrievedUtc": "2026-11-13T22:14:41.512Z",
+    "status": 200,
+    "bytes": 5257,
+    "sha256": "678e32bdb5a744117a467cd9601cd6b373f0e9bc9bbde1371d5eee39600a039b",
+    "contentType": "text/plain; charset=UTF-8",
+    "cors": null
+  },
+  {
+    "file": "m2020_surf_rover_loc_0659_0779_v1.bsp",
+    "requestedUrl": "https://naif.jpl.nasa.gov/pub/naif/pds/pds4/mars2020/mars2020_spice/spice_kernels/spk/m2020_surf_rover_loc_0659_0779_v1.bsp",
+    "finalUrl": "https://naif.jpl.nasa.gov/pub/naif/pds/pds4/mars2020/mars2020_spice/spice_kernels/spk/m2020_surf_rover_loc_0659_0779_v1.bsp",
+    "retrievedUtc": "2026-11-13T22:14:41.513Z",
+    "status": 200,
+    "bytes": 484352,
+    "sha256": "11310d9b2a491086cbd5fb90423c4fd85068b486c7b3f8fb4bfb1d9e9c662dbf",
+    "contentType": "model/vnd.valve.source.compiled-map",
+    "cors": null
+  },
+  {
+    "file": "m2020_surf_rover_loc_0659_0779_v1.xml",
+    "requestedUrl": "https://naif.jpl.nasa.gov/pub/naif/pds/pds4/mars2020/mars2020_spice/spice_kernels/spk/m2020_surf_rover_loc_0659_0779_v1.xml",
+    "finalUrl": "https://naif.jpl.nasa.gov/pub/naif/pds/pds4/mars2020/mars2020_spice/spice_kernels/spk/m2020_surf_rover_loc_0659_0779_v1.xml",
+    "retrievedUtc": "2026-11-13T22:14:41.514Z",
+    "status": 200,
+    "bytes": 3960,
+    "sha256": "50651d2b47983d63bb244522f9fe80dcef29a677579a98e0a12214ae701872d2",
+    "contentType": "text/xml",
+    "cors": null
+  },
+  {
+    "file": "ntrs-actual-landing.html",
+    "requestedUrl": "https://ntrs.nasa.gov/citations/20210024644",
+    "retrievedUtc": "2026-11-13T22:14:41.514Z",
+    "error": "TimeoutError: The operation was aborted due to timeout"
+  },
+  {
+    "file": "cheng2021-publisher-response.html",
+    "requestedUrl": "https://agupubs.onlinelibrary.wiley.com/doi/10.1029/2020EA001560",
+    "finalUrl": "https://agupubs.onlinelibrary.wiley.com/doi/10.1029/2020EA001560",
+    "retrievedUtc": "2026-11-13T22:14:41.515Z",
+    "status": 403,
+    "bytes": 5547,
+    "sha256": "fc50fd8e2b878330130e3b8a0a5ccebbcca6d83afef5bb4db1de6f4a5f8721f8",
+    "contentType": "text/html; charset=UTF-8",
+    "cors": null
+  }
+]

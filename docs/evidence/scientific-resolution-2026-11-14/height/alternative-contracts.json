@@ -1,0 +1,412 @@
+{
+  "ctx-f05-native": {
+    "width": 1828,
+    "height": 2969,
+    "count": 1,
+    "dtypes": [
+      "float32"
+    ],
+    "nodata": -32768.0,
+    "scales": [
+      1.0
+    ],
+    "offsets": [
+      0.0
+    ],
+    "transform": [
+      20.0,
+      0.0,
+      4580604.268505975,
+      0.0,
+      -20.0,
+      1127810.2452260999,
+      0.0,
+      0.0,
+      1.0
+    ],
+    "bounds": [
+      4580604.268505975,
+      1068430.2452260999,
+      4617164.268505975,
+      1127810.2452260999
+    ],
+    "crs": "PROJCS[\"unnamed\",GEOGCS[\"Geographic Coordinate System\",DATUM[\"Mars_2000_(Sphere)\",SPHEROID[\"Mars_2000_Sphere_IAU\",3396190,0],AUTHORITY[\"ESRI\",\"106971\"]],PRIMEM[\"Reference_Meridian\",0],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]]],PROJECTION[\"Equirectangular\"],PARAMETER[\"standard_parallel_1\",0],PARAMETER[\"central_meridian\",0],PARAMETER[\"false_easting\",0],PARAMETER[\"false_northing\",0],UNIT[\"metre\",1,AUTHORITY[\"EPSG\",\"9001\"]],AXIS[\"Easting\",EAST],AXIS[\"Northing\",NORTH]]",
+    "tags": {
+      "GEOID": "mola",
+      "AREA_OR_POINT": "Area"
+    },
+    "band_tags": {},
+    "tag_namespaces": [
+      "IMAGE_STRUCTURE",
+      "DERIVED_SUBDATASETS"
+    ],
+    "image_structure": {
+      "COMPRESSION": "LZW",
+      "INTERLEAVE": "BAND",
+      "PREDICTOR": "3"
+    },
+    "current_grid_fixture_samples": [
+      {
+        "source_cell": [
+          586,
+          522
+        ],
+        "mosaic_value_m": -2377.045654296875,
+        "candidate_value_m": null,
+        "candidate_indices": [
+          1492,
+          175
+        ]
+      },
+      {
+        "source_cell": [
+          586,
+          777
+        ],
+        "mosaic_value_m": -2530.604248046875,
+        "candidate_value_m": -2524.764404296875,
+        "candidate_indices": [
+          1492,
+          430
+        ]
+      },
+      {
+        "source_cell": [
+          841,
+          777
+        ],
+        "mosaic_value_m": -2540.54541015625,
+        "candidate_value_m": -2541.1455078125,
+        "candidate_indices": [
+          1747,
+          430
+        ]
+      },
+      {
+        "source_cell": [
+          841,
+          522
+        ],
+        "mosaic_value_m": -2374.85400390625,
+        "candidate_value_m": null,
+        "candidate_indices": [
+          1747,
+          175
+        ]
+      },
+      {
+        "source_cell": [
+          714,
+          650
+        ],
+        "mosaic_value_m": -2489.27978515625,
+        "candidate_value_m": -2489.12255859375,
+        "candidate_indices": [
+          1620,
+          303
+        ]
+      },
+      {
+        "source_cell": [
+          650,
+          580
+        ],
+        "mosaic_value_m": -2401.48681640625,
+        "candidate_value_m": -2402.184814453125,
+        "candidate_indices": [
+          1556,
+          233
+        ]
+      },
+      {
+        "source_cell": [
+          800,
+          730
+        ],
+        "mosaic_value_m": -2542.51025390625,
+        "candidate_value_m": -2547.18603515625,
+        "candidate_indices": [
+          1706,
+          383
+        ]
+      }
+    ],
+    "sha256": "ea24819518708a36663c4ccbc3f2ead3e3c2f487763f722fb23ea8ca489c7425"
+  },
+  "ctx-j03-native": {
+    "width": 2087,
+    "height": 5278,
+    "count": 1,
+    "dtypes": [
+      "float32"
+    ],
+    "nodata": -32768.0,
+    "scales": [
+      1.0
+    ],
+    "offsets": [
+      0.0
+    ],
+    "transform": [
+      20.0,
+      0.0,
+      4569230.181944477,
+      0.0,
+      -20.0,
+      1145150.2453303998,
+      0.0,
+      0.0,
+      1.0
+    ],
+    "bounds": [
+      4569230.181944477,
+      1039590.2453303998,
+      4610970.181944477,
+      1145150.2453303998
+    ],
+    "crs": "PROJCS[\"unnamed\",GEOGCS[\"Geographic Coordinate System\",DATUM[\"Mars_2000_(Sphere)\",SPHEROID[\"Mars_2000_Sphere_IAU\",3396190,0],AUTHORITY[\"ESRI\",\"106971\"]],PRIMEM[\"Reference_Meridian\",0],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]]],PROJECTION[\"Equirectangular\"],PARAMETER[\"standard_parallel_1\",0],PARAMETER[\"central_meridian\",0],PARAMETER[\"false_easting\",0],PARAMETER[\"false_northing\",0],UNIT[\"metre\",1,AUTHORITY[\"EPSG\",\"9001\"]],AXIS[\"Easting\",EAST],AXIS[\"Northing\",NORTH]]",
+    "tags": {
+      "GEOID": "mola",
+      "AREA_OR_POINT": "Area"
+    },
+    "band_tags": {},
+    "tag_namespaces": [
+      "IMAGE_STRUCTURE",
+      "DERIVED_SUBDATASETS"
+    ],
+    "image_structure": {
+      "COMPRESSION": "LZW",
+      "INTERLEAVE": "BAND",
+      "PREDICTOR": "3"
+    },
+    "current_grid_fixture_samples": [
+      {
+        "source_cell": [
+          586,
+          522
+        ],
+        "mosaic_value_m": -2377.045654296875,
+        "candidate_value_m": -2377.455322265625,
+        "candidate_indices": [
+          2359,
+          744
+        ]
+      },
+      {
+        "source_cell": [
+          586,
+          777
+        ],
+        "mosaic_value_m": -2530.604248046875,
+        "candidate_value_m": -2530.527587890625,
+        "candidate_indices": [
+          2359,
+          999
+        ]
+      },
+      {
+        "source_cell": [
+          841,
+          777
+        ],
+        "mosaic_value_m": -2540.54541015625,
+        "candidate_value_m": -2539.984619140625,
+        "candidate_indices": [
+          2614,
+          999
+        ]
+      },
+      {
+        "source_cell": [
+          841,
+          522
+        ],
+        "mosaic_value_m": -2374.85400390625,
+        "candidate_value_m": -2375.50341796875,
+        "candidate_indices": [
+          2614,
+          744
+        ]
+      },
+      {
+        "source_cell": [
+          714,
+          650
+        ],
+        "mosaic_value_m": -2489.27978515625,
+        "candidate_value_m": -2489.52294921875,
+        "candidate_indices": [
+          2487,
+          872
+        ]
+      },
+      {
+        "source_cell": [
+          650,
+          580
+        ],
+        "mosaic_value_m": -2401.48681640625,
+        "candidate_value_m": -2401.668701171875,
+        "candidate_indices": [
+          2423,
+          802
+        ]
+      },
+      {
+        "source_cell": [
+          800,
+          730
+        ],
+        "mosaic_value_m": -2542.51025390625,
+        "candidate_value_m": -2542.357666015625,
+        "candidate_indices": [
+          2573,
+          952
+        ]
+      }
+    ],
+    "sha256": "679b577323548b7f5244125d84cfb77d601f89b74b1ef4058dcea51609c1885b"
+  },
+  "ctx-j21-j22-native": {
+    "width": 1745,
+    "height": 2253,
+    "count": 1,
+    "dtypes": [
+      "float32"
+    ],
+    "nodata": -32768.0,
+    "scales": [
+      1.0
+    ],
+    "offsets": [
+      0.0
+    ],
+    "transform": [
+      20.0,
+      0.0,
+      4565579.500743819,
+      0.0,
+      -20.0,
+      1105510.2451274998,
+      0.0,
+      0.0,
+      1.0
+    ],
+    "bounds": [
+      4565579.500743819,
+      1060450.2451274998,
+      4600479.500743819,
+      1105510.2451274998
+    ],
+    "crs": "PROJCS[\"unnamed\",GEOGCS[\"Geographic Coordinate System\",DATUM[\"Mars_2000_(Sphere)\",SPHEROID[\"Mars_2000_Sphere_IAU\",3396190,0],AUTHORITY[\"ESRI\",\"106971\"]],PRIMEM[\"Reference_Meridian\",0],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]]],PROJECTION[\"Equirectangular\"],PARAMETER[\"standard_parallel_1\",0],PARAMETER[\"central_meridian\",0],PARAMETER[\"false_easting\",0],PARAMETER[\"false_northing\",0],UNIT[\"metre\",1,AUTHORITY[\"EPSG\",\"9001\"]],AXIS[\"Easting\",EAST],AXIS[\"Northing\",NORTH]]",
+    "tags": {
+      "GEOID": "mola",
+      "AREA_OR_POINT": "Area"
+    },
+    "band_tags": {},
+    "tag_namespaces": [
+      "IMAGE_STRUCTURE",
+      "DERIVED_SUBDATASETS"
+    ],
+    "image_structure": {
+      "COMPRESSION": "LZW",
+      "INTERLEAVE": "BAND",
+      "PREDICTOR": "3"
+    },
+    "current_grid_fixture_samples": [
+      {
+        "source_cell": [
+          586,
+          522
+        ],
+        "mosaic_value_m": -2377.045654296875,
+        "candidate_value_m": -2375.281005859375,
+        "candidate_indices": [
+          377,
+          926
+        ]
+      },
+      {
+        "source_cell": [
+          586,
+          777
+        ],
+        "mosaic_value_m": -2530.604248046875,
+        "candidate_value_m": -2530.608154296875,
+        "candidate_indices": [
+          377,
+          1181
+        ]
+      },
+      {
+        "source_cell": [
+          841,
+          777
+        ],
+        "mosaic_value_m": -2540.54541015625,
+        "candidate_value_m": -2541.122314453125,
+        "candidate_indices": [
+          632,
+          1181
+        ]
+      },
+      {
+        "source_cell": [
+          841,
+          522
+        ],
+        "mosaic_value_m": -2374.85400390625,
+        "candidate_value_m": -2379.117919921875,
+        "candidate_indices": [
+          632,
+          926
+        ]
+      },
+      {
+        "source_cell": [
+          714,
+          650
+        ],
+        "mosaic_value_m": -2489.27978515625,
+        "candidate_value_m": -2486.04345703125,
+        "candidate_indices": [
+          505,
+          1054
+        ]
+      },
+      {
+        "source_cell": [
+          650,
+          580
+        ],
+        "mosaic_value_m": -2401.48681640625,
+        "candidate_value_m": -2399.96533203125,
+        "candidate_indices": [
+          441,
+          984
+        ]
+      },
+      {
+        "source_cell": [
+          800,
+          730
+        ],
+        "mosaic_value_m": -2542.51025390625,
+        "candidate_value_m": -2549.3212890625,
+        "candidate_indices": [
+          591,
+          1134
+        ]
+      }
+    ],
+    "sha256": "e33ffc7d3c9af2cd60cd1756ac3a43762568f74e8c4b43b75dfd7c6e760ca241"
+  },
+  "hrsc-dt5-header": {
+    "header_only_error": "TIFFReadDirectory:Failed to read directory at offset 638205072",
+    "resolved_by": "Receipt-backed tail IFD and pointed metadata ranges in hrsc-tiff-contracts.json; initial 64KiB header alone does not contain the IFD."
+  },
+  "hrsc-da5-header": {
+    "header_only_error": "TIFFReadDirectory:Failed to read directory at offset 638205138",
+    "resolved_by": "Receipt-backed tail IFD and pointed metadata ranges in hrsc-tiff-contracts.json; initial 64KiB header alone does not contain the IFD."
+  }
+}

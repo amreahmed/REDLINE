@@ -10,7 +10,7 @@ import { PlanningTerrainDetails } from '../mission/PlanningTerrainDetails'
 import type { TerrainGrid } from '../../features/terrain/gridTypes'
 import { TerrainInspection } from '../mission/TerrainInspection'
 import { useEffect, useRef } from 'react'
-import { TERRAIN_SCIENTIFIC_REVIEW } from '../../data/terrainScience'
+import { ScientificValidation } from '../mission/ScientificValidation'
 
 export function InformationPanel({ explorer, visibility, statuses, target, inspectionSequence, planningGrid, onClose }: { explorer: ExplorerSummary; visibility: LayerVisibility; statuses: LayerStatuses; target?: ScienceTarget; inspectionSequence: number; planningGrid?: TerrainGrid; onClose: () => void }) {
   const contentRef = useRef<HTMLDivElement>(null)
@@ -24,12 +24,7 @@ export function InformationPanel({ explorer, visibility, statuses, target, inspe
         <button className="icon-button drawer-close" type="button" aria-label="Close sources and status" onClick={onClose}><Icon name="close" size={20} /></button>
       </div>
       <div className="sources-content" ref={contentRef}>
-        <section className="validation-summary" aria-labelledby="validation-heading">
-          <h3 id="validation-heading">Scientific validation</h3>
-          <dl className="scientific-findings"><dt>Native source geometry</dt><dd>Verified against provider geometry and independent cell fixtures</dd><dt>Named-feature registration</dt><dd>Unresolved — precise landmark alignment not established</dd><dt>Elevation height reference</dt><dd>Conflicted / unresolved — real DEM slopes and costs blocked</dd><dt>Terrain arithmetic</dt><dd>Reference-sphere distances validated; grade and cost formulas tested with synthetic fixtures</dd></dl>
-          <p className="helper">Grid endpoint separation is available in Plan. Route comparison requires supported terrain costs and pathfinding.</p>
-          <details className="source-metadata"><summary>Why height-dependent results are blocked</summary><p className="helper">{TERRAIN_SCIENTIFIC_REVIEW.heightReference.limitation}</p><p className="helper">{TERRAIN_SCIENTIFIC_REVIEW.heightDifferences.limitation} The original samples and provider declaration are preserved.</p></details>
-        </section>
+        <ScientificValidation />
         {target && <FeatureDetails target={target} />}
         {planningGrid && <PlanningTerrainDetails grid={planningGrid} />}
         <TerrainInspection target={target} />

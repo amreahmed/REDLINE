@@ -1,0 +1,97 @@
+[
+  {
+    "file": "jezero-west-slopes.html",
+    "requestedUrl": "https://astrogeology.usgs.gov/search/map/topographic_slopes_of_mars_2020_landing_site_jezero_west",
+    "finalUrl": "https://astrogeology.usgs.gov/search/map/topographic_slopes_of_mars_2020_landing_site_jezero_west",
+    "receivedAt": "2026-11-13T22:10:22.699Z",
+    "status": 200,
+    "contentType": "text/html; charset=utf-8",
+    "bytes": 25552,
+    "sha256": "521c5375210937923763a0263216e2f4b375c1511d72aef1f30e8f3134357f6c",
+    "pdfMagic": false
+  },
+  {
+    "file": "fergason-2017-slopes.pdf",
+    "requestedUrl": "https://www.hou.usra.edu/meetings/lpsc2017/pdf/2163.pdf",
+    "finalUrl": "https://www.hou.usra.edu/meetings/lpsc2017/pdf/2163.pdf",
+    "receivedAt": "2026-11-13T22:10:23.150Z",
+    "status": 200,
+    "contentType": "application/pdf",
+    "bytes": 106053,
+    "sha256": "134a3c5f8496a8d22d192cc673c6505cbccf9aedafd6d83321e8123e9712c2d1",
+    "pdfMagic": true
+  },
+  {
+    "file": "kirk-2020-dtm-quality.pdf",
+    "requestedUrl": "https://isprs-archives.copernicus.org/articles/XLIII-B3-2020/1129/2020/isprs-archives-XLIII-B3-2020-1129-2020.pdf",
+    "finalUrl": "https://isprs-archives.copernicus.org/articles/XLIII-B3-2020/1129/2020/isprs-archives-XLIII-B3-2020-1129-2020.pdf",
+    "receivedAt": "2026-11-13T22:10:25.896Z",
+    "status": 200,
+    "contentType": "application/pdf",
+    "bytes": 1564914,
+    "sha256": "eca51307ebb798bb813aa5337e4ffa193f35a4af6831265610ead1ee61481850",
+    "pdfMagic": true
+  },
+  {
+    "file": "kirk-2021-dtm-quality.html",
+    "requestedUrl": "https://www.mdpi.com/2072-4292/13/17/3511",
+    "finalUrl": "https://www.mdpi.com/2072-4292/13/17/3511",
+    "receivedAt": "2026-11-13T22:10:22.938Z",
+    "status": 200,
+    "contentType": "text/html",
+    "bytes": 2194,
+    "sha256": "a7f5affd5619fe6a5af24bda92f274f15569f5a2f7f84cc158584f66ae07a7e5",
+    "pdfMagic": false
+  },
+  {
+    "file": "gwinner-2009-topography.pdf",
+    "requestedUrl": "https://www.ipi.uni-hannover.de/fileadmin/ipi/publications/gwinner_etal_2009_topography_of_mars.pdf",
+    "finalUrl": "https://www.ipi.uni-hannover.de/fileadmin/ipi/publications/gwinner_etal_2009_topography_of_mars.pdf",
+    "receivedAt": "2026-11-13T22:10:27.958Z",
+    "status": 200,
+    "contentType": "application/pdf",
+    "bytes": 3368755,
+    "sha256": "d9346b36e8ee6f21bf6634a013796e96d4ff632a91476e78087e99d6fd301600",
+    "pdfMagic": true
+  },
+  {
+    "file": "jezero-west-slope-isis.lbl",
+    "requestedUrl": "https://astrogeology.usgs.gov/ckan/dataset/6efff506-566e-47cc-87a2-36a569c9d6c9/resource/ea92af81-33b0-4075-87f1-cfc2d5656fbe/download/j03_045994_1986_j03_046060_1986_20m_slope_20m.lbl",
+    "finalUrl": "https://astrogeology.usgs.gov/ckan/dataset/6efff506-566e-47cc-87a2-36a569c9d6c9/resource/ea92af81-33b0-4075-87f1-cfc2d5656fbe/download/j03_045994_1986_j03_046060_1986_20m_slope_20m.lbl",
+    "receivedAt": "2026-11-13T22:19:25.365Z",
+    "status": 200,
+    "contentType": "text/plain",
+    "bytes": 1281,
+    "sha256": "abd7f531e130a7595c1623c2780e0b11951824c11ccca9994666a5c4e8cf8cf8"
+  },
+  {
+    "file": "jezero-west-slope-pds3.lbl",
+    "requestedUrl": "https://astrogeology.usgs.gov/ckan/dataset/6efff506-566e-47cc-87a2-36a569c9d6c9/resource/84e893e3-ad23-4bc0-86f2-54bd36802b00/download/j03_045994_1986_j03_046060_1986_20m_slope_20m_pds3.lbl",
+    "finalUrl": "https://astrogeology.usgs.gov/ckan/dataset/6efff506-566e-47cc-87a2-36a569c9d6c9/resource/84e893e3-ad23-4bc0-86f2-54bd36802b00/download/j03_045994_1986_j03_046060_1986_20m_slope_20m_pds3.lbl",
+    "receivedAt": "2026-11-13T22:19:25.457Z",
+    "status": 200,
+    "contentType": "text/plain",
+    "bytes": 2287,
+    "sha256": "b33ef4e1f79d1ebfe882fcf03b5b2d0799d51c85e7a0f476ff55a29040782379"
+  },
+  {
+    "file": "gdal-baseline-slope.py",
+    "requestedUrl": "https://raw.githubusercontent.com/USGS-Astrogeology/GDAL_scripts/master/gdal_baseline_slope/gdal_baseline_slope.py",
+    "finalUrl": "https://raw.githubusercontent.com/USGS-Astrogeology/GDAL_scripts/master/gdal_baseline_slope/gdal_baseline_slope.py",
+    "receivedAt": "2026-11-13T22:19:25.145Z",
+    "status": 404,
+    "contentType": "text/plain; charset=utf-8",
+    "bytes": 14,
+    "sha256": "d5558cd419c8d46bdc958064cb97f963d1ea793866414c025906ec15033512ed"
+  },
+  {
+    "file": "kirk-2020-dtm-quality.html",
+    "requestedUrl": "https://isprs-archives.copernicus.org/articles/XLIII-B3-2020/1129/2020/isprs-archives-XLIII-B3-2020-1129-2020.html",
+    "finalUrl": "https://isprs-archives.copernicus.org/articles/XLIII-B3-2020/1129/2020/isprs-archives-XLIII-B3-2020-1129-2020.html",
+    "receivedAt": "2026-11-13T22:27:50.646Z",
+    "status": 200,
+    "contentType": "text/html",
+    "bytes": 160246,
+    "sha256": "4921a5569b5066570a763fbe41d427e559e6ea5e2790294bac80fd94efcc4383"
+  }
+]

@@ -1,0 +1,10 @@
+{
+  "file": "Mars2020_Rover_PLACES_PDS_SIS.pdf",
+  "requestedUrl": "https://pds-geosciences.wustl.edu/m2020/urn-nasa-pds-mars2020_rover_places/document/Mars2020_Rover_PLACES_PDS_SIS.pdf",
+  "finalUrl": "https://pds-geosciences.wustl.edu/m2020/urn-nasa-pds-mars2020_rover_places/document/Mars2020_Rover_PLACES_PDS_SIS.pdf",
+  "retrievedUtc": "2026-11-13T22:40:01.168Z",
+  "status": 200,
+  "bytes": 1700553,
+  "sha256": "ca3eb9d2a0d992cedf96860f30537ac508e15fb0e2417fb74c5b80cb31418d1a",
+  "contentType": "application/pdf"
+}

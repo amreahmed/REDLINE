@@ -7,7 +7,8 @@ type ScientificFinding = {
   readonly limitation: string
 }
 
-/** Evidence: docs/evidence/scientific-validation/{feature-registration,height-reference}-audit.md.
+/** Evidence: docs/evidence/scientific-validation/{feature-registration,height-reference}-audit.md
+ * and docs/evidence/scientific-resolution-2026-11-14/.
  * Findings are separate from the immutable source-asset declaration.
  */
 export const TERRAIN_SCIENTIFIC_REVIEW: {
@@ -28,12 +29,12 @@ export const TERRAIN_SCIENTIFIC_REVIEW: {
   featureRegistration: {
     status: 'unresolved',
     summary: 'Named-feature registration unresolved',
-    limitation: 'Published MDIM 2.1 centers are approximate. No independent landmark control-point residuals establish their precise placement in the controlled CTX or DEM.',
+    limitation: 'Published MDIM 2.1 centers are approximate. Archived rover-site coordinate mappings supply control candidates, but no independent landmark residuals or compatible MDIM transform establish precise placement in controlled CTX or DEM.',
   },
   heightReference: {
     status: 'unresolved',
     summary: 'Elevation height reference conflicted / unresolved',
-    limitation: 'USGS metadata declares IAU-sphere heights, but nine coarse PDS MOLA comparisons disagree with that interpretation by 1.626–1.699 km. These are sanity probes, not accuracy measurements or a validated conversion. The exact vertical surface, adjustment and sign remain unresolved.',
+    limitation: 'USGS metadata declares IAU-sphere heights, but nine coarse PDS MOLA comparisons disagree with that interpretation by 1.626–1.699 km. Nine separate 50 m HRSC comparisons reinforce the conflict. These are diagnostics, not accuracy measurements or a validated conversion. The exact vertical surface, adjustment and sign remain unresolved.',
   },
   heightDifferences: {
     status: 'unresolved',

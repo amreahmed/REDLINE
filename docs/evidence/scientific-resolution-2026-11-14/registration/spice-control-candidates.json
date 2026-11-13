@@ -1,0 +1,1312 @@
+{
+  "tool": "SpiceyPy 8.4.0, CSPICE_N0067; Rasterio 1.5.2",
+  "purpose": "Authoritative control candidates and reproducible frame conversion. No empirical CTX/DEM registration or named-feature validation.",
+  "landing": {
+    "id": -168900,
+    "name": "M2020_LANDING_SITE",
+    "solutionDate": "2021-03-03",
+    "frame": "IAU_MARS, IAU 2000 rotation constants",
+    "xyzKm": [
+      699.1286672183026,
+      3140.8220030775146,
+      1073.1680551721952
+    ],
+    "planetocentricLonLat": [
+      77.45088572,
+      18.444627153952787
+    ],
+    "radiusM": 3391936.52991685,
+    "gaussianInput": {
+      "lon": 77.45088572,
+      "lat": 18.64875816,
+      "ellipsoidNormalAltitudeKm": -2.236421
+    },
+    "referenceRadiiKm": [
+      3396.19,
+      3396.19,
+      3376.2
+    ],
+    "reconstructedGaussianVectorMatches": true,
+    "coordinateAccuracy": "not supplied by this kernel; decimal precision is not uncertainty",
+    "nativeMapping": {
+      "projectedM": [
+        4590877.823965157,
+        1093299.695480712
+      ],
+      "nativeRow": 819,
+      "nativeColumn": 860,
+      "insideNativeDem": true,
+      "insidePreservedCrop": false,
+      "nativeProviderValueM": -2567.191650390625,
+      "qualification": "Coordinate-to-cell mapping only. No image landmark residual, source datum conversion, or target registration established."
+    }
+  },
+  "localizedKernel": "m2020_surf_rover_loc_0659_0779_v1.bsp",
+  "roverCoverageUtc": [
+    [
+      "2022-12-27T07:12:21.603",
+      "2023-04-30T15:02:26.125"
+    ]
+  ],
+  "interpolationLimit": "Rover data during motion are interpolated according to archive documentation. Fixed site coverage is not a site observation date.",
+  "sourceTiffSha256": "16a1aa66c3f48c1bca252795827db7b417876217aff0f5e1aff18027fab2327b",
+  "providerKernelMd5Verified": true,
+  "manifestSha256": "fa63f2181e603eb930d94fcf91444ee5e537b6c046e31537f65daeb0e1cffed9",
+  "binarySha256": "4c0e428bb3cc4bcd8cbcebc0c2da2558a106fc19e55cfca352097b7eee32fae8",
+  "sites": [
+    {
+      "id": -168541,
+      "site": 41,
+      "frame": "IAU_MARS",
+      "planetocentricLonLat": [
+        77.36582826823548,
+        18.481441926702452
+      ],
+      "xyzKm": [
+        703.670707108,
+        3139.2460250790004,
+        1075.282891843
+      ],
+      "radiusM": 3392086.5801901966,
+      "provenance": "NAIF/JPL archived PLACES localized_interp; site definition, not a fabricated waypoint",
+      "observationTime": "not inferred from fixed site kernel coverage",
+      "coordinateAccuracy": "no per-site uncertainty supplied",
+      "nativeMapping": {
+        "projectedM": [
+          4585836.069239711,
+          1095481.8799998376
+        ],
+        "nativeRow": 710,
+        "nativeColumn": 608,
+        "insideNativeDem": true,
+        "insidePreservedCrop": true,
+        "nativeProviderValueM": -2418.459716796875,
+        "qualification": "Coordinate-to-cell mapping only. No image landmark residual, source datum conversion, or target registration established."
+      }
+    },
+    {
+      "id": -168540,
+      "site": 40,
+      "frame": "IAU_MARS",
+      "planetocentricLonLat": [
+        77.36819162965128,
+        18.483036924303782
+      ],
+      "xyzKm": [
+        703.533378988,
+        3139.240071397,
+        1075.370474989
+      ],
+      "radiusM": 3392080.349828551,
+      "provenance": "NAIF/JPL archived PLACES localized_interp; site definition, not a fabricated waypoint",
+      "observationTime": "not inferred from fixed site kernel coverage",
+      "coordinateAccuracy": "no per-site uncertainty supplied",
+      "nativeMapping": {
+        "projectedM": [
+          4585976.156772771,
+          1095576.4230002067
+        ],
+        "nativeRow": 705,
+        "nativeColumn": 615,
+        "insideNativeDem": true,
+        "insidePreservedCrop": true,
+        "nativeProviderValueM": -2423.482666015625,
+        "qualification": "Coordinate-to-cell mapping only. No image landmark residual, source datum conversion, or target registration established."
+      }
+    },
+    {
+      "id": -168539,
+      "site": 39,
+      "frame": "IAU_MARS",
+      "planetocentricLonLat": [
+        77.36910358071336,
+        18.48126831131466
+      ],
+      "xyzKm": [
+        703.490702757,
+        3139.283798772,
+        1075.2712163800002
+      ],
+      "radiusM": 3392080.5012371424,
+      "provenance": "NAIF/JPL archived PLACES localized_interp; site definition, not a fabricated waypoint",
+      "observationTime": "not inferred from fixed site kernel coverage",
+      "coordinateAccuracy": "no per-site uncertainty supplied",
+      "nativeMapping": {
+        "projectedM": [
+          4586030.212396133,
+          1095471.589000241
+        ],
+        "nativeRow": 711,
+        "nativeColumn": 618,
+        "insideNativeDem": true,
+        "insidePreservedCrop": true,
+        "nativeProviderValueM": -2424.757568359375,
+        "qualification": "Coordinate-to-cell mapping only. No image landmark residual, source datum conversion, or target registration established."
+      }
+    },
+    {
+      "id": -168538,
+      "site": 38,
+      "frame": "IAU_MARS",
+      "planetocentricLonLat": [
+        77.37364321947652,
+        18.47549677616793
+      ],
+      "xyzKm": [
+        703.2656475690001,
+        3139.4452268689997,
+        1074.947147722
+      ],
+      "radiusM": 3392080.5229175873,
+      "provenance": "NAIF/JPL archived PLACES localized_interp; site definition, not a fabricated waypoint",
+      "observationTime": "not inferred from fixed site kernel coverage",
+      "coordinateAccuracy": "no per-site uncertainty supplied",
+      "nativeMapping": {
+        "projectedM": [
+          4586299.298110683,
+          1095129.4830001732
+        ],
+        "nativeRow": 728,
+        "nativeColumn": 631,
+        "insideNativeDem": true,
+        "insidePreservedCrop": true,
+        "nativeProviderValueM": -2419.417724609375,
+        "qualification": "Coordinate-to-cell mapping only. No image landmark residual, source datum conversion, or target registration established."
+      }
+    },
+    {
+      "id": -168537,
+      "site": 37,
+      "frame": "IAU_MARS",
+      "planetocentricLonLat": [
+        77.38398782909336,
+        18.470211603687023
+      ],
+      "xyzKm": [
+        702.715033009,
+        3139.644599111,
+        1074.642055089
+      ],
+      "radiusM": 3392054.2703367257,
+      "provenance": "NAIF/JPL archived PLACES localized_interp; site definition, not a fabricated waypoint",
+      "observationTime": "not inferred from fixed site kernel coverage",
+      "coordinateAccuracy": "no per-site uncertainty supplied",
+      "nativeMapping": {
+        "projectedM": [
+          4586912.471716719,
+          1094816.206000009
+        ],
+        "nativeRow": 743,
+        "nativeColumn": 662,
+        "insideNativeDem": true,
+        "insidePreservedCrop": true,
+        "nativeProviderValueM": -2448.734375,
+        "qualification": "Coordinate-to-cell mapping only. No image landmark residual, source datum conversion, or target registration established."
+      }
+    },
+    {
+      "id": -168536,
+      "site": 36,
+      "frame": "IAU_MARS",
+      "planetocentricLonLat": [
+        77.38981626928357,
+        18.474442312756562
+      ],
+      "xyzKm": [
+        702.376113063,
+        3139.6287475350005,
+        1074.876238477
+      ],
+      "radiusM": 3392043.6029909975,
+      "provenance": "NAIF/JPL archived PLACES localized_interp; site definition, not a fabricated waypoint",
+      "observationTime": "not inferred from fixed site kernel coverage",
+      "coordinateAccuracy": "no per-site uncertainty supplied",
+      "nativeMapping": {
+        "projectedM": [
+          4587257.950746027,
+          1095066.9800004151
+        ],
+        "nativeRow": 731,
+        "nativeColumn": 679,
+        "insideNativeDem": true,
+        "insidePreservedCrop": true,
+        "nativeProviderValueM": -2457.613525390625,
+        "qualification": "Coordinate-to-cell mapping only. No image landmark residual, source datum conversion, or target registration established."
+      }
+    },
+    {
+      "id": -168535,
+      "site": 35,
+      "frame": "IAU_MARS",
+      "planetocentricLonLat": [
+        77.38981626928357,
+        18.474442312756562
+      ],
+      "xyzKm": [
+        702.376113063,
+        3139.6287475350005,
+        1074.876238477
+      ],
+      "radiusM": 3392043.6029909975,
+      "provenance": "NAIF/JPL archived PLACES localized_interp; site definition, not a fabricated waypoint",
+      "observationTime": "not inferred from fixed site kernel coverage",
+      "coordinateAccuracy": "no per-site uncertainty supplied",
+      "nativeMapping": {
+        "projectedM": [
+          4587257.950746027,
+          1095066.9800004151
+        ],
+        "nativeRow": 731,
+        "nativeColumn": 679,
+        "insideNativeDem": true,
+        "insidePreservedCrop": true,
+        "nativeProviderValueM": -2457.613525390625,
+        "qualification": "Coordinate-to-cell mapping only. No image landmark residual, source datum conversion, or target registration established."
+      }
+    },
+    {
+      "id": -168534,
+      "site": 34,
+      "frame": "IAU_MARS",
+      "planetocentricLonLat": [
+        77.39987924695805,
+        18.468606315017524
+      ],
+      "xyzKm": [
+        701.8427745390001,
+        3139.832996489,
+        1074.539672332
+      ],
+      "radiusM": 3392015.6298916223,
+      "provenance": "NAIF/JPL archived PLACES localized_interp; site definition, not a fabricated waypoint",
+      "observationTime": "not inferred from fixed site kernel coverage",
+      "coordinateAccuracy": "no per-site uncertainty supplied",
+      "nativeMapping": {
+        "projectedM": [
+          4587854.430703864,
+          1094721.052999687
+        ],
+        "nativeRow": 748,
+        "nativeColumn": 709,
+        "insideNativeDem": true,
+        "insidePreservedCrop": true,
+        "nativeProviderValueM": -2483.413818359375,
+        "qualification": "Coordinate-to-cell mapping only. No image landmark residual, source datum conversion, or target registration established."
+      }
+    },
+    {
+      "id": -168533,
+      "site": 33,
+      "frame": "IAU_MARS",
+      "planetocentricLonLat": [
+        77.40880429744068,
+        18.45739105745278
+      ],
+      "xyzKm": [
+        701.3891568360001,
+        3140.1011614970002,
+        1073.894036042
+      ],
+      "radiusM": 3391965.5738831586,
+      "provenance": "NAIF/JPL archived PLACES localized_interp; site definition, not a fabricated waypoint",
+      "observationTime": "not inferred from fixed site kernel coverage",
+      "coordinateAccuracy": "no per-site uncertainty supplied",
+      "nativeMapping": {
+        "projectedM": [
+          4588383.460371603,
+          1094056.2719998907
+        ],
+        "nativeRow": 781,
+        "nativeColumn": 736,
+        "insideNativeDem": true,
+        "insidePreservedCrop": true,
+        "nativeProviderValueM": -2535.3193359375,
+        "qualification": "Coordinate-to-cell mapping only. No image landmark residual, source datum conversion, or target registration established."
+      }
+    },
+    {
+      "id": -168532,
+      "site": 32,
+      "frame": "IAU_MARS",
+      "planetocentricLonLat": [
+        77.40720153821572,
+        18.45251632991604
+      ],
+      "xyzKm": [
+        701.495789716,
+        3140.165668165,
+        1073.618569162
+      ],
+      "radiusM": 3391960.141063111,
+      "provenance": "NAIF/JPL archived PLACES localized_interp; site definition, not a fabricated waypoint",
+      "observationTime": "not inferred from fixed site kernel coverage",
+      "coordinateAccuracy": "no per-site uncertainty supplied",
+      "nativeMapping": {
+        "projectedM": [
+          4588288.457303341,
+          1093767.323999642
+        ],
+        "nativeRow": 796,
+        "nativeColumn": 731,
+        "insideNativeDem": true,
+        "insidePreservedCrop": true,
+        "nativeProviderValueM": -2546.049560546875,
+        "qualification": "Coordinate-to-cell mapping only. No image landmark residual, source datum conversion, or target registration established."
+      }
+    },
+    {
+      "id": -168531,
+      "site": 31,
+      "frame": "IAU_MARS",
+      "planetocentricLonLat": [
+        77.40125714802154,
+        18.45133122054869
+      ],
+      "xyzKm": [
+        701.830610385,
+        3140.133295319,
+        1073.558427662
+      ],
+      "radiusM": 3391980.397297196,
+      "provenance": "NAIF/JPL archived PLACES localized_interp; site definition, not a fabricated waypoint",
+      "observationTime": "not inferred from fixed site kernel coverage",
+      "coordinateAccuracy": "no per-site uncertainty supplied",
+      "nativeMapping": {
+        "projectedM": [
+          4587936.105372621,
+          1093697.07700036
+        ],
+        "nativeRow": 799,
+        "nativeColumn": 713,
+        "insideNativeDem": true,
+        "insidePreservedCrop": true,
+        "nativeProviderValueM": -2524.80126953125,
+        "qualification": "Coordinate-to-cell mapping only. No image landmark residual, source datum conversion, or target registration established."
+      }
+    },
+    {
+      "id": -168530,
+      "site": 30,
+      "frame": "IAU_MARS",
+      "planetocentricLonLat": [
+        77.40125790238015,
+        18.451329955244407
+      ],
+      "xyzKm": [
+        701.8305742130001,
+        3140.133327696001,
+        1073.5583566050002
+      ],
+      "radiusM": 3391980.397296502,
+      "provenance": "NAIF/JPL archived PLACES localized_interp; site definition, not a fabricated waypoint",
+      "observationTime": "not inferred from fixed site kernel coverage",
+      "coordinateAccuracy": "no per-site uncertainty supplied",
+      "nativeMapping": {
+        "projectedM": [
+          4587936.150086999,
+          1093697.0019998315
+        ],
+        "nativeRow": 799,
+        "nativeColumn": 713,
+        "insideNativeDem": true,
+        "insidePreservedCrop": true,
+        "nativeProviderValueM": -2524.80126953125,
+        "qualification": "Coordinate-to-cell mapping only. No image landmark residual, source datum conversion, or target registration established."
+      }
+    },
+    {
+      "id": -168529,
+      "site": 29,
+      "frame": "IAU_MARS",
+      "planetocentricLonLat": [
+        77.40144029258902,
+        18.450726308140556
+      ],
+      "xyzKm": [
+        701.8228036380002,
+        3140.14551907,
+        1073.524087502
+      ],
+      "radiusM": 3391979.229754909,
+      "provenance": "NAIF/JPL archived PLACES localized_interp; site definition, not a fabricated waypoint",
+      "observationTime": "not inferred from fixed site kernel coverage",
+      "coordinateAccuracy": "no per-site uncertainty supplied",
+      "nativeMapping": {
+        "projectedM": [
+          4587946.961211461,
+          1093661.2210003398
+        ],
+        "nativeRow": 801,
+        "nativeColumn": 714,
+        "insideNativeDem": true,
+        "insidePreservedCrop": true,
+        "nativeProviderValueM": -2526.769775390625,
+        "qualification": "Coordinate-to-cell mapping only. No image landmark residual, source datum conversion, or target registration established."
+      }
+    },
+    {
+      "id": -168528,
+      "site": 28,
+      "frame": "IAU_MARS",
+      "planetocentricLonLat": [
+        77.40144297479851,
+        18.450743482404846
+      ],
+      "xyzKm": [
+        701.8225877630001,
+        3140.145243763,
+        1073.5250539840001
+      ],
+      "radiusM": 3391979.236102883,
+      "provenance": "NAIF/JPL archived PLACES localized_interp; site definition, not a fabricated waypoint",
+      "observationTime": "not inferred from fixed site kernel coverage",
+      "coordinateAccuracy": "no per-site uncertainty supplied",
+      "nativeMapping": {
+        "projectedM": [
+          4587947.120198618,
+          1093662.2389996608
+        ],
+        "nativeRow": 801,
+        "nativeColumn": 714,
+        "insideNativeDem": true,
+        "insidePreservedCrop": true,
+        "nativeProviderValueM": -2526.769775390625,
+        "qualification": "Coordinate-to-cell mapping only. No image landmark residual, source datum conversion, or target registration established."
+      }
+    },
+    {
+      "id": -168527,
+      "site": 27,
+      "frame": "IAU_MARS",
+      "planetocentricLonLat": [
+        77.40179970860314,
+        18.450323657399903
+      ],
+      "xyzKm": [
+        701.8045888030001,
+        3140.156558371,
+        1073.5012273010002
+      ],
+      "radiusM": 3391978.445828054,
+      "provenance": "NAIF/JPL archived PLACES localized_interp; site definition, not a fabricated waypoint",
+      "observationTime": "not inferred from fixed site kernel coverage",
+      "coordinateAccuracy": "no per-site uncertainty supplied",
+      "nativeMapping": {
+        "projectedM": [
+          4587968.265486983,
+          1093637.3539994801
+        ],
+        "nativeRow": 802,
+        "nativeColumn": 715,
+        "insideNativeDem": true,
+        "insidePreservedCrop": true,
+        "nativeProviderValueM": -2528.4462890625,
+        "qualification": "Coordinate-to-cell mapping only. No image landmark residual, source datum conversion, or target registration established."
+      }
+    },
+    {
+      "id": -168526,
+      "site": 26,
+      "frame": "IAU_MARS",
+      "planetocentricLonLat": [
+        77.40630146115808,
+        18.45750967467797
+      ],
+      "xyzKm": [
+        701.526676913,
+        3140.0720979080006,
+        1073.9019787959999
+      ],
+      "radiusM": 3391969.6222906997,
+      "provenance": "NAIF/JPL archived PLACES localized_interp; site definition, not a fabricated waypoint",
+      "observationTime": "not inferred from fixed site kernel coverage",
+      "coordinateAccuracy": "no per-site uncertainty supplied",
+      "nativeMapping": {
+        "projectedM": [
+          4588235.1055080015,
+          1094063.3030000348
+        ],
+        "nativeRow": 781,
+        "nativeColumn": 728,
+        "insideNativeDem": true,
+        "insidePreservedCrop": true,
+        "nativeProviderValueM": -2533.197265625,
+        "qualification": "Coordinate-to-cell mapping only. No image landmark residual, source datum conversion, or target registration established."
+      }
+    },
+    {
+      "id": -168525,
+      "site": 25,
+      "frame": "IAU_MARS",
+      "planetocentricLonLat": [
+        77.40857966244106,
+        18.457661375162537
+      ],
+      "xyzKm": [
+        701.4009491390001,
+        3140.0960888190007,
+        1073.9101126030002
+      ],
+      "radiusM": 3391968.4061648427,
+      "provenance": "NAIF/JPL archived PLACES localized_interp; site definition, not a fabricated waypoint",
+      "observationTime": "not inferred from fixed site kernel coverage",
+      "coordinateAccuracy": "no per-site uncertainty supplied",
+      "nativeMapping": {
+        "projectedM": [
+          4588370.145199947,
+          1094072.2950003718
+        ],
+        "nativeRow": 781,
+        "nativeColumn": 735,
+        "insideNativeDem": true,
+        "insidePreservedCrop": true,
+        "nativeProviderValueM": -2535.246826171875,
+        "qualification": "Coordinate-to-cell mapping only. No image landmark residual, source datum conversion, or target registration established."
+      }
+    },
+    {
+      "id": -168524,
+      "site": 24,
+      "frame": "IAU_MARS",
+      "planetocentricLonLat": [
+        77.40142218768234,
+        18.450566324196416
+      ],
+      "xyzKm": [
+        701.8244661909999,
+        3140.14829639,
+        1073.51512832
+      ],
+      "radiusM": 3391979.3093999266,
+      "provenance": "NAIF/JPL archived PLACES localized_interp; site definition, not a fabricated waypoint",
+      "observationTime": "not inferred from fixed site kernel coverage",
+      "coordinateAccuracy": "no per-site uncertainty supplied",
+      "nativeMapping": {
+        "projectedM": [
+          4587945.888048594,
+          1093651.7380004425
+        ],
+        "nativeRow": 802,
+        "nativeColumn": 714,
+        "insideNativeDem": true,
+        "insidePreservedCrop": true,
+        "nativeProviderValueM": -2527.620849609375,
+        "qualification": "Coordinate-to-cell mapping only. No image landmark residual, source datum conversion, or target registration established."
+      }
+    },
+    {
+      "id": -168523,
+      "site": 23,
+      "frame": "IAU_MARS",
+      "planetocentricLonLat": [
+        77.40604966878925,
+        18.451942493161745
+      ],
+      "xyzKm": [
+        701.5613776360001,
+        3140.1625686100006,
+        1073.586518478
+      ],
+      "radiusM": 3391960.692069941,
+      "provenance": "NAIF/JPL archived PLACES localized_interp; site definition, not a fabricated waypoint",
+      "observationTime": "not inferred from fixed site kernel coverage",
+      "coordinateAccuracy": "no per-site uncertainty supplied",
+      "nativeMapping": {
+        "projectedM": [
+          4588220.1805915,
+          1093733.3099996033
+        ],
+        "nativeRow": 797,
+        "nativeColumn": 727,
+        "insideNativeDem": true,
+        "insidePreservedCrop": true,
+        "nativeProviderValueM": -2543.327880859375,
+        "qualification": "Coordinate-to-cell mapping only. No image landmark residual, source datum conversion, or target registration established."
+      }
+    },
+    {
+      "id": -168522,
+      "site": 22,
+      "frame": "IAU_MARS",
+      "planetocentricLonLat": [
+        77.4104189872818,
+        18.453946130548648
+      ],
+      "xyzKm": [
+        701.3134081670001,
+        3140.1779925000005,
+        1073.6985496139998
+      ],
+      "radiusM": 3391959.153129553,
+      "provenance": "NAIF/JPL archived PLACES localized_interp; site definition, not a fabricated waypoint",
+      "observationTime": "not inferred from fixed site kernel coverage",
+      "coordinateAccuracy": "no per-site uncertainty supplied",
+      "nativeMapping": {
+        "projectedM": [
+          4588479.170623529,
+          1093852.0749996584
+        ],
+        "nativeRow": 792,
+        "nativeColumn": 740,
+        "insideNativeDem": true,
+        "insidePreservedCrop": true,
+        "nativeProviderValueM": -2548.986328125,
+        "qualification": "Coordinate-to-cell mapping only. No image landmark residual, source datum conversion, or target registration established."
+      }
+    },
+    {
+      "id": -168521,
+      "site": 21,
+      "frame": "IAU_MARS",
+      "planetocentricLonLat": [
+        77.42178250103575,
+        18.45707810773771
+      ],
+      "xyzKm": [
+        700.676778845,
+        3140.255077214,
+        1073.872836625
+      ],
+      "radiusM": 3391954.1222755257,
+      "provenance": "NAIF/JPL archived PLACES localized_interp; site definition, not a fabricated waypoint",
+      "observationTime": "not inferred from fixed site kernel coverage",
+      "coordinateAccuracy": "no per-site uncertainty supplied",
+      "nativeMapping": {
+        "projectedM": [
+          4589152.739464097,
+          1094037.72200019
+        ],
+        "nativeRow": 782,
+        "nativeColumn": 774,
+        "insideNativeDem": true,
+        "insidePreservedCrop": true,
+        "nativeProviderValueM": -2551.871826171875,
+        "qualification": "Coordinate-to-cell mapping only. No image landmark residual, source datum conversion, or target registration established."
+      }
+    },
+    {
+      "id": -168520,
+      "site": 20,
+      "frame": "IAU_MARS",
+      "planetocentricLonLat": [
+        77.42999710143079,
+        18.460615839832144
+      ],
+      "xyzKm": [
+        700.2115696190001,
+        3140.288329669,
+        1074.070660035
+      ],
+      "radiusM": 3391951.47642646,
+      "provenance": "NAIF/JPL archived PLACES localized_interp; site definition, not a fabricated waypoint",
+      "observationTime": "not inferred from fixed site kernel coverage",
+      "coordinateAccuracy": "no per-site uncertainty supplied",
+      "nativeMapping": {
+        "projectedM": [
+          4589639.657417787,
+          1094247.420000006
+        ],
+        "nativeRow": 772,
+        "nativeColumn": 798,
+        "insideNativeDem": true,
+        "insidePreservedCrop": false,
+        "nativeProviderValueM": -2551.1728515625,
+        "qualification": "Coordinate-to-cell mapping only. No image landmark residual, source datum conversion, or target registration established."
+      }
+    },
+    {
+      "id": -168519,
+      "site": 19,
+      "frame": "IAU_MARS",
+      "planetocentricLonLat": [
+        77.43907369673262,
+        18.464058101181255
+      ],
+      "xyzKm": [
+        699.6989427679999,
+        3140.331244268001,
+        1074.2622520989999
+      ],
+      "radiusM": 3391946.096346651,
+      "provenance": "NAIF/JPL archived PLACES localized_interp; site definition, not a fabricated waypoint",
+      "observationTime": "not inferred from fixed site kernel coverage",
+      "coordinateAccuracy": "no per-site uncertainty supplied",
+      "nativeMapping": {
+        "projectedM": [
+          4590177.669858845,
+          1094451.4590002706
+        ],
+        "nativeRow": 762,
+        "nativeColumn": 825,
+        "insideNativeDem": true,
+        "insidePreservedCrop": false,
+        "nativeProviderValueM": -2553.95703125,
+        "qualification": "Coordinate-to-cell mapping only. No image landmark residual, source datum conversion, or target registration established."
+      }
+    },
+    {
+      "id": -168518,
+      "site": 18,
+      "frame": "IAU_MARS",
+      "planetocentricLonLat": [
+        77.44595222174286,
+        18.467370526347654
+      ],
+      "xyzKm": [
+        699.3081756890001,
+        3140.353448436,
+        1074.447860666
+      ],
+      "radiusM": 3391944.8567126053,
+      "provenance": "NAIF/JPL archived PLACES localized_interp; site definition, not a fabricated waypoint",
+      "observationTime": "not inferred from fixed site kernel coverage",
+      "coordinateAccuracy": "no per-site uncertainty supplied",
+      "nativeMapping": {
+        "projectedM": [
+          4590585.392348233,
+          1094647.8020000777
+        ],
+        "nativeRow": 752,
+        "nativeColumn": 846,
+        "insideNativeDem": true,
+        "insidePreservedCrop": false,
+        "nativeProviderValueM": -2554.095703125,
+        "qualification": "Coordinate-to-cell mapping only. No image landmark residual, source datum conversion, or target registration established."
+      }
+    },
+    {
+      "id": -168517,
+      "site": 17,
+      "frame": "IAU_MARS",
+      "planetocentricLonLat": [
+        77.4521575123121,
+        18.46820816874241
+      ],
+      "xyzKm": [
+        698.963782787,
+        3140.4099377170005,
+        1074.493562801
+      ],
+      "radiusM": 3391940.648516774,
+      "provenance": "NAIF/JPL archived PLACES localized_interp; site definition, not a fabricated waypoint",
+      "observationTime": "not inferred from fixed site kernel coverage",
+      "coordinateAccuracy": "no per-site uncertainty supplied",
+      "nativeMapping": {
+        "projectedM": [
+          4590953.20906977,
+          1094697.4529996596
+        ],
+        "nativeRow": 749,
+        "nativeColumn": 864,
+        "insideNativeDem": true,
+        "insidePreservedCrop": false,
+        "nativeProviderValueM": -2561.537109375,
+        "qualification": "Coordinate-to-cell mapping only. No image landmark residual, source datum conversion, or target registration established."
+      }
+    },
+    {
+      "id": -168516,
+      "site": 16,
+      "frame": "IAU_MARS",
+      "planetocentricLonLat": [
+        77.45444141328053,
+        18.46829721180134
+      ],
+      "xyzKm": [
+        698.8380709850002,
+        3140.4354175300004,
+        1074.4983062750002
+      ],
+      "radiusM": 3391939.8389892927,
+      "provenance": "NAIF/JPL archived PLACES localized_interp; site definition, not a fabricated waypoint",
+      "observationTime": "not inferred from fixed site kernel coverage",
+      "coordinateAccuracy": "no per-site uncertainty supplied",
+      "nativeMapping": {
+        "projectedM": [
+          4591088.586608847,
+          1094702.731000044
+        ],
+        "nativeRow": 749,
+        "nativeColumn": 871,
+        "insideNativeDem": true,
+        "insidePreservedCrop": false,
+        "nativeProviderValueM": -2564.444580078125,
+        "qualification": "Coordinate-to-cell mapping only. No image landmark residual, source datum conversion, or target registration established."
+      }
+    },
+    {
+      "id": -168515,
+      "site": 15,
+      "frame": "IAU_MARS",
+      "planetocentricLonLat": [
+        77.46157944202227,
+        18.464475969184644
+      ],
+      "xyzKm": [
+        698.4615407650001,
+        3140.588631083,
+        1074.2824450970002
+      ],
+      "radiusM": 3391935.766705968,
+      "provenance": "NAIF/JPL archived PLACES localized_interp; site definition, not a fabricated waypoint",
+      "observationTime": "not inferred from fixed site kernel coverage",
+      "coordinateAccuracy": "no per-site uncertainty supplied",
+      "nativeMapping": {
+        "projectedM": [
+          4591511.691103426,
+          1094476.2279997761
+        ],
+        "nativeRow": 760,
+        "nativeColumn": 892,
+        "insideNativeDem": true,
+        "insidePreservedCrop": false,
+        "nativeProviderValueM": -2567.176513671875,
+        "qualification": "Coordinate-to-cell mapping only. No image landmark residual, source datum conversion, or target registration established."
+      }
+    },
+    {
+      "id": -168514,
+      "site": 14,
+      "frame": "IAU_MARS",
+      "planetocentricLonLat": [
+        77.46193718165087,
+        18.457289293964422
+      ],
+      "xyzKm": [
+        698.4711886010001,
+        3140.724547506,
+        1073.8789000150002
+      ],
+      "radiusM": 3391935.8155056364,
+      "provenance": "NAIF/JPL archived PLACES localized_interp; site definition, not a fabricated waypoint",
+      "observationTime": "not inferred from fixed site kernel coverage",
+      "coordinateAccuracy": "no per-site uncertainty supplied",
+      "nativeMapping": {
+        "projectedM": [
+          4591532.896011703,
+          1094050.2399998994
+        ],
+        "nativeRow": 782,
+        "nativeColumn": 893,
+        "insideNativeDem": true,
+        "insidePreservedCrop": false,
+        "nativeProviderValueM": -2566.181396484375,
+        "qualification": "Coordinate-to-cell mapping only. No image landmark residual, source datum conversion, or target registration established."
+      }
+    },
+    {
+      "id": -168513,
+      "site": 13,
+      "frame": "IAU_MARS",
+      "planetocentricLonLat": [
+        77.45894048362383,
+        18.451199866008587
+      ],
+      "xyzKm": [
+        698.65993355,
+        3140.7980557590004,
+        1073.536480516
+      ],
+      "radiusM": 3391934.360332801,
+      "provenance": "NAIF/JPL archived PLACES localized_interp; site definition, not a fabricated waypoint",
+      "observationTime": "not inferred from fixed site kernel coverage",
+      "coordinateAccuracy": "no per-site uncertainty supplied",
+      "nativeMapping": {
+        "projectedM": [
+          4591355.267642582,
+          1093689.2909997273
+        ],
+        "nativeRow": 800,
+        "nativeColumn": 884,
+        "insideNativeDem": true,
+        "insidePreservedCrop": false,
+        "nativeProviderValueM": -2572.56005859375,
+        "qualification": "Coordinate-to-cell mapping only. No image landmark residual, source datum conversion, or target registration established."
+      }
+    },
+    {
+      "id": -168512,
+      "site": 12,
+      "frame": "IAU_MARS",
+      "planetocentricLonLat": [
+        77.45432473718454,
+        18.448996143259308
+      ],
+      "xyzKm": [
+        698.9223187690001,
+        3140.783844996001,
+        1073.413333665
+      ],
+      "radiusM": 3391936.283828325,
+      "provenance": "NAIF/JPL archived PLACES localized_interp; site definition, not a fabricated waypoint",
+      "observationTime": "not inferred from fixed site kernel coverage",
+      "coordinateAccuracy": "no per-site uncertainty supplied",
+      "nativeMapping": {
+        "projectedM": [
+          4591081.670668548,
+          1093558.6660003385
+        ],
+        "nativeRow": 806,
+        "nativeColumn": 870,
+        "insideNativeDem": true,
+        "insidePreservedCrop": false,
+        "nativeProviderValueM": -2569.583251953125,
+        "qualification": "Coordinate-to-cell mapping only. No image landmark residual, source datum conversion, or target registration established."
+      }
+    },
+    {
+      "id": -168511,
+      "site": 11,
+      "frame": "IAU_MARS",
+      "planetocentricLonLat": [
+        77.4524378031548,
+        18.44389399997467
+      ],
+      "xyzKm": [
+        699.046942041,
+        3140.856022363,
+        1073.127454901
+      ],
+      "radiusM": 3391938.3418412986,
+      "provenance": "NAIF/JPL archived PLACES localized_interp; site definition, not a fabricated waypoint",
+      "observationTime": "not inferred from fixed site kernel coverage",
+      "coordinateAccuracy": "no per-site uncertainty supplied",
+      "nativeMapping": {
+        "projectedM": [
+          4590969.823224689,
+          1093256.238000421
+        ],
+        "nativeRow": 821,
+        "nativeColumn": 865,
+        "insideNativeDem": true,
+        "insidePreservedCrop": false,
+        "nativeProviderValueM": -2569.141845703125,
+        "qualification": "Coordinate-to-cell mapping only. No image landmark residual, source datum conversion, or target registration established."
+      }
+    },
+    {
+      "id": -168510,
+      "site": 10,
+      "frame": "IAU_MARS",
+      "planetocentricLonLat": [
+        77.45189264417361,
+        18.44068988408145
+      ],
+      "xyzKm": [
+        699.0898076870001,
+        3140.9076926420007,
+        1072.9474253750002
+      ],
+      "radiusM": 3391938.069972443,
+      "provenance": "NAIF/JPL archived PLACES localized_interp; site definition, not a fabricated waypoint",
+      "observationTime": "not inferred from fixed site kernel coverage",
+      "coordinateAccuracy": "no per-site uncertainty supplied",
+      "nativeMapping": {
+        "projectedM": [
+          4590937.509090977,
+          1093066.315000021
+        ],
+        "nativeRow": 831,
+        "nativeColumn": 863,
+        "insideNativeDem": true,
+        "insidePreservedCrop": false,
+        "nativeProviderValueM": -2567.845703125,
+        "qualification": "Coordinate-to-cell mapping only. No image landmark residual, source datum conversion, or target registration established."
+      }
+    },
+    {
+      "id": -168509,
+      "site": 9,
+      "frame": "IAU_MARS",
+      "planetocentricLonLat": [
+        77.4413730150259,
+        18.432660589627528
+      ],
+      "xyzKm": [
+        699.6984600410001,
+        3140.9228724720006,
+        1072.495410735
+      ],
+      "radiusM": 3391934.6738770115,
+      "provenance": "NAIF/JPL archived PLACES localized_interp; site definition, not a fabricated waypoint",
+      "observationTime": "not inferred from fixed site kernel coverage",
+      "coordinateAccuracy": "no per-site uncertainty supplied",
+      "nativeMapping": {
+        "projectedM": [
+          4590313.961255189,
+          1092590.380999939
+        ],
+        "nativeRow": 855,
+        "nativeColumn": 832,
+        "insideNativeDem": true,
+        "insidePreservedCrop": false,
+        "nativeProviderValueM": -2575.713623046875,
+        "qualification": "Coordinate-to-cell mapping only. No image landmark residual, source datum conversion, or target registration established."
+      }
+    },
+    {
+      "id": -168508,
+      "site": 8,
+      "frame": "IAU_MARS",
+      "planetocentricLonLat": [
+        77.44301921986462,
+        18.433964063177605
+      ],
+      "xyzKm": [
+        699.6039674560001,
+        3140.9239018220005,
+        1072.570237526
+      ],
+      "radiusM": 3391939.7964503285,
+      "provenance": "NAIF/JPL archived PLACES localized_interp; site definition, not a fabricated waypoint",
+      "observationTime": "not inferred from fixed site kernel coverage",
+      "coordinateAccuracy": "no per-site uncertainty supplied",
+      "nativeMapping": {
+        "projectedM": [
+          4590411.539549066,
+          1092667.6440003493
+        ],
+        "nativeRow": 851,
+        "nativeColumn": 837,
+        "insideNativeDem": true,
+        "insidePreservedCrop": false,
+        "nativeProviderValueM": -2565.593505859375,
+        "qualification": "Coordinate-to-cell mapping only. No image landmark residual, source datum conversion, or target registration established."
+      }
+    },
+    {
+      "id": -168507,
+      "site": 7,
+      "frame": "IAU_MARS",
+      "planetocentricLonLat": [
+        77.44436574123583,
+        18.430739398895003
+      ],
+      "xyzKm": [
+        699.5422638169999,
+        3140.9947268540004,
+        1072.387582009
+      ],
+      "radiusM": 3391934.901945785,
+      "provenance": "NAIF/JPL archived PLACES localized_interp; site definition, not a fabricated waypoint",
+      "observationTime": "not inferred from fixed site kernel coverage",
+      "coordinateAccuracy": "no per-site uncertainty supplied",
+      "nativeMapping": {
+        "projectedM": [
+          4590491.354196052,
+          1092476.503000384
+        ],
+        "nativeRow": 860,
+        "nativeColumn": 841,
+        "insideNativeDem": true,
+        "insidePreservedCrop": false,
+        "nativeProviderValueM": -2579.02978515625,
+        "qualification": "Coordinate-to-cell mapping only. No image landmark residual, source datum conversion, or target registration established."
+      }
+    },
+    {
+      "id": -168506,
+      "site": 6,
+      "frame": "IAU_MARS",
+      "planetocentricLonLat": [
+        77.45164981616745,
+        18.42769464273154
+      ],
+      "xyzKm": [
+        699.15338034,
+        3141.1305406570004,
+        1072.213599978
+      ],
+      "radiusM": 3391925.489551145,
+      "provenance": "NAIF/JPL archived PLACES localized_interp; site definition, not a fabricated waypoint",
+      "observationTime": "not inferred from fixed site kernel coverage",
+      "coordinateAccuracy": "no per-site uncertainty supplied",
+      "nativeMapping": {
+        "projectedM": [
+          4590923.115534361,
+          1092296.0259997626
+        ],
+        "nativeRow": 869,
+        "nativeColumn": 862,
+        "insideNativeDem": true,
+        "insidePreservedCrop": false,
+        "nativeProviderValueM": -2584.404541015625,
+        "qualification": "Coordinate-to-cell mapping only. No image landmark residual, source datum conversion, or target registration established."
+      }
+    },
+    {
+      "id": -168505,
+      "site": 5,
+      "frame": "IAU_MARS",
+      "planetocentricLonLat": [
+        77.45172524839968,
+        18.435755181547513
+      ],
+      "xyzKm": [
+        699.119039457,
+        3140.9957543170003,
+        1072.6702558590002
+      ],
+      "radiusM": 3391937.97669906,
+      "provenance": "NAIF/JPL archived PLACES localized_interp; site definition, not a fabricated waypoint",
+      "observationTime": "not inferred from fixed site kernel coverage",
+      "coordinateAccuracy": "no per-site uncertainty supplied",
+      "nativeMapping": {
+        "projectedM": [
+          4590927.58675711,
+          1092773.8119999543
+        ],
+        "nativeRow": 845,
+        "nativeColumn": 863,
+        "insideNativeDem": true,
+        "insidePreservedCrop": false,
+        "nativeProviderValueM": -2569.899658203125,
+        "qualification": "Coordinate-to-cell mapping only. No image landmark residual, source datum conversion, or target registration established."
+      }
+    },
+    {
+      "id": -168504,
+      "site": 4,
+      "frame": "IAU_MARS",
+      "planetocentricLonLat": [
+        77.45227652087472,
+        18.44421926522587
+      ],
+      "xyzKm": [
+        699.054330383,
+        3140.847526851,
+        1073.145523097
+      ],
+      "radiusM": 3391937.7142713577,
+      "provenance": "NAIF/JPL archived PLACES localized_interp; site definition, not a fabricated waypoint",
+      "observationTime": "not inferred from fixed site kernel coverage",
+      "coordinateAccuracy": "no per-site uncertainty supplied",
+      "nativeMapping": {
+        "projectedM": [
+          4590960.263266321,
+          1093275.5179998006
+        ],
+        "nativeRow": 820,
+        "nativeColumn": 864,
+        "insideNativeDem": true,
+        "insidePreservedCrop": false,
+        "nativeProviderValueM": -2569.71826171875,
+        "qualification": "Coordinate-to-cell mapping only. No image landmark residual, source datum conversion, or target registration established."
+      }
+    },
+    {
+      "id": -168503,
+      "site": 3,
+      "frame": "IAU_MARS",
+      "planetocentricLonLat": [
+        77.4508857291094,
+        18.444627145841025
+      ],
+      "xyzKm": [
+        699.1287979020001,
+        3140.822592526,
+        1073.168256033
+      ],
+      "radiusM": 3391937.1662126277,
+      "provenance": "NAIF/JPL archived PLACES localized_interp; site definition, not a fabricated waypoint",
+      "observationTime": "not inferred from fixed site kernel coverage",
+      "coordinateAccuracy": "no per-site uncertainty supplied",
+      "nativeMapping": {
+        "projectedM": [
+          4590877.824505114,
+          1093299.6949998897
+        ],
+        "nativeRow": 819,
+        "nativeColumn": 860,
+        "insideNativeDem": true,
+        "insidePreservedCrop": false,
+        "nativeProviderValueM": -2567.191650390625,
+        "qualification": "Coordinate-to-cell mapping only. No image landmark residual, source datum conversion, or target registration established."
+      }
+    },
+    {
+      "id": -168502,
+      "site": 2,
+      "frame": "IAU_MARS",
+      "planetocentricLonLat": [
+        77.4508857291094,
+        18.444627145841025
+      ],
+      "xyzKm": [
+        699.1287979020001,
+        3140.822592526,
+        1073.168256033
+      ],
+      "radiusM": 3391937.1662126277,
+      "provenance": "NAIF/JPL archived PLACES localized_interp; site definition, not a fabricated waypoint",
+      "observationTime": "not inferred from fixed site kernel coverage",
+      "coordinateAccuracy": "no per-site uncertainty supplied",
+      "nativeMapping": {
+        "projectedM": [
+          4590877.824505114,
+          1093299.6949998897
+        ],
+        "nativeRow": 819,
+        "nativeColumn": 860,
+        "insideNativeDem": true,
+        "insidePreservedCrop": false,
+        "nativeProviderValueM": -2567.191650390625,
+        "qualification": "Coordinate-to-cell mapping only. No image landmark residual, source datum conversion, or target registration established."
+      }
+    },
+    {
+      "id": -168501,
+      "site": 1,
+      "frame": "IAU_MARS",
+      "planetocentricLonLat": [
+        77.4508857291094,
+        18.444627145841025
+      ],
+      "xyzKm": [
+        699.1287979020001,
+        3140.822592526,
+        1073.168256033
+      ],
+      "radiusM": 3391937.1662126277,
+      "provenance": "NAIF/JPL archived PLACES localized_interp; site definition, not a fabricated waypoint",
+      "observationTime": "not inferred from fixed site kernel coverage",
+      "coordinateAccuracy": "no per-site uncertainty supplied",
+      "nativeMapping": {
+        "projectedM": [
+          4590877.824505114,
+          1093299.6949998897
+        ],
+        "nativeRow": 819,
+        "nativeColumn": 860,
+        "insideNativeDem": true,
+        "insidePreservedCrop": false,
+        "nativeProviderValueM": -2567.191650390625,
+        "qualification": "Coordinate-to-cell mapping only. No image landmark residual, source datum conversion, or target registration established."
+      }
+    }
+  ],
+  "sitesInPreservedCrop": [
+    41,
+    40,
+    39,
+    38,
+    37,
+    36,
+    35,
+    34,
+    33,
+    32,
+    31,
+    30,
+    29,
+    28,
+    27,
+    26,
+    25,
+    24,
+    23,
+    22,
+    21
+  ],
+  "scientificStatus": "Precise coordinates and frame pedigree found. Absolute/image landmark acceptance remains pending; no uncertainty or fitted transformation is invented."
+}

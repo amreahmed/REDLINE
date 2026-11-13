@@ -1,0 +1,45 @@
+{
+  "reviewDateLocal": "2026-11-14",
+  "currentSource": {
+    "productId": "JEZ_ctx_B_soc_008_DTM_MOLAtopography_DeltaGeoid_20m_Eqc_latTs0_lon0",
+    "manifestSha256": "fa63f2181e603eb930d94fcf91444ee5e537b6c046e31537f65daeb0e1cffed9",
+    "binarySha256": "4c0e428bb3cc4bcd8cbcebc0c2da2558a106fc19e55cfca352097b7eee32fae8",
+    "cellCount": 65536,
+    "physicalGradeAuthorization": "unresolved",
+    "terrainCostAuthorization": "unresolved"
+  },
+  "providerSlopeCandidate": {
+    "productId": "J03_045994_1986_J03_046060_1986_20m_slope_20m",
+    "status": "metadata-only-candidate",
+    "columns": 2093,
+    "rows": 5235,
+    "radiusM": 3396190,
+    "projection": "equirectangular",
+    "centralMeridianDeg": 180,
+    "latitudeConvention": "planetocentric",
+    "longitudeDirection": "east-positive",
+    "projectedSpacingM": 20.201297749849,
+    "nominalProviderBaselineM": 20,
+    "declaredBoundsLonLat": [77.08259594661347, 17.5357701886749, 77.7959073249433, 19.319900654779396],
+    "currentCropEnvelopeOverlap": "entire-crop-envelope-only",
+    "numericalUnits": null,
+    "noData": null,
+    "validPixelSupport": "unverified",
+    "registrationToCurrentGrid": "unverified",
+    "tiffDecoded": false
+  },
+  "primaryResolutionPath": {
+    "referenceProducts": ["HMC_13E10_dt5.tif", "HMC_13E10_da5.tif"],
+    "status": "explicit-reference-contracts-and-nine-native-probes-audited",
+    "projectedSpacingM": 50,
+    "sampleType": "signed-int16",
+    "noData": -32768,
+    "dt5VerticalReference": "height-above-3396000m-spheroid",
+    "da5VerticalReference": "height-above-GMM3-equipotential-surface",
+    "comparisonOnlyDt5To3396190mSphereOffsetM": -190,
+    "currentCtxVerticalResolution": "unresolved",
+    "independenceLimit": "HRSC is the CTX mosaic control lineage, not independent absolute ground truth",
+    "spatialSupportLimit": "50m nearest reference cells versus 20m CTX posts; not per-cell accuracy or landmark controls"
+  },
+  "excludedResponseFiles": ["kirk-2021-dtm-quality.html", "gdal-baseline-slope.py"]
+}

@@ -1,0 +1,2182 @@
+; 230707192321_rel_07/m2020_surf_rover_loc_0659_0779_v1.bsp LOG FILE
+
+; Created 2023-07-07/13:04:46.90.
+;
+; BEGIN SPKMERGE COMMANDS
+
+LEAPSECONDS_KERNEL   = /ftp/pub/naif/MARS2020/kernels/lsk/m2020.tls
+
+SPK_KERNEL          = 230707192321_rel_07/m2020_surf_rover_loc_0659_0779_v1.bsp
+  SOURCE_SPK_KERNEL  = 230707192321_rel_07/m2020_surf_rover_loc.bsp
+    INCLUDE_COMMENTS = YES
+    BODIES           = -168
+    BEGIN_TIME       = 2022 DEC 27 07:12:21.603
+    END_TIME         = 2023 APR 30 15:02:26.125
+  SOURCE_SPK_KERNEL  = 230707192321_rel_07/m2020_surf_rover_loc.bsp
+    INCLUDE_COMMENTS = NO
+    BODIES           = -168501
+    BEGIN_TIME       = 2000 DEC 31 23:58:55.816
+    END_TIME         = 2099 DEC 31 23:58:50.816
+  SOURCE_SPK_KERNEL  = 230707192321_rel_07/m2020_surf_rover_loc.bsp
+    INCLUDE_COMMENTS = NO
+    BODIES           = -168502
+    BEGIN_TIME       = 2000 DEC 31 23:58:55.816
+    END_TIME         = 2099 DEC 31 23:58:50.816
+  SOURCE_SPK_KERNEL  = 230707192321_rel_07/m2020_surf_rover_loc.bsp
+    INCLUDE_COMMENTS = NO
+    BODIES           = -168503
+    BEGIN_TIME       = 2000 DEC 31 23:58:55.816
+    END_TIME         = 2099 DEC 31 23:58:50.816
+  SOURCE_SPK_KERNEL  = 230707192321_rel_07/m2020_surf_rover_loc.bsp
+    INCLUDE_COMMENTS = NO
+    BODIES           = -168504
+    BEGIN_TIME       = 2000 DEC 31 23:58:55.816
+    END_TIME         = 2099 DEC 31 23:58:50.816
+  SOURCE_SPK_KERNEL  = 230707192321_rel_07/m2020_surf_rover_loc.bsp
+    INCLUDE_COMMENTS = NO
+    BODIES           = -168505
+    BEGIN_TIME       = 2000 DEC 31 23:58:55.816
+    END_TIME         = 2099 DEC 31 23:58:50.816
+  SOURCE_SPK_KERNEL  = 230707192321_rel_07/m2020_surf_rover_loc.bsp
+    INCLUDE_COMMENTS = NO
+    BODIES           = -168506
+    BEGIN_TIME       = 2000 DEC 31 23:58:55.816
+    END_TIME         = 2099 DEC 31 23:58:50.816
+  SOURCE_SPK_KERNEL  = 230707192321_rel_07/m2020_surf_rover_loc.bsp
+    INCLUDE_COMMENTS = NO
+    BODIES           = -168507
+    BEGIN_TIME       = 2000 DEC 31 23:58:55.816
+    END_TIME         = 2099 DEC 31 23:58:50.816
+  SOURCE_SPK_KERNEL  = 230707192321_rel_07/m2020_surf_rover_loc.bsp
+    INCLUDE_COMMENTS = NO
+    BODIES           = -168508
+    BEGIN_TIME       = 2000 DEC 31 23:58:55.816
+    END_TIME         = 2099 DEC 31 23:58:50.816
+  SOURCE_SPK_KERNEL  = 230707192321_rel_07/m2020_surf_rover_loc.bsp
+    INCLUDE_COMMENTS = NO
+    BODIES           = -168509
+    BEGIN_TIME       = 2000 DEC 31 23:58:55.816
+    END_TIME         = 2099 DEC 31 23:58:50.816
+  SOURCE_SPK_KERNEL  = 230707192321_rel_07/m2020_surf_rover_loc.bsp
+    INCLUDE_COMMENTS = NO
+    BODIES           = -168510
+    BEGIN_TIME       = 2000 DEC 31 23:58:55.816
+    END_TIME         = 2099 DEC 31 23:58:50.816
+  SOURCE_SPK_KERNEL  = 230707192321_rel_07/m2020_surf_rover_loc.bsp
+    INCLUDE_COMMENTS = NO
+    BODIES           = -168511
+    BEGIN_TIME       = 2000 DEC 31 23:58:55.816
+    END_TIME         = 2099 DEC 31 23:58:50.816
+  SOURCE_SPK_KERNEL  = 230707192321_rel_07/m2020_surf_rover_loc.bsp
+    INCLUDE_COMMENTS = NO
+    BODIES           = -168512
+    BEGIN_TIME       = 2000 DEC 31 23:58:55.816
+    END_TIME         = 2099 DEC 31 23:58:50.816
+  SOURCE_SPK_KERNEL  = 230707192321_rel_07/m2020_surf_rover_loc.bsp
+    INCLUDE_COMMENTS = NO
+    BODIES           = -168513
+    BEGIN_TIME       = 2000 DEC 31 23:58:55.816
+    END_TIME         = 2099 DEC 31 23:58:50.816
+  SOURCE_SPK_KERNEL  = 230707192321_rel_07/m2020_surf_rover_loc.bsp
+    INCLUDE_COMMENTS = NO
+    BODIES           = -168514
+    BEGIN_TIME       = 2000 DEC 31 23:58:55.816
+    END_TIME         = 2099 DEC 31 23:58:50.816
+  SOURCE_SPK_KERNEL  = 230707192321_rel_07/m2020_surf_rover_loc.bsp
+    INCLUDE_COMMENTS = NO
+    BODIES           = -168515
+    BEGIN_TIME       = 2000 DEC 31 23:58:55.816
+    END_TIME         = 2099 DEC 31 23:58:50.816
+  SOURCE_SPK_KERNEL  = 230707192321_rel_07/m2020_surf_rover_loc.bsp
+    INCLUDE_COMMENTS = NO
+    BODIES           = -168516
+    BEGIN_TIME       = 2000 DEC 31 23:58:55.816
+    END_TIME         = 2099 DEC 31 23:58:50.816
+  SOURCE_SPK_KERNEL  = 230707192321_rel_07/m2020_surf_rover_loc.bsp
+    INCLUDE_COMMENTS = NO
+    BODIES           = -168517
+    BEGIN_TIME       = 2000 DEC 31 23:58:55.816
+    END_TIME         = 2099 DEC 31 23:58:50.816
+  SOURCE_SPK_KERNEL  = 230707192321_rel_07/m2020_surf_rover_loc.bsp
+    INCLUDE_COMMENTS = NO
+    BODIES           = -168518
+    BEGIN_TIME       = 2000 DEC 31 23:58:55.816
+    END_TIME         = 2099 DEC 31 23:58:50.816
+  SOURCE_SPK_KERNEL  = 230707192321_rel_07/m2020_surf_rover_loc.bsp
+    INCLUDE_COMMENTS = NO
+    BODIES           = -168519
+    BEGIN_TIME       = 2000 DEC 31 23:58:55.816
+    END_TIME         = 2099 DEC 31 23:58:50.816
+  SOURCE_SPK_KERNEL  = 230707192321_rel_07/m2020_surf_rover_loc.bsp
+    INCLUDE_COMMENTS = NO
+    BODIES           = -168520
+    BEGIN_TIME       = 2000 DEC 31 23:58:55.816
+    END_TIME         = 2099 DEC 31 23:58:50.816
+  SOURCE_SPK_KERNEL  = 230707192321_rel_07/m2020_surf_rover_loc.bsp
+    INCLUDE_COMMENTS = NO
+    BODIES           = -168521
+    BEGIN_TIME       = 2000 DEC 31 23:58:55.816
+    END_TIME         = 2099 DEC 31 23:58:50.816
+  SOURCE_SPK_KERNEL  = 230707192321_rel_07/m2020_surf_rover_loc.bsp
+    INCLUDE_COMMENTS = NO
+    BODIES           = -168522
+    BEGIN_TIME       = 2000 DEC 31 23:58:55.816
+    END_TIME         = 2099 DEC 31 23:58:50.816
+  SOURCE_SPK_KERNEL  = 230707192321_rel_07/m2020_surf_rover_loc.bsp
+    INCLUDE_COMMENTS = NO
+    BODIES           = -168523
+    BEGIN_TIME       = 2000 DEC 31 23:58:55.816
+    END_TIME         = 2099 DEC 31 23:58:50.816
+  SOURCE_SPK_KERNEL  = 230707192321_rel_07/m2020_surf_rover_loc.bsp
+    INCLUDE_COMMENTS = NO
+    BODIES           = -168524
+    BEGIN_TIME       = 2000 DEC 31 23:58:55.816
+    END_TIME         = 2099 DEC 31 23:58:50.816
+  SOURCE_SPK_KERNEL  = 230707192321_rel_07/m2020_surf_rover_loc.bsp
+    INCLUDE_COMMENTS = NO
+    BODIES           = -168525
+    BEGIN_TIME       = 2000 DEC 31 23:58:55.816
+    END_TIME         = 2099 DEC 31 23:58:50.816
+  SOURCE_SPK_KERNEL  = 230707192321_rel_07/m2020_surf_rover_loc.bsp
+    INCLUDE_COMMENTS = NO
+    BODIES           = -168526
+    BEGIN_TIME       = 2000 DEC 31 23:58:55.816
+    END_TIME         = 2099 DEC 31 23:58:50.816
+  SOURCE_SPK_KERNEL  = 230707192321_rel_07/m2020_surf_rover_loc.bsp
+    INCLUDE_COMMENTS = NO
+    BODIES           = -168527
+    BEGIN_TIME       = 2000 DEC 31 23:58:55.816
+    END_TIME         = 2099 DEC 31 23:58:50.816
+  SOURCE_SPK_KERNEL  = 230707192321_rel_07/m2020_surf_rover_loc.bsp
+    INCLUDE_COMMENTS = NO
+    BODIES           = -168528
+    BEGIN_TIME       = 2000 DEC 31 23:58:55.816
+    END_TIME         = 2099 DEC 31 23:58:50.816
+  SOURCE_SPK_KERNEL  = 230707192321_rel_07/m2020_surf_rover_loc.bsp
+    INCLUDE_COMMENTS = NO
+    BODIES           = -168529
+    BEGIN_TIME       = 2000 DEC 31 23:58:55.816
+    END_TIME         = 2099 DEC 31 23:58:50.816
+  SOURCE_SPK_KERNEL  = 230707192321_rel_07/m2020_surf_rover_loc.bsp
+    INCLUDE_COMMENTS = NO
+    BODIES           = -168530
+    BEGIN_TIME       = 2000 DEC 31 23:58:55.816
+    END_TIME         = 2099 DEC 31 23:58:50.816
+  SOURCE_SPK_KERNEL  = 230707192321_rel_07/m2020_surf_rover_loc.bsp
+    INCLUDE_COMMENTS = NO
+    BODIES           = -168531
+    BEGIN_TIME       = 2000 DEC 31 23:58:55.816
+    END_TIME         = 2099 DEC 31 23:58:50.816
+  SOURCE_SPK_KERNEL  = 230707192321_rel_07/m2020_surf_rover_loc.bsp
+    INCLUDE_COMMENTS = NO
+    BODIES           = -168532
+    BEGIN_TIME       = 2000 DEC 31 23:58:55.816
+    END_TIME         = 2099 DEC 31 23:58:50.816
+  SOURCE_SPK_KERNEL  = 230707192321_rel_07/m2020_surf_rover_loc.bsp
+    INCLUDE_COMMENTS = NO
+    BODIES           = -168533
+    BEGIN_TIME       = 2000 DEC 31 23:58:55.816
+    END_TIME         = 2099 DEC 31 23:58:50.816
+  SOURCE_SPK_KERNEL  = 230707192321_rel_07/m2020_surf_rover_loc.bsp
+    INCLUDE_COMMENTS = NO
+    BODIES           = -168534
+    BEGIN_TIME       = 2000 DEC 31 23:58:55.816
+    END_TIME         = 2099 DEC 31 23:58:50.816
+  SOURCE_SPK_KERNEL  = 230707192321_rel_07/m2020_surf_rover_loc.bsp
+    INCLUDE_COMMENTS = NO
+    BODIES           = -168535
+    BEGIN_TIME       = 2000 DEC 31 23:58:55.816
+    END_TIME         = 2099 DEC 31 23:58:50.816
+  SOURCE_SPK_KERNEL  = 230707192321_rel_07/m2020_surf_rover_loc.bsp
+    INCLUDE_COMMENTS = NO
+    BODIES           = -168536
+    BEGIN_TIME       = 2000 DEC 31 23:58:55.816
+    END_TIME         = 2099 DEC 31 23:58:50.816
+  SOURCE_SPK_KERNEL  = 230707192321_rel_07/m2020_surf_rover_loc.bsp
+    INCLUDE_COMMENTS = NO
+    BODIES           = -168537
+    BEGIN_TIME       = 2000 DEC 31 23:58:55.816
+    END_TIME         = 2099 DEC 31 23:58:50.816
+  SOURCE_SPK_KERNEL  = 230707192321_rel_07/m2020_surf_rover_loc.bsp
+    INCLUDE_COMMENTS = NO
+    BODIES           = -168538
+    BEGIN_TIME       = 2000 DEC 31 23:58:55.816
+    END_TIME         = 2099 DEC 31 23:58:50.816
+  SOURCE_SPK_KERNEL  = 230707192321_rel_07/m2020_surf_rover_loc.bsp
+    INCLUDE_COMMENTS = NO
+    BODIES           = -168539
+    BEGIN_TIME       = 2000 DEC 31 23:58:55.816
+    END_TIME         = 2099 DEC 31 23:58:50.816
+  SOURCE_SPK_KERNEL  = 230707192321_rel_07/m2020_surf_rover_loc.bsp
+    INCLUDE_COMMENTS = NO
+    BODIES           = -168540
+    BEGIN_TIME       = 2000 DEC 31 23:58:55.816
+    END_TIME         = 2099 DEC 31 23:58:50.816
+  SOURCE_SPK_KERNEL  = 230707192321_rel_07/m2020_surf_rover_loc.bsp
+    INCLUDE_COMMENTS = NO
+    BODIES           = -168541
+    BEGIN_TIME       = 2000 DEC 31 23:58:55.816
+    END_TIME         = 2099 DEC 31 23:58:50.816
+
+; END SPKMERGE COMMANDS
+
+********************************************************************************
+
+
+M2020 Reconstructed Surface Localized Position SPK
+===============================================================================
+
+This SPK file contains reconstructed localized M2020 traverse path and sites'
+positions w.r.t. to the center of Mars in the Mars body-fixed frame.
+This traverse data was extracted via a bulk query from the M2020 OPGS PLACES
+server ``localized_interp'' data view.
+
+
+Pedigree
+--------------------------------------------------------
+
+This file has been generated by ``m2020_rover_loc2spk.pl'' script,
+(Ver. 1.0.0 -- June 10, 2021 -- MJB/NAIF.) that ran the
+MKSPK program to make rover and sites position segments.
+
+
+Version and Date
+--------------------------------------------------------
+
+Version 1.0 -- Fri Jul  7 12:54:52 PDT 2023
+
+
+Contact Information
+--------------------------------------------------------
+
+If you have any questions regarding this SPK file, contact:
+
+Matt Barnes, NAIF, x4-5942, Matthew.J.Barnes@jpl.nasa.gov
+Boris Semenov, NAIF, x4-8136, Boris.Semenov@jpl.nasa.gov
+
+
+Appendix 1: MKSPK Setup Files
+--------------------------------------------------------
+
+********************************************************************************
+MKSPK RUN DATE/TIME: 2023-07-07T12:54:52
+MKSPK SETUP FILE:    230707192321/m2020_surf_rover_loc.bsp.site_loc.setup.00001
+MKSPK INPUT FILE:    230707192321/m2020_surf_rover_loc.bsp.site_loc.input.00001
+MKSPK OUTPUT FILE:   230707192321/m2020_surf_rover_loc.bsp
+OUTPUT FILE STATUS:  NEW FILE
+********************************************************************************
+
+   This segment contains the following localized position of the site 00001
+   relative to the center of Mars in the Mars body-fixed frame:
+
+           R                  =  3391937.166213, m
+           Planetocentric Lon =      77.450885729103, deg
+           Planetocentric Lat =       18.444627145843, deg
+
+           X                  =   699128.797902, m
+           Y                  =  3140822.592526, m
+           Z                  =  1073168.256033, m
+
+   \begindata
+
+      LEAPSECONDS_FILE  = '/ftp/pub/naif/MARS2020/kernels/lsk/m2020.tls'
+      FRAME_DEF_FILE    = '/ftp/pub/naif/MARS2020/kernels/fk/m2020_v04.tf'
+      COMMENT_FILE      = '230707192321/m2020_surf_rover_loc.bsp.comments'
+
+      OBJECT_NAME       = 'M2020_SITE_1'
+      CENTER_NAME       = 'MARS'
+      REF_FRAME_NAME    = 'IAU_MARS'
+
+      INPUT_DATA_TYPE   = 'STATES'
+      DATA_ORDER        = 'EPOCH X Y Z VX VY VZ'
+      DATA_DELIMITER    = ','
+      LINES_PER_RECORD  = 1
+      INPUT_DATA_UNITS  = ( 'ANGLES=DEGREES' 'DISTANCES=METERS' )
+
+      OUTPUT_SPK_TYPE   = 9
+      POLYNOM_DEGREE    = 1
+
+      SEGMENT_ID        = 'MARS -to- SITE 1, LOCALIZED'
+
+      PRODUCER_ID       = 'NAIF/JPL'
+
+   \begintext
+
+********************************************************************************
+
+********************************************************************************
+MKSPK RUN DATE/TIME: 2023-07-07T12:54:52
+MKSPK SETUP FILE:    230707192321/m2020_surf_rover_loc.bsp.site_loc.setup.00002
+MKSPK INPUT FILE:    230707192321/m2020_surf_rover_loc.bsp.site_loc.input.00002
+MKSPK OUTPUT FILE:   230707192321/m2020_surf_rover_loc.bsp
+OUTPUT FILE STATUS:  EXISTING FILE
+********************************************************************************
+
+   This segment contains the following localized position of the site 00002
+   relative to the center of Mars in the Mars body-fixed frame:
+
+           R                  =  3391937.166213, m
+           Planetocentric Lon =      77.450885729103, deg
+           Planetocentric Lat =       18.444627145843, deg
+
+           X                  =   699128.797902, m
+           Y                  =  3140822.592526, m
+           Z                  =  1073168.256033, m
+
+   \begindata
+
+      LEAPSECONDS_FILE  = '/ftp/pub/naif/MARS2020/kernels/lsk/m2020.tls'
+      FRAME_DEF_FILE    = '/ftp/pub/naif/MARS2020/kernels/fk/m2020_v04.tf'
+
+
+      OBJECT_NAME       = 'M2020_SITE_2'
+      CENTER_NAME       = 'MARS'
+      REF_FRAME_NAME    = 'IAU_MARS'
+
+      INPUT_DATA_TYPE   = 'STATES'
+      DATA_ORDER        = 'EPOCH X Y Z VX VY VZ'
+      DATA_DELIMITER    = ','
+      LINES_PER_RECORD  = 1
+      INPUT_DATA_UNITS  = ( 'ANGLES=DEGREES' 'DISTANCES=METERS' )
+
+      OUTPUT_SPK_TYPE   = 9
+      POLYNOM_DEGREE    = 1
+
+      SEGMENT_ID        = 'MARS -to- SITE 2, LOCALIZED'
+
+      PRODUCER_ID       = 'NAIF/JPL'
+
+   \begintext
+
+********************************************************************************
+
+********************************************************************************
+MKSPK RUN DATE/TIME: 2023-07-07T12:54:52
+MKSPK SETUP FILE:    230707192321/m2020_surf_rover_loc.bsp.site_loc.setup.00003
+MKSPK INPUT FILE:    230707192321/m2020_surf_rover_loc.bsp.site_loc.input.00003
+MKSPK OUTPUT FILE:   230707192321/m2020_surf_rover_loc.bsp
+OUTPUT FILE STATUS:  EXISTING FILE
+********************************************************************************
+
+   This segment contains the following localized position of the site 00003
+   relative to the center of Mars in the Mars body-fixed frame:
+
+           R                  =  3391937.166213, m
+           Planetocentric Lon =      77.450885729103, deg
+           Planetocentric Lat =       18.444627145843, deg
+
+           X                  =   699128.797902, m
+           Y                  =  3140822.592526, m
+           Z                  =  1073168.256033, m
+
+   \begindata
+
+      LEAPSECONDS_FILE  = '/ftp/pub/naif/MARS2020/kernels/lsk/m2020.tls'
+      FRAME_DEF_FILE    = '/ftp/pub/naif/MARS2020/kernels/fk/m2020_v04.tf'
+
+
+      OBJECT_NAME       = 'M2020_SITE_3'
+      CENTER_NAME       = 'MARS'
+      REF_FRAME_NAME    = 'IAU_MARS'
+
+      INPUT_DATA_TYPE   = 'STATES'
+      DATA_ORDER        = 'EPOCH X Y Z VX VY VZ'
+      DATA_DELIMITER    = ','
+      LINES_PER_RECORD  = 1
+      INPUT_DATA_UNITS  = ( 'ANGLES=DEGREES' 'DISTANCES=METERS' )
+
+      OUTPUT_SPK_TYPE   = 9
+      POLYNOM_DEGREE    = 1
+
+      SEGMENT_ID        = 'MARS -to- SITE 3, LOCALIZED'
+
+      PRODUCER_ID       = 'NAIF/JPL'
+
+   \begintext
+
+********************************************************************************
+
+********************************************************************************
+MKSPK RUN DATE/TIME: 2023-07-07T12:54:53
+MKSPK SETUP FILE:    230707192321/m2020_surf_rover_loc.bsp.site_loc.setup.00004
+MKSPK INPUT FILE:    230707192321/m2020_surf_rover_loc.bsp.site_loc.input.00004
+MKSPK OUTPUT FILE:   230707192321/m2020_surf_rover_loc.bsp
+OUTPUT FILE STATUS:  EXISTING FILE
+********************************************************************************
+
+   This segment contains the following localized position of the site 00004
+   relative to the center of Mars in the Mars body-fixed frame:
+
+           R                  =  3391937.714271, m
+           Planetocentric Lon =      77.452276520877, deg
+           Planetocentric Lat =       18.444219265229, deg
+
+           X                  =   699054.330383, m
+           Y                  =  3140847.526851, m
+           Z                  =  1073145.523097, m
+
+   \begindata
+
+      LEAPSECONDS_FILE  = '/ftp/pub/naif/MARS2020/kernels/lsk/m2020.tls'
+      FRAME_DEF_FILE    = '/ftp/pub/naif/MARS2020/kernels/fk/m2020_v04.tf'
+
+
+      OBJECT_NAME       = 'M2020_SITE_4'
+      CENTER_NAME       = 'MARS'
+      REF_FRAME_NAME    = 'IAU_MARS'
+
+      INPUT_DATA_TYPE   = 'STATES'
+      DATA_ORDER        = 'EPOCH X Y Z VX VY VZ'
+      DATA_DELIMITER    = ','
+      LINES_PER_RECORD  = 1
+      INPUT_DATA_UNITS  = ( 'ANGLES=DEGREES' 'DISTANCES=METERS' )
+
+      OUTPUT_SPK_TYPE   = 9
+      POLYNOM_DEGREE    = 1
+
+      SEGMENT_ID        = 'MARS -to- SITE 4, LOCALIZED'
+
+      PRODUCER_ID       = 'NAIF/JPL'
+
+   \begintext
+
+********************************************************************************
+
+********************************************************************************
+MKSPK RUN DATE/TIME: 2023-07-07T12:54:53
+MKSPK SETUP FILE:    230707192321/m2020_surf_rover_loc.bsp.site_loc.setup.00005
+MKSPK INPUT FILE:    230707192321/m2020_surf_rover_loc.bsp.site_loc.input.00005
+MKSPK OUTPUT FILE:   230707192321/m2020_surf_rover_loc.bsp
+OUTPUT FILE STATUS:  EXISTING FILE
+********************************************************************************
+
+   This segment contains the following localized position of the site 00005
+   relative to the center of Mars in the Mars body-fixed frame:
+
+           R                  =  3391937.976699, m
+           Planetocentric Lon =      77.451725248398, deg
+           Planetocentric Lat =       18.435755181548, deg
+
+           X                  =   699119.039457, m
+           Y                  =  3140995.754317, m
+           Z                  =  1072670.255859, m
+
+   \begindata
+
+      LEAPSECONDS_FILE  = '/ftp/pub/naif/MARS2020/kernels/lsk/m2020.tls'
+      FRAME_DEF_FILE    = '/ftp/pub/naif/MARS2020/kernels/fk/m2020_v04.tf'
+
+
+      OBJECT_NAME       = 'M2020_SITE_5'
+      CENTER_NAME       = 'MARS'
+      REF_FRAME_NAME    = 'IAU_MARS'
+
+      INPUT_DATA_TYPE   = 'STATES'
+      DATA_ORDER        = 'EPOCH X Y Z VX VY VZ'
+      DATA_DELIMITER    = ','
+      LINES_PER_RECORD  = 1
+      INPUT_DATA_UNITS  = ( 'ANGLES=DEGREES' 'DISTANCES=METERS' )
+
+      OUTPUT_SPK_TYPE   = 9
+      POLYNOM_DEGREE    = 1
+
+      SEGMENT_ID        = 'MARS -to- SITE 5, LOCALIZED'
+
+      PRODUCER_ID       = 'NAIF/JPL'
+
+   \begintext
+
+********************************************************************************
+
+********************************************************************************
+MKSPK RUN DATE/TIME: 2023-07-07T12:54:53
+MKSPK SETUP FILE:    230707192321/m2020_surf_rover_loc.bsp.site_loc.setup.00006
+MKSPK INPUT FILE:    230707192321/m2020_surf_rover_loc.bsp.site_loc.input.00006
+MKSPK OUTPUT FILE:   230707192321/m2020_surf_rover_loc.bsp
+OUTPUT FILE STATUS:  EXISTING FILE
+********************************************************************************
+
+   This segment contains the following localized position of the site 00006
+   relative to the center of Mars in the Mars body-fixed frame:
+
+           R                  =  3391925.489551, m
+           Planetocentric Lon =      77.451649816166, deg
+           Planetocentric Lat =       18.427694642736, deg
+
+           X                  =   699153.380340, m
+           Y                  =  3141130.540657, m
+           Z                  =  1072213.599978, m
+
+   \begindata
+
+      LEAPSECONDS_FILE  = '/ftp/pub/naif/MARS2020/kernels/lsk/m2020.tls'
+      FRAME_DEF_FILE    = '/ftp/pub/naif/MARS2020/kernels/fk/m2020_v04.tf'
+
+
+      OBJECT_NAME       = 'M2020_SITE_6'
+      CENTER_NAME       = 'MARS'
+      REF_FRAME_NAME    = 'IAU_MARS'
+
+      INPUT_DATA_TYPE   = 'STATES'
+      DATA_ORDER        = 'EPOCH X Y Z VX VY VZ'
+      DATA_DELIMITER    = ','
+      LINES_PER_RECORD  = 1
+      INPUT_DATA_UNITS  = ( 'ANGLES=DEGREES' 'DISTANCES=METERS' )
+
+      OUTPUT_SPK_TYPE   = 9
+      POLYNOM_DEGREE    = 1
+
+      SEGMENT_ID        = 'MARS -to- SITE 6, LOCALIZED'
+
+      PRODUCER_ID       = 'NAIF/JPL'
+
+   \begintext
+
+********************************************************************************
+
+********************************************************************************
+MKSPK RUN DATE/TIME: 2023-07-07T12:54:53
+MKSPK SETUP FILE:    230707192321/m2020_surf_rover_loc.bsp.site_loc.setup.00007
+MKSPK INPUT FILE:    230707192321/m2020_surf_rover_loc.bsp.site_loc.input.00007
+MKSPK OUTPUT FILE:   230707192321/m2020_surf_rover_loc.bsp
+OUTPUT FILE STATUS:  EXISTING FILE
+********************************************************************************
+
+   This segment contains the following localized position of the site 00007
+   relative to the center of Mars in the Mars body-fixed frame:
+
+           R                  =  3391934.901946, m
+           Planetocentric Lon =      77.444365741230, deg
+           Planetocentric Lat =       18.430739398889, deg
+
+           X                  =   699542.263817, m
+           Y                  =  3140994.726854, m
+           Z                  =  1072387.582009, m
+
+   \begindata
+
+      LEAPSECONDS_FILE  = '/ftp/pub/naif/MARS2020/kernels/lsk/m2020.tls'
+      FRAME_DEF_FILE    = '/ftp/pub/naif/MARS2020/kernels/fk/m2020_v04.tf'
+
+
+      OBJECT_NAME       = 'M2020_SITE_7'
+      CENTER_NAME       = 'MARS'
+      REF_FRAME_NAME    = 'IAU_MARS'
+
+      INPUT_DATA_TYPE   = 'STATES'
+      DATA_ORDER        = 'EPOCH X Y Z VX VY VZ'
+      DATA_DELIMITER    = ','
+      LINES_PER_RECORD  = 1
+      INPUT_DATA_UNITS  = ( 'ANGLES=DEGREES' 'DISTANCES=METERS' )
+
+      OUTPUT_SPK_TYPE   = 9
+      POLYNOM_DEGREE    = 1
+
+      SEGMENT_ID        = 'MARS -to- SITE 7, LOCALIZED'
+
+      PRODUCER_ID       = 'NAIF/JPL'
+
+   \begintext
+
+********************************************************************************
+
+********************************************************************************
+MKSPK RUN DATE/TIME: 2023-07-07T12:54:53
+MKSPK SETUP FILE:    230707192321/m2020_surf_rover_loc.bsp.site_loc.setup.00008
+MKSPK INPUT FILE:    230707192321/m2020_surf_rover_loc.bsp.site_loc.input.00008
+MKSPK OUTPUT FILE:   230707192321/m2020_surf_rover_loc.bsp
+OUTPUT FILE STATUS:  EXISTING FILE
+********************************************************************************
+
+   This segment contains the following localized position of the site 00008
+   relative to the center of Mars in the Mars body-fixed frame:
+
+           R                  =  3391939.796450, m
+           Planetocentric Lon =      77.443019219869, deg
+           Planetocentric Lat =       18.433964063172, deg
+
+           X                  =   699603.967456, m
+           Y                  =  3140923.901822, m
+           Z                  =  1072570.237526, m
+
+   \begindata
+
+      LEAPSECONDS_FILE  = '/ftp/pub/naif/MARS2020/kernels/lsk/m2020.tls'
+      FRAME_DEF_FILE    = '/ftp/pub/naif/MARS2020/kernels/fk/m2020_v04.tf'
+
+
+      OBJECT_NAME       = 'M2020_SITE_8'
+      CENTER_NAME       = 'MARS'
+      REF_FRAME_NAME    = 'IAU_MARS'
+
+      INPUT_DATA_TYPE   = 'STATES'
+      DATA_ORDER        = 'EPOCH X Y Z VX VY VZ'
+      DATA_DELIMITER    = ','
+      LINES_PER_RECORD  = 1
+      INPUT_DATA_UNITS  = ( 'ANGLES=DEGREES' 'DISTANCES=METERS' )
+
+      OUTPUT_SPK_TYPE   = 9
+      POLYNOM_DEGREE    = 1
+
+      SEGMENT_ID        = 'MARS -to- SITE 8, LOCALIZED'
+
+      PRODUCER_ID       = 'NAIF/JPL'
+
+   \begintext
+
+********************************************************************************
+
+********************************************************************************
+MKSPK RUN DATE/TIME: 2023-07-07T12:54:53
+MKSPK SETUP FILE:    230707192321/m2020_surf_rover_loc.bsp.site_loc.setup.00009
+MKSPK INPUT FILE:    230707192321/m2020_surf_rover_loc.bsp.site_loc.input.00009
+MKSPK OUTPUT FILE:   230707192321/m2020_surf_rover_loc.bsp
+OUTPUT FILE STATUS:  EXISTING FILE
+********************************************************************************
+
+   This segment contains the following localized position of the site 00009
+   relative to the center of Mars in the Mars body-fixed frame:
+
+           R                  =  3391934.673877, m
+           Planetocentric Lon =      77.441373015020, deg
+           Planetocentric Lat =       18.432660589629, deg
+
+           X                  =   699698.460041, m
+           Y                  =  3140922.872472, m
+           Z                  =  1072495.410735, m
+
+   \begindata
+
+      LEAPSECONDS_FILE  = '/ftp/pub/naif/MARS2020/kernels/lsk/m2020.tls'
+      FRAME_DEF_FILE    = '/ftp/pub/naif/MARS2020/kernels/fk/m2020_v04.tf'
+
+
+      OBJECT_NAME       = 'M2020_SITE_9'
+      CENTER_NAME       = 'MARS'
+      REF_FRAME_NAME    = 'IAU_MARS'
+
+      INPUT_DATA_TYPE   = 'STATES'
+      DATA_ORDER        = 'EPOCH X Y Z VX VY VZ'
+      DATA_DELIMITER    = ','
+      LINES_PER_RECORD  = 1
+      INPUT_DATA_UNITS  = ( 'ANGLES=DEGREES' 'DISTANCES=METERS' )
+
+      OUTPUT_SPK_TYPE   = 9
+      POLYNOM_DEGREE    = 1
+
+      SEGMENT_ID        = 'MARS -to- SITE 9, LOCALIZED'
+
+      PRODUCER_ID       = 'NAIF/JPL'
+
+   \begintext
+
+********************************************************************************
+
+********************************************************************************
+MKSPK RUN DATE/TIME: 2023-07-07T12:54:53
+MKSPK SETUP FILE:    230707192321/m2020_surf_rover_loc.bsp.site_loc.setup.00010
+MKSPK INPUT FILE:    230707192321/m2020_surf_rover_loc.bsp.site_loc.input.00010
+MKSPK OUTPUT FILE:   230707192321/m2020_surf_rover_loc.bsp
+OUTPUT FILE STATUS:  EXISTING FILE
+********************************************************************************
+
+   This segment contains the following localized position of the site 00010
+   relative to the center of Mars in the Mars body-fixed frame:
+
+           R                  =  3391938.069973, m
+           Planetocentric Lon =      77.451892644167, deg
+           Planetocentric Lat =       18.440689884081, deg
+
+           X                  =   699089.807687, m
+           Y                  =  3140907.692642, m
+           Z                  =  1072947.425375, m
+
+   \begindata
+
+      LEAPSECONDS_FILE  = '/ftp/pub/naif/MARS2020/kernels/lsk/m2020.tls'
+      FRAME_DEF_FILE    = '/ftp/pub/naif/MARS2020/kernels/fk/m2020_v04.tf'
+
+
+      OBJECT_NAME       = 'M2020_SITE_10'
+      CENTER_NAME       = 'MARS'
+      REF_FRAME_NAME    = 'IAU_MARS'
+
+      INPUT_DATA_TYPE   = 'STATES'
+      DATA_ORDER        = 'EPOCH X Y Z VX VY VZ'
+      DATA_DELIMITER    = ','
+      LINES_PER_RECORD  = 1
+      INPUT_DATA_UNITS  = ( 'ANGLES=DEGREES' 'DISTANCES=METERS' )
+
+      OUTPUT_SPK_TYPE   = 9
+      POLYNOM_DEGREE    = 1
+
+      SEGMENT_ID        = 'MARS -to- SITE 10, LOCALIZED'
+
+      PRODUCER_ID       = 'NAIF/JPL'
+
+   \begintext
+
+********************************************************************************
+
+********************************************************************************
+MKSPK RUN DATE/TIME: 2023-07-07T12:54:53
+MKSPK SETUP FILE:    230707192321/m2020_surf_rover_loc.bsp.site_loc.setup.00011
+MKSPK INPUT FILE:    230707192321/m2020_surf_rover_loc.bsp.site_loc.input.00011
+MKSPK OUTPUT FILE:   230707192321/m2020_surf_rover_loc.bsp
+OUTPUT FILE STATUS:  EXISTING FILE
+********************************************************************************
+
+   This segment contains the following localized position of the site 00011
+   relative to the center of Mars in the Mars body-fixed frame:
+
+           R                  =  3391938.341841, m
+           Planetocentric Lon =      77.452437803149, deg
+           Planetocentric Lat =       18.443893999968, deg
+
+           X                  =   699046.942041, m
+           Y                  =  3140856.022363, m
+           Z                  =  1073127.454901, m
+
+   \begindata
+
+      LEAPSECONDS_FILE  = '/ftp/pub/naif/MARS2020/kernels/lsk/m2020.tls'
+      FRAME_DEF_FILE    = '/ftp/pub/naif/MARS2020/kernels/fk/m2020_v04.tf'
+
+
+      OBJECT_NAME       = 'M2020_SITE_11'
+      CENTER_NAME       = 'MARS'
+      REF_FRAME_NAME    = 'IAU_MARS'
+
+      INPUT_DATA_TYPE   = 'STATES'
+      DATA_ORDER        = 'EPOCH X Y Z VX VY VZ'
+      DATA_DELIMITER    = ','
+      LINES_PER_RECORD  = 1
+      INPUT_DATA_UNITS  = ( 'ANGLES=DEGREES' 'DISTANCES=METERS' )
+
+      OUTPUT_SPK_TYPE   = 9
+      POLYNOM_DEGREE    = 1
+
+      SEGMENT_ID        = 'MARS -to- SITE 11, LOCALIZED'
+
+      PRODUCER_ID       = 'NAIF/JPL'
+
+   \begintext
+
+********************************************************************************
+
+********************************************************************************
+MKSPK RUN DATE/TIME: 2023-07-07T12:54:53
+MKSPK SETUP FILE:    230707192321/m2020_surf_rover_loc.bsp.site_loc.setup.00012
+MKSPK INPUT FILE:    230707192321/m2020_surf_rover_loc.bsp.site_loc.input.00012
+MKSPK OUTPUT FILE:   230707192321/m2020_surf_rover_loc.bsp
+OUTPUT FILE STATUS:  EXISTING FILE
+********************************************************************************
+
+   This segment contains the following localized position of the site 00012
+   relative to the center of Mars in the Mars body-fixed frame:
+
+           R                  =  3391936.283828, m
+           Planetocentric Lon =      77.454324737191, deg
+           Planetocentric Lat =       18.448996143254, deg
+
+           X                  =   698922.318769, m
+           Y                  =  3140783.844996, m
+           Z                  =  1073413.333665, m
+
+   \begindata
+
+      LEAPSECONDS_FILE  = '/ftp/pub/naif/MARS2020/kernels/lsk/m2020.tls'
+      FRAME_DEF_FILE    = '/ftp/pub/naif/MARS2020/kernels/fk/m2020_v04.tf'
+
+
+      OBJECT_NAME       = 'M2020_SITE_12'
+      CENTER_NAME       = 'MARS'
+      REF_FRAME_NAME    = 'IAU_MARS'
+
+      INPUT_DATA_TYPE   = 'STATES'
+      DATA_ORDER        = 'EPOCH X Y Z VX VY VZ'
+      DATA_DELIMITER    = ','
+      LINES_PER_RECORD  = 1
+      INPUT_DATA_UNITS  = ( 'ANGLES=DEGREES' 'DISTANCES=METERS' )
+
+      OUTPUT_SPK_TYPE   = 9
+      POLYNOM_DEGREE    = 1
+
+      SEGMENT_ID        = 'MARS -to- SITE 12, LOCALIZED'
+
+      PRODUCER_ID       = 'NAIF/JPL'
+
+   \begintext
+
+********************************************************************************
+
+********************************************************************************
+MKSPK RUN DATE/TIME: 2023-07-07T12:54:53
+MKSPK SETUP FILE:    230707192321/m2020_surf_rover_loc.bsp.site_loc.setup.00013
+MKSPK INPUT FILE:    230707192321/m2020_surf_rover_loc.bsp.site_loc.input.00013
+MKSPK OUTPUT FILE:   230707192321/m2020_surf_rover_loc.bsp
+OUTPUT FILE STATUS:  EXISTING FILE
+********************************************************************************
+
+   This segment contains the following localized position of the site 00013
+   relative to the center of Mars in the Mars body-fixed frame:
+
+           R                  =  3391934.360333, m
+           Planetocentric Lon =      77.458940483630, deg
+           Planetocentric Lat =       18.451199866013, deg
+
+           X                  =   698659.933550, m
+           Y                  =  3140798.055759, m
+           Z                  =  1073536.480516, m
+
+   \begindata
+
+      LEAPSECONDS_FILE  = '/ftp/pub/naif/MARS2020/kernels/lsk/m2020.tls'
+      FRAME_DEF_FILE    = '/ftp/pub/naif/MARS2020/kernels/fk/m2020_v04.tf'
+
+
+      OBJECT_NAME       = 'M2020_SITE_13'
+      CENTER_NAME       = 'MARS'
+      REF_FRAME_NAME    = 'IAU_MARS'
+
+      INPUT_DATA_TYPE   = 'STATES'
+      DATA_ORDER        = 'EPOCH X Y Z VX VY VZ'
+      DATA_DELIMITER    = ','
+      LINES_PER_RECORD  = 1
+      INPUT_DATA_UNITS  = ( 'ANGLES=DEGREES' 'DISTANCES=METERS' )
+
+      OUTPUT_SPK_TYPE   = 9
+      POLYNOM_DEGREE    = 1
+
+      SEGMENT_ID        = 'MARS -to- SITE 13, LOCALIZED'
+
+      PRODUCER_ID       = 'NAIF/JPL'
+
+   \begintext
+
+********************************************************************************
+
+********************************************************************************
+MKSPK RUN DATE/TIME: 2023-07-07T12:54:53
+MKSPK SETUP FILE:    230707192321/m2020_surf_rover_loc.bsp.site_loc.setup.00014
+MKSPK INPUT FILE:    230707192321/m2020_surf_rover_loc.bsp.site_loc.input.00014
+MKSPK OUTPUT FILE:   230707192321/m2020_surf_rover_loc.bsp
+OUTPUT FILE STATUS:  EXISTING FILE
+********************************************************************************
+
+   This segment contains the following localized position of the site 00014
+   relative to the center of Mars in the Mars body-fixed frame:
+
+           R                  =  3391935.815506, m
+           Planetocentric Lon =      77.461937181652, deg
+           Planetocentric Lat =       18.457289293966, deg
+
+           X                  =   698471.188601, m
+           Y                  =  3140724.547506, m
+           Z                  =  1073878.900015, m
+
+   \begindata
+
+      LEAPSECONDS_FILE  = '/ftp/pub/naif/MARS2020/kernels/lsk/m2020.tls'
+      FRAME_DEF_FILE    = '/ftp/pub/naif/MARS2020/kernels/fk/m2020_v04.tf'
+
+
+      OBJECT_NAME       = 'M2020_SITE_14'
+      CENTER_NAME       = 'MARS'
+      REF_FRAME_NAME    = 'IAU_MARS'
+
+      INPUT_DATA_TYPE   = 'STATES'
+      DATA_ORDER        = 'EPOCH X Y Z VX VY VZ'
+      DATA_DELIMITER    = ','
+      LINES_PER_RECORD  = 1
+      INPUT_DATA_UNITS  = ( 'ANGLES=DEGREES' 'DISTANCES=METERS' )
+
+      OUTPUT_SPK_TYPE   = 9
+      POLYNOM_DEGREE    = 1
+
+      SEGMENT_ID        = 'MARS -to- SITE 14, LOCALIZED'
+
+      PRODUCER_ID       = 'NAIF/JPL'
+
+   \begintext
+
+********************************************************************************
+
+********************************************************************************
+MKSPK RUN DATE/TIME: 2023-07-07T12:54:53
+MKSPK SETUP FILE:    230707192321/m2020_surf_rover_loc.bsp.site_loc.setup.00015
+MKSPK INPUT FILE:    230707192321/m2020_surf_rover_loc.bsp.site_loc.input.00015
+MKSPK OUTPUT FILE:   230707192321/m2020_surf_rover_loc.bsp
+OUTPUT FILE STATUS:  EXISTING FILE
+********************************************************************************
+
+   This segment contains the following localized position of the site 00015
+   relative to the center of Mars in the Mars body-fixed frame:
+
+           R                  =  3391935.766706, m
+           Planetocentric Lon =      77.461579442024, deg
+           Planetocentric Lat =       18.464475969188, deg
+
+           X                  =   698461.540765, m
+           Y                  =  3140588.631083, m
+           Z                  =  1074282.445097, m
+
+   \begindata
+
+      LEAPSECONDS_FILE  = '/ftp/pub/naif/MARS2020/kernels/lsk/m2020.tls'
+      FRAME_DEF_FILE    = '/ftp/pub/naif/MARS2020/kernels/fk/m2020_v04.tf'
+
+
+      OBJECT_NAME       = 'M2020_SITE_15'
+      CENTER_NAME       = 'MARS'
+      REF_FRAME_NAME    = 'IAU_MARS'
+
+      INPUT_DATA_TYPE   = 'STATES'
+      DATA_ORDER        = 'EPOCH X Y Z VX VY VZ'
+      DATA_DELIMITER    = ','
+      LINES_PER_RECORD  = 1
+      INPUT_DATA_UNITS  = ( 'ANGLES=DEGREES' 'DISTANCES=METERS' )
+
+      OUTPUT_SPK_TYPE   = 9
+      POLYNOM_DEGREE    = 1
+
+      SEGMENT_ID        = 'MARS -to- SITE 15, LOCALIZED'
+
+      PRODUCER_ID       = 'NAIF/JPL'
+
+   \begintext
+
+********************************************************************************
+
+********************************************************************************
+MKSPK RUN DATE/TIME: 2023-07-07T12:54:53
+MKSPK SETUP FILE:    230707192321/m2020_surf_rover_loc.bsp.site_loc.setup.00016
+MKSPK INPUT FILE:    230707192321/m2020_surf_rover_loc.bsp.site_loc.input.00016
+MKSPK OUTPUT FILE:   230707192321/m2020_surf_rover_loc.bsp
+OUTPUT FILE STATUS:  EXISTING FILE
+********************************************************************************
+
+   This segment contains the following localized position of the site 00016
+   relative to the center of Mars in the Mars body-fixed frame:
+
+           R                  =  3391939.838989, m
+           Planetocentric Lon =      77.454441413283, deg
+           Planetocentric Lat =       18.468297211801, deg
+
+           X                  =   698838.070985, m
+           Y                  =  3140435.417530, m
+           Z                  =  1074498.306275, m
+
+   \begindata
+
+      LEAPSECONDS_FILE  = '/ftp/pub/naif/MARS2020/kernels/lsk/m2020.tls'
+      FRAME_DEF_FILE    = '/ftp/pub/naif/MARS2020/kernels/fk/m2020_v04.tf'
+
+
+      OBJECT_NAME       = 'M2020_SITE_16'
+      CENTER_NAME       = 'MARS'
+      REF_FRAME_NAME    = 'IAU_MARS'
+
+      INPUT_DATA_TYPE   = 'STATES'
+      DATA_ORDER        = 'EPOCH X Y Z VX VY VZ'
+      DATA_DELIMITER    = ','
+      LINES_PER_RECORD  = 1
+      INPUT_DATA_UNITS  = ( 'ANGLES=DEGREES' 'DISTANCES=METERS' )
+
+      OUTPUT_SPK_TYPE   = 9
+      POLYNOM_DEGREE    = 1
+
+      SEGMENT_ID        = 'MARS -to- SITE 16, LOCALIZED'
+
+      PRODUCER_ID       = 'NAIF/JPL'
+
+   \begintext
+
+********************************************************************************
+
+********************************************************************************
+MKSPK RUN DATE/TIME: 2023-07-07T12:54:53
+MKSPK SETUP FILE:    230707192321/m2020_surf_rover_loc.bsp.site_loc.setup.00017
+MKSPK INPUT FILE:    230707192321/m2020_surf_rover_loc.bsp.site_loc.input.00017
+MKSPK OUTPUT FILE:   230707192321/m2020_surf_rover_loc.bsp
+OUTPUT FILE STATUS:  EXISTING FILE
+********************************************************************************
+
+   This segment contains the following localized position of the site 00017
+   relative to the center of Mars in the Mars body-fixed frame:
+
+           R                  =  3391940.648517, m
+           Planetocentric Lon =      77.452157512307, deg
+           Planetocentric Lat =       18.468208168748, deg
+
+           X                  =   698963.782787, m
+           Y                  =  3140409.937717, m
+           Z                  =  1074493.562801, m
+
+   \begindata
+
+      LEAPSECONDS_FILE  = '/ftp/pub/naif/MARS2020/kernels/lsk/m2020.tls'
+      FRAME_DEF_FILE    = '/ftp/pub/naif/MARS2020/kernels/fk/m2020_v04.tf'
+
+
+      OBJECT_NAME       = 'M2020_SITE_17'
+      CENTER_NAME       = 'MARS'
+      REF_FRAME_NAME    = 'IAU_MARS'
+
+      INPUT_DATA_TYPE   = 'STATES'
+      DATA_ORDER        = 'EPOCH X Y Z VX VY VZ'
+      DATA_DELIMITER    = ','
+      LINES_PER_RECORD  = 1
+      INPUT_DATA_UNITS  = ( 'ANGLES=DEGREES' 'DISTANCES=METERS' )
+
+      OUTPUT_SPK_TYPE   = 9
+      POLYNOM_DEGREE    = 1
+
+      SEGMENT_ID        = 'MARS -to- SITE 17, LOCALIZED'
+
+      PRODUCER_ID       = 'NAIF/JPL'
+
+   \begintext
+
+********************************************************************************
+
+********************************************************************************
+MKSPK RUN DATE/TIME: 2023-07-07T12:54:53
+MKSPK SETUP FILE:    230707192321/m2020_surf_rover_loc.bsp.site_loc.setup.00018
+MKSPK INPUT FILE:    230707192321/m2020_surf_rover_loc.bsp.site_loc.input.00018
+MKSPK OUTPUT FILE:   230707192321/m2020_surf_rover_loc.bsp
+OUTPUT FILE STATUS:  EXISTING FILE
+********************************************************************************
+
+   This segment contains the following localized position of the site 00018
+   relative to the center of Mars in the Mars body-fixed frame:
+
+           R                  =  3391944.856713, m
+           Planetocentric Lon =      77.445952221751, deg
+           Planetocentric Lat =       18.467370526346, deg
+
+           X                  =   699308.175689, m
+           Y                  =  3140353.448436, m
+           Z                  =  1074447.860666, m
+
+   \begindata
+
+      LEAPSECONDS_FILE  = '/ftp/pub/naif/MARS2020/kernels/lsk/m2020.tls'
+      FRAME_DEF_FILE    = '/ftp/pub/naif/MARS2020/kernels/fk/m2020_v04.tf'
+
+
+      OBJECT_NAME       = 'M2020_SITE_18'
+      CENTER_NAME       = 'MARS'
+      REF_FRAME_NAME    = 'IAU_MARS'
+
+      INPUT_DATA_TYPE   = 'STATES'
+      DATA_ORDER        = 'EPOCH X Y Z VX VY VZ'
+      DATA_DELIMITER    = ','
+      LINES_PER_RECORD  = 1
+      INPUT_DATA_UNITS  = ( 'ANGLES=DEGREES' 'DISTANCES=METERS' )
+
+      OUTPUT_SPK_TYPE   = 9
+      POLYNOM_DEGREE    = 1
+
+      SEGMENT_ID        = 'MARS -to- SITE 18, LOCALIZED'
+
+      PRODUCER_ID       = 'NAIF/JPL'
+
+   \begintext
+
+********************************************************************************
+
+********************************************************************************
+MKSPK RUN DATE/TIME: 2023-07-07T12:54:53
+MKSPK SETUP FILE:    230707192321/m2020_surf_rover_loc.bsp.site_loc.setup.00019
+MKSPK INPUT FILE:    230707192321/m2020_surf_rover_loc.bsp.site_loc.input.00019
+MKSPK OUTPUT FILE:   230707192321/m2020_surf_rover_loc.bsp
+OUTPUT FILE STATUS:  EXISTING FILE
+********************************************************************************
+
+   This segment contains the following localized position of the site 00019
+   relative to the center of Mars in the Mars body-fixed frame:
+
+           R                  =  3391946.096347, m
+           Planetocentric Lon =      77.439073696733, deg
+           Planetocentric Lat =       18.464058101177, deg
+
+           X                  =   699698.942768, m
+           Y                  =  3140331.244268, m
+           Z                  =  1074262.252099, m
+
+   \begindata
+
+      LEAPSECONDS_FILE  = '/ftp/pub/naif/MARS2020/kernels/lsk/m2020.tls'
+      FRAME_DEF_FILE    = '/ftp/pub/naif/MARS2020/kernels/fk/m2020_v04.tf'
+
+
+      OBJECT_NAME       = 'M2020_SITE_19'
+      CENTER_NAME       = 'MARS'
+      REF_FRAME_NAME    = 'IAU_MARS'
+
+      INPUT_DATA_TYPE   = 'STATES'
+      DATA_ORDER        = 'EPOCH X Y Z VX VY VZ'
+      DATA_DELIMITER    = ','
+      LINES_PER_RECORD  = 1
+      INPUT_DATA_UNITS  = ( 'ANGLES=DEGREES' 'DISTANCES=METERS' )
+
+      OUTPUT_SPK_TYPE   = 9
+      POLYNOM_DEGREE    = 1
+
+      SEGMENT_ID        = 'MARS -to- SITE 19, LOCALIZED'
+
+      PRODUCER_ID       = 'NAIF/JPL'
+
+   \begintext
+
+********************************************************************************
+
+********************************************************************************
+MKSPK RUN DATE/TIME: 2023-07-07T12:54:53
+MKSPK SETUP FILE:    230707192321/m2020_surf_rover_loc.bsp.site_loc.setup.00020
+MKSPK INPUT FILE:    230707192321/m2020_surf_rover_loc.bsp.site_loc.input.00020
+MKSPK OUTPUT FILE:   230707192321/m2020_surf_rover_loc.bsp
+OUTPUT FILE STATUS:  EXISTING FILE
+********************************************************************************
+
+   This segment contains the following localized position of the site 00020
+   relative to the center of Mars in the Mars body-fixed frame:
+
+           R                  =  3391951.476427, m
+           Planetocentric Lon =      77.429997101426, deg
+           Planetocentric Lat =       18.460615839832, deg
+
+           X                  =   700211.569619, m
+           Y                  =  3140288.329669, m
+           Z                  =  1074070.660035, m
+
+   \begindata
+
+      LEAPSECONDS_FILE  = '/ftp/pub/naif/MARS2020/kernels/lsk/m2020.tls'
+      FRAME_DEF_FILE    = '/ftp/pub/naif/MARS2020/kernels/fk/m2020_v04.tf'
+
+
+      OBJECT_NAME       = 'M2020_SITE_20'
+      CENTER_NAME       = 'MARS'
+      REF_FRAME_NAME    = 'IAU_MARS'
+
+      INPUT_DATA_TYPE   = 'STATES'
+      DATA_ORDER        = 'EPOCH X Y Z VX VY VZ'
+      DATA_DELIMITER    = ','
+      LINES_PER_RECORD  = 1
+      INPUT_DATA_UNITS  = ( 'ANGLES=DEGREES' 'DISTANCES=METERS' )
+
+      OUTPUT_SPK_TYPE   = 9
+      POLYNOM_DEGREE    = 1
+
+      SEGMENT_ID        = 'MARS -to- SITE 20, LOCALIZED'
+
+      PRODUCER_ID       = 'NAIF/JPL'
+
+   \begintext
+
+********************************************************************************
+
+********************************************************************************
+MKSPK RUN DATE/TIME: 2023-07-07T12:54:53
+MKSPK SETUP FILE:    230707192321/m2020_surf_rover_loc.bsp.site_loc.setup.00021
+MKSPK INPUT FILE:    230707192321/m2020_surf_rover_loc.bsp.site_loc.input.00021
+MKSPK OUTPUT FILE:   230707192321/m2020_surf_rover_loc.bsp
+OUTPUT FILE STATUS:  EXISTING FILE
+********************************************************************************
+
+   This segment contains the following localized position of the site 00021
+   relative to the center of Mars in the Mars body-fixed frame:
+
+           R                  =  3391954.122275, m
+           Planetocentric Lon =      77.421782501042, deg
+           Planetocentric Lat =       18.457078107735, deg
+
+           X                  =   700676.778845, m
+           Y                  =  3140255.077214, m
+           Z                  =  1073872.836625, m
+
+   \begindata
+
+      LEAPSECONDS_FILE  = '/ftp/pub/naif/MARS2020/kernels/lsk/m2020.tls'
+      FRAME_DEF_FILE    = '/ftp/pub/naif/MARS2020/kernels/fk/m2020_v04.tf'
+
+
+      OBJECT_NAME       = 'M2020_SITE_21'
+      CENTER_NAME       = 'MARS'
+      REF_FRAME_NAME    = 'IAU_MARS'
+
+      INPUT_DATA_TYPE   = 'STATES'
+      DATA_ORDER        = 'EPOCH X Y Z VX VY VZ'
+      DATA_DELIMITER    = ','
+      LINES_PER_RECORD  = 1
+      INPUT_DATA_UNITS  = ( 'ANGLES=DEGREES' 'DISTANCES=METERS' )
+
+      OUTPUT_SPK_TYPE   = 9
+      POLYNOM_DEGREE    = 1
+
+      SEGMENT_ID        = 'MARS -to- SITE 21, LOCALIZED'
+
+      PRODUCER_ID       = 'NAIF/JPL'
+
+   \begintext
+
+********************************************************************************
+
+********************************************************************************
+MKSPK RUN DATE/TIME: 2023-07-07T12:54:54
+MKSPK SETUP FILE:    230707192321/m2020_surf_rover_loc.bsp.site_loc.setup.00022
+MKSPK INPUT FILE:    230707192321/m2020_surf_rover_loc.bsp.site_loc.input.00022
+MKSPK OUTPUT FILE:   230707192321/m2020_surf_rover_loc.bsp
+OUTPUT FILE STATUS:  EXISTING FILE
+********************************************************************************
+
+   This segment contains the following localized position of the site 00022
+   relative to the center of Mars in the Mars body-fixed frame:
+
+           R                  =  3391959.153130, m
+           Planetocentric Lon =      77.410418987274, deg
+           Planetocentric Lat =       18.453946130554, deg
+
+           X                  =   701313.408167, m
+           Y                  =  3140177.992500, m
+           Z                  =  1073698.549614, m
+
+   \begindata
+
+      LEAPSECONDS_FILE  = '/ftp/pub/naif/MARS2020/kernels/lsk/m2020.tls'
+      FRAME_DEF_FILE    = '/ftp/pub/naif/MARS2020/kernels/fk/m2020_v04.tf'
+
+
+      OBJECT_NAME       = 'M2020_SITE_22'
+      CENTER_NAME       = 'MARS'
+      REF_FRAME_NAME    = 'IAU_MARS'
+
+      INPUT_DATA_TYPE   = 'STATES'
+      DATA_ORDER        = 'EPOCH X Y Z VX VY VZ'
+      DATA_DELIMITER    = ','
+      LINES_PER_RECORD  = 1
+      INPUT_DATA_UNITS  = ( 'ANGLES=DEGREES' 'DISTANCES=METERS' )
+
+      OUTPUT_SPK_TYPE   = 9
+      POLYNOM_DEGREE    = 1
+
+      SEGMENT_ID        = 'MARS -to- SITE 22, LOCALIZED'
+
+      PRODUCER_ID       = 'NAIF/JPL'
+
+   \begintext
+
+********************************************************************************
+
+********************************************************************************
+MKSPK RUN DATE/TIME: 2023-07-07T12:54:54
+MKSPK SETUP FILE:    230707192321/m2020_surf_rover_loc.bsp.site_loc.setup.00023
+MKSPK INPUT FILE:    230707192321/m2020_surf_rover_loc.bsp.site_loc.input.00023
+MKSPK OUTPUT FILE:   230707192321/m2020_surf_rover_loc.bsp
+OUTPUT FILE STATUS:  EXISTING FILE
+********************************************************************************
+
+   This segment contains the following localized position of the site 00023
+   relative to the center of Mars in the Mars body-fixed frame:
+
+           R                  =  3391960.692070, m
+           Planetocentric Lon =      77.406049668789, deg
+           Planetocentric Lat =       18.451942493168, deg
+
+           X                  =   701561.377636, m
+           Y                  =  3140162.568610, m
+           Z                  =  1073586.518478, m
+
+   \begindata
+
+      LEAPSECONDS_FILE  = '/ftp/pub/naif/MARS2020/kernels/lsk/m2020.tls'
+      FRAME_DEF_FILE    = '/ftp/pub/naif/MARS2020/kernels/fk/m2020_v04.tf'
+
+
+      OBJECT_NAME       = 'M2020_SITE_23'
+      CENTER_NAME       = 'MARS'
+      REF_FRAME_NAME    = 'IAU_MARS'
+
+      INPUT_DATA_TYPE   = 'STATES'
+      DATA_ORDER        = 'EPOCH X Y Z VX VY VZ'
+      DATA_DELIMITER    = ','
+      LINES_PER_RECORD  = 1
+      INPUT_DATA_UNITS  = ( 'ANGLES=DEGREES' 'DISTANCES=METERS' )
+
+      OUTPUT_SPK_TYPE   = 9
+      POLYNOM_DEGREE    = 1
+
+      SEGMENT_ID        = 'MARS -to- SITE 23, LOCALIZED'
+
+      PRODUCER_ID       = 'NAIF/JPL'
+
+   \begintext
+
+********************************************************************************
+
+********************************************************************************
+MKSPK RUN DATE/TIME: 2023-07-07T12:54:54
+MKSPK SETUP FILE:    230707192321/m2020_surf_rover_loc.bsp.site_loc.setup.00024
+MKSPK INPUT FILE:    230707192321/m2020_surf_rover_loc.bsp.site_loc.input.00024
+MKSPK OUTPUT FILE:   230707192321/m2020_surf_rover_loc.bsp
+OUTPUT FILE STATUS:  EXISTING FILE
+********************************************************************************
+
+   This segment contains the following localized position of the site 00024
+   relative to the center of Mars in the Mars body-fixed frame:
+
+           R                  =  3391979.309400, m
+           Planetocentric Lon =      77.401422187686, deg
+           Planetocentric Lat =       18.450566324189, deg
+
+           X                  =   701824.466191, m
+           Y                  =  3140148.296390, m
+           Z                  =  1073515.128320, m
+
+   \begindata
+
+      LEAPSECONDS_FILE  = '/ftp/pub/naif/MARS2020/kernels/lsk/m2020.tls'
+      FRAME_DEF_FILE    = '/ftp/pub/naif/MARS2020/kernels/fk/m2020_v04.tf'
+
+
+      OBJECT_NAME       = 'M2020_SITE_24'
+      CENTER_NAME       = 'MARS'
+      REF_FRAME_NAME    = 'IAU_MARS'
+
+      INPUT_DATA_TYPE   = 'STATES'
+      DATA_ORDER        = 'EPOCH X Y Z VX VY VZ'
+      DATA_DELIMITER    = ','
+      LINES_PER_RECORD  = 1
+      INPUT_DATA_UNITS  = ( 'ANGLES=DEGREES' 'DISTANCES=METERS' )
+
+      OUTPUT_SPK_TYPE   = 9
+      POLYNOM_DEGREE    = 1
+
+      SEGMENT_ID        = 'MARS -to- SITE 24, LOCALIZED'
+
+      PRODUCER_ID       = 'NAIF/JPL'
+
+   \begintext
+
+********************************************************************************
+
+********************************************************************************
+MKSPK RUN DATE/TIME: 2023-07-07T12:54:54
+MKSPK SETUP FILE:    230707192321/m2020_surf_rover_loc.bsp.site_loc.setup.00025
+MKSPK INPUT FILE:    230707192321/m2020_surf_rover_loc.bsp.site_loc.input.00025
+MKSPK OUTPUT FILE:   230707192321/m2020_surf_rover_loc.bsp
+OUTPUT FILE STATUS:  EXISTING FILE
+********************************************************************************
+
+   This segment contains the following localized position of the site 00025
+   relative to the center of Mars in the Mars body-fixed frame:
+
+           R                  =  3391968.406165, m
+           Planetocentric Lon =      77.408579662442, deg
+           Planetocentric Lat =       18.457661375156, deg
+
+           X                  =   701400.949139, m
+           Y                  =  3140096.088819, m
+           Z                  =  1073910.112603, m
+
+   \begindata
+
+      LEAPSECONDS_FILE  = '/ftp/pub/naif/MARS2020/kernels/lsk/m2020.tls'
+      FRAME_DEF_FILE    = '/ftp/pub/naif/MARS2020/kernels/fk/m2020_v04.tf'
+
+
+      OBJECT_NAME       = 'M2020_SITE_25'
+      CENTER_NAME       = 'MARS'
+      REF_FRAME_NAME    = 'IAU_MARS'
+
+      INPUT_DATA_TYPE   = 'STATES'
+      DATA_ORDER        = 'EPOCH X Y Z VX VY VZ'
+      DATA_DELIMITER    = ','
+      LINES_PER_RECORD  = 1
+      INPUT_DATA_UNITS  = ( 'ANGLES=DEGREES' 'DISTANCES=METERS' )
+
+      OUTPUT_SPK_TYPE   = 9
+      POLYNOM_DEGREE    = 1
+
+      SEGMENT_ID        = 'MARS -to- SITE 25, LOCALIZED'
+
+      PRODUCER_ID       = 'NAIF/JPL'
+
+   \begintext
+
+********************************************************************************
+
+********************************************************************************
+MKSPK RUN DATE/TIME: 2023-07-07T12:54:54
+MKSPK SETUP FILE:    230707192321/m2020_surf_rover_loc.bsp.site_loc.setup.00026
+MKSPK INPUT FILE:    230707192321/m2020_surf_rover_loc.bsp.site_loc.input.00026
+MKSPK OUTPUT FILE:   230707192321/m2020_surf_rover_loc.bsp
+OUTPUT FILE STATUS:  EXISTING FILE
+********************************************************************************
+
+   This segment contains the following localized position of the site 00026
+   relative to the center of Mars in the Mars body-fixed frame:
+
+           R                  =  3391969.622291, m
+           Planetocentric Lon =      77.406301461160, deg
+           Planetocentric Lat =       18.457509674677, deg
+
+           X                  =   701526.676913, m
+           Y                  =  3140072.097908, m
+           Z                  =  1073901.978796, m
+
+   \begindata
+
+      LEAPSECONDS_FILE  = '/ftp/pub/naif/MARS2020/kernels/lsk/m2020.tls'
+      FRAME_DEF_FILE    = '/ftp/pub/naif/MARS2020/kernels/fk/m2020_v04.tf'
+
+
+      OBJECT_NAME       = 'M2020_SITE_26'
+      CENTER_NAME       = 'MARS'
+      REF_FRAME_NAME    = 'IAU_MARS'
+
+      INPUT_DATA_TYPE   = 'STATES'
+      DATA_ORDER        = 'EPOCH X Y Z VX VY VZ'
+      DATA_DELIMITER    = ','
+      LINES_PER_RECORD  = 1
+      INPUT_DATA_UNITS  = ( 'ANGLES=DEGREES' 'DISTANCES=METERS' )
+
+      OUTPUT_SPK_TYPE   = 9
+      POLYNOM_DEGREE    = 1
+
+      SEGMENT_ID        = 'MARS -to- SITE 26, LOCALIZED'
+
+      PRODUCER_ID       = 'NAIF/JPL'
+
+   \begintext
+
+********************************************************************************
+
+********************************************************************************
+MKSPK RUN DATE/TIME: 2023-07-07T12:54:54
+MKSPK SETUP FILE:    230707192321/m2020_surf_rover_loc.bsp.site_loc.setup.00027
+MKSPK INPUT FILE:    230707192321/m2020_surf_rover_loc.bsp.site_loc.input.00027
+MKSPK OUTPUT FILE:   230707192321/m2020_surf_rover_loc.bsp
+OUTPUT FILE STATUS:  EXISTING FILE
+********************************************************************************
+
+   This segment contains the following localized position of the site 00027
+   relative to the center of Mars in the Mars body-fixed frame:
+
+           R                  =  3391978.445828, m
+           Planetocentric Lon =      77.401799708605, deg
+           Planetocentric Lat =       18.450323657409, deg
+
+           X                  =   701804.588803, m
+           Y                  =  3140156.558371, m
+           Z                  =  1073501.227301, m
+
+   \begindata
+
+      LEAPSECONDS_FILE  = '/ftp/pub/naif/MARS2020/kernels/lsk/m2020.tls'
+      FRAME_DEF_FILE    = '/ftp/pub/naif/MARS2020/kernels/fk/m2020_v04.tf'
+
+
+      OBJECT_NAME       = 'M2020_SITE_27'
+      CENTER_NAME       = 'MARS'
+      REF_FRAME_NAME    = 'IAU_MARS'
+
+      INPUT_DATA_TYPE   = 'STATES'
+      DATA_ORDER        = 'EPOCH X Y Z VX VY VZ'
+      DATA_DELIMITER    = ','
+      LINES_PER_RECORD  = 1
+      INPUT_DATA_UNITS  = ( 'ANGLES=DEGREES' 'DISTANCES=METERS' )
+
+      OUTPUT_SPK_TYPE   = 9
+      POLYNOM_DEGREE    = 1
+
+      SEGMENT_ID        = 'MARS -to- SITE 27, LOCALIZED'
+
+      PRODUCER_ID       = 'NAIF/JPL'
+
+   \begintext
+
+********************************************************************************
+
+********************************************************************************
+MKSPK RUN DATE/TIME: 2023-07-07T12:54:54
+MKSPK SETUP FILE:    230707192321/m2020_surf_rover_loc.bsp.site_loc.setup.00028
+MKSPK INPUT FILE:    230707192321/m2020_surf_rover_loc.bsp.site_loc.input.00028
+MKSPK OUTPUT FILE:   230707192321/m2020_surf_rover_loc.bsp
+OUTPUT FILE STATUS:  EXISTING FILE
+********************************************************************************
+
+   This segment contains the following localized position of the site 00028
+   relative to the center of Mars in the Mars body-fixed frame:
+
+           R                  =  3391979.236103, m
+           Planetocentric Lon =      77.401442974806, deg
+           Planetocentric Lat =       18.450743482411, deg
+
+           X                  =   701822.587763, m
+           Y                  =  3140145.243763, m
+           Z                  =  1073525.053984, m
+
+   \begindata
+
+      LEAPSECONDS_FILE  = '/ftp/pub/naif/MARS2020/kernels/lsk/m2020.tls'
+      FRAME_DEF_FILE    = '/ftp/pub/naif/MARS2020/kernels/fk/m2020_v04.tf'
+
+
+      OBJECT_NAME       = 'M2020_SITE_28'
+      CENTER_NAME       = 'MARS'
+      REF_FRAME_NAME    = 'IAU_MARS'
+
+      INPUT_DATA_TYPE   = 'STATES'
+      DATA_ORDER        = 'EPOCH X Y Z VX VY VZ'
+      DATA_DELIMITER    = ','
+      LINES_PER_RECORD  = 1
+      INPUT_DATA_UNITS  = ( 'ANGLES=DEGREES' 'DISTANCES=METERS' )
+
+      OUTPUT_SPK_TYPE   = 9
+      POLYNOM_DEGREE    = 1
+
+      SEGMENT_ID        = 'MARS -to- SITE 28, LOCALIZED'
+
+      PRODUCER_ID       = 'NAIF/JPL'
+
+   \begintext
+
+********************************************************************************
+
+********************************************************************************
+MKSPK RUN DATE/TIME: 2023-07-07T12:54:54
+MKSPK SETUP FILE:    230707192321/m2020_surf_rover_loc.bsp.site_loc.setup.00029
+MKSPK INPUT FILE:    230707192321/m2020_surf_rover_loc.bsp.site_loc.input.00029
+MKSPK OUTPUT FILE:   230707192321/m2020_surf_rover_loc.bsp
+OUTPUT FILE STATUS:  EXISTING FILE
+********************************************************************************
+
+   This segment contains the following localized position of the site 00029
+   relative to the center of Mars in the Mars body-fixed frame:
+
+           R                  =  3391979.229755, m
+           Planetocentric Lon =      77.401440292597, deg
+           Planetocentric Lat =       18.450726308135, deg
+
+           X                  =   701822.803638, m
+           Y                  =  3140145.519070, m
+           Z                  =  1073524.087502, m
+
+   \begindata
+
+      LEAPSECONDS_FILE  = '/ftp/pub/naif/MARS2020/kernels/lsk/m2020.tls'
+      FRAME_DEF_FILE    = '/ftp/pub/naif/MARS2020/kernels/fk/m2020_v04.tf'
+
+
+      OBJECT_NAME       = 'M2020_SITE_29'
+      CENTER_NAME       = 'MARS'
+      REF_FRAME_NAME    = 'IAU_MARS'
+
+      INPUT_DATA_TYPE   = 'STATES'
+      DATA_ORDER        = 'EPOCH X Y Z VX VY VZ'
+      DATA_DELIMITER    = ','
+      LINES_PER_RECORD  = 1
+      INPUT_DATA_UNITS  = ( 'ANGLES=DEGREES' 'DISTANCES=METERS' )
+
+      OUTPUT_SPK_TYPE   = 9
+      POLYNOM_DEGREE    = 1
+
+      SEGMENT_ID        = 'MARS -to- SITE 29, LOCALIZED'
+
+      PRODUCER_ID       = 'NAIF/JPL'
+
+   \begintext
+
+********************************************************************************
+
+********************************************************************************
+MKSPK RUN DATE/TIME: 2023-07-07T12:54:54
+MKSPK SETUP FILE:    230707192321/m2020_surf_rover_loc.bsp.site_loc.setup.00030
+MKSPK INPUT FILE:    230707192321/m2020_surf_rover_loc.bsp.site_loc.input.00030
+MKSPK OUTPUT FILE:   230707192321/m2020_surf_rover_loc.bsp
+OUTPUT FILE STATUS:  EXISTING FILE
+********************************************************************************
+
+   This segment contains the following localized position of the site 00030
+   relative to the center of Mars in the Mars body-fixed frame:
+
+           R                  =  3391980.397297, m
+           Planetocentric Lon =      77.401257902384, deg
+           Planetocentric Lat =       18.451329955247, deg
+
+           X                  =   701830.574213, m
+           Y                  =  3140133.327696, m
+           Z                  =  1073558.356605, m
+
+   \begindata
+
+      LEAPSECONDS_FILE  = '/ftp/pub/naif/MARS2020/kernels/lsk/m2020.tls'
+      FRAME_DEF_FILE    = '/ftp/pub/naif/MARS2020/kernels/fk/m2020_v04.tf'
+
+
+      OBJECT_NAME       = 'M2020_SITE_30'
+      CENTER_NAME       = 'MARS'
+      REF_FRAME_NAME    = 'IAU_MARS'
+
+      INPUT_DATA_TYPE   = 'STATES'
+      DATA_ORDER        = 'EPOCH X Y Z VX VY VZ'
+      DATA_DELIMITER    = ','
+      LINES_PER_RECORD  = 1
+      INPUT_DATA_UNITS  = ( 'ANGLES=DEGREES' 'DISTANCES=METERS' )
+
+      OUTPUT_SPK_TYPE   = 9
+      POLYNOM_DEGREE    = 1
+
+      SEGMENT_ID        = 'MARS -to- SITE 30, LOCALIZED'
+
+      PRODUCER_ID       = 'NAIF/JPL'
+
+   \begintext
+
+********************************************************************************
+
+********************************************************************************
+MKSPK RUN DATE/TIME: 2023-07-07T12:54:54
+MKSPK SETUP FILE:    230707192321/m2020_surf_rover_loc.bsp.site_loc.setup.00031
+MKSPK INPUT FILE:    230707192321/m2020_surf_rover_loc.bsp.site_loc.input.00031
+MKSPK OUTPUT FILE:   230707192321/m2020_surf_rover_loc.bsp
+OUTPUT FILE STATUS:  EXISTING FILE
+********************************************************************************
+
+   This segment contains the following localized position of the site 00031
+   relative to the center of Mars in the Mars body-fixed frame:
+
+           R                  =  3391980.397297, m
+           Planetocentric Lon =      77.401257148013, deg
+           Planetocentric Lat =       18.451331220543, deg
+
+           X                  =   701830.610385, m
+           Y                  =  3140133.295319, m
+           Z                  =  1073558.427662, m
+
+   \begindata
+
+      LEAPSECONDS_FILE  = '/ftp/pub/naif/MARS2020/kernels/lsk/m2020.tls'
+      FRAME_DEF_FILE    = '/ftp/pub/naif/MARS2020/kernels/fk/m2020_v04.tf'
+
+
+      OBJECT_NAME       = 'M2020_SITE_31'
+      CENTER_NAME       = 'MARS'
+      REF_FRAME_NAME    = 'IAU_MARS'
+
+      INPUT_DATA_TYPE   = 'STATES'
+      DATA_ORDER        = 'EPOCH X Y Z VX VY VZ'
+      DATA_DELIMITER    = ','
+      LINES_PER_RECORD  = 1
+      INPUT_DATA_UNITS  = ( 'ANGLES=DEGREES' 'DISTANCES=METERS' )
+
+      OUTPUT_SPK_TYPE   = 9
+      POLYNOM_DEGREE    = 1
+
+      SEGMENT_ID        = 'MARS -to- SITE 31, LOCALIZED'
+
+      PRODUCER_ID       = 'NAIF/JPL'
+
+   \begintext
+
+********************************************************************************
+
+********************************************************************************
+MKSPK RUN DATE/TIME: 2023-07-07T12:54:54
+MKSPK SETUP FILE:    230707192321/m2020_surf_rover_loc.bsp.site_loc.setup.00032
+MKSPK INPUT FILE:    230707192321/m2020_surf_rover_loc.bsp.site_loc.input.00032
+MKSPK OUTPUT FILE:   230707192321/m2020_surf_rover_loc.bsp
+OUTPUT FILE STATUS:  EXISTING FILE
+********************************************************************************
+
+   This segment contains the following localized position of the site 00032
+   relative to the center of Mars in the Mars body-fixed frame:
+
+           R                  =  3391960.141063, m
+           Planetocentric Lon =      77.407201538223, deg
+           Planetocentric Lat =       18.452516329922, deg
+
+           X                  =   701495.789716, m
+           Y                  =  3140165.668165, m
+           Z                  =  1073618.569162, m
+
+   \begindata
+
+      LEAPSECONDS_FILE  = '/ftp/pub/naif/MARS2020/kernels/lsk/m2020.tls'
+      FRAME_DEF_FILE    = '/ftp/pub/naif/MARS2020/kernels/fk/m2020_v04.tf'
+
+
+      OBJECT_NAME       = 'M2020_SITE_32'
+      CENTER_NAME       = 'MARS'
+      REF_FRAME_NAME    = 'IAU_MARS'
+
+      INPUT_DATA_TYPE   = 'STATES'
+      DATA_ORDER        = 'EPOCH X Y Z VX VY VZ'
+      DATA_DELIMITER    = ','
+      LINES_PER_RECORD  = 1
+      INPUT_DATA_UNITS  = ( 'ANGLES=DEGREES' 'DISTANCES=METERS' )
+
+      OUTPUT_SPK_TYPE   = 9
+      POLYNOM_DEGREE    = 1
+
+      SEGMENT_ID        = 'MARS -to- SITE 32, LOCALIZED'
+
+      PRODUCER_ID       = 'NAIF/JPL'
+
+   \begintext
+
+********************************************************************************
+
+********************************************************************************
+MKSPK RUN DATE/TIME: 2023-07-07T12:54:54
+MKSPK SETUP FILE:    230707192321/m2020_surf_rover_loc.bsp.site_loc.setup.00033
+MKSPK INPUT FILE:    230707192321/m2020_surf_rover_loc.bsp.site_loc.input.00033
+MKSPK OUTPUT FILE:   230707192321/m2020_surf_rover_loc.bsp
+OUTPUT FILE STATUS:  EXISTING FILE
+********************************************************************************
+
+   This segment contains the following localized position of the site 00033
+   relative to the center of Mars in the Mars body-fixed frame:
+
+           R                  =  3391965.573883, m
+           Planetocentric Lon =      77.408804297447, deg
+           Planetocentric Lat =       18.457391057455, deg
+
+           X                  =   701389.156836, m
+           Y                  =  3140101.161497, m
+           Z                  =  1073894.036042, m
+
+   \begindata
+
+      LEAPSECONDS_FILE  = '/ftp/pub/naif/MARS2020/kernels/lsk/m2020.tls'
+      FRAME_DEF_FILE    = '/ftp/pub/naif/MARS2020/kernels/fk/m2020_v04.tf'
+
+
+      OBJECT_NAME       = 'M2020_SITE_33'
+      CENTER_NAME       = 'MARS'
+      REF_FRAME_NAME    = 'IAU_MARS'
+
+      INPUT_DATA_TYPE   = 'STATES'
+      DATA_ORDER        = 'EPOCH X Y Z VX VY VZ'
+      DATA_DELIMITER    = ','
+      LINES_PER_RECORD  = 1
+      INPUT_DATA_UNITS  = ( 'ANGLES=DEGREES' 'DISTANCES=METERS' )
+
+      OUTPUT_SPK_TYPE   = 9
+      POLYNOM_DEGREE    = 1
+
+      SEGMENT_ID        = 'MARS -to- SITE 33, LOCALIZED'
+
+      PRODUCER_ID       = 'NAIF/JPL'
+
+   \begintext
+
+********************************************************************************
+
+********************************************************************************
+MKSPK RUN DATE/TIME: 2023-07-07T12:54:54
+MKSPK SETUP FILE:    230707192321/m2020_surf_rover_loc.bsp.site_loc.setup.00034
+MKSPK INPUT FILE:    230707192321/m2020_surf_rover_loc.bsp.site_loc.input.00034
+MKSPK OUTPUT FILE:   230707192321/m2020_surf_rover_loc.bsp
+OUTPUT FILE STATUS:  EXISTING FILE
+********************************************************************************
+
+   This segment contains the following localized position of the site 00034
+   relative to the center of Mars in the Mars body-fixed frame:
+
+           R                  =  3392015.629892, m
+           Planetocentric Lon =      77.399879246950, deg
+           Planetocentric Lat =       18.468606315023, deg
+
+           X                  =   701842.774539, m
+           Y                  =  3139832.996489, m
+           Z                  =  1074539.672332, m
+
+   \begindata
+
+      LEAPSECONDS_FILE  = '/ftp/pub/naif/MARS2020/kernels/lsk/m2020.tls'
+      FRAME_DEF_FILE    = '/ftp/pub/naif/MARS2020/kernels/fk/m2020_v04.tf'
+
+
+      OBJECT_NAME       = 'M2020_SITE_34'
+      CENTER_NAME       = 'MARS'
+      REF_FRAME_NAME    = 'IAU_MARS'
+
+      INPUT_DATA_TYPE   = 'STATES'
+      DATA_ORDER        = 'EPOCH X Y Z VX VY VZ'
+      DATA_DELIMITER    = ','
+      LINES_PER_RECORD  = 1
+      INPUT_DATA_UNITS  = ( 'ANGLES=DEGREES' 'DISTANCES=METERS' )
+
+      OUTPUT_SPK_TYPE   = 9
+      POLYNOM_DEGREE    = 1
+
+      SEGMENT_ID        = 'MARS -to- SITE 34, LOCALIZED'
+
+      PRODUCER_ID       = 'NAIF/JPL'
+
+   \begintext
+
+********************************************************************************
+
+********************************************************************************
+MKSPK RUN DATE/TIME: 2023-07-07T12:54:54
+MKSPK SETUP FILE:    230707192321/m2020_surf_rover_loc.bsp.site_loc.setup.00035
+MKSPK INPUT FILE:    230707192321/m2020_surf_rover_loc.bsp.site_loc.input.00035
+MKSPK OUTPUT FILE:   230707192321/m2020_surf_rover_loc.bsp
+OUTPUT FILE STATUS:  EXISTING FILE
+********************************************************************************
+
+   This segment contains the following localized position of the site 00035
+   relative to the center of Mars in the Mars body-fixed frame:
+
+           R                  =  3392043.602991, m
+           Planetocentric Lon =      77.389816269278, deg
+           Planetocentric Lat =       18.474442312750, deg
+
+           X                  =   702376.113063, m
+           Y                  =  3139628.747535, m
+           Z                  =  1074876.238477, m
+
+   \begindata
+
+      LEAPSECONDS_FILE  = '/ftp/pub/naif/MARS2020/kernels/lsk/m2020.tls'
+      FRAME_DEF_FILE    = '/ftp/pub/naif/MARS2020/kernels/fk/m2020_v04.tf'
+
+
+      OBJECT_NAME       = 'M2020_SITE_35'
+      CENTER_NAME       = 'MARS'
+      REF_FRAME_NAME    = 'IAU_MARS'
+
+      INPUT_DATA_TYPE   = 'STATES'
+      DATA_ORDER        = 'EPOCH X Y Z VX VY VZ'
+      DATA_DELIMITER    = ','
+      LINES_PER_RECORD  = 1
+      INPUT_DATA_UNITS  = ( 'ANGLES=DEGREES' 'DISTANCES=METERS' )
+
+      OUTPUT_SPK_TYPE   = 9
+      POLYNOM_DEGREE    = 1
+
+      SEGMENT_ID        = 'MARS -to- SITE 35, LOCALIZED'
+
+      PRODUCER_ID       = 'NAIF/JPL'
+
+   \begintext
+
+********************************************************************************
+
+********************************************************************************
+MKSPK RUN DATE/TIME: 2023-07-07T12:54:54
+MKSPK SETUP FILE:    230707192321/m2020_surf_rover_loc.bsp.site_loc.setup.00036
+MKSPK INPUT FILE:    230707192321/m2020_surf_rover_loc.bsp.site_loc.input.00036
+MKSPK OUTPUT FILE:   230707192321/m2020_surf_rover_loc.bsp
+OUTPUT FILE STATUS:  EXISTING FILE
+********************************************************************************
+
+   This segment contains the following localized position of the site 00036
+   relative to the center of Mars in the Mars body-fixed frame:
+
+           R                  =  3392043.602991, m
+           Planetocentric Lon =      77.389816269278, deg
+           Planetocentric Lat =       18.474442312750, deg
+
+           X                  =   702376.113063, m
+           Y                  =  3139628.747535, m
+           Z                  =  1074876.238477, m
+
+   \begindata
+
+      LEAPSECONDS_FILE  = '/ftp/pub/naif/MARS2020/kernels/lsk/m2020.tls'
+      FRAME_DEF_FILE    = '/ftp/pub/naif/MARS2020/kernels/fk/m2020_v04.tf'
+
+
+      OBJECT_NAME       = 'M2020_SITE_36'
+      CENTER_NAME       = 'MARS'
+      REF_FRAME_NAME    = 'IAU_MARS'
+
+      INPUT_DATA_TYPE   = 'STATES'
+      DATA_ORDER        = 'EPOCH X Y Z VX VY VZ'
+      DATA_DELIMITER    = ','
+      LINES_PER_RECORD  = 1
+      INPUT_DATA_UNITS  = ( 'ANGLES=DEGREES' 'DISTANCES=METERS' )
+
+      OUTPUT_SPK_TYPE   = 9
+      POLYNOM_DEGREE    = 1
+
+      SEGMENT_ID        = 'MARS -to- SITE 36, LOCALIZED'
+
+      PRODUCER_ID       = 'NAIF/JPL'
+
+   \begintext
+
+********************************************************************************
+
+********************************************************************************
+MKSPK RUN DATE/TIME: 2023-07-07T12:54:54
+MKSPK SETUP FILE:    230707192321/m2020_surf_rover_loc.bsp.site_loc.setup.00037
+MKSPK INPUT FILE:    230707192321/m2020_surf_rover_loc.bsp.site_loc.input.00037
+MKSPK OUTPUT FILE:   230707192321/m2020_surf_rover_loc.bsp
+OUTPUT FILE STATUS:  EXISTING FILE
+********************************************************************************
+
+   This segment contains the following localized position of the site 00037
+   relative to the center of Mars in the Mars body-fixed frame:
+
+           R                  =  3392054.270337, m
+           Planetocentric Lon =      77.383987829089, deg
+           Planetocentric Lat =       18.470211603687, deg
+
+           X                  =   702715.033009, m
+           Y                  =  3139644.599111, m
+           Z                  =  1074642.055089, m
+
+   \begindata
+
+      LEAPSECONDS_FILE  = '/ftp/pub/naif/MARS2020/kernels/lsk/m2020.tls'
+      FRAME_DEF_FILE    = '/ftp/pub/naif/MARS2020/kernels/fk/m2020_v04.tf'
+
+
+      OBJECT_NAME       = 'M2020_SITE_37'
+      CENTER_NAME       = 'MARS'
+      REF_FRAME_NAME    = 'IAU_MARS'
+
+      INPUT_DATA_TYPE   = 'STATES'
+      DATA_ORDER        = 'EPOCH X Y Z VX VY VZ'
+      DATA_DELIMITER    = ','
+      LINES_PER_RECORD  = 1
+      INPUT_DATA_UNITS  = ( 'ANGLES=DEGREES' 'DISTANCES=METERS' )
+
+      OUTPUT_SPK_TYPE   = 9
+      POLYNOM_DEGREE    = 1
+
+      SEGMENT_ID        = 'MARS -to- SITE 37, LOCALIZED'
+
+      PRODUCER_ID       = 'NAIF/JPL'
+
+   \begintext
+
+********************************************************************************
+
+********************************************************************************
+MKSPK RUN DATE/TIME: 2023-07-07T12:54:54
+MKSPK SETUP FILE:    230707192321/m2020_surf_rover_loc.bsp.site_loc.setup.00038
+MKSPK INPUT FILE:    230707192321/m2020_surf_rover_loc.bsp.site_loc.input.00038
+MKSPK OUTPUT FILE:   230707192321/m2020_surf_rover_loc.bsp
+OUTPUT FILE STATUS:  EXISTING FILE
+********************************************************************************
+
+   This segment contains the following localized position of the site 00038
+   relative to the center of Mars in the Mars body-fixed frame:
+
+           R                  =  3392080.522918, m
+           Planetocentric Lon =      77.373643219471, deg
+           Planetocentric Lat =       18.475496776165, deg
+
+           X                  =   703265.647569, m
+           Y                  =  3139445.226869, m
+           Z                  =  1074947.147722, m
+
+   \begindata
+
+      LEAPSECONDS_FILE  = '/ftp/pub/naif/MARS2020/kernels/lsk/m2020.tls'
+      FRAME_DEF_FILE    = '/ftp/pub/naif/MARS2020/kernels/fk/m2020_v04.tf'
+
+
+      OBJECT_NAME       = 'M2020_SITE_38'
+      CENTER_NAME       = 'MARS'
+      REF_FRAME_NAME    = 'IAU_MARS'
+
+      INPUT_DATA_TYPE   = 'STATES'
+      DATA_ORDER        = 'EPOCH X Y Z VX VY VZ'
+      DATA_DELIMITER    = ','
+      LINES_PER_RECORD  = 1
+      INPUT_DATA_UNITS  = ( 'ANGLES=DEGREES' 'DISTANCES=METERS' )
+
+      OUTPUT_SPK_TYPE   = 9
+      POLYNOM_DEGREE    = 1
+
+      SEGMENT_ID        = 'MARS -to- SITE 38, LOCALIZED'
+
+      PRODUCER_ID       = 'NAIF/JPL'
+
+   \begintext
+
+********************************************************************************
+
+********************************************************************************
+MKSPK RUN DATE/TIME: 2023-07-07T12:54:55
+MKSPK SETUP FILE:    230707192321/m2020_surf_rover_loc.bsp.site_loc.setup.00039
+MKSPK INPUT FILE:    230707192321/m2020_surf_rover_loc.bsp.site_loc.input.00039
+MKSPK OUTPUT FILE:   230707192321/m2020_surf_rover_loc.bsp
+OUTPUT FILE STATUS:  EXISTING FILE
+********************************************************************************
+
+   This segment contains the following localized position of the site 00039
+   relative to the center of Mars in the Mars body-fixed frame:
+
+           R                  =  3392080.501237, m
+           Planetocentric Lon =      77.369103580713, deg
+           Planetocentric Lat =       18.481268311311, deg
+
+           X                  =   703490.702757, m
+           Y                  =  3139283.798772, m
+           Z                  =  1075271.216380, m
+
+   \begindata
+
+      LEAPSECONDS_FILE  = '/ftp/pub/naif/MARS2020/kernels/lsk/m2020.tls'
+      FRAME_DEF_FILE    = '/ftp/pub/naif/MARS2020/kernels/fk/m2020_v04.tf'
+
+
+      OBJECT_NAME       = 'M2020_SITE_39'
+      CENTER_NAME       = 'MARS'
+      REF_FRAME_NAME    = 'IAU_MARS'
+
+      INPUT_DATA_TYPE   = 'STATES'
+      DATA_ORDER        = 'EPOCH X Y Z VX VY VZ'
+      DATA_DELIMITER    = ','
+      LINES_PER_RECORD  = 1
+      INPUT_DATA_UNITS  = ( 'ANGLES=DEGREES' 'DISTANCES=METERS' )
+
+      OUTPUT_SPK_TYPE   = 9
+      POLYNOM_DEGREE    = 1
+
+      SEGMENT_ID        = 'MARS -to- SITE 39, LOCALIZED'
+
+      PRODUCER_ID       = 'NAIF/JPL'
+
+   \begintext
+
+********************************************************************************
+
+********************************************************************************
+MKSPK RUN DATE/TIME: 2023-07-07T12:54:55
+MKSPK SETUP FILE:    230707192321/m2020_surf_rover_loc.bsp.site_loc.setup.00040
+MKSPK INPUT FILE:    230707192321/m2020_surf_rover_loc.bsp.site_loc.input.00040
+MKSPK OUTPUT FILE:   230707192321/m2020_surf_rover_loc.bsp
+OUTPUT FILE STATUS:  EXISTING FILE
+********************************************************************************
+
+   This segment contains the following localized position of the site 00040
+   relative to the center of Mars in the Mars body-fixed frame:
+
+           R                  =  3392080.349829, m
+           Planetocentric Lon =      77.368191629648, deg
+           Planetocentric Lat =       18.483036924300, deg
+
+           X                  =   703533.378988, m
+           Y                  =  3139240.071397, m
+           Z                  =  1075370.474989, m
+
+   \begindata
+
+      LEAPSECONDS_FILE  = '/ftp/pub/naif/MARS2020/kernels/lsk/m2020.tls'
+      FRAME_DEF_FILE    = '/ftp/pub/naif/MARS2020/kernels/fk/m2020_v04.tf'
+
+
+      OBJECT_NAME       = 'M2020_SITE_40'
+      CENTER_NAME       = 'MARS'
+      REF_FRAME_NAME    = 'IAU_MARS'
+
+      INPUT_DATA_TYPE   = 'STATES'
+      DATA_ORDER        = 'EPOCH X Y Z VX VY VZ'
+      DATA_DELIMITER    = ','
+      LINES_PER_RECORD  = 1
+      INPUT_DATA_UNITS  = ( 'ANGLES=DEGREES' 'DISTANCES=METERS' )
+
+      OUTPUT_SPK_TYPE   = 9
+      POLYNOM_DEGREE    = 1
+
+      SEGMENT_ID        = 'MARS -to- SITE 40, LOCALIZED'
+
+      PRODUCER_ID       = 'NAIF/JPL'
+
+   \begintext
+
+********************************************************************************
+
+********************************************************************************
+MKSPK RUN DATE/TIME: 2023-07-07T12:54:55
+MKSPK SETUP FILE:    230707192321/m2020_surf_rover_loc.bsp.site_loc.setup.00041
+MKSPK INPUT FILE:    230707192321/m2020_surf_rover_loc.bsp.site_loc.input.00041
+MKSPK OUTPUT FILE:   230707192321/m2020_surf_rover_loc.bsp
+OUTPUT FILE STATUS:  EXISTING FILE
+********************************************************************************
+
+   This segment contains the following localized position of the site 00041
+   relative to the center of Mars in the Mars body-fixed frame:
+
+           R                  =  3392086.580190, m
+           Planetocentric Lon =      77.365828268230, deg
+           Planetocentric Lat =       18.481441926705, deg
+
+           X                  =   703670.707108, m
+           Y                  =  3139246.025079, m
+           Z                  =  1075282.891843, m
+
+   \begindata
+
+      LEAPSECONDS_FILE  = '/ftp/pub/naif/MARS2020/kernels/lsk/m2020.tls'
+      FRAME_DEF_FILE    = '/ftp/pub/naif/MARS2020/kernels/fk/m2020_v04.tf'
+
+
+      OBJECT_NAME       = 'M2020_SITE_41'
+      CENTER_NAME       = 'MARS'
+      REF_FRAME_NAME    = 'IAU_MARS'
+
+      INPUT_DATA_TYPE   = 'STATES'
+      DATA_ORDER        = 'EPOCH X Y Z VX VY VZ'
+      DATA_DELIMITER    = ','
+      LINES_PER_RECORD  = 1
+      INPUT_DATA_UNITS  = ( 'ANGLES=DEGREES' 'DISTANCES=METERS' )
+
+      OUTPUT_SPK_TYPE   = 9
+      POLYNOM_DEGREE    = 1
+
+      SEGMENT_ID        = 'MARS -to- SITE 41, LOCALIZED'
+
+      PRODUCER_ID       = 'NAIF/JPL'
+
+   \begintext
+
+********************************************************************************
+
+********************************************************************************
+MKSPK RUN DATE/TIME: 2023-07-07T12:54:56
+MKSPK SETUP FILE:    230707192321/m2020_surf_rover_loc.bsp.rover_loc.setup
+MKSPK INPUT FILE:    230707192321/m2020_surf_rover_loc.bsp.rover_loc.input.uniq
+MKSPK OUTPUT FILE:   230707192321/m2020_surf_rover_loc.bsp
+OUTPUT FILE STATUS:  EXISTING FILE
+********************************************************************************
+
+   This segment contains the localized rover traverse path relative to
+   the center of Mars in the Mars body-fixed frame.
+
+   \begindata
+
+      LEAPSECONDS_FILE  = '/ftp/pub/naif/MARS2020/kernels/lsk/m2020.tls'
+      FRAME_DEF_FILE    = '/ftp/pub/naif/MARS2020/kernels/fk/m2020_v04.tf'
+
+      OBJECT_NAME       = 'M2020'
+      CENTER_NAME       = 'MARS'
+      REF_FRAME_NAME    = 'IAU_MARS'
+
+      INPUT_DATA_TYPE   = 'STATES'
+      DATA_ORDER        = 'EPOCH X Y Z VX VY VZ'
+      DATA_DELIMITER    = ','
+      LINES_PER_RECORD  = 1
+      INPUT_DATA_UNITS  = ( 'ANGLES=DEGREES' 'DISTANCES=METERS' )
+
+      OUTPUT_SPK_TYPE   = 9
+      POLYNOM_DEGREE    = 1
+
+      SEGMENT_ID        = 'MARS -to- ROVER, LOCALIZED'
+
+      PRODUCER_ID       = 'NAIF/JPL'
+
+   \begintext
+
+********************************************************************************

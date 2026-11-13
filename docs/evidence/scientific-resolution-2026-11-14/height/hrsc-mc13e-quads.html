@@ -1,0 +1,279 @@
+ <!DOCTYPE php>
+ 
+ 
+ 
+ 
+<html>
+	<head>
+	  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+	  <meta content="IE=8" http-equiv="X-UA-Compatible">
+	  <link href="/ressources/css/standard.css"  type="text/css" rel="stylesheet">
+	  <title>Welcome to the HRSC on MarsExpress supplementary site</title>
+	  
+	  <style>
+
+		.row {
+			display: flex;
+		}
+		.columnleft,.columnright {
+			flex: 50%;
+			padding: 25px;
+		}
+		.columnright {
+			padding-left: 0em;
+		}
+		
+		.imgwrap {
+			display: flex;
+			width: 50%;
+			align-content: flex-end;
+		}
+		.imgwrap img {
+		   height: 800px;
+		   width: auto;
+		}
+		
+		.link{
+			color:black;
+			text-decoration: none; 
+			background-color: none;
+			margin: 0;
+		}
+
+		.link:hover {
+			color: gray;
+			text-decoration: underline;
+		}
+		
+		a, a:hover {
+			text-decoration: none;
+			color: #252525;
+		}
+		
+		a.section {
+				font-size: 14px;
+				font-weight: 0;
+		}
+		
+		.active.section {
+			font-size: 14px;
+			font-weight: 700;
+		}
+		
+		ul.breadcrumb {
+		  padding: 10px 16px;
+		  list-style: none;
+		}
+
+		ul.breadcrumb li {
+		  display: inline;
+		  font-size: 18px;
+		}
+
+		ul.breadcrumb li+li:before {
+		  padding: 8px;
+		  color: black;
+		  content: "/\00a0";
+		}
+
+		#breadcr {
+			border-bottom-style: solid;
+			border-bottom-color: rgb(0,0,0);
+			border-bottom-width: 0.6666667px;
+			border-top-style: solid;
+			border-top-color: rgb(0,0,0);
+			border-top-width: 0.6666667px;
+		}
+
+	  </style>
+	  
+	</head>
+
+
+	<body>
+	
+	
+		<!-- include header -->
+		<!DOCTYPE html>
+<html>
+	<head>
+		<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+		<meta content="IE=8" http-equiv="X-UA-Compatible">
+		<link href="/ressources/css/standard.css"  type="text/css" rel="stylesheet">
+		<title>Welcome to the HRSC public and internal Team Sites</title>
+		
+		<style>
+		
+			.link{
+				color:black;
+				text-decoration: none; 
+				background-color: none;
+				margin: 0;
+			}
+
+			.link:hover {
+				color: gray;
+				text-decoration: underline;
+			}
+
+			.logo {
+				max-width: 100%;
+				width: 100%;
+				height: auto !important;
+			}
+
+			@media (max-width:1599px) {
+				.logo {
+					max-width: 220px;
+				}
+			}
+
+			@media (min-width:1600px) {
+				.logo {
+					max-width: 280px;
+				}
+			}
+
+		</style>		
+		
+		
+	</head>
+
+	<body class="view">
+		<div id="main" style="padding-left: calc(100vw - 100%);">
+			<div class="ui basic segment header-wrapper">
+				<div class="ui container">
+					<div class="header">
+						<div class="header-top">
+							<ul>
+								<li><a href="/index.php" class="link"> <p style="font-size: 22px;">HRSC Team Sites</p></a></li>
+							</ul>
+						</div>								
+						<div class="logo-nav-wrapper">
+							<div class="logo">
+								<a title="DLR" href="https://www.dlr.de/en" target="_blank">
+									<img class="ui image" title="DLR" src="/ressources/img/Logo-en.bc10c5b6.svg" alt="DLR" width="310" height="93">
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+				
+		
+		<!-- breadcrumbs navigation -->
+		<div class="ui secondary vertical segment" role="navigation" aria-label="bread crumbs" >
+			<div class="ui container" id="breadcr">
+				<ul class="breadcrumb">
+					<li><a class="section" title="Home" href="/index.php">Home</a></li>
+					<li><a class="section" title="Home" href="/public/index.php">Public Sites</a></li>
+					<li><a class="section" title="Data Products" href="/public/data.php">Data Products</a></li>
+					<li><a class="section" title="Regional DTMs" href="/public/data/regionaldtms.php">HMC-30 overview</a></li>
+					<li><a class="active section">MC13E</a></li>
+				</ul>
+			</div>
+		</div>				
+		
+		<!-- MAIN CONTENT -->
+		<div class="ui basic segment content-area">
+			<main>
+				<div id="page-document" class="ui container">
+
+					<div class="row" style="background-color: #ececec">
+						<div class="columnleft">
+							<h1 style="font-size: 48px;">MC13E</h1>						</div>
+						<!--<div class="columnright">
+							<div style="text-align: right">
+								<a class="link" href="/public/data/regionaldtms.php"><h4>back to overview</h4></a>
+							</div>
+						</div>-->
+					</div>
+					<div class="row" style="background-color: white; margin-bottom: 20px;">
+						<br>
+					</div>
+
+					<div class="row" style="background-color: #ececec">
+						<div class="columnleft">
+							<h3>Digital Terrain Models and Color Image Files</h3>
+						
+							<!-- 
+							create links to files in given directory
+							-->
+							<h4>DT5 - digital terrain model, heights w.r.t. Mars sphere (4 tiles)</h4><ul><li><a class="link" href="MC13E/HMC_13E10_dt5.tif">HMC_13E10_dt5.tif</a></li><li><a class="link" href="MC13E/HMC_13E20_dt5.tif">HMC_13E20_dt5.tif</a></li><li><a class="link" href="MC13E/HMC_13E30_dt5.tif">HMC_13E30_dt5.tif</a></li><li><a class="link" href="MC13E/HMC_13E40_dt5.tif">HMC_13E40_dt5.tif</a></li></ul><h4>DA5 - digital terrain model, heights w.r.t. Areoid  (4 tiles)</h4><ul><li><a class="link" href="MC13E/HMC_13E10_da5.tif">HMC_13E10_da5.tif</a></li><li><a class="link" href="MC13E/HMC_13E20_da5.tif">HMC_13E20_da5.tif</a></li><li><a class="link" href="MC13E/HMC_13E30_da5.tif">HMC_13E30_da5.tif</a></li><li><a class="link" href="MC13E/HMC_13E40_da5.tif">HMC_13E40_da5.tif</a></li></ul><h4>CO5 - RGB color mosaic  (4 tiles)</h4><ul><li><a class="link" href="MC13E/HMC_13E10_co5.tif">HMC_13E10_co5.tif</a></li><li><a class="link" href="MC13E/HMC_13E20_co5.tif">HMC_13E20_co5.tif</a></li><li><a class="link" href="MC13E/HMC_13E30_co5.tif">HMC_13E30_co5.tif</a></li><li><a class="link" href="MC13E/HMC_13E40_co5.tif">HMC_13E40_co5.tif</a></li></ul><h4>CO5PS - pansharpened RGB color mosaic  (16 tiles)</h4><ul><li><a class="link" href="MC13E/HMC_13E11_co5ps.tif">HMC_13E11_co5ps.tif</a></li><li><a class="link" href="MC13E/HMC_13E12_co5ps.tif">HMC_13E12_co5ps.tif</a></li><li><a class="link" href="MC13E/HMC_13E13_co5ps.tif">HMC_13E13_co5ps.tif</a></li><li><a class="link" href="MC13E/HMC_13E14_co5ps.tif">HMC_13E14_co5ps.tif</a></li><li><a class="link" href="MC13E/HMC_13E21_co5ps.tif">HMC_13E21_co5ps.tif</a></li><li><a class="link" href="MC13E/HMC_13E22_co5ps.tif">HMC_13E22_co5ps.tif</a></li><li><a class="link" href="MC13E/HMC_13E23_co5ps.tif">HMC_13E23_co5ps.tif</a></li><li><a class="link" href="MC13E/HMC_13E24_co5ps.tif">HMC_13E24_co5ps.tif</a></li><li><a class="link" href="MC13E/HMC_13E31_co5ps.tif">HMC_13E31_co5ps.tif</a></li><li><a class="link" href="MC13E/HMC_13E32_co5ps.tif">HMC_13E32_co5ps.tif</a></li><li><a class="link" href="MC13E/HMC_13E33_co5ps.tif">HMC_13E33_co5ps.tif</a></li><li><a class="link" href="MC13E/HMC_13E34_co5ps.tif">HMC_13E34_co5ps.tif</a></li><li><a class="link" href="MC13E/HMC_13E41_co5ps.tif">HMC_13E41_co5ps.tif</a></li><li><a class="link" href="MC13E/HMC_13E42_co5ps.tif">HMC_13E42_co5ps.tif</a></li><li><a class="link" href="MC13E/HMC_13E43_co5ps.tif">HMC_13E43_co5ps.tif</a></li><li><a class="link" href="MC13E/HMC_13E44_co5ps.tif">HMC_13E44_co5ps.tif</a></li></ul><h4>ND5 - nadir channel mosaic  (16 tiles)</h4><ul><li><a class="link" href="MC13E/HMC_13E11_nd5.tif">HMC_13E11_nd5.tif</a></li><li><a class="link" href="MC13E/HMC_13E12_nd5.tif">HMC_13E12_nd5.tif</a></li><li><a class="link" href="MC13E/HMC_13E13_nd5.tif">HMC_13E13_nd5.tif</a></li><li><a class="link" href="MC13E/HMC_13E14_nd5.tif">HMC_13E14_nd5.tif</a></li><li><a class="link" href="MC13E/HMC_13E21_nd5.tif">HMC_13E21_nd5.tif</a></li><li><a class="link" href="MC13E/HMC_13E22_nd5.tif">HMC_13E22_nd5.tif</a></li><li><a class="link" href="MC13E/HMC_13E23_nd5.tif">HMC_13E23_nd5.tif</a></li><li><a class="link" href="MC13E/HMC_13E24_nd5.tif">HMC_13E24_nd5.tif</a></li><li><a class="link" href="MC13E/HMC_13E31_nd5.tif">HMC_13E31_nd5.tif</a></li><li><a class="link" href="MC13E/HMC_13E32_nd5.tif">HMC_13E32_nd5.tif</a></li><li><a class="link" href="MC13E/HMC_13E33_nd5.tif">HMC_13E33_nd5.tif</a></li><li><a class="link" href="MC13E/HMC_13E34_nd5.tif">HMC_13E34_nd5.tif</a></li><li><a class="link" href="MC13E/HMC_13E41_nd5.tif">HMC_13E41_nd5.tif</a></li><li><a class="link" href="MC13E/HMC_13E42_nd5.tif">HMC_13E42_nd5.tif</a></li><li><a class="link" href="MC13E/HMC_13E43_nd5.tif">HMC_13E43_nd5.tif</a></li><li><a class="link" href="MC13E/HMC_13E44_nd5.tif">HMC_13E44_nd5.tif</a></li></ul>					
+						</div>
+						<div class="columnright" style="background-color: #ececec;">
+							<h3>Shaded relief</h3>
+							<div class="imgwrap"><a href="MC13E/HMC_13E00_da5cs.tif"><img src="thumbs/HMC_13E00_da5cs_thumb.jpg" border="0"></a></div>							<br>
+							<h3>Topographic Maps</h3>
+							<h4>preview</h4><ul><li><a class="link" href="MC13E/HMC_13E10_TopoMap_2021.png">HMC_13E10_TopoMap_2021.png</a></li><li><a class="link" href="MC13E/HMC_13E20_TopoMap_2021.png">HMC_13E20_TopoMap_2021.png</a></li><li><a class="link" href="MC13E/HMC_13E30_TopoMap_2021.png">HMC_13E30_TopoMap_2021.png</a></li><li><a class="link" href="MC13E/HMC_13E40_TopoMap_2021.png">HMC_13E40_TopoMap_2021.png</a></li></ul><h4>full size PDF</h4><ul><li><a class="link" href="MC13E/HMC_13E10_TopoMap_2021.pdf">HMC_13E10_TopoMap_2021.pdf</a></li><li><a class="link" href="MC13E/HMC_13E20_TopoMap_2021.pdf">HMC_13E20_TopoMap_2021.pdf</a></li><li><a class="link" href="MC13E/HMC_13E30_TopoMap_2021.pdf">HMC_13E30_TopoMap_2021.pdf</a></li><li><a class="link" href="MC13E/HMC_13E40_TopoMap_2021.pdf">HMC_13E40_TopoMap_2021.pdf</a></li></ul>							<br>
+							<h3>Miscellaneous</h3>
+							<ul><li><a class="link" href="MC13E/AA_README_HMC30.txt">AA_README_HMC30.txt</a></li></ul><ul><li><a class="link" href="MC13E/HMC30_tiling_scheme_and_file_naming.pdf">HMC30_tiling_scheme_and_file_naming.pdf</a></li></ul>						</div>
+					</div>
+
+
+				</div>
+			</main>
+		</div>
+
+		<!-- include footer -->
+					
+			
+				<footer id="footer">
+					<div class="doormat">
+						<div class="portal-footer">
+							<div class="ui container">
+								<div class="ui stackable three column grid">
+									<div class="column left">
+										<div class="icon-wrapper top logo en" style="margin-left:50px;">
+											<img class="logo" title="DLR" src="/ressources/img/Logo-en.bc10c5b6.svg" alt="DLR logo">
+										</div>
+										<div class="text" style="margin-left:50px;">
+											<p style="font-size: 14px;">
+												Institute of Space Research
+												<br>
+												Rutherfordstr. 2
+												<br>
+												12489 Berlin
+												<br>
+												Germany
+											</p>
+										</div>
+									</div>
+									<div class="column center">
+										<h3 style="font-weight: bold;">Contact</h3>
+										<div class="details">
+											<ul>
+												<li><p style="font-size: 16px; font-weight: normal;"><a href="mailto:daniela.tirsch@dlr.de" aria-label="Contact" style="color: #000; text-decoration:none">Dr. Daniela Tirsch (HRSC Principal Investigator)</a></p></li>
+												<li><p style="font-size: 16px; font-weight: normal;"><a href="mailto:stephan.elgner@dlr.de" aria-label="Contact" style="color: #000; text-decoration:none">Stephan Elgner (site admin)</a></li></p>
+											</ul>
+										</div>	
+									</div>
+									<div class="column right">
+										<h3 style="font-weight: bold;">About the website</h3>
+										<div class="details">
+											<ul>
+												<li>
+													<p style="font-size: 16px; font-weight: normal;"><a href="/dataprot_en.php" aria-label="Privacy Policy" style="color: #000; text-decoration:none">Privacy Policy /</a>
+													<a href="/dataprot_dt.php" aria-label="Privacy Policy" style="color: #000; text-decoration:none">Datenschutz</a></p>
+												</li>
+												<li>
+													<p style="font-size: 16px; font-weight: normal;"><a href="/imprint_hrsc_en.php" aria-label="Imprint" style="color: #000; text-decoration:none">Imprint /</a>
+													<a href="/imprint_hrsc_dt.php" aria-label="Imprint" style="color: #000; text-decoration:none">Impressum</a></p>
+												</li>
+											</ul>
+										</div>											
+									</div>
+
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="footer-bottom"></div>
+				</footer>
+			
+			</div> 
+			
+		</div>  
+	</body>
+</html> 
+</html> 
