@@ -7,6 +7,10 @@ import { initialExplorerSummary } from '../features/explorer/types'
 import { Icon } from '../components/shared/Icon'
 import { initialLayerStatus } from '../features/map/types'
 import type { LayerId, LayerStatus, LayerStatuses, LayerVisibility } from '../features/map/types'
+import { SCIENCE_TARGETS, targetById } from '../data/scienceTargets'
+import { assignEndpoint, initialMissionSelection, swapEndpoints } from '../features/mission/selection'
+import type { EndpointRole, TargetId } from '../features/mission/types'
+import { FeaturePlanner } from '../components/mission/FeaturePlanner'
 
 export default function App() {
   const [explorer, setExplorer] = useState(initialExplorerSummary)
@@ -16,10 +20,35 @@ export default function App() {
   const [visibility, setVisibility] = useState<LayerVisibility>({ mola: true, ctx: true })
   const [statuses, setStatuses] = useState<LayerStatuses>({ mola: initialLayerStatus(), ctx: initialLayerStatus() })
   const [retryRequest, setRetryRequest] = useState<{ id: LayerId; sequence: number } | null>(null)
+  const [missionSelection, setMissionSelection] = useState(initialMissionSelection)
+  const [selectedTargetId, setSelectedTargetId] = useState<TargetId | null>(null)
+  const [focusRequest, setFocusRequest] = useState<{ id: TargetId; sequence: number; focusWorkspace: boolean } | null>(null)
+  const [selectionError, setSelectionError] = useState<string | null>(null)
   const onStatus = useCallback((id: LayerId, status: LayerStatus) => setStatuses((previous) => ({ ...previous, [id]: status })), [])
   const toggleLayer = (id: LayerId) => setVisibility((previous) => ({ ...previous, [id]: !previous[id] }))
   const retryLayer = (id: LayerId) => setRetryRequest((previous) => ({ id, sequence: (previous?.sequence ?? 0) + 1 }))
   const openJezero = () => setJezeroRequest((value) => value + 1)
+  const inspectTarget = useCallback((id: TargetId) => {
+    if (!targetById(id)) return
+    setSelectedTargetId(id)
+    setInformationOpen(true)
+    setFocusRequest((previous) => ({ id, sequence: (previous?.sequence ?? 0) + 1, focusWorkspace: true }))
+  }, [])
+  const selectEndpoint = (role: EndpointRole, id: string | null) => {
+    const result = assignEndpoint(missionSelection, role, id, SCIENCE_TARGETS)
+    setSelectionError(result.error)
+    setMissionSelection(result.selection)
+    if (!result.error && id) {
+      const target = targetById(id)
+      if (target) {
+        setSelectedTargetId(target.id)
+        setInformationOpen(true)
+        setFocusRequest((previous) => ({ id: target.id, sequence: (previous?.sequence ?? 0) + 1, focusWorkspace: false }))
+      }
+    }
+  }
+  const swap = () => { setMissionSelection(swapEndpoints(missionSelection)); setSelectionError(null) }
+  const clear = () => { setMissionSelection(initialMissionSelection); setSelectionError(null) }
 
   return (
     <div className="app-shell">
@@ -47,9 +76,9 @@ export default function App() {
         </div>
       </div>
       <main className="workspace" data-controls-open={controlsOpen} data-information-open={informationOpen}>
-        <div className="controls-slot" hidden={!controlsOpen}><MissionControl explorer={explorer} onJezero={openJezero} visibility={visibility} statuses={statuses} onToggle={toggleLayer} onRetry={retryLayer} /></div>
-        <MarsExplorer visibility={visibility} statuses={statuses} retryRequest={retryRequest} jezeroRequest={jezeroRequest} onStatus={onStatus} onSummary={setExplorer} />
-        <div className="information-slot" hidden={!informationOpen}><InformationPanel explorer={explorer} visibility={visibility} statuses={statuses} /></div>
+        <div className="controls-slot" hidden={!controlsOpen}><MissionControl explorer={explorer} onJezero={openJezero} visibility={visibility} statuses={statuses} onToggle={toggleLayer} onRetry={retryLayer} missionPlanner={<FeaturePlanner targets={SCIENCE_TARGETS} selection={missionSelection} selectedId={selectedTargetId} error={selectionError} onInspect={inspectTarget} onAssign={selectEndpoint} onSwap={swap} onClear={clear} />} /></div>
+        <MarsExplorer visibility={visibility} statuses={statuses} retryRequest={retryRequest} jezeroRequest={jezeroRequest} onStatus={onStatus} onSummary={setExplorer} missionSelection={missionSelection} selectedTargetId={selectedTargetId} focusRequest={focusRequest} onInspectTarget={inspectTarget} />
+        <div className="information-slot" hidden={!informationOpen}><InformationPanel explorer={explorer} visibility={visibility} statuses={statuses} target={targetById(selectedTargetId)} inspectionSequence={focusRequest?.sequence ?? 0} /></div>
       </main>
       <footer className="app-footer flex items-center justify-between gap-4">
         <span>Independent exploration prototype</span>

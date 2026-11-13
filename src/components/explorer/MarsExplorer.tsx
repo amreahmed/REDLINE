@@ -14,6 +14,8 @@ import type { ExplorerSummary } from '../../features/explorer/types'
 import { createAnimationPlayer, easeInOut } from '../../features/explorer/animation'
 import { createJezeroStages, createReturnStages } from '../../features/explorer/jezeroFlight'
 import { Icon } from '../shared/Icon'
+import { SCIENCE_TARGETS, targetById } from '../../data/scienceTargets'
+import type { MissionSelection, TargetId } from '../../features/mission/types'
 
 type Props = {
   visibility: LayerVisibility
@@ -22,9 +24,13 @@ type Props = {
   jezeroRequest: number
   onStatus: (id: LayerId, status: LayerStatus) => void
   onSummary: (summary: ExplorerSummary) => void
+  missionSelection: MissionSelection
+  selectedTargetId: TargetId | null
+  focusRequest: { id: TargetId; sequence: number; focusWorkspace: boolean } | null
+  onInspectTarget: (id: TargetId) => void
 }
 
-export function MarsExplorer({ visibility, statuses, retryRequest, jezeroRequest, onStatus, onSummary }: Props) {
+export function MarsExplorer({ visibility, statuses, retryRequest, jezeroRequest, onStatus, onSummary, missionSelection, selectedTargetId, focusRequest, onInspectTarget }: Props) {
   const workspaceRef = useRef<HTMLDivElement>(null)
   const globeHostRef = useRef<HTMLDivElement>(null)
   const mapHostRef = useRef<HTMLDivElement>(null)
@@ -42,10 +48,19 @@ export function MarsExplorer({ visibility, statuses, retryRequest, jezeroRequest
   const playerRef = useRef<ReturnType<typeof createAnimationPlayer> | null>(null)
   const preferencesRef = useRef(visibility)
   const statusesRef = useRef(statuses)
+  const missionRef = useRef(missionSelection)
+  const selectedTargetRef = useRef(selectedTargetId)
+  const inspectTargetRef = useRef(onInspectTarget)
   const [composition, setComposition] = useState<number | null>(null)
   const [stageMessage, setStageMessage] = useState('Approaching Jezero')
   const [notice, setNotice] = useState<string | null>(null)
-  useEffect(() => { preferencesRef.current = visibility; statusesRef.current = statuses }, [visibility, statuses])
+  useEffect(() => {
+    preferencesRef.current = visibility
+    statusesRef.current = statuses
+    missionRef.current = missionSelection
+    selectedTargetRef.current = selectedTargetId
+    inspectTargetRef.current = onInspectTarget
+  }, [visibility, statuses, missionSelection, selectedTargetId, onInspectTarget])
   useEffect(() => {
     const player = createAnimationPlayer()
     playerRef.current = player
@@ -81,7 +96,7 @@ export function MarsExplorer({ visibility, statuses, retryRequest, jezeroRequest
     send({ type: 'settled', phase: stateRef.current.phase })
   }, [send])
 
-  const arriveDirect = useCallback((message: string | null = null) => {
+  const arriveDirect = useCallback((message: string | null = null, focusWorkspace = true) => {
     if (!mapRef.current) { setNotice('The map could not start. Reload to retry; the overview remains available.'); return }
     playerRef.current?.cancel()
     globeRef.current?.endApproach()
@@ -92,7 +107,7 @@ export function MarsExplorer({ visibility, statuses, retryRequest, jezeroRequest
     setComposition(null)
     setNotice(message)
     send({ type: 'interrupt', destination: 'map' })
-    workspaceRef.current?.focus({ preventScroll: true })
+    if (focusWorkspace) workspaceRef.current?.focus({ preventScroll: true })
   }, [send])
 
   const cancelTransition = useCallback((message: string | null = null) => {
@@ -150,14 +165,31 @@ export function MarsExplorer({ visibility, statuses, retryRequest, jezeroRequest
         viewRef.current = next
         setView(next)
         send({ type: 'map-zoom', value: next.zoom, overviewAvailable: globeStatusRef.current.phase === 'ready' })
-      }, { keyboard: false })
-      mapRef.current.setActive(false)
-      mapRef.current.setVisibility({ mola: false, ctx: false })
+      }, { keyboard: false, onInspectTarget: (id) => inspectTargetRef.current(id) })
+      // A retained map state must also initialize a replacement controller.
+      const current = stateRef.current
+      mapRef.current.setActive(current.phase === 'map')
+      const initialVisibility = explorerLayerVisibility(preferencesRef.current, current.phase !== 'overview', current.localDetail, statusesRef.current.ctx.coverage)
+      mapRef.current.setVisibility({ mola: initialVisibility.mola, ctx: initialVisibility.ctx })
+      mapRef.current.setMissionFeatures(SCIENCE_TARGETS, missionRef.current, selectedTargetRef.current)
     } catch {
       queueMicrotask(() => { if (mounted) setMapError('The map renderer could not start. The NASA overview remains available; reload to retry the map.') })
     }
     return () => { mounted = false; mapRef.current?.dispose(); mapRef.current = null }
   }, [onStatus, send])
+
+  useEffect(() => {
+    mapRef.current?.setMissionFeatures(SCIENCE_TARGETS, missionSelection, selectedTargetId)
+  }, [missionSelection, selectedTargetId])
+
+  useEffect(() => {
+    if (!focusRequest) return
+    const target = targetById(focusRequest.id)
+    if (!target || !mapRef.current) return
+    // Feature inspection uses its documented display reference, never a globe pick.
+    arriveDirect(null, focusRequest.focusWorkspace)
+    mapRef.current.focusReference(target)
+  }, [focusRequest, arriveDirect])
 
   useEffect(() => {
     let mounted = true
@@ -244,7 +276,7 @@ export function MarsExplorer({ visibility, statuses, retryRequest, jezeroRequest
           {globe.phase === 'error' && <button type="button" className="grid-button" onClick={retryGlobe}>Retry overview</button>}
           <button type="button" className="grid-button" disabled={transitioning} onClick={() => send({ type: 'enter-map' })}>Continue to map context</button>
         </div>}
-        {mapShown && mapMessage && <div className="map-message" role="status"><p>{mapMessage}</p></div>}
+        {mapShown && mapMessage && <div className="map-message reference-map-message" role="status"><p>{mapMessage}</p></div>}
         {mapShown && busy && !mapMessage && <div className="map-loading" role="status">Loading NASA Mars Trek imagery…</div>}
         {transitioning && <div className="handoff-status flight-status">
           <div><p role="status">{stageMessage}</p><span>Scripted visual approach · approximate crater navigation</span></div>
@@ -262,6 +294,10 @@ export function MarsExplorer({ visibility, statuses, retryRequest, jezeroRequest
         <button className="grid-button" type="button" disabled={transitioning} onClick={() => send({ type: mapShown ? 'enter-overview' : 'enter-map' })}>{mapShown ? 'Return to overview' : 'Explore map context'}</button>
       </div>
       <div className="map-position"><span>{mapShown ? 'Service grid center' : 'Visual overview · no geographic picking'}</span><span>{mapShown && view ? `${view.center[0].toFixed(3)}° lon, ${view.center[1].toFixed(3)}° lat` : 'Zoom enters Jezero initially, then resumes the map area'}</span></div>
+      <div className="feature-legend" aria-label="Feature marker legend">
+        <span><b>O</b> Origin</span><span><b>D</b> Destination</span><span><b>◇</b> Reference</span>
+        <p>Approximate feature centers · imagery registration unverified{!mapShown ? ' · markers appear on the regional map' : ''}</p>
+      </div>
       <div className="viewport-bottom map-help">
         <p id="explorer-help">Drag to {mapShown ? 'pan' : 'rotate'}; scroll or pinch to zoom. Arrow keys and + / − work with focus here. Zoom {mapShown ? 'out for the overview; in near Jezero for CTX detail' : 'in to continue to the real map'}.</p>
         <p id="handoff-limit">The globe approach is scripted, not geographically registered. Jezero uses the <a href={JEZERO_NAVIGATION.sourceUrl} target="_blank" rel="noreferrer">published approximate crater center</a>, not a precise science target. Images and geometry are not numerical elevation.</p>

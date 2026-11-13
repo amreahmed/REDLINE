@@ -4,15 +4,23 @@ import { layerStatusLabel } from '../../features/map/types'
 import type { LayerStatuses, LayerVisibility } from '../../features/map/types'
 import { MARS_GLOBE } from '../../data/marsGlobe'
 import type { ExplorerSummary } from '../../features/explorer/types'
+import type { ScienceTarget } from '../../features/mission/types'
+import { FeatureDetails } from '../mission/FeatureDetails'
+import { useEffect, useRef } from 'react'
 
-export function InformationPanel({ explorer, visibility, statuses }: { explorer: ExplorerSummary; visibility: LayerVisibility; statuses: LayerStatuses }) {
+export function InformationPanel({ explorer, visibility, statuses, target, inspectionSequence }: { explorer: ExplorerSummary; visibility: LayerVisibility; statuses: LayerStatuses; target?: ScienceTarget; inspectionSequence: number }) {
+  const contentRef = useRef<HTMLDivElement>(null)
+  useEffect(() => {
+    if (target && contentRef.current) contentRef.current.scrollTop = 0
+  }, [target, inspectionSequence])
   return (
     <aside id="information-panel" className="panel sources-panel" aria-labelledby="information-heading">
       <div className="panel-heading flex items-center gap-3">
         <Icon name="panel-right" />
         <h2 id="information-heading">Sources & status</h2>
       </div>
-      <div className="sources-content">
+      <div className="sources-content" ref={contentRef}>
+        {target && <FeatureDetails target={target} />}
         <details className="source-detail" open={!explorer.mapShown}>
           <summary>NASA visual Mars overview</summary>
           <p className="source-state" role="status">{explorer.globe.message}</p>

@@ -1,0 +1,38 @@
+[
+  {
+    "file": "neretva-nasa-science-valid.html",
+    "requestedUrl": "https://science.nasa.gov/photojournal/perseverances-view-of-neretva-vallis-river-channel/",
+    "finalUrl": "https://science.nasa.gov/photojournal/perseverances-view-of-neretva-vallis-river-channel/",
+    "status": 200,
+    "startedAt": "2026-11-12T22:30:37.826Z",
+    "retrievedAt": "2026-11-12T22:30:39.671Z",
+    "bytes": 259555,
+    "sha256": "c907bb4ded46b1b20d4dbf0873506456f168c4caa7ed4b8dc4a7be76fc243269",
+    "contentType": "text/html; charset=UTF-8",
+    "cors": null
+  },
+  {
+    "file": "jezero-nasa-science.html",
+    "requestedUrl": "https://science.nasa.gov/resource/perseverance-view-of-the-delta-in-jezero-crater/",
+    "finalUrl": "https://science.nasa.gov/resource/perseverance-view-of-the-delta-in-jezero-crater/",
+    "status": 200,
+    "startedAt": "2026-11-12T22:30:37.904Z",
+    "retrievedAt": "2026-11-12T22:30:39.072Z",
+    "bytes": 269953,
+    "sha256": "401e14a3db424335acb9cf05cb3b44e584dfe8c8a02a22342231fe15db137411",
+    "contentType": "text/html; charset=UTF-8",
+    "cors": null
+  },
+  {
+    "file": "gazetteer-accuracy.html",
+    "requestedUrl": "https://planetarynames.wr.usgs.gov/Page/FAQ",
+    "finalUrl": "https://planetarynames.wr.usgs.gov/Page/FAQ",
+    "status": 200,
+    "startedAt": "2026-11-12T22:30:37.906Z",
+    "retrievedAt": "2026-11-12T22:30:38.690Z",
+    "bytes": 36403,
+    "sha256": "d8d6c3f1f56af1e63fbf407ca962b5654325794a1ecbc5e88f1c44b828637aa0",
+    "contentType": "text/html; charset=utf-8",
+    "cors": null
+  }
+]

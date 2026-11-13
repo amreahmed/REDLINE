@@ -4,3 +4,4 @@ docs/evidence/phase-2/Mars_MGS_MOLA_ClrShade_merge_global_463m.WMTSCapabilities.
 # Preserve raw audit/source receipts and their hashes across Windows checkouts.
 docs/evidence/terrain-detail-audit/** -text whitespace=-blank-at-eol
 docs/evidence/cinematic-jezero/** -text whitespace=-blank-at-eol
+docs/evidence/phase-3-targets/** -text whitespace=-blank-at-eol

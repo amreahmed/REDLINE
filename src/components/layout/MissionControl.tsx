@@ -3,10 +3,11 @@ import { MARS_LAYERS } from '../../data/marsLayers'
 import { layerStatusLabel } from '../../features/map/types'
 import type { LayerId, LayerStatuses, LayerVisibility } from '../../features/map/types'
 import type { ExplorerSummary } from '../../features/explorer/types'
+import type { ReactNode } from 'react'
 
-type MissionControlProps = { explorer: ExplorerSummary; onJezero: () => void; visibility: LayerVisibility; statuses: LayerStatuses; onToggle: (id: LayerId) => void; onRetry: (id: LayerId) => void }
+type MissionControlProps = { explorer: ExplorerSummary; onJezero: () => void; visibility: LayerVisibility; statuses: LayerStatuses; onToggle: (id: LayerId) => void; onRetry: (id: LayerId) => void; missionPlanner: ReactNode }
 
-export function MissionControl({ explorer, onJezero, visibility, statuses, onToggle, onRetry }: MissionControlProps) {
+export function MissionControl({ explorer, onJezero, visibility, statuses, onToggle, onRetry, missionPlanner }: MissionControlProps) {
   return (
     <aside id="mission-control" className="panel mission-sidebar" aria-labelledby="mission-heading">
       <div className="panel-heading flex items-center gap-3">
@@ -48,13 +49,7 @@ export function MissionControl({ explorer, onJezero, visibility, statuses, onTog
           })}
         </div>
       </section>
-      <section className="panel-section mission-empty" aria-labelledby="planning-heading">
-        <h3 id="planning-heading">Mission planning</h3>
-        <div className="planning-path flex items-center gap-2" aria-hidden="true">
-          <span className="path-origin" /><span className="path-line" /><Icon name="pin" size={16} />
-        </div>
-        <p className="helper">Target selection and route planning are not available in this phase. Image colors are not elevation samples.</p>
-      </section>
+      {missionPlanner}
       <div className="sidebar-footnote flex items-start gap-2">
         <Icon name="info" size={16} className="shrink-0" />
         <p>Coverage boxes do not guarantee complete imagery. Missing or failed tiles are never replaced with simulated data.</p>

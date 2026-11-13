@@ -1,8 +1,13 @@
 import ImageTile from 'ol/ImageTile'
 import OlMap from 'ol/Map'
+import type MapBrowserEvent from 'ol/MapBrowserEvent'
 import TileState from 'ol/TileState'
 import View from 'ol/View'
 import { defaults as defaultInteractions } from 'ol/interaction/defaults'
+import VectorLayer from 'ol/layer/Vector'
+import VectorSource from 'ol/source/Vector'
+import type Feature from 'ol/Feature'
+import type Point from 'ol/geom/Point'
 import type Tile from 'ol/Tile'
 import { JEZERO_EXTENT, MARS_LAYERS } from '../../data/marsLayers'
 import { JEZERO_CONTEXT_ZOOM, JEZERO_DETAIL_ZOOM } from '../../data/jezero'
@@ -16,6 +21,9 @@ import { FrameAwareTileLayer } from './FrameAwareTileLayer'
 import { createAlphaSupport } from './frameReadiness'
 import type { ImageSupport } from './frameReadiness'
 import type { Bounds, LayerDefinition, LayerId, LayerStatus, LayerVisibility, ViewStatus } from './types'
+import { toDisplayCoordinate } from '../mission/coordinates'
+import type { MissionSelection, ScienceTarget, TargetId } from '../mission/types'
+import { createMissionFeatures, missionFeatureStyle, missionTargetId } from './featureMarkers'
 
 type LayerRun = { abort: AbortController; status: LayerStatus; imageSupport: WeakMap<Tile, ImageSupport> }
 export type MarsMapController = {
@@ -30,28 +38,39 @@ export type MarsMapController = {
   setApproachZoom: (zoom: number) => void
   setDetailOpacity: (opacity: number) => void
   hasRenderedImagery: (id?: LayerId) => boolean
+  setMissionFeatures: (targets: readonly ScienceTarget[], selection: MissionSelection, selectedId: TargetId | null) => void
+  focusReference: (target: ScienceTarget) => boolean
   panBy: (horizontal: number, vertical: number) => void
   zoomBy: (delta: number) => void
   dispose: () => void
 }
 
 /** Owns the renderer lifecycle; no terrain or physical measurement APIs. */
-export function createMarsMap(target: HTMLElement, onStatus: (id: LayerId, status: LayerStatus) => void, onView: (status: ViewStatus) => void, options: { keyboard?: boolean } = {}): MarsMapController {
+export function createMarsMap(target: HTMLElement, onStatus: (id: LayerId, status: LayerStatus) => void, onView: (status: ViewStatus) => void, options: { keyboard?: boolean; onInspectTarget?: (id: TargetId) => void } = {}): MarsMapController {
   const projection = createDisplayProjection()
   const view = new View({ projection, resolutions: Array.from({ length: MAX_LEVEL + 1 }, (_, z) => 0.703125 / 2 ** z), extent: WORLD_EXTENT, constrainOnlyCenter: true, enableRotation: false })
   const layers = new Map<LayerId, FrameAwareTileLayer>()
   const runs = new Map<LayerId, LayerRun>()
+  const missionSource = new VectorSource<Feature<Point>>({ wrapX: false })
+  const missionLayer = new VectorLayer({ source: missionSource, style: missionFeatureStyle, zIndex: 20, minZoom: 6, declutter: true })
   let disposed = false
+  let active = true
   let alphaCanvas: HTMLCanvasElement | undefined
   for (const definition of MARS_LAYERS) layers.set(definition.id, new FrameAwareTileLayer({ extent: definition.extent, cacheSize: 128 }))
   const map = new OlMap({
     target,
     view,
-    layers: [...layers.values()],
+    layers: [...layers.values(), missionLayer],
     controls: [],
     interactions: defaultInteractions({ altShiftDragRotate: false, pinchRotate: false, keyboard: options.keyboard }),
     maxTilesLoading: 8,
   })
+  const inspectMarker = (event: MapBrowserEvent) => {
+    if (disposed || !active) return
+    const id = map.forEachFeatureAtPixel(event.pixel, (feature) => missionTargetId(feature), { layerFilter: (layer) => layer === missionLayer, hitTolerance: 10 })
+    if (id) options.onInspectTarget?.(id)
+  }
+  map.on('singleclick', inspectMarker)
 
   function emit(definition: LayerDefinition, run: LayerRun) {
     if (disposed || run.abort.signal.aborted || runs.get(definition.id) !== run) return
@@ -187,18 +206,39 @@ export function createMarsMap(target: HTMLElement, onStatus: (id: LayerId, statu
     retry: (id) => { const definition = MARS_LAYERS.find((layer) => layer.id === id); if (definition && !disposed) void connect(definition) },
     reset,
     refresh,
-    setActive: (active) => { view.cancelAnimations(); map.getInteractions().forEach((interaction) => interaction.setActive(active)); if (active) refresh() },
+    setActive: (value) => { if (disposed) return; active = value; missionLayer.setVisible(value); view.cancelAnimations(); map.getInteractions().forEach((interaction) => interaction.setActive(value)); if (value) refresh() },
     enterContext: (atJezero, minimumZoom) => { refresh(); if (atJezero) view.setCenter(jezeroCenter()); view.setZoom(atJezero ? minimumZoom : Math.max(minimumZoom, view.getZoom() ?? minimumZoom)); reportView() },
     focusJezero: () => { if (!disposed) { view.cancelAnimations(); view.setCenter(jezeroCenter()); view.setZoom(JEZERO_DETAIL_ZOOM); reportView() } },
     prepareJezeroApproach: () => { if (!disposed) { view.cancelAnimations(); for (const layer of layers.values()) layer.invalidateFrame(); refresh(); setApproachZoom(JEZERO_CONTEXT_ZOOM) } },
     setApproachZoom,
     setDetailOpacity: (opacity) => { if (!disposed) layers.get('ctx')?.setOpacity(clampDetailOpacity(opacity)) },
     hasRenderedImagery,
+    setMissionFeatures: (targets, selection, selectedId) => {
+      if (disposed) return
+      missionSource.clear(true)
+      missionSource.addFeatures(createMissionFeatures(targets, selection, selectedId))
+    },
+    focusReference: (reference) => {
+      const coordinate = toDisplayCoordinate(reference.coordinate)
+      if (disposed || !coordinate) return false
+      view.cancelAnimations()
+      view.setCenter(coordinate)
+      view.setZoom(JEZERO_DETAIL_ZOOM)
+      reportView()
+      return true
+    },
     panBy: (horizontal, vertical) => { const resolution = view.getResolution() ?? 0; view.adjustCenter([horizontal * resolution * 128, -vertical * resolution * 128]); reportView() },
     zoomBy: (delta) => { view.setZoom(Math.max(0, Math.min(MAX_LEVEL, (view.getZoom() ?? 0) + delta))); reportView() },
     dispose: () => {
+      if (disposed) return
       disposed = true
       resizeObserver.disconnect()
+      map.un('singleclick', inspectMarker)
+      map.un('moveend', reportView)
+      map.removeLayer(missionLayer)
+      missionSource.clear(true)
+      missionSource.dispose()
+      missionLayer.dispose()
       for (const run of runs.values()) run.abort.abort()
       for (const layer of layers.values()) layer.getSource()?.dispose()
       if (alphaCanvas) { alphaCanvas.width = 0; alphaCanvas.height = 0; alphaCanvas = undefined }
