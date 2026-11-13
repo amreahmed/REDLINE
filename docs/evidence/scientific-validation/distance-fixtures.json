@@ -1,0 +1,184 @@
+{
+  "tool": "pyproj 3.7.2 / PROJ 9.5.1",
+  "model": "sphere geodesic inverse, a=b=3396190 m",
+  "limitations": "Endpoint geometry only. No vertical or route validation.",
+  "manifestHash": "fa63f2181e603eb930d94fcf91444ee5e537b6c046e31537f65daeb0e1cffed9",
+  "binaryHash": "4c0e428bb3cc4bcd8cbcebc0c2da2558a106fc19e55cfca352097b7eee32fae8",
+  "analyticFixtures": [
+    {
+      "name": "one-degree-meridian",
+      "start": [
+        0,
+        0
+      ],
+      "end": [
+        0,
+        1
+      ],
+      "distanceM": 59274.69752330622
+    },
+    {
+      "name": "quarter-circumference",
+      "start": [
+        0,
+        0
+      ],
+      "end": [
+        90,
+        0
+      ],
+      "distanceM": 5334722.7770975595
+    },
+    {
+      "name": "antipodal",
+      "start": [
+        0,
+        0
+      ],
+      "end": [
+        180,
+        0
+      ],
+      "distanceM": 10669445.554195119
+    },
+    {
+      "name": "high-latitude",
+      "start": [
+        0,
+        60
+      ],
+      "end": [
+        90,
+        60
+      ],
+      "distanceM": 2454542.825081444
+    },
+    {
+      "name": "longitude-wrap",
+      "start": [
+        179,
+        0
+      ],
+      "end": [
+        -179,
+        0
+      ],
+      "distanceM": 118549.39504661244
+    },
+    {
+      "name": "same-pole",
+      "start": [
+        0,
+        90
+      ],
+      "end": [
+        90,
+        90
+      ],
+      "distanceM": 0.0
+    }
+  ],
+  "gridFixtures": [
+    {
+      "start": [
+        714,
+        650
+      ],
+      "end": [
+        714,
+        651
+      ],
+      "startCoordinate": [
+        77.37995202842774,
+        18.48011353845034
+      ],
+      "endCoordinate": [
+        77.3802894405249,
+        18.48011353845034
+      ],
+      "distanceM": 18.968674590775322
+    },
+    {
+      "start": [
+        714,
+        650
+      ],
+      "end": [
+        715,
+        650
+      ],
+      "startCoordinate": [
+        77.37995202842774,
+        18.48011353845034
+      ],
+      "endCoordinate": [
+        77.37995202842774,
+        18.479776126353173
+      ],
+      "distanceM": 20.00000000003883
+    },
+    {
+      "start": [
+        714,
+        650
+      ],
+      "end": [
+        715,
+        651
+      ],
+      "startCoordinate": [
+        77.37995202842774,
+        18.48011353845034
+      ],
+      "endCoordinate": [
+        77.3802894405249,
+        18.479776126353173
+      ],
+      "distanceM": 27.564675290705605
+    },
+    {
+      "start": [
+        586,
+        522
+      ],
+      "end": [
+        841,
+        777
+      ],
+      "startCoordinate": [
+        77.33676327999098,
+        18.523302286887112
+      ],
+      "endCoordinate": [
+        77.42280336476735,
+        18.437262202110723
+      ],
+      "distanceM": 7028.98519896125
+    },
+    {
+      "start": [
+        650,
+        580
+      ],
+      "end": [
+        800,
+        730
+      ],
+      "startCoordinate": [
+        77.3563331816264,
+        18.501707912668724
+      ],
+      "endCoordinate": [
+        77.40694499620072,
+        18.45109609809438
+      ],
+      "distanceM": 4134.741661399089
+    }
+  ],
+  "adjacentRowChecks": {
+    "eastWestRows": 256,
+    "northSouthRows": 255,
+    "eastWestMinM": 18.963890568660663,
+    "eastWestMaxM": 18.973410584236937
+  }
+}

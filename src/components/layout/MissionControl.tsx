@@ -86,7 +86,7 @@ export function MissionControl({ explorer, visibility, statuses, onToggle, onRet
           <h3 id="route-prerequisites-heading">Route comparison</h3>
           <button type="button" className="route-unavailable" disabled aria-describedby="route-data-note"><Icon name="lock" size={16} />Compare routes — unavailable</button>
           <p className="helper" id="route-data-note">Endpoints can be selected. Routes require the following work before comparison is available:</p>
-          <ul><li>Scientific feature registration</li><li>Elevation height-reference validation</li><li>Distance, slope and terrain-cost validation</li><li>Pathfinding implementation and tests</li></ul>
+          <ul><li>Resolve the elevation height reference for DEM grades and terrain costs</li><li>Implement and test pathfinding</li><li>Validate named-feature registration before routing to precise science sites</li></ul>
           <p className="source-warning">No route, hazard or astronaut-safety results are calculated.</p>
         </section>
       </div>

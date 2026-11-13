@@ -15,3 +15,4 @@ public/data/jezero-terrain-windows.json -text
 public/data/jezero-terrain-grid.json -text
 public/data/jezero-terrain-grid.f32 -text
 docs/evidence/controlled-jezero-grid/** -text whitespace=-blank-at-eol,-blank-at-eof,-space-before-tab
+docs/evidence/scientific-validation/** -text whitespace=-blank-at-eol,-blank-at-eof,-space-before-tab

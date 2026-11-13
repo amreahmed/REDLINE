@@ -101,6 +101,14 @@ input[type="number"], input[type="search"], select { width: 100%; min-width: 0; 
 .grid-button[aria-pressed="true"] { border-color: var(--color-science); color: var(--color-science); }
 .grid-pick-actions button { margin: 8px 8px 0 0; }
 .grid-notice { padding: 12px; border-left: 2px solid var(--color-science); margin-top: 18px; }
+.grid-metrics { border-top: 1px solid var(--line); padding-top: 18px; }
+.grid-metrics h4 { font-size: 15px; font-weight: 600; }
+.grid-metrics dl { margin: 14px 0; }
+.grid-metrics dt { color: var(--color-muted); font-size: 13px; line-height: 1.6; }
+.grid-metrics dd { color: var(--color-science); font-family: var(--title-font); font-size: 26px; margin-top: 4px; }
+.scientific-findings { font-size: 13px; line-height: 1.7; }
+.scientific-findings dt { color: var(--color-muted); margin-top: 12px; }
+.scientific-findings dd { color: var(--color-ink); margin-top: 3px; }
 .feature-planner-disclosure { border-bottom: 1px solid var(--line); }
 .feature-planner-disclosure > summary { padding: 18px 22px; font-size: 15px; font-weight: 600; }
 .feature-planner-disclosure .panel-section { border: 0; padding-top: 0; }

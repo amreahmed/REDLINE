@@ -1,0 +1,1250 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>8.17. TGO CaSSIS &#8212; Ames Stereo Pipeline &#34;3.8.0-alpha&#34; documentation</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../_static/basic.css?v=b08954a9" />
+    <link rel="stylesheet" type="text/css" href="../_static/alabaster.css?v=27fed22d" />
+    <script src="../_static/documentation_options.js?v=120021b5"></script>
+    <script src="../_static/doctools.js?v=fd6eb6e6"></script>
+    <script src="../_static/sphinx_highlight.js?v=6ffebe34"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="8.18. Viking Orbiter" href="viking.html" />
+    <link rel="prev" title="8.16. KPLO ShadowCam" href="shadowcam.html" />
+   
+  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+  
+
+  
+  
+
+  <script async type="text/javascript" src="/_/static/javascript/readthedocs-addons.js"></script><meta name="readthedocs-project-slug" content="stereopipeline" /><meta name="readthedocs-version-slug" content="latest" /><meta name="readthedocs-resolver-filename" content="/examples/cassis.html" /><meta name="readthedocs-http-status" content="200" /></head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <section id="tgo-cassis">
+<span id="cassis"></span><h1><span class="section-number">8.17. </span>TGO CaSSIS<a class="headerlink" href="#tgo-cassis" title="Link to this heading">¶</a></h1>
+<p>The Colour and Stereo Surface Imaging System (<em>CaSSIS</em>) is the high-resolution
+stereo imager on the ESA <a class="reference external" href="https://en.wikipedia.org/wiki/ExoMars_Trace_Gas_Orbiter">ExoMars Trace Gas Orbiter</a> (TGO). It is a
+pushframe instrument, acquiring the surface as a sequence of overlapping
+framelets (<a class="reference external" href="https://doi.org/10.1007/s11214-017-0421-1">Thomas et al. (2017)</a>).</p>
+<p>This documents how to create terrain models with CaSSIS images with ASP. The
+resulting <a class="reference external" href="https://github.com/NeoGeographyToolkit/CassisPipeline">CaSSIS pipeline</a> that allows
+reproducible, end-to-end processing is made public, together with sample data.</p>
+<p>This requires a recent build of ASP, from 2026/09/10 or later (<a class="reference internal" href="../installation.html#release"><span class="std std-numref">Section 2.1</span></a>),
+which has the CaSSIS camera support.</p>
+<section id="results">
+<span id="cassis-vendor"></span><h2><span class="section-number">8.17.1. </span>Results<a class="headerlink" href="#results" title="Link to this heading">¶</a></h2>
+<p>The ASP-produced CaSSIS DEMs are notably more accurate than the published CaSSIS
+DEMs as validated with 5 different products.</p>
+<section id="jezero-site">
+<h3><span class="section-number">8.17.1.1. </span>Jezero site<a class="headerlink" href="#jezero-site" title="Link to this heading">¶</a></h3>
+<p>Here we compare with the prior CaSSIS DEM product <code class="docutils literal notranslate"><span class="pre">MY36_016378_162_1</span></code>.</p>
+<figure class="align-default" id="cassis-jezero-hillshade">
+<img alt="Jezero hillshades: CTX, prior CaSSIS, our CaSSIS" src="../_images/cassis_jezero_hillshade.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 8.44 </span><span class="caption-text">Left: the CTX hillshaded DEM reference for Jezero. Middle: the prior aligned
+CaSSIS DEM. Right: ASP-produced CaSSIS DEM from the same source data. All are
+gridded at 18 m/pixel.</span><a class="headerlink" href="#cassis-jezero-hillshade" title="Link to this image">¶</a></p>
+</figcaption>
+</figure>
+<figure class="align-default" id="cassis-jezero-geodiff">
+<img alt="Elevation difference to CTX" src="../_images/cassis_jezero_geodiff.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 8.45 </span><span class="caption-text">Left: prior CaSSIS minus CTX (median -3.7 m, NMAD 22.4 m). Note the
+large-scale along-track and across-track warping. Right: ASP-produced
+CaSSIS minus CTX (median 0.0 m, NMAD 1.7 m). Note the different color ranges
+in the two plots. Both are in meters.</span><a class="headerlink" href="#cassis-jezero-geodiff" title="Link to this image">¶</a></p>
+</figcaption>
+</figure>
+<figure class="align-default" id="cassis-jezero-dd">
+<img alt="Horizontal registration of our DEM to CTX" src="../_images/cassis_jezero_dd.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 8.46 </span><span class="caption-text">Evaluation of ground-plane misregistration of our CaSSIS DEM to CTX, measured
+by image correlation of the DEMs after hillshading
+(<a class="reference internal" href="../tools/correlator.html#correlator-mode"><span class="std std-numref">Section 16.17</span></a>). The plot shows the components of the filtered
+disparity in pixels (<a class="reference internal" href="../tools/disparitydebug.html#raw-disp"><span class="std std-numref">Section 16.24.2</span></a>). The horizontal disparity has median
+-0.1 px and NMAD 0.5 px; the vertical, median 0.1 px and NMAD 0.6 px. The
+pixel size is 18 m.</span><a class="headerlink" href="#cassis-jezero-dd" title="Link to this image">¶</a></p>
+</figcaption>
+</figure>
+</section>
+<section id="oxia-planum-site-1">
+<h3><span class="section-number">8.17.1.2. </span>Oxia Planum (site 1)<a class="headerlink" href="#oxia-planum-site-1" title="Link to this heading">¶</a></h3>
+<p>Here we compare with the prior CaSSIS DEM product <code class="docutils literal notranslate"><span class="pre">MY34_003806_019_1</span></code>.</p>
+<figure class="align-default" id="cassis-ox1-hillshade">
+<img alt="Oxia Planum 1 hillshades: CTX, prior CaSSIS, our CaSSIS" src="../_images/cassis_ox1_hillshade.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 8.47 </span><span class="caption-text">Left: Reference CTX DEM. Middle: the prior aligned CaSSIS DEM. Right: our
+CaSSIS DEM.</span><a class="headerlink" href="#cassis-ox1-hillshade" title="Link to this image">¶</a></p>
+</figcaption>
+</figure>
+<figure class="align-default" id="cassis-ox1-geodiff">
+<img alt="Oxia Planum 1 elevation difference to CTX" src="../_images/cassis_ox1_geodiff.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 8.48 </span><span class="caption-text">Elevation difference to CTX, in meters. Left: prior CaSSIS minus CTX, median
+0.6 m, NMAD 8.3 m. Right: our CaSSIS minus CTX, median -0.1 m, NMAD 1.3 m,
+about 6 times tighter to CTX. Here, our result is less well controlled at the
+starting and ending framelets. This improved after a refinement pass
+(<a class="reference internal" href="#cassis-refine"><span class="std std-numref">Section 8.17.3.13</span></a>).</span><a class="headerlink" href="#cassis-ox1-geodiff" title="Link to this image">¶</a></p>
+</figcaption>
+</figure>
+<figure class="align-default" id="cassis-ox1-dd">
+<img alt="Oxia Planum 1 registration to CTX" src="../_images/cassis_ox1_dd.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 8.49 </span><span class="caption-text">Registration to CTX. Horizontal disparity median -0.1 px and NMAD 0.5 px;
+vertical median 0.0 px and NMAD 0.5 px.</span><a class="headerlink" href="#cassis-ox1-dd" title="Link to this image">¶</a></p>
+</figcaption>
+</figure>
+</section>
+<section id="oxia-planum-site-2">
+<h3><span class="section-number">8.17.1.3. </span>Oxia Planum (site 2)<a class="headerlink" href="#oxia-planum-site-2" title="Link to this heading">¶</a></h3>
+<p>Here we compare with the prior CaSSIS DEM product <code class="docutils literal notranslate"><span class="pre">MY34_004172_162_1</span></code>.</p>
+<figure class="align-default" id="cassis-ox2-hillshade">
+<img alt="Oxia Planum 2 hillshades: CTX, prior CaSSIS, our CaSSIS" src="../_images/cassis_ox2_hillshade.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 8.50 </span><span class="caption-text">Left: Hillshaded CTX reference DEM. Middle: the prior aligned CaSSIS DEM.
+Right: our CaSSIS DEM.</span><a class="headerlink" href="#cassis-ox2-hillshade" title="Link to this image">¶</a></p>
+</figcaption>
+</figure>
+<figure class="align-default" id="cassis-ox2-geodiff">
+<img alt="Oxia Planum 2 elevation difference to CTX" src="../_images/cassis_ox2_geodiff.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 8.51 </span><span class="caption-text">Elevation difference to CTX, in meters. Left: prior CaSSIS minus CTX, median
+0.9 m, NMAD 15.5 m. Right: our CaSSIS minus CTX, median -0.1 m, NMAD 1.0 m,
+about 15 times tighter to CTX.</span><a class="headerlink" href="#cassis-ox2-geodiff" title="Link to this image">¶</a></p>
+</figcaption>
+</figure>
+<figure class="align-default" id="cassis-ox2-dd">
+<img alt="Oxia Planum 2 registration to CTX" src="../_images/cassis_ox2_dd.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 8.52 </span><span class="caption-text">Registration to CTX. Horizontal disparity median -0.3 px and NMAD 0.3 px;
+vertical median -0.4 px and NMAD 0.2 px.</span><a class="headerlink" href="#cassis-ox2-dd" title="Link to this image">¶</a></p>
+</figcaption>
+</figure>
+</section>
+<section id="gusev-crater">
+<h3><span class="section-number">8.17.1.4. </span>Gusev crater<a class="headerlink" href="#gusev-crater" title="Link to this heading">¶</a></h3>
+<p>Here we compare with the prior CaSSIS DEM product <code class="docutils literal notranslate"><span class="pre">MY34_003860_344_1</span></code>.</p>
+<figure class="align-default" id="cassis-gusev-hillshade">
+<img alt="Gusev hillshades: CTX, prior CaSSIS, our CaSSIS" src="../_images/cassis_gusev_hillshade.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 8.53 </span><span class="caption-text">Left: Hillshaded CTX reference DEM. Middle: the prior aligned CaSSIS DEM.
+Right: our CaSSIS DEM.</span><a class="headerlink" href="#cassis-gusev-hillshade" title="Link to this image">¶</a></p>
+</figcaption>
+</figure>
+<figure class="align-default" id="cassis-gusev-geodiff">
+<img alt="Gusev elevation difference to CTX" src="../_images/cassis_gusev_geodiff.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 8.54 </span><span class="caption-text">Elevation difference to CTX, in meters. Left: prior CaSSIS minus CTX, median
+3.5 m, NMAD 26.6 m. Right: our CaSSIS minus CTX, median 0.1 m, NMAD 2.1 m.</span><a class="headerlink" href="#cassis-gusev-geodiff" title="Link to this image">¶</a></p>
+</figcaption>
+</figure>
+<figure class="align-default" id="cassis-gusev-dd">
+<img alt="Gusev registration to CTX" src="../_images/cassis_gusev_dd.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 8.55 </span><span class="caption-text">Registration to CTX. Horizontal disparity median 0.1 px and NMAD 1.4 px;
+vertical median 0.1 px and NMAD 1.3 px. Gusev is smooth, so the hillshade
+correlation is noisier than at the other sites.</span><a class="headerlink" href="#cassis-gusev-dd" title="Link to this image">¶</a></p>
+</figcaption>
+</figure>
+</section>
+<section id="site-004756">
+<h3><span class="section-number">8.17.1.5. </span>Site 004756<a class="headerlink" href="#site-004756" title="Link to this heading">¶</a></h3>
+<p>Here we compare with the prior CaSSIS DEM product <code class="docutils literal notranslate"><span class="pre">MY34_004756_354_1</span></code>.</p>
+<figure class="align-default" id="cassis-004756-hillshade">
+<img alt="004756 hillshades: CTX, prior CaSSIS, our CaSSIS" src="../_images/cassis_004756_hillshade.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 8.56 </span><span class="caption-text">Left: CTX. Middle: the prior aligned CaSSIS DEM. Right: our CaSSIS DEM.</span><a class="headerlink" href="#cassis-004756-hillshade" title="Link to this image">¶</a></p>
+</figcaption>
+</figure>
+<figure class="align-default" id="cassis-004756-geodiff">
+<img alt="004756 elevation difference to CTX" src="../_images/cassis_004756_geodiff.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 8.57 </span><span class="caption-text">Elevation difference to CTX, in meters. Left: prior CaSSIS minus CTX, median
+6.2 m, NMAD 21.5 m. Right: our CaSSIS minus CTX, median -0.2 m, NMAD 3.9 m
+(the wider spread is a blunder tail on steep terrain, not the core surface).</span><a class="headerlink" href="#cassis-004756-geodiff" title="Link to this image">¶</a></p>
+</figcaption>
+</figure>
+<figure class="align-default" id="cassis-004756-dd">
+<img alt="004756 registration to CTX" src="../_images/cassis_004756_dd.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 8.58 </span><span class="caption-text">Registration to CTX. Horizontal disparity median -0.1 px and NMAD 0.5 px;
+vertical median 0.1 px and NMAD 0.5 px.</span><a class="headerlink" href="#cassis-004756-dd" title="Link to this image">¶</a></p>
+</figcaption>
+</figure>
+</section>
+</section>
+<section id="approach">
+<span id="cassis-approach"></span><h2><span class="section-number">8.17.2. </span>Approach<a class="headerlink" href="#approach" title="Link to this heading">¶</a></h2>
+<p>Our method assumes a CTX (<a class="reference internal" href="ctx.html#ctx-example"><span class="std std-numref">Section 8.3</span></a>) reference DEM already exists
+for a site. A wealth of such data is available, such as in the USGS Astrogeology
+STAC catalog (see below). When not present, such a DEM can be created with
+stereo. We have observed however notable jitter for such products, so
+preliminary jitter solving is suggested (<a class="reference internal" href="../tools/jitter_solve.html#jitter-solve"><span class="std std-numref">Section 16.39</span></a>).</p>
+<p>A CaSSIS DEM is created by bundle adjustment, pairwise stereo, blending of
+created DEMs, and registration to the CTX DEM by matching sparse interest points
+on the hillshaded DEMs.</p>
+<p>The precise methodology is below. The key observation that made this process
+successful is that one must ensure the framelets are tightly constrained at all
+times. Otherwise they decouple, which results in local warping.</p>
+<p>To handle across-track warping the lens distortion was recalibrated. This was
+done once, jointly for 3 sites (Jezero, Oxia Planum 1, Oxia Planum 2), then kept
+fixed to the updated value during individual processing of the five sites above.
+It should be kept fixed for future work.</p>
+<p>The ground-sample distance of CaSSIS is about 4.6 m/pixel, which compares to CTX
+(<a class="reference internal" href="ctx.html#ctx-example"><span class="std std-numref">Section 8.3</span></a>) at about 6 m/pixel. These two sensors are close enough
+in resolution to be comparable. The DEM resolution of 18 m/pixel employed in
+this processing is about 4x the CaSSIS image resolution.</p>
+</section>
+<section id="detailed-workflow">
+<span id="cassis-workflow"></span><h2><span class="section-number">8.17.3. </span>Detailed workflow<a class="headerlink" href="#detailed-workflow" title="Link to this heading">¶</a></h2>
+<section id="reproducibility">
+<h3><span class="section-number">8.17.3.1. </span>Reproducibility<a class="headerlink" href="#reproducibility" title="Link to this heading">¶</a></h3>
+<p>This work is reproducible <em>end-to-end</em> with a collection of scripts that is
+provided in the separate <a class="reference external" href="https://github.com/NeoGeographyToolkit/CassisPipeline">CaSSIS pipeline</a> repository. A
+ready-to-run <a class="reference external" href="https://github.com/NeoGeographyToolkit/CassisPipeline/releases/tag/jezero-reference">sample dataset for the Jezero site</a>
+is also available, that has the input CaSSIS data, the reference CTX DEM, the
+distortion-refitted, bundle-adjusted and aligned cameras that are ready for
+stereo, and the output DEM and triangulation error mosaics.</p>
+<p>All of this needs a recent ASP build, from 2026/09/10 or later (<a class="reference internal" href="../installation.html#release"><span class="std std-numref">Section 2.1</span></a>).</p>
+</section>
+<section id="compute-requirements">
+<span id="cassis-compute"></span><h3><span class="section-number">8.17.3.2. </span>Compute requirements<a class="headerlink" href="#compute-requirements" title="Link to this heading">¶</a></h3>
+<p>The preparation stages are light and can be run on a local machine. The heavy
+stages, that include the distortion refit, creation of pairwise dense matches,
+bundle adjustment, and stereo, are compute-intensive and could be run on a
+supercomputer node (<a class="reference internal" href="pbs_slurm.html#pbs-slurm"><span class="std std-numref">Section 8.22</span></a>). On a single node with 28 cores and
+128 GB of memory the heavy stages took one to two hours of compute. Likely a lot
+less memory is actually needed. The dense matching and the first
+bundle-adjustment pass took most of the time.</p>
+</section>
+<section id="prior-cassis-dem">
+<span id="cassis-published-dem"></span><h3><span class="section-number">8.17.3.3. </span>Prior CaSSIS DEM<a class="headerlink" href="#prior-cassis-dem" title="Link to this heading">¶</a></h3>
+<p>The published CaSSIS DEMs are found and downloaded from the CaSSIS DTM archive
+(<a class="reference external" href="https://cassis.oapd.inaf.it/archive/cassis/searchdtm.php">cassis.oapd.inaf.it</a>).
+These are produced by the OAPD/INAF group with its 3D stereo pipeline
+(3DPD, <span class="bibtex-citation" id="id2">[<a class="reference internal" href="../zzreferences.html#id134" title="E. Simioni, C. Re, T. Mudric, G. Cremonese, S. Tulyakov, A. Petrella, A. Pommerol, and N. Thomas. 3dpd: a photogrammetric pipeline for a push frame stereo cameras. Planetary and Space Science, 198:105165, 2021. doi:10.1016/j.pss.2021.105165.">SRM+21</a>]</span>).</p>
+<p>The products vary in their horizontal projection (equirectangular or
+stereographic) and in their stated vertical datum. In practice the heights are
+referenced to the Mars areoid (the MOLA gravitational equipotential surface),
+even when the accompanying metadata suggests otherwise, so that metadata should
+be read with care and the datum verified. The areoid departs from a sphere by
+more than a kilometer in places, varying with location, so this is not a small
+offset.</p>
+<p>For comparison with our results, which use the Mars reference sphere of radius
+3396190 m (the <code class="docutils literal notranslate"><span class="pre">D_MARS</span></code> datum), a prior CaSSIS DEM is converted from areoid to
+sphere heights with <a class="reference internal" href="../tools/dem_geoid.html#dem-geoid"><span class="std std-ref">dem_geoid</span></a> (option <code class="docutils literal notranslate"><span class="pre">--reverse-adjustment</span></code> with
+the MOLA areoid).</p>
+<p>The prior CaSSIS DEM is then regridded to a <em>local stereographic projection</em> at
+18 m/pixel with <code class="docutils literal notranslate"><span class="pre">gdalwarp</span></code> (<a class="reference internal" href="../tools/gdal.html#gdal-tools"><span class="std std-numref">Section 16.26</span></a>), following the same grid
+convention as ASP (<a class="reference internal" href="../tools/mapproject.html#mapproj-grid"><span class="std std-numref">Section 16.41.2</span></a>). The command sets the projection with
+<code class="docutils literal notranslate"><span class="pre">-t_srs</span></code>, the grid size with <code class="docutils literal notranslate"><span class="pre">-tr</span> <span class="pre">18</span> <span class="pre">18</span></code>, cubic-spline resampling with <code class="docutils literal notranslate"><span class="pre">-r</span>
+<span class="pre">cubicspline</span></code>, and an extent <code class="docutils literal notranslate"><span class="pre">-te</span></code> snapped to odd multiples of 9 m (half the
+grid size). The regridded DEM then shares the grid phase of the CTX reference
+and of the CaSSIS DEM produced with ASP.</p>
+</section>
+<section id="preparation-of-reference-ctx-dem">
+<span id="cassis-ctx-ref"></span><h3><span class="section-number">8.17.3.4. </span>Preparation of reference CTX DEM<a class="headerlink" href="#preparation-of-reference-ctx-dem" title="Link to this heading">¶</a></h3>
+<p>The reference is assembled from existing Context Camera (CTX) DEMs over the
+site, rather than produced from raw CTX stereo. They are queried and downloaded
+from the <a class="reference external" href="https://stac.astrogeology.usgs.gov">USGS Astrogeology STAC catalog</a>, from the controlled MRO CTX DTM
+collection, using its query API. A covering set of overlapping DEMs is selected
+to span the CaSSIS footprint with margin.</p>
+<p>The box for the reference is taken from the extent of the prior CaSSIS DEM (as
+prepared above, in the local stereographic projection at 18 m/pixel), expanded
+by a factor of six. This wide (and perhaps excessive) margin gives ample
+surrounding terrain to mapproject the framelets for each view that go beyond
+their shared area where they create a terrain model.</p>
+<p>The extent is snapped, following the same grid convention (<a class="reference internal" href="../tools/mapproject.html#mapproj-grid"><span class="std std-numref">Section 16.41.2</span></a>),
+so its bounds are odd multiples of half the grid size (9 m). The pixel centers then
+fall at integer multiples of the grid size, so the CTX and CaSSIS DEMs share one
+grid phase, with no subpixel offset when they are compared or blended.</p>
+<p>The DEMs are warped to this extent and seamlessly blended with
+<a class="reference internal" href="../tools/dem_mosaic.html#dem-mosaic"><span class="std std-ref">dem_mosaic</span></a>. Each input is then compared to the blend with <a class="reference internal" href="../tools/geodiff.html#geodiff"><span class="std std-ref">geodiff</span></a>,
+and any that disagrees badly is dropped (roughly, a mean offset over 20 m or a
+spread over 30 m, which is above the few-meters of noise due to CTX jitter). The
+curated set is re-blended and inspected by eye.</p>
+<p>Misalignment between input CTX DEMs may exist, which will manifest itself as
+smeared craters, etc. Offending DEMs should either be taken out or aligned before
+blending.</p>
+<p>The low-resolution DEM used later for mapprojection (<a class="reference internal" href="../next_steps.html#mapproj-example"><span class="std std-numref">Section 6.1.7</span></a>)
+is prepared from this reference CTX DEM by blurring it with <code class="docutils literal notranslate"><span class="pre">dem_mosaic</span></code>
+(<a class="reference internal" href="../tools/dem_mosaic.html#dem-mosaic-blur"><span class="std std-numref">Section 16.21.3.6</span></a>). A blur sigma of 5 is suggested.</p>
+</section>
+<section id="alignment-of-prior-cassis-dems-to-ctx">
+<span id="cassis-prior-align"></span><h3><span class="section-number">8.17.3.5. </span>Alignment of prior CaSSIS DEMs to CTX<a class="headerlink" href="#alignment-of-prior-cassis-dems-to-ctx" title="Link to this heading">¶</a></h3>
+<p>The regridded prior CaSSIS DEM is horizontally aligned to the blended reference
+CTX DEM. By now both are on the same 18 m/pixel grid and share one projection
+(<a class="reference internal" href="#cassis-ctx-ref"><span class="std std-numref">Section 8.17.3.4</span></a>), and the CTX is cropped to the prior DEM footprint
+expanded by 20 percent, as for the linescan DEM (<a class="reference internal" href="#cassis-init-reg"><span class="std std-numref">Section 8.17.3.8</span></a>).</p>
+<p>The prior products can only be brought into approximate registration. A rigid
+transform removes the bulk shift, of up to a hundred pixels, but a horizontal
+residual on the order of ten or more pixels remains, because these products are
+warped non-rigidly. This is the same warping seen in the vertical difference to
+CTX in the results above, where the prior product is several times less tight to
+CTX than the ASP result.</p>
+<p>This prior aligned CaSSIS product is only used for the comparisons above and not
+for production of CaSSIS DEMs with ASP.</p>
+</section>
+<section id="creation-of-cassis-camera-files">
+<span id="cassis-cameras"></span><h3><span class="section-number">8.17.3.6. </span>Creation of CaSSIS camera files<a class="headerlink" href="#creation-of-cassis-camera-files" title="Link to this heading">¶</a></h3>
+<p>For each framelet a CSM camera model (<a class="reference internal" href="csm.html#csm"><span class="std std-numref">Section 8.12</span></a>) is created. It carries the
+spacecraft pose, read from the TGO and CaSSIS SPICE kernels, and the CaSSIS lens
+distortion.</p>
+<p>This is done in two stages, each in its own conda environment. First the
+framelets are downloaded and ingested to ISIS cubes, with ISIS. Then the CSM
+cameras are created from the cubes, with <a class="reference external" href="https://github.com/DOI-USGS/ale">ALE</a> (<a class="reference internal" href="#cassis-csm"><span class="std std-numref">Section 8.17.3.7</span></a>). The two stages need
+different versions of the underlying libraries (ALE is newer with some
+additional bugfixes), so they are kept in separate environments.</p>
+<p>The commands below are spelled out for the Jezero observation
+<code class="docutils literal notranslate"><span class="pre">MY36_016378_162_1</span></code> (evaluated in <a class="reference internal" href="#cassis-vendor"><span class="std std-numref">Section 8.17.1</span></a>), and apply to any
+site. The <a class="reference external" href="https://github.com/NeoGeographyToolkit/CassisPipeline">CaSSIS pipeline</a> repository automates
+all of this.</p>
+<section id="isis-environment">
+<span id="cassis-isis-env"></span><h4><span class="section-number">8.17.3.6.1. </span>ISIS environment<a class="headerlink" href="#isis-environment" title="Link to this heading">¶</a></h4>
+<p>The ingestion and kernel download below use ISIS. Create an environment with
+ISIS 10.0.0 and <code class="docutils literal notranslate"><span class="pre">rclone</span></code> (needed by the kernel downloader), from the public
+<code class="docutils literal notranslate"><span class="pre">usgs-astrogeology</span></code> channel:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>conda config --set channel_priority flexible
+conda create -n isis10                \
+  -c usgs-astrogeology -c conda-forge \
+  isis=10.0.0 csm=3.0.3.3 rclone
+conda activate isis10
+export ISISROOT=$CONDA_PREFIX
+export ISISDATA=$HOME/projects/isisdata
+</pre></div>
+</div>
+<p>The <code class="docutils literal notranslate"><span class="pre">csm</span></code> package is pinned to <code class="docutils literal notranslate"><span class="pre">3.0.3.3</span></code>. The default solve pulls a newer
+<code class="docutils literal notranslate"><span class="pre">csm</span></code> whose shared library is not compatible with this ISIS release, which then
+fails to load.</p>
+<p>This environment provides <code class="docutils literal notranslate"><span class="pre">tgocassis2isis</span></code> and <code class="docutils literal notranslate"><span class="pre">editlab</span></code> for the ingestion,
+and <code class="docutils literal notranslate"><span class="pre">downloadIsisData</span></code> for the kernels.</p>
+</section>
+<section id="fetching-the-framelets">
+<span id="cassis-fetch"></span><h4><span class="section-number">8.17.3.6.2. </span>Fetching the framelets<a class="headerlink" href="#fetching-the-framelets" title="Link to this heading">¶</a></h4>
+<p>The calibrated framelets are downloaded from the ESA Planetary Science Archive
+(<a class="reference external" href="https://archives.esac.esa.int/psa">PSA</a>, the ExoMars <code class="docutils literal notranslate"><span class="pre">em16_tgo_cas</span></code>
+collection). Each stereo observation has two looks (perspectives), which we call
+left and right. Each look is a directory of about thirty <code class="docutils literal notranslate"><span class="pre">.dat</span></code> and <code class="docutils literal notranslate"><span class="pre">.xml</span></code>
+framelet pairs, under a sequence identifier.</p>
+<p>Observation <code class="docutils literal notranslate"><span class="pre">MY36_016378_162_1</span></code> is on orbit 16378, with the left look under
+sequence identifier <code class="docutils literal notranslate"><span class="pre">838849161</span></code> and the right under <code class="docutils literal notranslate"><span class="pre">838849162</span></code>. The PSA
+groups orbits into ranges of one hundred, so orbit 16378 is under
+<code class="docutils literal notranslate"><span class="pre">Orbit_Range_16300_16399</span></code>.</p>
+<p>Set:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">base</span><span class="o">=</span><span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">archives</span><span class="o">.</span><span class="n">esac</span><span class="o">.</span><span class="n">esa</span><span class="o">.</span><span class="n">int</span><span class="o">/</span><span class="n">psa</span><span class="o">/</span><span class="n">ftp</span><span class="o">/</span><span class="n">ExoMars2016</span><span class="o">/</span><span class="n">em16_tgo_cas</span><span class="o">/</span><span class="n">data_calibrated</span><span class="o">/</span><span class="n">Science_Phase</span><span class="o">/</span><span class="n">Orbit_Range_16300_16399</span><span class="o">/</span><span class="n">Orbit_16378</span><span class="o">/</span><span class="n">Science</span>
+</pre></div>
+</div>
+<p>Fetch both looks with:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>n=1
+for sid in 838849161 838849162; do
+  out=L${n}_$sid
+  mkdir -p $out
+  files=$(curl -sL "$base/$sid/PAN/"      \
+    | grep -ioE 'cas_cal[^"]*\.(dat|xml)' \
+    | grep -vi sti | sort -u)
+  for f in $files; do
+    curl -sL "$base/$sid/PAN/$f" -o "$out/$f"
+  done
+  n=$((n+1))
+done
+</pre></div>
+</div>
+<p>Only the individual <code class="docutils literal notranslate"><span class="pre">PAN</span></code> framelets are used. The stitched <code class="docutils literal notranslate"><span class="pre">sti</span></code> products
+are skipped. The PSA is slow, downloading roughly one file per second, so this
+takes a few minutes per look.</p>
+</section>
+<section id="downloading-the-spice-kernels">
+<span id="cassis-kernels"></span><h4><span class="section-number">8.17.3.6.3. </span>Downloading the SPICE kernels<a class="headerlink" href="#downloading-the-spice-kernels" title="Link to this heading">¶</a></h4>
+<p>The camera poses and other metadata are obtained from the TGO and CaSSIS SPICE
+kernels. These are the <code class="docutils literal notranslate"><span class="pre">base</span></code> and <code class="docutils literal notranslate"><span class="pre">tgo</span></code> kernel sets in the <a class="reference external" href="https://astrogeology.usgs.gov/docs/how-to-guides/environment-setup-and-maintenance/isis-data-area/">ISIS data area</a>
+(<a class="reference internal" href="../installation.html#planetary-images"><span class="std std-numref">Section 2.3.1</span></a>). Download the two sets with <code class="docutils literal notranslate"><span class="pre">downloadIsisData</span></code>,
+which is shipped with ISIS:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>downloadIsisData base $ISISDATA
+downloadIsisData tgo  $ISISDATA
+</pre></div>
+</div>
+<p>The mission name for CaSSIS is <code class="docutils literal notranslate"><span class="pre">tgo</span></code>. Each call pulls from two upstream
+archives at once and merges them: the spacecraft SPICE kernels themselves
+(produced and hosted by ESA) and the ISIS-specific supplements (the instrument
+addendum, which carries the CaSSIS focal length and detector geometry, and the
+kernel database indexes, hosted by USGS). Both halves are needed. The addendum
+in particular is not part of the ESA archive, so a bare ESA metakernel is not
+sufficient by itself. The <code class="docutils literal notranslate"><span class="pre">downloadIsisData</span></code> tool assembles both halves into a
+single tree without the user having to track where each file comes from.</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">base</span></code> set holds the shared body ephemeris and the leap-second kernel that
+even the ingestion above needs. The <code class="docutils literal notranslate"><span class="pre">tgo</span></code> set holds the CaSSIS instrument,
+pointing, and trajectory kernels.</p>
+<p>The full <code class="docutils literal notranslate"><span class="pre">tgo</span></code> set is very large. The ESA-hosted kernels alone are about 230
+GiB, some ten thousand files, most of it reconstructed spacecraft position and
+pointing spanning the entire mission. A full download is only worth it for
+repeated, multi-site work, and takes a long time.</p>
+<p>For a single observation only a small subset is needed: the static kernels (leap
+seconds, spacecraft clock, frames, the CaSSIS instrument kernel and its ISIS
+addendum) plus the reconstructed position and pointing that cover the few
+seconds of that observation. The observation date is encoded in the framelet
+names and labels (for the Jezero example above, <code class="docutils literal notranslate"><span class="pre">20210725</span></code>). A reconstructed
+position or pointing kernel states its coverage window in its own file name, so
+a targeted <code class="docutils literal notranslate"><span class="pre">rclone</span></code> of just the kernels whose window includes that date, using
+the same configuration that <code class="docutils literal notranslate"><span class="pre">downloadIsisData</span></code> relies on
+(<a class="reference internal" href="../installation.html#planetary-images"><span class="std std-numref">Section 2.3.1</span></a>), brings the footprint down from hundreds of GiB to
+a few hundred MiB. The <a class="reference external" href="https://github.com/NeoGeographyToolkit/CassisPipeline">CaSSIS pipeline</a> repository shows this
+date-scoped fetch.</p>
+</section>
+<section id="ingesting-to-isis-cubes">
+<span id="cassis-ingest"></span><h4><span class="section-number">8.17.3.6.4. </span>Ingesting to ISIS cubes<a class="headerlink" href="#ingesting-to-isis-cubes" title="Link to this heading">¶</a></h4>
+<p>Each framelet is ingested to an ISIS cube with <code class="docutils literal notranslate"><span class="pre">tgocassis2isis</span></code>. The
+PSA-exported labels omit the spacecraft clock start count that ISIS camera
+initialization needs, so it is recovered from the hex-encoded exposure timestamp
+in the label and written into the cube with <code class="docutils literal notranslate"><span class="pre">editlab</span></code>. This is a temporary
+workaround, to be removed once the corresponding ISIS fix reaches the release:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>for xml in L1_838849161/*.xml L2_838849162/*.xml; do
+  cub=${xml%.xml}.cub
+  tgocassis2isis from=$xml to=$cub
+  ts=$(grep -ioE '&lt;em16_tgo_cas:exposuretimestamp&gt;[0-9a-fA-F]+' \
+       $xml | sed 's/.*&gt;//')
+  clk=$(echo $ts | xxd -r -p)
+  editlab from=$cub options=addkey grpname=Instrument \
+    keyword=SpacecraftClockStartCount value=$clk
+done
+</pre></div>
+</div>
+<p>The ingestion attaches no SPICE kernels, but <code class="docutils literal notranslate"><span class="pre">ISISDATA</span></code> must still be set, as
+the label parsing reads the leap-second kernel from the <code class="docutils literal notranslate"><span class="pre">base</span></code> set.</p>
+</section>
+</section>
+<section id="creating-the-cassis-csm-cameras">
+<span id="cassis-csm"></span><h3><span class="section-number">8.17.3.7. </span>Creating the CaSSIS CSM cameras<a class="headerlink" href="#creating-the-cassis-csm-cameras" title="Link to this heading">¶</a></h3>
+<p>A CSM camera model is created for each framelet cube file, from the SPICE pose
+and the CaSSIS lens distortion.</p>
+<p>This needs the CaSSIS-capable versions of ALE and <a class="reference external" href="https://github.com/DOI-USGS/usgscsm">USGSCSM</a>. These are custom-built conda packages,
+with build string <code class="docutils literal notranslate"><span class="pre">cassis</span></code>, on the <code class="docutils literal notranslate"><span class="pre">nasa-ames-stereo-pipeline</span></code> channel, as
+the official releases of these packages (as of July 2026) do not yet support
+CaSSIS.</p>
+<p>These packages are <em>newer</em> than with the ISIS environment above, with some logic
+added specifically for CaSSIS, so care is needed not to mix the two. These go
+in their own environment:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">conda</span> <span class="n">config</span> <span class="o">--</span><span class="nb">set</span> <span class="n">channel_priority</span> <span class="n">flexible</span>
+<span class="n">conda</span> <span class="n">create</span> <span class="o">-</span><span class="n">n</span> <span class="n">usgscsm_cassis</span> \
+  <span class="o">-</span><span class="n">c</span> <span class="n">nasa</span><span class="o">-</span><span class="n">ames</span><span class="o">-</span><span class="n">stereo</span><span class="o">-</span><span class="n">pipeline</span> \
+  <span class="o">-</span><span class="n">c</span> <span class="n">usgs</span><span class="o">-</span><span class="n">astrogeology</span>         \
+  <span class="o">-</span><span class="n">c</span> <span class="n">conda</span><span class="o">-</span><span class="n">forge</span>               \
+  <span class="s1">'ale=1.2.0=cassis*'</span>          \
+  <span class="s1">'usgscsm=2.1.0=cassis*'</span>      \
+  <span class="n">gdal</span> <span class="n">numpy</span> <span class="n">scipy</span>
+</pre></div>
+</div>
+<p>The <code class="docutils literal notranslate"><span class="pre">gdal</span></code>, <code class="docutils literal notranslate"><span class="pre">numpy</span></code>, and <code class="docutils literal notranslate"><span class="pre">scipy</span></code> packages were added for convenience and
+are needed for some processing steps.</p>
+<p>Set up the environment:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>conda activate usgscsm_cassis
+export ISISDATA=$HOME/projects/isisdata
+export ALESPICEROOT=$ISISDATA
+</pre></div>
+</div>
+<p>The cub file names are quite long. Set:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cub</span><span class="o">=</span><span class="n">L1_838849161</span><span class="o">/</span><span class="n">cas_cal_sc_20210725T202818</span><span class="o">-</span><span class="mi">20210725</span><span class="n">T202822</span><span class="o">-</span><span class="mi">16378</span><span class="o">-</span><span class="mi">10</span><span class="o">-</span><span class="n">PAN</span><span class="o">-</span><span class="mi">838849161</span><span class="o">-</span><span class="mi">0</span><span class="o">-</span><span class="mi">0</span><span class="n">__4_0</span><span class="o">.</span><span class="n">cub</span>
+</pre></div>
+</div>
+<p>The camera is then created with <code class="docutils literal notranslate"><span class="pre">isd_generate</span></code>, from this environment, reading
+the cube and the TGO kernels in the ISIS data area:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>isd_generate $cub
+</pre></div>
+</div>
+<p>This writes a camera file with the same name but the <code class="docutils literal notranslate"><span class="pre">.json</span></code> extension in the
+USGS CSM frame-sensor format, with the CaSSIS distortion. Repeat for every
+framelet in both looks.</p>
+<p>Future versions of ISIS and ASP will have all of this in a single package, so
+the two separate environments above will no longer be needed.</p>
+</section>
+<section id="initial-registration-of-cassis-images">
+<span id="cassis-init-reg"></span><h3><span class="section-number">8.17.3.8. </span>Initial registration of CaSSIS images<a class="headerlink" href="#initial-registration-of-cassis-images" title="Link to this heading">¶</a></h3>
+<p>A CaSSIS stereo collection has about 30 framelets in each of two perspectives,
+which we call the left and right looks. Within each look the framelets and their
+published poses are self-consistent, yet the two looks can be misregistered by
+hundreds of meters relative to each other and to the ground.</p>
+<p>A simple bundle adjustment of all sixty framelets, especially with the initially
+inaccurate lens distortion, gives an unstable, non-unique solution that is hard
+to recover from. Instead, in the earliest stage, each look is merged into a
+single image, for which an <em>approximate</em> CSM linescan model
+(<a class="reference internal" href="csm.html#csm-linescan"><span class="std std-numref">Section 8.12.2</span></a>) is created from the individual poses and intrinsics.
+This results in some seams and pose artifacts, which will be removed later.</p>
+<p>These two linescan images are bundle-adjusted and a DEM is made.</p>
+<p>This DEM is registered to the reference CTX DEM by matching sparse interest
+points on the two hillshades (<a class="reference internal" href="../tools/pc_align.html#pc-hillshade"><span class="std std-numref">Section 16.53.3.4</span></a>). It is assumed that both
+DEMs are already on the same 18 m/pixel grid and share the same projection
+(<a class="reference internal" href="#cassis-ctx-ref"><span class="std std-numref">Section 8.17.3.4</span></a>).</p>
+<p>The reference CTX for this step is first cropped to the linescan DEM footprint,
+expanded by 10 percent, and the linescan DEM is put on that same grid and
+extent. This shared and rather tight crop extent is essential. On low-texture
+terrain, matching over a wide surrounding area can lock onto a distant, wrong
+feature and return a spurious transform of kilometers. That corrupts the seed
+cameras and roughens the final DEM, while the vertical difference to CTX stays
+small and hides the failure. Cropping to the footprint plus a small margin
+bounds the matching to the region that actually overlaps:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">gdalwarp</span> <span class="o">-</span><span class="n">te</span> <span class="o">&lt;</span><span class="n">window</span><span class="o">&gt;</span> <span class="o">-</span><span class="n">r</span> <span class="n">cubicspline</span> <span class="o">-</span><span class="n">t_srs</span> <span class="s2">"$proj"</span> <span class="o">-</span><span class="n">tr</span> <span class="mi">18</span> <span class="mi">18</span> \
+  <span class="n">ctx</span><span class="o">.</span><span class="n">tif</span> <span class="n">ctx_win</span><span class="o">.</span><span class="n">tif</span>
+<span class="n">gdalwarp</span> <span class="o">-</span><span class="n">te</span> <span class="o">&lt;</span><span class="n">window</span><span class="o">&gt;</span> <span class="o">-</span><span class="n">r</span> <span class="n">cubicspline</span> <span class="o">-</span><span class="n">t_srs</span> <span class="s2">"$proj"</span> <span class="o">-</span><span class="n">tr</span> <span class="mi">18</span> <span class="mi">18</span> \
+  <span class="n">linescan</span><span class="o">.</span><span class="n">tif</span> <span class="n">linescan_win</span><span class="o">.</span><span class="n">tif</span>
+</pre></div>
+</div>
+<p>The projection in <code class="docutils literal notranslate"><span class="pre">$proj</span></code> is here for completeness, as by now both sites
+normally already have been regridded to the same local projection.</p>
+<p>A rigid transform is fit with <a class="reference internal" href="../tools/pc_align.html#pc-align"><span class="std std-ref">pc_align</span></a>, which hillshades both DEMs,
+matches sparse interest points between them, and fits the transform with RANSAC,
+at zero iterations:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pc_align</span> <span class="o">--</span><span class="nb">max</span><span class="o">-</span><span class="n">displacement</span> <span class="o">-</span><span class="mi">1</span> <span class="o">--</span><span class="n">num</span><span class="o">-</span><span class="n">iterations</span> <span class="mi">0</span> \
+  <span class="o">--</span><span class="n">initial</span><span class="o">-</span><span class="n">transform</span><span class="o">-</span><span class="n">from</span><span class="o">-</span><span class="n">hillshading</span> <span class="n">rigid</span>      \
+  <span class="o">--</span><span class="n">initial</span><span class="o">-</span><span class="n">transform</span><span class="o">-</span><span class="n">ransac</span><span class="o">-</span><span class="n">params</span> <span class="mi">1000</span> <span class="mi">3</span>        \
+  <span class="o">--</span><span class="n">save</span><span class="o">-</span><span class="n">transformed</span><span class="o">-</span><span class="n">source</span><span class="o">-</span><span class="n">points</span>                \
+  <span class="n">ctx_win</span><span class="o">.</span><span class="n">tif</span> <span class="n">linescan_win</span><span class="o">.</span><span class="n">tif</span> <span class="o">-</span><span class="n">o</span> <span class="n">align</span><span class="o">/</span><span class="n">run</span>
+</pre></div>
+</div>
+<p>The alignment is checked by the residual disparity between the two aligned
+hillshades, from a dense correlation (<code class="docutils literal notranslate"><span class="pre">asp_mgm</span></code>, <a class="reference internal" href="../tools/correlator.html#correlator-mode"><span class="std std-ref">Image correlator</span></a>).</p>
+<p>On very smooth terrain this sparse method can lock onto a wrong feature and fail
+this check. When it does, the pipeline falls through to the dense method from
+<a class="reference internal" href="../tools/pc_align.html#pc-corr"><span class="std std-numref">Section 16.53.3.5</span></a>. We noticed however for that approach that the stereo
+correlation with the <code class="docutils literal notranslate"><span class="pre">asp_bm</span></code> block-matching method is more robust than
+<code class="docutils literal notranslate"><span class="pre">asp_mgm</span></code> for terrains that have few features.</p>
+<p>Careful visual inspection is suggested as well a automated methods can fail.</p>
+<p>Some warping, a few to about ten pixels at 18 m/pixel, can remain, but this is
+close enough to proceed. The alignment transform is applied to the
+bundle-adjusted linescan cameras, which are then split back into individual
+framelet cameras carrying the updated and registered poses, that preserve the
+consistency within each look.</p>
+</section>
+<section id="dense-matches">
+<span id="cassis-dense-matches"></span><h3><span class="section-number">8.17.3.9. </span>Dense matches<a class="headerlink" href="#dense-matches" title="Link to this heading">¶</a></h3>
+<p>Dense interest-point matches (<a class="reference internal" href="../bundle_adjustment.html#dense-ip"><span class="std std-numref">Section 12.2.4.2</span></a>) are computed once and reused
+across the bundle adjustment runs. They are found in two ways, by look. Both use
+the option <code class="docutils literal notranslate"><span class="pre">--num-matches-from-disparity</span></code>, which runs a dense correlation and
+then keeps that many matches spread across the overlap. The cameras at this
+stage are not yet bundle-adjusted.</p>
+<p>Creating such matches is computationally intensive, but it is a required step
+that ensures each framelet is tightly coupled with the next framelet in the
+sequence, with which it may have only 50 pixels or so of overlap. Some
+left-right stereo pairs may also overlap very little, and could not be
+controlled otherwise either.</p>
+<p>Cross-look matches (left-to-right) are found in the mapprojected domain
+(<a class="reference internal" href="../bundle_adjustment.html#mapip"><span class="std std-numref">Section 12.2.4.3</span></a>), which removes the large difference in perspective and makes
+the correlation reliable.</p>
+<p>Each framelet is mapprojected onto a low-resolution blurred CTX DEM
+(<a class="reference internal" href="../next_steps.html#mapproj-example"><span class="std std-numref">Section 6.1.7</span></a>), which is made from the reference CTX DEM
+(<a class="reference internal" href="#cassis-ctx-ref"><span class="std std-numref">Section 8.17.3.4</span></a>). This process happens after the earlier alignment
+step, so this DEM is reasonably well-registered with the data (up to some
+warping due to lens distortion).</p>
+<p>The overlapping pairs are correlated. Because the cameras still carry error, a
+search collar is allowed with <code class="docutils literal notranslate"><span class="pre">--mapproj-geolocation-uncertainty</span></code> (about 30
+pixels):</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">parallel_stereo</span>                        \
+  <span class="o">--</span><span class="n">processes</span> <span class="mi">1</span>                        \
+  <span class="o">--</span><span class="n">threads</span><span class="o">-</span><span class="n">multiprocess</span> <span class="mi">2</span>             \
+  <span class="o">--</span><span class="n">threads</span><span class="o">-</span><span class="n">singleprocess</span> <span class="mi">2</span>            \
+  <span class="o">--</span><span class="n">alignment</span><span class="o">-</span><span class="n">method</span> <span class="n">none</span>              \
+  <span class="o">--</span><span class="n">stereo</span><span class="o">-</span><span class="n">algorithm</span> <span class="n">asp_mgm</span>           \
+  <span class="o">--</span><span class="n">subpixel</span><span class="o">-</span><span class="n">mode</span> <span class="mi">9</span>                    \
+  <span class="o">--</span><span class="n">corr</span><span class="o">-</span><span class="n">seed</span><span class="o">-</span><span class="n">mode</span> <span class="mi">1</span>                   \
+  <span class="o">--</span><span class="n">mapproj</span><span class="o">-</span><span class="n">geolocation</span><span class="o">-</span><span class="n">uncertainty</span> <span class="mi">30</span> \
+  <span class="o">--</span><span class="n">num</span><span class="o">-</span><span class="n">matches</span><span class="o">-</span><span class="n">from</span><span class="o">-</span><span class="n">disparity</span> <span class="mi">20000</span>   \
+  <span class="o">--</span><span class="nb">max</span><span class="o">-</span><span class="n">disp</span><span class="o">-</span><span class="n">spread</span> <span class="mi">120</span>                \
+  <span class="n">left_map</span><span class="o">.</span><span class="n">tif</span> <span class="n">right_map</span><span class="o">.</span><span class="n">tif</span>           \
+  <span class="n">left</span><span class="o">.</span><span class="n">json</span> <span class="n">right</span><span class="o">.</span><span class="n">json</span>                 \
+  <span class="n">pair</span><span class="o">/</span><span class="n">run</span> <span class="n">mapprojDem</span><span class="o">.</span><span class="n">tif</span>
+</pre></div>
+</div>
+<p>Same-look matches (left-to-left and right-to-right) are found in the raw image
+domain, with affine-epipolar alignment:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">parallel_stereo</span>                      \
+  <span class="o">--</span><span class="n">processes</span> <span class="mi">1</span>                      \
+  <span class="o">--</span><span class="n">threads</span><span class="o">-</span><span class="n">multiprocess</span> <span class="mi">2</span>           \
+  <span class="o">--</span><span class="n">threads</span><span class="o">-</span><span class="n">singleprocess</span> <span class="mi">2</span>          \
+  <span class="o">--</span><span class="n">alignment</span><span class="o">-</span><span class="n">method</span> <span class="n">affineepipolar</span>  \
+  <span class="o">--</span><span class="n">stereo</span><span class="o">-</span><span class="n">algorithm</span> <span class="n">asp_mgm</span>         \
+  <span class="o">--</span><span class="n">subpixel</span><span class="o">-</span><span class="n">mode</span> <span class="mi">9</span>                  \
+  <span class="o">--</span><span class="n">corr</span><span class="o">-</span><span class="n">seed</span><span class="o">-</span><span class="n">mode</span> <span class="mi">1</span>                 \
+  <span class="o">--</span><span class="n">ip</span><span class="o">-</span><span class="n">detect</span><span class="o">-</span><span class="n">method</span> <span class="mi">1</span>               \
+  <span class="o">--</span><span class="n">ip</span><span class="o">-</span><span class="n">per</span><span class="o">-</span><span class="n">image</span> <span class="mi">12000</span>               \
+  <span class="o">--</span><span class="n">num</span><span class="o">-</span><span class="n">matches</span><span class="o">-</span><span class="n">from</span><span class="o">-</span><span class="n">disparity</span> <span class="mi">20000</span> \
+  <span class="o">--</span><span class="nb">min</span><span class="o">-</span><span class="n">triangulation</span><span class="o">-</span><span class="n">angle</span> <span class="mf">1e-10</span>    \
+  <span class="n">left</span><span class="o">.</span><span class="n">cub</span> <span class="n">right</span><span class="o">.</span><span class="n">cub</span>                 \
+  <span class="n">left</span><span class="o">.</span><span class="n">json</span> <span class="n">right</span><span class="o">.</span><span class="n">json</span>               \
+  <span class="n">pair</span><span class="o">/</span><span class="n">run</span>
+</pre></div>
+</div>
+<p>The option <code class="docutils literal notranslate"><span class="pre">--ip-detect-method</span> <span class="pre">1</span></code> (the SIFT detector) is important here. The
+default interest-point detector barely matches CaSSIS imagery, while SIFT finds
+many more matches on the same images.</p>
+<p>The matches from both are written per pair, in original framelet pixel
+coordinates. This is what <a class="reference internal" href="../tools/bundle_adjust.html#bundle-adjust"><span class="std std-ref">bundle_adjust</span></a> reads through
+<code class="docutils literal notranslate"><span class="pre">--match-files-prefix</span></code> (<a class="reference internal" href="#cassis-ba"><span class="std std-numref">Section 8.17.3.11</span></a>).</p>
+<p>Here, <code class="docutils literal notranslate"><span class="pre">parallel_stereo</span></code> was called with one process only, because multiple
+such invocations will run in parallel.</p>
+</section>
+<section id="distortion-refit">
+<span id="cassis-refit"></span><h3><span class="section-number">8.17.3.10. </span>Distortion refit<a class="headerlink" href="#distortion-refit" title="Link to this heading">¶</a></h3>
+<p>The published CaSSIS lens distortion model uses separate polynomials for both
+distortion operations. Simultaneous refinement of these is not supported in
+<a class="reference internal" href="../tools/bundle_adjust.html#bundle-adjust"><span class="std std-ref">bundle_adjust</span></a>.</p>
+<p>For this reason, we convert the cameras with <a class="reference internal" href="../tools/cam_gen.html#cam-gen"><span class="std std-ref">cam_gen</span></a> to the CSM
+<code class="docutils literal notranslate"><span class="pre">transverse</span></code> lens distortion mode (<a class="reference internal" href="../pinholemodels.html#csm-frame-def"><span class="std std-numref">Section 21.3</span></a>). This preserves the
+existing pose and all other intrinsics.</p>
+<p>Because it is one physical lens, the fitted distortion comes out the same for
+every framelet, so it is effectively one shared model, even when this is run
+independently per camera:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cam_gen</span> <span class="n">framelet</span><span class="o">.</span><span class="n">cub</span>             \
+  <span class="o">--</span><span class="nb">input</span><span class="o">-</span><span class="n">camera</span> <span class="n">framelet</span><span class="o">.</span><span class="n">json</span>   \
+  <span class="o">--</span><span class="n">csm</span><span class="o">-</span><span class="n">refit</span><span class="o">-</span><span class="n">distortion</span>         \
+  <span class="o">--</span><span class="n">distortion</span><span class="o">-</span><span class="nb">type</span> <span class="n">transverse</span>   \
+  <span class="o">--</span><span class="n">refine</span><span class="o">-</span><span class="n">intrinsics</span> <span class="n">distortion</span> \
+  <span class="o">--</span><span class="n">datum</span> <span class="n">D_MARS</span>                 \
+  <span class="o">--</span><span class="n">num</span><span class="o">-</span><span class="n">pixel</span><span class="o">-</span><span class="n">samples</span> <span class="mi">4000</span>       \
+  <span class="o">-</span><span class="n">o</span> <span class="n">framelet_refit</span><span class="o">.</span><span class="n">json</span>
+</pre></div>
+</div>
+<p>Then the lens distortion model is replaced with a new one we optimized
+(<a class="reference internal" href="#cassis-opt-lens-dist"><span class="std std-numref">Section 8.17.3.15</span></a>). The pose is refit to absorb the small tilt
+this distortion introduces, with <code class="docutils literal notranslate"><span class="pre">--csm-refit-pose</span></code>. The reference DEM and a
+camera-position control keep the refit from drifting:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cam_gen</span> <span class="n">framelet</span><span class="o">.</span><span class="n">cub</span>                               \
+  <span class="o">--</span><span class="nb">input</span><span class="o">-</span><span class="n">camera</span> <span class="n">framelet_refit</span><span class="o">.</span><span class="n">json</span>               \
+  <span class="o">--</span><span class="n">csm</span><span class="o">-</span><span class="n">refit</span><span class="o">-</span><span class="n">pose</span>                                 \
+  <span class="o">--</span><span class="n">distortion</span><span class="o">-</span><span class="nb">type</span> <span class="n">transverse</span>                     \
+  <span class="o">--</span><span class="n">distortion</span> <span class="o">&lt;</span><span class="n">optimized</span> <span class="n">distortion</span> <span class="n">coefficients</span><span class="o">&gt;</span> \
+  <span class="o">--</span><span class="n">reference</span><span class="o">-</span><span class="n">dem</span> <span class="n">ctx</span><span class="o">.</span><span class="n">tif</span>                          \
+  <span class="o">--</span><span class="n">camera</span><span class="o">-</span><span class="n">position</span><span class="o">-</span><span class="n">uncertainty</span> <span class="mi">100</span><span class="p">,</span><span class="mi">100</span>            \
+  <span class="o">--</span><span class="n">datum</span> <span class="n">D_MARS</span>                                   \
+  <span class="o">--</span><span class="n">num</span><span class="o">-</span><span class="n">pixel</span><span class="o">-</span><span class="n">samples</span> <span class="mi">4000</span>                         \
+  <span class="o">-</span><span class="n">o</span> <span class="n">framelet_start</span><span class="o">.</span><span class="n">json</span>
+</pre></div>
+</div>
+<p>The full optimized distortion coefficients are a fixed instrument constant, not
+reproduced here. The complete set is in <a class="reference external" href="https://github.com/NeoGeographyToolkit/CassisPipeline/blob/main/config/cassis_common.conf">cassis_common.conf</a>
+in the CaSSIS pipeline repository.</p>
+<p>These start cameras go into bundle adjustment. This corrects the residual
+across-track warping that a fixed distortion would otherwise leave behind.</p>
+</section>
+<section id="bundle-adjustment">
+<span id="cassis-ba"></span><h3><span class="section-number">8.17.3.11. </span>Bundle adjustment<a class="headerlink" href="#bundle-adjustment" title="Link to this heading">¶</a></h3>
+<p>The framelet frame cameras are then refined with <a class="reference internal" href="../tools/bundle_adjust.html#bundle-adjust"><span class="std std-ref">bundle_adjust</span></a>. This
+uses the CTX DEM as a height constraint (heights-from-dem), ground control
+points generated from it with <a class="reference internal" href="../tools/dem2gcp.html#dem2gcp"><span class="std std-ref">dem2gcp</span></a>, and a control on the camera
+positions to keep the solution from drifting. A single frozen
+transverse-distortion lens is shared across all framelets.</p>
+<p>The refinement is done as two bundle adjustment runs. Both use the same three
+inputs: a list of framelet images, the matching list of frame cameras (in the
+same order, one per image), and the dense interest-point matches from
+<a class="reference internal" href="#cassis-dense-matches"><span class="std std-numref">Section 8.17.3.9</span></a>, passed as a match-files prefix. The height
+constraint in both is the CTX reference DEM.</p>
+<p>The first run anchors the horizontal registration. It starts from the frame
+cameras and adds the ground control points made with <a class="reference internal" href="../tools/dem2gcp.html#dem2gcp"><span class="std std-ref">dem2gcp</span></a>. The ground
+control is applied as a soft constraint, not held fixed: the points are weighted
+by the sigma written into the ground control file (40), and
+<code class="docutils literal notranslate"><span class="pre">--gcp-robust-threshold</span> <span class="pre">1</span></code> attenuates noisy or wrong boot points, so the
+consistent control still pulls the cameras while the dense matches keep framelet
+continuity. The height constraint is kept loose (uncertainty 100 m), so the
+ground control drives the horizontal fit:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">bundle_adjust</span>                                 \
+  <span class="o">--</span><span class="n">image</span><span class="o">-</span><span class="nb">list</span> <span class="n">images</span><span class="o">.</span><span class="n">txt</span>                     \
+  <span class="o">--</span><span class="n">camera</span><span class="o">-</span><span class="nb">list</span> <span class="n">cameras</span><span class="o">.</span><span class="n">txt</span>                   \
+  <span class="n">gcp</span><span class="o">.</span><span class="n">gcp</span>                                     \
+  <span class="o">--</span><span class="n">gcp</span><span class="o">-</span><span class="n">robust</span><span class="o">-</span><span class="n">threshold</span> <span class="mi">1</span>                    \
+  <span class="o">--</span><span class="nb">max</span><span class="o">-</span><span class="n">gcp</span><span class="o">-</span><span class="n">reproj</span><span class="o">-</span><span class="n">err</span> <span class="mi">100</span>                    \
+  <span class="o">--</span><span class="n">inline</span><span class="o">-</span><span class="n">adjustments</span>                        \
+  <span class="o">--</span><span class="n">match</span><span class="o">-</span><span class="n">files</span><span class="o">-</span><span class="n">prefix</span> <span class="n">dense</span><span class="o">/</span><span class="n">matches</span><span class="o">/</span><span class="n">run</span><span class="o">-</span><span class="n">disp</span> \
+  <span class="o">--</span><span class="n">heights</span><span class="o">-</span><span class="n">from</span><span class="o">-</span><span class="n">dem</span> <span class="n">ctx</span><span class="o">.</span><span class="n">tif</span>                  \
+  <span class="o">--</span><span class="n">heights</span><span class="o">-</span><span class="n">from</span><span class="o">-</span><span class="n">dem</span><span class="o">-</span><span class="n">uncertainty</span> <span class="mi">100</span>          \
+  <span class="o">--</span><span class="n">heights</span><span class="o">-</span><span class="n">from</span><span class="o">-</span><span class="n">dem</span><span class="o">-</span><span class="n">robust</span><span class="o">-</span><span class="n">threshold</span> <span class="mf">1e+6</span>    \
+  <span class="o">--</span><span class="n">camera</span><span class="o">-</span><span class="n">position</span><span class="o">-</span><span class="n">uncertainty</span> <span class="mi">500</span><span class="p">,</span><span class="mi">500</span>       \
+  <span class="o">--</span><span class="n">robust</span><span class="o">-</span><span class="n">threshold</span> <span class="mf">0.5</span>                      \
+  <span class="o">--</span><span class="n">num</span><span class="o">-</span><span class="n">iterations</span> <span class="mi">50</span>                         \
+  <span class="o">--</span><span class="n">num</span><span class="o">-</span><span class="n">passes</span> <span class="mi">2</span>                              \
+  <span class="o">--</span><span class="n">remove</span><span class="o">-</span><span class="n">outliers</span><span class="o">-</span><span class="n">params</span> <span class="s2">"75 3 100 100"</span>     \
+  <span class="o">--</span><span class="nb">min</span><span class="o">-</span><span class="n">triangulation</span><span class="o">-</span><span class="n">angle</span> <span class="mf">1e-10</span>             \
+  <span class="o">--</span><span class="n">forced</span><span class="o">-</span><span class="n">triangulation</span><span class="o">-</span><span class="n">distance</span> <span class="mi">392000</span>      \
+  <span class="o">--</span><span class="nb">max</span><span class="o">-</span><span class="n">pairwise</span><span class="o">-</span><span class="n">matches</span> <span class="mi">2000</span>                 \
+  <span class="o">-</span><span class="n">o</span> <span class="n">ba_fixed_gcp</span><span class="o">/</span><span class="n">run</span>
+</pre></div>
+</div>
+<p>The large <code class="docutils literal notranslate"><span class="pre">--heights-from-dem-robust-threshold</span></code> keeps the loose height from
+being down-weighted, so the soft ground control sets the vertical.</p>
+<p>The second run settles the vertical. It reuses the cameras from the first run
+through the image and camera lists that run wrote, <code class="docutils literal notranslate"><span class="pre">ba_fixed_gcp/run-image_list.txt</span></code>
+and <code class="docutils literal notranslate"><span class="pre">ba_fixed_gcp/run-camera_list.txt</span></code>. It uses no ground control, and tightens the
+height constraint to an uncertainty of 10 m, so the heights lock onto the CTX DEM
+while the matches hold the horizontal in place:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">bundle_adjust</span>                                    \
+  <span class="o">--</span><span class="n">image</span><span class="o">-</span><span class="nb">list</span> <span class="n">ba_fixed_gcp</span><span class="o">/</span><span class="n">run</span><span class="o">-</span><span class="n">image_list</span><span class="o">.</span><span class="n">txt</span>   \
+  <span class="o">--</span><span class="n">camera</span><span class="o">-</span><span class="nb">list</span> <span class="n">ba_fixed_gcp</span><span class="o">/</span><span class="n">run</span><span class="o">-</span><span class="n">camera_list</span><span class="o">.</span><span class="n">txt</span> \
+  <span class="o">--</span><span class="n">inline</span><span class="o">-</span><span class="n">adjustments</span>                           \
+  <span class="o">--</span><span class="n">match</span><span class="o">-</span><span class="n">files</span><span class="o">-</span><span class="n">prefix</span> <span class="n">dense</span><span class="o">/</span><span class="n">matches</span><span class="o">/</span><span class="n">run</span><span class="o">-</span><span class="n">disp</span>    \
+  <span class="o">--</span><span class="n">heights</span><span class="o">-</span><span class="n">from</span><span class="o">-</span><span class="n">dem</span> <span class="n">ctx</span><span class="o">.</span><span class="n">tif</span>                     \
+  <span class="o">--</span><span class="n">heights</span><span class="o">-</span><span class="n">from</span><span class="o">-</span><span class="n">dem</span><span class="o">-</span><span class="n">uncertainty</span> <span class="mi">10</span>              \
+  <span class="o">--</span><span class="n">heights</span><span class="o">-</span><span class="n">from</span><span class="o">-</span><span class="n">dem</span><span class="o">-</span><span class="n">robust</span><span class="o">-</span><span class="n">threshold</span> <span class="mf">1e+6</span>       \
+  <span class="o">--</span><span class="n">camera</span><span class="o">-</span><span class="n">position</span><span class="o">-</span><span class="n">uncertainty</span> <span class="mi">500</span><span class="p">,</span><span class="mi">500</span>          \
+  <span class="o">--</span><span class="n">robust</span><span class="o">-</span><span class="n">threshold</span> <span class="mf">0.5</span>                         \
+  <span class="o">--</span><span class="n">num</span><span class="o">-</span><span class="n">iterations</span> <span class="mi">50</span>                            \
+  <span class="o">--</span><span class="n">num</span><span class="o">-</span><span class="n">passes</span> <span class="mi">2</span>                                 \
+  <span class="o">--</span><span class="n">remove</span><span class="o">-</span><span class="n">outliers</span><span class="o">-</span><span class="n">params</span> <span class="s2">"75 3 100 100"</span>        \
+  <span class="o">--</span><span class="nb">min</span><span class="o">-</span><span class="n">triangulation</span><span class="o">-</span><span class="n">angle</span> <span class="mf">1e-10</span>                \
+  <span class="o">--</span><span class="n">forced</span><span class="o">-</span><span class="n">triangulation</span><span class="o">-</span><span class="n">distance</span> <span class="mi">392000</span>         \
+  <span class="o">--</span><span class="nb">max</span><span class="o">-</span><span class="n">pairwise</span><span class="o">-</span><span class="n">matches</span> <span class="mi">2000</span>                    \
+  <span class="o">-</span><span class="n">o</span> <span class="n">ba_tight_dem</span><span class="o">/</span><span class="n">run</span>
+</pre></div>
+</div>
+<p>The <code class="docutils literal notranslate"><span class="pre">--inline-adjustments</span></code> option writes each refined camera as a full camera
+file, used directly by the next stage. The <code class="docutils literal notranslate"><span class="pre">--camera-position-uncertainty</span></code>
+control keeps the poses from drifting far. The lens distortion is not solved in
+these runs and stays frozen (<a class="reference internal" href="#cassis-opt-lens-dist"><span class="std std-numref">Section 8.17.3.15</span></a>).</p>
+<p>We found that decreasing <code class="docutils literal notranslate"><span class="pre">--heights-from-dem-uncertainty</span></code> from 10 to 1, for
+example, does not make the vertical registration better globally. It introduces
+seams and local tilts.</p>
+</section>
+<section id="pairwise-stereo-and-blending">
+<span id="cassis-stereo"></span><h3><span class="section-number">8.17.3.12. </span>Pairwise stereo and blending<a class="headerlink" href="#pairwise-stereo-and-blending" title="Link to this heading">¶</a></h3>
+<p>The stereo runs on the cameras from the second bundle adjustment run. It has
+three parts: mapproject each framelet, correlate the cross-look pairs into small
+DEMs, and blend those into the frame DEM.</p>
+<p>Each framelet is first mapprojected onto the low-resolution blurred CTX DEM, with
+its refined camera, at the native image resolution (about 4.6 m/pixel). The
+correlation grid must stay native. Mapprojecting onto a coarse grid blurs the
+framelets and yields a blocky DEM:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mapproject</span>                   \
+  <span class="o">--</span><span class="n">tr</span> <span class="mf">4.59</span>                  \
+  <span class="n">mapprojDem</span><span class="o">.</span><span class="n">tif</span>             \
+  <span class="n">framelet</span><span class="o">.</span><span class="n">cub</span> <span class="n">framelet</span><span class="o">.</span><span class="n">json</span> \
+  <span class="n">framelet_map</span><span class="o">.</span><span class="n">tif</span>
+</pre></div>
+</div>
+<p>Each cross-look pair is then correlated with <a class="reference internal" href="../tools/parallel_stereo.html#parallel-stereo"><span class="std std-ref">parallel_stereo</span></a> in the
+mapprojected domain, with no further alignment, and turned into a small DEM with
+<a class="reference internal" href="../tools/point2dem.html#point2dem"><span class="std std-ref">point2dem</span></a>. The triangulation-error cap removes blunders without carving
+holes. The reference DEM used for mapprojection is passed as the last argument:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">parallel_stereo</span>                       \
+  <span class="o">--</span><span class="n">processes</span> <span class="mi">1</span>                       \
+  <span class="o">--</span><span class="n">threads</span><span class="o">-</span><span class="n">multiprocess</span> <span class="mi">2</span>            \
+  <span class="o">--</span><span class="n">threads</span><span class="o">-</span><span class="n">singleprocess</span> <span class="mi">2</span>           \
+  <span class="o">--</span><span class="n">alignment</span><span class="o">-</span><span class="n">method</span> <span class="n">none</span>             \
+  <span class="o">--</span><span class="n">stereo</span><span class="o">-</span><span class="n">algorithm</span> <span class="n">asp_mgm</span>          \
+  <span class="o">--</span><span class="n">subpixel</span><span class="o">-</span><span class="n">mode</span> <span class="mi">9</span>                   \
+  <span class="o">--</span><span class="n">corr</span><span class="o">-</span><span class="n">seed</span><span class="o">-</span><span class="n">mode</span> <span class="mi">1</span>                  \
+  <span class="o">--</span><span class="nb">min</span><span class="o">-</span><span class="n">matches</span> <span class="mi">5</span>                     \
+  <span class="o">--</span><span class="n">ip</span><span class="o">-</span><span class="n">per</span><span class="o">-</span><span class="n">tile</span> <span class="mi">2000</span>                  \
+  <span class="o">--</span><span class="n">ip</span><span class="o">-</span><span class="n">match</span><span class="o">-</span><span class="n">radius</span> <span class="mi">20</span>                \
+  <span class="o">--</span><span class="n">mapproj</span><span class="o">-</span><span class="n">geolocation</span><span class="o">-</span><span class="n">uncertainty</span> <span class="mi">0</span> \
+  <span class="n">left_map</span><span class="o">.</span><span class="n">tif</span> <span class="n">right_map</span><span class="o">.</span><span class="n">tif</span>          \
+  <span class="n">left</span><span class="o">.</span><span class="n">json</span> <span class="n">right</span><span class="o">.</span><span class="n">json</span>                \
+  <span class="n">pair</span><span class="o">/</span><span class="n">run</span> <span class="n">mapprojDem</span><span class="o">.</span><span class="n">tif</span>
+
+<span class="n">point2dem</span>                           \
+  <span class="o">--</span><span class="n">errorimage</span>                      \
+  <span class="o">--</span><span class="nb">max</span><span class="o">-</span><span class="n">valid</span><span class="o">-</span><span class="n">triangulation</span><span class="o">-</span><span class="n">error</span> <span class="mi">8</span> \
+  <span class="o">--</span><span class="n">t_srs</span> <span class="s2">"$proj"</span>                   \
+  <span class="o">--</span><span class="n">tr</span> <span class="mi">18</span>                           \
+  <span class="n">pair</span><span class="o">/</span><span class="n">run</span><span class="o">-</span><span class="n">PC</span><span class="o">.</span><span class="n">tif</span> <span class="o">-</span><span class="n">o</span> <span class="n">pair</span><span class="o">/</span><span class="n">dem</span>
+</pre></div>
+</div>
+<p>The per-pair DEMs are blended into a seamless result with <a class="reference internal" href="../tools/dem_mosaic.html#dem-mosaic"><span class="std std-ref">dem_mosaic</span></a> at
+18 m/pixel, then regridded onto the exact CTX grid. A blunder check first drops
+any per-pair DEM whose mean elevation is more than 500 m from the median:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">dem_mosaic</span> <span class="n">pair</span><span class="o">*/</span><span class="n">dem</span><span class="o">-</span><span class="n">DEM</span><span class="o">.</span><span class="n">tif</span> \
+  <span class="o">--</span><span class="n">t_srs</span> <span class="s2">"$proj"</span>            \
+  <span class="o">--</span><span class="n">tr</span> <span class="mi">18</span>                    \
+  <span class="o">-</span><span class="n">o</span> <span class="n">cassis_dem</span><span class="o">.</span><span class="n">tif</span>
+
+<span class="n">gdalwarp</span>         \
+  <span class="o">-</span><span class="n">t_srs</span> <span class="s2">"$proj"</span> \
+  <span class="o">-</span><span class="n">te</span> <span class="o">&lt;</span><span class="n">extent</span><span class="o">&gt;</span>   \
+  <span class="o">-</span><span class="n">tr</span> <span class="mi">18</span> <span class="mi">18</span>      \
+  <span class="o">-</span><span class="n">r</span> <span class="n">cubicspline</span> \
+  <span class="n">cassis_dem</span><span class="o">.</span><span class="n">tif</span> <span class="n">cassis_dem_on_ctx</span><span class="o">.</span><span class="n">tif</span>
+</pre></div>
+</div>
+<p>The <code class="docutils literal notranslate"><span class="pre">pair*</span></code> wildcard picks up the DEM from every per-pair directory. The worst
+per-pair triangulation errors are mosaicked as a diagnostic, on the same grid:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">dem_mosaic</span> <span class="o">--</span><span class="nb">max</span> <span class="n">pair</span><span class="o">*/</span><span class="n">dem</span><span class="o">-</span><span class="n">IntersectionErr</span><span class="o">.</span><span class="n">tif</span> \
+  <span class="o">--</span><span class="n">t_srs</span> <span class="s2">"$proj"</span>                              \
+  <span class="o">--</span><span class="n">tr</span> <span class="mi">18</span>                                      \
+  <span class="o">-</span><span class="n">o</span> <span class="n">max_tri_err</span><span class="o">.</span><span class="n">tif</span>
+</pre></div>
+</div>
+<p>The <code class="docutils literal notranslate"><span class="pre">gdalwarp</span></code> step is what puts the frame DEM on the exact CTX grid. Its
+<code class="docutils literal notranslate"><span class="pre">$proj</span></code> projection and <code class="docutils literal notranslate"><span class="pre">-te</span></code> extent are read from the CTX reference DEM. This
+is done for ease of comparison. The frame DEM and CTX then share one grid, so the
+evaluation (<a class="reference internal" href="#cassis-eval"><span class="std std-numref">Section 8.17.3.14</span></a>) is a direct difference with no further
+resampling.</p>
+</section>
+<section id="optional-refinement">
+<span id="cassis-refine"></span><h3><span class="section-number">8.17.3.13. </span>Optional refinement<a class="headerlink" href="#optional-refinement" title="Link to this heading">¶</a></h3>
+<p>The whole sequence, bundle adjustment through stereo, can be run a second time,
+with the current results as the inputs. The motivation is that we now have a
+well-registered stereo DEM and cameras, rather than the approximations produced
+with the linescan cameras. These can provide better GCP to fix any remaining
+issues.</p>
+<p>We found additional payoff from this refinement only for the Oxia Planum 1 DEM
+example (<a class="reference internal" href="#cassis-vendor"><span class="std std-numref">Section 8.17.1</span></a>). The results higher up this page do not use
+it.</p>
+</section>
+<section id="evaluation">
+<span id="cassis-eval"></span><h3><span class="section-number">8.17.3.14. </span>Evaluation<a class="headerlink" href="#evaluation" title="Link to this heading">¶</a></h3>
+<p>The final DEM is compared to CTX in two ways.</p>
+<p>The vertical difference is a direct <a class="reference internal" href="../tools/geodiff.html#geodiff"><span class="std std-ref">geodiff</span></a>, as the two are already on
+the same grid (<a class="reference internal" href="#cassis-stereo"><span class="std std-numref">Section 8.17.3.12</span></a>):</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">geodiff</span> <span class="n">cassis_dem_on_ctx</span><span class="o">.</span><span class="n">tif</span> <span class="n">ctx</span><span class="o">.</span><span class="n">tif</span> <span class="o">-</span><span class="n">o</span> <span class="n">dz</span>
+</pre></div>
+</div>
+<p>The horizontal registration is measured by correlating the two hillshades. Both
+DEMs are hillshaded, correlated with <a class="reference internal" href="../tools/parallel_stereo.html#parallel-stereo"><span class="std std-ref">parallel_stereo</span></a> in
+<a class="reference internal" href="../tools/correlator.html#correlator-mode"><span class="std std-ref">Image correlator</span></a>, and the raw disparity is written with
+<a class="reference internal" href="../tools/disparitydebug.html#disparitydebug"><span class="std std-ref">disparitydebug</span></a>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">gdaldem</span> <span class="n">hillshade</span>   \
+  <span class="o">-</span><span class="n">multidirectional</span> \
+  <span class="o">-</span><span class="n">compute_edges</span>    \
+  <span class="n">cassis_dem_on_ctx</span><span class="o">.</span><span class="n">tif</span> <span class="n">cassis_hill</span><span class="o">.</span><span class="n">tif</span>
+
+<span class="n">gdaldem</span> <span class="n">hillshade</span>   \
+  <span class="o">-</span><span class="n">multidirectional</span> \
+  <span class="o">-</span><span class="n">compute_edges</span>    \
+  <span class="n">ctx</span><span class="o">.</span><span class="n">tif</span> <span class="n">ctx_hill</span><span class="o">.</span><span class="n">tif</span>
+
+<span class="n">parallel_stereo</span>                      \
+  <span class="o">--</span><span class="n">correlator</span><span class="o">-</span><span class="n">mode</span>                  \
+  <span class="o">--</span><span class="n">stereo</span><span class="o">-</span><span class="n">algorithm</span> <span class="n">asp_mgm</span>         \
+  <span class="o">--</span><span class="n">corr</span><span class="o">-</span><span class="n">kernel</span> <span class="mi">9</span> <span class="mi">9</span>                  \
+  <span class="o">--</span><span class="n">ip</span><span class="o">-</span><span class="n">per</span><span class="o">-</span><span class="n">image</span> <span class="mi">40000</span>               \
+  <span class="o">--</span><span class="n">subpixel</span><span class="o">-</span><span class="n">mode</span> <span class="mi">9</span>                  \
+  <span class="o">--</span><span class="n">corr</span><span class="o">-</span><span class="n">search</span> <span class="o">-</span><span class="mi">25</span> <span class="o">-</span><span class="mi">25</span> <span class="mi">25</span> <span class="mi">25</span>        \
+  <span class="o">--</span><span class="n">processes</span> <span class="mi">8</span>                      \
+  <span class="o">--</span><span class="n">num</span><span class="o">-</span><span class="n">matches</span><span class="o">-</span><span class="n">from</span><span class="o">-</span><span class="n">disparity</span> <span class="mi">40000</span> \
+  <span class="n">cassis_hill</span><span class="o">.</span><span class="n">tif</span> <span class="n">ctx_hill</span><span class="o">.</span><span class="n">tif</span> <span class="n">run</span>
+
+<span class="n">disparitydebug</span> <span class="o">--</span><span class="n">raw</span> <span class="n">run</span><span class="o">-</span><span class="n">F</span><span class="o">.</span><span class="n">tif</span> <span class="o">--</span><span class="n">output</span><span class="o">-</span><span class="n">prefix</span> <span class="n">run</span><span class="o">-</span><span class="n">F</span>
+</pre></div>
+</div>
+<p>A correlation search range of 25 pixels is enough here, given the small
+misregistration expected between the two hillshades.</p>
+<p>The two bands <code class="docutils literal notranslate"><span class="pre">run-F-H.tif</span></code> and <code class="docutils literal notranslate"><span class="pre">run-F-V.tif</span></code> are the across-track and
+along-track disparity (<a class="reference internal" href="../tools/disparitydebug.html#raw-disp"><span class="std std-numref">Section 16.24.2</span></a>). A good result has a near-zero median
+vertical difference, a small robust spread (under 6 meters), and a sub-pixel
+disparity median and NMAD in each band at 18 m/pixel, with no systematic shifts.</p>
+<p>Analyze these raw bands, not <code class="docutils literal notranslate"><span class="pre">run-F.tif</span></code> directly. Its third band is a validity
+mask that plain statistics tools ignore, which would let invalid pixels pollute
+the numbers. It is strongly suggested not to rely on statistics alone, but to
+inspect the vertical difference map and the colorized disparity bands.</p>
+</section>
+<section id="solving-for-lens-distortion">
+<span id="cassis-opt-lens-dist"></span><h3><span class="section-number">8.17.3.15. </span>Solving for lens distortion<a class="headerlink" href="#solving-for-lens-distortion" title="Link to this heading">¶</a></h3>
+<p>The workflow above treats the lens distortion as solved once, ahead of time,
+then fixed. It is suggested to run this pipeline with the provided optimized
+distortion.</p>
+<p>To optimize the distortion, starting with the values that are published in the
+ESA Planetary Science Archive, which ASP converts to the transverse distortion
+model in CSM, run the same two bundle adjustment commands from the workflow not
+per site, but jointly, across the three sites (Jezero, Oxia Planum 1, and Oxia
+Planum 2), with distortion solving enabled via <code class="docutils literal notranslate"><span class="pre">--solve-intrinsics</span></code> and
+<code class="docutils literal notranslate"><span class="pre">--intrinsics-to-float</span> <span class="pre">other_intrinsics</span></code>.</p>
+<p>This uses the option <code class="docutils literal notranslate"><span class="pre">--heights-from-dem-list</span></code> in <a class="reference internal" href="../tools/bundle_adjust.html#bundle-adjust"><span class="std std-ref">bundle_adjust</span></a>
+(added in the ASP build of 2026/7, <a class="reference internal" href="../installation.html#release"><span class="std std-numref">Section 2.1</span></a>), which passes a
+per-site list of reference DEMs. The three sites are widely spaced across Mars,
+so a single merged DEM is not feasible.</p>
+<p>The resulting lens distortion was then refined as in <a class="reference internal" href="#cassis-refine"><span class="std std-numref">Section 8.17.3.13</span></a>, so
+this joint optimization process was repeated with the current lens distortion as
+input. Validation on the other two sites showed it was good enough.</p>
+<p>Note that the provided lens distortion implicitly tilts the camera poses, which
+is compensated for by adjusting the camera pose when this distortion is applied
+(<a class="reference internal" href="#cassis-refit"><span class="std std-numref">Section 8.17.3.10</span></a>). Presumably a tighter constraint on the camera position
+could be used to rederive this optimized distortion while minimizing the tilt.</p>
+</section>
+<section id="joint-ctx-and-cassis-jitter-solving">
+<span id="cassis-jitter"></span><h3><span class="section-number">8.17.3.16. </span>Joint CTX and CaSSIS jitter solving<a class="headerlink" href="#joint-ctx-and-cassis-jitter-solving" title="Link to this heading">¶</a></h3>
+<p>The earlier examples showed how to constrain the CaSSIS cameras against a prior CTX
+DEM. This section handles the advanced topic of pixel-level matching between CTX
+and CaSSIS images, followed by co-optimization. This only works if the two sets
+of data have similar illumination. It reduces the jitter that is usually present
+in CTX images. The scripts that reproduce this workflow are in the <a class="reference external" href="https://github.com/NeoGeographyToolkit/CassisPipeline#joint-ctx-and-cassis-jitter-solving">CaSSIS pipeline</a>.</p>
+<p>CTX is acquired in the early afternoon. At this site that gives a ground solar
+azimuth of about 282 to 284 degrees and an incidence of about 49 degrees, as
+reported by the ISIS <code class="docutils literal notranslate"><span class="pre">caminfo</span></code> and <code class="docutils literal notranslate"><span class="pre">campt</span></code> tools. CaSSIS images are recorded
+at various times during the day. Here we work with an image set that was
+acquired about ten years later, in a different Mars season, but also in the
+afternoon, so its ground solar azimuth is close, about 285 degrees. The shadows
+fall in a similar direction, which is what lets image matching succeed.</p>
+<p>CTX images are acquired with a linescan sensor, which can have a few meters of
+undulation due to jitter. The tool <a class="reference internal" href="../tools/jitter_solve.html#jitter-solve"><span class="std std-ref">jitter_solve</span></a> can take as input both
+linescan and frame cameras, and it can jointly refine the CTX linescan pose
+samples along the track and the CaSSIS frame camera poses
+(<a class="reference internal" href="../tools/jitter_solve.html#jitter-linescan-frame-cam"><span class="std std-numref">Section 16.39.14</span></a>).</p>
+<p>This example uses the Oxia Planum CaSSIS observation <code class="docutils literal notranslate"><span class="pre">MY34_004172_162</span></code>
+(<a class="reference internal" href="#cassis-ox2-geodiff"><span class="std std-numref">Fig. 8.51</span></a>) and the contemporaneous CTX stereo pair
+<code class="docutils literal notranslate"><span class="pre">B01_009880_1977_XN_17N024W</span></code> and <code class="docutils literal notranslate"><span class="pre">P22_009735_1977_XN_17N024W</span></code>, whose
+convergence angle is about 16 degrees. It leverages the blended reference CTX
+DEM from <a class="reference internal" href="#cassis-ctx-ref"><span class="std std-numref">Section 8.17.3.4</span></a>. When such a reference is not available, one
+is built by collecting a few CTX stereo pairs, bundle-adjusting them together,
+running pairwise stereo, blending the DEMs, and aligning the blend to a global
+reference such as HRSC or MOLA (<a class="reference internal" href="#cassis-ctx-ref"><span class="std std-numref">Section 8.17.3.4</span></a>), followed by aligning
+the cameras to the same reference (<a class="reference internal" href="../tools/pc_align.html#ba-pc-align"><span class="std std-numref">Section 16.53.14</span></a>).</p>
+<p>Ingest each CTX image to an ISIS cube and a CSM linescan camera, following the
+CTX recipe (<a class="reference internal" href="ctx.html#ctx-example"><span class="std std-numref">Section 8.3</span></a>). That includes the radiometric calibration
+step <code class="docutils literal notranslate"><span class="pre">ctxcal</span></code>, run after <code class="docutils literal notranslate"><span class="pre">spiceinit</span></code>. It flattens the vignette that darkens
+one side of a raw CTX image, which otherwise weakens the cross-sensor matching.</p>
+<p>Bundle-adjust the pair, run stereo with local epipolar alignment, and make a
+DEM:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">bundle_adjust</span>                  \
+  <span class="n">ctx_left</span><span class="o">.</span><span class="n">cub</span> <span class="n">ctx_right</span><span class="o">.</span><span class="n">cub</span>   \
+  <span class="n">ctx_left</span><span class="o">.</span><span class="n">json</span> <span class="n">ctx_right</span><span class="o">.</span><span class="n">json</span> \
+  <span class="o">-</span><span class="n">o</span> <span class="n">ba</span><span class="o">/</span><span class="n">run</span>
+
+<span class="n">parallel_stereo</span>                        \
+  <span class="o">--</span><span class="n">stereo</span><span class="o">-</span><span class="n">algorithm</span> <span class="n">asp_mgm</span>           \
+  <span class="o">--</span><span class="n">alignment</span><span class="o">-</span><span class="n">method</span> <span class="n">local_epipolar</span>    \
+  <span class="n">ctx_left</span><span class="o">.</span><span class="n">cub</span> <span class="n">ctx_right</span><span class="o">.</span><span class="n">cub</span>           \
+  <span class="n">ba</span><span class="o">/</span><span class="n">run</span><span class="o">-</span><span class="n">ctx_left</span><span class="o">.</span><span class="n">adjusted_state</span><span class="o">.</span><span class="n">json</span>  \
+  <span class="n">ba</span><span class="o">/</span><span class="n">run</span><span class="o">-</span><span class="n">ctx_right</span><span class="o">.</span><span class="n">adjusted_state</span><span class="o">.</span><span class="n">json</span> \
+  <span class="n">stereo</span><span class="o">/</span><span class="n">run</span>
+
+<span class="n">point2dem</span> <span class="o">--</span><span class="n">errorimage</span> <span class="n">stereo</span><span class="o">/</span><span class="n">run</span><span class="o">-</span><span class="n">PC</span><span class="o">.</span><span class="n">tif</span> <span class="o">-</span><span class="n">o</span> <span class="n">stereo</span><span class="o">/</span><span class="n">ctx</span>
+</pre></div>
+</div>
+<p>Aligning this rough single-pair CTX DEM to the smooth reference was remarkably
+tricky. It has a large horizontal offset from the reference, on the order of 18
+km, inherited from the uncontrolled camera poses, and its surface carries fine
+along-track corrugation from the correlator. A single alignment step, whether a sparse
+hillshade interest-point match or a dense point-cloud match, failed on this
+low-texture terrain.</p>
+<p>What worked was a two-stage alignment. First, coarsen both DEMs by a factor of
+four, from 18 to 72 meters per pixel, with <code class="docutils literal notranslate"><span class="pre">gdalwarp</span> <span class="pre">-r</span> <span class="pre">average</span></code>. The
+averaging removes the corrugation and leaves the large craters, which match
+robustly. Then a single <a class="reference internal" href="../tools/pc_align.html#pc-align"><span class="std std-ref">pc_align</span></a> aligns the coarse pair. The
+<code class="docutils literal notranslate"><span class="pre">--initial-transform-from-hillshading</span></code> option finds a rigid transform from the
+hillshade interest points, then, because the iteration count is nonzero, refines
+it with point-to-plane ICP in the same run. The ICP recovers the rotation:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">gdalwarp</span> <span class="o">-</span><span class="n">r</span> <span class="n">average</span> <span class="o">-</span><span class="n">tr</span> <span class="mi">72</span> <span class="mi">72</span> <span class="n">stereo</span><span class="o">/</span><span class="n">ctx</span><span class="o">-</span><span class="n">DEM</span><span class="o">.</span><span class="n">tif</span> <span class="n">ctx_72</span><span class="o">.</span><span class="n">tif</span>
+<span class="n">gdalwarp</span> <span class="o">-</span><span class="n">r</span> <span class="n">average</span> <span class="o">-</span><span class="n">tr</span> <span class="mi">72</span> <span class="mi">72</span> <span class="n">ctx_ref</span><span class="o">.</span><span class="n">tif</span>        <span class="n">ref_72</span><span class="o">.</span><span class="n">tif</span>
+
+<span class="n">pc_align</span>                                     \
+  <span class="o">--</span><span class="n">initial</span><span class="o">-</span><span class="n">transform</span><span class="o">-</span><span class="n">from</span><span class="o">-</span><span class="n">hillshading</span> <span class="n">rigid</span> \
+  <span class="o">--</span><span class="nb">max</span><span class="o">-</span><span class="n">displacement</span> <span class="mi">300</span>                     \
+  <span class="o">--</span><span class="n">num</span><span class="o">-</span><span class="n">iterations</span> <span class="mi">2000</span>                      \
+  <span class="o">--</span><span class="n">save</span><span class="o">-</span><span class="n">transformed</span><span class="o">-</span><span class="n">source</span><span class="o">-</span><span class="n">points</span>           \
+  <span class="n">ref_72</span><span class="o">.</span><span class="n">tif</span> <span class="n">ctx_72</span><span class="o">.</span><span class="n">tif</span>                      \
+  <span class="o">-</span><span class="n">o</span> <span class="n">align</span><span class="o">/</span><span class="n">run</span>
+</pre></div>
+</div>
+<p>The resulting transformed source cloud should be gridded with <code class="docutils literal notranslate"><span class="pre">point2dem</span></code> and
+inspected to ensure it is on top of the reference cloud. This step still remains
+rather fragile. On occasion it is better to just set the number of iterations to 0,
+to stop at the transform as produced by hillshading only. Here, however, ICP
+did improve the alignment.</p>
+<p>The rigid transform is independent of the grid it was estimated on, so it applies
+directly to the native-resolution cameras (<a class="reference internal" href="../tools/pc_align.html#ba-pc-align"><span class="std std-numref">Section 16.53.14</span></a>):</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">bundle_adjust</span>                                 \
+  <span class="n">ctx_left</span><span class="o">.</span><span class="n">cub</span> <span class="n">ctx_right</span><span class="o">.</span><span class="n">cub</span>                  \
+  <span class="n">ba</span><span class="o">/</span><span class="n">run</span><span class="o">-</span><span class="n">ctx_left</span><span class="o">.</span><span class="n">adjusted_state</span><span class="o">.</span><span class="n">json</span>         \
+  <span class="n">ba</span><span class="o">/</span><span class="n">run</span><span class="o">-</span><span class="n">ctx_right</span><span class="o">.</span><span class="n">adjusted_state</span><span class="o">.</span><span class="n">json</span>        \
+  <span class="o">--</span><span class="n">initial</span><span class="o">-</span><span class="n">transform</span> <span class="n">align</span><span class="o">/</span><span class="n">run</span><span class="o">-</span><span class="n">transform</span><span class="o">.</span><span class="n">txt</span> \
+  <span class="o">--</span><span class="n">apply</span><span class="o">-</span><span class="n">initial</span><span class="o">-</span><span class="n">transform</span><span class="o">-</span><span class="n">only</span>              \
+  <span class="o">-</span><span class="n">o</span> <span class="n">align</span><span class="o">/</span><span class="n">run</span>
+</pre></div>
+</div>
+<p>Next, mapproject the two CTX images and all 60 CaSSIS framelets onto the
+low-resolution blurred reference CTX DEM, at the native CaSSIS resolution of
+4.59 meters per pixel. The CTX native resolution, about 6 meters, is comparable,
+but for the interest-point matching that follows, having all the mapprojected
+images at the same resolution is better.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mapproject</span> <span class="o">--</span><span class="n">tr</span> <span class="mf">4.59</span> <span class="n">ctx_ref_blur</span><span class="o">.</span><span class="n">tif</span>                 \
+  <span class="n">ctx_left</span><span class="o">.</span><span class="n">cub</span> <span class="n">align</span><span class="o">/</span><span class="n">run</span><span class="o">-</span><span class="n">ctx_left</span><span class="o">.</span><span class="n">adjusted_state</span><span class="o">.</span><span class="n">json</span> \
+  <span class="n">ctx_left</span><span class="o">.</span><span class="n">map</span><span class="o">.</span><span class="n">tif</span>
+</pre></div>
+</div>
+<p>Do likewise for the right CTX image and each CaSSIS framelet, each with its own
+camera.</p>
+<p>Collect the aligned CTX cameras and the CaSSIS frame cameras into an image list
+and a camera list, in the same order, with a matching list of the mapprojected
+images. The three lists must be one-to-one. Match them using the mapprojected
+inputs (<a class="reference internal" href="../bundle_adjustment.html#mapip"><span class="std std-numref">Section 12.2.4.3</span></a>):</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">parallel_bundle_adjust</span>                    \
+  <span class="o">--</span><span class="n">image</span><span class="o">-</span><span class="nb">list</span> <span class="n">images</span><span class="o">.</span><span class="n">txt</span>                 \
+  <span class="o">--</span><span class="n">camera</span><span class="o">-</span><span class="nb">list</span> <span class="n">cameras</span><span class="o">.</span><span class="n">txt</span>               \
+  <span class="o">--</span><span class="n">mapprojected</span><span class="o">-</span><span class="n">data</span><span class="o">-</span><span class="nb">list</span> <span class="n">mapproj</span><span class="o">.</span><span class="n">txt</span>    \
+  <span class="o">--</span><span class="n">ip</span><span class="o">-</span><span class="n">detect</span><span class="o">-</span><span class="n">method</span> <span class="mi">0</span>                    \
+  <span class="o">--</span><span class="n">individually</span><span class="o">-</span><span class="n">normalize</span>                \
+  <span class="o">--</span><span class="n">ip</span><span class="o">-</span><span class="n">per</span><span class="o">-</span><span class="n">tile</span> <span class="mi">2000</span>                      \
+  <span class="o">--</span><span class="n">matches</span><span class="o">-</span><span class="n">per</span><span class="o">-</span><span class="n">tile</span> <span class="mi">500</span>                  \
+  <span class="o">--</span><span class="n">ip</span><span class="o">-</span><span class="n">match</span><span class="o">-</span><span class="n">radius</span> <span class="mi">20</span>                    \
+  <span class="o">--</span><span class="n">remove</span><span class="o">-</span><span class="n">outliers</span><span class="o">-</span><span class="n">params</span> <span class="s1">'75 3 100 100'</span> \
+  <span class="o">--</span><span class="n">heights</span><span class="o">-</span><span class="n">from</span><span class="o">-</span><span class="n">dem</span> <span class="n">ctx_ref</span><span class="o">.</span><span class="n">tif</span>          \
+  <span class="o">--</span><span class="n">heights</span><span class="o">-</span><span class="n">from</span><span class="o">-</span><span class="n">dem</span><span class="o">-</span><span class="n">uncertainty</span> <span class="mi">10</span>       \
+  <span class="o">--</span><span class="n">camera</span><span class="o">-</span><span class="n">position</span><span class="o">-</span><span class="n">uncertainty</span> <span class="mi">100</span><span class="p">,</span><span class="mi">100</span>   \
+  <span class="o">--</span><span class="nb">min</span><span class="o">-</span><span class="n">triangulation</span><span class="o">-</span><span class="n">angle</span> <span class="mf">1e-10</span>         \
+  <span class="o">--</span><span class="n">forced</span><span class="o">-</span><span class="n">triangulation</span><span class="o">-</span><span class="n">distance</span> <span class="mi">392000</span>  \
+  <span class="o">--</span><span class="n">num</span><span class="o">-</span><span class="n">passes</span> <span class="mi">2</span>                          \
+  <span class="o">--</span><span class="n">num</span><span class="o">-</span><span class="n">iterations</span> <span class="mi">100</span>                    \
+  <span class="o">-</span><span class="n">o</span> <span class="n">ba_joint</span><span class="o">/</span><span class="n">run</span>
+</pre></div>
+</div>
+<p>It is important to check that the cross-sensor matching actually succeeded, and to
+give the camera solve enough iterations to converge. Here all 120 CTX-to-CaSSIS
+framelet pairs matched, with about 17,900 clean points, at a sub-pixel reprojection
+error. With too few iterations the solve does not converge, the cross-sensor ties
+do not tighten, and they get discarded as outliers. The matches land on craters
+shared between the two sensors (<a class="reference internal" href="#cassis-ox2-jitter-matches"><span class="std std-numref">Fig. 8.59</span></a>).</p>
+<p>The option <code class="docutils literal notranslate"><span class="pre">--ip-match-radius</span> <span class="pre">20</span></code> removes long-range false matches in
+mapprojected images.</p>
+<p>The options <code class="docutils literal notranslate"><span class="pre">--min-triangulation-angle</span> <span class="pre">1e-10</span></code> and
+<code class="docutils literal notranslate"><span class="pre">--forced-triangulation-distance</span> <span class="pre">392000</span></code> (about the spacecraft altitude, in
+meters) help with keeping the matches between successive framelets, which have a
+very narrow convergence. angle.</p>
+<p>The default detector, <code class="docutils literal notranslate"><span class="pre">--ip-detect-method</span> <span class="pre">0</span></code> worked better than SIFT and
+AKAZE.</p>
+<p>It is advised to prefer dense matches between the Cassis images to the ones
+created this way, as those are higher quality. So the dense matches can be
+copied over the clean sparse matches made as here. The clean matches between
+CaSSIS and CTX images, and the ones between CTX images, will stay sparse.</p>
+<figure class="align-default" id="cassis-ox2-jitter-matches">
+<img alt="Clean CTX to CaSSIS interest-point matches" src="../_images/cassis_ox2_jitter_matches.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 8.59 </span><span class="caption-text">Clean interest-point matches (red) between one full raw CaSSIS framelet (top)
+and the raw CTX image over the same ground extent (bottom). The similar
+afternoon illumination lets the pixel-level cross-sensor matching succeed.
+The two images are mirror-flips of each other, which did not prevent matching
+as it was done with mapprojected versions of these.</span><a class="headerlink" href="#cassis-ox2-jitter-matches" title="Link to this image">¶</a></p>
+</figcaption>
+</figure>
+<p>Run the joint jitter solve on the same image and camera lists, tied by the clean
+matches from the bundle adjustment. The cross-sensor matches begin with a large
+reprojection error, since that misregistration is what is being solved for, so
+raise <code class="docutils literal notranslate"><span class="pre">--max-initial-reprojection-error</span></code> to keep them. Constrain the solve to
+the jitter-free reference with <code class="docutils literal notranslate"><span class="pre">--heights-from-dem</span></code> and an anchor DEM
+(<a class="reference internal" href="../tools/jitter_solve.html#jitter-dem-constraint"><span class="std std-numref">Section 16.39.2.2</span></a>, <a class="reference internal" href="../tools/jitter_solve.html#jitter-anchor-points"><span class="std std-numref">Section 16.39.6</span></a>).</p>
+<p>Here it was important to keep <code class="docutils literal notranslate"><span class="pre">--anchor-dem-uncertainty</span></code> rather tight, at 25
+m. Otherwise the optimization of poses was too aggressive and the pose sequence
+became unstable.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">jitter_solve</span>                              \
+  <span class="o">--</span><span class="n">image</span><span class="o">-</span><span class="nb">list</span> <span class="n">images</span><span class="o">.</span><span class="n">txt</span>                 \
+  <span class="o">--</span><span class="n">camera</span><span class="o">-</span><span class="nb">list</span> <span class="n">cameras</span><span class="o">.</span><span class="n">txt</span>               \
+  <span class="o">--</span><span class="n">clean</span><span class="o">-</span><span class="n">match</span><span class="o">-</span><span class="n">files</span><span class="o">-</span><span class="n">prefix</span> <span class="n">ba_joint</span><span class="o">/</span><span class="n">run</span> \
+  <span class="o">--</span><span class="n">heights</span><span class="o">-</span><span class="n">from</span><span class="o">-</span><span class="n">dem</span> <span class="n">ctx_ref</span><span class="o">.</span><span class="n">tif</span>          \
+  <span class="o">--</span><span class="n">heights</span><span class="o">-</span><span class="n">from</span><span class="o">-</span><span class="n">dem</span><span class="o">-</span><span class="n">uncertainty</span> <span class="mi">10</span>       \
+  <span class="o">--</span><span class="n">anchor</span><span class="o">-</span><span class="n">dem</span> <span class="n">ctx_ref</span><span class="o">.</span><span class="n">tif</span>                \
+  <span class="o">--</span><span class="n">anchor</span><span class="o">-</span><span class="n">dem</span><span class="o">-</span><span class="n">uncertainty</span> <span class="mi">25</span>             \
+  <span class="o">--</span><span class="n">num</span><span class="o">-</span><span class="n">anchor</span><span class="o">-</span><span class="n">points</span><span class="o">-</span><span class="n">per</span><span class="o">-</span><span class="n">tile</span> <span class="mi">50</span>         \
+  <span class="o">--</span><span class="n">camera</span><span class="o">-</span><span class="n">position</span><span class="o">-</span><span class="n">uncertainty</span> <span class="mi">100</span><span class="p">,</span><span class="mi">100</span>   \
+  <span class="o">--</span><span class="n">num</span><span class="o">-</span><span class="n">lines</span><span class="o">-</span><span class="n">per</span><span class="o">-</span><span class="n">position</span> <span class="mi">1000</span>           \
+  <span class="o">--</span><span class="n">num</span><span class="o">-</span><span class="n">lines</span><span class="o">-</span><span class="n">per</span><span class="o">-</span><span class="n">orientation</span> <span class="mi">250</span>         \
+  <span class="o">--</span><span class="nb">min</span><span class="o">-</span><span class="n">triangulation</span><span class="o">-</span><span class="n">angle</span> <span class="mf">1e-10</span>         \
+  <span class="o">--</span><span class="n">forced</span><span class="o">-</span><span class="n">triangulation</span><span class="o">-</span><span class="n">distance</span> <span class="mi">392000</span>  \
+  <span class="o">--</span><span class="nb">max</span><span class="o">-</span><span class="n">initial</span><span class="o">-</span><span class="n">reprojection</span><span class="o">-</span><span class="n">error</span> <span class="mi">500</span>    \
+  <span class="o">--</span><span class="n">robust</span><span class="o">-</span><span class="n">threshold</span> <span class="mf">0.5</span>                  \
+  <span class="o">--</span><span class="n">num</span><span class="o">-</span><span class="n">passes</span> <span class="mi">2</span>                          \
+  <span class="o">--</span><span class="n">num</span><span class="o">-</span><span class="n">iterations</span> <span class="mi">50</span>                     \
+  <span class="o">-</span><span class="n">o</span> <span class="n">jitter</span><span class="o">/</span><span class="n">run</span>
+</pre></div>
+</div>
+<p>The goal is the CTX, so look at the two de-jittered surfaces side by side, then
+at the CTX differences (<a class="reference internal" href="#cassis-ox2-jitter-hillshade"><span class="std std-numref">Fig. 8.60</span></a>).</p>
+<figure class="align-default" id="cassis-ox2-jitter-hillshade">
+<img alt="de-jittered CTX and CaSSIS hillshades" src="../_images/cassis_ox2_jitter_hillshade.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 8.60 </span><span class="caption-text">Hillshades of the de-jittered CTX DEM (left) and the CaSSIS DEM (right), both
+cropped to the CaSSIS footprint.</span><a class="headerlink" href="#cassis-ox2-jitter-hillshade" title="Link to this image">¶</a></p>
+</figcaption>
+</figure>
+<p>Difference the CTX against the reference, before and after the solve
+(<a class="reference internal" href="#cassis-ox2-jitter-geodiff"><span class="std std-numref">Fig. 8.61</span></a>). Before, the jitter shows as an along-track
+banding, with a median of 0.1 m and an NMAD of 5.1 m. After, the banding is gone,
+with a median of -0.5 m and an NMAD of 1.9 m. The residual is the single-pair CTX
+roughness, not jitter, and no smoother than a single CTX pair can be. Correcting
+the rotation before the solve is what makes the improvement this large; with a
+residual rotation the after value was about 7 m.</p>
+<figure class="align-default" id="cassis-ox2-jitter-geodiff">
+<img alt="CTX minus reference DEM, before and after the joint jitter solve" src="../_images/cassis_ox2_jitter_geodiff.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 8.61 </span><span class="caption-text">CTX minus reference DEM, in meters, before (left) and after (right) the joint
+jitter solve. The along-track jitter banding, clear on the left with an NMAD of
+5.1 m, is removed on the right, NMAD 1.9 m.</span><a class="headerlink" href="#cassis-ox2-jitter-geodiff" title="Link to this image">¶</a></p>
+</figcaption>
+</figure>
+<p>The same holds against the CaSSIS DEM, over the smaller CaSSIS footprint
+(<a class="reference internal" href="#cassis-ox2-jitter-ctxcassis"><span class="std std-numref">Fig. 8.62</span></a>). The CTX minus CaSSIS difference tightens
+from a median of 0.4 m and an NMAD of 4.3 m to a median of -0.5 m and an NMAD of
+1.9 m.</p>
+<figure class="align-default" id="cassis-ox2-jitter-ctxcassis">
+<img alt="CTX minus CaSSIS DEM, before and after the joint jitter solve" src="../_images/cassis_ox2_jitter_ctxcassis.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 8.62 </span><span class="caption-text">CTX minus CaSSIS DEM, in meters, before (left) and after (right) the joint
+jitter solve, over the CaSSIS footprint.</span><a class="headerlink" href="#cassis-ox2-jitter-ctxcassis" title="Link to this image">¶</a></p>
+</figcaption>
+</figure>
+<p>The de-jittered CTX and the CaSSIS DEM register to each other at the sub-pixel
+level. This is measured by correlating their hillshades in <a class="reference internal" href="../tools/correlator.html#correlator-mode"><span class="std std-ref">Image correlator</span></a>
+and reading the raw disparity with <a class="reference internal" href="../tools/disparitydebug.html#disparitydebug"><span class="std std-ref">disparitydebug</span></a>, as in
+<a class="reference internal" href="#cassis-stereo"><span class="std std-numref">Section 8.17.3.12</span></a> (<a class="reference internal" href="#cassis-ox2-jitter-dd"><span class="std std-numref">Fig. 8.63</span></a>).</p>
+<figure class="align-default" id="cassis-ox2-jitter-dd">
+<img alt="CaSSIS to de-jittered CTX registration, disparity" src="../_images/cassis_ox2_jitter_dd.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 8.63 </span><span class="caption-text">Registration of the CaSSIS DEM to the de-jittered CTX, in pixels at 18 m/pixel.
+Left: horizontal disparity, mean 0.4 px and NMAD 0.9 px. Right: vertical
+disparity, mean -0.2 px and NMAD 0.8 px.</span><a class="headerlink" href="#cassis-ox2-jitter-dd" title="Link to this image">¶</a></p>
+</figcaption>
+</figure>
+<p>After the solve, mapproject the CaSSIS framelets at the native resolution onto the
+smooth CTX DEM as usual (<a class="reference internal" href="#cassis-stereo"><span class="std std-numref">Section 8.17.3.12</span></a>), redo stereo, and make the DEM.
+The joint solve de-jitters the CTX linescan over the area of interest. The CaSSIS
+DEM stays essentially unchanged relative to the reference, its agreement moving
+from an NMAD of 0.96 m to 0.97 m (<a class="reference internal" href="#cassis-ox2-geodiff"><span class="std std-numref">Fig. 8.51</span></a>). The CaSSIS
+residual is the geometry of the individual frame cameras, which have no
+along-track jitter degree of freedom, so a joint jitter solve does not reduce it.</p>
+</section>
+</section>
+</section>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="../index.html">Ames Stereo Pipeline</a></h1>
+
+
+
+
+
+
+
+
+
+<search id="searchbox" style="display: none" role="search">
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" placeholder="Search"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script><h3>Navigation</h3>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../introduction.html">1. Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../installation.html">2. Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorial.html">3. How ASP works</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorial.html#tutorial-processing-planetary-data-non-earth">4. Tutorial: Processing planetary data (non-Earth)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorial.html#tutorial-processing-earth-images">5. Tutorial: Processing Earth images</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../next_steps.html">6. The next steps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tips_tricks.html">7. Tips and tricks</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../examples.html">8. Stereo processing examples</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="stereo_pairs.html">8.1. Guidelines for selecting stereo pairs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="hirise.html">8.2. Mars Reconnaissance Orbiter HiRISE</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ctx.html">8.3. Mars Reconnaissance Orbiter CTX</a></li>
+<li class="toctree-l2"><a class="reference internal" href="moc.html">8.4. Mars Global Surveyor MOC-NA</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mer.html">8.5. Mars Exploration Rovers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="k10.html">8.6. K10</a></li>
+<li class="toctree-l2"><a class="reference internal" href="lronac.html">8.7. Lunar Reconnaissance Orbiter (LRO) NAC</a></li>
+<li class="toctree-l2"><a class="reference internal" href="change3.html">8.8. Chang’e 3 landing camera</a></li>
+<li class="toctree-l2"><a class="reference internal" href="apollo15.html">8.9. Apollo 15 Metric Camera images</a></li>
+<li class="toctree-l2"><a class="reference internal" href="hrsc.html">8.10. Mars Express High Resolution Stereo Camera (HRSC)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cassini.html">8.11. Cassini ISS NAC</a></li>
+<li class="toctree-l2"><a class="reference internal" href="csm.html">8.12. Community Sensor Model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dawn.html">8.13. Dawn (FC) Framing Camera</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kaguya.html">8.14. Kaguya Terrain Camera</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chandrayaan2.html">8.15. Chandrayaan-2 lunar orbiter</a></li>
+<li class="toctree-l2"><a class="reference internal" href="shadowcam.html">8.16. KPLO ShadowCam</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">8.17. TGO CaSSIS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="viking.html">8.18. Viking Orbiter</a></li>
+<li class="toctree-l2"><a class="reference internal" href="clementine.html">8.19. Clementine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="junocam.html">8.20. JunoCam</a></li>
+<li class="toctree-l2"><a class="reference internal" href="isis_minirf.html">8.21. LRO Mini-RF using ISIS camera models</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pbs_slurm.html">8.22. Using PBS and SLURM</a></li>
+<li class="toctree-l2"><a class="reference internal" href="aster.html">8.23. ASTER</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dg.html">8.24. DigitalGlobe</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rpc.html">8.25. RPC camera models</a></li>
+<li class="toctree-l2"><a class="reference internal" href="perusat1.html">8.26. PeruSat-1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pleiades.html">8.27. Pleiades</a></li>
+<li class="toctree-l2"><a class="reference internal" href="spot14.html">8.28. SPOT 1-4</a></li>
+<li class="toctree-l2"><a class="reference internal" href="spot5.html">8.29. SPOT5</a></li>
+<li class="toctree-l2"><a class="reference internal" href="spot67.html">8.30. SPOT 6/7</a></li>
+<li class="toctree-l2"><a class="reference internal" href="skysat.html">8.31. SkySat Stereo and Video data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="historical.html">8.32. Declassified satellite images: KH-4B</a></li>
+<li class="toctree-l2"><a class="reference internal" href="historical.html#declassified-satellite-images-kh-7">8.33. Declassified satellite images: KH-7</a></li>
+<li class="toctree-l2"><a class="reference internal" href="historical.html#declassified-satellite-images-kh-9">8.34. Declassified satellite images: KH-9</a></li>
+<li class="toctree-l2"><a class="reference internal" href="aerial_bathymetry.html">8.35. Aerial images for shallow-water bathymetry</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bathy.html">8.36. Shallow-water bathymetry</a></li>
+<li class="toctree-l2"><a class="reference internal" href="umbra_sar.html">8.37. Umbra SAR</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../examples.html#sfm-examples">9. SfM examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../examples.html#sfm-examples-with-a-rig">10. SfM examples with a rig</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../examples.html#shape-from-shading">11. Shape-from-Shading</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../bundle_adjustment.html">12. Bundle adjustment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../error_propagation.html">13. Error propagation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../correlation.html">14. Advanced stereo topics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../experimental.html">15. Experimental features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tools.html">16. Tools</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../stereodefault.html">17. The <code class="docutils literal notranslate"><span class="pre">stereo.default</span></code> file</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../stereo_algorithms.html">18. The stereo algorithms in ASP in detail</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../outputfiles.html">19. Guide to output files</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../vwrc.html">20. The .vwrc configuration file</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pinholemodels.html">21. Frame camera models</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../bathy_water_masking.html">22. Bathy water masking</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../papersusingasp.html">23. Papers that used ASP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../news.html">24. News and development history</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contributing.html">25. Contributing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../building_asp.html">26. Building and releasing ASP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../thirdparty.html">27. Third party licenses</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../acknowledgements.html">28. Credits</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../glossary.html">29. Glossary</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../zzreferences.html">30. References</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../index.html">Documentation overview</a><ul>
+  <li><a href="../examples.html"><span class="section-number">8. </span>Stereo processing examples</a><ul>
+      <li>Previous: <a href="shadowcam.html" title="previous chapter"><span class="section-number">8.16. </span>KPLO ShadowCam</a></li>
+      <li>Next: <a href="viking.html" title="next chapter"><span class="section-number">8.18. </span>Viking Orbiter</a></li>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &#169;2009-2026, United States Government as represented by the Administrator of the National Aeronautics and Space Administration.
+      
+      |
+      Powered by <a href="https://www.sphinx-doc.org/">Sphinx 9.0.4</a>
+      &amp; <a href="https://alabaster.readthedocs.io">Alabaster 1.0.0</a>
+      
+      |
+      <a href="../_sources/examples/cassis.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

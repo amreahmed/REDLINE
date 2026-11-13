@@ -4,7 +4,7 @@ import type { ScienceTarget } from '../features/mission/types'
 // docs/evidence/phase-3-targets/. These are approximate references, not rover targets.
 const coordinateAttribution = 'International Astronomical Union Working Group for Planetary System Nomenclature; Gazetteer maintained by USGS Astrogeology'
 const scienceAttribution = 'NASA/JPL-Caltech/ASU/MSSS'
-const registrationLimit = 'MDIM 2.1 feature geometry is not independently registered to the preliminary CTX mosaic.'
+const registrationLimit = 'MDIM 2.1 feature geometry is not independently registered to controlled CTX, the numerical DEM or preliminary CTX. Common coordinate conventions do not establish precise landmark alignment.'
 const calculationLimit = 'No distance, slope, terrain safety, or routing follows from this record.'
 
 export const SCIENCE_TARGETS: readonly ScienceTarget[] = [

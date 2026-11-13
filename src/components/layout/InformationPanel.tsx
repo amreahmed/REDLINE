@@ -10,6 +10,7 @@ import { PlanningTerrainDetails } from '../mission/PlanningTerrainDetails'
 import type { TerrainGrid } from '../../features/terrain/gridTypes'
 import { TerrainInspection } from '../mission/TerrainInspection'
 import { useEffect, useRef } from 'react'
+import { TERRAIN_SCIENTIFIC_REVIEW } from '../../data/terrainScience'
 
 export function InformationPanel({ explorer, visibility, statuses, target, inspectionSequence, planningGrid, onClose }: { explorer: ExplorerSummary; visibility: LayerVisibility; statuses: LayerStatuses; target?: ScienceTarget; inspectionSequence: number; planningGrid?: TerrainGrid; onClose: () => void }) {
   const contentRef = useRef<HTMLDivElement>(null)
@@ -24,8 +25,10 @@ export function InformationPanel({ explorer, visibility, statuses, target, inspe
       </div>
       <div className="sources-content" ref={contentRef}>
         <section className="validation-summary" aria-labelledby="validation-heading">
-          <h3 id="validation-heading">Scientific validation pending</h3>
-          <p className="helper">Named-feature registration and the elevation height reference need independent validation. Distance, slope, terrain costs and route comparison remain unavailable.</p>
+          <h3 id="validation-heading">Scientific validation</h3>
+          <dl className="scientific-findings"><dt>Native source geometry</dt><dd>Verified against provider geometry and independent cell fixtures</dd><dt>Named-feature registration</dt><dd>Unresolved — precise landmark alignment not established</dd><dt>Elevation height reference</dt><dd>Conflicted / unresolved — real DEM slopes and costs blocked</dd><dt>Terrain arithmetic</dt><dd>Reference-sphere distances validated; grade and cost formulas tested with synthetic fixtures</dd></dl>
+          <p className="helper">Grid endpoint separation is available in Plan. Route comparison requires supported terrain costs and pathfinding.</p>
+          <details className="source-metadata"><summary>Why height-dependent results are blocked</summary><p className="helper">{TERRAIN_SCIENTIFIC_REVIEW.heightReference.limitation}</p><p className="helper">{TERRAIN_SCIENTIFIC_REVIEW.heightDifferences.limitation} The original samples and provider declaration are preserved.</p></details>
         </section>
         {target && <FeatureDetails target={target} />}
         {planningGrid && <PlanningTerrainDetails grid={planningGrid} />}
@@ -80,7 +83,7 @@ export function InformationPanel({ explorer, visibility, statuses, target, inspe
       </div>
       <div className="information-footer">
         <div className="flex items-center gap-2"><Icon name="info" size={16} /><span>Map imagery and numerical terrain are separate</span></div>
-        <p>No slope, distance, hazard, or route calculations are made.</p>
+        <p>Grid separation uses a Mars reference sphere. DEM slopes, hazards and routes remain unavailable.</p>
       </div>
     </aside>
   )

@@ -1,0 +1,185 @@
+MARS 2020 TERRAIN RELATIVE NAVIGATION FLIGHT PRODUCT GENERATION: DIGITAL 
+TERRAIN MODEL AND ORTHORECTIFIED IMAGE MOSAICS. R. L. Fergason1, T. M. Hare1, D. P. Mayer1, 
+D. M. Galuszka1, B. L. Redding1, E. D. Smith1, J. R. Shinaman1, Y. Cheng2,  and R. E. Otero2. 1U.S. Geological 
+Survey, Astrogeology Science Center, Flagstaff, AZ, USA, rfergason@usgs.gov, 2Jet Propulsion Laboratory, Califor-
+nia Institute of Technology, Pasadena, CA, USA. 
+ 
+Introduction: The Mars 2020 rover will explore 
+Jezero crater, Mars to investigate an ancient delta for 
+evidence of past microbial life and to better understand 
+the geologic history of the region. The landing system 
+onboard Mars 2020 will use new technology developed 
+at the Jet Propulsion Laboratory (JPL) called Terrain 
+Relative Navigation (TRN), which will enable the 
+spacecraft to autonomously avoid hazards (e.g., rock 
+fields, crater rims) that exceed the safety requirements 
+of the landing system. This capability allows small-
+scale hazards to be present in the landing ellipse, provid-
+ing greater flexibility in selecting a landing location. In 
+support of TRN, the USGS Astrogeology Science Cen-
+ter has generated and delivered two precision mosaics: 
+1) the Lander Vision System (LVS) map generated from 
+three Context Camera (CTX) [1] orthorectified images 
+that will be onboard the spacecraft and will be the 
+“truth” dataset that TRN will use to orient itself relative 
+to the surface during Entry, Decent, and Landing; and 
+2) a High Resolution Imaging Science Experiment 
+(HiRISE) [2] orthomosaic that will be the basemap onto 
+which surface hazards are being mapped. The hazard 
+map will be onboard the spacecraft and used by TRN to 
+help identify the final, hazard-free landing location. 
+Because these products will be used to help land the 
+spacecraft safely, there are strict processing, vertical, 
+and horizontal co-registration requirements that must be 
+met. These requirements are significantly stricter than 
+those previously required for landing site characteriza-
+tion and have necessitated the development of new dig-
+ital terrain model (DTM) generation procedures and ca-
+pabilities with a focus on improving the accuracy by 
+which one can co-register adjacent DTMs (and derived 
+orthorectified images) both vertically and horizontally.  
+CTX Lander Vision System Elevation and Or-
+thorectified Image Mosaic Generation: To achieve 
+the required horizontal and vertical co-registration re-
+quirements, we have developed a DTM mosaic genera-
+tion pipeline using a combination of SOCET SET® from 
+BAE Systems [3] and the Ames Stereo Pipeline (ASP) 
+software [4-5]. We first improved our CTX image pre-
+processing pipeline to include capabilities that utilize 
+camera model and jitter-correction improvements de-
+veloped and provided by JPL. These modifications have 
+significantly improved the positional knowledge of the 
+images relative to the martian surface and have allowed 
+us to generate DTMs without the need for a typically 
+required bundle adjustment. Omitting this step was de-
+sirable, as TRN is sensitive to non-linear distortions that 
+could potentially be introduced by a bundle adjustment.  
+After DTMs were produced using SOCET SET® 
+from input images and image metadata provided by JPL, 
+the initial DTMs were then rigidly aligned to one an-
+other using the pc_align program from ASP, allowing 
+only a translation adjustment. The relatively-aligned 
+DTMs were then simultaneously aligned using ASP to 
+the High Resolution Stereo Camera (HRSC) [6-7] Level 
+5 DTM to bring them into absolute alignment with an 
+independent reference. The exported CTX DTMs (20 
+meters per pixel) were then mosaicked using the 
+dem_mosaic tool from ASP. The orthorectified images 
+derived from the nadir-most member of each stereopair 
+(6 meters per pixel) were similarly mosaicked using 
+dem_mosaic.  
+To assess the vertical differences, DTMs were 
+simply differenced. To assess the horizontal registra-
+tion, measurements between orthorectified images were 
+made using the Open Source software package 
+IMCORR [8]. The approach used by IMCORR is the 
+same basic matching strategy used in a variety of stereo 
+photogrammetry software packages, and when applied 
+to a pair of orthorectified images, the results can be in-
+terpreted as a measure of the co-registration of the im-
+ages. The vertical registration between individual CTX 
+DTMs is 3.8 meters after adjusting the mosaic by 183.3 
+meters vertically to align with HRSC. The individual 
+CTX images have an average horizontal displacement 
+of 9.6 meters. Thus, these products and the resulting 
+mosaic meet – and often exceed - the requirements for 
+TRN. 
+HiRISE Hazard Basemap Elevation and Or-
+thorectified Image Mosaic Generation Methods: Be-
+cause we do not have improved image location infor-
+mation for HiRISE, additional updates to our workflow 
+were required to meet the co-registration requirements 
+for the hazard basemap. This process deviates signifi-
+cantly from that of our standard DTM generation pro-
+cess and supports optimizing the co-registration of 
+DTMs and derived products. We begin with our stand-
+ard HiRISE DTM generation process developed for In-
+Sight landing site characterization [9-10] where we ini-
+tialize 16 tie points. We then perform a height adjust-
+ment to the CTX LVS DTM to improve the vertical reg-
+istration and remove any observable tilt between the 
+HiRISE DTM and the CTX LVS DTM. Next, we den-
+sify the tie points and generated a 1-meter post-spacing 
+DTM. This DTM is imported into ASP where we again 
+check and correct for any residual tilt in each HiRISE 
+DTM, perform a sequential horizontal alignment be-
+tween each HiRISE DTM, and generate a temporary 
+2020.pdf
+51st Lunar and Planetary Science Conference (2020)mosaic. We then align the temporary mosaic vertically 
+to the CTX LVS DTM to further refine the vertical reg-
+istration.  
+Rather than mosaicking DTMs that have already 
+been resampled multiple times in pc_align, the affine 
+transformation matrices determined by pc_align are ap-
+plied to the tie points associated with each stereo pair in 
+SOCET SET®. The transformed tie points are then 
+treated as ground control points and used to perform a 
+bundle adjustment of each stereopair in SOCET SET®. 
+We then create a single SOCET SET® project and im-
+port the individually controlled stereo pairs and ancil-
+lary information into this single project, and use the 
+above image positions as the starting point for perform-
+ing a joint bundle adjustment of all 14 images in SOCET 
+SET®. We added additional tie points to each image and 
+ran a final bundle adjustment to refine the relative align-
+ment between images. We then generated a 1-meter post 
+spacing DTM from each of the seven stereo pairs, and 
+manually edited each individual DTM to remove arti-
+facts produced by the automatic matching software.  
+After editing, a single two-dimensional (or first-or-
+der) affine transformation (translation, rotation, and 
+scale) was applied to correct a scale distortion between 
+the CTX LVS orthomosaic and the HiRISE orthomosaic 
+that was outside flight requirements. This transfor-
+mation was determined based on an intermediate 
+HiRISE mosaic product (rather than individual images) 
+in order to preserve the excellent horizontal co-registra-
+tion accuracy between individual HiRISE images. After 
+the transform was applied, final DTMs (1 meter per 
+pixel) and orthorectified images (1 meter and 0.25 me-
+ters per pixel) were exported. 
+The vertical differences were again evaluated using 
+simple differencing of the HiRISE and CTX DTMs.  
+Horizontal differences between the HiRISE orthomo-
+saic and the CTX LVS orthomosaic were evaluated us-
+ing IMCORR. The HiRISE DTM mosaic has a median 
+vertical offset from the CTX LVS DTM of ~0.4 meters. 
+All pairwise combinations of HiRISE orthorectified im-
+ages derived from the nadir-most members of each ste-
+reopair are registered to better than 3 meters at the 99th 
+percentile, with most registered to better than 1.1 meters 
+at the 99th percentile. The median magnitude of horizon-
+tal displacement of features in the transformed HiRISE 
+orthomosaic from CTX is 2.1 meters and 95.4% of fea-
+tures are displaced <6 meters.  
+Acknowledgements: References to commercial 
+products are for identification purposes and do not im-
+ply an endorsement by the U.S. Government.  
+References: [1] Malin M. et al. (2007) JGR, 112 
+(E05S02), doi:10.1029/2005JE00 2605. [2] McEwen A. 
+S. et al. (2007) JGR, 112 (E05S02), doi:10.1029/ 
+2005JE002605. [3] Miller S. B. and Walker A. S. (1993) 
+ACSM/ASPRS Annual Conv., 3, 256–263. [4] Moratto 
+Z. M. et al. (2010) LPS, XLI, 2364. [5] Beyer R. A. et 
+al. (2018) ESS, 5, doi: 10.1029/ 2018EA000409. [6] 
+Neukum et al. (2004) ESA Special Publications, SP-
+1240. [7] Jaumann R. et al. (2007) Planet and Space. 
+Sci., 55, 928-952. [8] System for Automated Geoscien-
+tific Analysis (SAGA) GIS's implementation of 
+IMCORR https://nsidc.org/ data/velmap/imcorr.html. 
+[9] Fergason R. L. et al. (2016) SSR, doi:10.1007/ 
+s11214-016-0292-x. [10] Golombek M. et al. (2016) 
+SSR, doi:10.1007/s11214-016-0321-9. 
+ 
+Figure 1. Final CTX LVS orthorectified image mosaic 
+after manual editing, tone matching, and seam removal 
+methods were applied. The black circle indicates the 
+current landing ellipse location. 
+ 
+Figure 2. Final HiRISE orthorectified image mosaic af-
+ter manual editing, tone matching, and seam removal 
+methods were applied. The white circle indicates the 
+current landing ellipse location. 
+     
+2020.pdf
+51st Lunar and Planetary Science Conference (2020)

@@ -3,6 +3,7 @@ import { Icon } from '../shared/Icon'
 import type { EndpointRole } from '../../features/mission/types'
 import type { GridSelection } from '../../features/mission/gridSelection'
 import type { PlanningTerrainState } from '../../features/mission/useGridPlanning'
+import { GridMetrics } from './GridMetrics'
 
 type Props = {
   terrain: PlanningTerrainState
@@ -54,9 +55,10 @@ export function GridPlanner({ terrain, selection, pickRole, notice, canPick, onO
         {!canPick && <p className="source-warning">Endpoint picking requires the loaded grid and available controlled CTX at local map zoom. Show planning terrain or retry the controlled imagery.</p>}
         {pickRole && <div className="grid-pick-actions"><p className="helper">Picking {pickRole}. Pan with arrow keys; Enter in the map selects its center.</p><button type="button" className="grid-button" disabled={!canPick} onClick={onUseCenter}>Use map center</button><button type="button" className="grid-button" onClick={onCancel}>Cancel grid picking</button></div>}
         <div className="endpoint-actions"><button className="grid-button" type="button" disabled={!hasEndpoints} onClick={onSwap}>Swap grid endpoints</button><button className="grid-button" type="button" disabled={!hasEndpoints} onClick={onClear}>Clear grid endpoints</button></div>
+        <GridMetrics grid={terrain.grid} selection={selection} />
       </>}
       {notice && <p className="helper grid-notice" role="status">{notice}</p>}
-      <p className="source-warning">Grid endpoints are hypothetical source-cell choices. Named feature centers remain approximate. Physical distance, slope and route comparison are not yet calculated.</p>
+      <p className="source-warning">Grid endpoints are hypothetical source-cell choices. Named feature centers remain approximate and independently unregistered. Route comparison is unavailable.</p>
     </section>
   )
 }

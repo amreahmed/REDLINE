@@ -1,0 +1,162 @@
+{
+  "purpose": "Independent coarse height-reference sanity check only; not fine registration, per-cell accuracy, or a validated datum conversion.",
+  "molaResolutionDeg": 0.0625,
+  "molaReference": "PDS MGS-M-MOLA-5-MEGDR-L3-V1.0 v2.0; radius means, median topography, GMM3 mgm1025 degree/order 50 areoid",
+  "sphereRadiusM": 3396190,
+  "sourceSha256": "16a1aa66c3f48c1bca252795827db7b417876217aff0f5e1aff18027fab2327b",
+  "probes": [
+    {
+      "molaRowZeroBased": 1143,
+      "molaColumnZeroBased": 1237,
+      "binCenterLonLat": [
+        77.34375,
+        18.53125
+      ],
+      "ctxSourceRow": 562,
+      "ctxSourceColumn": 543,
+      "ctxValueM": -2380.987060546875,
+      "molaMeanRadiusM": 3392170,
+      "molaAreoidRadiusM": 3394494,
+      "molaMedianTopographyM": -2342,
+      "molaMeanRadiusMinusIAUSphereM": -4020,
+      "ctxMinusMolaTopographyM": -38.987060546875,
+      "ctxMinusMolaRadiusAboveIAUSphereM": 1639.012939453125
+    },
+    {
+      "molaRowZeroBased": 1143,
+      "molaColumnZeroBased": 1238,
+      "binCenterLonLat": [
+        77.40625,
+        18.53125
+      ],
+      "ctxSourceRow": 562,
+      "ctxSourceColumn": 728,
+      "ctxValueM": -2445.314453125,
+      "molaMeanRadiusM": 3392052,
+      "molaAreoidRadiusM": 3394493,
+      "molaMedianTopographyM": -2431,
+      "molaMeanRadiusMinusIAUSphereM": -4138,
+      "ctxMinusMolaTopographyM": -14.314453125,
+      "ctxMinusMolaRadiusAboveIAUSphereM": 1692.685546875
+    },
+    {
+      "molaRowZeroBased": 1143,
+      "molaColumnZeroBased": 1239,
+      "binCenterLonLat": [
+        77.46875,
+        18.53125
+      ],
+      "ctxSourceRow": 562,
+      "ctxSourceColumn": 913,
+      "ctxValueM": -2543.260498046875,
+      "molaMeanRadiusM": 3391948,
+      "molaAreoidRadiusM": 3394492,
+      "molaMedianTopographyM": -2546,
+      "molaMeanRadiusMinusIAUSphereM": -4242,
+      "ctxMinusMolaTopographyM": 2.739501953125,
+      "ctxMinusMolaRadiusAboveIAUSphereM": 1698.739501953125
+    },
+    {
+      "molaRowZeroBased": 1144,
+      "molaColumnZeroBased": 1237,
+      "binCenterLonLat": [
+        77.34375,
+        18.46875
+      ],
+      "ctxSourceRow": 748,
+      "ctxSourceColumn": 543,
+      "ctxValueM": -2415.188720703125,
+      "molaMeanRadiusM": 3392149,
+      "molaAreoidRadiusM": 3394505,
+      "molaMedianTopographyM": -2364,
+      "molaMeanRadiusMinusIAUSphereM": -4041,
+      "ctxMinusMolaTopographyM": -51.188720703125,
+      "ctxMinusMolaRadiusAboveIAUSphereM": 1625.811279296875
+    },
+    {
+      "molaRowZeroBased": 1144,
+      "molaColumnZeroBased": 1238,
+      "binCenterLonLat": [
+        77.40625,
+        18.46875
+      ],
+      "ctxSourceRow": 748,
+      "ctxSourceColumn": 728,
+      "ctxValueM": -2489.629638671875,
+      "molaMeanRadiusM": 3392015,
+      "molaAreoidRadiusM": 3394503,
+      "molaMedianTopographyM": -2480,
+      "molaMeanRadiusMinusIAUSphereM": -4175,
+      "ctxMinusMolaTopographyM": -9.629638671875,
+      "ctxMinusMolaRadiusAboveIAUSphereM": 1685.370361328125
+    },
+    {
+      "molaRowZeroBased": 1144,
+      "molaColumnZeroBased": 1239,
+      "binCenterLonLat": [
+        77.46875,
+        18.46875
+      ],
+      "ctxSourceRow": 748,
+      "ctxSourceColumn": 913,
+      "ctxValueM": -2563.224365234375,
+      "molaMeanRadiusM": 3391929,
+      "molaAreoidRadiusM": 3394502,
+      "molaMedianTopographyM": -2568,
+      "molaMeanRadiusMinusIAUSphereM": -4261,
+      "ctxMinusMolaTopographyM": 4.775634765625,
+      "ctxMinusMolaRadiusAboveIAUSphereM": 1697.775634765625
+    },
+    {
+      "molaRowZeroBased": 1145,
+      "molaColumnZeroBased": 1237,
+      "binCenterLonLat": [
+        77.34375,
+        18.40625
+      ],
+      "ctxSourceRow": 933,
+      "ctxSourceColumn": 543,
+      "ctxValueM": -2430.210693359375,
+      "molaMeanRadiusM": 3392132,
+      "molaAreoidRadiusM": 3394515,
+      "molaMedianTopographyM": -2402,
+      "molaMeanRadiusMinusIAUSphereM": -4058,
+      "ctxMinusMolaTopographyM": -28.210693359375,
+      "ctxMinusMolaRadiusAboveIAUSphereM": 1627.789306640625
+    },
+    {
+      "molaRowZeroBased": 1145,
+      "molaColumnZeroBased": 1238,
+      "binCenterLonLat": [
+        77.40625,
+        18.40625
+      ],
+      "ctxSourceRow": 933,
+      "ctxSourceColumn": 728,
+      "ctxValueM": -2543.109619140625,
+      "molaMeanRadiusM": 3391962,
+      "molaAreoidRadiusM": 3394514,
+      "molaMedianTopographyM": -2561,
+      "molaMeanRadiusMinusIAUSphereM": -4228,
+      "ctxMinusMolaTopographyM": 17.890380859375,
+      "ctxMinusMolaRadiusAboveIAUSphereM": 1684.890380859375
+    },
+    {
+      "molaRowZeroBased": 1145,
+      "molaColumnZeroBased": 1239,
+      "binCenterLonLat": [
+        77.46875,
+        18.40625
+      ],
+      "ctxSourceRow": 933,
+      "ctxSourceColumn": 913,
+      "ctxValueM": -2596.53369140625,
+      "molaMeanRadiusM": 3391905,
+      "molaAreoidRadiusM": 3394513,
+      "molaMedianTopographyM": -2609,
+      "molaMeanRadiusMinusIAUSphereM": -4285,
+      "ctxMinusMolaTopographyM": 12.46630859375,
+      "ctxMinusMolaRadiusAboveIAUSphereM": 1688.46630859375
+    }
+  ]
+}

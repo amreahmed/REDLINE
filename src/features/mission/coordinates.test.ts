@@ -95,7 +95,7 @@ describe('verified local feature references', () => {
       expect(target.controlNetwork).toBe(source!.controlNetwork)
       expect(target.coordinateSourceUrl).toBe(source!.coordinateSourceUrl)
       expect(target.scienceSourceUrl).toBe(source!.scienceSourceUrl)
-      expect(target.limitations).toContain('MDIM 2.1 feature geometry is not independently registered to the preliminary CTX mosaic.')
+      expect(target.limitations).toContain('MDIM 2.1 feature geometry is not independently registered to controlled CTX, the numerical DEM or preliminary CTX. Common coordinate conventions do not establish precise landmark alignment.')
     }
   })
 
