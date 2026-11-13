@@ -30,7 +30,7 @@ export function FeaturePlanner({ targets, selection, selectedId, error, onInspec
         </button>)}
         {matches.length === 0 && <p className="helper" role="status">No references match “{query.trim()}”. Try Jezero, Belva or Neretva.</p>}
       </div>
-      <h4 className="endpoint-heading">Hypothetical endpoints</h4>
+      <h4 className="endpoint-heading">Approximate reference endpoints</h4>
       {(['origin', 'destination'] as const).map((role) => <div className="endpoint-field" key={role}>
         <label className="field-label" htmlFor={`mission-${role}`}>{role === 'origin' ? 'Origin reference' : 'Destination reference'}</label>
         <select id={`mission-${role}`} value={selection[role] ?? ''} onChange={(event) => onAssign(role, event.target.value || null)} aria-describedby="endpoint-note">
@@ -45,7 +45,7 @@ export function FeaturePlanner({ targets, selection, selectedId, error, onInspec
         <button type="button" className="grid-button" disabled={!hasEndpoints} onClick={onClear}>Clear endpoints</button>
       </div>
       <button type="button" className="route-unavailable" disabled aria-describedby="route-data-note">Calculate routes — unavailable</button>
-      <p className="helper" id="route-data-note">A numerical terrain dataset and reference-to-imagery registration must be validated before route calculations. Image colors are not elevation.</p>
+      <p className="helper" id="route-data-note">The planning crop is numerical terrain. Physical distance, slope, terrain costs and route computation still require validation. Approximate reference centers are separate from grid endpoints; image colors are not elevation.</p>
     </section>
   )
 }

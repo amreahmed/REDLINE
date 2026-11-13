@@ -1,7 +1,7 @@
 import type { Bounds, Coverage } from './types'
 
 export const WORLD_EXTENT: Bounds = [-180, -90, 180, 90]
-export const MAX_LEVEL = 12
+export const MAX_LEVEL = 13
 
 // Pure angular indexing; no Earth transform, physical distance, or DEM inference.
 export function tileForCoordinate([longitude, latitude]: [number, number], level: number): [number, number, number] | null {

@@ -30,7 +30,7 @@ export function MissionControl({ explorer, onJezero, visibility, statuses, onTog
           <h3 id="layers-heading">Map layers</h3>
           <Icon name="layers" />
         </div>
-        <p id="layers-note" className="helper mb-4">MOLA provides the wider context. Selected CTX appears at local zoom inside its Jezero footprint. Your layer choices persist in the overview.</p>
+        <p id="layers-note" className="helper mb-4">MOLA provides wider context. CTX appears at local zoom inside each footprint. Controlled CTX supports the planning crop and draws above preliminary CTX when both are selected.</p>
         <div className="layer-list">
           {MARS_LAYERS.map((layer) => {
             const status = statuses[layer.id]
@@ -41,9 +41,9 @@ export function MissionControl({ explorer, onJezero, visibility, statuses, onTog
                   <input type="checkbox" checked={visibility[layer.id]} onChange={() => onToggle(layer.id)} aria-describedby={`${layer.id}-status`} />
                   <span><span className="layer-name">{layer.name}</span><span className="layer-description">{layer.description}</span></span>
                 </label>
-                <p id={`${layer.id}-status`} className="layer-status" data-warning={hasError || status.coverage !== 'inside'} role="status">{!visibility[layer.id] ? 'Hidden by you' : status.phase === 'checking' ? 'Checking service metadata' : status.phase === 'unavailable' ? 'Service unavailable' : !explorer.mapShown ? 'Selected for map exploration' : status.coverage === 'outside' ? 'Outside coverage' : layer.id === 'ctx' && !explorer.localDetail ? 'Zoom closer to Jezero for CTX detail' : layerStatusLabel(status, true)}</p>
+                <p id={`${layer.id}-status`} className="layer-status" data-warning={hasError || status.coverage !== 'inside'} role="status">{!visibility[layer.id] ? 'Hidden by you' : status.phase === 'checking' ? 'Checking service metadata' : status.phase === 'unavailable' ? 'Service unavailable' : !explorer.mapShown ? 'Selected for map exploration' : status.coverage === 'outside' ? 'Outside coverage' : layer.id !== 'mola' && !explorer.localDetail ? 'Zoom closer to Jezero for CTX detail' : layerStatusLabel(status, true)}</p>
                 {visibility[layer.id] && status.enlarged && <p className="helper layer-enlarged">Enlarged beyond native tile detail.</p>}
-                {hasError && <button className="retry-button" type="button" onClick={() => onRetry(layer.id)} disabled={status.phase === 'checking'}>Retry {layer.id === 'ctx' ? 'CTX' : 'MOLA'}</button>}
+                {hasError && <button className="retry-button" type="button" onClick={() => onRetry(layer.id)} disabled={status.phase === 'checking'}>Retry {layer.id === 'controlledCtx' ? 'controlled CTX' : layer.id === 'ctx' ? 'CTX' : 'MOLA'}</button>}
               </div>
             )
           })}

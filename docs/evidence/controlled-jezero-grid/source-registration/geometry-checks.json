@@ -1,0 +1,327 @@
+{
+  "controlledImage": {
+    "columns": 5322,
+    "rows": 5040,
+    "radiusM": 3396190,
+    "polarRadiusM": 3396190,
+    "originX": 4573663.250853,
+    "originY": 1109693.140188,
+    "pixelSizeM": 6,
+    "bounds": [
+      77.16046545922367,
+      18.211027390963398,
+      77.69917761355299,
+      18.721194481872804
+    ]
+  },
+  "nativeWestNorth": [
+    77.16046545922367,
+    18.721194481872804
+  ],
+  "nativeEastSouth": [
+    77.69917761355299,
+    18.211027390963398
+  ],
+  "vrtGeoTransform": [
+    77.16046545922364,
+    0.00010122362914869109,
+    0,
+    18.7211944818728,
+    0,
+    -0.00010122362914869109
+  ],
+  "serviceBounds": [
+    77.1604655,
+    18.2110274,
+    77.6991776,
+    18.7211945
+  ],
+  "pdsFirstCenterSample": 1,
+  "pdsFirstCenterLine": 1,
+  "tileMatrix": {
+    "declaredCrs": "urn:ogc:def:crs:EPSG::104905",
+    "template": "https://trek.nasa.gov/tiles/Mars/EQ/JEZ_ctx_B_soc_008_orthoMosaic_6m_Eqc_latTs0_lon0/1.0.0//{Style}/{TileMatrixSet}/{TileMatrix}/{TileRow}/{TileCol}.png",
+    "matrices": [
+      {
+        "id": 0,
+        "scaleDenominator": 279227636.2980747,
+        "topLeftCorner": [
+          -180,
+          90
+        ],
+        "tileWidth": 256,
+        "tileHeight": 256,
+        "matrixWidth": 2,
+        "matrixHeight": 1
+      },
+      {
+        "id": 1,
+        "scaleDenominator": 139613818.14903736,
+        "topLeftCorner": [
+          -180,
+          90
+        ],
+        "tileWidth": 256,
+        "tileHeight": 256,
+        "matrixWidth": 4,
+        "matrixHeight": 2
+      },
+      {
+        "id": 2,
+        "scaleDenominator": 69806909.07451868,
+        "topLeftCorner": [
+          -180,
+          90
+        ],
+        "tileWidth": 256,
+        "tileHeight": 256,
+        "matrixWidth": 8,
+        "matrixHeight": 4
+      },
+      {
+        "id": 3,
+        "scaleDenominator": 34903454.53725934,
+        "topLeftCorner": [
+          -180,
+          90
+        ],
+        "tileWidth": 256,
+        "tileHeight": 256,
+        "matrixWidth": 16,
+        "matrixHeight": 8
+      },
+      {
+        "id": 4,
+        "scaleDenominator": 17451727.26862967,
+        "topLeftCorner": [
+          -180,
+          90
+        ],
+        "tileWidth": 256,
+        "tileHeight": 256,
+        "matrixWidth": 32,
+        "matrixHeight": 16
+      },
+      {
+        "id": 5,
+        "scaleDenominator": 8725863.634314835,
+        "topLeftCorner": [
+          -180,
+          90
+        ],
+        "tileWidth": 256,
+        "tileHeight": 256,
+        "matrixWidth": 64,
+        "matrixHeight": 32
+      },
+      {
+        "id": 6,
+        "scaleDenominator": 4362931.817157418,
+        "topLeftCorner": [
+          -180,
+          90
+        ],
+        "tileWidth": 256,
+        "tileHeight": 256,
+        "matrixWidth": 128,
+        "matrixHeight": 64
+      },
+      {
+        "id": 7,
+        "scaleDenominator": 2181465.908578709,
+        "topLeftCorner": [
+          -180,
+          90
+        ],
+        "tileWidth": 256,
+        "tileHeight": 256,
+        "matrixWidth": 256,
+        "matrixHeight": 128
+      },
+      {
+        "id": 8,
+        "scaleDenominator": 1090732.9542893544,
+        "topLeftCorner": [
+          -180,
+          90
+        ],
+        "tileWidth": 256,
+        "tileHeight": 256,
+        "matrixWidth": 512,
+        "matrixHeight": 256
+      },
+      {
+        "id": 9,
+        "scaleDenominator": 545366.4771446772,
+        "topLeftCorner": [
+          -180,
+          90
+        ],
+        "tileWidth": 256,
+        "tileHeight": 256,
+        "matrixWidth": 1024,
+        "matrixHeight": 512
+      },
+      {
+        "id": 10,
+        "scaleDenominator": 272683.2385723386,
+        "topLeftCorner": [
+          -180,
+          90
+        ],
+        "tileWidth": 256,
+        "tileHeight": 256,
+        "matrixWidth": 2048,
+        "matrixHeight": 1024
+      },
+      {
+        "id": 11,
+        "scaleDenominator": 136341.6192861693,
+        "topLeftCorner": [
+          -180,
+          90
+        ],
+        "tileWidth": 256,
+        "tileHeight": 256,
+        "matrixWidth": 4096,
+        "matrixHeight": 2048
+      },
+      {
+        "id": 12,
+        "scaleDenominator": 68170.80964308465,
+        "topLeftCorner": [
+          -180,
+          90
+        ],
+        "tileWidth": 256,
+        "tileHeight": 256,
+        "matrixWidth": 8192,
+        "matrixHeight": 4096
+      },
+      {
+        "id": 13,
+        "scaleDenominator": 34085.404821542324,
+        "topLeftCorner": [
+          -180,
+          90
+        ],
+        "tileWidth": 256,
+        "tileHeight": 256,
+        "matrixWidth": 16384,
+        "matrixHeight": 8192
+      }
+    ],
+    "angularResolutionFormula": "0.703125 / 2**zoom degrees per pixel",
+    "maximumZoomNominalEquatorialSampleM": 5.087588097665367,
+    "scaleDenominatorUsedForPlacement": false
+  },
+  "crop": {
+    "startColumn": 522,
+    "startRow": 586,
+    "columns": 256,
+    "rows": 256,
+    "corners": [
+      {
+        "name": "north-west",
+        "sourceRowEdge": 586,
+        "sourceColumnEdge": 522,
+        "projectedM": [
+          4584103.250853,
+          1097973.140188
+        ],
+        "coordinate": [
+          77.33659457394239,
+          18.523470992935692
+        ],
+        "nativeImagePixelEdge": [
+          1740,
+          1953.3333333333333
+        ]
+      },
+      {
+        "name": "north-east",
+        "sourceRowEdge": 586,
+        "sourceColumnEdge": 778,
+        "projectedM": [
+          4589223.250853,
+          1097973.140188
+        ],
+        "coordinate": [
+          77.42297207081594,
+          18.523470992935692
+        ],
+        "nativeImagePixelEdge": [
+          2593.3333333333335,
+          1953.3333333333333
+        ]
+      },
+      {
+        "name": "south-east",
+        "sourceRowEdge": 842,
+        "sourceColumnEdge": 778,
+        "projectedM": [
+          4589223.250853,
+          1092853.140188
+        ],
+        "coordinate": [
+          77.42297207081594,
+          18.437093496062143
+        ],
+        "nativeImagePixelEdge": [
+          2593.3333333333335,
+          2806.6666666666665
+        ]
+      },
+      {
+        "name": "south-west",
+        "sourceRowEdge": 842,
+        "sourceColumnEdge": 522,
+        "projectedM": [
+          4584103.250853,
+          1092853.140188
+        ],
+        "coordinate": [
+          77.33659457394239,
+          18.437093496062143
+        ],
+        "nativeImagePixelEdge": [
+          1740,
+          2806.6666666666665
+        ]
+      }
+    ],
+    "center": [
+      77.37978332237917,
+      18.48028224449892
+    ],
+    "nativeImageOuterSpanPixels": [
+      853.3333333333334,
+      853.3333333333334
+    ]
+  },
+  "imageDemOverlap": {
+    "sharedProjectedNorthWestCorner": true,
+    "imageNativeSampleM": 6,
+    "demNativeSampleM": 20,
+    "imageEastLongitude": 77.69917761355299,
+    "demEastLongitude": 77.69897516629472,
+    "nativeImageExtraEastWidthM": 12,
+    "nativeImageExtraSouthHeightM": 0
+  },
+  "fgdcAssertions": {
+    "relativeHorizontalDisplacement9_6m": true,
+    "relativeVerticalRegistration3_8m": true,
+    "verticalShift183_3m": true,
+    "referencesHrsc": true
+  },
+  "limitations": [
+    "Arithmetic metadata/grid alignment does not independently establish absolute landmark accuracy or MDIM 2.1 named-feature registration.",
+    "Crop bounds are deliberately selected prototype support; they are not measured boundaries of a science feature or validated traverse area.",
+    "A 20 m native DEM cell covers 3 1/3 native 6 m image pixels per axis; the grids have a shared origin but different cell boundaries.",
+    "PNG values were verified as rendered grayscale imagery with coverage, not matched to native imagery samples; service resampling/rendering is not a numerical DEM.",
+    "Zoom 13 display sampling is approximately 5.088 m at the equator but source imagery is 6 m; resampling does not create new measured detail.",
+    "Provider-declared Mars IAU sphere vertical reference remains independently unvalidated. No vertical correction is applied.",
+    "All-valid DEM samples do not establish source stereo/fill support, hazards, traversability, safety, or route suitability.",
+    "Node HTTPS/CORS headers do not replace root isolated-browser rendering and browser CORS checks."
+  ]
+}

@@ -1,0 +1,47 @@
+<VRTDataset rasterXSize="5322" rasterYSize="5040" subClass="VRTWarpedDataset">
+  <SRS>GEOGCS["unnamed ellipse",DATUM["unknown",SPHEROID["unnamed",3396190,0]],PRIMEM["Greenwich",0],UNIT["degree",0.0174532925199433]]</SRS>
+  <GeoTransform>  7.7160465459223644e+01,  1.0122362914869109e-04,  0.0000000000000000e+00,  1.8721194481872800e+01,  0.0000000000000000e+00, -1.0122362914869109e-04</GeoTransform>
+  <Metadata>
+    <MDI key="AREA_OR_POINT">Area</MDI>
+  </Metadata>
+  <VRTRasterBand dataType="Byte" band="1" subClass="VRTWarpedRasterBand">
+    <NoDataValue>0.00000000000000E+00</NoDataValue>
+    <ColorInterp>Gray</ColorInterp>
+  </VRTRasterBand>
+  <BlockXSize>512</BlockXSize>
+  <BlockYSize>128</BlockYSize>
+  <GDALWarpOptions>
+    <WarpMemoryLimit>6.71089e+07</WarpMemoryLimit>
+    <ResampleAlg>NearestNeighbour</ResampleAlg>
+    <WorkingDataType>Byte</WorkingDataType>
+    <Option name="INIT_DEST">NO_DATA</Option>
+    <SourceDataset relativeToVRT="1">JEZ_ctx_B_soc_008_orthoMosaic_6m_Eqc_latTs0_lon0.tif</SourceDataset>
+    <Transformer>
+      <ApproxTransformer>
+        <MaxError>0.125</MaxError>
+        <BaseTransformer>
+          <GenImgProjTransformer>
+            <SrcGeoTransform>4573663.25085300021,6,0,1109693.14018799993,0,-6</SrcGeoTransform>
+            <SrcInvGeoTransform>-762277.208475499996,0.166666666666666657,0,184948.856697999989,0,-0.166666666666666657</SrcInvGeoTransform>
+            <DstGeoTransform>77.1604654592236443,0.000101223629148691088,0,18.7211944818728,0,-0.000101223629148691088</DstGeoTransform>
+            <DstInvGeoTransform>-762277.208475501509,9879.11625388439097,0,184948.856698000367,0,-9879.11625388439097</DstInvGeoTransform>
+            <ReprojectTransformer>
+              <ReprojectionTransformer>
+                <SourceSRS>PROJCS["Equirectangular Mars 2000 Sphere IAU",GEOGCS["GCS_Mars_2000_Sphere",DATUM["Mars_2000_Sphere",SPHEROID["Mars_2000_Sphere_IAU",3396190,0]],PRIMEM["Reference_Meridian",0],UNIT["degree",0.0174532925199433]],PROJECTION["Equirectangular"],PARAMETER["latitude_of_origin",0],PARAMETER["central_meridian",0],PARAMETER["standard_parallel_1",0],PARAMETER["false_easting",0],PARAMETER["false_northing",0],UNIT["metre",1,AUTHORITY["EPSG","9001"]]]</SourceSRS>
+                <TargetSRS>GEOGCS["unnamed ellipse",DATUM["unknown",SPHEROID["unnamed",3396190,0]],PRIMEM["Greenwich",0],UNIT["degree",0.0174532925199433]]</TargetSRS>
+              </ReprojectionTransformer>
+            </ReprojectTransformer>
+          </GenImgProjTransformer>
+        </BaseTransformer>
+      </ApproxTransformer>
+    </Transformer>
+    <BandList>
+      <BandMapping src="1" dst="1">
+        <SrcNoDataReal>0</SrcNoDataReal>
+        <SrcNoDataImag>0</SrcNoDataImag>
+        <DstNoDataReal>0</DstNoDataReal>
+        <DstNoDataImag>0</DstNoDataImag>
+      </BandMapping>
+    </BandList>
+  </GDALWarpOptions>
+</VRTDataset>

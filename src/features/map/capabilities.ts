@@ -19,7 +19,7 @@ const identifier = (parent: Element) => text(parent, OWS, 'Identifier')
 const numbers = (value: string) => value.split(/\s+/).map(Number)
 const fail = (message: string): never => { throw new Error(`Unrecognized Mars Trek contract: ${message}`) }
 
-/** Read live capabilities but accept only the inspected two-layer display contract. */
+/** Read live capabilities but accept only each layer's inspected angular display contract. */
 export function readCapabilities(xml: string, definition: LayerDefinition, parseXml = (source: string) => new DOMParser().parseFromString(source, 'text/xml')): TileContract {
   if (xml.length > 1_000_000 || /<!DOCTYPE/i.test(xml)) fail('unsupported XML document')
   const document = parseXml(xml)

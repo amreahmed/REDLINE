@@ -1,0 +1,258 @@
+[
+  {
+    "purpose": "crop-north-west",
+    "coordinate": [
+      77.33659457394239,
+      18.523470992935692
+    ],
+    "z": 13,
+    "row": 3252,
+    "column": 11711,
+    "file": "tile-13-3252-11711.png",
+    "status": 200,
+    "tileNorthWest": [
+      77.32177734375,
+      18.544921875
+    ],
+    "tileAngularResolution": 0.0000858306884765625,
+    "coordinateInTilePixelEdges": [
+      172.63324406908617,
+      249.92089012737077
+    ],
+    "analysis": {
+      "width": 256,
+      "height": 256,
+      "bitDepth": 8,
+      "colorType": 4,
+      "opaque": 65536,
+      "transparent": 0,
+      "partial": 0,
+      "nonGrayscale": 0,
+      "visibleGrayMinimum": 81,
+      "visibleGrayMaximum": 202,
+      "visiblePixelBoundsInclusive": [
+        0,
+        0,
+        255,
+        255
+      ]
+    }
+  },
+  {
+    "purpose": "crop-north-east",
+    "coordinate": [
+      77.42297207081594,
+      18.523470992935692
+    ],
+    "z": 13,
+    "row": 3252,
+    "column": 11715,
+    "file": "tile-13-3252-11715.png",
+    "status": 200,
+    "tileNorthWest": [
+      77.40966796875,
+      18.544921875
+    ],
+    "tileAngularResolution": 0.0000858306884765625,
+    "coordinateInTilePixelEdges": [
+      155.0040236433347,
+      249.92089012737077
+    ],
+    "analysis": {
+      "width": 256,
+      "height": 256,
+      "bitDepth": 8,
+      "colorType": 4,
+      "opaque": 65536,
+      "transparent": 0,
+      "partial": 0,
+      "nonGrayscale": 0,
+      "visibleGrayMinimum": 39,
+      "visibleGrayMaximum": 233,
+      "visiblePixelBoundsInclusive": [
+        0,
+        0,
+        255,
+        255
+      ]
+    }
+  },
+  {
+    "purpose": "crop-south-east",
+    "coordinate": [
+      77.42297207081594,
+      18.437093496062143
+    ],
+    "z": 13,
+    "row": 3256,
+    "column": 11715,
+    "file": "tile-13-3256-11715.png",
+    "status": 200,
+    "tileNorthWest": [
+      77.40966796875,
+      18.45703125
+    ],
+    "tileAngularResolution": 0.0000858306884765625,
+    "coordinateInTilePixelEdges": [
+      155.0040236433347,
+      232.2916697015779
+    ],
+    "analysis": {
+      "width": 256,
+      "height": 256,
+      "bitDepth": 8,
+      "colorType": 4,
+      "opaque": 65536,
+      "transparent": 0,
+      "partial": 0,
+      "nonGrayscale": 0,
+      "visibleGrayMinimum": 31,
+      "visibleGrayMaximum": 193,
+      "visiblePixelBoundsInclusive": [
+        0,
+        0,
+        255,
+        255
+      ]
+    }
+  },
+  {
+    "purpose": "crop-south-west",
+    "coordinate": [
+      77.33659457394239,
+      18.437093496062143
+    ],
+    "z": 13,
+    "row": 3256,
+    "column": 11711,
+    "file": "tile-13-3256-11711.png",
+    "status": 200,
+    "tileNorthWest": [
+      77.32177734375,
+      18.45703125
+    ],
+    "tileAngularResolution": 0.0000858306884765625,
+    "coordinateInTilePixelEdges": [
+      172.63324406908617,
+      232.2916697015779
+    ],
+    "analysis": {
+      "width": 256,
+      "height": 256,
+      "bitDepth": 8,
+      "colorType": 4,
+      "opaque": 65536,
+      "transparent": 0,
+      "partial": 0,
+      "nonGrayscale": 0,
+      "visibleGrayMinimum": 75,
+      "visibleGrayMaximum": 216,
+      "visiblePixelBoundsInclusive": [
+        0,
+        0,
+        255,
+        255
+      ]
+    }
+  },
+  {
+    "purpose": "crop-center",
+    "coordinate": [
+      77.37978332237917,
+      18.48028224449892
+    ],
+    "z": 13,
+    "row": 3254,
+    "column": 11713,
+    "file": "tile-13-3254-11713.png",
+    "status": 200,
+    "tileNorthWest": [
+      77.36572265625,
+      18.5009765625
+    ],
+    "tileAngularResolution": 0.0000858306884765625,
+    "coordinateInTilePixelEdges": [
+      163.81863385621045,
+      241.10627991445364
+    ],
+    "analysis": {
+      "width": 256,
+      "height": 256,
+      "bitDepth": 8,
+      "colorType": 4,
+      "opaque": 65536,
+      "transparent": 0,
+      "partial": 0,
+      "nonGrayscale": 0,
+      "visibleGrayMinimum": 84,
+      "visibleGrayMaximum": 241,
+      "visiblePixelBoundsInclusive": [
+        0,
+        0,
+        255,
+        255
+      ]
+    }
+  },
+  {
+    "purpose": "image-east-boundary",
+    "coordinate": [
+      77.69917761355299,
+      18.4661109364181
+    ],
+    "z": 12,
+    "row": 1627,
+    "column": 5864,
+    "file": "tile-12-1627-5864.png",
+    "status": 200,
+    "tileNorthWest": [
+      77.6953125,
+      18.5009765625
+    ],
+    "tileAngularResolution": 0.000171661376953125,
+    "coordinateInTilePixelEdges": [
+      22.51591838300228,
+      203.10699296918594
+    ],
+    "analysis": {
+      "width": 256,
+      "height": 256,
+      "bitDepth": 8,
+      "colorType": 4,
+      "opaque": 5632,
+      "transparent": 59136,
+      "partial": 768,
+      "nonGrayscale": 0,
+      "visibleGrayMinimum": 2,
+      "visibleGrayMaximum": 212,
+      "visiblePixelBoundsInclusive": [
+        0,
+        0,
+        25,
+        255
+      ]
+    }
+  },
+  {
+    "purpose": "outside-image",
+    "coordinate": [
+      76.86046545922368,
+      17.911027390963397
+    ],
+    "z": 12,
+    "row": 1640,
+    "column": 5845,
+    "file": "tile-12-1640-5845.png",
+    "status": 404,
+    "tileNorthWest": [
+      76.8603515625,
+      17.9296875
+    ],
+    "tileAngularResolution": 0.000171661376953125,
+    "coordinateInTilePixelEdges": [
+      0.6634965051379469,
+      108.7030138509141
+    ],
+    "analysis": null
+  }
+]

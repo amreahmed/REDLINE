@@ -4,6 +4,8 @@ import type { LayerStatuses, LayerVisibility } from '../map/types'
 import { JEZERO_DETAIL_ZOOM } from '../../data/jezero'
 import { easeInOut } from './animation'
 import type { AnimationStage } from './animation'
+import { detailReadinessLayers } from './layers'
+import { DETAIL_LAYER_IDS, LAYER_IDS } from '../map/types'
 
 type GlobeFlight = Pick<GlobeController, 'reset' | 'beginApproach' | 'setOverviewProgress' | 'setApproachProgress' | 'endApproach'>
 type Presentation = { globe: GlobeFlight; blend: (mapOpacity: number) => void; onStage: (message: string) => void }
@@ -20,11 +22,11 @@ type JezeroFlightOptions = Presentation & {
 export function createJezeroStages(options: JezeroFlightOptions): AnimationStage[] {
   const { map, globe, blend, onStage, preferences, statuses } = options
   let contextZoom = 4
-  const noLayers = () => !preferences().mola && !preferences().ctx
+  const noLayers = () => LAYER_IDS.every((id) => !preferences()[id])
   function prepareSelectedContext() {
     const selected = preferences()
     const mola = statuses().mola
-    if (contextZoom < 7 && selected.ctx && (!selected.mola || mola.phase === 'unavailable' || (mola.failed > 0 && mola.pending === 0))) {
+    if (contextZoom < 7 && DETAIL_LAYER_IDS.some((id) => selected[id]) && (!selected.mola || mola.phase === 'unavailable' || (mola.failed > 0 && mola.pending === 0))) {
       contextZoom = 7
       map.setApproachZoom(contextZoom)
       map.setDetailOpacity(1)
@@ -64,7 +66,10 @@ export function createJezeroStages(options: JezeroFlightOptions): AnimationStage
       map.setApproachZoom(zoom)
       map.setDetailOpacity(contextZoom >= 7 ? 1 : easeInOut((zoom - 7) / 1.25))
     },
-    ready: () => !preferences().ctx || map.hasRenderedImagery('ctx'),
+    ready: () => {
+      const selected = detailReadinessLayers(preferences(), statuses())
+      return selected.length === 0 || selected.some((id) => map.hasRenderedImagery(id))
+    },
     timeoutMs: 10_000,
     onWaiting: () => onStage('Jezero centered · waiting for CTX detail'),
     onTimeout: options.onDetailTimeout,

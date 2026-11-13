@@ -6,10 +6,12 @@ import { MARS_GLOBE } from '../../data/marsGlobe'
 import type { ExplorerSummary } from '../../features/explorer/types'
 import type { ScienceTarget } from '../../features/mission/types'
 import { FeatureDetails } from '../mission/FeatureDetails'
+import { PlanningTerrainDetails } from '../mission/PlanningTerrainDetails'
+import type { TerrainGrid } from '../../features/terrain/gridTypes'
 import { TerrainInspection } from '../mission/TerrainInspection'
 import { useEffect, useRef } from 'react'
 
-export function InformationPanel({ explorer, visibility, statuses, target, inspectionSequence }: { explorer: ExplorerSummary; visibility: LayerVisibility; statuses: LayerStatuses; target?: ScienceTarget; inspectionSequence: number }) {
+export function InformationPanel({ explorer, visibility, statuses, target, inspectionSequence, planningGrid }: { explorer: ExplorerSummary; visibility: LayerVisibility; statuses: LayerStatuses; target?: ScienceTarget; inspectionSequence: number; planningGrid?: TerrainGrid }) {
   const contentRef = useRef<HTMLDivElement>(null)
   useEffect(() => {
     if (target && contentRef.current) contentRef.current.scrollTop = 0
@@ -22,6 +24,7 @@ export function InformationPanel({ explorer, visibility, statuses, target, inspe
       </div>
       <div className="sources-content" ref={contentRef}>
         {target && <FeatureDetails target={target} />}
+        {planningGrid && <PlanningTerrainDetails grid={planningGrid} />}
         <TerrainInspection target={target} />
         <details className="source-detail" open={!explorer.mapShown}>
           <summary>NASA visual Mars overview</summary>
@@ -38,7 +41,7 @@ export function InformationPanel({ explorer, visibility, statuses, target, inspe
             <details className="source-detail" key={layer.id} open>
               <summary>{layer.name}</summary>
               <p className="source-mission">{layer.mission}</p>
-              <p className="source-state">{!visibility[layer.id] ? 'Hidden by you' : status.phase === 'checking' ? 'Checking service metadata' : status.phase === 'unavailable' ? 'Service unavailable' : !explorer.mapShown ? 'Selected for map exploration' : status.coverage === 'outside' ? 'Outside coverage' : layer.id === 'ctx' && !explorer.localDetail ? 'Waiting for local zoom' : layerStatusLabel(status, true)}</p>
+              <p className="source-state">{!visibility[layer.id] ? 'Hidden by you' : status.phase === 'checking' ? 'Checking service metadata' : status.phase === 'unavailable' ? 'Service unavailable' : !explorer.mapShown ? 'Selected for map exploration' : status.coverage === 'outside' ? 'Outside coverage' : layer.id !== 'mola' && !explorer.localDetail ? 'Waiting for local zoom' : layerStatusLabel(status, true)}</p>
               <dl>
                 <dt>Resolution</dt><dd>{layer.resolution}</dd>
                 <dt>Service coverage (degrees)</dt><dd>{layer.extent[0].toFixed(4)} to {layer.extent[2].toFixed(4)} longitude<br />{layer.extent[1].toFixed(4)} to {layer.extent[3].toFixed(4)} latitude</dd>
@@ -56,7 +59,7 @@ export function InformationPanel({ explorer, visibility, statuses, target, inspe
         <details className="source-detail coordinate-detail">
           <summary>Coordinate reference</summary>
           <p className="helper">This map uses Trek’s shared angular image grid: longitude first, latitude second; degrees, with east-positive longitude. No Earth projection or physical scale calculation is used.</p>
-          <p className="helper">Trek advertises inconsistent authority labels. Both layers use the same inspected origin and matrix geometry. This aligns the service grids; it does not validate fine image registration or the native CTX latitude convention.</p>
+          <p className="helper">Trek advertises inconsistent authority labels. All three layers use the same inspected angular origin and matrix geometry. Controlled CTX native planetocentric geometry agrees with the DEM source frame. Preliminary CTX latitude interpretation and fine image registration remain unresolved. Shared geometry does not certify absolute named-feature placement.</p>
           <p className="source-id">Advertised: {ADVERTISED_CRS}</p>
           <a href={TREK_DOCUMENTATION} target="_blank" rel="noreferrer">Trek service documentation</a>
         </details>

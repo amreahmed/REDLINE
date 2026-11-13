@@ -12,3 +12,6 @@ docs/evidence/challenge-resources-2026-11-13/perseverance-raw-gallery.html white
 docs/evidence/challenge-resources-2026-11-13/perseverance-raw-api-example.json whitespace=-blank-at-eol,-blank-at-eof
 # Preserve the exact canonical bytes verified by the browser's terrain integrity check.
 public/data/jezero-terrain-windows.json -text
+public/data/jezero-terrain-grid.json -text
+public/data/jezero-terrain-grid.f32 -text
+docs/evidence/controlled-jezero-grid/** -text whitespace=-blank-at-eol,-blank-at-eof,-space-before-tab

@@ -11,6 +11,10 @@ describe('Mars Trek angular tile grid (test positions, not observations)', () =>
     expect(tileForCoordinate([77.5, 18.5], 9)).toEqual([9, 732, 203])
     expect(tileForCoordinate([18.5, 77.5], 9)).not.toEqual([9, 732, 203])
   })
+  it('supports controlled CTX matrix 13 and rejects unsupported higher levels', () => {
+    expect(tileForCoordinate([77.69, 18.41], 13)).toEqual([13, 11727, 3258])
+    expect(tileForCoordinate([77.69, 18.41], 14)).toBeNull()
+  })
   it.each([[180, 0], [0, -90], [181, 0], [0, 91], [NaN, 0], [0, Infinity]])('rejects out-of-grid coordinates %s %s', (x, y) => {
     expect(tileForCoordinate([x, y], 9)).toBeNull()
   })

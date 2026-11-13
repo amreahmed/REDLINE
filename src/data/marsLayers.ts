@@ -3,7 +3,7 @@ import type { LayerDefinition } from '../features/map/types'
 export const TREK_DOCUMENTATION = 'https://trek.nasa.gov/tiles/apidoc/trekAPI.html?body=mars'
 export const ADVERTISED_CRS = 'urn:ogc:def:crs:EPSG::104905'
 
-// Bundled provenance from the saved 25 October 2026 provider responses.
+// Bundled provenance from saved 25 October and 13 November 2026 provider responses.
 // These are display products. Catalog ingestion dates are not acquisition dates.
 export const MARS_LAYERS: readonly LayerDefinition[] = [
   {
@@ -35,6 +35,21 @@ export const MARS_LAYERS: readonly LayerDefinition[] = [
     resolution: 'CTX instrument: up to 6 m/pixel. Effective mosaic resolution is unverified; tile levels 0–12.',
     attribution: 'NASA/MRO/CTX; served by NASA/JPL-Caltech Mars Trek',
     limitation: 'Preliminary mosaic with regional coverage. Fine registration and the native product latitude convention remain unverified.',
+  },
+  {
+    id: 'controlledCtx',
+    name: 'Controlled Jezero CTX imagery',
+    productId: 'JEZ_ctx_B_soc_008_orthoMosaic_6m_Eqc_latTs0_lon0',
+    mission: 'Mars Reconnaissance Orbiter / CTX; USGS photogrammetric mosaic',
+    description: 'Source-controlled regional orthomosaic',
+    capabilitiesUrl: 'https://trek.nasa.gov/tiles/Mars/EQ/JEZ_ctx_B_soc_008_orthoMosaic_6m_Eqc_latTs0_lon0/1.0.0/WMTSCapabilities.xml',
+    sourceUrl: 'https://doi.org/10.5066/P9GV1ND3',
+    format: 'image/png',
+    extent: [77.1604655, 18.2110274, 77.6991776, 18.7211945],
+    maxLevel: 13,
+    resolution: '6 m native projected image pixels; rendered angular tiles at levels 0–13 resample the source.',
+    attribution: 'NASA/MRO/CTX; USGS Astrogeology (doi:10.5066/P9GV1ND3); served by NASA/JPL-Caltech Mars Trek',
+    limitation: 'Rendered imagery, not elevation. Native equirectangular source uses planetocentric latitude, positive-east longitude, and a 3,396,190 m sphere. Shared photogrammetric lineage supports placement relative to the source DEM; it does not validate MDIM 2.1 feature-center registration or new absolute landmark accuracy.',
   },
 ]
 

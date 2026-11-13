@@ -1,6 +1,11 @@
 export type Bounds = [west: number, south: number, east: number, north: number]
-export type LayerId = 'mola' | 'ctx'
+export const LAYER_IDS = ['mola', 'ctx', 'controlledCtx'] as const
+export const DETAIL_LAYER_IDS = ['controlledCtx', 'ctx'] as const
+export type LayerId = typeof LAYER_IDS[number]
+export type DetailLayerId = typeof DETAIL_LAYER_IDS[number]
 export type Coverage = 'inside' | 'partial' | 'outside'
+export type DetailLayerCoverage = Record<DetailLayerId, Coverage>
+export type GridOverlayEndpoint = { role: 'origin' | 'destination'; coordinate: readonly [number, number] }
 
 export type LayerDefinition = {
   id: LayerId
@@ -61,7 +66,7 @@ export function layerStatusLabel(status: LayerStatus, visible: boolean) {
 }
 
 export function viewportMessage(visibility: LayerVisibility, statuses: LayerStatuses): string | null {
-  const visible = (['mola', 'ctx'] as const).filter((id) => visibility[id]).map((id) => statuses[id])
+  const visible = LAYER_IDS.filter((id) => visibility[id]).map((id) => statuses[id])
   if (!visible.length) return 'Choose a layer in Mission control to display imagery.'
   const inCoverage = visible.filter((status) => status.coverage !== 'outside')
   if (!inCoverage.length) return 'This view is outside the selected layers’ coverage. Reset to Jezero to return.'

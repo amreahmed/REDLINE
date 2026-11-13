@@ -17,31 +17,31 @@
 
 ### 1. Controlled imagery contract
 
-- [ ] Recheck exact Mars Trek layer `JEZ_ctx_B_soc_008_orthoMosaic_6m_Eqc_latTs0_lon0`, capabilities, geographic bounds, matrix/axis geometry, maximum usable detail, tile format and CORS in the isolated browser.
-- [ ] Validate the provider's native projected corner, pixel spacing and geographic transform against the independently saved labels/VRT and DEM grid. Retain the distinct image/DEM outer bounds and documented photogrammetric lineage.
-- [ ] Implement the controlled layer with its own attribution, source ID and loading/error/coverage states. Explicitly explain image resampling, source resolution and bounds. No source may silently replace a failed layer.
-- [ ] Verify map pixel/corner placement and displayed coverage independently. Shared lineage supports relative source placement; do not claim new absolute landmark accuracy or MDIM 2.1 registration.
+- [x] Recheck exact Mars Trek layer `JEZ_ctx_B_soc_008_orthoMosaic_6m_Eqc_latTs0_lon0`, capabilities, geographic bounds, matrix/axis geometry, maximum usable detail, tile format and CORS in the isolated browser.
+- [x] Validate the provider's native projected corner, pixel spacing and geographic transform against the independently saved labels/VRT and DEM grid. Retain the distinct image/DEM outer bounds and documented photogrammetric lineage.
+- [x] Implement the controlled layer with its own attribution, source ID and loading/error/coverage states. Explicitly explain image resampling, source resolution and bounds. No source may silently replace a failed layer.
+- [x] Verify map pixel/corner placement and displayed coverage independently. Shared lineage supports relative source placement; do not claim new absolute landmark accuracy or MDIM 2.1 registration.
 
 ### 2. Continuous native support
 
-- [ ] Select a bounded demonstration area inside the verified numerical product after inspecting actual support. It must contain a connected, valid terrain region suitable for later alternative routes.
-- [ ] Extract native float32 elevations/mask with deterministic bytes, pinned source/derived hashes, origin/dimensions and metadata. Measure payload/build impact before choosing an encoding; avoid importing the full TIFF into JavaScript.
-- [ ] Verify every extracted cell independently, test NoData/outside/edge cases, and make unavailable support visible. No interpolation or silent nearest-valid snapping.
-- [ ] Document provider-declared sphere heights and unresolved vertical-reference interpretation; no mixed-datum calculation.
+- [x] Select a bounded demonstration area inside the verified numerical product after inspecting actual support. It must contain a connected, valid terrain region suitable for later alternative routes.
+- [x] Extract native float32 elevations/mask with deterministic bytes, pinned source/derived hashes, origin/dimensions and metadata. Measure payload/build impact before choosing an encoding; avoid importing the full TIFF into JavaScript.
+- [x] Verify every extracted cell independently, test NoData/outside/edge cases, and make unavailable support visible. No interpolation or silent nearest-valid snapping.
+- [x] Document provider-declared sphere heights and unresolved vertical-reference interpretation; no mixed-datum calculation.
 
 ### 3. Endpoint fitness and user journey
 
-- [ ] Let the user choose two distinct **hypothetical valid grid cells**. Display selected coordinates, source row/column, coverage and snapping/precision policy. Reject unavailable support explicitly.
-- [ ] Keep Jezero/Belva/Neretva reference centers separate from precise grid endpoint identity. Choosing a named reference must not silently certify its location or snap it into a traversable source pixel.
-- [ ] Clear/swap and keyboard selection must work. Source changes, panel changes and retries must preserve state or explicitly invalidate incompatible endpoints.
-- [ ] Update route-disabled text to the actual remaining gates: physical metric/cost validation and route computation. No invented route line, slope, hazard or safety score.
+- [x] Let the user choose two distinct **hypothetical valid grid cells**. Display selected coordinates, source row/column, coverage and snapping/precision policy. Reject unavailable support explicitly.
+- [x] Keep Jezero/Belva/Neretva reference centers separate from precise grid endpoint identity. Choosing a named reference must not silently certify its location or snap it into a traversable source pixel.
+- [x] Clear/swap and keyboard selection must work. Source changes, panel changes and retries must preserve state or explicitly invalidate incompatible endpoints.
+- [x] Update route-disabled text to the actual remaining gates: physical metric/cost validation and route computation. No invented route line, slope, hazard or safety score.
 
 ### 4. Verify and checkpoint
 
-- [ ] Run source/evidence verification and independent contract/registration review.
-- [ ] Run lint, typecheck, relevant tests and production build.
-- [ ] Smoke-test imagery, valid/outside/missing support, endpoint changes, retry, keyboard and 320 px layout in a background isolated in-app browser; verify production preview and save evidence.
-- [ ] Review staged diff/hashes, update README and handoff, and make a local milestone commit. No push/deploy/submission without the user's applicable authorization.
+- [x] Run source/evidence verification and independent contract/registration review.
+- [x] Run lint, typecheck, relevant tests and production build.
+- [x] Smoke-test imagery, valid/outside/missing support, endpoint changes, retry, keyboard and 320 px layout in a background isolated in-app browser; verify production preview and save evidence.
+- [x] Review staged diff/hashes, update README and handoff, and make a local milestone commit. No push/deploy/submission without the user's applicable authorization.
 
 ## Following milestones
 
@@ -50,3 +50,7 @@
 3. **Submission readiness:** verify current official challenge/rules and required formats, then finish deployment, attribution/license record and a concise live demonstration. Treat local engineering completion and competition eligibility/submission as separate evidence gates.
 
 NASA Worldview supplies Earth imagery and can inform interface patterns. Curiosity's Mount Sharp proposed route illustrates route communication in Gale crater. Neither is an interchangeable Jezero DEM or traverse input. More resource integrations are optional until the core evidence-based planning journey works.
+
+## Completed milestone evidence
+
+Implemented and checked on 13 November 2026. See [controlled Jezero grid verification](../../controlled-jezero-grid-verification.md) for exact commands, 311 test results, isolated-browser production/failure/layout checks, native-source comparisons and remaining scientific limits. Actual crop NoData count is zero; synthetic NoData rejection is unit-tested, while altered runtime bytes were rejected in the browser. The local commit is recorded at handoff.

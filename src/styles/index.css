@@ -86,6 +86,15 @@ button:disabled { cursor: not-allowed; }
 .endpoint-actions { display: flex; gap: 8px; flex-wrap: wrap; margin: 14px 0 20px; }
 .endpoint-actions button:disabled, .route-unavailable { opacity: .6; }
 .endpoint-error { margin-top: 10px; }
+.grid-planner > .helper { margin: 12px 0; }
+.grid-cell-fields { display: grid; gap: 8px; margin: 18px 0; }
+.grid-cell-fields input { min-height: 42px; width: 100%; min-width: 0; padding: 9px; border: 1px solid #354350; border-radius: 5px; background: var(--color-space); color: var(--color-ink); font-size: 12px; }
+.grid-endpoint { padding-top: 12px; border-top: 1px solid var(--line); }
+.grid-endpoint h4 { font-size: 12px; margin-bottom: 8px; }
+.grid-notice { padding: 10px; border-left: 2px solid var(--color-science); }
+.grid-pick-actions { margin: 14px 0; }
+.grid-pick-actions button { margin: 8px 8px 0 0; }
+.grid-pick-status { position: absolute; top: 14px; left: 14px; right: 14px; z-index: 5; pointer-events: none; padding: 10px; background: #142029ed; border: 1px solid var(--color-science); font-size: 12px; line-height: 1.7; }
 .route-unavailable { width: 100%; min-height: 42px; border: 1px solid var(--line); border-radius: 5px; padding: 8px; color: var(--color-muted); font-size: 12px; margin-bottom: 10px; }
 .reference-detail { padding: 18px; border: 1px solid #425966; border-radius: 6px; background: #142029; margin-bottom: 18px; }
 .reference-detail h3 { font-size: 16px; font-weight: 600; margin: 9px 0 12px; }

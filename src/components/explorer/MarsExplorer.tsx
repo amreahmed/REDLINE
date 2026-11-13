@@ -15,7 +15,18 @@ import { createAnimationPlayer, easeInOut } from '../../features/explorer/animat
 import { createJezeroStages, createReturnStages } from '../../features/explorer/jezeroFlight'
 import { Icon } from '../shared/Icon'
 import { SCIENCE_TARGETS, targetById } from '../../data/scienceTargets'
-import type { MissionSelection, TargetId } from '../../features/mission/types'
+import type { EndpointRole, MissionSelection, TargetId } from '../../features/mission/types'
+import type { GridSelection } from '../../features/mission/gridSelection'
+import type { TerrainGrid } from '../../features/terrain/gridTypes'
+import { terrainGridBounds } from '../../features/terrain/terrainGrid'
+import type { GridOverlayEndpoint } from '../../features/map/types'
+
+function gridEndpoints(selection: GridSelection): GridOverlayEndpoint[] {
+  return (['origin', 'destination'] as const).flatMap((role) => {
+    const cell = selection[role]
+    return cell ? [{ role, coordinate: [cell.lon, cell.lat] as const }] : []
+  })
+}
 
 type Props = {
   visibility: LayerVisibility
@@ -28,9 +39,16 @@ type Props = {
   selectedTargetId: TargetId | null
   focusRequest: { id: TargetId; sequence: number; focusWorkspace: boolean } | null
   onInspectTarget: (id: TargetId) => void
+  planningGrid: TerrainGrid | null
+  gridSelection: GridSelection
+  gridFocusRequest: number
+  centerPickRequest: number
+  gridPickRole: EndpointRole | null
+  onPickCoordinate: (coordinate: [number, number]) => void
+  onNavigate: () => void
 }
 
-export function MarsExplorer({ visibility, statuses, retryRequest, jezeroRequest, onStatus, onSummary, missionSelection, selectedTargetId, focusRequest, onInspectTarget }: Props) {
+export function MarsExplorer({ visibility, statuses, retryRequest, jezeroRequest, onStatus, onSummary, missionSelection, selectedTargetId, focusRequest, onInspectTarget, planningGrid, gridSelection, gridFocusRequest, centerPickRequest, gridPickRole, onPickCoordinate, onNavigate }: Props) {
   const workspaceRef = useRef<HTMLDivElement>(null)
   const globeHostRef = useRef<HTMLDivElement>(null)
   const mapHostRef = useRef<HTMLDivElement>(null)
@@ -44,6 +62,7 @@ export function MarsExplorer({ visibility, statuses, retryRequest, jezeroRequest
   const [view, setView] = useState<ViewStatus | null>(null)
   const viewRef = useRef<ViewStatus | null>(null)
   const [mapError, setMapError] = useState<string | null>(null)
+  const [controlledImageryReady, setControlledImageryReady] = useState(false)
   const visitedMap = useRef(false)
   const playerRef = useRef<ReturnType<typeof createAnimationPlayer> | null>(null)
   const preferencesRef = useRef(visibility)
@@ -51,6 +70,10 @@ export function MarsExplorer({ visibility, statuses, retryRequest, jezeroRequest
   const missionRef = useRef(missionSelection)
   const selectedTargetRef = useRef(selectedTargetId)
   const inspectTargetRef = useRef(onInspectTarget)
+  const gridRef = useRef(planningGrid)
+  const gridSelectionRef = useRef(gridSelection)
+  const gridPickRoleRef = useRef(gridPickRole)
+  const pickCoordinateRef = useRef(onPickCoordinate)
   const [composition, setComposition] = useState<number | null>(null)
   const [stageMessage, setStageMessage] = useState('Approaching Jezero')
   const [notice, setNotice] = useState<string | null>(null)
@@ -60,7 +83,11 @@ export function MarsExplorer({ visibility, statuses, retryRequest, jezeroRequest
     missionRef.current = missionSelection
     selectedTargetRef.current = selectedTargetId
     inspectTargetRef.current = onInspectTarget
-  }, [visibility, statuses, missionSelection, selectedTargetId, onInspectTarget])
+    gridRef.current = planningGrid
+    gridSelectionRef.current = gridSelection
+    gridPickRoleRef.current = gridPickRole
+    pickCoordinateRef.current = onPickCoordinate
+  }, [visibility, statuses, missionSelection, selectedTargetId, onInspectTarget, planningGrid, gridSelection, gridPickRole, onPickCoordinate])
   useEffect(() => {
     const player = createAnimationPlayer()
     playerRef.current = player
@@ -165,13 +192,14 @@ export function MarsExplorer({ visibility, statuses, retryRequest, jezeroRequest
         viewRef.current = next
         setView(next)
         send({ type: 'map-zoom', value: next.zoom, overviewAvailable: globeStatusRef.current.phase === 'ready' })
-      }, { keyboard: false, onInspectTarget: (id) => inspectTargetRef.current(id) })
+      }, { keyboard: false, onInspectTarget: (id) => inspectTargetRef.current(id), onPickCoordinate: (coordinate) => { if (gridPickRoleRef.current && mapRef.current?.hasRenderedImagery('controlledCtx')) pickCoordinateRef.current(coordinate) }, onControlledImageryReady: (ready) => { if (mounted) setControlledImageryReady(ready) } })
       // A retained map state must also initialize a replacement controller.
       const current = stateRef.current
       mapRef.current.setActive(current.phase === 'map')
-      const initialVisibility = explorerLayerVisibility(preferencesRef.current, current.phase !== 'overview', current.localDetail, statusesRef.current.ctx.coverage)
-      mapRef.current.setVisibility({ mola: initialVisibility.mola, ctx: initialVisibility.ctx })
+      const initialVisibility = explorerLayerVisibility(preferencesRef.current, current.phase !== 'overview', current.localDetail, { ctx: statusesRef.current.ctx.coverage, controlledCtx: statusesRef.current.controlledCtx.coverage })
+      mapRef.current.setVisibility(initialVisibility)
       mapRef.current.setMissionFeatures(SCIENCE_TARGETS, missionRef.current, selectedTargetRef.current)
+      mapRef.current.setGridOverlay(gridRef.current ? terrainGridBounds(gridRef.current) : null, gridEndpoints(gridSelectionRef.current))
     } catch {
       queueMicrotask(() => { if (mounted) setMapError('The map renderer could not start. The NASA overview remains available; reload to retry the map.') })
     }
@@ -181,6 +209,17 @@ export function MarsExplorer({ visibility, statuses, retryRequest, jezeroRequest
   useEffect(() => {
     mapRef.current?.setMissionFeatures(SCIENCE_TARGETS, missionSelection, selectedTargetId)
   }, [missionSelection, selectedTargetId])
+  useEffect(() => {
+    mapRef.current?.setGridOverlay(planningGrid ? terrainGridBounds(planningGrid) : null, gridEndpoints(gridSelection))
+  }, [planningGrid, gridSelection])
+  useEffect(() => {
+    if (!gridFocusRequest || !gridRef.current || !mapRef.current) return
+    arriveDirect('Planning crop opened. Grid endpoints are hypothetical native-cell choices.')
+    mapRef.current.focusGrid(terrainGridBounds(gridRef.current))
+  }, [gridFocusRequest, arriveDirect])
+  useEffect(() => {
+    if (centerPickRequest && gridPickRoleRef.current) mapRef.current?.pickViewCenter()
+  }, [centerPickRequest])
 
   useEffect(() => {
     if (!focusRequest) return
@@ -212,8 +251,8 @@ export function MarsExplorer({ visibility, statuses, retryRequest, jezeroRequest
   const paneOpacities = explorerPaneOpacities(state, composition)
   const transitioning = isTransitioning(state)
   // Keep the outgoing map image through its fade; stop tile rendering once overview settles.
-  const effective = explorerLayerVisibility(visibility, state.phase !== 'overview', state.localDetail, statuses.ctx.coverage)
-  useEffect(() => { mapRef.current?.setVisibility({ mola: effective.mola, ctx: effective.ctx }) }, [effective.mola, effective.ctx])
+  const effective = explorerLayerVisibility(visibility, state.phase !== 'overview', state.localDetail, { ctx: statuses.ctx.coverage, controlledCtx: statuses.controlledCtx.coverage })
+  useEffect(() => { mapRef.current?.setVisibility({ mola: effective.mola, ctx: effective.ctx, controlledCtx: effective.controlledCtx }) }, [effective.mola, effective.ctx, effective.controlledCtx])
   useEffect(() => { if (retryRequest) mapRef.current?.retry(retryRequest.id) }, [retryRequest])
   useEffect(() => {
     globeRef.current?.setActive(state.phase === 'overview')
@@ -229,7 +268,7 @@ export function MarsExplorer({ visibility, statuses, retryRequest, jezeroRequest
       const destinationOpacity = state.phase === 'entering-map' ? 1 : 0
       setStageMessage(destinationOpacity ? 'Loading the real map context' : 'Returning to the overview')
       player.start([
-        { durationMs: 0, onFrame: () => {}, ready: reduced || !destinationOpacity ? undefined : () => contextCanOpenWithoutImagery(preferencesRef.current, stateRef.current.localDetail, statusesRef.current.ctx.coverage) || !!mapRef.current?.hasRenderedImagery(), timeoutMs: 8000, onTimeout: () => cancelTransition('Map imagery could not be confirmed. Retry the selected layers, or open Jezero directly.') },
+        { durationMs: 0, onFrame: () => {}, ready: reduced || !destinationOpacity ? undefined : () => contextCanOpenWithoutImagery(preferencesRef.current, stateRef.current.localDetail, { ctx: statusesRef.current.ctx.coverage, controlledCtx: statusesRef.current.controlledCtx.coverage }) || !!mapRef.current?.hasRenderedImagery(), timeoutMs: 8000, onTimeout: () => cancelTransition('Map imagery could not be confirmed. Retry the selected layers, or open Jezero directly.') },
         { durationMs: reduced ? 0 : HANDOFF_MS, onFrame: (p) => setComposition(destinationOpacity ? easeInOut(p) : 1 - easeInOut(p)) },
       ], { onComplete: finishTransition, onError: () => cancelTransition('The transition was interrupted. Retry the map or overview.') })
     }
@@ -244,7 +283,7 @@ export function MarsExplorer({ visibility, statuses, retryRequest, jezeroRequest
     window.addEventListener('keydown', escape)
     return () => { media.removeEventListener('change', reduceMotion); window.removeEventListener('keydown', escape) }
   }, [transitioning, skipTransition, cancelTransition])
-  useEffect(() => { onSummary({ phase: state.phase, mapShown, localDetail: state.localDetail, globe }) }, [state.phase, mapShown, state.localDetail, globe, onSummary])
+  useEffect(() => { onSummary({ phase: state.phase, mapShown, localDetail: state.localDetail, globe, controlledImageryReady }) }, [state.phase, mapShown, state.localDetail, globe, controlledImageryReady, onSummary])
   useEffect(() => {
     if (jezeroRequest) exploreJezero()
   }, [jezeroRequest, exploreJezero])
@@ -261,23 +300,25 @@ export function MarsExplorer({ visibility, statuses, retryRequest, jezeroRequest
       <div className="viewport-top map-toolbar explorer-toolbar">
         <div className="viewport-label flex items-center gap-2"><Icon name="orbit" size={17} /><h1 id="explorer-heading">Mars explorer</h1></div>
         <span className="exploration-stage">{mapShown ? (state.localDetail ? 'Local detail' : 'Regional context') : 'Planet overview'}</span>
-        <button className="grid-button" type="button" disabled={!canNavigate || globe.phase === 'loading'} onClick={() => mapShown ? exploreJezero() : globeRef.current?.reset()}>{mapShown ? 'Jezero detail' : 'Reset overview'}</button>
+        <button className="grid-button" type="button" disabled={!canNavigate || globe.phase === 'loading'} onClick={() => { onNavigate(); if (mapShown) exploreJezero(); else globeRef.current?.reset() }}>{mapShown ? 'Jezero detail' : 'Reset overview'}</button>
       </div>
       <div id="explorer-workspace" ref={workspaceRef} className="explorer-surface" tabIndex={0} role="region" aria-label="Interactive Mars explorer" aria-describedby="explorer-help handoff-limit" onPointerDown={(event) => { if (!(event.target as HTMLElement).closest('button,a')) event.currentTarget.focus({ preventScroll: true }) }} onKeyDown={(event) => {
         if (event.target !== event.currentTarget || event.altKey || event.ctrlKey || event.metaKey || !canNavigate) return
         const directions: Record<string, [number, number]> = { ArrowLeft: [-1, 0], ArrowRight: [1, 0], ArrowUp: [0, -1], ArrowDown: [0, 1] }
         if (directions[event.key]) { event.preventDefault(); move(...directions[event.key]) }
-        if (['+', '=', '-', 'Home'].includes(event.key)) { event.preventDefault(); if (event.key === 'Home') { if (mapShown) mapRef.current?.focusJezero(); else globeRef.current?.reset() } else zoom(event.key === '-' ? -1 : 1) }
+        if (event.key === 'Enter' && gridPickRole && mapShown) { event.preventDefault(); mapRef.current?.pickViewCenter() }
+        if (['+', '=', '-', 'Home'].includes(event.key)) { event.preventDefault(); if (event.key === 'Home') { onNavigate(); if (mapShown) mapRef.current?.focusJezero(); else globeRef.current?.reset() } else zoom(event.key === '-' ? -1 : 1) }
       }}>
         <div className="explorer-pane globe-pane" data-visible={!mapShown} style={{ opacity: paneOpacities.globe }} aria-hidden={mapShown} inert={state.phase !== 'overview'}><div className="globe-host" ref={globeHostRef} /></div>
         <div className="explorer-pane map-pane" data-visible={mapShown} style={{ opacity: paneOpacities.map }} aria-hidden={!mapShown} inert={state.phase !== 'map'}><div className="ol-host" ref={mapHostRef} /></div>
         {!mapShown && globe.phase !== 'ready' && <div className="globe-message" role="status">
           <Icon name="orbit" size={30} /><p>{globe.message}</p>
           {globe.phase === 'error' && <button type="button" className="grid-button" onClick={retryGlobe}>Retry overview</button>}
-          <button type="button" className="grid-button" disabled={transitioning} onClick={() => send({ type: 'enter-map' })}>Continue to map context</button>
+          <button type="button" className="grid-button" disabled={transitioning} onClick={() => { onNavigate(); send({ type: 'enter-map' }) }}>Continue to map context</button>
         </div>}
         {mapShown && mapMessage && <div className="map-message reference-map-message" role="status"><p>{mapMessage}</p></div>}
         {mapShown && busy && !mapMessage && <div className="map-loading" role="status">Loading NASA Mars Trek imagery…</div>}
+        {mapShown && gridPickRole && <div className="grid-pick-status" role="status">Picking grid {gridPickRole}: click inside the boundary, or pan and press Enter to use the map center.</div>}
         {transitioning && <div className="handoff-status flight-status">
           <div><p role="status">{stageMessage}</p><span>Scripted visual approach · approximate crater navigation</span></div>
           <div className="flight-actions"><button type="button" className="grid-button" onClick={skipTransition}>Skip animation</button><button type="button" className="grid-button" onClick={() => cancelTransition()}>Cancel</button></div>
@@ -291,12 +332,13 @@ export function MarsExplorer({ visibility, statuses, retryRequest, jezeroRequest
           <button type="button" disabled={!canNavigate || (mapShown && !view?.canZoomIn)} aria-label="Zoom in" onClick={() => zoom(1)}>+</button>
           <button type="button" disabled={!canNavigate || (mapShown && !view?.canZoomOut)} aria-label="Zoom out" onClick={() => zoom(-1)}>−</button>
         </div>
-        <button className="grid-button" type="button" disabled={transitioning} onClick={() => send({ type: mapShown ? 'enter-overview' : 'enter-map' })}>{mapShown ? 'Return to overview' : 'Explore map context'}</button>
+        <button className="grid-button" type="button" disabled={transitioning} onClick={() => { onNavigate(); send({ type: mapShown ? 'enter-overview' : 'enter-map' }) }}>{mapShown ? 'Return to overview' : 'Explore map context'}</button>
       </div>
       <div className="map-position"><span>{mapShown ? 'Service grid center' : 'Visual overview · no geographic picking'}</span><span>{mapShown && view ? `${view.center[0].toFixed(3)}° lon, ${view.center[1].toFixed(3)}° lat` : 'Zoom enters Jezero initially, then resumes the map area'}</span></div>
       <div className="feature-legend" aria-label="Feature marker legend">
-        <span><b>O</b> Origin</span><span><b>D</b> Destination</span><span><b>◇</b> Reference</span>
+        <span><b>O</b> Reference origin</span><span><b>D</b> Reference destination</span><span><b>◇</b> Reference</span>
         <p>Approximate feature centers · imagery registration unverified{!mapShown ? ' · markers appear on the regional map' : ''}</p>
+        {planningGrid && <><span><b>G-O</b> Grid origin</span><span><b>G-D</b> Grid destination</span><p>Outline: prototype terrain crop · hypothetical native cells · shown with controlled CTX</p></>}
       </div>
       <div className="viewport-bottom map-help">
         <p id="explorer-help">Drag to {mapShown ? 'pan' : 'rotate'}; scroll or pinch to zoom. Arrow keys and + / − work with focus here. Zoom {mapShown ? 'out for the overview; in near Jezero for CTX detail' : 'in to continue to the real map'}.</p>
