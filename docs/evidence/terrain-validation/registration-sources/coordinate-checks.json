@@ -1,0 +1,103 @@
+{
+  "radiusM": 3396190,
+  "sourceProjectedOriginM": [
+    4573663.250853,
+    1109693.140188
+  ],
+  "publishedGeographicUpperLeftDeg": [
+    77.16046545922367,
+    18.721194481872804
+  ],
+  "calculatedGeographicUpperLeftDeg": [
+    77.16046545922367,
+    18.721194481872804
+  ],
+  "upperLeftErrorDeg": [
+    0,
+    0
+  ],
+  "publishedGeographicPixelStepDeg": [
+    0.00010122362914869109,
+    -0.00010122362914869109
+  ],
+  "calculatedGeographicPixelStepDeg": 0.0001012236291486913,
+  "publishedGeographicLowerRightDeg": [
+    77.69917761355299,
+    18.211027390963398
+  ],
+  "calculatedGeographicLowerRightDeg": [
+    77.699177613553,
+    18.211027390963398
+  ],
+  "topLeftPixelCenterDeg": [
+    77.16051607103824,
+    18.721143870058228
+  ],
+  "sourceReferencePositioning": [
+    {
+      "id": "jezero",
+      "publishedCoordinateDeg": [
+        77.69,
+        18.41
+      ],
+      "calculatedProjectedCoordinateM": [
+        4605051.25058566,
+        1091247.1814040674
+      ],
+      "orthoimagePixelCornerCoordinates": [
+        5231.333288776688,
+        3074.3264639887493
+      ],
+      "insideOrthoimageEnvelope": true,
+      "numericalDemCoverage": "not tested by orthoimage geometry"
+    },
+    {
+      "id": "belva",
+      "publishedCoordinateDeg": [
+        77.38,
+        18.48
+      ],
+      "calculatedProjectedCoordinateM": [
+        4586676.094353435,
+        1095396.410230699
+      ],
+      "orthoimagePixelCornerCoordinates": [
+        2168.8072500724033,
+        2382.788326216823
+      ],
+      "insideOrthoimageEnvelope": true,
+      "numericalDemCoverage": "not tested by orthoimage geometry"
+    },
+    {
+      "id": "neretva",
+      "publishedCoordinateDeg": [
+        77.2,
+        18.55
+      ],
+      "calculatedProjectedCoordinateM": [
+        4576006.648799241,
+        1099545.6390573303
+      ],
+      "orthoimagePixelCornerCoordinates": [
+        390.56632437339675,
+        1691.250188444935
+      ],
+      "insideOrthoimageEnvelope": true,
+      "numericalDemCoverage": "not tested by orthoimage geometry"
+    }
+  ],
+  "quantizationInterpretation": {
+    "publishedStepDeg": 0.01,
+    "northSouthStepM": 592.7469752330622,
+    "northSouthHalfStepM": 296.3734876165311,
+    "note": "Rounding-step scale only; not a positional-error bound or provider accuracy claim."
+  },
+  "result": "PASS: arithmetic matches provider label/VRT, not landmark co-registration",
+  "physicalSpacingIllustration": {
+    "latitudeDeg": 18.48,
+    "projectedGridSpacingM": 20,
+    "northSouthReferenceSphereSpacingM": 20,
+    "eastWestParallelSpacingM": 18.968687152969864,
+    "note": "Illustration of distortion at the published Belva latitude for a 20m lat_ts=0 equirectangular grid. It is not a measured DEM cell or accepted terrain metric."
+  }
+}

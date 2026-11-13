@@ -250,6 +250,11 @@ button:disabled { cursor: not-allowed; opacity: .5; }
 .source-detail dt { color: var(--color-ink); font-weight: 600; margin-top: 12px; }
 .source-detail dd { color: var(--color-muted); margin-top: 4px; }
 .source-detail a { color: var(--color-science); text-decoration: underline; text-underline-offset: 3px; font-size: 12px; }
+.terrain-inspection h3 { font-size: 13px; font-weight: 600; margin-bottom: 12px; }
+.terrain-inspection > .helper { margin-bottom: 14px; }
+.terrain-inspection .source-warning { margin: 14px 0; }
+.terrain-inspection button { margin: 8px 0; }
+.terrain-result h4 { font-size: 12px; margin-top: 16px; font-weight: 600; }
 .source-links { display: flex; flex-wrap: wrap; gap: 16px; margin-top: 16px; }
 .source-id { overflow-wrap: anywhere; font-size: 10px; line-height: 1.8; color: var(--color-muted); margin-top: 16px; }
 .source-credit { font-size: 10px; line-height: 1.8; color: var(--color-muted); margin-top: 8px; }

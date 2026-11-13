@@ -6,6 +6,7 @@ import { MARS_GLOBE } from '../../data/marsGlobe'
 import type { ExplorerSummary } from '../../features/explorer/types'
 import type { ScienceTarget } from '../../features/mission/types'
 import { FeatureDetails } from '../mission/FeatureDetails'
+import { TerrainInspection } from '../mission/TerrainInspection'
 import { useEffect, useRef } from 'react'
 
 export function InformationPanel({ explorer, visibility, statuses, target, inspectionSequence }: { explorer: ExplorerSummary; visibility: LayerVisibility; statuses: LayerStatuses; target?: ScienceTarget; inspectionSequence: number }) {
@@ -21,6 +22,7 @@ export function InformationPanel({ explorer, visibility, statuses, target, inspe
       </div>
       <div className="sources-content" ref={contentRef}>
         {target && <FeatureDetails target={target} />}
+        <TerrainInspection target={target} />
         <details className="source-detail" open={!explorer.mapShown}>
           <summary>NASA visual Mars overview</summary>
           <p className="source-state" role="status">{explorer.globe.message}</p>
@@ -60,7 +62,7 @@ export function InformationPanel({ explorer, visibility, statuses, target, inspe
         </details>
       </div>
       <div className="information-footer">
-        <div className="flex items-center gap-2"><Icon name="info" size={16} /><span>Images, not a numerical DEM</span></div>
+        <div className="flex items-center gap-2"><Icon name="info" size={16} /><span>Map imagery and numerical terrain are separate</span></div>
         <p>No slope, distance, hazard, or route calculations are made.</p>
       </div>
     </aside>

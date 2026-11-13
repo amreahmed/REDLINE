@@ -1,0 +1,28 @@
+{
+  "source": "JEZ_ctx_B_soc_008_DTM_MOLAtopography_DeltaGeoid_20m_Eqc_latTs0_lon0",
+  "sourceBytes": 9662387,
+  "sourceSha256": "16a1aa66c3f48c1bca252795827db7b417876217aff0f5e1aff18027fab2327b",
+  "format": "Classic little-endian GeoTIFF, uncompressed single-row strips; not COG",
+  "width": 1596,
+  "height": 1512,
+  "bands": 1,
+  "sampleType": "IEEE float32",
+  "scale": 1,
+  "offset": 0,
+  "geotransform": [
+    4573663.250853,
+    20,
+    0,
+    1109693.140188,
+    0,
+    -20
+  ],
+  "noData": -3.4028226550889045e+38,
+  "validCells": 2413152,
+  "missingCells": 0,
+  "minimum": -2710.69580078125,
+  "maximum": -1515.53955078125,
+  "valueUnit": "meters according to provider FGDC",
+  "verticalReference": "Provider FGDC declares Mars 2020 IAU Sphere, radius 3396190m; not independently validated",
+  "metadataRangeMatchesActualPayload": false
+}

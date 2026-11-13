@@ -1,0 +1,32 @@
+[
+  {
+    "file": "science-ctx-dem-metadata.xml",
+    "requestedUrl": "https://asc-pds-services.s3.us-west-2.amazonaws.com/mosaic/mars2020_trn/CTX/ScienceInvestigationMaps_JPL/M20_JezeroCrater_CTXDEM_20m.xml",
+    "finalUrl": "https://asc-pds-services.s3.us-west-2.amazonaws.com/mosaic/mars2020_trn/CTX/ScienceInvestigationMaps_JPL/M20_JezeroCrater_CTXDEM_20m.xml",
+    "status": 200,
+    "startedAt": "2026-11-13T00:24:38.210Z",
+    "retrievedAt": "2026-11-13T00:24:39.101Z",
+    "bytes": 8786,
+    "sha256": "ddf03b3de30ffee3d04baea2c8ebdf4558b5490a84989440c7447658c2f62732"
+  },
+  {
+    "file": "ctx-f05-dem-metadata.xml",
+    "requestedUrl": "https://asc-pds-services.s3.us-west-2.amazonaws.com/mosaic/mars2020_trn/CTX/DTM_MOLAtopography_DeltaGeoid_20m_Jezero_F05X_v7pt1_Eqc_latTs0_lon0.xml",
+    "finalUrl": "https://asc-pds-services.s3.us-west-2.amazonaws.com/mosaic/mars2020_trn/CTX/DTM_MOLAtopography_DeltaGeoid_20m_Jezero_F05X_v7pt1_Eqc_latTs0_lon0.xml",
+    "status": 200,
+    "startedAt": "2026-11-13T00:24:38.314Z",
+    "retrievedAt": "2026-11-13T00:24:39.138Z",
+    "bytes": 15757,
+    "sha256": "c41ce7db1cbbd85fd0afb34de3780d27d4c4deb26f285036cc3fd6caf9ea35e2"
+  },
+  {
+    "file": "trn-generation-2020.pdf",
+    "requestedUrl": "https://www.hou.usra.edu/meetings/lpsc2020/pdf/2020.pdf",
+    "finalUrl": "https://www.hou.usra.edu/meetings/lpsc2020/pdf/2020.pdf",
+    "status": 200,
+    "startedAt": "2026-11-13T00:24:38.316Z",
+    "retrievedAt": "2026-11-13T00:24:39.191Z",
+    "bytes": 281805,
+    "sha256": "9c88a5fdfc0f3778ff17e16f2eccdc6b4a08ff05c5433d177989ca72a70465b1"
+  }
+]

@@ -5,3 +5,6 @@ docs/evidence/phase-2/Mars_MGS_MOLA_ClrShade_merge_global_463m.WMTSCapabilities.
 docs/evidence/terrain-detail-audit/** -text whitespace=-blank-at-eol
 docs/evidence/cinematic-jezero/** -text whitespace=-blank-at-eol
 docs/evidence/phase-3-targets/** -text whitespace=-blank-at-eol
+docs/evidence/terrain-validation/** -text whitespace=-blank-at-eol
+# Preserve the exact canonical bytes verified by the browser's terrain integrity check.
+public/data/jezero-terrain-windows.json -text

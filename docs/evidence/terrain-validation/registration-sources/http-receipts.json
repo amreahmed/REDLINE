@@ -1,0 +1,98 @@
+[
+  {
+    "file": "controlled-ctx-fgdc.xml",
+    "url": "https://asc-pds-services.s3.us-west-2.amazonaws.com/mosaic/mars2020_trn/CTX/JEZ_ctx_B_soc_008_orthoMosaic_6m_Eqc_latTs0_lon0.xml",
+    "finalUrl": "https://asc-pds-services.s3.us-west-2.amazonaws.com/mosaic/mars2020_trn/CTX/JEZ_ctx_B_soc_008_orthoMosaic_6m_Eqc_latTs0_lon0.xml",
+    "status": 200,
+    "startedAt": "2026-11-13T00:21:49.101Z",
+    "retrievedAt": "2026-11-13T00:21:50.010Z",
+    "bytes": 16025,
+    "sha256": "c8011a4aa19deebba164aba21ab2ea6326f5bdc7adc01b72bf7dda3d405a4226",
+    "contentType": "text/xml",
+    "cors": null
+  },
+  {
+    "file": "controlled-ctx-isis.lbl",
+    "url": "https://asc-pds-services.s3.us-west-2.amazonaws.com/mosaic/mars2020_trn/CTX/JEZ_ctx_B_soc_008_orthoMosaic_6m_Eqc_latTs0_lon0.lbl",
+    "finalUrl": "https://asc-pds-services.s3.us-west-2.amazonaws.com/mosaic/mars2020_trn/CTX/JEZ_ctx_B_soc_008_orthoMosaic_6m_Eqc_latTs0_lon0.lbl",
+    "status": 200,
+    "startedAt": "2026-11-13T00:21:49.230Z",
+    "retrievedAt": "2026-11-13T00:21:49.983Z",
+    "bytes": 1439,
+    "sha256": "a425525be2695ed727daf179563a5898cb2131691e8b21993426764abcf617ca",
+    "contentType": "binary/octet-stream",
+    "cors": null
+  },
+  {
+    "file": "controlled-ctx-pds3.lbl",
+    "url": "https://asc-pds-services.s3.us-west-2.amazonaws.com/mosaic/mars2020_trn/CTX/JEZ_ctx_B_soc_008_orthoMosaic_6m_Eqc_latTs0_lon0_pds3.lbl",
+    "finalUrl": "https://asc-pds-services.s3.us-west-2.amazonaws.com/mosaic/mars2020_trn/CTX/JEZ_ctx_B_soc_008_orthoMosaic_6m_Eqc_latTs0_lon0_pds3.lbl",
+    "status": 200,
+    "startedAt": "2026-11-13T00:21:49.234Z",
+    "retrievedAt": "2026-11-13T00:21:50.061Z",
+    "bytes": 2281,
+    "sha256": "9a4e1d99ce732d491681c661282bf95abdadaf354c7bec8652bb79e147a84b90",
+    "contentType": "binary/octet-stream",
+    "cors": null
+  },
+  {
+    "file": "controlled-ctx-geographic.vrt",
+    "url": "https://asc-pds-services.s3.us-west-2.amazonaws.com/mosaic/mars2020_trn/CTX/JEZ_ctx_B_soc_008_orthoMosaic_6m_Eqc_latTs0_lon0_dd.vrt",
+    "finalUrl": "https://asc-pds-services.s3.us-west-2.amazonaws.com/mosaic/mars2020_trn/CTX/JEZ_ctx_B_soc_008_orthoMosaic_6m_Eqc_latTs0_lon0_dd.vrt",
+    "status": 200,
+    "startedAt": "2026-11-13T00:21:49.236Z",
+    "retrievedAt": "2026-11-13T00:21:50.001Z",
+    "bytes": 2876,
+    "sha256": "08ebe6ba11aacb31ca62b65e8f411b3f01197bb7353ad08053e5b3e7e49d281b",
+    "contentType": "binary/octet-stream",
+    "cors": null
+  },
+  {
+    "file": "gdal-geotransform.html",
+    "url": "https://gdal.org/en/stable/tutorials/geotransforms_tut.html",
+    "finalUrl": "https://gdal.org/en/stable/tutorials/geotransforms_tut.html",
+    "status": 200,
+    "startedAt": "2026-11-13T00:21:49.237Z",
+    "retrievedAt": "2026-11-13T00:21:50.043Z",
+    "bytes": 13935,
+    "sha256": "a34a6497b82d7c02cfea80d8bf5db806b7c389207249ed234fcbc386f2e774d9",
+    "contentType": "text/html; charset=utf-8",
+    "cors": "*"
+  },
+  {
+    "file": "mars-coordinate-guidance.html",
+    "url": "https://planetarynames.wr.usgs.gov/Page/MARS/system",
+    "finalUrl": "https://planetarynames.wr.usgs.gov/Page/MARS/system",
+    "status": 200,
+    "startedAt": "2026-11-13T00:21:49.239Z",
+    "retrievedAt": "2026-11-13T00:21:50.280Z",
+    "bytes": 32881,
+    "sha256": "cee8dc6d2dfb7af69547f6b9e5be65a37389b644d591e90ce2072091fee1ae9f",
+    "contentType": "text/html; charset=utf-8",
+    "cors": null
+  },
+  {
+    "file": "gazetteer-faq.html",
+    "url": "https://planetarynames.wr.usgs.gov/Page/FAQ",
+    "finalUrl": "https://planetarynames.wr.usgs.gov/Page/FAQ",
+    "status": 200,
+    "startedAt": "2026-11-13T00:21:49.240Z",
+    "retrievedAt": "2026-11-13T00:21:50.256Z",
+    "bytes": 36403,
+    "sha256": "d8d6c3f1f56af1e63fbf407ca962b5654325794a1ecbc5e88f1c44b828637aa0",
+    "contentType": "text/html; charset=utf-8",
+    "cors": null
+  },
+  {
+    "file": "proj-equirectangular.html",
+    "url": "https://proj.org/en/stable/operations/projections/eqc.html",
+    "finalUrl": "https://proj.org/en/stable/operations/projections/eqc.html",
+    "status": 200,
+    "startedAt": "2026-11-13T00:25:24.070Z",
+    "retrievedAt": "2026-11-13T00:25:24.674Z",
+    "bytes": 38955,
+    "sha256": "17916f74ed44203948c1af49a3bdef03b78b6d302a1df6afd3fafca717f85814",
+    "contentType": "text/html; charset=utf-8",
+    "cors": "*"
+  }
+]

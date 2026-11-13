@@ -1,0 +1,85 @@
+[
+  {
+    "name": "head",
+    "url": "https://asc-pds-services.s3.us-west-2.amazonaws.com/mosaic/mars2020_trn/CTX/JEZ_ctx_B_soc_008_DTM_MOLAtopography_DeltaGeoid_20m_Eqc_latTs0_lon0.tif",
+    "method": "HEAD",
+    "requestHeaders": {},
+    "status": 200,
+    "startedAt": "2026-11-13T00:37:29.543Z",
+    "retrievedAt": "2026-11-13T00:37:30.475Z",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "contentLength": "9662387",
+    "contentRange": null,
+    "matchesDownloadedSource": null,
+    "acceptRanges": "bytes",
+    "cors": "*",
+    "exposedHeaders": null,
+    "allowedMethods": "GET, HEAD",
+    "allowedHeaders": null
+  },
+  {
+    "name": "header-range",
+    "url": "https://asc-pds-services.s3.us-west-2.amazonaws.com/mosaic/mars2020_trn/CTX/JEZ_ctx_B_soc_008_DTM_MOLAtopography_DeltaGeoid_20m_Eqc_latTs0_lon0.tif",
+    "method": "GET",
+    "requestHeaders": {
+      "Range": "bytes=0-9778"
+    },
+    "status": 206,
+    "startedAt": "2026-11-13T00:37:30.476Z",
+    "retrievedAt": "2026-11-13T00:37:31.301Z",
+    "bytes": 9779,
+    "sha256": "a4fd389f7845ee7ebb1f7de9486fd107f29cee8de4d82c65b11a1ad9783c51c2",
+    "contentLength": "9779",
+    "contentRange": "bytes 0-9778/9662387",
+    "matchesDownloadedSource": true,
+    "acceptRanges": "bytes",
+    "cors": "*",
+    "exposedHeaders": null,
+    "allowedMethods": "GET, HEAD",
+    "allowedHeaders": null
+  },
+  {
+    "name": "belva-row-range",
+    "url": "https://asc-pds-services.s3.us-west-2.amazonaws.com/mosaic/mars2020_trn/CTX/JEZ_ctx_B_soc_008_DTM_MOLAtopography_DeltaGeoid_20m_Eqc_latTs0_lon0.tif",
+    "method": "GET",
+    "requestHeaders": {
+      "Range": "bytes=4567955-4574338"
+    },
+    "status": 206,
+    "startedAt": "2026-11-13T00:37:31.301Z",
+    "retrievedAt": "2026-11-13T00:37:31.951Z",
+    "bytes": 6384,
+    "sha256": "69ea4c20347b10326326c9b2c0bb7bd54b487487964c21fd071df083604cfb6d",
+    "contentLength": "6384",
+    "contentRange": "bytes 4567955-4574338/9662387",
+    "matchesDownloadedSource": true,
+    "acceptRanges": "bytes",
+    "cors": "*",
+    "exposedHeaders": null,
+    "allowedMethods": "GET, HEAD",
+    "allowedHeaders": null
+  },
+  {
+    "name": "range-preflight",
+    "url": "https://asc-pds-services.s3.us-west-2.amazonaws.com/mosaic/mars2020_trn/CTX/JEZ_ctx_B_soc_008_DTM_MOLAtopography_DeltaGeoid_20m_Eqc_latTs0_lon0.tif",
+    "method": "OPTIONS",
+    "requestHeaders": {
+      "Access-Control-Request-Method": "GET",
+      "Access-Control-Request-Headers": "range"
+    },
+    "status": 200,
+    "startedAt": "2026-11-13T00:37:31.951Z",
+    "retrievedAt": "2026-11-13T00:37:32.577Z",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "contentLength": "0",
+    "contentRange": null,
+    "matchesDownloadedSource": null,
+    "acceptRanges": null,
+    "cors": "*",
+    "exposedHeaders": null,
+    "allowedMethods": "GET, HEAD",
+    "allowedHeaders": "range"
+  }
+]
