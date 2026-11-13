@@ -1,0 +1,55 @@
+{
+  "environment": "Temporary hidden isolated in-app browser; normal browser security",
+  "preview": "http://127.0.0.1:4176",
+  "sizes": [
+    {
+      "width": 1600,
+      "height": 1000
+    },
+    {
+      "width": 768,
+      "height": 1024
+    },
+    {
+      "width": 320,
+      "height": 800
+    },
+    {
+      "width": 390,
+      "height": 844
+    }
+  ],
+  "normalConsoleErrors": [],
+  "nativeEndpoints": {
+    "origin": {
+      "row": 714,
+      "column": 650
+    },
+    "destination": {
+      "row": 800,
+      "column": 730
+    }
+  },
+  "mousePick": {
+    "row": 740,
+    "column": 581
+  },
+  "keyboardPick": {
+    "row": 714,
+    "column": 715
+  },
+  "observed": [
+    "drawer mutual exclusion and retained form/search/data state",
+    "all three layer switches",
+    "grid rejection for duplicate, empty, row 585 and outside map point",
+    "native source cells via forms, map center, keyboard and mouse",
+    "Belva marker inspection takes precedence over active grid pick",
+    "source metadata and citation links",
+    "globe approach, skip, cancel, return and unavailable-model fallback",
+    "terrain and controlled-image HTTP 503 with retry recovery",
+    "numerical windows HTTP 503 with retry recovery",
+    "mobile picking expands map and keeps error/cancel visible",
+    "skip link, visible keyboard focus, Escape and About focus restoration"
+  ],
+  "reducedMotion": "Simulated matchMedia preference in labelled loopback fixture; no native preference API available"
+}

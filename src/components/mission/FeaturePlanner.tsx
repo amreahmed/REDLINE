@@ -17,6 +17,8 @@ export function FeaturePlanner({ targets, selection, selectedId, error, onInspec
   const matches = targets.filter((target) => target.name.toLowerCase().includes(query.trim().toLowerCase()))
   const hasEndpoints = selection.origin !== null || selection.destination !== null
   return (
+    <details className="feature-planner-disclosure">
+      <summary>Explore approximate feature references</summary>
     <section className="panel-section feature-planner" aria-labelledby="planning-heading">
       <h3 id="planning-heading">Feature references</h3>
       <p className="helper reference-qualification">Published approximate centers with NASA science context. Image registration is unverified; these are hypothetical endpoints.</p>
@@ -44,8 +46,8 @@ export function FeaturePlanner({ targets, selection, selectedId, error, onInspec
         <button type="button" className="grid-button" disabled={!hasEndpoints} onClick={onSwap}>Swap endpoints</button>
         <button type="button" className="grid-button" disabled={!hasEndpoints} onClick={onClear}>Clear endpoints</button>
       </div>
-      <button type="button" className="route-unavailable" disabled aria-describedby="route-data-note">Calculate routes — unavailable</button>
-      <p className="helper" id="route-data-note">The planning crop is numerical terrain. Physical distance, slope, terrain costs and route computation still require validation. Approximate reference centers are separate from grid endpoints; image colors are not elevation.</p>
+      <p className="helper">Approximate reference centers are separate from grid endpoints. Image colors are not elevation.</p>
     </section>
+    </details>
   )
 }

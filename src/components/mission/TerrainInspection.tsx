@@ -33,7 +33,7 @@ export function TerrainInspection({ target }: { target?: ScienceTarget }) {
   return (
     <section className="source-detail terrain-inspection" aria-labelledby="terrain-inspection-heading">
       <h3 id="terrain-inspection-heading">Numerical terrain inspection</h3>
-      <p className="helper">A separate USGS CTX terrain model provides numerical cells. This is source inspection in its own coordinate frame; the displayed imagery remains visual context.</p>
+      <p className="helper">Inspect numerical USGS CTX source windows separately from the displayed imagery.</p>
       {state.phase === 'idle' && <button className="grid-button" type="button" onClick={() => void load()}>Load numerical terrain</button>}
       {state.phase === 'loading' && <p className="source-state" role="status">Loading and checking native terrain windows…</p>}
       {state.phase === 'error' && <div><p className="source-warning" role="alert">{state.message}</p><button className="grid-button" type="button" onClick={() => void load()}>Retry numerical terrain</button></div>}
@@ -43,7 +43,7 @@ export function TerrainInspection({ target }: { target?: ScienceTarget }) {
         {target && !window && <p className="source-warning">No native terrain window is available for this reference.</p>}
         {window && summary && <>
           <h4>{target?.name} coordinate neighborhood</h4>
-          <dl>
+          <dl className="source-facts">
             <dt>Neighborhood around published coordinates</dt><dd>±0.005° longitude and latitude · includes intersecting native cells</dd>
             <dt>Native grid</dt><dd>20 m projected spacing · {summary.validCount.toLocaleString()} valid cells · {summary.missingCount.toLocaleString()} missing</dd>
             <dt>Native-cell source-value range</dt><dd>{summary.min === null || summary.max === null ? 'No valid numerical cells' : `${Math.floor(summary.min).toLocaleString()} to ${Math.ceil(summary.max).toLocaleString()} m (outward-rounded)`}</dd>
@@ -52,7 +52,10 @@ export function TerrainInspection({ target }: { target?: ScienceTarget }) {
         </>}
       </div>}
       <p className="source-warning">Provider-declared IAU-sphere heights; the vertical reference is not independently validated. Feature-to-DEM and preliminary-imagery registration remain unverified. No slope, route or safety calculation is enabled.</p>
-      <div className="source-links"><a href={productUrl} target="_blank" rel="noreferrer">USGS numerical product</a><a href={metadataUrl} target="_blank" rel="noreferrer">Terrain metadata</a><a href="https://doi.org/10.5066/P906QQT8" target="_blank" rel="noreferrer">Dataset citation</a></div>
+      <details className="source-metadata"><summary>Numerical source & metadata</summary>
+        <p className="helper">A separate USGS CTX terrain model provides numerical cells. This is source inspection in its own coordinate frame; the displayed imagery remains visual context.</p>
+        <div className="source-links"><a href={productUrl} target="_blank" rel="noreferrer">USGS numerical product</a><a href={metadataUrl} target="_blank" rel="noreferrer">Terrain metadata</a><a href="https://doi.org/10.5066/P906QQT8" target="_blank" rel="noreferrer">Dataset citation</a></div>
+      </details>
       <p className="source-credit">Fergason, Galuszka, Hare, Mayer, Redding and Smith (2020) · USGS Astrogeology · NASA/MRO/CTX.</p>
     </section>
   )

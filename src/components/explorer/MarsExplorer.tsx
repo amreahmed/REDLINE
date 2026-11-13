@@ -44,11 +44,12 @@ type Props = {
   gridFocusRequest: number
   centerPickRequest: number
   gridPickRole: EndpointRole | null
+  gridPickNotice: string | null
   onPickCoordinate: (coordinate: [number, number]) => void
   onNavigate: () => void
 }
 
-export function MarsExplorer({ visibility, statuses, retryRequest, jezeroRequest, onStatus, onSummary, missionSelection, selectedTargetId, focusRequest, onInspectTarget, planningGrid, gridSelection, gridFocusRequest, centerPickRequest, gridPickRole, onPickCoordinate, onNavigate }: Props) {
+export function MarsExplorer({ visibility, statuses, retryRequest, jezeroRequest, onStatus, onSummary, missionSelection, selectedTargetId, focusRequest, onInspectTarget, planningGrid, gridSelection, gridFocusRequest, centerPickRequest, gridPickRole, gridPickNotice, onPickCoordinate, onNavigate }: Props) {
   const workspaceRef = useRef<HTMLDivElement>(null)
   const globeHostRef = useRef<HTMLDivElement>(null)
   const mapHostRef = useRef<HTMLDivElement>(null)
@@ -298,9 +299,8 @@ export function MarsExplorer({ visibility, statuses, retryRequest, jezeroRequest
   return (
     <section className="map-viewport explorer-viewport" data-grid="false" aria-labelledby="explorer-heading">
       <div className="viewport-top map-toolbar explorer-toolbar">
-        <div className="viewport-label flex items-center gap-2"><Icon name="orbit" size={17} /><h1 id="explorer-heading">Mars explorer</h1></div>
-        <span className="exploration-stage">{mapShown ? (state.localDetail ? 'Local detail' : 'Regional context') : 'Planet overview'}</span>
-        <button className="grid-button" type="button" disabled={!canNavigate || globe.phase === 'loading'} onClick={() => { onNavigate(); if (mapShown) exploreJezero(); else globeRef.current?.reset() }}>{mapShown ? 'Jezero detail' : 'Reset overview'}</button>
+        <div className="viewport-label"><h1 id="explorer-heading">{mapShown ? 'Mars map' : 'Mars'}</h1><span className="exploration-stage">{mapShown ? (state.localDetail ? 'Local imagery' : 'Regional context') : 'NASA’s visual planet overview'}</span></div>
+        <button className="grid-button view-reset" type="button" title={mapShown ? 'Guided approach to the approximate Jezero center' : 'Restore the initial globe view'} disabled={!canNavigate || globe.phase === 'loading'} onClick={() => { onNavigate(); if (mapShown) exploreJezero(); else globeRef.current?.reset() }}><Icon name="orbit" size={17} />{mapShown ? 'Jezero detail' : 'Reset overview'}</button>
       </div>
       <div id="explorer-workspace" ref={workspaceRef} className="explorer-surface" tabIndex={0} role="region" aria-label="Interactive Mars explorer" aria-describedby="explorer-help handoff-limit" onPointerDown={(event) => { if (!(event.target as HTMLElement).closest('button,a')) event.currentTarget.focus({ preventScroll: true }) }} onKeyDown={(event) => {
         if (event.target !== event.currentTarget || event.altKey || event.ctrlKey || event.metaKey || !canNavigate) return
@@ -318,7 +318,7 @@ export function MarsExplorer({ visibility, statuses, retryRequest, jezeroRequest
         </div>}
         {mapShown && mapMessage && <div className="map-message reference-map-message" role="status"><p>{mapMessage}</p></div>}
         {mapShown && busy && !mapMessage && <div className="map-loading" role="status">Loading NASA Mars Trek imagery…</div>}
-        {mapShown && gridPickRole && <div className="grid-pick-status" role="status">Picking grid {gridPickRole}: click inside the boundary, or pan and press Enter to use the map center.</div>}
+        {mapShown && gridPickRole && <div className="grid-pick-status"><p role="status">{gridPickNotice ?? `Picking grid ${gridPickRole}: click inside the boundary, or pan and press Enter to use the map center.`}</p><button className="grid-button" type="button" onClick={onNavigate}>Cancel map picking</button></div>}
         {transitioning && <div className="handoff-status flight-status">
           <div><p role="status">{stageMessage}</p><span>Scripted visual approach · approximate crater navigation</span></div>
           <div className="flight-actions"><button type="button" className="grid-button" onClick={skipTransition}>Skip animation</button><button type="button" className="grid-button" onClick={() => cancelTransition()}>Cancel</button></div>
@@ -328,13 +328,16 @@ export function MarsExplorer({ visibility, statuses, retryRequest, jezeroRequest
       {notice && <div className="explorer-notice"><p role="status">{notice}</p><div>{!mapShown && <button className="grid-button" type="button" onClick={() => arriveDirect()}>Open Jezero map</button>}<button className="grid-button" type="button" onClick={() => setNotice(null)}>Dismiss</button></div></div>}
       <div className="explorer-navigation">
         <div className="globe-actions" role="group" aria-label={mapShown ? 'Map navigation' : 'Overview navigation'}>
-          {([[-1, 0, '←', 'left'], [1, 0, '→', 'right'], [0, -1, '↑', 'up'], [0, 1, '↓', 'down']] as const).map(([x, y, label, direction]) => <button key={direction} type="button" disabled={!canNavigate} aria-label={`${mapShown ? 'Pan map' : 'Rotate globe'} ${direction}`} onClick={() => move(x, y)}>{label}</button>)}
-          <button type="button" disabled={!canNavigate || (mapShown && !view?.canZoomIn)} aria-label="Zoom in" onClick={() => zoom(1)}>+</button>
-          <button type="button" disabled={!canNavigate || (mapShown && !view?.canZoomOut)} aria-label="Zoom out" onClick={() => zoom(-1)}>−</button>
+          {([[-1, 0, '←', 'left'], [1, 0, '→', 'right'], [0, -1, '↑', 'up'], [0, 1, '↓', 'down']] as const).map(([x, y, label, direction]) => <button key={direction} type="button" title={`${mapShown ? 'Pan map' : 'Rotate globe'} ${direction}`} disabled={!canNavigate} aria-label={`${mapShown ? 'Pan map' : 'Rotate globe'} ${direction}`} onClick={() => move(x, y)}>{label}</button>)}
+          <button type="button" title="Zoom in (+)" disabled={!canNavigate || (mapShown && !view?.canZoomIn)} aria-label="Zoom in" onClick={() => zoom(1)}>+</button>
+          <button type="button" title="Zoom out (−)" disabled={!canNavigate || (mapShown && !view?.canZoomOut)} aria-label="Zoom out" onClick={() => zoom(-1)}>−</button>
         </div>
         <button className="grid-button" type="button" disabled={transitioning} onClick={() => { onNavigate(); send({ type: mapShown ? 'enter-overview' : 'enter-map' }) }}>{mapShown ? 'Return to overview' : 'Explore map context'}</button>
       </div>
       <div className="map-position"><span>{mapShown ? 'Service grid center' : 'Visual overview · no geographic picking'}</span><span>{mapShown && view ? `${view.center[0].toFixed(3)}° lon, ${view.center[1].toFixed(3)}° lat` : 'Zoom enters Jezero initially, then resumes the map area'}</span></div>
+      <details className="viewport-guide">
+      <summary><Icon name="info" size={16} />Navigation & map legend</summary>
+      <div className="viewport-guide-content">
       <div className="feature-legend" aria-label="Feature marker legend">
         <span><b>O</b> Reference origin</span><span><b>D</b> Reference destination</span><span><b>◇</b> Reference</span>
         <p>Approximate feature centers · imagery registration unverified{!mapShown ? ' · markers appear on the regional map' : ''}</p>
@@ -346,6 +349,9 @@ export function MarsExplorer({ visibility, statuses, retryRequest, jezeroRequest
         {mapShown && globe.phase === 'loading' && <p>The overview is preparing; its approach action will become available when ready. Home centers Jezero directly.</p>}
         {mapShown && globe.phase === 'error' && <p className="source-warning">Overview unavailable. Zoom stays on the map; use Return to overview to retry.</p>}
       </div>
+      </div>
+      </details>
+      <p className="viewport-qualification">{mapShown ? 'Approximate feature locations · registration unverified' : 'Visual NASA model · geographic orientation unverified'}</p>
     </section>
   )
 }

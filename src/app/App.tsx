@@ -1,4 +1,4 @@
-import { useCallback, useRef, useState } from 'react'
+import { useCallback, useEffect, useReducer, useRef, useState } from 'react'
 import { AboutDialog } from '../components/layout/AboutDialog'
 import { InformationPanel } from '../components/layout/InformationPanel'
 import { MissionControl } from '../components/layout/MissionControl'
@@ -14,12 +14,26 @@ import { FeaturePlanner } from '../components/mission/FeaturePlanner'
 import { GridPlanner } from '../components/mission/GridPlanner'
 import { useGridPlanning } from '../features/mission/useGridPlanning'
 import type { ExplorerSummary } from '../features/explorer/types'
+import { initialWorkspacePanels, workspacePanels } from './workspacePanels'
+import type { MissionSection } from './workspacePanels'
 
 export default function App() {
   const [explorer, setExplorer] = useState(initialExplorerSummary)
   const [jezeroRequest, setJezeroRequest] = useState(0)
-  const [controlsOpen, setControlsOpen] = useState(true)
-  const [informationOpen, setInformationOpen] = useState(true)
+  const [panels, dispatchPanel] = useReducer(workspacePanels, initialWorkspacePanels)
+  const navigationRef = useRef<HTMLElement>(null)
+  const controlsOpen = panels.panel === 'mission'
+  const informationOpen = panels.panel === 'sources'
+  const openSources = useCallback(() => dispatchPanel({ type: 'sources' }), [])
+  const revealSources = useCallback(() => {
+    // Inspection always reveals its context, including when sources are already open.
+    dispatchPanel({ type: 'close' })
+    dispatchPanel({ type: 'sources' })
+  }, [])
+  const closePanel = useCallback(() => {
+    dispatchPanel({ type: 'close' })
+    navigationRef.current?.querySelector<HTMLButtonElement>('[aria-expanded="true"]')?.focus()
+  }, [])
   const [visibility, setVisibility] = useState<LayerVisibility>({ mola: true, ctx: true, controlledCtx: false })
   const [statuses, setStatuses] = useState<LayerStatuses>({ mola: initialLayerStatus(), ctx: initialLayerStatus(), controlledCtx: initialLayerStatus() })
   const [retryRequest, setRetryRequest] = useState<{ id: LayerId; sequence: number } | null>(null)
@@ -56,9 +70,9 @@ export default function App() {
     if (!targetById(id)) return
     cancelPlanningNavigation()
     setSelectedTargetId(id)
-    setInformationOpen(true)
+    revealSources()
     setFocusRequest((previous) => ({ id, sequence: (previous?.sequence ?? 0) + 1, focusWorkspace: true }))
-  }, [cancelPlanningNavigation])
+  }, [cancelPlanningNavigation, revealSources])
   const selectEndpoint = (role: EndpointRole, id: string | null) => {
     cancelPlanningNavigation()
     const result = assignEndpoint(missionSelection, role, id, SCIENCE_TARGETS)
@@ -68,13 +82,25 @@ export default function App() {
       const target = targetById(id)
       if (target) {
         setSelectedTargetId(target.id)
-        setInformationOpen(true)
         setFocusRequest((previous) => ({ id: target.id, sequence: (previous?.sequence ?? 0) + 1, focusWorkspace: false }))
       }
     }
   }
   const swap = () => { setMissionSelection(swapEndpoints(missionSelection)); setSelectionError(null) }
   const clear = () => { setMissionSelection(initialMissionSelection); setSelectionError(null) }
+
+  useEffect(() => {
+    const dismiss = (event: KeyboardEvent) => {
+      if (event.key === 'Escape' && !event.defaultPrevented && !document.querySelector('dialog[open]') && !['entering-map', 'entering-overview', 'flying-to-jezero'].includes(explorer.phase) && !planning.pickRole && panels.panel) {
+        event.preventDefault()
+        closePanel()
+      }
+    }
+    window.addEventListener('keydown', dismiss)
+    return () => window.removeEventListener('keydown', dismiss)
+  }, [closePanel, explorer, panels.panel, planning.pickRole])
+
+  const mode = explorer.mapShown ? explorer.localDetail ? 'Local detail' : 'Regional context' : 'Planet overview'
 
   return (
     <div className="app-shell">
@@ -83,36 +109,31 @@ export default function App() {
         <div className="brand-group flex items-center gap-4">
           <div className="brand flex items-center gap-3"><span className="brand-mark"><Icon name="orbit" size={29} /></span><span>REDLINE</span></div>
           <span className="brand-divider" />
-          <p className="brand-caption">Mars mission workspace</p>
+          <div className="header-location"><span>{explorer.mapShown ? 'Mars / Regional map' : 'Mars'}</span><span>{mode}</span></div>
         </div>
         <div className="header-actions flex items-center gap-4">
-          <span className="preview-badge">Mars preview</span>
+          <span className="preview-badge">Exploration prototype</span>
           <AboutDialog />
         </div>
       </header>
-      <div className="workspace-bar flex items-center justify-between gap-4">
-        <div className="workspace-title flex items-center gap-3"><Icon name="orbit" size={18} /><span>Mars explorer</span><span className="workspace-slash">/</span><span className="mission-name">Overview to Jezero</span></div>
-        <div className="panel-actions flex items-center gap-2" role="group" aria-label="Panel visibility">
-          <button className="panel-toggle flex items-center gap-2" type="button" aria-expanded={controlsOpen} aria-controls="mission-control" onClick={() => setControlsOpen(!controlsOpen)}>
-            <Icon name="panel-left" size={17} /><span>Mission control</span>
-          </button>
-          <button className="panel-toggle flex items-center gap-2" type="button" aria-expanded={informationOpen} aria-controls="information-panel" onClick={() => setInformationOpen(!informationOpen)}>
-            <Icon name="panel-right" size={17} /><span>Sources & status</span>
-          </button>
-        </div>
-      </div>
-      <main className="workspace" data-controls-open={controlsOpen} data-information-open={informationOpen}>
-        <div className="controls-slot" hidden={!controlsOpen}><MissionControl explorer={explorer} onJezero={openJezero} visibility={visibility} statuses={statuses} onToggle={toggleLayer} onRetry={retryLayer} missionPlanner={<>
-          <GridPlanner terrain={planning.terrain} selection={planning.selection} pickRole={planning.pickRole} notice={planning.notice} canPick={canPick} onOpen={() => void openPlanning()} onAssign={(role, row, column) => { if (canPick) planning.assign(role, row, column) }} onBeginPick={(role) => { if (canPick) planning.beginPick(role) }} onUseCenter={() => { if (canPick) setCenterPickRequest((value) => value + 1) }} onCancel={cancelGridPick} onSwap={planning.swap} onClear={planning.clear} />
+      <div className="exploration-layout">
+        <nav ref={navigationRef} className="workspace-rail" aria-label="Exploration tools">
+          {([['explore', 'orbit', 'Explore'], ['layers', 'layers', 'Layers'], ['plan', 'pin', 'Plan']] as const).map(([section, icon, label]) => <button key={section} type="button" className="rail-button" title={label === 'Plan' ? 'Choose hypothetical mission endpoints' : label} aria-expanded={controlsOpen && panels.section === section} aria-controls="mission-control" onClick={() => dispatchPanel({ type: 'mission', section })}><Icon name={icon} size={22} /><span>{label}</span></button>)}
+          <button type="button" className="rail-button sources-rail-button" title="Sources and scientific status" aria-expanded={informationOpen} aria-controls="information-panel" onClick={openSources}><Icon name="info" size={22} /><span>Sources</span></button>
+        </nav>
+      <main className="workspace" data-panel={panels.panel ?? 'none'}>
+        <div className="controls-slot" hidden={!controlsOpen}><MissionControl activeSection={panels.section} onSectionChange={(section: MissionSection) => { if (panels.section !== section) dispatchPanel({ type: 'mission', section }) }} onClose={closePanel} explorer={explorer} onJezero={openJezero} visibility={visibility} statuses={statuses} onToggle={toggleLayer} onRetry={retryLayer} missionPlanner={<>
+          <GridPlanner terrain={planning.terrain} selection={planning.selection} pickRole={planning.pickRole} notice={planning.notice} canPick={canPick} onOpen={() => void openPlanning()} onAssign={(role, row, column) => { if (canPick) planning.assign(role, row, column) }} onBeginPick={(role) => { if (canPick) { planning.beginPick(role); if (window.matchMedia('(max-width: 640px)').matches) { dispatchPanel({ type: 'close' }); document.getElementById('explorer-workspace')?.focus({ preventScroll: true }) } } }} onUseCenter={() => { if (canPick) setCenterPickRequest((value) => value + 1) }} onCancel={cancelGridPick} onSwap={planning.swap} onClear={planning.clear} />
           <FeaturePlanner targets={SCIENCE_TARGETS} selection={missionSelection} selectedId={selectedTargetId} error={selectionError} onInspect={inspectTarget} onAssign={selectEndpoint} onSwap={swap} onClear={clear} />
         </>} /></div>
-        <MarsExplorer visibility={visibility} statuses={statuses} retryRequest={retryRequest} jezeroRequest={jezeroRequest} onStatus={onStatus} onSummary={onSummary} missionSelection={missionSelection} selectedTargetId={selectedTargetId} focusRequest={focusRequest} onInspectTarget={inspectTarget} planningGrid={planning.terrain.phase === 'ready' ? planning.terrain.grid : null} gridSelection={planning.selection} gridFocusRequest={gridFocusRequest} centerPickRequest={centerPickRequest} gridPickRole={canPick ? planning.pickRole : null} onPickCoordinate={(coordinate) => { if (canPick) planning.pickCoordinate(coordinate) }} onNavigate={cancelPlanningNavigation} />
-        <div className="information-slot" hidden={!informationOpen}><InformationPanel explorer={explorer} visibility={visibility} statuses={statuses} target={targetById(selectedTargetId)} inspectionSequence={focusRequest?.sequence ?? 0} planningGrid={planning.terrain.phase === 'ready' ? planning.terrain.grid : undefined} /></div>
+        <MarsExplorer visibility={visibility} statuses={statuses} retryRequest={retryRequest} jezeroRequest={jezeroRequest} onStatus={onStatus} onSummary={onSummary} missionSelection={missionSelection} selectedTargetId={selectedTargetId} focusRequest={focusRequest} onInspectTarget={inspectTarget} planningGrid={planning.terrain.phase === 'ready' ? planning.terrain.grid : null} gridSelection={planning.selection} gridFocusRequest={gridFocusRequest} centerPickRequest={centerPickRequest} gridPickRole={canPick ? planning.pickRole : null} gridPickNotice={planning.notice} onPickCoordinate={(coordinate) => { if (canPick) planning.pickCoordinate(coordinate) }} onNavigate={cancelPlanningNavigation} />
+        <div className="information-slot" hidden={!informationOpen}><InformationPanel onClose={closePanel} explorer={explorer} visibility={visibility} statuses={statuses} target={targetById(selectedTargetId)} inspectionSequence={focusRequest?.sequence ?? 0} planningGrid={planning.terrain.phase === 'ready' ? planning.terrain.grid : undefined} /></div>
       </main>
+      </div>
       <footer className="app-footer flex items-center justify-between gap-4">
-        <span>Independent exploration prototype</span>
-        <span className="flex items-center gap-2"><span className="status-dot" />Archived imagery, not live observations</span>
-        <span className="version-label">Unified explorer preview</span>
+        <span className="terrain-load-status" role="status">{planning.terrain.phase === 'ready' ? `${planning.terrain.grid.manifest.summary.validCount.toLocaleString()} terrain cells loaded` : planning.terrain.phase === 'loading' ? 'Verifying terrain cells…' : planning.terrain.phase === 'error' ? 'Terrain unavailable · retry in Plan' : 'Terrain available on demand in Plan'}</span>
+        <span className="validation-status">Scientific validation pending · routes unavailable</span>
+        <span className="archive-status">Archived data</span>
       </footer>
     </div>
   )
