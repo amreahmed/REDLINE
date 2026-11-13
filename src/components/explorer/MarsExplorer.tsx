@@ -33,6 +33,7 @@ type Props = {
   statuses: LayerStatuses
   retryRequest: { id: LayerId; sequence: number } | null
   jezeroRequest: number
+  onJezero: () => void
   onStatus: (id: LayerId, status: LayerStatus) => void
   onSummary: (summary: ExplorerSummary) => void
   missionSelection: MissionSelection
@@ -49,7 +50,7 @@ type Props = {
   onNavigate: () => void
 }
 
-export function MarsExplorer({ visibility, statuses, retryRequest, jezeroRequest, onStatus, onSummary, missionSelection, selectedTargetId, focusRequest, onInspectTarget, planningGrid, gridSelection, gridFocusRequest, centerPickRequest, gridPickRole, gridPickNotice, onPickCoordinate, onNavigate }: Props) {
+export function MarsExplorer({ visibility, statuses, retryRequest, jezeroRequest, onJezero, onStatus, onSummary, missionSelection, selectedTargetId, focusRequest, onInspectTarget, planningGrid, gridSelection, gridFocusRequest, centerPickRequest, gridPickRole, gridPickNotice, onPickCoordinate, onNavigate }: Props) {
   const workspaceRef = useRef<HTMLDivElement>(null)
   const globeHostRef = useRef<HTMLDivElement>(null)
   const mapHostRef = useRef<HTMLDivElement>(null)
@@ -295,12 +296,18 @@ export function MarsExplorer({ visibility, statuses, retryRequest, jezeroRequest
   const move = (horizontal: number, vertical: number) => { if (canNavigate) { if (mapShown) mapRef.current?.panBy(horizontal, vertical); else globeRef.current?.rotate(horizontal * 0.2, vertical * 0.2) } }
   const zoom = (delta: number) => { if (canNavigate) { if (mapShown) mapRef.current?.zoomBy(delta); else globeRef.current?.zoom(delta > 0 ? 1 / 1.2 : 1.2) } }
   const retryGlobe = () => { setGlobe(initialExplorerSummary.globe); globeStatusRef.current = initialExplorerSummary.globe; setGlobeAttempt((value) => value + 1) }
+  const resetView = () => { onNavigate(); if (mapShown) mapRef.current?.focusJezero(); else globeRef.current?.reset() }
+  const flightHelp = transitioning ? 'An exploration transition is in progress.' : mapError ? 'The map could not start. Reload to retry.' : globe.phase === 'loading' ? 'The NASA overview is preparing. Open the map directly while it loads.' : globe.phase === 'error' ? 'The NASA overview is unavailable. Open the map directly or retry the overview.' : 'Start the scripted visual approach to the published approximate Jezero crater center.'
 
   return (
-    <section className="map-viewport explorer-viewport" data-grid="false" aria-labelledby="explorer-heading">
+    <section className="map-viewport explorer-viewport" data-grid="false" data-feedback={!!notice || (mapShown && !!mapMessage)} aria-labelledby="explorer-heading">
       <div className="viewport-top map-toolbar explorer-toolbar">
-        <div className="viewport-label"><h1 id="explorer-heading">{mapShown ? 'Mars map' : 'Mars'}</h1><span className="exploration-stage">{mapShown ? (state.localDetail ? 'Local imagery' : 'Regional context') : 'NASA’s visual planet overview'}</span></div>
-        <button className="grid-button view-reset" type="button" title={mapShown ? 'Guided approach to the approximate Jezero center' : 'Restore the initial globe view'} disabled={!canNavigate || globe.phase === 'loading'} onClick={() => { onNavigate(); if (mapShown) exploreJezero(); else globeRef.current?.reset() }}><Icon name="orbit" size={17} />{mapShown ? 'Jezero detail' : 'Reset overview'}</button>
+        <div className="viewport-label"><h1 id="explorer-heading">{mapShown ? 'Mars map' : 'Mars'}</h1><span className="exploration-stage">{mapShown ? (state.localDetail ? 'Local imagery' : 'Regional context') : 'Visual model · orientation unverified'}</span></div>
+        <div className="explorer-view-actions">
+          <button className="grid-button fly-jezero-button" type="button" title={flightHelp} aria-describedby="flight-help" disabled={transitioning || !!mapError || globe.phase !== 'ready'} onClick={onJezero}><Icon name="orbit" size={17} />Fly to Jezero</button>
+          <button className="grid-button view-reset" type="button" title={mapShown ? 'Center the map on approximate Jezero (Home)' : 'Restore the initial globe view (Home)'} disabled={!canNavigate} onClick={resetView}>Reset view</button>
+        </div>
+        <span id="flight-help" className="sr-only">{flightHelp}</span>
       </div>
       <div id="explorer-workspace" ref={workspaceRef} className="explorer-surface" tabIndex={0} role="region" aria-label="Interactive Mars explorer" aria-describedby="explorer-help handoff-limit" onPointerDown={(event) => { if (!(event.target as HTMLElement).closest('button,a')) event.currentTarget.focus({ preventScroll: true }) }} onKeyDown={(event) => {
         if (event.target !== event.currentTarget || event.altKey || event.ctrlKey || event.metaKey || !canNavigate) return
@@ -314,7 +321,7 @@ export function MarsExplorer({ visibility, statuses, retryRequest, jezeroRequest
         {!mapShown && globe.phase !== 'ready' && <div className="globe-message" role="status">
           <Icon name="orbit" size={30} /><p>{globe.message}</p>
           {globe.phase === 'error' && <button type="button" className="grid-button" onClick={retryGlobe}>Retry overview</button>}
-          <button type="button" className="grid-button" disabled={transitioning} onClick={() => { onNavigate(); send({ type: 'enter-map' }) }}>Continue to map context</button>
+          <button type="button" className="grid-button" disabled={transitioning} onClick={() => { onNavigate(); send({ type: 'enter-map' }) }}>Open map directly</button>
         </div>}
         {mapShown && mapMessage && <div className="map-message reference-map-message" role="status"><p>{mapMessage}</p></div>}
         {mapShown && busy && !mapMessage && <div className="map-loading" role="status">Loading NASA Mars Trek imagery…</div>}
@@ -332,11 +339,11 @@ export function MarsExplorer({ visibility, statuses, retryRequest, jezeroRequest
           <button type="button" title="Zoom in (+)" disabled={!canNavigate || (mapShown && !view?.canZoomIn)} aria-label="Zoom in" onClick={() => zoom(1)}>+</button>
           <button type="button" title="Zoom out (−)" disabled={!canNavigate || (mapShown && !view?.canZoomOut)} aria-label="Zoom out" onClick={() => zoom(-1)}>−</button>
         </div>
-        <button className="grid-button" type="button" disabled={transitioning} onClick={() => { onNavigate(); send({ type: mapShown ? 'enter-overview' : 'enter-map' }) }}>{mapShown ? 'Return to overview' : 'Explore map context'}</button>
+        {mapShown && <button className="grid-button" type="button" disabled={transitioning} onClick={() => { onNavigate(); send({ type: 'enter-overview' }) }}>Return to overview</button>}
       </div>
-      <div className="map-position"><span>{mapShown ? 'Service grid center' : 'Visual overview · no geographic picking'}</span><span>{mapShown && view ? `${view.center[0].toFixed(3)}° lon, ${view.center[1].toFixed(3)}° lat` : 'Zoom enters Jezero initially, then resumes the map area'}</span></div>
+      {mapShown && view && !gridPickRole && !notice && !mapMessage && !busy && <div className="map-position"><span>Service grid center</span><span>{`${view.center[0].toFixed(3)}° lon, ${view.center[1].toFixed(3)}° lat`}</span></div>}
       <details className="viewport-guide">
-      <summary><Icon name="info" size={16} />Navigation & map legend</summary>
+      <summary><Icon name="info" size={16} />Navigation & limitations</summary>
       <div className="viewport-guide-content">
       <div className="feature-legend" aria-label="Feature marker legend">
         <span><b>O</b> Reference origin</span><span><b>D</b> Reference destination</span><span><b>◇</b> Reference</span>
@@ -344,14 +351,14 @@ export function MarsExplorer({ visibility, statuses, retryRequest, jezeroRequest
         {planningGrid && <><span><b>G-O</b> Grid origin</span><span><b>G-D</b> Grid destination</span><p>Outline: prototype terrain crop · hypothetical native cells · shown with controlled CTX</p></>}
       </div>
       <div className="viewport-bottom map-help">
-        <p id="explorer-help">Drag to {mapShown ? 'pan' : 'rotate'}; scroll or pinch to zoom. Arrow keys and + / − work with focus here. Zoom {mapShown ? 'out for the overview; in near Jezero for CTX detail' : 'in to continue to the real map'}.</p>
+        <p id="explorer-help">Drag to {mapShown ? 'pan' : 'rotate'}; scroll or pinch to zoom. Arrow keys and + / − work with focus here. Home resets the view. Zoom {mapShown ? 'out for the overview; in near Jezero for CTX detail' : 'in to continue to the real map; the first handoff enters Jezero, later handoffs resume the map area'}. The visual globe does not support geographic picking.</p>
         <p id="handoff-limit">The globe approach is scripted, not geographically registered. Jezero uses the <a href={JEZERO_NAVIGATION.sourceUrl} target="_blank" rel="noreferrer">published approximate crater center</a>, not a precise science target. Images and geometry are not numerical elevation.</p>
         {mapShown && globe.phase === 'loading' && <p>The overview is preparing; its approach action will become available when ready. Home centers Jezero directly.</p>}
         {mapShown && globe.phase === 'error' && <p className="source-warning">Overview unavailable. Zoom stays on the map; use Return to overview to retry.</p>}
       </div>
       </div>
       </details>
-      <p className="viewport-qualification">{mapShown ? 'Approximate feature locations · registration unverified' : 'Visual NASA model · geographic orientation unverified'}</p>
+      {mapShown && <p className="viewport-qualification">Approximate feature locations · registration unverified</p>}
     </section>
   )
 }

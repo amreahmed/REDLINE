@@ -9,27 +9,24 @@ export type MissionSection = 'explore' | 'layers' | 'plan'
 
 type MissionControlProps = {
   explorer: ExplorerSummary
-  onJezero: () => void
   visibility: LayerVisibility
   statuses: LayerStatuses
   onToggle: (id: LayerId) => void
   onRetry: (id: LayerId) => void
   missionPlanner: ReactNode
   activeSection: MissionSection
-  onSectionChange: (section: MissionSection) => void
   onClose: () => void
 }
 
-export function MissionControl({ explorer, onJezero, visibility, statuses, onToggle, onRetry, missionPlanner, activeSection, onSectionChange, onClose }: MissionControlProps) {
+export function MissionControl({ explorer, visibility, statuses, onToggle, onRetry, missionPlanner, activeSection, onClose }: MissionControlProps) {
+  const sectionHeading = activeSection === 'explore' ? 'Explore' : activeSection === 'layers' ? 'Map layers' : 'Mission endpoints'
+  const transitionMessage = explorer.phase === 'flying-to-jezero' ? 'Flying to Jezero…' : explorer.phase === 'entering-map' ? 'Opening map context…' : explorer.phase === 'entering-overview' ? 'Returning to the Mars overview…' : null
   return (
     <aside id="mission-control" className="panel mission-sidebar" aria-labelledby="mission-heading">
       <div className="panel-heading flex items-center justify-between gap-3">
-        <div><h2 id="mission-heading">Mission control</h2><p className="panel-subtitle">Explore with evidence</p></div>
+        <div><h2 id="mission-heading">{sectionHeading}</h2><p className="panel-subtitle">Mission control</p></div>
         <button className="icon-button" type="button" aria-label="Close mission control" onClick={onClose}><Icon name="close" size={20} /></button>
       </div>
-      <nav className="mission-tabs" aria-label="Mission control sections">
-        {(['explore', 'layers', 'plan'] as const).map((section) => <button key={section} type="button" className="mission-tab" aria-pressed={activeSection === section} aria-controls={`mission-${section}-section`} onClick={() => onSectionChange(section)}><Icon name={section === 'explore' ? 'orbit' : section === 'layers' ? 'layers' : 'pin'} size={17} />{section === 'explore' ? 'Explore' : section === 'layers' ? 'Layers' : 'Plan'}</button>)}
-      </nav>
       <div className="mission-sections">
       <div id="mission-explore-section" className="mission-section-content" hidden={activeSection !== 'explore'}>
       <section className="panel-section region-section" aria-labelledby="region-heading">
@@ -39,16 +36,15 @@ export function MissionControl({ explorer, onJezero, visibility, statuses, onTog
         </div>
         <p className="region-name">Jezero crater</p>
         <p className="helper">Explore the Perseverance region through NASA imagery and sourced science references.</p>
-        <button className="open-region-button" type="button" disabled={explorer.globe.phase === 'loading' || explorer.phase === 'entering-map' || explorer.phase === 'entering-overview' || explorer.phase === 'flying-to-jezero'} onClick={onJezero}>{explorer.mapShown ? 'Jezero detail' : 'Explore Jezero'}</button>
-        {explorer.globe.phase === 'loading' && <p className="helper">The NASA overview is preparing. Map context remains available while it loads.</p>}
+        <p className="helper exploration-next-step">Use <strong>Fly to Jezero</strong> in the viewport to open the region.</p>
+        {transitionMessage ? <p className="source-state" role="status">{transitionMessage}</p> : explorer.globe.phase !== 'ready' ? <p className={explorer.globe.phase === 'error' ? 'source-warning' : 'source-state'} role="status">{explorer.globe.message}</p> : <p className="source-state" role="status">{explorer.mapShown ? explorer.localDetail ? 'Local map detail active.' : 'Regional map context active.' : 'NASA visual overview ready.'}</p>}
         <p className="source-warning region-qualification">The approach is scripted. Globe orientation is unvalidated; the map opens at the published approximate crater center.</p>
       </section>
       <section className="panel-section mission-objective" aria-labelledby="objective-heading">
-        <h3 id="objective-heading">Your exploration journey</h3>
-        <p className="helper">Inspect the evidence, then choose hypothetical mission endpoints.</p>
+        <h3 id="objective-heading">What to do next</h3>
         <ol className="mission-journey">
-          <li><button type="button" onClick={() => onSectionChange('layers')}><Icon name="layers" /><span><strong>Inspect map layers</strong><span>Check imagery, coverage and availability.</span></span><Icon name="arrow" size={16} /></button></li>
-          <li><button type="button" onClick={() => onSectionChange('plan')}><Icon name="pin" /><span><strong>Plan a mission</strong><span>Choose grid cells or approximate references.</span></span><Icon name="arrow" size={16} /></button></li>
+          <li className="journey-step"><Icon name="layers" /><span><strong>Inspect the evidence</strong><span>Open Layers to check imagery and coverage.</span></span></li>
+          <li className="journey-step"><Icon name="pin" /><span><strong>Choose mission endpoints</strong><span>Open Plan for hypothetical grid cells or references.</span></span></li>
           <li className="journey-pending"><Icon name="lock" /><span><strong>Compare routes</strong><span>Unavailable until science and routing are validated.</span></span></li>
         </ol>
       </section>
@@ -56,7 +52,7 @@ export function MissionControl({ explorer, onJezero, visibility, statuses, onTog
       <div id="mission-layers-section" className="mission-section-content" hidden={activeSection !== 'layers'}>
       <section className="panel-section" aria-labelledby="layers-heading">
         <div className="section-title flex items-center justify-between">
-          <h3 id="layers-heading">Map layers</h3>
+          <h3 id="layers-heading">Imagery selection</h3>
           <Icon name="layers" />
         </div>
         <p id="layers-note" className="helper mb-4">MOLA shows regional context. CTX imagery appears at local zoom within its footprint.</p>

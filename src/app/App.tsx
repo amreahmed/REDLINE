@@ -2,6 +2,7 @@ import { useCallback, useEffect, useReducer, useRef, useState } from 'react'
 import { AboutDialog } from '../components/layout/AboutDialog'
 import { InformationPanel } from '../components/layout/InformationPanel'
 import { MissionControl } from '../components/layout/MissionControl'
+import { MissionStatusBar } from '../components/layout/MissionStatusBar'
 import { MarsExplorer } from '../components/explorer/MarsExplorer'
 import { initialExplorerSummary } from '../features/explorer/types'
 import { Icon } from '../components/shared/Icon'
@@ -15,7 +16,6 @@ import { GridPlanner } from '../components/mission/GridPlanner'
 import { useGridPlanning } from '../features/mission/useGridPlanning'
 import type { ExplorerSummary } from '../features/explorer/types'
 import { initialWorkspacePanels, workspacePanels } from './workspacePanels'
-import type { MissionSection } from './workspacePanels'
 
 export default function App() {
   const [explorer, setExplorer] = useState(initialExplorerSummary)
@@ -121,20 +121,16 @@ export default function App() {
           {([['explore', 'orbit', 'Explore'], ['layers', 'layers', 'Layers'], ['plan', 'pin', 'Plan']] as const).map(([section, icon, label]) => <button key={section} type="button" className="rail-button" title={label === 'Plan' ? 'Choose hypothetical mission endpoints' : label} aria-expanded={controlsOpen && panels.section === section} aria-controls="mission-control" onClick={() => dispatchPanel({ type: 'mission', section })}><Icon name={icon} size={22} /><span>{label}</span></button>)}
           <button type="button" className="rail-button sources-rail-button" title="Sources and scientific status" aria-expanded={informationOpen} aria-controls="information-panel" onClick={openSources}><Icon name="info" size={22} /><span>Sources</span></button>
         </nav>
-      <main className="workspace" data-panel={panels.panel ?? 'none'}>
-        <div className="controls-slot" hidden={!controlsOpen}><MissionControl activeSection={panels.section} onSectionChange={(section: MissionSection) => { if (panels.section !== section) dispatchPanel({ type: 'mission', section }) }} onClose={closePanel} explorer={explorer} onJezero={openJezero} visibility={visibility} statuses={statuses} onToggle={toggleLayer} onRetry={retryLayer} missionPlanner={<>
+      <main className="workspace" data-panel={panels.panel ?? 'none'} data-picking={planning.pickRole !== null}>
+        <div className="controls-slot" hidden={!controlsOpen}><MissionControl activeSection={panels.section} onClose={closePanel} explorer={explorer} visibility={visibility} statuses={statuses} onToggle={toggleLayer} onRetry={retryLayer} missionPlanner={<>
           <GridPlanner terrain={planning.terrain} selection={planning.selection} pickRole={planning.pickRole} notice={planning.notice} canPick={canPick} onOpen={() => void openPlanning()} onAssign={(role, row, column) => { if (canPick) planning.assign(role, row, column) }} onBeginPick={(role) => { if (canPick) { planning.beginPick(role); if (window.matchMedia('(max-width: 640px)').matches) { dispatchPanel({ type: 'close' }); document.getElementById('explorer-workspace')?.focus({ preventScroll: true }) } } }} onUseCenter={() => { if (canPick) setCenterPickRequest((value) => value + 1) }} onCancel={cancelGridPick} onSwap={planning.swap} onClear={planning.clear} />
           <FeaturePlanner targets={SCIENCE_TARGETS} selection={missionSelection} selectedId={selectedTargetId} error={selectionError} onInspect={inspectTarget} onAssign={selectEndpoint} onSwap={swap} onClear={clear} />
         </>} /></div>
-        <MarsExplorer visibility={visibility} statuses={statuses} retryRequest={retryRequest} jezeroRequest={jezeroRequest} onStatus={onStatus} onSummary={onSummary} missionSelection={missionSelection} selectedTargetId={selectedTargetId} focusRequest={focusRequest} onInspectTarget={inspectTarget} planningGrid={planning.terrain.phase === 'ready' ? planning.terrain.grid : null} gridSelection={planning.selection} gridFocusRequest={gridFocusRequest} centerPickRequest={centerPickRequest} gridPickRole={canPick ? planning.pickRole : null} gridPickNotice={planning.notice} onPickCoordinate={(coordinate) => { if (canPick) planning.pickCoordinate(coordinate) }} onNavigate={cancelPlanningNavigation} />
+        <MarsExplorer visibility={visibility} statuses={statuses} retryRequest={retryRequest} jezeroRequest={jezeroRequest} onJezero={openJezero} onStatus={onStatus} onSummary={onSummary} missionSelection={missionSelection} selectedTargetId={selectedTargetId} focusRequest={focusRequest} onInspectTarget={inspectTarget} planningGrid={planning.terrain.phase === 'ready' ? planning.terrain.grid : null} gridSelection={planning.selection} gridFocusRequest={gridFocusRequest} centerPickRequest={centerPickRequest} gridPickRole={canPick ? planning.pickRole : null} gridPickNotice={planning.notice} onPickCoordinate={(coordinate) => { if (canPick) planning.pickCoordinate(coordinate) }} onNavigate={cancelPlanningNavigation} />
         <div className="information-slot" hidden={!informationOpen}><InformationPanel onClose={closePanel} explorer={explorer} visibility={visibility} statuses={statuses} target={targetById(selectedTargetId)} inspectionSequence={focusRequest?.sequence ?? 0} planningGrid={planning.terrain.phase === 'ready' ? planning.terrain.grid : undefined} /></div>
       </main>
       </div>
-      <footer className="app-footer flex items-center justify-between gap-4">
-        <span className="terrain-load-status" role="status">{planning.terrain.phase === 'ready' ? `${planning.terrain.grid.manifest.summary.validCount.toLocaleString()} terrain cells loaded` : planning.terrain.phase === 'loading' ? 'Verifying terrain cells…' : planning.terrain.phase === 'error' ? 'Terrain unavailable · retry in Plan' : 'Terrain available on demand in Plan'}</span>
-        <span className="validation-status">Scientific validation pending · routes unavailable</span>
-        <span className="archive-status">Archived data</span>
-      </footer>
+      <MissionStatusBar terrain={planning.terrain} />
     </div>
   )
 }
