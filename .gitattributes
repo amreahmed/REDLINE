@@ -6,5 +6,9 @@ docs/evidence/terrain-detail-audit/** -text whitespace=-blank-at-eol
 docs/evidence/cinematic-jezero/** -text whitespace=-blank-at-eol
 docs/evidence/phase-3-targets/** -text whitespace=-blank-at-eol
 docs/evidence/terrain-validation/** -text whitespace=-blank-at-eol
+docs/evidence/challenge-resources-2026-11-13/** -text whitespace=-blank-at-eol
+# Retain provider whitespace in the exact hashed raw gallery/API responses.
+docs/evidence/challenge-resources-2026-11-13/perseverance-raw-gallery.html whitespace=-blank-at-eol,-blank-at-eof,-space-before-tab
+docs/evidence/challenge-resources-2026-11-13/perseverance-raw-api-example.json whitespace=-blank-at-eol,-blank-at-eof
 # Preserve the exact canonical bytes verified by the browser's terrain integrity check.
 public/data/jezero-terrain-windows.json -text

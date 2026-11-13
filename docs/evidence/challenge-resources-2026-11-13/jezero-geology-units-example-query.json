@@ -1,0 +1,187 @@
+{
+  "objectIdFieldName" : "OBJECTID", 
+  "uniqueIdField" : 
+  {
+    "name" : "OBJECTID", 
+    "isSystemMaintained" : true
+  }, 
+  "globalIdFieldName" : "", 
+  "geometryProperties" : 
+  {
+    "shapeAreaFieldName" : "Shape__Area", 
+    "shapeLengthFieldName" : "Shape__Length", 
+    "units" : "esriMeters"
+  }, 
+  "geometryType" : "esriGeometryPolygon", 
+  "spatialReference" : {
+    "wkt" : "PROJCS[\"MTM_clon77_5E\",GEOGCS[\"GCS_Mars_2000_Sphere\",DATUM[\"D_Mars_2000_Sphere\",SPHEROID[\"Mars_2000_Sphere\",3396190.0,0.0]],PRIMEM[\"Reference_Meridian\",0.0],UNIT[\"Degree\",0.0174532925199433]],PROJECTION[\"Transverse_Mercator\"],PARAMETER[\"False_Easting\",0.0],PARAMETER[\"False_Northing\",0.0],PARAMETER[\"Central_Meridian\",77.5],PARAMETER[\"Scale_Factor\",1.0],PARAMETER[\"Latitude_Of_Origin\",0.0],UNIT[\"Meter\",1.0]]"
+  }, 
+  "fields" : [
+    {
+      "name" : "OBJECTID", 
+      "type" : "esriFieldTypeOID", 
+      "alias" : "OBJECTID", 
+      "sqlType" : "sqlTypeOther", 
+      "domain" : null, 
+      "defaultValue" : null
+    }, 
+    {
+      "name" : "unit", 
+      "type" : "esriFieldTypeString", 
+      "alias" : "unit", 
+      "sqlType" : "sqlTypeOther", 
+      "length" : 50, 
+      "domain" : null, 
+      "defaultValue" : null
+    }, 
+    {
+      "name" : "name", 
+      "type" : "esriFieldTypeString", 
+      "alias" : "name", 
+      "sqlType" : "sqlTypeOther", 
+      "length" : 50, 
+      "domain" : null, 
+      "defaultValue" : null
+    }, 
+    {
+      "name" : "Unit_Description", 
+      "type" : "esriFieldTypeString", 
+      "alias" : "Unit Description", 
+      "sqlType" : "sqlTypeOther", 
+      "length" : 5000, 
+      "domain" : null, 
+      "defaultValue" : null
+    }, 
+    {
+      "name" : "Additional_Characteristics", 
+      "type" : "esriFieldTypeString", 
+      "alias" : "Additional Characteristics", 
+      "sqlType" : "sqlTypeOther", 
+      "length" : 5000, 
+      "domain" : null, 
+      "defaultValue" : null
+    }, 
+    {
+      "name" : "Unit_Interpretation", 
+      "type" : "esriFieldTypeString", 
+      "alias" : "Unit Interpretation", 
+      "sqlType" : "sqlTypeOther", 
+      "length" : 5000, 
+      "domain" : null, 
+      "defaultValue" : null
+    }
+  ], 
+  "exceededTransferLimit" : true, 
+  "features" : [
+    {
+      "attributes" : {
+        "OBJECTID" : 1, 
+        "unit" : "10", 
+        "name" : "Upper etched unit", 
+        "Unit_Description" : "Indurated, rugged, moderately-to-heavily cratered, light-to-intermediate toned unit located along and on the northern Jezero crater rim and wall, along the interior margin of Jezero crater, and throughout Nili Planum. Overlies units Nnp1 and cr in Nili Planum and conformably overlies unit Nle in Jezero crater. Contains three different surface expressions with varying morphologic and erosional textures that grade into one another without clear or systematic stratigraphic contacts: a ridged expression in northern Jezero and northeastern Nili Planum, a heavily cratered expression in northern Nili Planum, and a light-toned rugged expression in southern Nili Planum (Figure 3). Type area: lat 18.67°N, long 77.57°E and lat 18.68°N, long 76.86°E and lat 17.77°N, long 76.86°E respectively.", 
+        "Additional_Characteristics" : "Occurs at elevations ranging from -2707 m within Jezero to -1787 m in Nili Planum. Ridged expression has ridges trending northeast to southwest, and overlies the Jezero crater rim (18.56°N, 77.28°E). Heavily cratered expression has a rougher, heavily cratered surface with no preferential direction indicated by erosional textures. Light-toned rugged expression has a moderately rough, cratered surface with variegated tones and very sharply defined ridged margins that often forms linear outcrops extending up to 5 kilometers in length (17.78°N, 77.31°E) and can be associated with raised linear ridges in unit Nnp1 (for example, 18.19°N, 77.06°E; 17.86°N, 77.03°E). Associated with olivine and variable carbonate (Goudge and others, 2015; Bramble and others, 2017). Previously mapped as the 'fractured unit' by Bramble and others (2017), and inside Jezero crater as the 'mottled terrain' by Goudge and others (2015).", 
+        "Unit_Interpretation" : "Volcanic ash deposit that drapes underlying units Nnp1, cr, and Nle. Could also be other clastic deposit of volcanic or eolian origin. The three distinct surface expressions could result from differential erosion or cementation, as no clear or systematic stratigraphic contacts are discernable between the three surface expressions. Ridges in the ridged Nue unit are yardangs (Day and Dorn, 2019). Long linear occurrences of the light-toned rugged Nue unit could have formed through infilling of preexisting fractures created by the Isidis impact."
+      }, 
+      "geometry" : 
+      {
+        "rings" : 
+        [
+          [
+            [-24546.251699999, 1049375.3563], 
+            [-24538.3388999999, 1049375.0996], 
+            [-24534.3937000036, 1049374.8642], 
+            [-24530.4597000033, 1049374.5199], 
+            [-24526.5209999979, 1049374.0396], 
+            [-24522.5935999975, 1049373.4497], 
+            [-24514.7604999989, 1049372.0559], 
+            [-24506.9428000003, 1049370.5026], 
+            [-24483.5270999968, 1049365.5283], 
+            [-24475.7515999973, 1049363.7779], 
+            [-24468.0279000029, 1049361.8887], 
+            [-24464.2016000003, 1049360.8482], 
+            [-24460.4122999981, 1049359.7076], 
+            [-24456.6741999984, 1049358.4281], 
+            [-24453.0728999972, 1049357.0096], 
+            [-24449.5208000019, 1049355.457], 
+            [-24442.5138999969, 1049352.0868], 
+            [-24435.5803999975, 1049348.5154], 
+            [-24418.3548000008, 1049339.2888], 
+            [-24404.635300003, 1049331.7925], 
+            [-24397.8408999965, 1049327.9483], 
+            [-24394.4805999994, 1049325.9713], 
+            [-24391.1589000002, 1049323.9367], 
+            [-24387.8902999982, 1049321.8226], 
+            [-24384.6445000023, 1049319.5812], 
+            [-24381.4530000016, 1049317.2585], 
+            [-24375.1749000028, 1049312.4541], 
+            [-24362.8082000017, 1049302.5548], 
+            [-24347.5045000017, 1049289.9921], 
+            [-24341.5112000033, 1049284.8595], 
+            [-24338.5852999985, 1049282.2345], 
+            [-24335.7352000028, 1049279.5464], 
+            [-24332.9918000028, 1049276.769], 
+            [-24330.3964999989, 1049273.8679], 
+            [-24328.0217000023, 1049270.8652], 
+            [-24325.7924999967, 1049267.7405], 
+            [-24323.6702999994, 1049264.5265], 
+            [-24321.6253999993, 1049261.2477], 
+            [-24317.6845000014, 1049254.5659], 
+            [-24311.9566999972, 1049244.39], 
+            [-24281.7358999997, 1049189.8489], 
+            [-25006.7291999981, 1049191.5309], 
+            [-25005.9177000001, 1049194.2682], 
+            [-24996.0797000006, 1049230.2297], 
+            [-24993.8725999966, 1049237.9063], 
+            [-24991.4974000007, 1049245.4423], 
+            [-24990.192400001, 1049249.1124], 
+            [-24988.7629000023, 1049252.6787], 
+            [-24987.1586999968, 1049256.0994], 
+            [-24985.3131000027, 1049259.3185], 
+            [-24983.1378000006, 1049262.2627], 
+            [-24980.5916000009, 1049264.8487], 
+            [-24977.7292999998, 1049267.1711], 
+            [-24974.6406999975, 1049269.3049], 
+            [-24971.3922000006, 1049271.3057], 
+            [-24968.0327000022, 1049273.2144], 
+            [-24964.5976999998, 1049275.0606], 
+            [-24957.5952000022, 1049278.644], 
+            [-24936.2835000008, 1049289.1295], 
+            [-24929.1623999998, 1049292.5746], 
+            [-24922.0165999979, 1049295.9354], 
+            [-24914.8065000027, 1049299.1123], 
+            [-24911.1569000036, 1049300.5807], 
+            [-24907.552699998, 1049301.9102], 
+            [-24903.9162999988, 1049303.1545], 
+            [-24896.5798999965, 1049305.4731], 
+            [-24885.4924999997, 1049308.7273], 
+            [-24852.1327000037, 1049318.2143], 
+            [-24841.060800001, 1049321.5208], 
+            [-24833.6495999992, 1049323.8954], 
+            [-24818.7793999985, 1049329.0227], 
+            [-24774.3175999969, 1049344.8677], 
+            [-24766.873999998, 1049347.4067], 
+            [-24759.4672999978, 1049349.7974], 
+            [-24744.7092999965, 1049354.2265], 
+            [-24715.0879999995, 1049362.7588], 
+            [-24703.9527999982, 1049365.8114], 
+            [-24696.4979000017, 1049367.666], 
+            [-24692.7525999993, 1049368.4899], 
+            [-24688.9891000018, 1049369.2102], 
+            [-24685.0804999992, 1049369.8219], 
+            [-24681.1526999995, 1049370.3242], 
+            [-24673.2595999986, 1049371.1136], 
+            [-24665.3381000012, 1049371.7407], 
+            [-24653.4338999987, 1049372.5571], 
+            [-24629.6094999984, 1049374.0782], 
+            [-24617.6952999979, 1049374.7549], 
+            [-24609.7490999997, 1049375.0947], 
+            [-24597.8473000005, 1049375.3384], 
+            [-24581.9693000019, 1049375.4358], 
+            [-24558.1491999999, 1049375.4682], 
+            [-24546.251699999, 1049375.3563]
+          ]
+        ]
+      }
+    }
+  ]
+}

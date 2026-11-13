@@ -1,0 +1,9 @@
+{
+  "content": [
+    {
+      "type": "text",
+      "text": "Empty search results\nNo results were found for the provided queries\n--------------------------------------------------------------------------------\nInternal Error ()\n【turn186337view0】 [wordlim: 200] Source: open({\"ref_id\":\"https://www.spaceappschallenge.org/resources/\",\"lineno\":null}); \nFailed to fetch https://www.spaceappschallenge.org/resources/: (502) Bad Gateway\n--------------------------------------------------------------------------------\nInternal Error ()\n【turn186337view1】 [wordlim: 200] Source: open({\"ref_id\":\"https://www.spaceappschallenge.org/2026/\",\"lineno\":null}); \nFailed to fetch https://www.spaceappschallenge.org/2026/: (502) Bad Gateway\n--------------------------------------------------------------------------------\nInternal Error ()\n【turn186337view2】 [wordlim: 200] Source: open({\"ref_id\":\"turn798658search2\",\"lineno\":null}); \nFailed to fetch https://www.spaceappschallenge.org/2026/challenges/interplanetary-survival-guide-martian-map/: (502) Bad Gateway"
+    }
+  ],
+  "isError": false
+}

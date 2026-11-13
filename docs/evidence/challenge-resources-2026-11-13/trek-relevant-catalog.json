@@ -1,0 +1,236 @@
+[
+  {
+    "item_DBID": "294199",
+    "item_UUID": "a70fda98-1de6-4cc7-9490-17b0cde4e77a",
+    "productLabel": "CLH_Visible_Mosaic_HiRISE_CTX_HRSC_GCS_MARS_07-10-2018",
+    "title": "MRO HiRISE, Mosaic Columbia Hills",
+    "fileSize": [
+      4211311747
+    ],
+    "productCat1": "Imagery",
+    "productCat2": "Mosaic",
+    "mission": "Mars Reconnaissance Orbiter",
+    "trekProjection": "urn:ogc:def:crs:EPSG::104905",
+    "projection": "urn:ogc:def:crs:EPSG::104905",
+    "data_created_date": "2020-06-25T22:50:00Z",
+    "description": "Preliminary visible orthoimage mosaic for Columbia Hills candidate landing site for the Mars 2020 rover.\nHRSC orthoimages and DEMs were downloaded from the Planetary Data System archives. HiRISE and CTX orthoimages and DEMs were created by the USGS Astrogeology and HiRISE teams,\nand compiled and georeferenced at JPL/Caltech by the Advanced Laboratory for Landing Site Terrain Analysis and Reconnaissance (ALLSTAR) group including Nathan Williams, \nHeather Lethcoe-Wilson, Lauren Berger, Marshall Trautman, and Matt Golombek for the M2020 Council of Terrains. These files are for discussion and planning purposes \nonly.\nProcessing Notes:\nGeoreferencing: \nHRSC orthos are well-coregistered to the community-standard MOLA global topography products, and CTX orthos are well-coregistered to the HRSC orthos.\nTie points were recorded at small craters visible in both HiRISE and CTX images, and a first-order transformation was used to rectify the HiRISE.\n\nProjection and Coordinate System:\nFormer mosaic basemaps for M2020 used a Mars equirectangular projection with a standard parallel of 0 (also called Plate Carree),\nbut this caused a ~5% latitude vs longitude distortion at the remaining 3 candidate landing sites such that true circles would appear elliptical.\nIn this new version of basemaps, we use a Mars equirectangular projection with customized standard parallels for each site to reduce distortion to <1%.\nSpecifically, Columbia Hills uses a standard parallel of -14.5 degrees, while Jezero and NE Syrtis both have a standard parallel of +18 degrees. Projection (.prj) files are included with this delivery.\nWhen analyzing images, please ensure that the correct projection system is being used. For example, there is a known issue with Matlab where reading images in as a geotiff may automatically assign an \nincorrect projection without the specified standard parallel, which then produces distorted linear (in meters) x/y values.",
+    "itemType": "product",
+    "thumbnailURLDir": "https://trek.nasa.gov/tiles/Mars/EQ/CLH_Visible_Mosaic_HiRISE_CTX_HRSC_GCS_MARS_07-10-2018/thumbnail/CLH_Visible_Mosaic_HiRISE_CTX_HRSC_GCS_MARS_07-10-2018-",
+    "isContainer": false,
+    "searchable": true,
+    "coverage": "Global",
+    "serviceTypes": [
+      "Mosaic"
+    ],
+    "shape": "POLYGON ((175.175297804848 -14.3215408170783,175.175297804848 -14.8276615667622,175.698071493473 -14.8276615667622,175.698071493473 -14.3215408170783,175.175297804848 -14.3215408170783))",
+    "bbox": "175.1752978,-14.8276616,175.6980715,-14.3215408",
+    "Resolution": 0,
+    "instrument": "HiRISE",
+    "_version_": 1670513059870802000
+  },
+  {
+    "item_DBID": "294186",
+    "item_UUID": "42eea1d3-9568-44a8-96d2-90409ec20356",
+    "productLabel": "MC11E_HRMOSCO_COL",
+    "title": "Mars Express HRSC, Martian Path MC11 Quad Color Mosaic",
+    "fileSize": [
+      1928104201
+    ],
+    "productCat1": "Imagery",
+    "productCat2": "Mosaic",
+    "mission": "MEX",
+    "trekProjection": "urn:ogc:def:crs:EPSG::104905",
+    "projection": "urn:ogc:def:crs:EPSG::104905",
+    "data_created_date": "2020-06-25T22:51:21Z",
+    "description": "This layer is a combined color mosaic and 50 meter digital terrain model assembled using data from the High Resolution Stereo Camera (HRSC) aboard the European Space Agency's Mars Express orbiter. It covers the MC-11 quadrangle on Mars. For the purposes of mapping, the United States Geological Survey (USGS) has divided the surface of Mars into 30 quadrangles, labeled MC-1 through MC-30 (MC for Mars Chart). Each of the quadrangles also has a proper name derived from a prominent surface feature within the quadrangle. Much of the story of the Martian takes place within MC-11, also known as Oxia Palus. Fortunately, MC-11 happens to be the first complete quadrangle the European Space Agency produced as an HRSC 50m digital terrain model and image mosaic. HRSC is being used to obtain color and stereo images that will map 100% of Mars' surface at resolution better than 30 m/pixel, and 50% of the surface at better than 15 m/pixel. Each of the nine CCD lines of HRSC, a linescan imager (pushbroom camera), contains 5184 pixels. The channels consist of red, green, blue, near-infrared, three stereo channels (backward, nadir, and forward) and two photometric channels. This mosaic was produced by the Global Topography and Mosaic Generation Task Group of the HRSC-Team by joining nearly 100 contiguous HRSC stereo strips. HRSC data provided by ESA/DLR/FU Berlin and the Mars Express HRSC-Team.",
+    "itemType": "product",
+    "thumbnailURLDir": "https://trek.nasa.gov/tiles/Mars/EQ/MC11E_HRMOSCO_COL/thumbnail/MC11E_HRMOSCO_COL-",
+    "isContainer": false,
+    "searchable": true,
+    "coverage": "Global",
+    "serviceTypes": [
+      "Mosaic"
+    ],
+    "shape": "POLYGON ((-22.5003191852575 30.0005661765828,-22.5003191852575 -0.000421788718459,0.000421788718455 -0.000421788718459,0.000421788718455 30.0005661765828,-22.5003191852575 30.0005661765828))",
+    "bbox": "-22.5003192,-0.0004218,0.0004218,30.0005662",
+    "Resolution": 0,
+    "instrument": "HRSC",
+    "_version_": 1670513144576868400
+  },
+  {
+    "item_DBID": "294191",
+    "item_UUID": "cc028221-2e43-490e-bfb9-6f1297f38a1f",
+    "productLabel": "MC11E_HRMOSND_ND5",
+    "title": "Mars Express HRSC, Martian Path MC11 Quad Mosaic",
+    "fileSize": [
+      6528112289
+    ],
+    "productCat1": "Imagery",
+    "productCat2": "Mosaic",
+    "mission": "MEX",
+    "trekProjection": "urn:ogc:def:crs:EPSG::104905",
+    "projection": "urn:ogc:def:crs:EPSG::104905",
+    "data_created_date": "2020-06-25T22:51:27Z",
+    "description": "This layer is a combined greyscale mosaic and 50 meter digital terrain model assembled using data from the High Resolution Stereo Camera (HRSC) aboard the European Space Agency's Mars Express orbiter. It covers the MC-11 quadrangle on Mars. For the purposes of mapping, the United States Geological Survey (USGS) has divided the surface of Mars into 30 quadrangles, labeled MC-1 through MC-30 (MC for Mars Chart). Each of the quadrangles also has a proper name derived from a prominent surface feature within the quadrangle. Much of the story of the Martian takes place within MC-11, also known as Oxia Palus. Fortunately, MC-11 happens to be the first complete quadrangle the European Space Agency produced as an HRSC 50m digital terrain model and image mosaic. HRSC is being used to obtain color and stereo images that will map 100% of Mars' surface at resolution better than 30 m/pixel, and 50% of the surface at better than 15 m/pixel. Each of the nine CCD lines of HRSC, a linescan imager (pushbroom camera), contains 5184 pixels. The channels consist of red, green, blue, near-infrared, three stereo channels (backward, nadir, and forward) and two photometric channels. While this mosaic lacks the color information shown in the color mosaic, it does show finer detail. This mosaic was produced by the Global Topography and Mosaic Generation Task Group of the HRSC-Team by joining nearly 100 contiguous HRSC stereo strips. HRSC data provided by ESA/DLR/FU Berlin and the Mars Express HRSC-Team.",
+    "itemType": "product",
+    "thumbnailURLDir": "https://trek.nasa.gov/tiles/Mars/EQ/MC11E_HRMOSND_ND5/thumbnail/MC11E_HRMOSND_ND5-",
+    "isContainer": false,
+    "searchable": true,
+    "coverage": "Global",
+    "serviceTypes": [
+      "Mosaic"
+    ],
+    "shape": "POLYGON ((-22.5000028437187 30.0000389406847,-22.5000028437187 -0.000105447179557,0.000105447179571 -0.000105447179557,0.000105447179571 30.0000389406847,-22.5000028437187 30.0000389406847))",
+    "bbox": "-22.5000028,-0.0001054,0.0001054,30.0000389",
+    "Resolution": 0,
+    "instrument": "HRSC",
+    "_version_": 1670513151467061200
+  },
+  {
+    "item_DBID": "294257",
+    "item_UUID": "8441dc5f-a28e-439e-8ef7-a92514c91d26",
+    "productLabel": "CTX_Ortho_13S289E_6mp_D10_031125_1673",
+    "title": "Mars Reconnaissance Orbiter CTX, Mosaic East Melas 13S289E_D10",
+    "fileSize": [
+      104128346
+    ],
+    "productCat1": "Imagery",
+    "productCat2": "Mosaic",
+    "mission": "Mars Reconnaissance Orbiter",
+    "trekProjection": "urn:ogc:def:crs:EPSG::104905",
+    "projection": "urn:ogc:def:crs:EPSG::104905",
+    "data_created_date": "2020-06-25T22:47:37Z",
+    "description": "This is a CTX orthorectified image, geometrically corrected using its own source digital elevation model (DEM/DTM), as produced as part of an effort to characterize candidate Human Exploration Zones for Mars. The original DEM was constructed from a pair of CTX images using the stereo photogrammetry software AMES Stereo Pipeline (ASP). The DEM, and thus orthoimage, has been tied to MOLA and can be considered resarch- and visualization-ready. Because it has not been manually edited using a full 3D editing environment, ASP DEMs cannot currently be considered true engineering-ready for performing landings. \n\nReferences: \nShean, D. E., O. Alexandrov, Z. Moratto, B. E. Smith, I. R. Joughin, C. C. Porter, P. J., Morin, 2016, An automated, open-source pipeline for mass production of digital elevation models (DEMs) from very high-resolution commercial stereo satellite imagery, ISPRS Journal of Photogrammetry and Remote Sensing, 116.\n\nMayer, D. P., E. S. Kite, 2016, An Integrated Workflow for Producing Digital Terrain Models Of Mars from CTX And HiRISE Stereo Data Using the NASA Ames Stereo Pipeline, 47th Lunar and Planetary Science Conference, Abstract 1261.",
+    "itemType": "product",
+    "thumbnailURLDir": "https://trek.nasa.gov/tiles/Mars/EQ/CTX_Ortho_13S289E_6mp_D10_031125_1673/thumbnail/CTX_Ortho_13S289E_6mp_D10_031125_1673-",
+    "isContainer": false,
+    "searchable": true,
+    "coverage": "Global",
+    "serviceTypes": [
+      "Mosaic"
+    ],
+    "shape": "POLYGON ((-71.2032819457327 -12.510076491043,-71.2032819457327 -13.2719867476452,-70.6758056142389 -13.2719867476452,-70.6758056142389 -12.510076491043,-71.2032819457327 -12.510076491043))",
+    "bbox": "-71.2032819,-13.2719867,-70.6758056,-12.5100765",
+    "Resolution": 0,
+    "instrument": "CTX",
+    "_version_": 1670512909734641700
+  },
+  {
+    "item_DBID": "295944",
+    "item_UUID": "ad8d2800-e66e-4f4b-9a85-d377164d3a4e",
+    "productLabel": "JEZ_hirise_soc_006_orthoMosaic_25cm_Eqc_latTs0_lon0_first_dd",
+    "title": "MRO HiRISE, Jezero Mosaic, Controlled",
+    "fileSize": [
+      9822748524
+    ],
+    "productCat1": "Imagery",
+    "productCat2": "Mosaic",
+    "mission": "Mars Reconnaissance Orbiter",
+    "trekProjection": "urn:ogc:def:crs:EPSG::104905",
+    "projection": "GEOGCS[\"unnamed ellipse\",DATUM[\"unknown\",SPHEROID[\"unnamed\",3396190,0]],PRIMEM[\"Greenwich\",0],UNIT[\"degree\",0.0174532925199433]]",
+    "data_created_date": "2020-08-03T22:48:28Z",
+    "description": "The Mars 2020 rover will explore Jezero crater, Mars to investigate an ancient delta for evidence of past microbial life and to better understand the geologic history of the region. The landing system onboard Mars 2020 will use technology developed at the Jet Propulsion Laboratory (JPL) called Terrain Relative Navigation (TRN), which will enable the spacecraft to autonomously avoid hazards (e.g., rock fields, crater rims) that exceed the safety requirements of the landing system. This capability allows small-scale hazards to be present in the landing ellipse, providing greater flexibility in selecting a landing location. In support of TRN, the USGS Astrogeology Science Center has generated and delivered a High-Resolution Imaging Science Experiment (HiRISE) digital terrain model (DTM) mosaic and orthomosaic that is the basemap onto which surface hazards were mapped. The hazard map will be onboard the spacecraft and used by TRN to help identify the final, hazard-free landing location.",
+    "itemType": "product",
+    "resolution": 0.0000039,
+    "thumbnailURLDir": "https://trek.nasa.gov/tiles/Mars/EQ/JEZ_hirise_soc_006_orthoMosaic_25cm_Eqc_latTs0_lon0_first_dd/thumbnail/JEZ_hirise_soc_006_orthoMosaic_25cm_Eqc_latTs0_lon0_first_dd-",
+    "isContainer": false,
+    "searchable": true,
+    "coverage": "Regional",
+    "serviceTypes": [
+      "Mosaic"
+    ],
+    "shape": "POLYGON((77.2229331 18.6693150,77.2229331 18.3067994,77.5839640 18.3067994,77.5839640 18.6693150,77.2229331 18.6693150))",
+    "trekBbox": "77.2229331,18.3067994,77.583964,18.669315",
+    "bbox": "77.2229331,18.3067994,77.583964,18.669315",
+    "instrument": "HiRISE",
+    "_version_": 1675655342794473500
+  },
+  {
+    "item_DBID": "294198",
+    "item_UUID": "2949fc97-0440-4dcd-b361-006af5d7dfa5",
+    "productLabel": "NES_JEZ_MID_Visible_Mosaic_HiRISE_CTX_HRSC_GCS_MARS_07-10-2018",
+    "title": "MRO HiRISE, Mosaic Jezero NE Syrtis Midway",
+    "fileSize": [
+      25377664931
+    ],
+    "productCat1": "Imagery",
+    "productCat2": "Mosaic",
+    "mission": "Mars Reconnaissance Orbiter",
+    "trekProjection": "urn:ogc:def:crs:EPSG::104905",
+    "projection": "urn:ogc:def:crs:EPSG::104905",
+    "data_created_date": "2020-06-25T22:49:53Z",
+    "description": "Preliminary visible orthoimage mosaic for Jezero Crater, NE Syrtis, and Midway candidate landing sites for the Mars 2020 rover.\nHRSC orthoimages and DEMs were downloaded from the Planetary Data System archives. HiRISE and CTX orthoimages and DEMs were created by the USGS Astrogeology and HiRISE teams,\nand compiled and georeferenced at JPL/Caltech by the Advanced Laboratory for Landing Site Terrain Analysis and Reconnaissance (ALLSTAR) group including Nathan Williams, \nHeather Lethcoe-Wilson, Lauren Berger, Marshall Trautman, and Matt Golombek for the M2020 Council of Terrains. These files are for discussion and planning purposes \nonly.\nProcessing Notes:\nGeoreferencing: \nHRSC orthos are well-coregistered to the community-standard MOLA global topography products, and CTX orthos are well-coregistered to the HRSC orthos.\nTie points were recorded at small craters visible in both HiRISE and CTX images, and a first-order transformation was used to rectify the HiRISE.\n\nProjection and Coordinate System:\nFormer mosaic basemaps for M2020 used a Mars equirectangular projection with a standard parallel of 0 (also called Plate Carree),\nbut this caused a ~5% latitude vs longitude distortion at the remaining 3 candidate landing sites such that true circles would appear elliptical.\nIn this new version of basemaps, we use a Mars equirectangular projection with customized standard parallels for each site to reduce distortion to <1%.\nSpecifically, Columbia Hills uses a standard parallel of -14.5 degrees, while Jezero and NE Syrtis both have a standard parallel of +18 degrees. Projection (.prj) files are included with this delivery.\nWhen analyzing images, please ensure that the correct projection system is being used. For example, there is a known issue with Matlab where reading images in as a geotiff may automatically assign an \nincorrect projection without the specified standard parallel, which then produces distorted linear (in meters) x/y values.",
+    "itemType": "product",
+    "thumbnailURLDir": "https://trek.nasa.gov/tiles/Mars/EQ/NES_JEZ_MID_Visible_Mosaic_HiRISE_CTX_HRSC_GCS_MARS_07-10-2018/thumbnail/NES_JEZ_MID_Visible_Mosaic_HiRISE_CTX_HRSC_GCS_MARS_07-10-2018-",
+    "isContainer": false,
+    "searchable": true,
+    "coverage": "Global",
+    "serviceTypes": [
+      "Mosaic"
+    ],
+    "shape": "POLYGON ((76.791278917458 18.6926321560547,76.791278917458 17.5791653764337,77.7314417244504 17.5791653764337,77.7314417244504 18.6926321560547,76.791278917458 18.6926321560547))",
+    "bbox": "76.7912789,17.5791654,77.7314417,18.6926322",
+    "resolution": 0.000005,
+    "instrument": "HiRISE",
+    "_version_": 1675655892878491600
+  },
+  {
+    "item_DBID": "295942",
+    "item_UUID": "32003f69-a6f6-4441-bb46-4c46689c42eb",
+    "productLabel": "JEZ_ctx_B_soc_008_orthoMosaic_6m_Eqc_latTs0_lon0",
+    "title": "MRO CTX, Jezero Mosaic, Controlled",
+    "fileSize": [
+      36269402
+    ],
+    "productCat1": "Imagery",
+    "productCat2": "Mosaic",
+    "mission": "Mars Reconnaissance Orbiter",
+    "trekProjection": "urn:ogc:def:crs:EPSG::104905",
+    "projection": "PROJCS[\"Equirectangular Mars 2000 Sphere IAU\",GEOGCS[\"GCS_Mars_2000_Sphere\",DATUM[\"Mars_2000_Sphere\",SPHEROID[\"Mars_2000_Sphere_IAU\",3396190,0]],PRIMEM[\"Reference_Meridian\",0],UNIT[\"degree\",0.0174532925199433]],PROJECTION[\"Equirectangular\"],PARAMETER[\"latitude_of_origin\",0],PARAMETER[\"central_meridian\",0],PARAMETER[\"standard_parallel_1\",0],PARAMETER[\"false_easting\",0],PARAMETER[\"false_northing\",0],UNIT[\"metre\",1,AUTHORITY[\"EPSG\",\"9001\"]]]",
+    "data_created_date": "2020-08-03T22:38:00Z",
+    "description": "This is a visible image mosaic generated from the Context Camera (CTX) images from the Mars Reconnaissance Orbiter mission. This product is the Lander Visions System (LVS) map that will be onboard the spacecraft and will be considered the truth dataset that TRN will use to orient itself relative to the surface during Entry, Decent, and Landing. The images were orthorectified using digital terrain models (DTMs) created from CTX stereo images. The mosaic is generated at the same resolution at which the individual CTX images were acquired, which is approximately 6 meters per pixel. This mosaic was created in support of the Mars 2020 rover, which will explore Jezero crater, Mars to investigate an ancient delta for evidence of past microbial life and to better understand the geologic history of the region. The landing system onboard Mars 2020 will use technology developed at the Jet Propulsion Laboratory (JPL) called Terrain Relative Navigation (TRN), which will enable the spacecraft to autonomously avoid hazards (e.g., rock fields, crater rims) that exceed the safety requirements of the landing system. This capability allows small-scale hazards to be present in the landing ellipse, providing greater flexibility in selecting a landing location. In support of TRN, the USGS Astrogeology Science Center has generated and delivered this product, which is the Lander Vision System (LVS) map.",
+    "itemType": "product",
+    "resolution": 0.000083,
+    "thumbnailURLDir": "https://trek.nasa.gov/tiles/Mars/EQ/JEZ_ctx_B_soc_008_orthoMosaic_6m_Eqc_latTs0_lon0/thumbnail/JEZ_ctx_B_soc_008_orthoMosaic_6m_Eqc_latTs0_lon0-",
+    "isContainer": false,
+    "searchable": true,
+    "coverage": "Regional",
+    "serviceTypes": [
+      "Mosaic"
+    ],
+    "shape": "POLYGON((77.1604655 18.7211945,77.1604655 18.2110274,77.6989752 18.2110274,77.6989752 18.7211945,77.1604655 18.7211945))",
+    "trekBbox": "77.1604655,18.2110274,77.6991776,18.7211945",
+    "bbox": "77.1604655,18.2110274,77.6991776,18.7211945",
+    "instrument": "CTX",
+    "_version_": 1675655342811250700
+  },
+  {
+    "item_DBID": "293763",
+    "item_UUID": "afdc6b89-fc6a-4809-ab53-bf8d8251ade6",
+    "productLabel": "Jezero_CTX_BlockAdj_dd",
+    "title": "MRO CTX, Jezero Mosaic, Preliminary",
+    "fileSize": [
+      1614751404
+    ],
+    "productCat1": "Imagery",
+    "productCat2": "Mosaic",
+    "mission": "Mars Reconnaissance Orbiter",
+    "trekProjection": "urn:ogc:def:crs:EPSG::104905",
+    "projection": "urn:ogc:def:crs:EPSG::104905",
+    "data_created_date": "2020-08-03T18:28:05Z",
+    "description": "This data was acquired using the Context Camera aboard NASA's Mars Reconnaissance Orbiter spacecraft (MRO). MRO was launched on August 12, 2005 and arrived at Mars on March 10, 2006. It maintains a nearly circular orbit, completing an orbital revolution about every 112 minutes at an altitude of approximately 250 to 316 km or 155 to 196 miles. MRO carries a sophisticated suite of instruments used to analyze and map the landforms, stratigraphy, minerals, and ice of Mars.\n\nThe Context Camera (CTX) provides black-and-white images with resolutions up to 6 meters/pixel. It provides broader context maps for the higher resolution but narrower fields of view of the HiRISE camera, as well as for other instruments aboard MRO, and is useful for producing mosaicked images of larger areas on Mars' surface.",
+    "itemType": "product",
+    "thumbnailURLDir": "https://trek.nasa.gov/tiles/Mars/EQ/Jezero_CTX_BlockAdj_dd/thumbnail/Jezero_CTX_BlockAdj_dd-",
+    "isContainer": false,
+    "searchable": true,
+    "coverage": "Global",
+    "serviceTypes": [
+      "Mosaic"
+    ],
+    "shape": "POLYGON ((75.1537692298128 19.4453002570673,75.1537692298128 15.9058483770673,78.8717120578128 15.9058483770673,78.8717120578128 19.4453002570673,75.1537692298128 19.4453002570673))",
+    "bbox": "75.1537692,15.9058484,78.8717121,19.4453003",
+    "resolution": 0.0001,
+    "instrument": "CTX",
+    "_version_": 1675655342820688000
+  }
+]

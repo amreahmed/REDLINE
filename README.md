@@ -177,3 +177,5 @@ Map images stream directly from NASA Mars Trek; no persistent tile cache or repu
 REDLINE is not an official NASA product, is not NASA-endorsed, and is not a certified human-safety system. Re-check official challenge rules before submission-related work.
 
 The next milestone is controlled-imagery/DEM registration and valid grid endpoint selection. Verify shared geometry/lineage and browser rendering, then physical Mars distance and slope math over valid continuous source support before routing. Route objectives/comparison and report export remain incomplete. Controlled CTX/HiRISE sources have been audited but are not integrated as additional map layers.
+
+The updated NASA resource list is assessed in [resource strategy and completion priorities](docs/challenge-resource-strategy.md). Its main next use is controlled Mars Trek imagery; Jezero geology and curated Perseverance observations can strengthen science context after placement/route validation. The geology product's documented offsets and viewing terms remain explicit. Worldview supplies Earth data, and Curiosity's Mount Sharp path belongs to a separate Gale example.

@@ -1,0 +1,2289 @@
+{
+  "site": {
+    "item": {
+      "id": "9465129f474b49178d13d3ff60056054",
+      "owner": "mahunter@usgs.gov_USGS",
+      "ownerId": "eed984e6dd634e59abfa3d5e2f725103",
+      "orgId": "v01gqwM5QqNysAAi",
+      "created": 1631037852000,
+      "modified": 1781275527000,
+      "guid": null,
+      "name": null,
+      "title": "USGS-NASA Planetary Geologic Mapping GIS Hub",
+      "type": "Hub Site Application",
+      "typeKeywords": [
+        "Hub",
+        "hubSite",
+        "hubSolution",
+        "JavaScript",
+        "Map",
+        "Mapping Site",
+        "Online Map",
+        "OpenData",
+        "Ready To Use",
+        "selfConfigured",
+        "source-embedded-basic-default-site",
+        "Web Map",
+        "Registered App"
+      ],
+      "description": null,
+      "tags": [
+        "Hub Site",
+        "usgs",
+        "geology",
+        "moon"
+      ],
+      "snippet": null,
+      "thumbnail": "thumbnail/ago_downloaded.png",
+      "documentation": null,
+      "extent": [],
+      "categories": [],
+      "spatialReference": null,
+      "accessInformation": null,
+      "classification": null,
+      "licenseInfo": null,
+      "culture": "en",
+      "properties": {
+        "createdFrom": "basicDefaultSite Solution Template (embedded)",
+        "schemaVersion": 1.9,
+        "hasSeenGlobalNav": true,
+        "collaborationGroupId": "2e228c15c2f948fc9fbd296037a20006",
+        "contentGroupId": "0c1f8f4e70dd451a96488508f0ec2d90",
+        "parentInitiativeId": "527bb762fd014467a2f06e00c2bc4e5b",
+        "children": [],
+        "parentId": "embedded-basic-default-site",
+        "followersGroupId": "28c7c963081446809f8111f80b965618",
+        "orgUrlKey": "usgs",
+        "location": {
+          "type": "none"
+        }
+      },
+      "advancedSettings": null,
+      "url": "https://astrogeology-USGS.hub.arcgis.com",
+      "proxyFilter": null,
+      "access": "public",
+      "size": 24028631,
+      "subInfo": 0,
+      "appCategories": [],
+      "industries": [],
+      "languages": [],
+      "largeThumbnail": null,
+      "banner": null,
+      "screenshots": [],
+      "listed": false,
+      "commentsEnabled": false,
+      "numComments": 0,
+      "numRatings": 0,
+      "avgRating": 0,
+      "numViews": 367505,
+      "scoreCompleteness": 50,
+      "groupDesignations": null,
+      "apiToken1ExpirationDate": -1,
+      "apiToken2ExpirationDate": -1,
+      "lastViewed": 1794567600000
+    },
+    "data": {
+      "catalog": {
+        "groups": [
+          "0c1f8f4e70dd451a96488508f0ec2d90"
+        ]
+      },
+      "values": {
+        "title": "{{solution.name}}",
+        "defaultHostname": "astrogeology-USGS.hub.arcgis.com",
+        "subdomain": "astrogeology",
+        "public": false,
+        "faviconUrl": "",
+        "uiVersion": "2.4",
+        "map": {
+          "basemaps": {
+            "primary": {
+              "id": "25869b8718c0419db87dad07de5b02d8",
+              "title": "Dark Gray Canvas",
+              "baseMapLayers": [
+                {
+                  "id": "layer0",
+                  "layerType": "ArcGISTiledMapServiceLayer",
+                  "url": "https://services.arcgisonline.com/arcgis/rest/services/Canvas/World_Dark_Gray_Base/MapServer",
+                  "visibility": true,
+                  "opacity": 1,
+                  "title": "World Dark Gray Canvas Base",
+                  "resourceInfo": {
+                    "currentVersion": 10.3,
+                    "serviceDescription": "This map draws attention to your thematic content by providing a neutral background with minimal colors, labels, and features. Only key information is represented to provide geographic context, allowing your data to come to the foreground. This dark gray map supports bright colors, creating a visually compelling map graphic which helps your reader see the patterns intended. This map was developed by Esri using HERE data, DeLorme basemap layers, OpenStreetMap contributors, Esri basemap data, and select data from the GIS user community. Worldwide coverage is provided from Level 0 (1:591M scale) through Level 10 (1:577k scale). In North America, Central and South America, Africa, India, Australia & New Zealand, Pacific Islands, and select countries in the Middle East from Level 11 (1:288k scale) through Level 16 (1:9k scale). For more information on this map, visit us &lt;a href=\"http://goto.arcgisonline.com/maps/World_Dark_Gray_Base \" target=\"_new\" &gt;online&lt;/a&gt;.",
+                    "mapName": "Layers",
+                    "description": "This map draws attention to your thematic content by providing a neutral background with minimal colors, labels, and features. Only key information is represented to provide geographic context, allowing your data to come to the foreground. This dark gray map supports bright colors, creating a visually compelling map graphic which helps your reader see the patterns intended. \n\nThis map was developed by Esri using HERE data, DeLorme basemap layers, OpenStreetMap contributors, Esri basemap data, and select data from the GIS user community. Worldwide coverage is provided from Level 0 (1:591M scale) through Level 10 (1:577k scale). In North America, Central and South America, Africa, India, Australia & New Zealand, Pacific Islands, and select countries in the Middle East from Level 11 (1:288k scale) through Level 16 (1:9k scale).\n\nFor more information on this map, visit us online at http://goto.arcgisonline.com/maps/World_Dark_Gray_Base",
+                    "copyrightText": "Esri, HERE, DeLorme, MapmyIndia, © OpenStreetMap contributors, and the GIS user community",
+                    "supportsDynamicLayers": false,
+                    "layers": [
+                      {
+                        "id": 0,
+                        "name": "Dark Gray Canvas Base",
+                        "parentLayerId": -1,
+                        "defaultVisibility": true,
+                        "subLayerIds": null,
+                        "minScale": 0,
+                        "maxScale": 0
+                      }
+                    ],
+                    "tables": [],
+                    "spatialReference": {
+                      "wkid": 102100,
+                      "latestWkid": 3857
+                    },
+                    "singleFusedMapCache": true,
+                    "tileInfo": {
+                      "rows": 256,
+                      "cols": 256,
+                      "dpi": 96,
+                      "format": "MIXED",
+                      "compressionQuality": 90,
+                      "origin": {
+                        "x": -20037508.342787,
+                        "y": 20037508.342787
+                      },
+                      "spatialReference": {
+                        "wkid": 102100,
+                        "latestWkid": 3857
+                      },
+                      "lods": [
+                        {
+                          "level": 0,
+                          "resolution": 156543.03392800014,
+                          "scale": 591657527.591555
+                        },
+                        {
+                          "level": 1,
+                          "resolution": 78271.51696399994,
+                          "scale": 295828763.795777
+                        },
+                        {
+                          "level": 2,
+                          "resolution": 39135.75848200009,
+                          "scale": 147914381.897889
+                        },
+                        {
+                          "level": 3,
+                          "resolution": 19567.87924099992,
+                          "scale": 73957190.948944
+                        },
+                        {
+                          "level": 4,
+                          "resolution": 9783.93962049996,
+                          "scale": 36978595.474472
+                        },
+                        {
+                          "level": 5,
+                          "resolution": 4891.96981024998,
+                          "scale": 18489297.737236
+                        },
+                        {
+                          "level": 6,
+                          "resolution": 2445.98490512499,
+                          "scale": 9244648.868618
+                        },
+                        {
+                          "level": 7,
+                          "resolution": 1222.992452562495,
+                          "scale": 4622324.434309
+                        },
+                        {
+                          "level": 8,
+                          "resolution": 611.4962262813797,
+                          "scale": 2311162.217155
+                        },
+                        {
+                          "level": 9,
+                          "resolution": 305.74811314055756,
+                          "scale": 1155581.108577
+                        },
+                        {
+                          "level": 10,
+                          "resolution": 152.87405657041106,
+                          "scale": 577790.554289
+                        },
+                        {
+                          "level": 11,
+                          "resolution": 76.43702828507324,
+                          "scale": 288895.277144
+                        },
+                        {
+                          "level": 12,
+                          "resolution": 38.21851414253662,
+                          "scale": 144447.638572
+                        },
+                        {
+                          "level": 13,
+                          "resolution": 19.10925707126831,
+                          "scale": 72223.819286
+                        },
+                        {
+                          "level": 14,
+                          "resolution": 9.554628535634155,
+                          "scale": 36111.909643
+                        },
+                        {
+                          "level": 15,
+                          "resolution": 4.77731426794937,
+                          "scale": 18055.954822
+                        },
+                        {
+                          "level": 16,
+                          "resolution": 2.388657133974685,
+                          "scale": 9027.977411
+                        },
+                        {
+                          "level": 17,
+                          "resolution": 1.1943285668550503,
+                          "scale": 4513.988705
+                        },
+                        {
+                          "level": 18,
+                          "resolution": 0.5971642835598172,
+                          "scale": 2256.994353
+                        },
+                        {
+                          "level": 19,
+                          "resolution": 0.29858214164761665,
+                          "scale": 1128.497176
+                        },
+                        {
+                          "level": 20,
+                          "resolution": 0.14929107082380833,
+                          "scale": 564.248588
+                        },
+                        {
+                          "level": 21,
+                          "resolution": 0.07464553541190416,
+                          "scale": 282.124294
+                        },
+                        {
+                          "level": 22,
+                          "resolution": 0.03732276770595208,
+                          "scale": 141.062147
+                        },
+                        {
+                          "level": 23,
+                          "resolution": 0.01866138385297604,
+                          "scale": 70.5310735
+                        }
+                      ]
+                    },
+                    "initialExtent": {
+                      "xmin": -20274890.339283723,
+                      "ymin": -3057761.9941039803,
+                      "xmax": 20274890.339283723,
+                      "ymax": 19806584.44829479,
+                      "spatialReference": {
+                        "wkid": 102100,
+                        "latestWkid": 3857
+                      }
+                    },
+                    "fullExtent": {
+                      "xmin": -20037507.067161843,
+                      "ymin": -19971868.880408604,
+                      "xmax": 20037507.067161843,
+                      "ymax": 19971868.8804085,
+                      "spatialReference": {
+                        "wkid": 102100,
+                        "latestWkid": 3857
+                      }
+                    },
+                    "minScale": 591657527.591555,
+                    "maxScale": 70.5310735,
+                    "units": "esriMeters",
+                    "supportedImageFormatTypes": "PNG32,PNG24,PNG,JPG,DIB,TIFF,EMF,PS,PDF,GIF,SVG,SVGZ,BMP",
+                    "documentInfo": {
+                      "Title": "Canvas Base",
+                      "Author": "Esri",
+                      "Comments": "",
+                      "Subject": "political boundaries, populated places, water, roads, urban areas, building footprints, parks",
+                      "Category": "transportation(Transportation Networks) ",
+                      "AntialiasingMode": "Best",
+                      "TextAntialiasingMode": "Force",
+                      "Keywords": "thematic basemap,thematic map,choropleth,dot map,dot density,flow map,heat map,graphs,infographic,graduated symbols,proportional symbols,neutral,subdued,canvas,shaded,hot spot,color coded,colorful,World,Global,Europe,Andorra,Austria,Belgium,Czech Republic,Denmark,France,Germany,Great Britain,Greece,Hungary,Ireland,Italy,Luxembourg,Netherlands,Norway,Poland,Portugal,San Marino,Slovakia,Spain,Sweden,Switzerland,North America,United States,Canada,Mexico,Southern Africa,Botswana,Lesotho,Namibia,South Africa and Swaziland,Asia,India,South America,Central America,Argentina,Bolivia,Brazil,Chile,Colombia,Peru,Uruguay,Venezuela,Australia,New Zealand"
+                    },
+                    "capabilities": "Map,Tilemap",
+                    "supportedQueryFormats": "JSON, AMF",
+                    "exportTilesAllowed": false,
+                    "maxRecordCount": 1000,
+                    "maxImageHeight": 4096,
+                    "maxImageWidth": 4096,
+                    "supportedExtensions": "KmlServer"
+                  }
+                },
+                {
+                  "id": "World_Dark_Gray_Reference_8618",
+                  "layerType": "ArcGISTiledMapServiceLayer",
+                  "url": "https://services.arcgisonline.com/arcgis/rest/services/Canvas/World_Dark_Gray_Reference/MapServer",
+                  "visibility": true,
+                  "opacity": 1,
+                  "title": "World Dark Gray Reference",
+                  "isReference": true
+                }
+              ],
+              "operationalLayers": []
+            }
+          }
+        },
+        "defaultExtent": {
+          "type": "extent",
+          "xmin": -14999999.99998202,
+          "ymin": 2699999.999996538,
+          "xmax": -6199999.999992568,
+          "ymax": 6499999.999989474,
+          "spatialReference": {
+            "wkid": 102100
+          }
+        },
+        "pages": [
+          {
+            "id": "58484054d0d7424c849bc5c0b4c3db0a",
+            "title": "Interactive Maps",
+            "slug": "interactive-maps"
+          },
+          {
+            "id": "f17f73c55b764896916ac3d9178d393a",
+            "title": "Interactive Maps: Mercury",
+            "slug": "interactive-maps-mercury"
+          },
+          {
+            "id": "2b284d21583541bda7585a406fd9d1a3",
+            "title": "Interactive Maps: Venus",
+            "slug": "interactive-maps-venus"
+          },
+          {
+            "id": "70d6e350f09b44a9ad2cb70244e1d335",
+            "title": "Interactive Maps: Moon",
+            "slug": "interactive-maps-moon"
+          },
+          {
+            "id": "eecdba26c1734c8ab47459c387daf58d",
+            "title": "Interactive Maps: Mars",
+            "slug": "interactive-maps-mars"
+          },
+          {
+            "id": "5becf7c1ab1d43b5bf970808aedf20cd",
+            "title": "Map Search: Mercury",
+            "slug": "mercury"
+          },
+          {
+            "id": "8e5496146e6f4e7ba9d9a80c56ee3dc9",
+            "title": "Map Search: Venus",
+            "slug": "venus"
+          },
+          {
+            "id": "c0ac5de419d84c9db3a3efcab05819e4",
+            "title": "Map Search: Moon",
+            "slug": "moon"
+          },
+          {
+            "id": "f6c14ba003d14404886309fecfdcbf0a",
+            "title": "Map Search: Mars",
+            "slug": "mars"
+          },
+          {
+            "id": "ad6a77b3d219454f89f4376476ce28b7",
+            "title": "Explore Data",
+            "slug": "explore-data"
+          },
+          {
+            "id": "28164e64e71f4db0a87092dda074cca6",
+            "title": "Explore Tools",
+            "slug": "explore-tools"
+          },
+          {
+            "id": "043c27d3fe4c44db8acaf07a10177575",
+            "title": "Map Search",
+            "slug": "map-search"
+          },
+          {
+            "id": "3f04663a35014472b40c088acf606698",
+            "title": "Map Search: Io",
+            "slug": "io-maps"
+          },
+          {
+            "id": "68031d15bfc84d0881ee04ec3e89a6b7",
+            "title": "Map Search: Ganymede",
+            "slug": "ganymede"
+          },
+          {
+            "id": "85f58b0f6e1d401f84415ba681e35b8c",
+            "title": "Free Image Viewers/GIS",
+            "slug": "image-viewers-and-gis"
+          },
+          {
+            "id": "77124d85cbbb4f9b9f0e33fc4afb6cb1",
+            "title": "Interactive Maps: Io",
+            "slug": "interactive-maps-io"
+          },
+          {
+            "id": "57e0b619333545ff9dc57d8786ae9775",
+            "title": "Interactive Maps: Ganymede",
+            "slug": "interactive-maps-ganymede"
+          },
+          {
+            "id": "8b3c5be4c0ae4e43a40136f4db574f64",
+            "title": "Interactive Maps: Callisto",
+            "slug": "interactive-maps-callisto"
+          },
+          {
+            "id": "4cac799100e54c43a463959a624eaf3f",
+            "title": "Map Search: Callisto",
+            "slug": "callisto"
+          },
+          {
+            "id": "d5980e90cfcd4811b06a298a2e1636b6",
+            "title": "Map Search: Ceres",
+            "slug": "ceres"
+          },
+          {
+            "id": "d0afa121b6ae48dbb6ce29ea07f919df",
+            "title": "Map Search: Enceladus",
+            "slug": "enceladus"
+          },
+          {
+            "id": "a83433ae68654df48fb21b9cc903091f",
+            "title": "Map Search: Europa",
+            "slug": "europa"
+          },
+          {
+            "id": "2b49b4790f15452b908990b7c4921946",
+            "title": "Map Search: Pluto",
+            "slug": "pluto"
+          },
+          {
+            "id": "7cf7a2b0f92648f796a5453400bc43e4",
+            "title": "Map Search: Triton",
+            "slug": "triton"
+          },
+          {
+            "id": "58d010ba60c24ef2bf8571a3a6898d54",
+            "title": "Map Search: Vesta",
+            "slug": "vesta"
+          },
+          {
+            "id": "bd249c27beca497890b9a820cd22d048",
+            "title": "Explore Data - TEST LAYOUT",
+            "slug": "explore-data-1"
+          },
+          {
+            "id": "80ca9d13d6cb46f1b74ffb7d5b36457a",
+            "title": "Interactive Maps - NEW LAYOUT",
+            "slug": "interactive-maps-new-layout"
+          },
+          {
+            "id": "d2878ad2b723464698eff03dba6e54c3",
+            "title": "Portal_TEST",
+            "slug": "portal_test"
+          },
+          {
+            "id": "08540c841db444d08430cdbaeaf3e4c7",
+            "title": "Interactive Maps: Europa",
+            "slug": "interactive-maps-europa"
+          }
+        ],
+        "layout": {
+          "sections": [
+            {
+              "containment": "fixed",
+              "isFooter": false,
+              "style": {
+                "background": {
+                  "isFile": false,
+                  "isUrl": true,
+                  "state": "",
+                  "display": {},
+                  "transparency": 0,
+                  "position": {
+                    "x": "center",
+                    "y": "center"
+                  },
+                  "color": "transparent"
+                },
+                "rowLayout": "box"
+              },
+              "rows": [
+                {
+                  "cards": [
+                    {
+                      "component": {
+                        "name": "markdown-card",
+                        "settings": {
+                          "schemaVersion": 2.1,
+                          "markdown": "<h1 style=\"text-align: center;\"><b>Welcome to the new USGS-NASA Planetary Geologic Mapping GIS Hub! </b></h1>\n\n<p style=\"text-align: center;\">We have been working hard to modernize the way we provide the planetary science community access to maps, tools, and resources. We are always looking for new ideas and ways we can continue to improve our online resources. If you have any ideas or suggestions, <a href=\"mailto:mahunter@usgs.gov\" target=\"_blank\">email us</a>!</p>\n\n<p style=\"text-align: center;\">Some popular links are highlighted below. All content can be accessed using the navigation bar at the top of the page.</p>"
+                        }
+                      },
+                      "width": 12
+                    }
+                  ]
+                }
+              ],
+              "visibility": {
+                "access": "default",
+                "groups": []
+              }
+            },
+            {
+              "containment": "fixed",
+              "isFooter": false,
+              "style": {
+                "background": {
+                  "isFile": true,
+                  "isUrl": false,
+                  "state": "valid",
+                  "display": {},
+                  "transparency": 70,
+                  "position": {
+                    "x": "center",
+                    "y": "center"
+                  },
+                  "color": "#4c4c4c",
+                  "fileSrc": "Ganymede_Geology_11520_SMALL.jpg",
+                  "cropSrc": "Ganymede_Geology_11520_SMALL.jpg"
+                },
+                "color": "#fff",
+                "rowLayout": "box"
+              },
+              "rows": [
+                {
+                  "cards": [
+                    {
+                      "component": {
+                        "name": "markdown-card",
+                        "settings": {
+                          "schemaVersion": 2.1,
+                          "markdown": "<h1 style=\"text-align: center;\"><b>Explore all USGS planetary maps</b></h1><h5 style=\"text-align: center;\"><br>We have&nbsp;map search tools to make it easier for you to explore all planetary maps that have been published through the USGS or are currently in progress. You can search by author, keyword, feature name, publication year, and SIM number. You can also complete measurements, run queries, and view map details (including links to the publication page and interactive maps) within the search interface.</h5><p style=\"text-align: center;\"><br></p><br>\n<p style=\"text-align: center;\"><strong style=\"background-color: initial; color: currentcolor; font-family: var(--fontsBaseFamily),Avenir Next;\"><a href=\"https://astrogeology-usgs.hub.arcgis.com/pages/map-search\" class=\"btn btn-primary\">Search USGS planetary maps</a></strong></p>"
+                        }
+                      },
+                      "width": 12,
+                      "showEditor": false
+                    }
+                  ]
+                }
+              ],
+              "visibility": {
+                "access": "default",
+                "groups": []
+              }
+            },
+            {
+              "containment": "fixed",
+              "isFooter": false,
+              "style": {
+                "background": {
+                  "isFile": false,
+                  "isUrl": true,
+                  "state": "",
+                  "display": {},
+                  "transparency": 0,
+                  "position": {
+                    "x": "center",
+                    "y": "center"
+                  },
+                  "color": "transparent"
+                },
+                "color": "#000000",
+                "rowLayout": "box"
+              },
+              "rows": [
+                {
+                  "cards": [
+                    {
+                      "component": {
+                        "name": "markdown-card",
+                        "settings": {
+                          "cardId": "cq8t97a56",
+                          "schemaVersion": 2.1,
+                          "markdown": "<h1 style=\"text-align: center;\"><b>Explore Interactive Maps</b></h1><p style=\"text-align: justify;\"><span style=\"background-color: initial; color: currentcolor; font-family: var(--fontsBaseFamily),Avenir Next;\">The Planetary Geologic Mapping group is working to make interactive versions of all planetary maps published through the USGS. Recently released interactive maps are highlighted below, and many more are on the way.</span></p>"
+                        }
+                      },
+                      "width": 12
+                    }
+                  ]
+                },
+                {
+                  "cards": [
+                    {
+                      "component": {
+                        "name": "image-card",
+                        "settings": {
+                          "src": "",
+                          "fileSrc": "02_InteractiveMaps_icon.png",
+                          "cropSrc": "02_InteractiveMaps_icon.png",
+                          "alt": "Geologic maps of the Descartes region of the Moon (Apollo 16)",
+                          "caption": "IMAP 748: Geologic maps of the Descartes region of the Moon (Apollo 16); Milton and Hodges (1972)",
+                          "captionAlign": "center",
+                          "hyperlink": "https://doi.org/10.5066/P1M7DXPP",
+                          "hyperlinkTabOption": "new",
+                          "isUrl": false,
+                          "isFile": true,
+                          "state": "valid",
+                          "display": {
+                            "position": {
+                              "x": "center",
+                              "y": "center"
+                            },
+                            "reflow": false
+                          },
+                          "cardId": "ccqbo8gf9"
+                        }
+                      },
+                      "width": 3
+                    },
+                    {
+                      "component": {
+                        "name": "image-card",
+                        "settings": {
+                          "src": "",
+                          "fileSrc": "02_InteractiveMaps_icon.png",
+                          "cropSrc": "02_InteractiveMaps_icon.png",
+                          "alt": "USGS IMAP 800: Geologic maps of the Taurus-Littrow region of the Moon (Apollo 17)",
+                          "caption": "IMAP 800: Geologic maps of the Taurus-Littrow region of the Moon (Apollo 17); Scott and others (1972)",
+                          "captionAlign": "center",
+                          "hyperlink": "https://doi.org/10.5066/P13GDMQY",
+                          "hyperlinkTabOption": "new",
+                          "isUrl": false,
+                          "isFile": true,
+                          "state": "valid",
+                          "display": {
+                            "position": {
+                              "x": "center",
+                              "y": "center"
+                            },
+                            "reflow": false
+                          },
+                          "cardId": "cx7yhwtxp"
+                        }
+                      },
+                      "width": 3
+                    },
+                    {
+                      "component": {
+                        "name": "image-card",
+                        "settings": {
+                          "src": "",
+                          "fileSrc": "02_InteractiveMaps_icon.png",
+                          "cropSrc": "02_InteractiveMaps_icon.png",
+                          "alt": "USGS SIM 3513: Global Geologic Map of Europa",
+                          "caption": "SIM 3513: Global Geologic Map of Europa; Leonard et al. (2024)",
+                          "captionAlign": "center",
+                          "hyperlink": "https://doi.org/10.5066/P13ZCQK6",
+                          "hyperlinkTabOption": "new",
+                          "isUrl": false,
+                          "isFile": true,
+                          "state": "valid",
+                          "display": {
+                            "position": {
+                              "x": "center",
+                              "y": "center"
+                            },
+                            "reflow": false
+                          },
+                          "cardId": "c0igtuqab"
+                        }
+                      },
+                      "width": 3
+                    },
+                    {
+                      "component": {
+                        "name": "image-card",
+                        "settings": {
+                          "src": "",
+                          "fileSrc": "02_InteractiveMaps_icon.png",
+                          "cropSrc": "02_InteractiveMaps_icon.png",
+                          "alt": "Geologic maps of the Western Ladon Basin region, Mars",
+                          "caption": "SIM 3525: Geologic Map of MTM −15032 and −20032 Quadrangles, Western Ladon Basin, Mars (2025)",
+                          "captionAlign": "center",
+                          "hyperlink": "https://doi.org/10.5066/P96KRTGK",
+                          "hyperlinkTabOption": "new",
+                          "isUrl": false,
+                          "isFile": true,
+                          "state": "valid",
+                          "display": {
+                            "position": {
+                              "x": "center",
+                              "y": "center"
+                            },
+                            "reflow": false
+                          },
+                          "cardId": "c4xacgejs"
+                        }
+                      },
+                      "width": 3
+                    }
+                  ]
+                },
+                {
+                  "cards": [
+                    {
+                      "component": {
+                        "name": "markdown-card",
+                        "settings": {
+                          "cardId": "cacoweopx",
+                          "schemaVersion": 2.1,
+                          "markdown": "<p style=\"text-align: center;\"><i>Don't see what you're looking for in the featured maps?</i></p><p style=\"text-align: center;\"><br>\n<strong><a href=\"http://astrogeology-usgs.hub.arcgis.com/pages/interactive-maps\" class=\"btn btn-primary\" style=\"align=center\">Explore all available interactive maps</a></strong></p>"
+                        }
+                      },
+                      "width": 12
+                    }
+                  ]
+                }
+              ],
+              "visibility": {
+                "access": "default",
+                "groups": []
+              }
+            },
+            {
+              "containment": "fixed",
+              "isFooter": false,
+              "style": {
+                "background": {
+                  "isFile": true,
+                  "isUrl": false,
+                  "state": "valid",
+                  "display": {},
+                  "transparency": 70,
+                  "position": {
+                    "x": "center",
+                    "y": "center"
+                  },
+                  "color": "#4c4c4c",
+                  "image": "",
+                  "fileSrc": "Venus Radar -SMALL cropped.jpg",
+                  "cropSrc": "Venus Radar -SMALL cropped.jpg"
+                },
+                "color": "#fff",
+                "rowLayout": "box"
+              },
+              "rows": [
+                {
+                  "cards": [
+                    {
+                      "component": {
+                        "name": "markdown-card",
+                        "settings": {
+                          "schemaVersion": 2.1,
+                          "markdown": "<h1 style=\"text-align: center;\"><b>Explore Data</b></h1>\n<p class=\"text-center\"><br></p><p class=\"text-center\">Looking for data? We are working to compile a helpful list of planetary data resources. </p><p class=\"text-center\">We are always working to improve this resource. Please contact us if you have or know of a dataset or resource that isn't listed here.</p>\n"
+                        }
+                      },
+                      "width": 12,
+                      "showEditor": false
+                    }
+                  ]
+                },
+                {
+                  "cards": [
+                    {
+                      "component": {
+                        "name": "image-card",
+                        "settings": {
+                          "src": "",
+                          "fileSrc": "04_ExploreData_icon_WHITE.png",
+                          "cropSrc": "04_ExploreData_icon_WHITE.png",
+                          "alt": "folder icon",
+                          "caption": "The NASA Planetary Data System (PDS)",
+                          "captionAlign": "center",
+                          "hyperlink": "https://pds.nasa.gov/datasearch/data-search/",
+                          "hyperlinkTabOption": "new",
+                          "isUrl": false,
+                          "isFile": true,
+                          "state": "valid",
+                          "display": {
+                            "position": {
+                              "x": "center",
+                              "y": "center"
+                            },
+                            "reflow": false
+                          },
+                          "cardId": "ckvgyaupd"
+                        }
+                      },
+                      "width": 3
+                    },
+                    {
+                      "component": {
+                        "name": "image-card",
+                        "settings": {
+                          "src": "",
+                          "fileSrc": "04_ExploreData_icon_WHITE.png",
+                          "cropSrc": "04_ExploreData_icon_WHITE.png",
+                          "alt": "folder icon",
+                          "caption": "USGS Astropedia Planetary Cartographic Catalog",
+                          "captionAlign": "center",
+                          "hyperlink": "https://astrogeology.usgs.gov/search",
+                          "hyperlinkTabOption": "new",
+                          "isUrl": false,
+                          "isFile": true,
+                          "state": "valid",
+                          "display": {
+                            "position": {
+                              "x": "center",
+                              "y": "center"
+                            },
+                            "reflow": false
+                          },
+                          "cardId": "c1lg89is8"
+                        }
+                      },
+                      "width": 3
+                    },
+                    {
+                      "component": {
+                        "name": "image-card",
+                        "settings": {
+                          "src": "",
+                          "fileSrc": "04_ExploreData_icon_WHITE.png",
+                          "cropSrc": "04_ExploreData_icon_WHITE.png",
+                          "alt": "folder icon",
+                          "caption": "USGS Planetary Analysis Ready Data",
+                          "captionAlign": "center",
+                          "hyperlink": "https://www.usgs.gov/centers/astrogeology-science-center/science/analysis-ready-data",
+                          "hyperlinkTabOption": "new",
+                          "isUrl": false,
+                          "isFile": true,
+                          "state": "valid",
+                          "display": {
+                            "position": {
+                              "x": "center",
+                              "y": "center"
+                            },
+                            "reflow": false
+                          },
+                          "cardId": "c0q50dv2t"
+                        }
+                      },
+                      "width": 3
+                    },
+                    {
+                      "component": {
+                        "name": "image-card",
+                        "settings": {
+                          "src": "",
+                          "fileSrc": "04_ExploreData_icon_WHITE.png",
+                          "cropSrc": "04_ExploreData_icon_WHITE.png",
+                          "alt": "folder icon",
+                          "caption": "NASA/JPL Solar System Treks",
+                          "captionAlign": "center",
+                          "hyperlink": "https://trek.nasa.gov/#",
+                          "hyperlinkTabOption": "new",
+                          "isUrl": false,
+                          "isFile": true,
+                          "state": "valid",
+                          "display": {
+                            "position": {
+                              "x": "center",
+                              "y": "center"
+                            },
+                            "reflow": false
+                          },
+                          "cardId": "ch7u0u4f6"
+                        }
+                      },
+                      "width": 3
+                    }
+                  ]
+                },
+                {
+                  "cards": [
+                    {
+                      "component": {
+                        "name": "markdown-card",
+                        "settings": {
+                          "cardId": "cih8dtrc9",
+                          "schemaVersion": 2.1,
+                          "markdown": "<p style=\"text-align: center;\"><i>Don't see what you're looking for in the featured data?</i></p><p style=\"text-align: center;\"><br>\n<strong><a href=\"http://astrogeology-usgs.hub.arcgis.com/pages/explore-data\" class=\"btn btn-primary\" style=\"align=center\">Explore more datasets here</a></strong></p>"
+                        }
+                      },
+                      "width": 12
+                    }
+                  ]
+                }
+              ],
+              "visibility": {
+                "access": "default",
+                "groups": []
+              }
+            },
+            {
+              "containment": "fixed",
+              "isFooter": false,
+              "style": {
+                "background": {
+                  "isFile": false,
+                  "isUrl": true,
+                  "state": "",
+                  "display": {},
+                  "transparency": 0,
+                  "position": {
+                    "x": "center",
+                    "y": "center"
+                  },
+                  "color": "transparent"
+                },
+                "color": "#000000",
+                "rowLayout": "box"
+              },
+              "rows": [
+                {
+                  "cards": [
+                    {
+                      "component": {
+                        "name": "markdown-card",
+                        "settings": {
+                          "cardId": "cl19fxynj",
+                          "schemaVersion": 2.1,
+                          "markdown": "<h1 style=\"text-align: center;\"><b>Explore Tools</b></h1><p style=\"text-align: center;\"><br></p><p style=\"text-align: center;\">The USGS has several GIS tools available for planetary scientists. Download some of our most-frequently used tools by clicking the icons below.</p>"
+                        }
+                      },
+                      "width": 12
+                    }
+                  ]
+                },
+                {
+                  "cards": [
+                    {
+                      "component": {
+                        "name": "image-card",
+                        "settings": {
+                          "src": "",
+                          "fileSrc": "Tools_icon.png",
+                          "cropSrc": "Tools_icon.png",
+                          "alt": "tool icon",
+                          "caption": "PGM Python Toolbox for ArcGIS Pro",
+                          "captionAlign": "center",
+                          "hyperlink": "https://code.usgs.gov/planetary-geologic-mapping/pgm-arcgis-toolbox",
+                          "hyperlinkTabOption": "new",
+                          "isUrl": false,
+                          "isFile": true,
+                          "state": "",
+                          "display": {
+                            "position": {
+                              "x": "center",
+                              "y": "center"
+                            },
+                            "reflow": false
+                          },
+                          "cardId": "cmmqnpgax"
+                        }
+                      },
+                      "width": 3
+                    },
+                    {
+                      "component": {
+                        "name": "image-card",
+                        "settings": {
+                          "src": "",
+                          "fileSrc": "Tools_icon.png",
+                          "cropSrc": "Tools_icon.png",
+                          "alt": "tool icon",
+                          "caption": "Astrocloud Map Projection on the Web",
+                          "captionAlign": "center",
+                          "hyperlink": "https://astrocloud.wr.usgs.gov/",
+                          "hyperlinkTabOption": "new",
+                          "isUrl": false,
+                          "isFile": true,
+                          "state": "valid",
+                          "display": {
+                            "position": {
+                              "x": "center",
+                              "y": "center"
+                            },
+                            "reflow": false
+                          },
+                          "cardId": "csevo0lw8"
+                        }
+                      },
+                      "width": 3
+                    },
+                    {
+                      "component": {
+                        "name": "image-card",
+                        "settings": {
+                          "src": "",
+                          "fileSrc": "Tools_icon.png",
+                          "cropSrc": "Tools_icon.png",
+                          "alt": "tool icon",
+                          "caption": "MRCTR GIS Lab Tutorials and SOPs",
+                          "captionAlign": "center",
+                          "hyperlink": "https://astrogeology.usgs.gov/gis/",
+                          "hyperlinkTabOption": "new",
+                          "isUrl": false,
+                          "isFile": true,
+                          "state": "valid",
+                          "display": {
+                            "position": {
+                              "x": "center",
+                              "y": "center"
+                            },
+                            "reflow": false
+                          },
+                          "cardId": "cuh0hc1f8"
+                        }
+                      },
+                      "width": 3
+                    },
+                    {
+                      "component": {
+                        "name": "image-card",
+                        "settings": {
+                          "src": "",
+                          "fileSrc": "Tools_icon.png",
+                          "cropSrc": "Tools_icon.png",
+                          "alt": "tool icon",
+                          "caption": "Astrogeology Software Manuals, Concepts, and How-To Guides",
+                          "captionAlign": "center",
+                          "hyperlink": "https://astrogeology.usgs.gov/docs/",
+                          "hyperlinkTabOption": "new",
+                          "isUrl": false,
+                          "isFile": true,
+                          "state": "valid",
+                          "display": {
+                            "position": {
+                              "x": "center",
+                              "y": "center"
+                            },
+                            "reflow": false
+                          },
+                          "cardId": "cpgy79nqj"
+                        }
+                      },
+                      "width": 3
+                    }
+                  ]
+                },
+                {
+                  "cards": [
+                    {
+                      "component": {
+                        "name": "markdown-card",
+                        "settings": {
+                          "cardId": "c7aqeu2yg",
+                          "schemaVersion": 2.1,
+                          "markdown": "<p style=\"text-align: center;\"><i style=\"background-color: initial; color: currentcolor; font-family: var(--fontsBaseFamily),Avenir Next;\">Need more details or don't see what you're looking for in the featured tools?</i></p><p style=\"text-align: center;\"><br>\n<strong><a href=\"http://astrogeology-usgs.hub.arcgis.com/pages/explore-tools\" class=\"btn btn-primary\" style=\"align=center\">Explore all tools here</a></strong></p>"
+                        }
+                      },
+                      "width": 12
+                    }
+                  ]
+                },
+                {
+                  "cards": [
+                    {
+                      "component": {
+                        "name": "spacer-card",
+                        "settings": {
+                          "height": 100,
+                          "cardId": "c4pgi4u5o"
+                        }
+                      },
+                      "settings": {
+                        "height": 100
+                      },
+                      "width": 12
+                    }
+                  ]
+                }
+              ],
+              "visibility": {
+                "access": "default",
+                "groups": []
+              }
+            }
+          ],
+          "header": {
+            "component": {
+              "name": "site-header",
+              "settings": {
+                "fullWidth": false,
+                "iframeHeight": "150px",
+                "iframeUrl": "",
+                "links": [],
+                "logoUrl": "",
+                "title": " ",
+                "markdown": "\r\n<!-- USGS HEADER -->\r\n  \r\n  <div class=\"usgsHeader\">\r\n    <img src=\"https://raw.githubusercontent.com/USGS-WiM/Styleguide/7084f96b2d222eba36ee619a6fbe76d0a5e425c2/public/img/sg-logos/USGS/USGS_White_Notag_web.png\" title=\"USGS Logo\" alt=\"USGS Logo\" style=\"height:50px; padding:10px 10px 10px 10px;\">\r\n  </div>\r\n\r\n<!-- PGM TITLE BAR -->\r\n\r\n  <div class=\"PGMtitle\">USGS-NASA Planetary Geologic Mapping Program</div>\r\n    \r\n\r\n<!-- NAVIGATION BAR-->  \r\n\r\n<nav class=\"navbar navbar-default\">\r\n  \r\n  <div class=\"navbar-header\">\r\n          \r\n            <button class=\"navbar-toggle\" data-toggle=\"collapse\" data-target=\".navbar-collapse\">\r\n                <span class=\"sr-only\">Toggle navigation</span>\r\n                <span class=\"icon-bar\"></span>\r\n                <span class=\"icon-bar\"></span>\r\n                <span class=\"icon-bar\"></span>\r\n            </button>\r\n\r\n  \r\n  \r\n  \r\n        <div class=\"collapse navbar-collapse\">\r\n            <ul class=\"nav navbar-nav navbar-right\">\r\n            </ul>\r\n            <ul class=\"nav navbar-nav\">\r\n            \r\n            \r\n                <li><a href=\"https://www.usgs.gov/special-topics/planetary-geologic-mapping\">PGM Home (usgs.gov)</a></li>\r\n                \r\n                \r\n                <li><a href=\"https://astrogeology-usgs.hub.arcgis.com\">PGM Hub Home</a></li>\r\n                \r\n                \r\n                <li><a href=\"#\" class=\"dropdown-toggle\" data-toggle=\"dropdown\">Find Maps <b class=\"caret\"></b></a>\r\n                    <ul class=\"dropdown-menu\">\r\n                        \r\n                        <li class=\"dropdown-submenu\">\r\n                            <a href=\"https://astrogeology-usgs.hub.arcgis.com/pages/map-search\" class=\"dropdown-toggle\" data-toggle=\"dropdown\">Search USGS I- and SIM-series Maps</a>\r\n                            <ul class=\"dropdown-menu\">\r\n                                <li><a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://usgs.maps.arcgis.com/apps/webappviewer/index.html?id=65b5d64f442b4960ad6dc01aa8eb27eb\">Mercury</a></li>\r\n                                <li><a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://usgs.maps.arcgis.com/apps/webappviewer/index.html?id=72cea2405a9340a1a3dc645d1dd663bf\">Venus</a></li>\r\n                                <li><a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://usgs.maps.arcgis.com/apps/webappviewer/index.html?id=689c7da46ab24a6eb703c65a14569bb7\">Moon</a></li>\r\n                                <li><a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://usgs.maps.arcgis.com/apps/webappviewer/index.html?id=f693b580b2464e6989f32e4266199552\">Mars</a></li>\r\n                                <li><a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://usgs.maps.arcgis.com/apps/webappviewer/index.html?id=0037872cc5e84426a99ce283d4d0636b\">Vesta</a></li>\r\n                                <li><a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://usgs.maps.arcgis.com/apps/webappviewer/index.html?id=dedafe5abc284e1493dcee9b60934bec\">Ceres</a></li>\r\n                                <li><a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://usgs.maps.arcgis.com/apps/webappviewer/index.html?id=5a823235cac64c35b6bd0c4ee0654433\">Io</a></li>\r\n                                <li><a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://usgs.maps.arcgis.com/apps/webappviewer/index.html?id=5acba94c00564ad8adfb0f8bb788c578\">Europa</a></li>\r\n                                <li><a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://usgs.maps.arcgis.com/apps/webappviewer/index.html?id=0277890e7c664e6186d577b13db76e66\">Ganymede</a></li>\r\n                                <li><a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://usgs.maps.arcgis.com/apps/webappviewer/index.html?id=9f371473584d4d67a58ea49170c6e44b\">Callisto</a></li>\r\n                                <li><a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://usgs.maps.arcgis.com/apps/webappviewer/index.html?id=e5d7097426ef46c9a144f6740dde6caa\">Enceladus</a></li>\r\n                                <li><a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://usgs.maps.arcgis.com/apps/webappviewer/index.html?id=c1bdbd1dd1584e37b8f40ede507895af\">Tethys</a></li>\r\n                                <li><a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://usgs.maps.arcgis.com/apps/webappviewer/index.html?id=b1a1cd1d1e3b4357b8fd8991b3b5399b\">Dione</a></li>\r\n                                <li><a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://usgs.maps.arcgis.com/apps/webappviewer/index.html?id=9570cec4c7284d2687fcf789850e617b\">Titan</a></li>\r\n                                <li><a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://usgs.maps.arcgis.com/apps/webappviewer/index.html?id=538c0b4362084042af8dae714d59991c\">Triton</a></li>\r\n                                <li><a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://usgs.maps.arcgis.com/apps/webappviewer/index.html?id=67a95ae666984e92b68ee9c69a2b0cb7\">Pluto</a></li>\r\n                            </ul>\r\n                        </li>\r\n\r\n                        \r\n                        <li class=\"dropdown-submenu\">\r\n                        <a href=\"https://astrogeology-usgs.hub.arcgis.com/pages/interactive-maps\" class=\"dropdown-toggle\" data-toggle=\"dropdown\">Interactive Maps</a>\r\n                            <ul class=\"dropdown-menu\">\r\n                                <li><a href=\"https://astrogeology-usgs.hub.arcgis.com/pages/interactive-maps-mercury\">Mercury</a></li>\r\n                                <li><a href=\"https://astrogeology-usgs.hub.arcgis.com/pages/interactive-maps-venus\">Venus</a></li>\r\n                                <li><a href=\"https://astrogeology-usgs.hub.arcgis.com/pages/interactive-maps-moon\">Moon</a></li>\r\n                                <li><a href=\"https://astrogeology-usgs.hub.arcgis.com/pages/interactive-maps-mars\">Mars</a></li>\r\n                                <li><a href=\"https://astrogeology-usgs.hub.arcgis.com/pages/interactive-maps-io\">Io</a></li>\r\n                                <li><a href=\"https://astrogeology-usgs.hub.arcgis.com/pages/interactive-maps-europa\">Europa</a></li>\r\n                                <li><a href=\"https://astrogeology-usgs.hub.arcgis.com/pages/interactive-maps-ganymede\">Ganymede</a></li>\r\n                                <li><a href=\"https://astrogeology-usgs.hub.arcgis.com/pages/interactive-maps-callisto\">Callisto</a></li>\r\n                            </ul>\r\n                        </li>\r\n                    </ul>\r\n                </li>\r\n                \r\n                \r\n                \r\n                <li>\r\n                    <a href=\"#\" class=\"dropdown-toggle\" data-toggle=\"dropdown\">Data and Tools <b class=\"caret\"></b></a>\r\n                    <ul class=\"dropdown-menu multi-level\">\r\n                        <li><a href=\"https://astrogeology-usgs.hub.arcgis.com/pages/explore-data\">Data Sources</a></li>\r\n                        <li><a href=\"https://astrogeology-usgs.hub.arcgis.com/pages/image-viewers-and-gis\">Free Image Viewers and GIS</a></li>\r\n                        <li><a href=\"https://astrogeology-usgs.hub.arcgis.com/pages/explore-tools\">Tools and Utilities</a></li>\r\n                    </ul>\r\n                </li>\r\n                \r\n                \r\n                \r\n            </ul>\r\n        </div><!--/.nav-collapse -->\r\n    </div>\r\n</nav>",
+                "headerType": "custom",
+                "schemaVersion": 2.1,
+                "showLogo": false,
+                "showTitle": true,
+                "logo": {
+                  "display": {},
+                  "state": "valid",
+                  "isFile": true,
+                  "isUrl": false,
+                  "vertical": false
+                },
+                "shortTitle": "",
+                "menuLinks": [
+                  {
+                    "id": "9465129f474b49178d13d3ff60056054",
+                    "type": "Hub Site Application",
+                    "name": "Home",
+                    "external": false,
+                    "title": "Home",
+                    "isDraggingObject": false
+                  },
+                  {
+                    "id": "8bc4eb0a25d943b3b782110053be94c1",
+                    "type": "Hub Page",
+                    "name": "About",
+                    "external": false,
+                    "title": "About",
+                    "isDraggingObject": false
+                  },
+                  {
+                    "id": "58484054d0d7424c849bc5c0b4c3db0a",
+                    "type": "Hub Page",
+                    "name": "Interactive Maps",
+                    "external": false,
+                    "title": "Interactive Maps",
+                    "isDraggingObject": false
+                  },
+                  {
+                    "id": "043c27d3fe4c44db8acaf07a10177575",
+                    "type": "Hub Page",
+                    "name": "Map Search",
+                    "external": false,
+                    "title": "Map Search",
+                    "isDraggingObject": false
+                  },
+                  {
+                    "id": "ad6a77b3d219454f89f4376476ce28b7",
+                    "type": "Hub Page",
+                    "name": "Data",
+                    "external": false,
+                    "title": "Data"
+                  },
+                  {
+                    "id": "28164e64e71f4db0a87092dda074cca6",
+                    "type": "Hub Page",
+                    "name": "Tools",
+                    "external": false,
+                    "title": "Tools"
+                  },
+                  {
+                    "id": "f6d633d82af44b87bd017f0644924b2b",
+                    "type": "Hub Page",
+                    "name": "Guidelines",
+                    "external": false,
+                    "title": "Guidelines",
+                    "isDraggingObject": false
+                  },
+                  {
+                    "id": "eeab52112084423592dcbd646fd3437e",
+                    "type": "Hub Page",
+                    "name": "Resources",
+                    "external": false,
+                    "title": "Resources",
+                    "isDraggingObject": false
+                  },
+                  {
+                    "id": "3c98bf7007554ae79aa1ec2348371cf2",
+                    "type": "Hub Page",
+                    "name": "Tutorials",
+                    "external": false,
+                    "title": "Tutorials",
+                    "isDraggingObject": false
+                  },
+                  {
+                    "id": "6ab44db52161439198cc6542c420d9fe",
+                    "type": "Hub Page",
+                    "name": "Meetings",
+                    "external": false,
+                    "title": "Meetings",
+                    "isDraggingObject": false
+                  },
+                  {
+                    "id": "fea7af77b65f4272bcc69e419a2051da",
+                    "type": "Hub Page",
+                    "name": "FAQ",
+                    "external": false,
+                    "title": "FAQ"
+                  }
+                ],
+                "socialLinks": {
+                  "facebook": {},
+                  "instagram": {
+                    "visible": true,
+                    "url": "https://www.instagram.com/usgs_astrogeology/"
+                  },
+                  "twitter": {
+                    "visible": true,
+                    "url": "https://twitter.com/USGS_AstroGeo"
+                  },
+                  "youtube": {}
+                }
+              }
+            },
+            "name": "site-header"
+          },
+          "footer": {
+            "component": {
+              "name": "site-footer",
+              "settings": {
+                "footerType": "custom",
+                "markdown": "\t\t<!-- USGS Footer -->\r\n\t\t<footer id=\"usgs\">\r\n\t\t\t<div>\r\n\t\t\t\t<a href=\"https://www.doi.gov/privacy\">DOI Privacy Policy</a>\r\n\t\t\t\t<a href=\"https://www.usgs.gov/laws/policies_notices.html\">Legal</a>\r\n\t\t\t\t<a href=\"https://www2.usgs.gov/laws/accessibility.html\">Accessibility</a>\r\n\t\t\t\t<a href=\"https://www.usgs.gov/sitemap.html\">Site Map</a>\r\n\t\t\t\t<a href=\"https://answers.usgs.gov/\">Contact USGS</a>\r\n\t\t\t</div>\r\n\r\n\r\n\t\t\t<div>\r\n\t\t\t\t<a href=\"https://www.doi.gov/\">U.S. Department of the Interior</a>\r\n\t\t\t\t<a href=\"https://www.doioig.gov/\">DOI Inspector General</a>\r\n\t\t\t\t<a href=\"https://www.whitehouse.gov/\">White House</a>\r\n\t\t\t\t<a href=\"https://www.whitehouse.gov/omb/e-gov/\">E-gov</a>\r\n\t\t\t\t<a href=\"https://www.whitehouse.gov/open\">Open Government</a>\r\n\t\t\t\t<a href=\"https://www.doi.gov/pmb/eeo/no-fear-act\">No Fear Act</a>\r\n\t\t\t\t<a href=\"https://www2.usgs.gov/foia\">FOIA</a>\r\n\t\t\t</div>\r\n\t\t</footer>",
+                "schemaVersion": 2.1
+              }
+            }
+          }
+        },
+        "theme": {
+          "header": {
+            "background": "#fff",
+            "text": "#000000"
+          },
+          "body": {
+            "background": "#fff",
+            "text": "#4c4c4c",
+            "link": "#0079c1"
+          },
+          "logo": {
+            "small": "https://usgs.maps.arcgis.com/sharing/rest/content/items/c39fc066285441d5b4834a72aa36f342/data",
+            "link": "http://www.usgs.gov"
+          },
+          "fonts": {
+            "base": {
+              "url": "https://fonts.googleapis.com/css?family=Roboto",
+              "family": "Roboto"
+            },
+            "heading": {
+              "url": "https://fonts.googleapis.com/css?family=Roboto",
+              "family": "Roboto"
+            }
+          },
+          "globalNav": {
+            "background": "#fff",
+            "text": "#000000"
+          }
+        },
+        "headerCss": ".first-tier {\n  height: 80px;\n  margin-bottom: 0px;\n  background-color: #005e95;\n}\n\n.first-tier .nav > li > a {\n  margin-top: 5px;\n  padding: 3px 6px;\n  color: #fff;\n}\n\n.first-tier .nav > li > a:focus,\n.first-tier .nav>li>a:hover {\n  background-color: #136fbf;\n  color: #fff;\n}\n\n.first-tier .site-logo img {\n  vertical-align: middle;\n}\n\n.first-tier h1 {\n  display: inline;\n  font-size: 25px;\n}\n\n.second-tier {\n  margin-bottom: 0px;\n  background-color: #05466c;\n}\n\n.site-header .navbar-header img {\n  vertical-align: middle;\n  height: 50px;\n  padding: 5px;\n}\n\n@media (max-width: 768px) {\n  .first-tier {\n    height: 100px;\n  }\n}\n\n@media (max-width: 498px) {\n  .navbar-brand {\n    padding: 0px;\n  }\n}\n\n.navbar-inverse .navbar-toggle {\n  border-color: #ffffff;\n}\n\n.navbar-inverse .navbar-toggle:hover {\n  background-color: transparent;\n}\n\n.navbar-inverse .navbar-toggle .icon-bar {\n  background-color: #ffffff;\n}\n\n",
+        "footerCss": "\n  .footer-background {\n    padding-top: 20px;\n    padding-bottom: 20px;\n    background-color: #fcfcfc;\n  }\n\n  .logo, .nav {\n    margin-bottom: 10px;\n  }\n\n  .nav-pills {\n      display: flex;\n      flex-wrap: wrap;\n      justify-content: center;\n  }\n",
+        "updatedAt": "2026-06-12T14:45:25.379Z",
+        "updatedBy": "mahunter@usgs.gov_USGS",
+        "capabilities": [
+          "api_explorer",
+          "pages",
+          "my_data",
+          "social_logins",
+          "json_chart_card",
+          "document_iframes",
+          "items_view",
+          "app_page",
+          "socialSharing",
+          "disableHubBranding"
+        ],
+        "clientId": "dGA9eYRovmwIm4sP",
+        "contentViews": {
+          "sidePanelOpen": {
+            "app": false,
+            "map": false,
+            "dataset": false,
+            "document": false,
+            "feedback": false
+          }
+        },
+        "headerSass": ".custom-header {\n  .usgsHeader {\r\n  background-color:#253f60;\r\n}\r\n\r\n.PGMtitle {\r\n  background-color:#001028;\r\n  color:#ffffff;\r\n  font-size:20px;\r\n  padding:10px 10px 10px 10px;\r\n}\r\n\r\n.navbar, .navbar-default, .navbar-header, .navbar-toggle, .icon-bar, .collapse, .navbar-collapse, .nav, .navbar-nav, .navbar-right {\r\n  position:relative;\r\n}\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n.dropdown-submenu {\r\n    position: relative;\r\n}\r\n\r\n.dropdown-submenu>.dropdown-menu {\r\n    top: 0;\r\n    left: 100%;\r\n    margin-top: -6px;\r\n    margin-left: -1px;\r\n    -webkit-border-radius: 0 6px 6px 6px;\r\n    -moz-border-radius: 0 6px 6px;\r\n    border-radius: 0 6px 6px 6px;\r\n}\r\n\r\n.dropdown-submenu:hover>.dropdown-menu {\r\n    display: block;\r\n}\r\n\r\n.dropdown-submenu>a:after {\r\n    display: block;\r\n    content: \" \";\r\n    float: right;\r\n    width: 0;\r\n    height: 0;\r\n    border-color: transparent;\r\n    border-style: solid;\r\n    border-width: 5px 0 5px 5px;\r\n    border-left-color: #ccc;\r\n    margin-top: 5px;\r\n    margin-right: -10px;\r\n}\r\n\r\n.dropdown-submenu:hover>a:after {\r\n    border-left-color: #fff;\r\n}\r\n\r\n.dropdown-submenu.pull-left {\r\n    float: none;\r\n}\r\n\r\n.dropdown-submenu.pull-left>.dropdown-menu {\r\n    left: -100%;\r\n    margin-left: 10px;\r\n    -webkit-border-radius: 6px 0 6px 6px;\r\n    -moz-border-radius: 6px 0 6px 6px;\r\n    border-radius: 6px 0 6px 6px;\r\n}\r\n\n  }",
+        "footerSass": ".custom-footer {\n  \t\t\tbody,html{\r\n\t\t\t\tmargin: 0;\r\n\t\t\t\tpadding: 0;\r\n\t\t\t\tfont-family: -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Helvetica, Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\";\r\n\t\t\t}\r\n\r\n\t\t\t#usgsBar{\r\n\t\t\t\tdisplay: block;\r\n\t\t\t\twidth: 100%;\r\n\t\t\t\tbox-sizing: border-box;\r\n\t\t\t\tpadding: 15px 25px;\r\n\t\t\t\tbackground-color: #02274b;\r\n\t\t\t}\r\n\r\n\t\t\tnav#main{\r\n\t\t\t\tdisplay: flex;\r\n\t\t\t\tbox-sizing: border-box;\r\n\t\t\t\tpadding: 8px 25px;\r\n\t\t\t\tgap: 30px;\r\n\t\t\t\tmargin-bottom: 45px;\r\n\t\t\t\tflex-wrap: wrap;\r\n\t\t\t}\r\n\t\t\t\tnav#main .branding{\r\n\t\t\t\t\tflex-grow: 3;\r\n\t\t\t\t\tbox-sizing: border-box;\r\n\t\t\t\t}\r\n\t\t\t\t\tnav#main .branding .logo{\r\n\t\t\t\t\t}\r\n\t\t\t\tnav#main .nav-link{\r\n\t\t\t\t\tdisplay: flex;\r\n\t\t\t\t\tflex-direction: column;\r\n\t\t\t\t\tjustify-content: center;\r\n\t\t\t\t\tcolor: black;\r\n\t\t\t\t\ttext-decoration: none;\r\n\t\t\t\t\tfont-weight: 600;\r\n\t\t\t\t\tfont-size: 14px;\r\n\t\t\t\t}\r\n\t\t\t\t\tnav#main .nav-link:focus{\r\n\t\t\t\t\t\ttext-decoration: underline;\r\n\t\t\t\t\t}\r\n\t\t\t\t\tnav#main .nav-link:hover{\r\n\t\t\t\t\t\ttext-decoration: underline;\r\n\t\t\t\t\t\tcolor: #0d6eff;\r\n\t\t\t\t\t}\r\n\t\t\t\r\n\t\t\t/* Main content */\r\n\t\t\t.page-body{\r\n\t\t\t\tdisplay: block;\r\n\t\t\t\tmax-width: 600px;\r\n\t\t\t\tmargin: 0 auto;\r\n\t\t\t\tbox-sizing: border-box;\r\n\t\t\t\tpadding: 15px;\r\n\t\t\t\tmin-height: 80vh;\r\n\t\t\t\tmin-height: calc(100vh - 209px);\r\n\t\t\t}\r\n\t\t\th1{\r\n\t\t\t\tfont-size: 34px;\r\n\t\t\t}\r\n\t\t\tp{\r\n\t\t\t\tfont-size: 16px;\r\n\t\t\t\tline-height: 28px;\r\n\t\t\t\tpadding: 15px 0;\r\n\t\t\t}\r\n\r\n\t\t\t/* USGS Footer */\r\n\t\t\tfooter#usgs{\r\n\t\t\t\tbackground-color: #02274b;\r\n\t\t\t\tbox-sizing: border-box;\r\n\t\t\t\tpadding: 8px 10px;\r\n\t\t\t}\r\n\t\t\t\tfooter#usgs a{\r\n\t\t\t\t\tcolor: white;\r\n\t\t\t\t\tfont-size: 12px;\r\n\t\t\t\t\tmargin-right: 18px;\r\n\t\t\t\t\tposition: relative;\r\n\t\t\t\t\ttext-decoration: none;\r\n\t\t\t\t}\r\n\r\n\t\t\t/* Button Styles */\r\n\t\t\tbutton,\r\n\t\t\t.button{\r\n\t\t\t\tbackground-color: #02274b;\r\n\t\t\t\tcolor: white;\r\n\t\t\t\tdisplay: inline-block;\r\n\t\t\t\tpadding: 10px 20px;\r\n\t\t\t\tborder-radius: 5px;\r\n\t\t\t\ttext-decoration: none;\r\n\t\t\t\tfont-size: 16px;\r\n\t\t\t\tfont-weight: 500;\r\n\t\t\t\tletter-spacing: 0.3px;\r\n\t\t\t}\r\n\t\t\t.button:focus,\r\n\t\t\tbutton:focus{\r\n\t\t\t\ttext-decoration: underline;\r\n\t\t\t}\r\n\t\t\t.button:hover,\r\n\t\t\tbutton:hover{\r\n\t\t\t\ttext-decoration: underline;\r\n\t\t\t\tbackground-color: #001a33;\r\n\t\t\t}\n  }",
+        "headContent": "",
+        "searchCategories": [
+          {
+            "hidden": true,
+            "key": "components.search.category_tabs.sites",
+            "queryParams": {
+              "collection": "Site"
+            }
+          },
+          {
+            "hidden": false,
+            "key": "components.search.category_tabs.data",
+            "queryParams": {
+              "collection": "Dataset"
+            }
+          },
+          {
+            "hidden": false,
+            "key": "components.search.category_tabs.documents",
+            "queryParams": {
+              "collection": "Document"
+            }
+          },
+          {
+            "hidden": false,
+            "key": "components.search.category_tabs.apps_and_maps",
+            "queryParams": {
+              "collection": "App,Map"
+            }
+          }
+        ]
+      },
+      "feeds": {},
+      "settings": {
+        "features": {
+          "hub:site:events": false,
+          "hub:site:content": true,
+          "hub:site:discussions": false,
+          "hub:site:feature:follow": true,
+          "hub:site:feature:discussions": true,
+          "hub:feature:ai-assistant": false
+        }
+      },
+      "telemetry": {
+        "consentNotice": {
+          "allowPrivacyConfig": false,
+          "disclaimer": [
+            {
+              "text": "",
+              "default": true
+            }
+          ],
+          "policyURL": ""
+        }
+      },
+      "catalogV2": {
+        "schemaVersion": 1,
+        "title": "Default Site Catalog",
+        "scopes": {
+          "item": {
+            "targetEntity": "item",
+            "filters": [
+              {
+                "predicates": [
+                  {
+                    "group": [
+                      "0c1f8f4e70dd451a96488508f0ec2d90"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          "event": {
+            "targetEntity": "event",
+            "filters": [
+              {
+                "predicates": [
+                  {
+                    "group": [
+                      "0c1f8f4e70dd451a96488508f0ec2d90"
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        "collections": [
+          {
+            "label": null,
+            "key": "site",
+            "include": [],
+            "targetEntity": "item",
+            "scope": {
+              "targetEntity": "item",
+              "filters": [
+                {
+                  "predicates": [
+                    {
+                      "type": {
+                        "any": [
+                          "$site"
+                        ]
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            "displayConfig": {
+              "hidden": true
+            }
+          },
+          {
+            "label": null,
+            "key": "dataset",
+            "include": [],
+            "targetEntity": "item",
+            "scope": {
+              "targetEntity": "item",
+              "filters": [
+                {
+                  "predicates": [
+                    {
+                      "type": {
+                        "any": [
+                          "$dataset"
+                        ]
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            "displayConfig": {
+              "hidden": false
+            }
+          },
+          {
+            "label": null,
+            "key": "document",
+            "include": [],
+            "targetEntity": "item",
+            "scope": {
+              "targetEntity": "item",
+              "filters": [
+                {
+                  "predicates": [
+                    {
+                      "type": {
+                        "any": [
+                          "$document"
+                        ]
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            "displayConfig": {
+              "hidden": false
+            }
+          },
+          {
+            "label": null,
+            "key": "appAndMap",
+            "include": [],
+            "targetEntity": "item",
+            "scope": {
+              "targetEntity": "item",
+              "filters": [
+                {
+                  "predicates": [
+                    {
+                      "type": {
+                        "any": [
+                          "$app",
+                          "$map"
+                        ]
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            "displayConfig": {
+              "hidden": false
+            }
+          }
+        ]
+      },
+      "assistant": {
+        "schemaVersion": 0,
+        "workflows": [
+          {
+            "key": "search_workflow",
+            "label": "Data search",
+            "description": "This workflow is for questions about geographic data that can be answered from open data.",
+            "action": "search",
+            "response": "Query for the right dataset and filter.",
+            "sources": []
+          },
+          {
+            "key": "crisis_workflow",
+            "label": "Personal crisis topics",
+            "description": "Relating to suicide, self harm, or other personal crisis.",
+            "action": "respond",
+            "response": "If you are in a crisis or feeling suicidal, please call 911 for emergency response or 988 for the Suicide and Crisis Lifeline.",
+            "sources": []
+          },
+          {
+            "key": "disaster_workflow",
+            "label": "Disaster response",
+            "description": "Relating preparing for disaster, tornado, hurricanes.",
+            "action": "respond",
+            "response": "If this is an emergency, call 911.",
+            "sources": []
+          }
+        ]
+      },
+      "layout": {
+        "sections": [
+          {
+            "containment": "fixed",
+            "isFooter": false,
+            "style": {
+              "background": {
+                "isFile": false,
+                "isUrl": true,
+                "state": "",
+                "display": {},
+                "transparency": 0,
+                "position": {
+                  "x": "center",
+                  "y": "center"
+                },
+                "color": "transparent"
+              },
+              "rowLayout": "box"
+            },
+            "rows": [
+              {
+                "cards": [
+                  {
+                    "component": {
+                      "name": "markdown-card",
+                      "settings": {
+                        "schemaVersion": 2.1,
+                        "markdown": "<h1 style=\"text-align: center;\"><b>Welcome to the new USGS-NASA Planetary Geologic Mapping GIS Hub! </b></h1>\n\n<p style=\"text-align: center;\">We have been working hard to modernize the way we provide the planetary science community access to maps, tools, and resources. We are always looking for new ideas and ways we can continue to improve our online resources. If you have any ideas or suggestions, <a href=\"mailto:mahunter@usgs.gov\" target=\"_blank\">email us</a>!</p>\n\n<p style=\"text-align: center;\">Some popular links are highlighted below. All content can be accessed using the navigation bar at the top of the page.</p>"
+                      }
+                    },
+                    "width": 12
+                  }
+                ]
+              }
+            ],
+            "visibility": {
+              "access": "default",
+              "groups": []
+            }
+          },
+          {
+            "containment": "fixed",
+            "isFooter": false,
+            "style": {
+              "background": {
+                "isFile": true,
+                "isUrl": false,
+                "state": "valid",
+                "display": {},
+                "transparency": 70,
+                "position": {
+                  "x": "center",
+                  "y": "center"
+                },
+                "color": "#4c4c4c",
+                "fileSrc": "Ganymede_Geology_11520_SMALL.jpg",
+                "cropSrc": "Ganymede_Geology_11520_SMALL.jpg"
+              },
+              "color": "#fff",
+              "rowLayout": "box"
+            },
+            "rows": [
+              {
+                "cards": [
+                  {
+                    "component": {
+                      "name": "markdown-card",
+                      "settings": {
+                        "schemaVersion": 2.1,
+                        "markdown": "<h1 style=\"text-align: center;\"><b>Explore all USGS planetary maps</b></h1><h5 style=\"text-align: center;\"><br>We have&nbsp;map search tools to make it easier for you to explore all planetary maps that have been published through the USGS or are currently in progress. You can search by author, keyword, feature name, publication year, and SIM number. You can also complete measurements, run queries, and view map details (including links to the publication page and interactive maps) within the search interface.</h5><p style=\"text-align: center;\"><br></p><br>\n<p style=\"text-align: center;\"><strong style=\"background-color: initial; color: currentcolor; font-family: var(--fontsBaseFamily),Avenir Next;\"><a href=\"https://astrogeology-usgs.hub.arcgis.com/pages/map-search\" class=\"btn btn-primary\">Search USGS planetary maps</a></strong></p>"
+                      }
+                    },
+                    "width": 12,
+                    "showEditor": false
+                  }
+                ]
+              }
+            ],
+            "visibility": {
+              "access": "default",
+              "groups": []
+            }
+          },
+          {
+            "containment": "fixed",
+            "isFooter": false,
+            "style": {
+              "background": {
+                "isFile": false,
+                "isUrl": true,
+                "state": "",
+                "display": {},
+                "transparency": 0,
+                "position": {
+                  "x": "center",
+                  "y": "center"
+                },
+                "color": "transparent"
+              },
+              "color": "#000000",
+              "rowLayout": "box"
+            },
+            "rows": [
+              {
+                "cards": [
+                  {
+                    "component": {
+                      "name": "markdown-card",
+                      "settings": {
+                        "cardId": "cq8t97a56",
+                        "schemaVersion": 2.1,
+                        "markdown": "<h1 style=\"text-align: center;\"><b>Explore Interactive Maps</b></h1><p style=\"text-align: justify;\"><span style=\"background-color: initial; color: currentcolor; font-family: var(--fontsBaseFamily),Avenir Next;\">The Planetary Geologic Mapping group is working to make interactive versions of all planetary maps published through the USGS. Recently released interactive maps are highlighted below, and many more are on the way.</span></p>"
+                      }
+                    },
+                    "width": 12
+                  }
+                ]
+              },
+              {
+                "cards": [
+                  {
+                    "component": {
+                      "name": "image-card",
+                      "settings": {
+                        "src": "",
+                        "fileSrc": "02_InteractiveMaps_icon.png",
+                        "cropSrc": "02_InteractiveMaps_icon.png",
+                        "alt": "Geologic maps of the Descartes region of the Moon (Apollo 16)",
+                        "caption": "IMAP 748: Geologic maps of the Descartes region of the Moon (Apollo 16); Milton and Hodges (1972)",
+                        "captionAlign": "center",
+                        "hyperlink": "https://doi.org/10.5066/P1M7DXPP",
+                        "hyperlinkTabOption": "new",
+                        "isUrl": false,
+                        "isFile": true,
+                        "state": "valid",
+                        "display": {
+                          "position": {
+                            "x": "center",
+                            "y": "center"
+                          },
+                          "reflow": false
+                        },
+                        "cardId": "ccqbo8gf9"
+                      }
+                    },
+                    "width": 3
+                  },
+                  {
+                    "component": {
+                      "name": "image-card",
+                      "settings": {
+                        "src": "",
+                        "fileSrc": "02_InteractiveMaps_icon.png",
+                        "cropSrc": "02_InteractiveMaps_icon.png",
+                        "alt": "USGS IMAP 800: Geologic maps of the Taurus-Littrow region of the Moon (Apollo 17)",
+                        "caption": "IMAP 800: Geologic maps of the Taurus-Littrow region of the Moon (Apollo 17); Scott and others (1972)",
+                        "captionAlign": "center",
+                        "hyperlink": "https://doi.org/10.5066/P13GDMQY",
+                        "hyperlinkTabOption": "new",
+                        "isUrl": false,
+                        "isFile": true,
+                        "state": "valid",
+                        "display": {
+                          "position": {
+                            "x": "center",
+                            "y": "center"
+                          },
+                          "reflow": false
+                        },
+                        "cardId": "cx7yhwtxp"
+                      }
+                    },
+                    "width": 3
+                  },
+                  {
+                    "component": {
+                      "name": "image-card",
+                      "settings": {
+                        "src": "",
+                        "fileSrc": "02_InteractiveMaps_icon.png",
+                        "cropSrc": "02_InteractiveMaps_icon.png",
+                        "alt": "USGS SIM 3513: Global Geologic Map of Europa",
+                        "caption": "SIM 3513: Global Geologic Map of Europa; Leonard et al. (2024)",
+                        "captionAlign": "center",
+                        "hyperlink": "https://doi.org/10.5066/P13ZCQK6",
+                        "hyperlinkTabOption": "new",
+                        "isUrl": false,
+                        "isFile": true,
+                        "state": "valid",
+                        "display": {
+                          "position": {
+                            "x": "center",
+                            "y": "center"
+                          },
+                          "reflow": false
+                        },
+                        "cardId": "c0igtuqab"
+                      }
+                    },
+                    "width": 3
+                  },
+                  {
+                    "component": {
+                      "name": "image-card",
+                      "settings": {
+                        "src": "",
+                        "fileSrc": "02_InteractiveMaps_icon.png",
+                        "cropSrc": "02_InteractiveMaps_icon.png",
+                        "alt": "Geologic maps of the Western Ladon Basin region, Mars",
+                        "caption": "SIM 3525: Geologic Map of MTM −15032 and −20032 Quadrangles, Western Ladon Basin, Mars (2025)",
+                        "captionAlign": "center",
+                        "hyperlink": "https://doi.org/10.5066/P96KRTGK",
+                        "hyperlinkTabOption": "new",
+                        "isUrl": false,
+                        "isFile": true,
+                        "state": "valid",
+                        "display": {
+                          "position": {
+                            "x": "center",
+                            "y": "center"
+                          },
+                          "reflow": false
+                        },
+                        "cardId": "c4xacgejs"
+                      }
+                    },
+                    "width": 3
+                  }
+                ]
+              },
+              {
+                "cards": [
+                  {
+                    "component": {
+                      "name": "markdown-card",
+                      "settings": {
+                        "cardId": "cacoweopx",
+                        "schemaVersion": 2.1,
+                        "markdown": "<p style=\"text-align: center;\"><i>Don't see what you're looking for in the featured maps?</i></p><p style=\"text-align: center;\"><br>\n<strong><a href=\"http://astrogeology-usgs.hub.arcgis.com/pages/interactive-maps\" class=\"btn btn-primary\" style=\"align=center\">Explore all available interactive maps</a></strong></p>"
+                      }
+                    },
+                    "width": 12
+                  }
+                ]
+              }
+            ],
+            "visibility": {
+              "access": "default",
+              "groups": []
+            }
+          },
+          {
+            "containment": "fixed",
+            "isFooter": false,
+            "style": {
+              "background": {
+                "isFile": true,
+                "isUrl": false,
+                "state": "valid",
+                "display": {},
+                "transparency": 70,
+                "position": {
+                  "x": "center",
+                  "y": "center"
+                },
+                "color": "#4c4c4c",
+                "image": "",
+                "fileSrc": "Venus Radar -SMALL cropped.jpg",
+                "cropSrc": "Venus Radar -SMALL cropped.jpg"
+              },
+              "color": "#fff",
+              "rowLayout": "box"
+            },
+            "rows": [
+              {
+                "cards": [
+                  {
+                    "component": {
+                      "name": "markdown-card",
+                      "settings": {
+                        "schemaVersion": 2.1,
+                        "markdown": "<h1 style=\"text-align: center;\"><b>Explore Data</b></h1>\n<p class=\"text-center\"><br></p><p class=\"text-center\">Looking for data? We are working to compile a helpful list of planetary data resources. </p><p class=\"text-center\">We are always working to improve this resource. Please contact us if you have or know of a dataset or resource that isn't listed here.</p>\n"
+                      }
+                    },
+                    "width": 12,
+                    "showEditor": false
+                  }
+                ]
+              },
+              {
+                "cards": [
+                  {
+                    "component": {
+                      "name": "image-card",
+                      "settings": {
+                        "src": "",
+                        "fileSrc": "04_ExploreData_icon_WHITE.png",
+                        "cropSrc": "04_ExploreData_icon_WHITE.png",
+                        "alt": "",
+                        "caption": "The NASA Planetary Data System (PDS)",
+                        "captionAlign": "center",
+                        "hyperlink": "https://pds.nasa.gov/datasearch/data-search/",
+                        "hyperlinkTabOption": "new",
+                        "isUrl": false,
+                        "isFile": true,
+                        "state": "valid",
+                        "display": {
+                          "position": {
+                            "x": "center",
+                            "y": "center"
+                          },
+                          "reflow": false
+                        },
+                        "cardId": "ckvgyaupd"
+                      }
+                    },
+                    "width": 3
+                  },
+                  {
+                    "component": {
+                      "name": "image-card",
+                      "settings": {
+                        "src": "",
+                        "fileSrc": "04_ExploreData_icon_WHITE.png",
+                        "cropSrc": "04_ExploreData_icon_WHITE.png",
+                        "alt": "",
+                        "caption": "The USGS Astropedia Lunar and Planetary Cartographic Catalog",
+                        "captionAlign": "center",
+                        "hyperlink": "https://astrogeology.usgs.gov/search",
+                        "hyperlinkTabOption": "new",
+                        "isUrl": false,
+                        "isFile": true,
+                        "state": "valid",
+                        "display": {
+                          "position": {
+                            "x": "center",
+                            "y": "center"
+                          },
+                          "reflow": false
+                        },
+                        "cardId": "c1lg89is8"
+                      }
+                    },
+                    "width": 3
+                  },
+                  {
+                    "component": {
+                      "name": "image-card",
+                      "settings": {
+                        "src": "",
+                        "fileSrc": "04_ExploreData_icon_WHITE.png",
+                        "cropSrc": "04_ExploreData_icon_WHITE.png",
+                        "alt": "",
+                        "caption": "The Orbital Data Explorer",
+                        "captionAlign": "center",
+                        "hyperlink": "https://ode.rsl.wustl.edu/",
+                        "hyperlinkTabOption": "new",
+                        "isUrl": false,
+                        "isFile": true,
+                        "state": "valid",
+                        "display": {
+                          "position": {
+                            "x": "center",
+                            "y": "center"
+                          },
+                          "reflow": false
+                        },
+                        "cardId": "c0q50dv2t"
+                      }
+                    },
+                    "width": 3
+                  },
+                  {
+                    "component": {
+                      "name": "image-card",
+                      "settings": {
+                        "src": "",
+                        "fileSrc": "04_ExploreData_icon_WHITE.png",
+                        "cropSrc": "04_ExploreData_icon_WHITE.png",
+                        "alt": "",
+                        "caption": "NASA/JPL Solar System Treks",
+                        "captionAlign": "center",
+                        "hyperlink": "https://trek.nasa.gov/#",
+                        "hyperlinkTabOption": "new",
+                        "isUrl": false,
+                        "isFile": true,
+                        "state": "valid",
+                        "display": {
+                          "position": {
+                            "x": "center",
+                            "y": "center"
+                          },
+                          "reflow": false
+                        },
+                        "cardId": "ch7u0u4f6"
+                      }
+                    },
+                    "width": 3
+                  }
+                ]
+              },
+              {
+                "cards": [
+                  {
+                    "component": {
+                      "name": "markdown-card",
+                      "settings": {
+                        "cardId": "cih8dtrc9",
+                        "schemaVersion": 2.1,
+                        "markdown": "<p style=\"text-align: center;\"><i>Don't see what you're looking for in the featured data?</i></p><p style=\"text-align: center;\"><br>\n<strong><a href=\"http://astrogeology-usgs.hub.arcgis.com/pages/explore-data\" class=\"btn btn-primary\" style=\"align=center\">Explore more datasets here</a></strong></p>"
+                      }
+                    },
+                    "width": 12
+                  }
+                ]
+              }
+            ],
+            "visibility": {
+              "access": "default",
+              "groups": []
+            }
+          },
+          {
+            "containment": "fixed",
+            "isFooter": false,
+            "style": {
+              "background": {
+                "isFile": false,
+                "isUrl": true,
+                "state": "",
+                "display": {},
+                "transparency": 0,
+                "position": {
+                  "x": "center",
+                  "y": "center"
+                },
+                "color": "transparent"
+              },
+              "color": "#000000",
+              "rowLayout": "box"
+            },
+            "rows": [
+              {
+                "cards": [
+                  {
+                    "component": {
+                      "name": "markdown-card",
+                      "settings": {
+                        "cardId": "cl19fxynj",
+                        "schemaVersion": 2.1,
+                        "markdown": "<h1 style=\"text-align: center;\"><b>Explore Tools</b></h1><p style=\"text-align: center;\"><br></p><p style=\"text-align: center;\">The USGS has several GIS tools available for planetary scientists. Download some of our most-frequently used tools by clicking the icons below.</p>"
+                      }
+                    },
+                    "width": 12
+                  }
+                ]
+              },
+              {
+                "cards": [
+                  {
+                    "component": {
+                      "name": "image-card",
+                      "settings": {
+                        "src": "",
+                        "fileSrc": "Tools_icon.png",
+                        "cropSrc": "Tools_icon.png",
+                        "alt": "",
+                        "caption": "PGM Toolbox",
+                        "captionAlign": "center",
+                        "hyperlink": "https://astropedia.astrogeology.usgs.gov/alfresco/d/d/workspace/SpacesStore/626ad468-6e9a-4782-ab40-c4a45f0599e0/USGS_PyGM_Toolbox.zip",
+                        "hyperlinkTabOption": "new",
+                        "isUrl": false,
+                        "isFile": true,
+                        "state": "valid",
+                        "display": {
+                          "position": {
+                            "x": "center",
+                            "y": "center"
+                          },
+                          "reflow": false
+                        },
+                        "cardId": "cmmqnpgax"
+                      }
+                    },
+                    "width": 3
+                  },
+                  {
+                    "component": {
+                      "name": "image-card",
+                      "settings": {
+                        "src": "",
+                        "fileSrc": "Tools_icon.png",
+                        "cropSrc": "Tools_icon.png",
+                        "alt": "",
+                        "caption": "Crater Helper Tools v1.1",
+                        "captionAlign": "center",
+                        "hyperlink": "https://pdsimage2.wr.usgs.gov/pub/pigpen/ArcMap_addons/Crater%20Helper%20Tools%20for%20ArcGIS%2010.zip",
+                        "hyperlinkTabOption": "new",
+                        "isUrl": false,
+                        "isFile": true,
+                        "state": "valid",
+                        "display": {
+                          "position": {
+                            "x": "center",
+                            "y": "center"
+                          },
+                          "reflow": false
+                        },
+                        "cardId": "csevo0lw8"
+                      }
+                    },
+                    "width": 3
+                  },
+                  {
+                    "component": {
+                      "name": "image-card",
+                      "settings": {
+                        "src": "",
+                        "fileSrc": "Tools_icon.png",
+                        "cropSrc": "Tools_icon.png",
+                        "alt": "",
+                        "caption": "Geodesic Profiler",
+                        "captionAlign": "center",
+                        "hyperlink": "https://astropedia.astrogeology.usgs.gov/alfresco/d/d/workspace/SpacesStore/bbbe55c7-8e7f-40d5-a044-5468c880755f/Geodesic_Profiles_10x.exe",
+                        "hyperlinkTabOption": "new",
+                        "isUrl": false,
+                        "isFile": true,
+                        "state": "valid",
+                        "display": {
+                          "position": {
+                            "x": "center",
+                            "y": "center"
+                          },
+                          "reflow": false
+                        },
+                        "cardId": "cuh0hc1f8"
+                      }
+                    },
+                    "width": 3
+                  },
+                  {
+                    "component": {
+                      "name": "image-card",
+                      "settings": {
+                        "src": "",
+                        "fileSrc": "Tools_icon.png",
+                        "cropSrc": "Tools_icon.png",
+                        "alt": "",
+                        "caption": "Zonal Statistics Toolbox",
+                        "captionAlign": "center",
+                        "hyperlink": "https://astropedia.astrogeology.usgs.gov/alfresco/d/d/workspace/SpacesStore/85a3ae43-a9c9-4be4-bacd-408ce9d0a69d/ZonalStatsPyToolbox170901.zip",
+                        "hyperlinkTabOption": "new",
+                        "isUrl": false,
+                        "isFile": true,
+                        "state": "valid",
+                        "display": {
+                          "position": {
+                            "x": "center",
+                            "y": "center"
+                          },
+                          "reflow": false
+                        },
+                        "cardId": "cpgy79nqj"
+                      }
+                    },
+                    "width": 3
+                  }
+                ]
+              },
+              {
+                "cards": [
+                  {
+                    "component": {
+                      "name": "markdown-card",
+                      "settings": {
+                        "cardId": "c7aqeu2yg",
+                        "schemaVersion": 2.1,
+                        "markdown": "<p style=\"text-align: center;\"><i style=\"background-color: initial; color: currentcolor; font-family: var(--fontsBaseFamily),Avenir Next;\">Need more details or don't see what you're looking for in the featured tools?</i></p><p style=\"text-align: center;\"><br>\n<strong><a href=\"http://astrogeology-usgs.hub.arcgis.com/pages/explore-tools\" class=\"btn btn-primary\" style=\"align=center\">Explore all tools here</a></strong></p>"
+                      }
+                    },
+                    "width": 12
+                  }
+                ]
+              },
+              {
+                "cards": [
+                  {
+                    "component": {
+                      "name": "spacer-card",
+                      "settings": {
+                        "height": 100,
+                        "cardId": "c4pgi4u5o"
+                      }
+                    },
+                    "settings": {
+                      "height": 100
+                    },
+                    "width": 12
+                  }
+                ]
+              }
+            ],
+            "visibility": {
+              "access": "default",
+              "groups": []
+            }
+          }
+        ],
+        "header": {
+          "component": {
+            "name": "site-header",
+            "settings": {
+              "fullWidth": false,
+              "iframeHeight": "150px",
+              "iframeUrl": "",
+              "links": [],
+              "logoUrl": "",
+              "title": " ",
+              "markdown": "\r\n<!-- USGS HEADER -->\r\n  \r\n  <div class=\"usgsHeader\">\r\n    <img src=\"https://wim.usgs.gov/styleguide/img/sg-logos/USGS/USGS_White_Notag_web.png\" title=\"USGS Logo\" alt=\"USGS Logo\" style=\"height:50px; padding:10px 10px 10px 10px;\">\r\n  </div>\r\n\r\n<!-- PGM TITLE BAR -->\r\n\r\n  <div class=\"PGMtitle\">USGS-NASA Planetary Geologic Mapping Program</div>\r\n    \r\n\r\n<!-- NAVIGATION BAR-->  \r\n\r\n<nav class=\"navbar navbar-default\">\r\n  \r\n  <div class=\"navbar-header\">\r\n          \r\n            <button class=\"navbar-toggle\" data-toggle=\"collapse\" data-target=\".navbar-collapse\">\r\n                <span class=\"sr-only\">Toggle navigation</span>\r\n                <span class=\"icon-bar\"></span>\r\n                <span class=\"icon-bar\"></span>\r\n                <span class=\"icon-bar\"></span>\r\n            </button>\r\n\r\n  \r\n  \r\n  \r\n        <div class=\"collapse navbar-collapse\">\r\n            <ul class=\"nav navbar-nav navbar-right\">\r\n            </ul>\r\n            <ul class=\"nav navbar-nav\">\r\n            \r\n            \r\n                <li><a href=\"https://www.usgs.gov/special-topics/planetary-geologic-mapping\">PGM Home (usgs.gov)</a></li>\r\n                \r\n                \r\n                <li><a href=\"https://astrogeology-usgs.hub.arcgis.com\">PGM Hub Home</a></li>\r\n                \r\n                \r\n                <li><a href=\"#\" class=\"dropdown-toggle\" data-toggle=\"dropdown\">Find Maps <b class=\"caret\"></b></a>\r\n                    <ul class=\"dropdown-menu\">\r\n                        \r\n                        <li class=\"dropdown-submenu\">\r\n                            <a href=\"https://astrogeology-usgs.hub.arcgis.com/pages/map-search\" class=\"dropdown-toggle\" data-toggle=\"dropdown\">Search USGS I- and SIM-series Maps</a>\r\n                            <ul class=\"dropdown-menu\">\r\n                                <li><a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://usgs.maps.arcgis.com/apps/webappviewer/index.html?id=65b5d64f442b4960ad6dc01aa8eb27eb\">Mercury</a></li>\r\n                                <li><a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://usgs.maps.arcgis.com/apps/webappviewer/index.html?id=72cea2405a9340a1a3dc645d1dd663bf\">Venus</a></li>\r\n                                <li><a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://usgs.maps.arcgis.com/apps/webappviewer/index.html?id=689c7da46ab24a6eb703c65a14569bb7\">Moon</a></li>\r\n                                <li><a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://usgs.maps.arcgis.com/apps/webappviewer/index.html?id=f693b580b2464e6989f32e4266199552\">Mars</a></li>\r\n                                <li><a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://usgs.maps.arcgis.com/apps/webappviewer/index.html?id=0037872cc5e84426a99ce283d4d0636b\">Vesta</a></li>\r\n                                <li><a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://usgs.maps.arcgis.com/apps/webappviewer/index.html?id=dedafe5abc284e1493dcee9b60934bec\">Ceres</a></li>\r\n                                <li><a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://usgs.maps.arcgis.com/apps/webappviewer/index.html?id=5a823235cac64c35b6bd0c4ee0654433\">Io</a></li>\r\n                                <li><a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://usgs.maps.arcgis.com/apps/webappviewer/index.html?id=5acba94c00564ad8adfb0f8bb788c578\">Europa</a></li>\r\n                                <li><a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://usgs.maps.arcgis.com/apps/webappviewer/index.html?id=0277890e7c664e6186d577b13db76e66\">Ganymede</a></li>\r\n                                <li><a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://usgs.maps.arcgis.com/apps/webappviewer/index.html?id=9f371473584d4d67a58ea49170c6e44b\">Callisto</a></li>\r\n                                <li><a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://usgs.maps.arcgis.com/apps/webappviewer/index.html?id=e5d7097426ef46c9a144f6740dde6caa\">Enceladus</a></li>\r\n                                <li><a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://usgs.maps.arcgis.com/apps/webappviewer/index.html?id=c1bdbd1dd1584e37b8f40ede507895af\">Tethys</a></li>\r\n                                <li><a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://usgs.maps.arcgis.com/apps/webappviewer/index.html?id=b1a1cd1d1e3b4357b8fd8991b3b5399b\">Dione</a></li>\r\n                                <li><a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://usgs.maps.arcgis.com/apps/webappviewer/index.html?id=9570cec4c7284d2687fcf789850e617b\">Titan</a></li>\r\n                                <li><a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://usgs.maps.arcgis.com/apps/webappviewer/index.html?id=538c0b4362084042af8dae714d59991c\">Triton</a></li>\r\n                                <li><a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://usgs.maps.arcgis.com/apps/webappviewer/index.html?id=67a95ae666984e92b68ee9c69a2b0cb7\">Pluto</a></li>\r\n                            </ul>\r\n                        </li>\r\n\r\n                        \r\n                        <li class=\"dropdown-submenu\">\r\n                        <a href=\"https://astrogeology-usgs.hub.arcgis.com/pages/interactive-maps\" class=\"dropdown-toggle\" data-toggle=\"dropdown\">Interactive Maps</a>\r\n                            <ul class=\"dropdown-menu\">\r\n                                <li><a href=\"https://astrogeology-usgs.hub.arcgis.com/pages/interactive-maps-mercury\">Mercury</a></li>\r\n                                <li><a href=\"https://astrogeology-usgs.hub.arcgis.com/pages/interactive-maps-venus\">Venus</a></li>\r\n                                <li><a href=\"https://astrogeology-usgs.hub.arcgis.com/pages/interactive-maps-moon\">Moon</a></li>\r\n                                <li><a href=\"https://astrogeology-usgs.hub.arcgis.com/pages/interactive-maps-mars\">Mars</a></li>\r\n                                <li><a href=\"https://astrogeology-usgs.hub.arcgis.com/pages/interactive-maps-io\">Io</a></li>\r\n                                <li><a href=\"https://astrogeology-usgs.hub.arcgis.com/pages/interactive-maps-europa\">Europa</a></li>\r\n                                <li><a href=\"https://astrogeology-usgs.hub.arcgis.com/pages/interactive-maps-ganymede\">Ganymede</a></li>\r\n                                <li><a href=\"https://astrogeology-usgs.hub.arcgis.com/pages/interactive-maps-callisto\">Callisto</a></li>\r\n                            </ul>\r\n                        </li>\r\n                    </ul>\r\n                </li>\r\n                \r\n                \r\n                \r\n                <li>\r\n                    <a href=\"#\" class=\"dropdown-toggle\" data-toggle=\"dropdown\">Data and Tools <b class=\"caret\"></b></a>\r\n                    <ul class=\"dropdown-menu multi-level\">\r\n                        <li><a href=\"https://astrogeology-usgs.hub.arcgis.com/pages/explore-data\">Data Sources</a></li>\r\n                        <li><a href=\"https://astrogeology-usgs.hub.arcgis.com/pages/image-viewers-and-gis\">Free Image Viewers and GIS</a></li>\r\n                        <li><a href=\"https://astrogeology-usgs.hub.arcgis.com/pages/explore-tools\">Tools and Utilities</a></li>\r\n                    </ul>\r\n                </li>\r\n                \r\n                \r\n                \r\n            </ul>\r\n        </div><!--/.nav-collapse -->\r\n    </div>\r\n</nav>",
+              "headerType": "custom",
+              "schemaVersion": 3,
+              "showLogo": false,
+              "showTitle": true,
+              "logo": {
+                "display": {},
+                "state": "valid",
+                "isFile": true,
+                "isUrl": false,
+                "vertical": false
+              },
+              "shortTitle": "",
+              "menuLinks": [
+                {
+                  "id": "9465129f474b49178d13d3ff60056054",
+                  "type": "Hub Site Application",
+                  "name": "Home",
+                  "external": false,
+                  "title": "Home",
+                  "isDraggingObject": false
+                },
+                {
+                  "id": "8bc4eb0a25d943b3b782110053be94c1",
+                  "type": "Hub Page",
+                  "name": "About",
+                  "external": false,
+                  "title": "About",
+                  "isDraggingObject": false
+                },
+                {
+                  "id": "58484054d0d7424c849bc5c0b4c3db0a",
+                  "type": "Hub Page",
+                  "name": "Interactive Maps",
+                  "external": false,
+                  "title": "Interactive Maps",
+                  "isDraggingObject": false
+                },
+                {
+                  "id": "043c27d3fe4c44db8acaf07a10177575",
+                  "type": "Hub Page",
+                  "name": "Map Search",
+                  "external": false,
+                  "title": "Map Search",
+                  "isDraggingObject": false
+                },
+                {
+                  "id": "ad6a77b3d219454f89f4376476ce28b7",
+                  "type": "Hub Page",
+                  "name": "Data",
+                  "external": false,
+                  "title": "Data"
+                },
+                {
+                  "id": "28164e64e71f4db0a87092dda074cca6",
+                  "type": "Hub Page",
+                  "name": "Tools",
+                  "external": false,
+                  "title": "Tools"
+                },
+                {
+                  "id": "f6d633d82af44b87bd017f0644924b2b",
+                  "type": "Hub Page",
+                  "name": "Guidelines",
+                  "external": false,
+                  "title": "Guidelines",
+                  "isDraggingObject": false
+                },
+                {
+                  "id": "eeab52112084423592dcbd646fd3437e",
+                  "type": "Hub Page",
+                  "name": "Resources",
+                  "external": false,
+                  "title": "Resources",
+                  "isDraggingObject": false
+                },
+                {
+                  "id": "3c98bf7007554ae79aa1ec2348371cf2",
+                  "type": "Hub Page",
+                  "name": "Tutorials",
+                  "external": false,
+                  "title": "Tutorials",
+                  "isDraggingObject": false
+                },
+                {
+                  "id": "6ab44db52161439198cc6542c420d9fe",
+                  "type": "Hub Page",
+                  "name": "Meetings",
+                  "external": false,
+                  "title": "Meetings",
+                  "isDraggingObject": false
+                },
+                {
+                  "id": "fea7af77b65f4272bcc69e419a2051da",
+                  "type": "Hub Page",
+                  "name": "FAQ",
+                  "external": false,
+                  "title": "FAQ"
+                }
+              ],
+              "socialLinks": {
+                "facebook": {},
+                "instagram": {
+                  "visible": true,
+                  "url": "https://www.instagram.com/usgs_astrogeology/"
+                },
+                "twitter": {
+                  "visible": true,
+                  "url": "https://twitter.com/USGS_AstroGeo"
+                },
+                "youtube": {}
+              }
+            }
+          },
+          "name": "site-header"
+        },
+        "footer": {
+          "component": {
+            "name": "site-footer",
+            "settings": {
+              "footerType": "custom",
+              "markdown": "\t\t<!-- USGS Footer -->\r\n\t\t<footer id=\"usgs\">\r\n\t\t\t<div>\r\n\t\t\t\t<a href=\"https://www.doi.gov/privacy\">DOI Privacy Policy</a>\r\n\t\t\t\t<a href=\"https://www.usgs.gov/laws/policies_notices.html\">Legal</a>\r\n\t\t\t\t<a href=\"https://www2.usgs.gov/laws/accessibility.html\">Accessibility</a>\r\n\t\t\t\t<a href=\"https://www.usgs.gov/sitemap.html\">Site Map</a>\r\n\t\t\t\t<a href=\"https://answers.usgs.gov/\">Contact USGS</a>\r\n\t\t\t</div>\r\n\r\n\r\n\t\t\t<div>\r\n\t\t\t\t<a href=\"https://www.doi.gov/\">U.S. Department of the Interior</a>\r\n\t\t\t\t<a href=\"https://www.doioig.gov/\">DOI Inspector General</a>\r\n\t\t\t\t<a href=\"https://www.whitehouse.gov/\">White House</a>\r\n\t\t\t\t<a href=\"https://www.whitehouse.gov/omb/e-gov/\">E-gov</a>\r\n\t\t\t\t<a href=\"https://www.whitehouse.gov/open\">Open Government</a>\r\n\t\t\t\t<a href=\"https://www.doi.gov/pmb/eeo/no-fear-act\">No Fear Act</a>\r\n\t\t\t\t<a href=\"https://www2.usgs.gov/foia\">FOIA</a>\r\n\t\t\t</div>\r\n\t\t</footer>",
+              "schemaVersion": 2.1
+            }
+          }
+        }
+      },
+      "permissions": [
+        {
+          "permission": "hub:project:create",
+          "collaborationType": "group",
+          "collaborationId": "0c1f8f4e70dd451a96488508f0ec2d90"
+        },
+        {
+          "permission": "hub:site:delete",
+          "collaborationType": "user",
+          "collaborationId": "mahunter@usgs.gov_USGS"
+        }
+      ]
+    },
+    "domainInfo": {
+      "id": "111486",
+      "hostname": "astrogeology-usgs.hub.arcgis.com",
+      "siteId": "9465129f474b49178d13d3ff60056054",
+      "clientKey": "dGA9eYRovmwIm4sP",
+      "orgKey": "USGS",
+      "siteTitle": "Astrogeology",
+      "orgId": "v01gqwM5QqNysAAi",
+      "orgTitle": "U.S. Geological Survey",
+      "createdAt": "2021-09-07T18:04:14.251Z",
+      "updatedAt": "2021-09-07T18:04:14.251Z",
+      "sslOnly": true,
+      "permanentRedirect": false,
+      "redirectTo": null,
+      "domain": "astrogeology-usgs.hub.arcgis.com"
+    },
+    "injected": true,
+    "status": 200
+  },
+  "status": 200
+}
