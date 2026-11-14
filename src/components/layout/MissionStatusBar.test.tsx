@@ -36,6 +36,13 @@ describe('honest mission status', () => {
     expect(markup).toContain(`${grid.manifest.summary.validCount.toLocaleString()} cells loaded`)
     expect(markup).toContain('<dt>Scientific validation</dt><dd>Partial')
     expect(markup).toContain('feature registration and height reference unresolved')
-    expect(markup).toContain('<dt>Route comparison</dt><dd>Unavailable</dd>')
+    expect(markup).toContain('<dt>Hypothetical routes</dt><dd>Not calculated</dd>')
+  })
+  it('reports route computation separately from scientific validation', () => {
+    for (const [routePhase, expected] of [['loading', 'Calculating…'], ['ready', 'Calculated · distance only'], ['error', 'Calculation unavailable']] as const) {
+      const markup = renderToStaticMarkup(<MissionStatusBar terrain={{ phase: 'idle' }} routePhase={routePhase} />)
+      expect(markup).toContain(expected)
+      expect(markup).toContain('<dt>Scientific validation</dt><dd>Partial')
+    }
   })
 })

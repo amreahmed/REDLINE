@@ -15,7 +15,7 @@ export function ScientificValidation() {
       <dt>Elevation height reference</dt><dd>Conflicted / unresolved — real DEM slopes and costs blocked</dd>
       <dt>Terrain arithmetic</dt><dd>Reference-sphere distances validated; grade and cost formulas tested with synthetic fixtures</dd>
     </dl>
-    <p className="helper">Grid endpoint separation is available in Plan. Route comparison requires supported terrain costs and pathfinding.</p>
+    <p className="helper">Plan provides grid separation and A* distance-only hypothetical paths. Grid connectivity is a simulation assumption. Terrain-aware pathfinding and precise science-site routing require additional evidence.</p>
     <details className="source-metadata">
       <summary>Registration evidence & next requirement</summary>
       <p className="helper">{evidence.registration.insideCropCandidates} archived rover-site control candidates map inside this crop, from {evidence.registration.totalSiteDefinitions} site definitions in a NASA/JPL localized SPICE kernel.</p>

@@ -45,7 +45,7 @@ export function MissionControl({ explorer, visibility, statuses, onToggle, onRet
         <ol className="mission-journey">
           <li className="journey-step"><Icon name="layers" /><span><strong>Inspect the evidence</strong><span>Open Layers to check imagery and coverage.</span></span></li>
           <li className="journey-step"><Icon name="pin" /><span><strong>Choose mission endpoints</strong><span>Open Plan for hypothetical grid cells or references.</span></span></li>
-          <li className="journey-pending"><Icon name="lock" /><span><strong>Compare routes</strong><span>Unavailable until science and routing are validated.</span></span></li>
+          <li className="journey-step"><Icon name="grid" /><span><strong>Compare hypothetical paths</strong><span>Open Plan for distance-only routing and an optional waypoint.</span></span></li>
         </ol>
       </section>
       </div>
@@ -82,13 +82,6 @@ export function MissionControl({ explorer, visibility, statuses, onToggle, onRet
       </div>
       <div id="mission-plan-section" className="mission-section-content" hidden={activeSection !== 'plan'}>
         {missionPlanner}
-        <section className="panel-section route-prerequisites" aria-labelledby="route-prerequisites-heading">
-          <h3 id="route-prerequisites-heading">Route comparison</h3>
-          <button type="button" className="route-unavailable" disabled aria-describedby="route-data-note"><Icon name="lock" size={16} />Compare routes — unavailable</button>
-          <p className="helper" id="route-data-note">Endpoints can be selected. Routes require the following work before comparison is available:</p>
-          <ul><li>Resolve the elevation height reference for DEM grades and terrain costs</li><li>Implement and test pathfinding</li><li>Validate named-feature registration before routing to precise science sites</li></ul>
-          <p className="source-warning">No route, hazard or astronaut-safety results are calculated.</p>
-        </section>
       </div>
       </div>
     </aside>

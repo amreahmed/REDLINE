@@ -14,6 +14,8 @@ import type { EndpointRole, TargetId } from '../features/mission/types'
 import { FeaturePlanner } from '../components/mission/FeaturePlanner'
 import { GridPlanner } from '../components/mission/GridPlanner'
 import { useGridPlanning } from '../features/mission/useGridPlanning'
+import { useDistanceRouting } from '../features/routing/useDistanceRouting'
+import { RoutePlanner } from '../components/mission/RoutePlanner'
 import type { ExplorerSummary } from '../features/explorer/types'
 import { initialWorkspacePanels, workspacePanels } from './workspacePanels'
 
@@ -42,6 +44,7 @@ export default function App() {
   const [focusRequest, setFocusRequest] = useState<{ id: TargetId; sequence: number; focusWorkspace: boolean } | null>(null)
   const [selectionError, setSelectionError] = useState<string | null>(null)
   const planning = useGridPlanning()
+  const routing = useDistanceRouting(planning.terrain, planning.selection)
   const [gridFocusRequest, setGridFocusRequest] = useState(0)
   const [centerPickRequest, setCenterPickRequest] = useState(0)
   const canPick = planning.terrain.phase === 'ready' && visibility.controlledCtx && explorer.phase === 'map' && explorer.localDetail && statuses.controlledCtx.phase === 'available' && statuses.controlledCtx.coverage !== 'outside' && explorer.controlledImageryReady
@@ -124,13 +127,14 @@ export default function App() {
       <main className="workspace" data-panel={panels.panel ?? 'none'} data-picking={planning.pickRole !== null}>
         <div className="controls-slot" hidden={!controlsOpen}><MissionControl activeSection={panels.section} onClose={closePanel} explorer={explorer} visibility={visibility} statuses={statuses} onToggle={toggleLayer} onRetry={retryLayer} missionPlanner={<>
           <GridPlanner terrain={planning.terrain} selection={planning.selection} pickRole={planning.pickRole} notice={planning.notice} canPick={canPick} onOpen={() => void openPlanning()} onAssign={(role, row, column) => { if (canPick) planning.assign(role, row, column) }} onBeginPick={(role) => { if (canPick) { planning.beginPick(role); if (window.matchMedia('(max-width: 640px)').matches) { dispatchPanel({ type: 'close' }); document.getElementById('explorer-workspace')?.focus({ preventScroll: true }) } } }} onUseCenter={() => { if (canPick) setCenterPickRequest((value) => value + 1) }} onCancel={cancelGridPick} onSwap={planning.swap} onClear={planning.clear} />
+          <RoutePlanner routing={routing} onShowMap={() => void openPlanning()} />
           <FeaturePlanner targets={SCIENCE_TARGETS} selection={missionSelection} selectedId={selectedTargetId} error={selectionError} onInspect={inspectTarget} onAssign={selectEndpoint} onSwap={swap} onClear={clear} />
         </>} /></div>
-        <MarsExplorer visibility={visibility} statuses={statuses} retryRequest={retryRequest} jezeroRequest={jezeroRequest} onJezero={openJezero} onStatus={onStatus} onSummary={onSummary} missionSelection={missionSelection} selectedTargetId={selectedTargetId} focusRequest={focusRequest} onInspectTarget={inspectTarget} planningGrid={planning.terrain.phase === 'ready' ? planning.terrain.grid : null} gridSelection={planning.selection} gridFocusRequest={gridFocusRequest} centerPickRequest={centerPickRequest} gridPickRole={canPick ? planning.pickRole : null} gridPickNotice={planning.notice} onPickCoordinate={(coordinate) => { if (canPick) planning.pickCoordinate(coordinate) }} onNavigate={cancelPlanningNavigation} />
+        <MarsExplorer visibility={visibility} statuses={statuses} retryRequest={retryRequest} jezeroRequest={jezeroRequest} onJezero={openJezero} onStatus={onStatus} onSummary={onSummary} missionSelection={missionSelection} selectedTargetId={selectedTargetId} focusRequest={focusRequest} onInspectTarget={inspectTarget} planningGrid={planning.terrain.phase === 'ready' ? planning.terrain.grid : null} gridSelection={planning.selection} gridFocusRequest={gridFocusRequest} centerPickRequest={centerPickRequest} gridPickRole={canPick ? planning.pickRole : null} gridPickNotice={planning.notice} onPickCoordinate={(coordinate) => { if (canPick) planning.pickCoordinate(coordinate) }} onNavigate={cancelPlanningNavigation} hypotheticalRoutes={routing.routes} selectedRouteId={routing.routes.length ? routing.selectedId : null} routeWaypoint={routing.waypointPoint} />
         <div className="information-slot" hidden={!informationOpen}><InformationPanel onClose={closePanel} explorer={explorer} visibility={visibility} statuses={statuses} target={targetById(selectedTargetId)} inspectionSequence={focusRequest?.sequence ?? 0} planningGrid={planning.terrain.phase === 'ready' ? planning.terrain.grid : undefined} /></div>
       </main>
       </div>
-      <MissionStatusBar terrain={planning.terrain} />
+      <MissionStatusBar terrain={planning.terrain} routePhase={routing.state.phase} />
     </div>
   )
 }

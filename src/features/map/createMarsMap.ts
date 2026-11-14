@@ -26,6 +26,8 @@ import { toDisplayCoordinate } from '../mission/coordinates'
 import type { MissionSelection, ScienceTarget, TargetId } from '../mission/types'
 import { createMissionFeatures, missionFeatureStyle, missionTargetId } from './featureMarkers'
 import { createGridOverlayFeatures, emitMapCoordinatePick, gridOverlayStyle, gridOverlayVisible, validGridBounds } from './gridOverlay'
+import { createHypotheticalRouteFeatures, hypotheticalRouteStyle } from './routeOverlay'
+import type { HypotheticalRoute, RoutePoint } from '../routing/types'
 
 type LayerRun = { abort: AbortController; status: LayerStatus; imageSupport: WeakMap<Tile, ImageSupport> }
 export type MarsMapController = {
@@ -43,6 +45,7 @@ export type MarsMapController = {
   setMissionFeatures: (targets: readonly ScienceTarget[], selection: MissionSelection, selectedId: TargetId | null) => void
   focusReference: (target: ScienceTarget) => boolean
   setGridOverlay: (bounds: Bounds | null, endpoints: readonly GridOverlayEndpoint[]) => void
+  setHypotheticalRoutes: (routes: readonly HypotheticalRoute[], selectedId: 'shortest' | 'via' | null, waypoint: RoutePoint | null) => void
   focusGrid: (bounds: Bounds) => void
   pickViewCenter: () => void
   panBy: (horizontal: number, vertical: number) => void
@@ -60,16 +63,20 @@ export function createMarsMap(target: HTMLElement, onStatus: (id: LayerId, statu
   const missionLayer = new VectorLayer({ source: missionSource, style: missionFeatureStyle, zIndex: 20, minZoom: 6, declutter: true })
   const gridSource = new VectorSource<Feature<Geometry>>({ wrapX: false })
   const gridLayer = new VectorLayer({ source: gridSource, style: gridOverlayStyle, zIndex: 30 })
+  const routeSource = new VectorSource<Feature<Geometry>>({ wrapX: false })
+  const routeLayer = new VectorLayer({ source: routeSource, style: hypotheticalRouteStyle, zIndex: 25 })
   let disposed = false
   let active = true
   let hasGridBounds = false
+  let gridBounds: Bounds | null = null
+  let routeInputs: { routes: readonly HypotheticalRoute[]; selectedId: 'shortest' | 'via' | null; waypoint: RoutePoint | null } = { routes: [], selectedId: null, waypoint: null }
   let controlledImageryReady: boolean | undefined
   let alphaCanvas: HTMLCanvasElement | undefined
   for (const [index, definition] of MARS_LAYERS.entries()) layers.set(definition.id, new FrameAwareTileLayer({ extent: definition.extent, cacheSize: 128, zIndex: index }))
   const map = new OlMap({
     target,
     view,
-    layers: [...layers.values(), missionLayer, gridLayer],
+    layers: [...layers.values(), missionLayer, gridLayer, routeLayer],
     controls: [],
     interactions: defaultInteractions({ altShiftDragRotate: false, pinchRotate: false, keyboard: options.keyboard }),
     maxTilesLoading: 8,
@@ -82,7 +89,14 @@ export function createMarsMap(target: HTMLElement, onStatus: (id: LayerId, statu
   }
   map.on('singleclick', inspectMarker)
   function syncGridVisibility() {
-    gridLayer.setVisible(gridOverlayVisible(active && !disposed, layers.get('controlledCtx')?.getVisible() === true, hasGridBounds))
+    const visible = gridOverlayVisible(active && !disposed, layers.get('controlledCtx')?.getVisible() === true, hasGridBounds)
+    gridLayer.setVisible(visible)
+    routeLayer.setVisible(visible && routeSource.getFeatures().length > 0)
+  }
+  function updateRoutes() {
+    routeSource.clear(true)
+    routeSource.addFeatures(createHypotheticalRouteFeatures(gridBounds, routeInputs.routes, routeInputs.selectedId, routeInputs.waypoint))
+    syncGridVisibility()
   }
   syncGridVisibility()
   function reportControlledImageryReady() {
@@ -262,8 +276,14 @@ export function createMarsMap(target: HTMLElement, onStatus: (id: LayerId, statu
       gridSource.clear(true)
       const features = createGridOverlayFeatures(bounds, endpoints)
       hasGridBounds = features.length > 0
+      gridBounds = hasGridBounds && bounds ? [...bounds] as Bounds : null
       gridSource.addFeatures(features)
-      syncGridVisibility()
+      updateRoutes()
+    },
+    setHypotheticalRoutes: (routes, selectedId, waypoint) => {
+      if (disposed) return
+      routeInputs = { routes, selectedId, waypoint }
+      updateRoutes()
     },
     focusGrid: (bounds) => {
       if (disposed || !validGridBounds(bounds)) return
@@ -294,6 +314,12 @@ export function createMarsMap(target: HTMLElement, onStatus: (id: LayerId, statu
       gridSource.clear(true)
       gridSource.dispose()
       gridLayer.dispose()
+      map.removeLayer(routeLayer)
+      routeSource.clear(true)
+      routeSource.dispose()
+      routeLayer.dispose()
+      routeInputs = { routes: [], selectedId: null, waypoint: null }
+      gridBounds = null
       for (const run of runs.values()) run.abort.abort()
       for (const layer of layers.values()) layer.getSource()?.dispose()
       if (alphaCanvas) { alphaCanvas.width = 0; alphaCanvas.height = 0; alphaCanvas = undefined }

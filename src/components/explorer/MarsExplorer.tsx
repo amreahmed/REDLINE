@@ -20,6 +20,9 @@ import type { GridSelection } from '../../features/mission/gridSelection'
 import type { TerrainGrid } from '../../features/terrain/gridTypes'
 import { terrainGridBounds } from '../../features/terrain/terrainGrid'
 import type { GridOverlayEndpoint } from '../../features/map/types'
+import type { HypotheticalRoute, RoutePoint } from '../../features/routing/types'
+
+const EMPTY_ROUTES: readonly HypotheticalRoute[] = []
 
 function gridEndpoints(selection: GridSelection): GridOverlayEndpoint[] {
   return (['origin', 'destination'] as const).flatMap((role) => {
@@ -48,9 +51,12 @@ type Props = {
   gridPickNotice: string | null
   onPickCoordinate: (coordinate: [number, number]) => void
   onNavigate: () => void
+  hypotheticalRoutes?: readonly HypotheticalRoute[]
+  selectedRouteId?: 'shortest' | 'via' | null
+  routeWaypoint?: RoutePoint | null
 }
 
-export function MarsExplorer({ visibility, statuses, retryRequest, jezeroRequest, onJezero, onStatus, onSummary, missionSelection, selectedTargetId, focusRequest, onInspectTarget, planningGrid, gridSelection, gridFocusRequest, centerPickRequest, gridPickRole, gridPickNotice, onPickCoordinate, onNavigate }: Props) {
+export function MarsExplorer({ visibility, statuses, retryRequest, jezeroRequest, onJezero, onStatus, onSummary, missionSelection, selectedTargetId, focusRequest, onInspectTarget, planningGrid, gridSelection, gridFocusRequest, centerPickRequest, gridPickRole, gridPickNotice, onPickCoordinate, onNavigate, hypotheticalRoutes = EMPTY_ROUTES, selectedRouteId = null, routeWaypoint = null }: Props) {
   const workspaceRef = useRef<HTMLDivElement>(null)
   const globeHostRef = useRef<HTMLDivElement>(null)
   const mapHostRef = useRef<HTMLDivElement>(null)
@@ -76,6 +82,7 @@ export function MarsExplorer({ visibility, statuses, retryRequest, jezeroRequest
   const gridSelectionRef = useRef(gridSelection)
   const gridPickRoleRef = useRef(gridPickRole)
   const pickCoordinateRef = useRef(onPickCoordinate)
+  const routeInputsRef = useRef({ routes: hypotheticalRoutes, selectedId: selectedRouteId, waypoint: routeWaypoint })
   const [composition, setComposition] = useState<number | null>(null)
   const [stageMessage, setStageMessage] = useState('Approaching Jezero')
   const [notice, setNotice] = useState<string | null>(null)
@@ -89,7 +96,8 @@ export function MarsExplorer({ visibility, statuses, retryRequest, jezeroRequest
     gridSelectionRef.current = gridSelection
     gridPickRoleRef.current = gridPickRole
     pickCoordinateRef.current = onPickCoordinate
-  }, [visibility, statuses, missionSelection, selectedTargetId, onInspectTarget, planningGrid, gridSelection, gridPickRole, onPickCoordinate])
+    routeInputsRef.current = { routes: hypotheticalRoutes, selectedId: selectedRouteId, waypoint: routeWaypoint }
+  }, [visibility, statuses, missionSelection, selectedTargetId, onInspectTarget, planningGrid, gridSelection, gridPickRole, onPickCoordinate, hypotheticalRoutes, selectedRouteId, routeWaypoint])
   useEffect(() => {
     const player = createAnimationPlayer()
     playerRef.current = player
@@ -202,6 +210,8 @@ export function MarsExplorer({ visibility, statuses, retryRequest, jezeroRequest
       mapRef.current.setVisibility(initialVisibility)
       mapRef.current.setMissionFeatures(SCIENCE_TARGETS, missionRef.current, selectedTargetRef.current)
       mapRef.current.setGridOverlay(gridRef.current ? terrainGridBounds(gridRef.current) : null, gridEndpoints(gridSelectionRef.current))
+      const routes = routeInputsRef.current
+      mapRef.current.setHypotheticalRoutes(routes.routes, routes.selectedId, routes.waypoint)
     } catch {
       queueMicrotask(() => { if (mounted) setMapError('The map renderer could not start. The NASA overview remains available; reload to retry the map.') })
     }
@@ -214,6 +224,9 @@ export function MarsExplorer({ visibility, statuses, retryRequest, jezeroRequest
   useEffect(() => {
     mapRef.current?.setGridOverlay(planningGrid ? terrainGridBounds(planningGrid) : null, gridEndpoints(gridSelection))
   }, [planningGrid, gridSelection])
+  useEffect(() => {
+    mapRef.current?.setHypotheticalRoutes(hypotheticalRoutes, selectedRouteId, routeWaypoint)
+  }, [hypotheticalRoutes, selectedRouteId, routeWaypoint])
   useEffect(() => {
     if (!gridFocusRequest || !gridRef.current || !mapRef.current) return
     arriveDirect('Planning crop opened. Grid endpoints are hypothetical native-cell choices.')
@@ -349,6 +362,7 @@ export function MarsExplorer({ visibility, statuses, retryRequest, jezeroRequest
         <span><b>O</b> Reference origin</span><span><b>D</b> Reference destination</span><span><b>◇</b> Reference</span>
         <p>Approximate feature centers · imagery registration unverified{!mapShown ? ' · markers appear on the regional map' : ''}</p>
         {planningGrid && <><span><b>G-O</b> Grid origin</span><span><b>G-D</b> Grid destination</span><p>Outline: prototype terrain crop · hypothetical native cells · shown with controlled CTX</p></>}
+        {planningGrid && (hypotheticalRoutes.length > 0 || routeWaypoint) && <>{hypotheticalRoutes.some((route) => route.id === 'shortest') && <span><b>━</b> Shortest grid path</span>}{hypotheticalRoutes.some((route) => route.id === 'via') && <span><b>┄</b> Via waypoint</span>}{routeWaypoint && <span><b>W</b> Hypothetical waypoint</span>}<p>Distance-only hypothetical paths · graph connectivity assumed · terrain difficulty and traversability unvalidated</p></>}
       </div>
       <div className="viewport-bottom map-help">
         <p id="explorer-help">Drag to {mapShown ? 'pan' : 'rotate'}; scroll or pinch to zoom. Arrow keys and + / − work with focus here. Home resets the view. Zoom {mapShown ? 'out for the overview; in near Jezero for CTX detail' : 'in to continue to the real map; the first handoff enters Jezero, later handoffs resume the map area'}. The visual globe does not support geographic picking.</p>

@@ -2,6 +2,7 @@ import Feature from 'ol/Feature'
 import type { FeatureLike } from 'ol/Feature'
 import type BaseLayer from 'ol/layer/Base'
 import type View from 'ol/View'
+import VectorLayer from 'ol/layer/Vector'
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
 import { SCIENCE_TARGETS } from '../../data/scienceTargets'
 import { createMarsMap } from './createMarsMap'
@@ -10,6 +11,9 @@ import type { Bounds } from './types'
 import { FrameAwareTileLayer } from './FrameAwareTileLayer'
 import type { ViewFrame } from './frameReadiness'
 import { frameMatches } from './frameReadiness'
+import type { HypotheticalRoute, RoutePoint } from '../routing/types'
+import { TERRAIN_SOURCE_HASH, TERRAIN_SOURCE_ID } from '../terrain/sampling'
+import { TERRAIN_GRID_BINARY_SHA256 } from '../terrain/terrainGrid'
 
 // Mock the DOM renderer only. Controller view, sources, layers and geometry are real OpenLayers objects.
 const runtime = vi.hoisted(() => ({ map: null as MapHarness | null }))
@@ -53,6 +57,8 @@ beforeEach(() => {
 afterEach(() => { controller?.dispose(); controller = undefined; runtime.map = null; vi.restoreAllMocks(); vi.unstubAllGlobals() })
 const host = { clientWidth: 800, clientHeight: 600 } as HTMLElement
 const gridBounds: Bounds = [77.2, 18.3, 77.4, 18.5]
+const routePoint = (row: number, column: number): RoutePoint => ({ row, column, lon: gridBounds[0] + (column - 522 + 0.5) * (gridBounds[2] - gridBounds[0]) / 256, lat: gridBounds[3] - (row - 586 + 0.5) * (gridBounds[3] - gridBounds[1]) / 256 })
+const hypotheticalRoute: HypotheticalRoute = { id: 'shortest', name: 'Shortest path', points: [routePoint(714, 650), routePoint(714, 651)], distanceM: 25, visitedCells: 2, sourceId: TERRAIN_SOURCE_ID, sourceHash: TERRAIN_SOURCE_HASH, gridHash: TERRAIN_GRID_BINARY_SHA256, model: 'hypothetical-distance-only', referenceRadiusM: 3396190 }
 
 describe('controlled imagery and grid controller hooks', () => {
   it('preserves original layers, renders controlled CTX above preliminary, and applies detail opacity to both', () => {
@@ -79,6 +85,44 @@ describe('controlled imagery and grid controller hooks', () => {
     expect(overlay.getVisible()).toBe(true)
     controller.setGridOverlay(null, [])
     expect(overlay.getVisible()).toBe(false)
+  })
+  it('keeps routes separate, gates visibility, rebuilds on bounds changes and cleans up on disposal', () => {
+    controller = createMarsMap(host, vi.fn(), vi.fn())
+    const map = runtime.map!
+    const overlay = map.layers[5] as VectorLayer
+    const source = overlay.getSource()!
+    expect(overlay.getZIndex()).toBe(25)
+    expect(map.layers[4].getZIndex()).toBe(30)
+    controller.setHypotheticalRoutes([hypotheticalRoute], 'shortest', routePoint(714, 651))
+    expect(source.getFeatures()).toHaveLength(0)
+    expect(overlay.getVisible()).toBe(false)
+    controller.setGridOverlay(gridBounds, [])
+    expect(source.getFeatures()).toHaveLength(2)
+    expect(overlay.getVisible()).toBe(true)
+    controller.setActive(false)
+    expect(overlay.getVisible()).toBe(false)
+    expect(source.getFeatures()).toHaveLength(2)
+    controller.setActive(true)
+    controller.setVisibility({ mola: true, ctx: true, controlledCtx: false })
+    expect(overlay.getVisible()).toBe(false)
+    controller.setVisibility({ mola: true, ctx: true, controlledCtx: true })
+    expect(overlay.getVisible()).toBe(true)
+    controller.setGridOverlay([77.3, 18.3, 77.5, 18.5], [])
+    expect(source.getFeatures()).toHaveLength(0)
+    expect(overlay.getVisible()).toBe(false)
+    controller.setGridOverlay(gridBounds, [])
+    expect(source.getFeatures()).toHaveLength(2)
+    controller.setGridOverlay(null, [])
+    expect(source.getFeatures()).toHaveLength(0)
+    controller.setGridOverlay(gridBounds, [])
+    controller.setHypotheticalRoutes([], null, null)
+    expect(source.getFeatures()).toHaveLength(0)
+    controller.setHypotheticalRoutes([hypotheticalRoute], null, null)
+    controller.dispose()
+    expect(map.layers).not.toContain(overlay)
+    expect(source.getFeatures()).toHaveLength(0)
+    controller.setHypotheticalRoutes([hypotheticalRoute], null, null)
+    expect(source.getFeatures()).toHaveLength(0)
   })
   it('fits source bounds and dispatches view-center and free map picks without inspecting references', () => {
     const pick = vi.fn()

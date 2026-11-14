@@ -90,7 +90,8 @@ summary::marker { color: var(--color-science); }
 .terrain-support strong { font-family: var(--title-font); font-size: 36px; line-height: 1.2; }
 .terrain-support span { color: var(--color-muted); font-size: 13px; }
 .terrain-ready-status { padding: 12px 0; }
-.grid-cell-fields { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 20px 0 24px; }
+.grid-cell-fields { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); align-items: end; gap: 12px; margin: 20px 0 24px; }
+.grid-cell-fields > div { min-width: 0; }
 .field-label { display: block; color: var(--color-muted); font-size: 13px; line-height: 1.5; margin-bottom: 8px; }
 input[type="number"], input[type="search"], select { width: 100%; min-width: 0; min-height: 44px; padding: 10px 12px; border: 1px solid #455969; border-radius: 6px; background: var(--color-space); color: var(--color-ink); font-size: 14px; }
 .grid-endpoint { padding-top: 18px; border-top: 1px solid var(--line); }
@@ -289,6 +290,14 @@ input[type="number"], input[type="search"], select { width: 100%; min-width: 0; 
 @media (max-width: 360px) {
   .mission-status-list { grid-template-columns: 1fr; }
 }
+.route-options { display: grid; gap: 8px; margin: 16px 0; }
+.route-option { display: flex; align-items: center; gap: 12px; width: 100%; padding: 12px; text-align: left; border: 1px solid var(--line); border-radius: 8px; background: transparent; color: var(--color-ink); }
+.route-option[aria-pressed="true"] { background: #17292e; border-color: #89d3cf; }
+.route-option > span:last-child { display: grid; gap: 4px; min-width: 0; }
+.route-option strong { font-size: 14px; }
+.route-option > span:last-child > span { font-size: 13px; color: var(--color-muted); }
+.route-line-key { width: 28px; flex: 0 0 28px; border-top: 3px solid #58c7d8; }
+.route-line-key-via { border-color: #e6b35c; border-top-style: dashed; }
 @keyframes drawer-enter { from { opacity: .7; transform: translateX(-8px); } to { opacity: 1; transform: translateX(0); } }
 @keyframes sheet-enter { from { opacity: .7; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
 @media (prefers-reduced-motion: reduce) { *, *::before, *::after { transition: none !important; animation: none !important; scroll-behavior: auto !important; } }

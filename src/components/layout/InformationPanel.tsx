@@ -78,7 +78,7 @@ export function InformationPanel({ explorer, visibility, statuses, target, inspe
       </div>
       <div className="information-footer">
         <div className="flex items-center gap-2"><Icon name="info" size={16} /><span>Map imagery and numerical terrain are separate</span></div>
-        <p>Grid separation uses a Mars reference sphere. DEM slopes, hazards and routes remain unavailable.</p>
+        <p>Grid separation and hypothetical paths use a Mars reference sphere. DEM slopes, terrain costs and safety results remain unavailable.</p>
       </div>
     </aside>
   )
