@@ -1,0 +1,462 @@
+{
+  "status": "PASS",
+  "scope": "Reference-sphere geometry only, not vertical datum, absolute feature accuracy or traversability",
+  "tools": {
+    "pyproj": "3.8.0",
+    "PROJ": "9.8.1",
+    "numpy": "2.5.3",
+    "node": "v26.3.1"
+  },
+  "sourceModuleHashes": {
+    "src/features/terrain/terrainMath.ts": "9d683d164f0db61c59434a19e200495b8e8f1483adcc544a95728134b4093600",
+    "src/features/terrain/terrainMetrics.ts": "74548a2adc9d11ae2df8c529e1a319c8ba8f1d22df38afadd57aed81ee234160",
+    "src/features/terrain/terrainGrid.ts": "3b263341e97d244f0972ede72a17c0ed87d1c9b6f4711a726de1f98a8e66cd88",
+    "src/features/terrain/sampling.ts": "0f5c5e794d68e7106cf98ebc58cdb62fbe42aebac0c3084ea536b2178ac96820",
+    "src/features/mission/coordinates.ts": "b3a60f1f028ec1a99ab86148915915fb545ce6250eae769c813ad1ad77d69782"
+  },
+  "manifestHash": "fa63f2181e603eb930d94fcf91444ee5e537b6c046e31537f65daeb0e1cffed9",
+  "gridHash": "4c0e428bb3cc4bcd8cbcebc0c2da2558a106fc19e55cfca352097b7eee32fae8",
+  "cellCenters": {
+    "count": 65536,
+    "maximumAngularErrorDeg": 2.842170943040401e-14,
+    "maximumPositionErrorM": 1.6947208015766472e-09
+  },
+  "neighborEdges": {
+    "count": 260610,
+    "maximumAbsoluteErrorM": 1.2460859011298453e-09,
+    "maximumRelativeErrorPercent": 4.80089858235195e-09,
+    "byDirection": [
+      {
+        "direction": "east-west",
+        "count": 65280,
+        "minimumDistanceM": 18.963890567861956,
+        "maximumDistanceM": 18.97341058583515,
+        "maximumAbsoluteErrorM": 9.105107778850652e-10,
+        "maximumRelativeErrorPercent": 4.80089858235195e-09
+      },
+      {
+        "direction": "north-south",
+        "count": 65280,
+        "minimumDistanceM": 19.999999999661778,
+        "maximumDistanceM": 20.000000000415888,
+        "maximumAbsoluteErrorM": 5.839737582391535e-10,
+        "maximumRelativeErrorPercent": 2.9198687911625746e-09
+      },
+      {
+        "direction": "south-east",
+        "count": 65025,
+        "minimumDistanceM": 27.561383402098954,
+        "maximumDistanceM": 27.567908924838015,
+        "maximumAbsoluteErrorM": 1.2460859011298453e-09,
+        "maximumRelativeErrorPercent": 4.520126819153857e-09
+      },
+      {
+        "direction": "south-west",
+        "count": 65025,
+        "minimumDistanceM": 27.561383402098954,
+        "maximumDistanceM": 27.567908924838015,
+        "maximumAbsoluteErrorM": 1.2190639608888887e-09,
+        "maximumRelativeErrorPercent": 4.423078717284858e-09
+      }
+    ]
+  },
+  "projectionDistortion": {
+    "projectedEastWestSpacingM": 20,
+    "minimumSurfaceEastWestSpacingM": 18.963890567861956,
+    "maximumSurfaceEastWestSpacingM": 18.97341058583515,
+    "projectedOverstatementPercentRange": [
+      5.410674109014768,
+      5.463591072888474
+    ],
+    "qualification": "Distortion of Eqc lat_ts=0 within this actual crop; map pixels are not physical surface metres."
+  },
+  "fixtures": [
+    {
+      "name": "one-degree-meridian",
+      "from": {
+        "lon": 0,
+        "lat": 0,
+        "latitudeConvention": "planetocentric",
+        "longitudeDirection": "east-positive",
+        "longitudeDomain": "-180-180"
+      },
+      "to": {
+        "lon": 0,
+        "lat": 1,
+        "latitudeConvention": "planetocentric",
+        "longitudeDirection": "east-positive",
+        "longitudeDomain": "-180-180"
+      },
+      "applicationDistanceM": 59274.69752330622,
+      "projDistanceM": 59274.69752330622,
+      "absoluteErrorM": 0.0,
+      "relativeErrorPercent": 0.0
+    },
+    {
+      "name": "quarter-circumference",
+      "from": {
+        "lon": 0,
+        "lat": 0,
+        "latitudeConvention": "planetocentric",
+        "longitudeDirection": "east-positive",
+        "longitudeDomain": "-180-180"
+      },
+      "to": {
+        "lon": 90,
+        "lat": 0,
+        "latitudeConvention": "planetocentric",
+        "longitudeDirection": "east-positive",
+        "longitudeDomain": "-180-180"
+      },
+      "applicationDistanceM": 5334722.7770975595,
+      "projDistanceM": 5334722.7770975595,
+      "absoluteErrorM": 0.0,
+      "relativeErrorPercent": 0.0
+    },
+    {
+      "name": "antipodal",
+      "from": {
+        "lon": 0,
+        "lat": 0,
+        "latitudeConvention": "planetocentric",
+        "longitudeDirection": "east-positive",
+        "longitudeDomain": "-180-180"
+      },
+      "to": {
+        "lon": 180,
+        "lat": 0,
+        "latitudeConvention": "planetocentric",
+        "longitudeDirection": "east-positive",
+        "longitudeDomain": "-180-180"
+      },
+      "applicationDistanceM": 10669445.554195119,
+      "projDistanceM": 10669445.554195119,
+      "absoluteErrorM": 0.0,
+      "relativeErrorPercent": 0.0
+    },
+    {
+      "name": "near-antipodal",
+      "from": {
+        "lon": 0,
+        "lat": 0,
+        "latitudeConvention": "planetocentric",
+        "longitudeDirection": "east-positive",
+        "longitudeDomain": "-180-180"
+      },
+      "to": {
+        "lon": 179.9999999,
+        "lat": 1e-07,
+        "latitudeConvention": "planetocentric",
+        "longitudeDirection": "east-positive",
+        "longitudeDomain": "-180-180"
+      },
+      "applicationDistanceM": 10669445.545812411,
+      "projDistanceM": 10669445.545812411,
+      "absoluteErrorM": 0.0,
+      "relativeErrorPercent": 0.0
+    },
+    {
+      "name": "high-latitude",
+      "from": {
+        "lon": 0,
+        "lat": 60,
+        "latitudeConvention": "planetocentric",
+        "longitudeDirection": "east-positive",
+        "longitudeDomain": "-180-180"
+      },
+      "to": {
+        "lon": 90,
+        "lat": 60,
+        "latitudeConvention": "planetocentric",
+        "longitudeDirection": "east-positive",
+        "longitudeDomain": "-180-180"
+      },
+      "applicationDistanceM": 2454542.8250814443,
+      "projDistanceM": 2454542.825081444,
+      "absoluteErrorM": 4.656612873077393e-10,
+      "relativeErrorPercent": 1.8971406102571796e-14
+    },
+    {
+      "name": "longitude-wrap",
+      "from": {
+        "lon": 179,
+        "lat": 0,
+        "latitudeConvention": "planetocentric",
+        "longitudeDirection": "east-positive",
+        "longitudeDomain": "-180-180"
+      },
+      "to": {
+        "lon": -179,
+        "lat": 0,
+        "latitudeConvention": "planetocentric",
+        "longitudeDirection": "east-positive",
+        "longitudeDomain": "-180-180"
+      },
+      "applicationDistanceM": 118549.39504661194,
+      "projDistanceM": 118549.39504661244,
+      "absoluteErrorM": 4.94765117764473e-10,
+      "relativeErrorPercent": 4.1734933996916326e-13
+    },
+    {
+      "name": "domain-0-360-wrap",
+      "from": {
+        "lon": 359,
+        "lat": 0,
+        "latitudeConvention": "planetocentric",
+        "longitudeDirection": "east-positive",
+        "longitudeDomain": "0-360"
+      },
+      "to": {
+        "lon": 1,
+        "lat": 0,
+        "latitudeConvention": "planetocentric",
+        "longitudeDirection": "east-positive",
+        "longitudeDomain": "0-360"
+      },
+      "applicationDistanceM": 118549.39504661244,
+      "projDistanceM": 118549.39504661244,
+      "absoluteErrorM": 0.0,
+      "relativeErrorPercent": 0.0
+    },
+    {
+      "name": "equivalent-domains",
+      "from": {
+        "lon": 359,
+        "lat": 10,
+        "latitudeConvention": "planetocentric",
+        "longitudeDirection": "east-positive",
+        "longitudeDomain": "0-360"
+      },
+      "to": {
+        "lon": -1,
+        "lat": 10,
+        "latitudeConvention": "planetocentric",
+        "longitudeDirection": "east-positive",
+        "longitudeDomain": "-180-180"
+      },
+      "applicationDistanceM": 0,
+      "projDistanceM": 0.0,
+      "absoluteErrorM": 0.0,
+      "relativeErrorPercent": null
+    },
+    {
+      "name": "same-pole",
+      "from": {
+        "lon": 0,
+        "lat": 90,
+        "latitudeConvention": "planetocentric",
+        "longitudeDirection": "east-positive",
+        "longitudeDomain": "-180-180"
+      },
+      "to": {
+        "lon": 90,
+        "lat": 90,
+        "latitudeConvention": "planetocentric",
+        "longitudeDirection": "east-positive",
+        "longitudeDomain": "-180-180"
+      },
+      "applicationDistanceM": 0,
+      "projDistanceM": 0.0,
+      "absoluteErrorM": 0.0,
+      "relativeErrorPercent": null
+    },
+    {
+      "name": "same-position",
+      "from": {
+        "lon": 77.38,
+        "lat": 18.48,
+        "latitudeConvention": "planetocentric",
+        "longitudeDirection": "east-positive",
+        "longitudeDomain": "-180-180"
+      },
+      "to": {
+        "lon": 77.38,
+        "lat": 18.48,
+        "latitudeConvention": "planetocentric",
+        "longitudeDirection": "east-positive",
+        "longitudeDomain": "-180-180"
+      },
+      "applicationDistanceM": 0,
+      "projDistanceM": 0.0,
+      "absoluteErrorM": 0.0,
+      "relativeErrorPercent": null
+    },
+    {
+      "name": "submillimetre",
+      "from": {
+        "lon": 77.38,
+        "lat": 18.48,
+        "latitudeConvention": "planetocentric",
+        "longitudeDirection": "east-positive",
+        "longitudeDomain": "-180-180"
+      },
+      "to": {
+        "lon": 77.380000001,
+        "lat": 18.48,
+        "latitudeConvention": "planetocentric",
+        "longitudeDirection": "east-positive",
+        "longitudeDomain": "-180-180"
+      },
+      "applicationDistanceM": 5.621844875112415e-05,
+      "projDistanceM": 5.62183640488619e-05,
+      "absoluteErrorM": 8.470226224647744e-11,
+      "relativeErrorPercent": 0.00015066653695731684
+    },
+    {
+      "name": "east-west",
+      "from": {
+        "lon": 77.37995202842774,
+        "lat": 18.48011353845034,
+        "latitudeConvention": "planetocentric",
+        "longitudeDirection": "east-positive",
+        "longitudeDomain": "-180-180"
+      },
+      "to": {
+        "lon": 77.3802894405249,
+        "lat": 18.48011353845034,
+        "latitudeConvention": "planetocentric",
+        "longitudeDirection": "east-positive",
+        "longitudeDomain": "-180-180"
+      },
+      "applicationDistanceM": 18.96867459060374,
+      "sourceIndices": [
+        [
+          714,
+          650
+        ],
+        [
+          714,
+          651
+        ]
+      ],
+      "projDistanceM": 18.968674590775322,
+      "absoluteErrorM": 1.71581859831349e-10,
+      "relativeErrorPercent": 9.045537631542858e-10
+    },
+    {
+      "name": "north-south",
+      "from": {
+        "lon": 77.37995202842774,
+        "lat": 18.48011353845034,
+        "latitudeConvention": "planetocentric",
+        "longitudeDirection": "east-positive",
+        "longitudeDomain": "-180-180"
+      },
+      "to": {
+        "lon": 77.37995202842774,
+        "lat": 18.479776126353176,
+        "latitudeConvention": "planetocentric",
+        "longitudeDirection": "east-positive",
+        "longitudeDomain": "-180-180"
+      },
+      "applicationDistanceM": 19.99999999968894,
+      "sourceIndices": [
+        [
+          714,
+          650
+        ],
+        [
+          715,
+          650
+        ]
+      ],
+      "projDistanceM": 19.999999999850306,
+      "absoluteErrorM": 1.6136780800479755e-10,
+      "relativeErrorPercent": 8.068390400300267e-10
+    },
+    {
+      "name": "diagonal",
+      "from": {
+        "lon": 77.37995202842774,
+        "lat": 18.48011353845034,
+        "latitudeConvention": "planetocentric",
+        "longitudeDirection": "east-positive",
+        "longitudeDomain": "-180-180"
+      },
+      "to": {
+        "lon": 77.3802894405249,
+        "lat": 18.479776126353176,
+        "latitudeConvention": "planetocentric",
+        "longitudeDirection": "east-positive",
+        "longitudeDomain": "-180-180"
+      },
+      "applicationDistanceM": 27.564675290511623,
+      "sourceIndices": [
+        [
+          714,
+          650
+        ],
+        [
+          715,
+          651
+        ]
+      ],
+      "projDistanceM": 27.564675290140027,
+      "absoluteErrorM": 3.715960872341384e-10,
+      "relativeErrorPercent": 1.3480880268778624e-09
+    },
+    {
+      "name": "opposite-boundaries",
+      "from": {
+        "lon": 77.33676327999096,
+        "lat": 18.523302286887112,
+        "latitudeConvention": "planetocentric",
+        "longitudeDirection": "east-positive",
+        "longitudeDomain": "-180-180"
+      },
+      "to": {
+        "lon": 77.42280336476735,
+        "lat": 18.437262202110727,
+        "latitudeConvention": "planetocentric",
+        "longitudeDirection": "east-positive",
+        "longitudeDomain": "-180-180"
+      },
+      "applicationDistanceM": 7028.985198962161,
+      "sourceIndices": [
+        [
+          586,
+          522
+        ],
+        [
+          841,
+          777
+        ]
+      ],
+      "projDistanceM": 7028.985198961627,
+      "absoluteErrorM": 5.338733899407089e-10,
+      "relativeErrorPercent": 7.595312478671552e-12
+    },
+    {
+      "name": "long-regional",
+      "from": {
+        "lon": 77.35633318162638,
+        "lat": 18.501707912668724,
+        "latitudeConvention": "planetocentric",
+        "longitudeDirection": "east-positive",
+        "longitudeDomain": "-180-180"
+      },
+      "to": {
+        "lon": 77.40694499620072,
+        "lat": 18.45109609809438,
+        "latitudeConvention": "planetocentric",
+        "longitudeDirection": "east-positive",
+        "longitudeDomain": "-180-180"
+      },
+      "applicationDistanceM": 4134.741661399694,
+      "sourceIndices": [
+        [
+          650,
+          580
+        ],
+        [
+          800,
+          730
+        ]
+      ],
+      "projDistanceM": 4134.741661399654,
+      "absoluteErrorM": 4.001776687800884e-11,
+      "relativeErrorPercent": 9.678420117899797e-13
+    }
+  ],
+  "invalidCoordinateRejections": 5
+}

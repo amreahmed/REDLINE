@@ -1,0 +1,28 @@
+[
+  {
+    "file": "hirise-product.html",
+    "url": "https://www.uahirise.org/dtm/ESP_023524_1985",
+    "range": null,
+    "finalUrl": "https://www.uahirise.org/dtm/ESP_023524_1985",
+    "retrievedAt": "2026-11-14T21:56:35.939Z",
+    "status": 200,
+    "contentType": "text/html; charset=UTF-8",
+    "contentRange": null,
+    "bytes": 15279,
+    "sha256": "4c2fd321686b112430a2d0cd9d1cd91c00dba64f54907a97dab4413a3d228c92",
+    "tlsPolicy": "Node built-in fetch, normal TLS certificate verification"
+  },
+  {
+    "file": "hirise-dtm-label-range.bin",
+    "url": "https://www.uahirise.org/PDS/DTM/ESP/ORB_023500_023599/ESP_023524_1985_ESP_023379_1985/DTEEC_023524_1985_023379_1985_U01.IMG",
+    "range": "bytes=0-65535",
+    "finalUrl": "https://www.uahirise.org/PDS/DTM/ESP/ORB_023500_023599/ESP_023524_1985_ESP_023379_1985/DTEEC_023524_1985_023379_1985_U01.IMG",
+    "retrievedAt": "2026-11-14T21:56:36.356Z",
+    "status": 206,
+    "contentType": "application/octet-stream",
+    "contentRange": "bytes 0-65535/700271460",
+    "bytes": 65536,
+    "sha256": "ef39ad298b65690a2d810ff541b8a3f97245f62d41a57ae1b2260cbb194c7e9d",
+    "tlsPolicy": "Node built-in fetch, normal TLS certificate verification"
+  }
+]

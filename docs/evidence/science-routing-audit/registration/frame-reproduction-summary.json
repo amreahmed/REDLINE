@@ -1,0 +1,13 @@
+{
+  "sourceScript": "docs/evidence/scientific-gate-resolution/registration/inspect-places-frame.py",
+  "sourceScriptSha256": "86f7e0c52abc9a9d4411f60521dfc5bddf7cc0174d55e0727a385fb3fba1b148",
+  "outputsByteIdentical": [
+    "places-frame-check.json",
+    "native-patch-plan.json"
+  ],
+  "csvRecordCount": 666,
+  "matchedSiteCount": 21,
+  "localizedRoverRecordsInSols659To779": 50,
+  "currentVsArchivedSpkMaximumHorizontalDifferenceM": 3.6527085740768494e-05,
+  "qualification": "Verified frame/pixel arithmetic and archive serialization agreement; no independent CTX control, observation date for SITE placeholders, or absolute geolocation accuracy is established."
+}

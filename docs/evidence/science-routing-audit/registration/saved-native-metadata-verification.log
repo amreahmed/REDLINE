@@ -1,0 +1,40 @@
+Command: node docs/evidence/scientific-gate-resolution/registration/fetch-native-imagery.mjs --verify-saved
+Exit code: 0
+
+[
+  {
+    "file": "controlled-ctx-native.tif",
+    "error": "TimeoutError: The operation was aborted due to timeout"
+  },
+  {
+    "file": "controlled-ctx-native.xml",
+    "status": 200,
+    "bytes": 16025
+  },
+  {
+    "file": "controlled-ctx-native.lbl",
+    "status": 200,
+    "bytes": 1439
+  },
+  {
+    "file": "controlled-ctx-native-pds3.lbl",
+    "status": 200,
+    "bytes": 2281
+  },
+  {
+    "file": "best_tactical-siteframe.xmlx",
+    "status": 200,
+    "bytes": 44648
+  },
+  {
+    "file": "best_tactical-siteframe.xmlx.xml",
+    "status": 200,
+    "bytes": 1389
+  },
+  {
+    "file": "places-map-headers.bin",
+    "status": 206,
+    "bytes": 118400
+  }
+]
+

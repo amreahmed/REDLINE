@@ -1,0 +1,57 @@
+{
+  "status": "PASS: exact saved HiRISE identifiers, official linked orthophotos, non-overlap and controlled-CTX provider lineage checked.",
+  "hirise": {
+    "productId": "DTEEC_023524_1985_023379_1985_U01",
+    "version": 1.0,
+    "sourcePair": [
+      "ESP_023524_1985",
+      "ESP_023379_1985"
+    ],
+    "associatedOrthophotos": [
+      "ESP_023379_1985_RED_A_01_ORTHO.JP2",
+      "ESP_023379_1985_RED_C_01_ORTHO.JP2",
+      "ESP_023524_1985_RED_A_01_ORTHO.JP2",
+      "ESP_023524_1985_RED_C_01_ORTHO.JP2"
+    ],
+    "boundsDegWestSouthEastNorth": [
+      77.45290261,
+      18.159317160581,
+      77.59817341,
+      18.521550219233
+    ],
+    "horizontalProjectionRadiusM": 3394839.8133163,
+    "standardParallelDeg": 15.0,
+    "centralMeridianDeg": 77.53,
+    "projectedPixelSpacingM": 1.0096633268711,
+    "heightContract": "metres above Mars 2000 Datum equipotential surface; not the horizontal projection sphere",
+    "completeLabelSha256": "220e7ff937b18d6eaf5e2eb712c452980053daf6ca9f468bf21219577173d5cd",
+    "orthoAssociationStatus": "VERIFIED: exact official page associations; numerical internal-registration accuracy PARTIALLY VERIFIED by generic processing documentation only.",
+    "exactProductIndependentControlOrResiduals": "UNVERIFIED: no such records provided by the saved product page or complete DTM label."
+  },
+  "currentCropBoundsDegWestSouthEastNorth": [
+    77.33659457394239,
+    18.437093496062143,
+    77.42297207081594,
+    18.523470992935692
+  ],
+  "requestedHiriseOverlapsLiveCrop": false,
+  "eastWestAngularSeparationDeg": 0.02993053918405053,
+  "directRequestedHiriseToLiveCropRegistration": "NOT APPLICABLE: no common geographic coverage; requested DTM cannot validate live-crop feature/elevation samples.",
+  "requestedHiriseToFullCtxRegistration": "UNVERIFIED: native product envelopes can overlap outside live crop, but no exact paired controls were measured here.",
+  "controlledCtxProviderLineage": {
+    "sourceXml": "docs/evidence/scientific-gate-resolution/registration/controlled-ctx-native.xml",
+    "averageRelativeImageDisplacementM": 9.6,
+    "relativeDtmVerticalRegistrationM": 3.8,
+    "documentedVerticalAdjustmentToHrscM": 183.3,
+    "reference": "DLR/HRSC Mars 2020 Level 5 DTM",
+    "qualification": "Provider relative-processing metrics, not REDLINE absolute residuals, MDIM alignment, native-cell uncertainty or a correction to apply."
+  },
+  "registrationGaps": [
+    "Exact HiRISE DTM/ortho control-point identities, distributions, covariance and held-out residuals.",
+    "Independent controlled-CTX/DEM ground controls and justified positional acceptance criterion over the live crop.",
+    "A compatible MDIM2.1-to-local control-network transform or precise landmark definitions and uncertainty.",
+    "Exact preliminary CTX native latitude/projection and measured cross-product residuals.",
+    "A source quality mask locating individual stereo/fill provenance, including the northwest HRSC-backed imagery fill.",
+    "Product-specific MOLA vertical tie information and source-datum model needed for absolute height conversion; owned by provenance-height lane."
+  ]
+}

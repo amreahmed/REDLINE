@@ -1,0 +1,2 @@
+# Diagnostic stdout and failed-attempt records are part of this evidence package.
+!*.log

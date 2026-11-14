@@ -1,0 +1,105 @@
+{
+  "url": "http://127.0.0.1:4174/",
+  "browser": "isolated headless Chromium",
+  "checks": [
+    "Real 65,536-cell grid loads; controlled CTX enables endpoint controls",
+    "Actual production worker calculates a qualified shortest grid path",
+    "Wrapped waypoint labels preserve aligned, usable input rows",
+    "Waypoint invalidates old results; two measured paths support keyboard selection",
+    "Invalid waypoint draft retains the distinctly labeled active waypoint",
+    "Endpoint change during search terminates its worker and suppresses stale paths",
+    "Explicit cancellation returns to idle and terminates its worker",
+    "Worker startup, malformed-response and timeout failures show actionable retry states",
+    "Retry recovers with the actual worker; clearing waypoint resets comparison",
+    "Exclusive source drawer preserves scientific qualifications and expanded coordinate metadata",
+    "About dialog retains route and science limits and supports Escape",
+    "tablet: route controls, scientific status, attribution and drawer interaction without horizontal overflow",
+    "mobile: route controls, scientific status, attribution and drawer interaction without horizontal overflow",
+    "small-mobile: route controls, scientific status, attribution and drawer interaction without horizontal overflow",
+    "Clearing endpoints immediately removes paths and blocks calculation",
+    "Actual NASA tile responses observed; no page or console errors"
+  ],
+  "pageErrors": [],
+  "consoleErrors": [],
+  "tileResponses": 56,
+  "screenshots": [
+    "waypoint-alignment.png",
+    "desktop-routes.png",
+    "worker-timeout.png",
+    "tablet-routes.png",
+    "mobile-routes.png",
+    "small-mobile-routes.png"
+  ],
+  "fieldAlignment": [
+    {
+      "viewport": "desktop",
+      "boxes": [
+        {
+          "top": 672.453125,
+          "height": 44,
+          "width": 155.5
+        },
+        {
+          "top": 672.453125,
+          "height": 44,
+          "width": 155.5
+        }
+      ]
+    },
+    {
+      "viewport": "tablet",
+      "boxes": [
+        {
+          "top": 595.296875,
+          "height": 44,
+          "width": 135.5
+        },
+        {
+          "top": 595.296875,
+          "height": 44,
+          "width": 135.5
+        }
+      ]
+    },
+    {
+      "viewport": "mobile",
+      "boxes": [
+        {
+          "top": 834.578125,
+          "height": 44,
+          "width": 171
+        },
+        {
+          "top": 834.578125,
+          "height": 44,
+          "width": 171
+        }
+      ]
+    },
+    {
+      "viewport": "small-mobile",
+      "boxes": [
+        {
+          "top": 877.203125,
+          "height": 44,
+          "width": 136
+        },
+        {
+          "top": 877.203125,
+          "height": 44,
+          "width": 136
+        }
+      ]
+    }
+  ],
+  "calculatedLabels": [
+    "Shortest grid path4.15 km · 161 cell visits",
+    "Via your waypoint4.89 km · 226 cell visits"
+  ],
+  "workers": {
+    "mode": "normal",
+    "started": 8,
+    "terminated": 8,
+    "active": 0
+  }
+}

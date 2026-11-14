@@ -1,0 +1,384 @@
+{
+  "node": "v26.3.1",
+  "model": "actual app cell coordinates and reference-sphere distances; no height inputs",
+  "manifestHash": "fa63f2181e603eb930d94fcf91444ee5e537b6c046e31537f65daeb0e1cffed9",
+  "gridHash": "4c0e428bb3cc4bcd8cbcebc0c2da2558a106fc19e55cfca352097b7eee32fae8",
+  "sourceModuleHashes": {
+    "src/features/terrain/terrainMath.ts": "9d683d164f0db61c59434a19e200495b8e8f1483adcc544a95728134b4093600",
+    "src/features/terrain/terrainMetrics.ts": "74548a2adc9d11ae2df8c529e1a319c8ba8f1d22df38afadd57aed81ee234160",
+    "src/features/terrain/terrainGrid.ts": "3b263341e97d244f0972ede72a17c0ed87d1c9b6f4711a726de1f98a8e66cd88",
+    "src/features/terrain/sampling.ts": "0f5c5e794d68e7106cf98ebc58cdb62fbe42aebac0c3084ea536b2178ac96820",
+    "src/features/mission/coordinates.ts": "b3a60f1f028ec1a99ab86148915915fb545ce6250eae769c813ad1ad77d69782"
+  },
+  "cellCount": 65536,
+  "edgeCount": 260610,
+  "directionSteps": [
+    [
+      0,
+      1
+    ],
+    [
+      1,
+      0
+    ],
+    [
+      1,
+      1
+    ],
+    [
+      1,
+      -1
+    ]
+  ],
+  "directionCounts": [
+    65280,
+    65280,
+    65025,
+    65025
+  ],
+  "captureEncoding": "little-endian float64; row-major lon,lat pairs then unique-edge distances in row/column/direction order",
+  "captureBytes": 3133456,
+  "captureSha256": "5c77d21fa144111ba03fdc9a7e49101d38a3a4db1d0a42287e592922990193cb",
+  "fixtures": [
+    {
+      "name": "one-degree-meridian",
+      "from": {
+        "lon": 0,
+        "lat": 0,
+        "latitudeConvention": "planetocentric",
+        "longitudeDirection": "east-positive",
+        "longitudeDomain": "-180-180"
+      },
+      "to": {
+        "lon": 0,
+        "lat": 1,
+        "latitudeConvention": "planetocentric",
+        "longitudeDirection": "east-positive",
+        "longitudeDomain": "-180-180"
+      },
+      "applicationDistanceM": 59274.69752330622
+    },
+    {
+      "name": "quarter-circumference",
+      "from": {
+        "lon": 0,
+        "lat": 0,
+        "latitudeConvention": "planetocentric",
+        "longitudeDirection": "east-positive",
+        "longitudeDomain": "-180-180"
+      },
+      "to": {
+        "lon": 90,
+        "lat": 0,
+        "latitudeConvention": "planetocentric",
+        "longitudeDirection": "east-positive",
+        "longitudeDomain": "-180-180"
+      },
+      "applicationDistanceM": 5334722.7770975595
+    },
+    {
+      "name": "antipodal",
+      "from": {
+        "lon": 0,
+        "lat": 0,
+        "latitudeConvention": "planetocentric",
+        "longitudeDirection": "east-positive",
+        "longitudeDomain": "-180-180"
+      },
+      "to": {
+        "lon": 180,
+        "lat": 0,
+        "latitudeConvention": "planetocentric",
+        "longitudeDirection": "east-positive",
+        "longitudeDomain": "-180-180"
+      },
+      "applicationDistanceM": 10669445.554195119
+    },
+    {
+      "name": "near-antipodal",
+      "from": {
+        "lon": 0,
+        "lat": 0,
+        "latitudeConvention": "planetocentric",
+        "longitudeDirection": "east-positive",
+        "longitudeDomain": "-180-180"
+      },
+      "to": {
+        "lon": 179.9999999,
+        "lat": 1e-7,
+        "latitudeConvention": "planetocentric",
+        "longitudeDirection": "east-positive",
+        "longitudeDomain": "-180-180"
+      },
+      "applicationDistanceM": 10669445.545812411
+    },
+    {
+      "name": "high-latitude",
+      "from": {
+        "lon": 0,
+        "lat": 60,
+        "latitudeConvention": "planetocentric",
+        "longitudeDirection": "east-positive",
+        "longitudeDomain": "-180-180"
+      },
+      "to": {
+        "lon": 90,
+        "lat": 60,
+        "latitudeConvention": "planetocentric",
+        "longitudeDirection": "east-positive",
+        "longitudeDomain": "-180-180"
+      },
+      "applicationDistanceM": 2454542.8250814443
+    },
+    {
+      "name": "longitude-wrap",
+      "from": {
+        "lon": 179,
+        "lat": 0,
+        "latitudeConvention": "planetocentric",
+        "longitudeDirection": "east-positive",
+        "longitudeDomain": "-180-180"
+      },
+      "to": {
+        "lon": -179,
+        "lat": 0,
+        "latitudeConvention": "planetocentric",
+        "longitudeDirection": "east-positive",
+        "longitudeDomain": "-180-180"
+      },
+      "applicationDistanceM": 118549.39504661194
+    },
+    {
+      "name": "domain-0-360-wrap",
+      "from": {
+        "lon": 359,
+        "lat": 0,
+        "latitudeConvention": "planetocentric",
+        "longitudeDirection": "east-positive",
+        "longitudeDomain": "0-360"
+      },
+      "to": {
+        "lon": 1,
+        "lat": 0,
+        "latitudeConvention": "planetocentric",
+        "longitudeDirection": "east-positive",
+        "longitudeDomain": "0-360"
+      },
+      "applicationDistanceM": 118549.39504661244
+    },
+    {
+      "name": "equivalent-domains",
+      "from": {
+        "lon": 359,
+        "lat": 10,
+        "latitudeConvention": "planetocentric",
+        "longitudeDirection": "east-positive",
+        "longitudeDomain": "0-360"
+      },
+      "to": {
+        "lon": -1,
+        "lat": 10,
+        "latitudeConvention": "planetocentric",
+        "longitudeDirection": "east-positive",
+        "longitudeDomain": "-180-180"
+      },
+      "applicationDistanceM": 0
+    },
+    {
+      "name": "same-pole",
+      "from": {
+        "lon": 0,
+        "lat": 90,
+        "latitudeConvention": "planetocentric",
+        "longitudeDirection": "east-positive",
+        "longitudeDomain": "-180-180"
+      },
+      "to": {
+        "lon": 90,
+        "lat": 90,
+        "latitudeConvention": "planetocentric",
+        "longitudeDirection": "east-positive",
+        "longitudeDomain": "-180-180"
+      },
+      "applicationDistanceM": 0
+    },
+    {
+      "name": "same-position",
+      "from": {
+        "lon": 77.38,
+        "lat": 18.48,
+        "latitudeConvention": "planetocentric",
+        "longitudeDirection": "east-positive",
+        "longitudeDomain": "-180-180"
+      },
+      "to": {
+        "lon": 77.38,
+        "lat": 18.48,
+        "latitudeConvention": "planetocentric",
+        "longitudeDirection": "east-positive",
+        "longitudeDomain": "-180-180"
+      },
+      "applicationDistanceM": 0
+    },
+    {
+      "name": "submillimetre",
+      "from": {
+        "lon": 77.38,
+        "lat": 18.48,
+        "latitudeConvention": "planetocentric",
+        "longitudeDirection": "east-positive",
+        "longitudeDomain": "-180-180"
+      },
+      "to": {
+        "lon": 77.380000001,
+        "lat": 18.48,
+        "latitudeConvention": "planetocentric",
+        "longitudeDirection": "east-positive",
+        "longitudeDomain": "-180-180"
+      },
+      "applicationDistanceM": 0.00005621844875112415
+    },
+    {
+      "name": "east-west",
+      "from": {
+        "lon": 77.37995202842774,
+        "lat": 18.48011353845034,
+        "latitudeConvention": "planetocentric",
+        "longitudeDirection": "east-positive",
+        "longitudeDomain": "-180-180"
+      },
+      "to": {
+        "lon": 77.3802894405249,
+        "lat": 18.48011353845034,
+        "latitudeConvention": "planetocentric",
+        "longitudeDirection": "east-positive",
+        "longitudeDomain": "-180-180"
+      },
+      "applicationDistanceM": 18.96867459060374,
+      "sourceIndices": [
+        [
+          714,
+          650
+        ],
+        [
+          714,
+          651
+        ]
+      ]
+    },
+    {
+      "name": "north-south",
+      "from": {
+        "lon": 77.37995202842774,
+        "lat": 18.48011353845034,
+        "latitudeConvention": "planetocentric",
+        "longitudeDirection": "east-positive",
+        "longitudeDomain": "-180-180"
+      },
+      "to": {
+        "lon": 77.37995202842774,
+        "lat": 18.479776126353176,
+        "latitudeConvention": "planetocentric",
+        "longitudeDirection": "east-positive",
+        "longitudeDomain": "-180-180"
+      },
+      "applicationDistanceM": 19.99999999968894,
+      "sourceIndices": [
+        [
+          714,
+          650
+        ],
+        [
+          715,
+          650
+        ]
+      ]
+    },
+    {
+      "name": "diagonal",
+      "from": {
+        "lon": 77.37995202842774,
+        "lat": 18.48011353845034,
+        "latitudeConvention": "planetocentric",
+        "longitudeDirection": "east-positive",
+        "longitudeDomain": "-180-180"
+      },
+      "to": {
+        "lon": 77.3802894405249,
+        "lat": 18.479776126353176,
+        "latitudeConvention": "planetocentric",
+        "longitudeDirection": "east-positive",
+        "longitudeDomain": "-180-180"
+      },
+      "applicationDistanceM": 27.564675290511623,
+      "sourceIndices": [
+        [
+          714,
+          650
+        ],
+        [
+          715,
+          651
+        ]
+      ]
+    },
+    {
+      "name": "opposite-boundaries",
+      "from": {
+        "lon": 77.33676327999096,
+        "lat": 18.523302286887112,
+        "latitudeConvention": "planetocentric",
+        "longitudeDirection": "east-positive",
+        "longitudeDomain": "-180-180"
+      },
+      "to": {
+        "lon": 77.42280336476735,
+        "lat": 18.437262202110727,
+        "latitudeConvention": "planetocentric",
+        "longitudeDirection": "east-positive",
+        "longitudeDomain": "-180-180"
+      },
+      "applicationDistanceM": 7028.985198962161,
+      "sourceIndices": [
+        [
+          586,
+          522
+        ],
+        [
+          841,
+          777
+        ]
+      ]
+    },
+    {
+      "name": "long-regional",
+      "from": {
+        "lon": 77.35633318162638,
+        "lat": 18.501707912668724,
+        "latitudeConvention": "planetocentric",
+        "longitudeDirection": "east-positive",
+        "longitudeDomain": "-180-180"
+      },
+      "to": {
+        "lon": 77.40694499620072,
+        "lat": 18.45109609809438,
+        "latitudeConvention": "planetocentric",
+        "longitudeDirection": "east-positive",
+        "longitudeDomain": "-180-180"
+      },
+      "applicationDistanceM": 4134.741661399694,
+      "sourceIndices": [
+        [
+          650,
+          580
+        ],
+        [
+          800,
+          730
+        ]
+      ]
+    }
+  ],
+  "invalidCoordinateCases": 5,
+  "notes": "Capture is generated diagnostic output, excluded from Git and production. Run compare-proj.py to independently validate it."
+}

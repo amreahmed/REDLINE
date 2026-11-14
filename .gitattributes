@@ -18,3 +18,8 @@ docs/evidence/controlled-jezero-grid/** -text whitespace=-blank-at-eol,-blank-at
 docs/evidence/scientific-validation/** -text whitespace=-blank-at-eol,-blank-at-eof,-space-before-tab
 docs/evidence/scientific-resolution-2026-11-14/** -text whitespace=-blank-at-eol,-blank-at-eof,-space-before-tab
 docs/evidence/scientific-gate-resolution/** -text whitespace=-blank-at-eol,-blank-at-eof,-space-before-tab
+# Keep this audit's hashed provider bodies and reproduced Windows bytes exact.
+docs/evidence/science-routing-audit/** -text whitespace=cr-at-eol
+docs/evidence/science-routing-audit/provenance-height/hirise-product.html whitespace=cr-at-eol,-blank-at-eol,-blank-at-eof,-space-before-tab
+docs/evidence/science-routing-audit/registration/*.log whitespace=cr-at-eol,-blank-at-eof
+docs/evidence/science-routing-audit/**/*.bin -diff

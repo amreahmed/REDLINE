@@ -1,0 +1,77 @@
+{
+  "schemaVersion": 1,
+  "scope": "Source/height evidence only; application verification belongs to root",
+  "freshHttpEvidence": "Earlier collect-hirise.mjs fetch receipts are in http-receipts.json; below are observed local rerun outputs",
+  "runs": [
+    {
+      "name": "all-cell-provenance",
+      "command": "node docs/evidence/science-routing-audit/provenance-height/verify-provenance.mjs",
+      "cwd": "D:/Projects/REDLINE",
+      "exitCode": 0,
+      "output": "{\n  \"savedVerification\": false,\n  \"comparedCells\": 65536,\n  \"differingFloat32Bytes\": 0,\n  \"validCells\": 65536,\n  \"verticalGeoKeys\": 0,\n  \"hiriseOverlapsCurrentCrop\": false,\n  \"reusedDocumentsVerified\": 2,\n  \"currentHeightConclusion\": \"Exact final vertical equation/model/sign unresolved; mapping sphere is horizontal metadata\"\n}\n"
+    },
+    {
+      "name": "hirise-receipts",
+      "command": "node docs/evidence/science-routing-audit/provenance-height/collect-hirise.mjs --verify-saved",
+      "cwd": "D:/Projects/REDLINE",
+      "exitCode": 0,
+      "output": "{\n  \"page\": {\n    \"file\": \"hirise-product.html\",\n    \"url\": \"https://www.uahirise.org/dtm/ESP_023524_1985\",\n    \"range\": null,\n    \"finalUrl\": \"https://www.uahirise.org/dtm/ESP_023524_1985\",\n    \"retrievedAt\": \"2026-11-14T21:56:35.939Z\",\n    \"status\": 200,\n    \"contentType\": \"text/html; charset=UTF-8\",\n    \"contentRange\": null,\n    \"bytes\": 15279,\n    \"sha256\": \"4c2fd321686b112430a2d0cd9d1cd91c00dba64f54907a97dab4413a3d228c92\",\n    \"tlsPolicy\": \"Node built-in fetch, normal TLS certificate verification\"\n  },\n  \"labelResponse\": {\n    \"file\": \"hirise-dtm-label-range.bin\",\n    \"url\": \"https://www.uahirise.org/PDS/DTM/ESP/ORB_023500_023599/ESP_023524_1985_ESP_023379_1985/DTEEC_023524_1985_023379_1985_U01.IMG\",\n    \"range\": \"bytes=0-65535\",\n    \"finalUrl\": \"https://www.uahirise.org/PDS/DTM/ESP/ORB_023500_023599/ESP_023524_1985_ESP_023379_1985/DTEEC_023524_1985_023379_1985_U01.IMG\",\n    \"retrievedAt\": \"2026-11-14T21:56:36.356Z\",\n    \"status\": 206,\n    \"contentType\": \"application/octet-stream\",\n    \"contentRange\": \"bytes 0-65535/700271460\",\n    \"bytes\": 65536,\n    \"sha256\": \"ef39ad298b65690a2d810ff541b8a3f97245f62d41a57ae1b2260cbb194c7e9d\",\n    \"tlsPolicy\": \"Node built-in fetch, normal TLS certificate verification\"\n  },\n  \"completeLabelBytes\": 4305,\n  \"completeLabelSha256\": \"220e7ff937b18d6eaf5e2eb712c452980053daf6ca9f468bf21219577173d5cd\",\n  \"relevantLinks\": [\n    \"https://hirise-pds.lpl.arizona.edu/PDS/EXTRAS/DTM/ESP/ORB_023500_023599/ESP_023524_1985_ESP_023379_1985/DTEEC_023524_1985_023379_1985_U01.ca.jpg\",\n    \"https://www.uahirise.org/PDS/DTM/ESP/ORB_023500_023599/ESP_023524_1985_ESP_023379_1985/DTEEC_023524_1985_023379_1985_U01.IMG\",\n    \"http://hirise-pds.lpl.arizona.edu/PDS/EXTRAS/DTM/ESP/ORB_023500_023599/ESP_023524_1985_ESP_023379_1985/DTEEC_023524_1985_023379_1985_U01.ab.jpg\",\n    \"http://hirise-pds.lpl.arizona.edu/PDS/EXTRAS/DTM/ESP/ORB_023500_023599/ESP_023524_1985_ESP_023379_1985/DTEEC_023524_1985_023379_1985_U01.sa.jpg\",\n    \"http://hirise-pds.lpl.arizona.edu/PDS/EXTRAS/DTM/ESP/ORB_023500_023599/ESP_023524_1985_ESP_023379_1985/DTEEC_023524_1985_023379_1985_U01.ca.jpg\"\n  ]\n}\n"
+    },
+    {
+      "name": "prior-height-bodies",
+      "command": "node docs/evidence/scientific-resolution-2026-11-14/height/fetch-new-evidence.mjs --verify-saved",
+      "cwd": "D:/Projects/REDLINE",
+      "exitCode": 0,
+      "output": "Verified 20 new saved height-investigation bodies.\n"
+    },
+    {
+      "name": "vertical-public-records",
+      "command": "node docs/evidence/scientific-gate-resolution/vertical/analyze-public-evidence.mjs --verify-saved",
+      "cwd": "D:/Projects/REDLINE",
+      "exitCode": 0,
+      "output": "{\"savedVerification\":true,\"bodiesVerified\":42,\"inventoryKeys\":[35,92],\"preservedCells\":65536,\"conclusion\":\"exact-final-vertical-equation-unresolved\"}\n"
+    },
+    {
+      "name": "hrsc-native-contracts",
+      "command": "node docs/evidence/scientific-resolution-2026-11-14/height/inspect-hrsc-ranges.mjs --verify-saved",
+      "cwd": "D:/Projects/REDLINE",
+      "exitCode": 0,
+      "output": "{\n  \"dt5\": {\n    \"totalBytes\": 638313017,\n    \"ifdOffset\": 638205072,\n    \"width\": 13336,\n    \"height\": 17782,\n    \"bitsPerSample\": [\n      16\n    ],\n    \"compression\": 1,\n    \"samplesPerPixel\": 1,\n    \"rowsPerStrip\": 1,\n    \"sampleFormat\": [\n      2\n    ],\n    \"pixelScale\": [\n      50,\n      50,\n      1\n    ],\n    \"tiepoint\": [\n      0,\n      0,\n      0,\n      4000775,\n      1778175.0000000002,\n      0\n    ],\n    \"geokeys\": [\n      {\n        \"key\": 1024,\n        \"value\": 1\n      },\n      {\n        \"key\": 1025,\n        \"value\": 1\n      },\n      {\n        \"key\": 1026,\n        \"value\": \"EQUIDISTANT MARS|\"\n      },\n      {\n        \"key\": 2048,\n        \"value\": 32767\n      },\n      {\n        \"key\": 2049,\n        \"value\": \"GCS Name = GCS_MARS|Datum = D_MARS|Ellipsoid = MARS|Primem = Reference_Meridian||\"\n      },\n      {\n        \"key\": 2050,\n        \"value\": 32767\n      },\n      {\n        \"key\": 2054,\n        \"value\": 9102\n      },\n      {\n        \"key\": 2056,\n        \"value\": 32767\n      },\n      {\n        \"key\": 2057,\n        \"value\": [\n          3396000\n        ]\n      },\n      {\n        \"key\": 2058,\n        \"value\": [\n          3396000\n        ]\n      },\n      {\n        \"key\": 2061,\n        \"value\": [\n          0\n        ]\n      },\n      {\n        \"key\": 3072,\n        \"value\": 32767\n      },\n      {\n        \"key\": 3074,\n        \"value\": 32767\n      },\n      {\n        \"key\": 3075,\n        \"value\": 17\n      },\n      {\n        \"key\": 3076,\n        \"value\": 9001\n      },\n      {\n        \"key\": 3078,\n        \"value\": [\n          0\n        ]\n      },\n      {\n        \"key\": 3082,\n        \"value\": [\n          0\n        ]\n      },\n      {\n        \"key\": 3083,\n        \"value\": [\n          0\n        ]\n      },\n      {\n        \"key\": 3088,\n        \"value\": [\n          0\n        ]\n      },\n      {\n        \"key\": 3089,\n        \"value\": [\n          0\n        ]\n      },\n      {\n        \"key\": 4096,\n        \"value\": 32767\n      },\n      {\n        \"key\": 4097,\n        \"value\": \"Height above spheroid with radius 3396.0 km|\"\n      },\n      {\n        \"key\": 4098,\n        \"value\": 32767\n      },\n      {\n        \"key\": 4099,\n        \"value\": 9001\n      }\n    ],\n    \"gdalMetadata\": \"<GDALMetadata>\\n  <Item name=\\\"STATISTICS_MAXIMUM\\\" sample=\\\"0\\\">21500</Item>\\n  <Item name=\\\"STATISTICS_MEAN\\\" sample=\\\"0\\\">-9000</Item>\\n  <Item name=\\\"STATISTICS_MINIMUM\\\" sample=\\\"0\\\">-24500</Item>\\n  <Item name=\\\"STATISTICS_STDDEV\\\" sample=\\\"0\\\">2500</Item>\\n  <Item name=\\\"STATISTICS_VALID_PERCENT\\\" sample=\\\"0\\\">100</Item>\\n  <Item name=\\\"UNITTYPE\\\" sample=\\\"0\\\" role=\\\"unittype\\\">metre</Item>\\n</GDALMetadata>\\n\",\n    \"noData\": \"-32768\",\n    \"stripOffsets\": \"17782 receipts-backed strip offsets\",\n    \"stripByteCounts\": \"17782 receipts-backed strip lengths\"\n  },\n  \"da5\": {\n    \"totalBytes\": 638313147,\n    \"ifdOffset\": 638205138,\n    \"width\": 13336,\n    \"height\": 17782,\n    \"bitsPerSample\": [\n      16\n    ],\n    \"compression\": 1,\n    \"samplesPerPixel\": 1,\n    \"rowsPerStrip\": 1,\n    \"sampleFormat\": [\n      2\n    ],\n    \"pixelScale\": [\n      50,\n      50,\n      1\n    ],\n    \"tiepoint\": [\n      0,\n      0,\n      0,\n      4000775,\n      1778175.0000000002,\n      0\n    ],\n    \"geokeys\": [\n      {\n        \"key\": 1024,\n        \"value\": 1\n      },\n      {\n        \"key\": 1025,\n        \"value\": 1\n      },\n      {\n        \"key\": 1026,\n        \"value\": \"EQUIDISTANT MARS|\"\n      },\n      {\n        \"key\": 2048,\n        \"value\": 32767\n      },\n      {\n        \"key\": 2049,\n        \"value\": \"GCS Name = GCS_MARS|Datum = D_MARS|Ellipsoid = MARS|Primem = Reference_Meridian||\"\n      },\n      {\n        \"key\": 2050,\n        \"value\": 32767\n      },\n      {\n        \"key\": 2054,\n        \"value\": 9102\n      },\n      {\n        \"key\": 2056,\n        \"value\": 32767\n      },\n      {\n        \"key\": 2057,\n        \"value\": [\n          3396000\n        ]\n      },\n      {\n        \"key\": 2058,\n        \"value\": [\n          3396000\n        ]\n      },\n      {\n        \"key\": 2061,\n        \"value\": [\n          0\n        ]\n      },\n      {\n        \"key\": 3072,\n        \"value\": 32767\n      },\n      {\n        \"key\": 3074,\n        \"value\": 32767\n      },\n      {\n        \"key\": 3075,\n        \"value\": 17\n      },\n      {\n        \"key\": 3076,\n        \"value\": 9001\n      },\n      {\n        \"key\": 3078,\n        \"value\": [\n          0\n        ]\n      },\n      {\n        \"key\": 3082,\n        \"value\": [\n          0\n        ]\n      },\n      {\n        \"key\": 3083,\n        \"value\": [\n          0\n        ]\n      },\n      {\n        \"key\": 3088,\n        \"value\": [\n          0\n        ]\n      },\n      {\n        \"key\": 3089,\n        \"value\": [\n          0\n        ]\n      },\n      {\n        \"key\": 4096,\n        \"value\": 32767\n      },\n      {\n        \"key\": 4097,\n        \"value\": \"Height above equipotential surface described by potential model GMM3 (PDS dataset MGS-M-MOLA-5-MEGDR-L3-V1.0)|\"\n      },\n      {\n        \"key\": 4098,\n        \"value\": 32767\n      },\n      {\n        \"key\": 4099,\n        \"value\": 9001\n      }\n    ],\n    \"gdalMetadata\": \"<GDALMetadata>\\n  <Item name=\\\"STATISTICS_MAXIMUM\\\" sample=\\\"0\\\">21500</Item>\\n  <Item name=\\\"STATISTICS_MEAN\\\" sample=\\\"0\\\">-750</Item>\\n  <Item name=\\\"STATISTICS_MINIMUM\\\" sample=\\\"0\\\">-8500</Item>\\n  <Item name=\\\"STATISTICS_STDDEV\\\" sample=\\\"0\\\">2000</Item>\\n  <Item name=\\\"STATISTICS_VALID_PERCENT\\\" sample=\\\"0\\\">100</Item>\\n  <Item name=\\\"UNITTYPE\\\" sample=\\\"0\\\" role=\\\"unittype\\\">metre</Item>\\n</GDALMetadata>\\n\",\n    \"noData\": \"-32768\",\n    \"stripOffsets\": \"17782 receipts-backed strip offsets\",\n    \"stripByteCounts\": \"17782 receipts-backed strip lengths\"\n  }\n}\n"
+    },
+    {
+      "name": "hrsc-native-probes",
+      "command": "node docs/evidence/scientific-resolution-2026-11-14/height/sample-hrsc-controls.mjs --verify-saved",
+      "cwd": "D:/Projects/REDLINE",
+      "exitCode": 0,
+      "output": "Verified 18 range-backed HRSC heights and 9 paired reference comparisons.\n"
+    },
+    {
+      "name": "collector-syntax",
+      "command": "node --check docs/evidence/science-routing-audit/provenance-height/collect-hirise.mjs",
+      "cwd": "D:/Projects/REDLINE",
+      "exitCode": 0,
+      "output": ""
+    },
+    {
+      "name": "provenance-syntax",
+      "command": "node --check docs/evidence/science-routing-audit/provenance-height/verify-provenance.mjs",
+      "cwd": "D:/Projects/REDLINE",
+      "exitCode": 0,
+      "output": ""
+    },
+    {
+      "name": "provenance-saved",
+      "command": "node docs/evidence/science-routing-audit/provenance-height/verify-provenance.mjs --verify-saved",
+      "cwd": "D:/Projects/REDLINE",
+      "exitCode": 0,
+      "output": "{\n  \"savedVerification\": true,\n  \"comparedCells\": 65536,\n  \"differingFloat32Bytes\": 0,\n  \"validCells\": 65536,\n  \"verticalGeoKeys\": 0,\n  \"hiriseOverlapsCurrentCrop\": false,\n  \"reusedDocumentsVerified\": 2,\n  \"currentHeightConclusion\": \"Exact final vertical equation/model/sign unresolved; mapping sphere is horizontal metadata\"\n}\n"
+    },
+    {
+      "name": "collector-saved-final",
+      "command": "node docs/evidence/science-routing-audit/provenance-height/collect-hirise.mjs --verify-saved",
+      "cwd": "D:/Projects/REDLINE",
+      "exitCode": 0,
+      "output": "{\n  \"page\": {\n    \"file\": \"hirise-product.html\",\n    \"url\": \"https://www.uahirise.org/dtm/ESP_023524_1985\",\n    \"range\": null,\n    \"finalUrl\": \"https://www.uahirise.org/dtm/ESP_023524_1985\",\n    \"retrievedAt\": \"2026-11-14T21:56:35.939Z\",\n    \"status\": 200,\n    \"contentType\": \"text/html; charset=UTF-8\",\n    \"contentRange\": null,\n    \"bytes\": 15279,\n    \"sha256\": \"4c2fd321686b112430a2d0cd9d1cd91c00dba64f54907a97dab4413a3d228c92\",\n    \"tlsPolicy\": \"Node built-in fetch, normal TLS certificate verification\"\n  },\n  \"labelResponse\": {\n    \"file\": \"hirise-dtm-label-range.bin\",\n    \"url\": \"https://www.uahirise.org/PDS/DTM/ESP/ORB_023500_023599/ESP_023524_1985_ESP_023379_1985/DTEEC_023524_1985_023379_1985_U01.IMG\",\n    \"range\": \"bytes=0-65535\",\n    \"finalUrl\": \"https://www.uahirise.org/PDS/DTM/ESP/ORB_023500_023599/ESP_023524_1985_ESP_023379_1985/DTEEC_023524_1985_023379_1985_U01.IMG\",\n    \"retrievedAt\": \"2026-11-14T21:56:36.356Z\",\n    \"status\": 206,\n    \"contentType\": \"application/octet-stream\",\n    \"contentRange\": \"bytes 0-65535/700271460\",\n    \"bytes\": 65536,\n    \"sha256\": \"ef39ad298b65690a2d810ff541b8a3f97245f62d41a57ae1b2260cbb194c7e9d\",\n    \"tlsPolicy\": \"Node built-in fetch, normal TLS certificate verification\"\n  },\n  \"completeLabelBytes\": 4305,\n  \"completeLabelSha256\": \"220e7ff937b18d6eaf5e2eb712c452980053daf6ca9f468bf21219577173d5cd\",\n  \"associatedOrthoLinks\": [\n    \"https://www.uahirise.org/PDS/DTM/ESP/ORB_023500_023599/ESP_023524_1985_ESP_023379_1985/ESP_023524_1985_RED_C_01_ORTHO.JP2\",\n    \"https://www.uahirise.org/PDS/DTM/ESP/ORB_023500_023599/ESP_023524_1985_ESP_023379_1985/ESP_023524_1985_RED_A_01_ORTHO.JP2\",\n    \"https://www.uahirise.org/PDS/DTM/ESP/ORB_023500_023599/ESP_023524_1985_ESP_023379_1985/ESP_023379_1985_RED_A_01_ORTHO.JP2\",\n    \"https://www.uahirise.org/PDS/DTM/ESP/ORB_023500_023599/ESP_023524_1985_ESP_023379_1985/ESP_023379_1985_RED_C_01_ORTHO.JP2\"\n  ],\n  \"relevantLinks\": [\n    \"https://hirise-pds.lpl.arizona.edu/PDS/EXTRAS/DTM/ESP/ORB_023500_023599/ESP_023524_1985_ESP_023379_1985/DTEEC_023524_1985_023379_1985_U01.ca.jpg\",\n    \"https://www.uahirise.org/PDS/DTM/ESP/ORB_023500_023599/ESP_023524_1985_ESP_023379_1985/DTEEC_023524_1985_023379_1985_U01.IMG\",\n    \"http://hirise-pds.lpl.arizona.edu/PDS/EXTRAS/DTM/ESP/ORB_023500_023599/ESP_023524_1985_ESP_023379_1985/DTEEC_023524_1985_023379_1985_U01.ab.jpg\",\n    \"http://hirise-pds.lpl.arizona.edu/PDS/EXTRAS/DTM/ESP/ORB_023500_023599/ESP_023524_1985_ESP_023379_1985/DTEEC_023524_1985_023379_1985_U01.sa.jpg\",\n    \"http://hirise-pds.lpl.arizona.edu/PDS/EXTRAS/DTM/ESP/ORB_023500_023599/ESP_023524_1985_ESP_023379_1985/DTEEC_023524_1985_023379_1985_U01.ca.jpg\"\n  ]\n}\n"
+    }
+  ]
+}

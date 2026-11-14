@@ -1,0 +1,5 @@
+Command: uv run --offline --with matplotlib==3.11.2 --with numpy==2.5.3 python docs/evidence/science-routing-audit/registration/plot-registration-residuals.py
+Exit code: 0
+Installed 11 packages in 1.41s
+Saved relative-registration-diagnostic.png from 159 retained ties and 8 selected ties.
+

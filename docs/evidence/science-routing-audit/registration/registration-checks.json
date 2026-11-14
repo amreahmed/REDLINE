@@ -1,0 +1,149 @@
+{
+  "records": [
+    {
+      "id": "jezero",
+      "featureId": "14300",
+      "coordinate": [
+        77.69,
+        18.41
+      ],
+      "longitudeText": "77.69",
+      "latitudeText": "18.41",
+      "controlNetwork": {
+        "id": "24765",
+        "name": "MDIM 2.1"
+      },
+      "convention": "Planetocentric, +East, 0 - 360",
+      "empiricalRegistration": "unavailable: no MDIM-to-controlled-CTX/DEM landmark residuals or validated transform supplied"
+    },
+    {
+      "id": "belva",
+      "featureId": "15872",
+      "coordinate": [
+        77.38,
+        18.48
+      ],
+      "longitudeText": "77.38",
+      "latitudeText": "18.48",
+      "controlNetwork": {
+        "id": "45740",
+        "name": "MDIM 2.1"
+      },
+      "convention": "Planetocentric, +East, 0 - 360",
+      "empiricalRegistration": "unavailable: no MDIM-to-controlled-CTX/DEM landmark residuals or validated transform supplied"
+    },
+    {
+      "id": "neretva",
+      "featureId": "15879",
+      "coordinate": [
+        77.2,
+        18.55
+      ],
+      "longitudeText": "77.20",
+      "latitudeText": "18.55",
+      "controlNetwork": {
+        "id": "45747",
+        "name": "MDIM 2.1"
+      },
+      "convention": "Planetocentric, +East, 0 - 360",
+      "empiricalRegistration": "unavailable: no MDIM-to-controlled-CTX/DEM landmark residuals or validated transform supplied"
+    }
+  ],
+  "image": {
+    "radiusM": 3396190,
+    "originX": 4573663.250853,
+    "originY": 1109693.140188,
+    "spacingM": 6,
+    "columns": 5322,
+    "rows": 5040,
+    "publishedBounds": [
+      77.16046545922367,
+      18.211027390963398,
+      77.69917761355299,
+      18.721194481872804
+    ]
+  },
+  "dem": {
+    "radiusM": 3396190,
+    "originX": 4573663.250853,
+    "originY": 1109693.140188,
+    "spacingM": 20,
+    "columns": 1596,
+    "rows": 1512,
+    "publishedBounds": [
+      77.16046545922367,
+      18.211027390963398,
+      77.6989751662947,
+      18.721194481872804
+    ]
+  },
+  "geographicVrt": [
+    77.16046545922364,
+    0.00010122362914869109,
+    0,
+    18.7211944818728,
+    0,
+    -0.00010122362914869109
+  ],
+  "independentCornerAndCenterChecks": {
+    "cropCorners": 4,
+    "nativeFixtures": 7,
+    "manifestSha256": "fa63f2181e603eb930d94fcf91444ee5e537b6c046e31537f65daeb0e1cffed9",
+    "providerCorners": "agree within 1e-12 degrees",
+    "pdsFirstCenter": "agrees within 1e-8 projected metres"
+  },
+  "featureMappings": [
+    {
+      "id": "jezero",
+      "approximateCoordinate": [
+        77.69,
+        18.41
+      ],
+      "arithmeticSourceRow": 922,
+      "arithmeticSourceColumn": 1569,
+      "nativeCellCenter": [
+        77.6900337457199,
+        18.40993182224058
+      ],
+      "insideNativeDemEnvelope": true,
+      "insidePlanningCrop": false,
+      "qualification": "Arithmetical mapping only; not a registered named-feature measurement or automatic route endpoint."
+    },
+    {
+      "id": "belva",
+      "approximateCoordinate": [
+        77.38,
+        18.48
+      ],
+      "arithmeticSourceRow": 714,
+      "arithmeticSourceColumn": 650,
+      "nativeCellCenter": [
+        77.37995202842774,
+        18.48011353845034
+      ],
+      "insideNativeDemEnvelope": true,
+      "insidePlanningCrop": true,
+      "qualification": "Arithmetical mapping only; not a registered named-feature measurement or automatic route endpoint."
+    },
+    {
+      "id": "neretva",
+      "approximateCoordinate": [
+        77.2,
+        18.55
+      ],
+      "arithmeticSourceRow": 507,
+      "arithmeticSourceColumn": 117,
+      "nativeCellCenter": [
+        77.20011138064024,
+        18.549957842562936
+      ],
+      "insideNativeDemEnvelope": true,
+      "insidePlanningCrop": false,
+      "qualification": "Arithmetical mapping only; not a registered named-feature measurement or automatic route endpoint."
+    }
+  ],
+  "imageExtraEastWidthM": 12,
+  "featureRegistration": "not validated: supplied source references establish convention and coarse coordinate placement, not landmark registration",
+  "nativeGeometry": "validated against fetched ISIS/PDS3/VRT metadata",
+  "result": "PASS: evidence integrity and native geometry checks; named-feature fine registration remains unavailable"
+}

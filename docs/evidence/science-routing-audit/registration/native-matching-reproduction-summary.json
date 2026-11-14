@@ -1,0 +1,62 @@
+{
+  "sourceScript": "docs/evidence/scientific-gate-resolution/registration/measure-native-registration.py",
+  "sourceScriptSha256": "b56d65cd491b9d3f380f97479f14fb675d3b8205d8a85337b52a0ab028ec166b",
+  "executionScope": "Original calculation source through result construction; output/plot section omitted; any blocker output redirected to this directory.",
+  "savedMeasurementSha256": "1569d8edc5ab7e6ad8eb653365d4160a33b4a7dabfa0abb46897465212cd5aec",
+  "reproducedMeasurementSha256": "1569d8edc5ab7e6ad8eb653365d4160a33b4a7dabfa0abb46897465212cd5aec",
+  "byteIdentical": true,
+  "savedNewline": "CRLF",
+  "packages": {
+    "rasterio": "1.5.2",
+    "opencv-python-headless": "5.0.0.93",
+    "matplotlib": "3.11.2",
+    "numpy": "2.5.3"
+  },
+  "preservedApplicationFiles": [
+    {
+      "path": "public/data/jezero-terrain-grid.json",
+      "sha256": "fa63f2181e603eb930d94fcf91444ee5e537b6c046e31537f65daeb0e1cffed9"
+    },
+    {
+      "path": "public/data/jezero-terrain-grid.f32",
+      "sha256": "4c0e428bb3cc4bcd8cbcebc0c2da2558a106fc19e55cfca352097b7eee32fae8"
+    }
+  ],
+  "translationDiagnosticM": [
+    -0.6119473674577587,
+    0.4750237958644354
+  ],
+  "fitResiduals": {
+    "count": 97,
+    "rmsM": 2.3195447479402,
+    "medianM": 1.7828489233099833,
+    "maximumM": 6.249221171546555
+  },
+  "heldOutResiduals": {
+    "count": 62,
+    "rmsM": 2.0196194001552774,
+    "medianM": 1.5816185978099464,
+    "maximumM": 5.22290839819851
+  },
+  "maximumTemplateSizeSensitivityM": 47.792054563734446,
+  "selectedSpatialTies": {
+    "selection": "One tie per patch maximizing minimum NCC across15/21/31templates among distinctive matches at all three sizes. No displacement, residual or sensitivity threshold is used to rank/select ties.",
+    "count": 8,
+    "translationDiagnosticM": [
+      0.0869525296116059,
+      -1.0664313581747726
+    ],
+    "fitResiduals": {
+      "count": 5,
+      "rmsM": 1.8094875582526198,
+      "maximumM": 2.8177680649406134
+    },
+    "heldOutResiduals": {
+      "count": 3,
+      "rmsM": 1.9719473229674176,
+      "maximumM": 2.193464791734718
+    },
+    "maximumTemplateSizeSensitivityM": 2.3922425439465056
+  },
+  "qualification": "Reproducibility of relative image matching is verified; independent absolute geodetic registration and named-feature accuracy are not established."
+}

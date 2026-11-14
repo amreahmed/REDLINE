@@ -1,0 +1,251 @@
+{
+  "schemaVersion": 1,
+  "method": "Independent raw TIFF IFD and row-strip reads; complete PDS label parse; receipt/hash verification",
+  "currentCtx": {
+    "productId": "JEZ_ctx_B_soc_008_DTM_MOLAtopography_DeltaGeoid_20m_Eqc_latTs0_lon0",
+    "sourcePath": "docs/evidence/terrain-validation/source-audit/JEZ_ctx_B_soc_008_DTM_MOLAtopography_DeltaGeoid_20m_Eqc_latTs0_lon0.tif",
+    "sourceBytes": 9662387,
+    "sourceSha256": "16a1aa66c3f48c1bca252795827db7b417876217aff0f5e1aff18027fab2327b",
+    "manifestSha256": "fa63f2181e603eb930d94fcf91444ee5e537b6c046e31537f65daeb0e1cffed9",
+    "binaryBytes": 262144,
+    "binarySha256": "4c0e428bb3cc4bcd8cbcebc0c2da2558a106fc19e55cfca352097b7eee32fae8",
+    "sourceDimensions": [
+      1596,
+      1512
+    ],
+    "crop": {
+      "startColumn": 522,
+      "startRow": 586,
+      "columns": 256,
+      "rows": 256
+    },
+    "comparedCells": 65536,
+    "differingFloat32Bytes": 0,
+    "validCells": 65536,
+    "noDataOrNonFiniteCells": 0,
+    "noDataSentinel": -3.4028226550889045e+38,
+    "minimumProviderM": -2560.28857421875,
+    "maximumProviderM": -2363.345703125,
+    "cropBounds": [
+      77.33659457394239,
+      18.437093496062143,
+      77.42297207081594,
+      18.523470992935692
+    ],
+    "projection": {
+      "kind": "equirectangular",
+      "radiusM": 3396190,
+      "standardParallelDeg": 0,
+      "centralMeridianDeg": 0,
+      "latitudeConvention": "planetocentric",
+      "longitudeDirection": "east-positive",
+      "longitudeRange": "signed-180"
+    },
+    "pixelSpacingProjectedM": 20,
+    "encoding": {
+      "url": "/data/jezero-terrain-grid.f32",
+      "sampleType": "float32",
+      "byteOrder": "little-endian",
+      "layout": "row-major",
+      "bytes": 262144,
+      "sha256": "4c0e428bb3cc4bcd8cbcebc0c2da2558a106fc19e55cfca352097b7eee32fae8"
+    },
+    "geoKeys": [
+      [
+        1024,
+        0,
+        1,
+        1
+      ],
+      [
+        1025,
+        0,
+        1,
+        1
+      ],
+      [
+        1026,
+        34737,
+        37,
+        0
+      ],
+      [
+        2048,
+        0,
+        1,
+        32767
+      ],
+      [
+        2049,
+        34737,
+        121,
+        37
+      ],
+      [
+        2050,
+        0,
+        1,
+        32767
+      ],
+      [
+        2054,
+        0,
+        1,
+        9102
+      ],
+      [
+        2056,
+        0,
+        1,
+        32767
+      ],
+      [
+        2057,
+        34736,
+        1,
+        5
+      ],
+      [
+        2058,
+        34736,
+        1,
+        6
+      ],
+      [
+        2061,
+        34736,
+        1,
+        7
+      ],
+      [
+        3072,
+        0,
+        1,
+        32767
+      ],
+      [
+        3074,
+        0,
+        1,
+        32767
+      ],
+      [
+        3075,
+        0,
+        1,
+        17
+      ],
+      [
+        3076,
+        0,
+        1,
+        9001
+      ],
+      [
+        3078,
+        34736,
+        1,
+        2
+      ],
+      [
+        3082,
+        34736,
+        1,
+        3
+      ],
+      [
+        3083,
+        34736,
+        1,
+        4
+      ],
+      [
+        3088,
+        34736,
+        1,
+        1
+      ],
+      [
+        3089,
+        34736,
+        1,
+        0
+      ]
+    ],
+    "verticalGeoKeys": [],
+    "gdalMetadata": null,
+    "extraSamplesOrSubIfd": {
+      "extraSamples": null,
+      "subIfd": null
+    },
+    "extraction": "native cell extraction only; no resampling, interpolation, datum change, or cell alteration",
+    "upstreamPerCellStereoFillQualityValidated": false,
+    "heightConclusion": "Exact final vertical equation/model/sign unresolved; mapping sphere is horizontal metadata"
+  },
+  "candidateHirise": {
+    "productId": "DTEEC_023524_1985_023379_1985_U01",
+    "version": 1,
+    "sourcePair": [
+      "ESP_023524_1985",
+      "ESP_023379_1985"
+    ],
+    "dimensions": [
+      8235,
+      21258
+    ],
+    "bounds": [
+      77.45290261,
+      18.159317160581,
+      77.59817341,
+      18.521550219233
+    ],
+    "overlapsCurrentCrop": false,
+    "eastWestSeparationDeg": 0.02993053918405053,
+    "mappingRadiusM": 3394839.8133163,
+    "standardParallelDeg": 15,
+    "centralMeridianDeg": 77.53,
+    "projectedSampleM": 1.0096633268711,
+    "verticalReference": "metres above equipotential Mars 2000 Datum, Smith et al. (2001), positive above",
+    "scale": 1,
+    "offset": 0,
+    "missingBitsHex": "FF7FFFFB",
+    "completeLabelSha256": "220e7ff937b18d6eaf5e2eb712c452980053daf6ca9f468bf21219577173d5cd",
+    "fullImageDownloaded": false,
+    "imageSizeBytesFromRangeReceipt": 700271460,
+    "currentCropReplacementOrValidation": false
+  },
+  "reusedDocuments": [
+    {
+      "file": "hirise-dtm-about.html",
+      "requestedUrl": "https://www.uahirise.org/dtm/about.php",
+      "finalUrl": "https://www.uahirise.org/dtm/about.php",
+      "startedAt": "2026-11-13T22:12:54.047Z",
+      "retrievedAt": "2026-11-13T22:12:54.934Z",
+      "status": 200,
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 21189,
+      "sha256": "78bb364d79e616ceffa5179d1c7dd6ed0bb2ba529d0b9008571baee0ee902bc0",
+      "reusedPath": "docs/evidence/scientific-resolution-2026-11-14/height/hirise-dtm-about.html",
+      "auditUse": "General method; not product-specific control residuals"
+    },
+    {
+      "file": "hirise-rdr-sis.pdf",
+      "requestedUrl": "https://hirise-pds.lpl.arizona.edu/PDS4/DOCUMENT/HIRISE_RDR_SIS.PDF",
+      "finalUrl": "https://hirise-pds.lpl.arizona.edu/PDS4/DOCUMENT/HIRISE_RDR_SIS.PDF",
+      "startedAt": "2026-11-13T22:12:54.049Z",
+      "retrievedAt": "2026-11-13T22:13:01.238Z",
+      "status": 200,
+      "contentType": "application/pdf",
+      "bytes": 1260783,
+      "sha256": "3a097992dcc75123f41515ee626450a26b1fda2a1d720c9f5722e5ef6c4d535e",
+      "reusedPath": "docs/evidence/scientific-resolution-2026-11-14/height/hirise-rdr-sis.pdf",
+      "auditUse": "General method; not product-specific control residuals"
+    }
+  ],
+  "limits": [
+    "All finite cells do not establish measured stereo support or absence of fill.",
+    "Byte equality establishes extraction preservation, not height datum, physical slope, hazard or safety accuracy.",
+    "Candidate HiRISE label has a clear height contract but no overlap with the current CTX crop.",
+    "No source grid, application module, coordinate transform, DEM value, routing logic, or scientific gate changed."
+  ]
+}

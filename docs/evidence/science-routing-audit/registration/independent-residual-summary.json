@@ -1,0 +1,285 @@
+{
+  "status": "PASS: saved native matching, coordinate contracts, retained residuals and pixel roundtrips reproduced; no absolute registration claim.",
+  "inputMeasurementSha256": "1569d8edc5ab7e6ad8eb653365d4160a33b4a7dabfa0abb46897465212cd5aec",
+  "referenceSurface": {
+    "radiusM": 3396190.0,
+    "latitude": "planetocentric",
+    "longitude": "positive east",
+    "projection": "equirectangular lat_ts=lon0=0"
+  },
+  "placesToCtxCoordinateTransform": {
+    "matrix": [
+      [
+        1.0542850062111002,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        1
+      ]
+    ],
+    "equations": "x_CTX=x_PLACES/cos(18.4663 degrees); y_CTX=y_PLACES",
+    "meaning": "Source projection change with the same sphere and coordinate convention, not a fitted image scale/rotation or correction."
+  },
+  "units": {
+    "angular": "Residual dx/R and dy/R expressed in degrees. Angular-plane norm is a coordinate-space diagnostic, not a ground distance.",
+    "surface": "Exact central angle atan2(norm(cross(u,v)),dot(u,v)) times R between translated prediction and matched coordinate; no datum or geodetic-control accuracy implied.",
+    "pixels": "Native controlled-CTX pixels: column=dx/6; row=-dy/6. PLACES native matched coordinates use its own 0.25m projected spacing. No HiRISE pixel accuracy inferred."
+  },
+  "translationDiagnosticProjectedM": [
+    -0.6119473674577587,
+    0.4750237958644354
+  ],
+  "multiscaleTranslationDiagnosticProjectedM": [
+    0.0869525296116059,
+    -1.0664313581747726
+  ],
+  "residualGroups": {
+    "broad": {
+      "fit": {
+        "raw_offset_projected_norm_m": {
+          "count": 97,
+          "rms": 2.372411132273896,
+          "median": 1.8506649994643767,
+          "maximum": 6.2572339374023205
+        },
+        "raw_offset_surface_m": {
+          "count": 97,
+          "rms": 2.322220062800251,
+          "median": 1.799407876078539,
+          "maximum": 6.159611785537876
+        },
+        "residual_projected_norm_m": {
+          "count": 97,
+          "rms": 2.3195447479402,
+          "median": 1.7828489233099833,
+          "maximum": 6.249221171546554
+        },
+        "residual_surface_m": {
+          "count": 97,
+          "rms": 2.266973799383715,
+          "median": 1.7172973468951946,
+          "maximum": 6.113537082808042
+        },
+        "residual_angular_plane_norm_deg": {
+          "count": 97,
+          "rms": 3.913212289321558e-05,
+          "median": 3.007773970687889e-05,
+          "maximum": 0.00010542814105612977
+        },
+        "residual_ctx_pixel_norm": {
+          "count": 97,
+          "rms": 0.38659079132336666,
+          "median": 0.29714148721833056,
+          "maximum": 1.0415368619244256
+        }
+      },
+      "held_out": {
+        "raw_offset_projected_norm_m": {
+          "count": 62,
+          "rms": 1.9836217113541217,
+          "median": 1.5206171998339137,
+          "maximum": 4.735302283271473
+        },
+        "raw_offset_surface_m": {
+          "count": 62,
+          "rms": 1.9234817656080996,
+          "median": 1.4949443574894357,
+          "maximum": 4.520756066691318
+        },
+        "residual_projected_norm_m": {
+          "count": 62,
+          "rms": 2.0196194001552774,
+          "median": 1.5816185978099466,
+          "maximum": 5.22290839819851
+        },
+        "residual_surface_m": {
+          "count": 62,
+          "rms": 1.945117168331656,
+          "median": 1.542212694612353,
+          "maximum": 4.961710332974727
+        },
+        "residual_angular_plane_norm_deg": {
+          "count": 62,
+          "rms": 3.407220086380336e-05,
+          "median": 2.6682862399897862e-05,
+          "maximum": 8.811362379613855e-05
+        },
+        "residual_ctx_pixel_norm": {
+          "count": 62,
+          "rms": 0.3366032333592129,
+          "median": 0.26360309963499107,
+          "maximum": 0.870484733033085
+        }
+      }
+    },
+    "multiscale_subset": {
+      "fit": {
+        "raw_offset_projected_norm_m": {
+          "count": 5,
+          "rms": 2.1348325485033564,
+          "median": 1.1772645753107647,
+          "maximum": 3.88481735032274
+        },
+        "raw_offset_surface_m": {
+          "count": 5,
+          "rms": 2.1185368959301605,
+          "median": 1.1666486957642432,
+          "maximum": 3.8807851633291954
+        },
+        "residual_projected_norm_m": {
+          "count": 5,
+          "rms": 1.8094875582526198,
+          "median": 1.857093375173613,
+          "maximum": 2.8177680649406134
+        },
+        "residual_surface_m": {
+          "count": 5,
+          "rms": 1.7888246323359855,
+          "median": 1.7714420286518973,
+          "maximum": 2.8138042911236534
+        },
+        "residual_angular_plane_norm_deg": {
+          "count": 5,
+          "rms": 3.052714959095569e-05,
+          "median": 3.133028851717754e-05,
+          "maximum": 4.7537451605429026e-05
+        },
+        "residual_ctx_pixel_norm": {
+          "count": 5,
+          "rms": 0.30158125970877,
+          "median": 0.3095155625289355,
+          "maximum": 0.4696280108234356
+        }
+      },
+      "held_out": {
+        "raw_offset_projected_norm_m": {
+          "count": 3,
+          "rms": 1.33057304331543,
+          "median": 1.216502714218265,
+          "maximum": 1.801886770472727
+        },
+        "raw_offset_surface_m": {
+          "count": 3,
+          "rms": 1.2730694725977332,
+          "median": 1.166589550670631,
+          "maximum": 1.7090946095529627
+        },
+        "residual_projected_norm_m": {
+          "count": 3,
+          "rms": 1.9719473229674178,
+          "median": 1.895541884814322,
+          "maximum": 2.193464791734718
+        },
+        "residual_surface_m": {
+          "count": 3,
+          "rms": 1.9326584331305088,
+          "median": 1.8687891901206475,
+          "maximum": 2.1102801311593926
+        },
+        "residual_angular_plane_norm_deg": {
+          "count": 3,
+          "rms": 3.3267944086801416e-05,
+          "median": 3.197893813070938e-05,
+          "maximum": 3.7005077771544415e-05
+        },
+        "residual_ctx_pixel_norm": {
+          "count": 3,
+          "rms": 0.3286578871612363,
+          "median": 0.31592364746905366,
+          "maximum": 0.36557746528911966
+        }
+      }
+    }
+  },
+  "patches": [
+    {
+      "id": "r660-c550",
+      "split": "fit",
+      "candidateCount": 27,
+      "retainedCount": 26,
+      "validMatchingFraction": 1.0
+    },
+    {
+      "id": "r660-c650",
+      "split": "held_out",
+      "candidateCount": 28,
+      "retainedCount": 25,
+      "validMatchingFraction": 1.0
+    },
+    {
+      "id": "r660-c750",
+      "split": "fit",
+      "candidateCount": 27,
+      "retainedCount": 23,
+      "validMatchingFraction": 1.0
+    },
+    {
+      "id": "r740-c550",
+      "split": "held_out",
+      "candidateCount": 28,
+      "retainedCount": 13,
+      "validMatchingFraction": 1.0
+    },
+    {
+      "id": "r740-c650",
+      "split": "fit",
+      "candidateCount": 27,
+      "retainedCount": 23,
+      "validMatchingFraction": 1.0
+    },
+    {
+      "id": "r740-c750",
+      "split": "held_out",
+      "candidateCount": 26,
+      "retainedCount": 22,
+      "validMatchingFraction": 1.0
+    },
+    {
+      "id": "r820-c550",
+      "split": "fit",
+      "candidateCount": 28,
+      "retainedCount": 14,
+      "validMatchingFraction": 1.0
+    },
+    {
+      "id": "r820-c650",
+      "split": "held_out",
+      "candidateCount": 28,
+      "retainedCount": 2,
+      "validMatchingFraction": 1.0
+    },
+    {
+      "id": "r820-c750",
+      "split": "fit",
+      "candidateCount": 20,
+      "retainedCount": 11,
+      "validMatchingFraction": 1.0
+    }
+  ],
+  "broadSampleBoundsDeg": {
+    "west": 77.34241493261844,
+    "east": 77.41742164181761,
+    "south": 18.440653193687204,
+    "north": 18.50219716020961
+  },
+  "unsampledNorthernCropStripM": 903.1401879999321,
+  "maximumNativePixelRoundtripArithmeticDifference": 0.0,
+  "tableRows": 167,
+  "preservedGridCells": 65536,
+  "limitations": [
+    "159 nominal ties and 8 selected ties are image-texture correspondences, not geographically named independent survey controls.",
+    "Five fit patches and four held-out patches were fixed before matching. Held-out ties are independent of fitting, not of shared provider photogrammetric control.",
+    "Translation is descriptive and unapplied. Rotation and scale are fixed by coordinate contracts; neither is independently estimated.",
+    "No acceptance threshold, absolute uncertainty bound or unsampled-area accuracy is established.",
+    "Template-size sensitivity is not a statistical confidence interval. A broad tie varies by 47.792m; strong subset maximum is 2.392m.",
+    "The requested HiRISE DTM is geographically separate; its source reference cannot be transferred to the live CTX grid."
+  ]
+}

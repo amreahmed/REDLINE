@@ -1,0 +1,11 @@
+Command: uv run --offline python docs/evidence/science-routing-audit/registration/dataset-relationships.py
+Exit code: 1
+Traceback (most recent call last):
+  File "D:\Projects\REDLINE\docs\evidence\science-routing-audit\registration\dataset-relationships.py", line 54, in <module>
+    'productId': product, 'version': number('PRODUCT_VERSION_ID'), 'sourcePair': source_pair,
+                                     ~~~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Projects\REDLINE\docs\evidence\science-routing-audit\registration\dataset-relationships.py", line 26, in number
+    assert found, name
+           ^^^^^
+AssertionError: PRODUCT_VERSION_ID
+

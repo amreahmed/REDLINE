@@ -1,0 +1,347 @@
+{
+  "scope": "mathematical audit only; synthetic costs are not Mars measurements",
+  "sourceGridSha256": "4c0e428bb3cc4bcd8cbcebc0c2da2558a106fc19e55cfca352097b7eee32fae8",
+  "sourceCells": 65536,
+  "syntheticWeightedComparisons": [
+    {
+      "fixture": "open-flat",
+      "rows": 3,
+      "columns": 4,
+      "weights": [
+        0,
+        0.25,
+        1,
+        4,
+        16
+      ],
+      "endpointPairs": 720,
+      "disconnectedPairs": 0
+    },
+    {
+      "fixture": "obstacle-detour",
+      "rows": 4,
+      "columns": 4,
+      "weights": [
+        0,
+        0.25,
+        1,
+        4,
+        16
+      ],
+      "endpointPairs": 980,
+      "disconnectedPairs": 0
+    },
+    {
+      "fixture": "NoData-gaps",
+      "rows": 4,
+      "columns": 4,
+      "weights": [
+        0,
+        0.25,
+        1,
+        4,
+        16
+      ],
+      "endpointPairs": 980,
+      "disconnectedPairs": 0
+    },
+    {
+      "fixture": "disconnected-halves",
+      "rows": 3,
+      "columns": 5,
+      "weights": [
+        0,
+        0.25,
+        1,
+        4,
+        16
+      ],
+      "endpointPairs": 720,
+      "disconnectedPairs": 360
+    },
+    {
+      "fixture": "analytical-plane",
+      "rows": 3,
+      "columns": 4,
+      "weights": [
+        0,
+        0.25,
+        1,
+        4,
+        16
+      ],
+      "endpointPairs": 720,
+      "disconnectedPairs": 0
+    }
+  ],
+  "costSensitivity": [
+    {
+      "fixture": "one-cell-20m-hill",
+      "weight": 0,
+      "minimumCostEquivalentM": 80,
+      "nodes": [
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "visitsHill": true,
+      "directCostEquivalentM": 80,
+      "flatDetourCostEquivalentM": 96.5685424949238,
+      "threshold": 0.41421356237309515
+    },
+    {
+      "fixture": "one-cell-20m-hill",
+      "weight": 0.25,
+      "minimumCostEquivalentM": 90,
+      "nodes": [
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "visitsHill": true,
+      "directCostEquivalentM": 90,
+      "flatDetourCostEquivalentM": 96.5685424949238,
+      "threshold": 0.41421356237309515
+    },
+    {
+      "fixture": "one-cell-20m-hill",
+      "weight": 0.5,
+      "minimumCostEquivalentM": 96.5685424949238,
+      "nodes": [
+        5,
+        6,
+        2,
+        3,
+        9
+      ],
+      "visitsHill": false,
+      "directCostEquivalentM": 100,
+      "flatDetourCostEquivalentM": 96.5685424949238,
+      "threshold": 0.41421356237309515
+    },
+    {
+      "fixture": "one-cell-20m-hill",
+      "weight": 1,
+      "minimumCostEquivalentM": 96.5685424949238,
+      "nodes": [
+        5,
+        6,
+        2,
+        3,
+        9
+      ],
+      "visitsHill": false,
+      "directCostEquivalentM": 120,
+      "flatDetourCostEquivalentM": 96.5685424949238,
+      "threshold": 0.41421356237309515
+    },
+    {
+      "fixture": "one-cell-20m-hill",
+      "weight": 4,
+      "minimumCostEquivalentM": 96.5685424949238,
+      "nodes": [
+        5,
+        6,
+        2,
+        3,
+        9
+      ],
+      "visitsHill": false,
+      "directCostEquivalentM": 240,
+      "flatDetourCostEquivalentM": 96.5685424949238,
+      "threshold": 0.41421356237309515
+    },
+    {
+      "fixture": "one-cell-20m-hill",
+      "weight": 16,
+      "minimumCostEquivalentM": 96.5685424949238,
+      "nodes": [
+        5,
+        6,
+        2,
+        3,
+        9
+      ],
+      "visitsHill": false,
+      "directCostEquivalentM": 720,
+      "flatDetourCostEquivalentM": 96.5685424949238,
+      "threshold": 0.41421356237309515
+    }
+  ],
+  "invalidHeuristicCounterexample": {
+    "kind": "synthetic caller-contract violation",
+    "returnedCost": 3,
+    "actualOptimum": 2,
+    "node2Heuristic": 10,
+    "trueRemaining": 1
+  },
+  "syntheticPlane": {
+    "a": 0.25,
+    "b": -0.5,
+    "shifts": [
+      0,
+      1024,
+      3396190
+    ],
+    "directions": [
+      {
+        "dx": 20,
+        "dy": 0,
+        "shift": 0,
+        "runM": 20,
+        "riseM": 5,
+        "ratio": 0.25,
+        "degrees": 14.036243467926477,
+        "costEquivalentM": 25
+      },
+      {
+        "dx": 20,
+        "dy": 0,
+        "shift": 1024,
+        "runM": 20,
+        "riseM": 5,
+        "ratio": 0.25,
+        "degrees": 14.036243467926477,
+        "costEquivalentM": 25
+      },
+      {
+        "dx": 20,
+        "dy": 0,
+        "shift": 3396190,
+        "runM": 20,
+        "riseM": 5,
+        "ratio": 0.25,
+        "degrees": 14.036243467926477,
+        "costEquivalentM": 25
+      },
+      {
+        "dx": 0,
+        "dy": 20,
+        "shift": 0,
+        "runM": 20,
+        "riseM": -10,
+        "ratio": -0.5,
+        "degrees": -26.56505117707799,
+        "costEquivalentM": 40
+      },
+      {
+        "dx": 0,
+        "dy": 20,
+        "shift": 1024,
+        "runM": 20,
+        "riseM": -10,
+        "ratio": -0.5,
+        "degrees": -26.56505117707799,
+        "costEquivalentM": 40
+      },
+      {
+        "dx": 0,
+        "dy": 20,
+        "shift": 3396190,
+        "runM": 20,
+        "riseM": -10,
+        "ratio": -0.5,
+        "degrees": -26.56505117707799,
+        "costEquivalentM": 40
+      },
+      {
+        "dx": 20,
+        "dy": 20,
+        "shift": 0,
+        "runM": 28.284271247461902,
+        "riseM": -5,
+        "ratio": -0.17677669529663687,
+        "degrees": -10.024987862075742,
+        "costEquivalentM": 31.81980515339464
+      },
+      {
+        "dx": 20,
+        "dy": 20,
+        "shift": 1024,
+        "runM": 28.284271247461902,
+        "riseM": -5,
+        "ratio": -0.17677669529663687,
+        "degrees": -10.024987862075742,
+        "costEquivalentM": 31.81980515339464
+      },
+      {
+        "dx": 20,
+        "dy": 20,
+        "shift": 3396190,
+        "runM": 28.284271247461902,
+        "riseM": -5,
+        "ratio": -0.17677669529663687,
+        "degrees": -10.024987862075742,
+        "costEquivalentM": 31.81980515339464
+      },
+      {
+        "dx": -20,
+        "dy": -20,
+        "shift": 0,
+        "runM": 28.284271247461902,
+        "riseM": 5,
+        "ratio": 0.17677669529663687,
+        "degrees": 10.024987862075742,
+        "costEquivalentM": 31.81980515339464
+      },
+      {
+        "dx": -20,
+        "dy": -20,
+        "shift": 1024,
+        "runM": 28.284271247461902,
+        "riseM": 5,
+        "ratio": 0.17677669529663687,
+        "degrees": 10.024987862075742,
+        "costEquivalentM": 31.81980515339464
+      },
+      {
+        "dx": -20,
+        "dy": -20,
+        "shift": 3396190,
+        "runM": 28.284271247461902,
+        "riseM": 5,
+        "ratio": 0.17677669529663687,
+        "degrees": 10.024987862075742,
+        "costEquivalentM": 31.81980515339464
+      }
+    ],
+    "varyingCorrection": {
+      "formula": "N(x,y)=0.02*x",
+      "originalRatio": 0.25,
+      "correctedRatio": 0.27
+    },
+    "qualification": "No correction applied to any Mars sample; invariance assumes common exactly represented offsets, not arbitrary float32 requantization."
+  },
+  "nativeHeuristic": {
+    "goals": [
+      {
+        "row": 586,
+        "column": 522
+      },
+      {
+        "row": 586,
+        "column": 777
+      },
+      {
+        "row": 841,
+        "column": 777
+      },
+      {
+        "row": 841,
+        "column": 522
+      },
+      {
+        "row": 714,
+        "column": 650
+      }
+    ],
+    "directedEdgeGoalChecks": 2606100,
+    "minimumSlackM": 1.8929881662188563e-8,
+    "multiplier": 0.999999999,
+    "exactMath": "Metric triangle inequality gives h(u)<=alpha*d(u,v)+h(v)<=d(u,v)+h(v) for alpha<=1; nonnegative squared-grade penalties preserve this bound."
+  }
+}

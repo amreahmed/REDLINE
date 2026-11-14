@@ -1,0 +1,122 @@
+Command: node docs/evidence/science-routing-audit/registration/reproduce-source-geometry.mjs
+Exit code: 0
+{
+  "receiptsVerified": 10,
+  "recordsVerified": 3,
+  "nativeGeometry": "validated against fetched ISIS/PDS3/VRT metadata",
+  "featureMappings": [
+    {
+      "id": "jezero",
+      "approximateCoordinate": [
+        77.69,
+        18.41
+      ],
+      "arithmeticSourceRow": 922,
+      "arithmeticSourceColumn": 1569,
+      "nativeCellCenter": [
+        77.6900337457199,
+        18.40993182224058
+      ],
+      "insideNativeDemEnvelope": true,
+      "insidePlanningCrop": false,
+      "qualification": "Arithmetical mapping only; not a registered named-feature measurement or automatic route endpoint."
+    },
+    {
+      "id": "belva",
+      "approximateCoordinate": [
+        77.38,
+        18.48
+      ],
+      "arithmeticSourceRow": 714,
+      "arithmeticSourceColumn": 650,
+      "nativeCellCenter": [
+        77.37995202842774,
+        18.48011353845034
+      ],
+      "insideNativeDemEnvelope": true,
+      "insidePlanningCrop": true,
+      "qualification": "Arithmetical mapping only; not a registered named-feature measurement or automatic route endpoint."
+    },
+    {
+      "id": "neretva",
+      "approximateCoordinate": [
+        77.2,
+        18.55
+      ],
+      "arithmeticSourceRow": 507,
+      "arithmeticSourceColumn": 117,
+      "nativeCellCenter": [
+        77.20011138064024,
+        18.549957842562936
+      ],
+      "insideNativeDemEnvelope": true,
+      "insidePlanningCrop": false,
+      "qualification": "Arithmetical mapping only; not a registered named-feature measurement or automatic route endpoint."
+    }
+  ],
+  "featureRegistration": "not validated: supplied source references establish convention and coarse coordinate placement, not landmark registration"
+}
+{
+  "sourceScript": "docs/evidence/scientific-validation/feature-registration/audit-feature-registration.mjs",
+  "sourceScriptSha256": "0ca21607b62dcfc6c681451711ea8f24461bfa75735c33356ce1223fe69eec96",
+  "savedMeasurementSha256": "c71cecf56f70f3467f3e722910b30361605a0a89be55ae5abb9a66dd66722364",
+  "reproducedMeasurementSha256": "c71cecf56f70f3467f3e722910b30361605a0a89be55ae5abb9a66dd66722364",
+  "byteIdentical": true,
+  "verifiedReceipts": 10,
+  "verifiedNamedSourceRecords": 3,
+  "coordinateCornersChecked": 4,
+  "nativeCentersChecked": 7,
+  "featureMappings": [
+    {
+      "id": "jezero",
+      "approximateCoordinate": [
+        77.69,
+        18.41
+      ],
+      "arithmeticSourceRow": 922,
+      "arithmeticSourceColumn": 1569,
+      "nativeCellCenter": [
+        77.6900337457199,
+        18.40993182224058
+      ],
+      "insideNativeDemEnvelope": true,
+      "insidePlanningCrop": false,
+      "qualification": "Arithmetical mapping only; not a registered named-feature measurement or automatic route endpoint."
+    },
+    {
+      "id": "belva",
+      "approximateCoordinate": [
+        77.38,
+        18.48
+      ],
+      "arithmeticSourceRow": 714,
+      "arithmeticSourceColumn": 650,
+      "nativeCellCenter": [
+        77.37995202842774,
+        18.48011353845034
+      ],
+      "insideNativeDemEnvelope": true,
+      "insidePlanningCrop": true,
+      "qualification": "Arithmetical mapping only; not a registered named-feature measurement or automatic route endpoint."
+    },
+    {
+      "id": "neretva",
+      "approximateCoordinate": [
+        77.2,
+        18.55
+      ],
+      "arithmeticSourceRow": 507,
+      "arithmeticSourceColumn": 117,
+      "nativeCellCenter": [
+        77.20011138064024,
+        18.549957842562936
+      ],
+      "insideNativeDemEnvelope": true,
+      "insidePlanningCrop": false,
+      "qualification": "Arithmetical mapping only; not a registered named-feature measurement or automatic route endpoint."
+    }
+  ],
+  "imageExtraEastWidthM": 12,
+  "qualification": "Source coordinate convention, native metadata and coarse arithmetic placement are verified. Named-feature fine registration and independent absolute control remain unavailable."
+}
+

@@ -1,0 +1,106 @@
+Command: node docs/evidence/scientific-gate-resolution/registration/fetch-places-records.mjs --verify-saved
+Exit code: 0
+
+[
+  {
+    "file": "places-root-index.html",
+    "status": 200,
+    "bytes": 1442
+  },
+  {
+    "file": "places-bundle.xml",
+    "status": 200,
+    "bytes": 5041
+  },
+  {
+    "file": "localizations-index.html",
+    "status": 200,
+    "bytes": 2362
+  },
+  {
+    "file": "maps-index.html",
+    "status": 200,
+    "bytes": 1224
+  },
+  {
+    "file": "orbital-index.html",
+    "status": 200,
+    "bytes": 6924
+  },
+  {
+    "file": "best_tactical.csv",
+    "status": 200,
+    "bytes": 171404
+  },
+  {
+    "file": "best_tactical.csv.xml",
+    "status": 200,
+    "bytes": 15898
+  },
+  {
+    "file": "view_metadata.csv",
+    "status": 200,
+    "bytes": 284
+  },
+  {
+    "file": "view_metadata.csv.xml",
+    "status": 200,
+    "bytes": 6602
+  },
+  {
+    "file": "m20_orbital_map.xml",
+    "status": 200,
+    "bytes": 16717
+  },
+  {
+    "file": "m20_orbital_dem.xml",
+    "status": 200,
+    "bytes": 16565
+  },
+  {
+    "file": "orbital_1_metadata.csv",
+    "status": 200,
+    "bytes": 1698
+  },
+  {
+    "file": "orbital_1_metadata.csv.xml",
+    "status": 200,
+    "bytes": 5648
+  },
+  {
+    "file": "orbital_2_metadata.csv",
+    "status": 200,
+    "bytes": 1462
+  },
+  {
+    "file": "orbital_2_metadata.csv.xml",
+    "status": 200,
+    "bytes": 5648
+  },
+  {
+    "file": "orbital_origin.csv",
+    "status": 200,
+    "bytes": 4952
+  },
+  {
+    "file": "orbital_origin.csv.xml",
+    "status": 200,
+    "bytes": 11809
+  },
+  {
+    "file": "orbital_origin_global.csv",
+    "status": 200,
+    "bytes": 1370
+  },
+  {
+    "file": "orbital_origin_global.csv.xml",
+    "status": 200,
+    "bytes": 7191
+  },
+  {
+    "file": "places-product-md5.txt",
+    "status": 200,
+    "bytes": 67140
+  }
+]
+
