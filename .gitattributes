@@ -17,3 +17,4 @@ public/data/jezero-terrain-grid.f32 -text
 docs/evidence/controlled-jezero-grid/** -text whitespace=-blank-at-eol,-blank-at-eof,-space-before-tab
 docs/evidence/scientific-validation/** -text whitespace=-blank-at-eol,-blank-at-eof,-space-before-tab
 docs/evidence/scientific-resolution-2026-11-14/** -text whitespace=-blank-at-eol,-blank-at-eof,-space-before-tab
+docs/evidence/scientific-gate-resolution/** -text whitespace=-blank-at-eol,-blank-at-eof,-space-before-tab

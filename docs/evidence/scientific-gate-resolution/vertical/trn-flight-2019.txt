@@ -1,0 +1,166 @@
+PRODUCTION OF THE INSIGHT WORKSPACE MOSAICS.  R. G. Deen1, F. Ayoub1, H. E. Abarca1, N. A. 
+Ruoff1, and J. N. Maki1, 1Jet Propulsion Laboratory, California Institute of Technology, 4800 Oak Grove Dr., 
+Pasadena, CA 91109, Bob.Deen@jpl.nasa.gov, Francois.Ayoub@jpl.nasa.gov, Hallie.E.Gengl@jpl.nasa.gov, 
+Nicholas.A.Ruoff@jpl.nasa.gov, Justin.N.Maki@jpl.nasa.gov. 
+ 
+Introduction:  The InSight lander’s two major in-
+struments, the seismometer (SEIS) and the heat probe 
+(HP3) had very specific requirements and “desire-
+ments” on where they can be placed on the ground, cov-
+ering properties like surface tilt, roughness, absence of 
+rocks, soil cohesion, thermal noise, etc [1].  The Instru-
+ment Site Selection Working Group (ISSWG) was re-
+sponsible for determining where to place the instru-
+ments given these criteria.  The primary data sets used 
+for this were the workspace mosaics, which were pro-
+duced by the Multimission Image Processing Lab 
+(MIPL) team using data from the Instrument Deploy-
+ment Camera (IDC) [2].  This abstract discusses how 
+they were created. 
+Mosaic Descriptions:  There were actually several 
+workspace mosaics produced for ISSWG: 
+•  Vertical projection of ICC 
+•  2 mm “low-res” mosaic 
+•  1 mm “high-res” mosaic 
+The Instrument Context Camera (ICC) is a single, 
+non-stereo camera [2].  Since stereo data was unavaila-
+ble, these initial, approximate maps were made using a 
+vertical projection [3,4], which assumes a flat planar 
+surface.  This mosaic is not discussed further here. 
+The rest of the mosaics are orthomosaics [3,4] using 
+stereo data derived from the IDC camera.  They were 
+produced in multiple coordinate frames based on cus-
+tomer needs. 
+The 2mm mosaic was the primary mosaic used to 
+determine instrument placements.  Covering the entire 
+workspace, it was acquired on sol 12 at a distance of 
+~1.5 m from the ground.  The area under the tether box 
+was imaged on sol 14, and added to the mosaic. 
+After the ISSWG team chose initial placements on 
+the 2 mm mosaic, those areas were imaged again on sol 
+16 from a distance of ~1.2 m in order to create the 1 mm 
+mosaic.  This was used to confirm placement locations. 
+Bundle Adjustment:  The IDC is not a traditional 
+stereo camera.  Rather than two cameras with a fixed 
+and known baseline as in most other Mars surface mis-
+sions, the IDC is a single camera on a movable arm.  The 
+separation between images needed for stereo ranging is 
+created by moving the arm.  Since the arm’s position is 
+only known to ~1 cm, this introduces a great deal of un-
+certainty in the baseline between stereo pairs, and accu-
+rate knowledge of the baseline is critical for stereo rang-
+ing.  Thus, the position of the cameras had to be adjusted 
+using a process known as bundle adjustment (BA) [5]. 
+Bundle adjustment uses tiepoints, which indicate the 
+same features in multiple images, to correct the camera 
+locations.  In brief, it moves the cameras around in space 
+in order to minimize the error from projecting tiepoints 
+into different images.  Under the hood the BA uses a 
+nonlinear least square optimization. 
+This was complicated by the lack of control points – 
+there were no XYZ reference points in the workspace.  
+Although the lander has fiducial markers on the deck 
+with known XYZ coordinates, pre-landing analysis 
+showed errors of 10-15 pixels in their expected loca-
+tions, likely due to errors in the arm kinematic solution, 
+so they were considered unreliable. 
+Despite these kinematic errors, the telemetered pose 
+of the camera was close enough to use as a starting 
+point.  This was critical to maximize the chances of the 
+BA converging at the global minimum, as a priori 
+knowledge helps reduce the possibility of spurious so-
+lutions.  Also helping the process was the extremely 
+high overlap between frames, required due to the obscu-
+ration of the arm.  This allowed the selection of ground 
+features visible in multiple images, which brought 
+strong geometric constraints to the BA. 
+The bundle adjustment process is somewhat self-
+correcting, especially when provided with a priori cam-
+era pose information.  Nonlinearities in the camera 
+model combined with variations in the terrain make it 
+such that the global minimum is very likely the correct 
+solution if the camera model is accurate.  Finding the 
+global minimum is key, and a priori pose information is 
+the best way to do that reliably. 
+Figure 1 shows the DEM (Digital Elevation Model) 
+from the 2 mm mosaic before and after BA.  Errors in Z 
+before adjustment averaged 5.0 mm,  up to 10.0 mm, 
+while after BA they averaged 1.9 mm, up to 3.9 mm.  
+Figure 2 shows the corresponding image mosaic. 
+It is interesting that the results obtained on Mars 
+were significantly better than those obtained during any 
+of the pre-landing tests.  This may be attributable to bet-
+ter performance of the flight unit’s arm kinematics vs. 
+the testbed, or a material that is easier to tiepoint (the 
+testbed uses a crushed garnet with a fairly large grain 
+size, which is hard to correlate on). 
+The 1 mm mosaic was similarly bundle adjusted, but 
+the 2 mm mosaic was used to create a control network 
+(i.e. the 2 mm mosaic was “fixed” and not allowed to 
+move during BA).  Thus, the 1 mm mosaic was coreg-
+istered with the 2 mm mosaic.  
+2151.pdf
+50th Lunar and Planetary Science Conference 2019 (LPI Contrib. No. 2132)
+Mosaic Production:  The MIPL pipeline [3,4] does 
+automated stereo processing of all stereo pairs from In-
+Sight.  However, when the camera poses change as the 
+result of BA, the XYZ coordinates of each pixel must 
+be recomputed.  Fortunately, the stereo correlation pro-
+cess, which is the most time consuming part of stereo 
+analysis, need not be rerun.  Scripts were used to recom-
+pute all of the XYZ data based on the BA results. 
+The marsortho program [3,4] was used to create or-
+thomosaics.  These orthomosaics create a true overhead 
+view using the XYZ coordinate of each pixel to place 
+that pixel in the correct spot in the mosaic. 
+Despite being radiometrically corrected, the mosaic 
+had significant brightness seams.  A brightness correc-
+tion process [3], similar to BA but adjusting the bright-
+ness and contrast of each frame in HSI color space, 
+brought all the brightness seams into line. 
+Placement Products:  The MIPL team developed a 
+series of analysis programs to help ISSWG determine 
+where to place the instruments.  These programs ana-
+lyzed the part of the workspace reachable by the arm, 
+the tilt of the instrument if it were placed at each point, 
+and several aspects of surface roughness under the in-
+strument feet or body.  A goodness map combined all of 
+these into one summary product, per instrument, show-
+ing where the instrument could be placed [3,4]. 
+As luck would have it, InSight landed in an almost 
+perfectly flat, rock-free location.  Thus, almost the entire 
+workspace was green, meaning it met all tilt and rough-
+ness criteria.  After working with challenging work-
+spaces on every prelanding test, this was quite a surprise 
+to the team!  Figure 3 shows the goodness maps for 
+SEIS and HP3. 
+Although the benign environment means the place-
+ment programs turned out to not provide much addi-
+tional information, they may see another life, as the 
+team is considering how to re-use them to characterize 
+landing sites for the helicopter on the Mars 2020 mis-
+sion [6], which has much in common with instrument 
+placement. 
+References:  [1] Golombek, M. et al (2018), Space 
+Sci Rev 214:84. [2] Maki, J. et al (2018), Space Sci Rev 
+214:105. [3] Deen, R.G. et al (2018), PDS InSight Cam-
+era SIS. [4] Abarca, H. et al (2018), Space Sci Rev (in 
+review). [5] Triggs, B. et al (2000), IWVA 1999 pp.298-
+372. [6] Balaram, B. et al (2018), doi: 10.2514/6.2018-
+0023 
+ 
+ 
+ 
+ 
+ 
+ 
+5m 
+1a) 
+5m 
+1b) 
+Figure 1: Workspace 2mm DEM before (left) and after (right) bundle adjustment 
+Figure 3: Goodness map for SEIS 
+(top) and HP3 (bottom) 
+Figure 2: 2mm workspace mosaic 
+2151.pdf
+50th Lunar and Planetary Science Conference 2019 (LPI Contrib. No. 2132)

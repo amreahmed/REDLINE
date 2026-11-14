@@ -1,0 +1,503 @@
+# Notes
+
+# Environment.yml for deploy
+# Create tiffs from cubes and clip to overlap using the warp/translate
+# Plot axes/label axes
+# Function documentation
+# Bin script tiff creation
+# Analysis bin script
+    # - Quiver png
+    # - Homography.txt (9 numbers)
+    # - Dataframe to csv (keep names the same)
+    # - Stats to csv (Dataframe describe data + quantile data(x, y, magnitude))
+
+# Box to Histogram
+# Correlation/Coregistration in Z dimension
+    # - Apply homography
+    # - Difference the two DTMs for some Z offset
+
+#-------Nice To Have-------
+# Specify meters or pixels for plotting
+# Be sure to switch the kernel to autocnet
+# Running the Notebook
+
+Run these first two cells to define imports and the functions used in the rest of the notebook.
+import os
+import sys
+import cv2
+import json
+import gdal
+import math
+import affine
+from osgeo import ogr
+
+import numpy as np
+import scipy
+import pandas as pd
+import cv2
+
+from plio.geofuncs import geofuncs
+from plio.io.io_gdal import GeoDataset
+from autocnet.matcher import subpixel as sp
+from autocnet.transformation import homography as hg
+from autocnet.camera import camera
+from autocnet.transformation.fundamental_matrix import compute_fundamental_matrix
+
+import matplotlib.pyplot as plt
+%matplotlib inline
+
+plt.rcParams['image.cmap'] = 'plasma'
+# Creates a pandas dataframe of the image information you are currently using
+def image_summary(cub_image1, cub_image2, tiff_geo1, tiff_geo2):
+    
+    # Allows dataframe to show entire result
+    pd.set_option('display.max_colwidth', -1)
+    columns = {'File Type': [cub_image1.split('.')[-1], cub_image2.split('.')[-1]],
+               'File Path': [cub_image1, cub_image2],
+               'Pixel Resolution': [tiff_geo1.pixel_width, tiff_geo2.pixel_width], 
+               'Units': [tiff_geo1.scale[0], tiff_geo2.scale[0]],
+               'Image Name': [tiff_geo1, tiff_geo2]}
+    
+    df = pd.DataFrame(data = columns)
+    
+    # Reorder the dataframe columnds to th e right order
+    df = df[['Image Name', 'Pixel Resolution', 'Units','File Type', 'File Path']]
+    
+    return df
+
+# Plot the images and there overlapping grid area
+def show_coregistration(source_image, destination_image, **kwargs):
+    plt.figure(0, figsize=(10, 10))
+    plt.imshow(source_image, **kwargs)
+    plt.imshow(destination_image, **kwargs)
+    plt.show()
+
+# Show the quiver plot of the offsets
+def display_quiver(comp_df, source_image, mask = [], scale = 100, scale_units = 'inches', **kwargs):
+    if len(mask) != 0:
+        comp_df = comp_df[mask]
+    plt.imshow(source_image, cmap="Greys", alpha = .5)
+    plt.quiver(comp_df['destination_x'], comp_df['destination_y'], 
+               -(comp_df['xoff']), (comp_df['yoff']),
+               color = 'Red', scale = scale, scale_units = scale_units, **kwargs)
+    
+# Given an index in the dataframe examine the before and after
+# when the offset is applied
+def examine_point(idx, size, comp_df, source_image, destination_image, mask = [], **kwargs):
+    if len(mask) != 0:
+        comp_df = comp_df[mask]
+        
+    plt.figure(2, figsize=(5, 5))
+    plt.text(20, 50, 'Before Offset Correction', fontsize=12)
+    x, y = int(comp_df.iloc[idx]['source_x']), int(comp_df.iloc[idx]['source_y'])
+    plt.imshow(source_image[y - size:y + size, x - size:x + size], **kwargs)
+
+    x, y = int(comp_df.iloc[idx]['destination_x']), int(comp_df.iloc[idx]['destination_y'])
+    plt.imshow(destination_image[y - size:y + size, x - size:x + size], **kwargs)
+
+    plt.figure(3, figsize=(5, 5))
+    plt.text(20, 50, 'After Offset Correction', fontsize=12)
+    x, y = int(comp_df.iloc[idx]['offset_source_x']), int(comp_df.iloc[idx]['offset_source_y'])
+    plt.imshow(source_image[y - size: y + size, x - size: x + size], **kwargs)
+
+    x, y = int(comp_df.iloc[idx]['destination_x']), int(comp_df.iloc[idx]['destination_y'])
+    plt.imshow(destination_image[y - size:y + size, x - size:x + size], **kwargs)
+    plt.show()
+    
+    offset_x, offset_y, corr = comp_df.iloc[idx][['xoff', 'yoff', 'corr']]
+    print('X Offset: {}\nY Offset: {}\nCorrelation: {}'.format(offset_x, offset_y, corr))
+    
+def compute_homography(comp_df):
+    x1 = np.array([*zip(comp_df['offset_source_x'].__array__(), comp_df['offset_source_y'].__array__())])
+    x2 = np.array([*zip(comp_df['destination_x'].__array__(), comp_df['destination_y'].__array__())])
+    H, mask = hg.compute_homography(x1, x2)
+    
+    return H, mask
+
+# Apply the homography to the source image and display
+def apply_homography(comp_df, image, H, height, width):
+    result = cv2.warpPerspective(image, H, (height, width))
+    
+    img_min = np.nanmin(image)
+    img_max = np.nanmax(image)
+    
+    result[result > img_max] = np.NAN
+    result[result < img_min] = np.NAN
+    
+    return result
+    
+def generate_point_grid(source_geo, destination_geo, source_raster, destination_raster, size):
+    # Compute the overlap and get the corners now that
+    # we have the geometry
+    overlap_hull = source_geo.compute_overlap(destination_geo)[0]
+
+    # Get the lats and lons of the assocaited corners
+    overlap_lon = [i[0] for i in overlap_hull]
+    overlap_lat = [i[1] for i in overlap_hull]
+
+    # Define a ratio so the distrabution is even
+    overlap_ratio = (max(overlap_lon) - min(overlap_lon)) / (max(overlap_lat) - min(overlap_lat))
+
+    lon = np.linspace(min(overlap_lon) + .001, max(overlap_lon) - .001, size)
+    lat = np.linspace(min(overlap_lat) + .001, max(overlap_lat) - .001, round(size/overlap_ratio))
+
+    # Get the lat, lon position for the grid
+    lonv, latv = np.meshgrid(lon, lat, sparse=True)
+    print('Generating a', len(lonv[0]), 'by', len(latv), 'point grid')
+
+    coords = []
+
+    # Begin looping over each point in the grid
+    for lat_val in latv:
+        for lon_val in lonv[0]:
+            # Find the point in pixel space for each image and get the value
+            x1, y1  = source_geo.latlon_to_pixel(lat_val[0], lon_val)
+            x2, y2  = destination_geo.latlon_to_pixel(lat_val[0], lon_val)
+            point_val1 = source_raster[y1 - 1, x1 - 1]
+            point_val2 = destination_raster[y2 - 1, x2 - 1]
+
+            # If either is zero then the point should be ignored
+            # as it lies outside of the true overlap
+            if point_val1 > 0 and point_val2 > 0:
+                coords.append([x1, y1, x2, y2, lat_val[0], lon_val])
+
+    # Build dataframe after grid contruction for data storage and 
+    # ease of access
+    df = pd.DataFrame(coords, columns = ['source_x', 
+                                         'source_y', 
+                                         'destination_x', 
+                                         'destination_y', 
+                                         'lat', 
+                                         'lon'])
+    return df
+
+# The Meat and Potatoes of offset calculation
+def compute_offsets(df, s_img, d_img, template_size, search_size, corr_threshold=0.9):
+    offsets = []
+
+    # Iterate through each point in the dataframe and calculate offsets
+    print('Computing Offsets')
+    for idx, row in df.iterrows():
+
+        x, y = row['source_x'], row['source_y']
+        s_template = sp.clip_roi(s_img, (x, y), template_size)
+
+
+        x, y = row['destination_x'], row['destination_y']
+        d_search = sp.clip_roi(d_img, (x, y), search_size)
+
+        xoff, yoff, corr = sp.subpixel_offset(s_template, d_search)
+        mag = np.linalg.norm([xoff, yoff])
+        # Apply the offsets to the source points and 
+        # save those as well
+        offset_source_x = row['source_x'] - xoff
+        offset_source_y = row['source_y'] + yoff
+        # Rotation based on a flipped y axis and a 90 degree rotate by axis from 0 to 360
+        rotation = (((math.atan2(-yoff, -xoff) / math.pi * 180) + 90) +360) % 360
+        offsets.append([offset_source_x, offset_source_y, xoff, yoff, mag, corr, rotation])
+        sys.stdout.write('%s%s\r' % (round((idx/len(df) * 100)), '% complete'))
+        sys.stdout.flush()
+        
+    off_df = pd.DataFrame(offsets, columns = ['offset_source_x', 'offset_source_y', 'xoff', 'yoff', 'mag', 'corr', 'rotation'])
+    comp_df = df.merge(off_df, left_index=True, right_index=True)
+    corr_mask = comp_df['corr'] > corr_threshold
+    
+    H, mask = compute_homography(comp_df[corr_mask])
+    mask_index = comp_df[corr_mask][mask].index.__array__()
+    full_mask = [True if i in mask_index else False for i, val in comp_df.iterrows()]
+    return comp_df, H, full_mask
+
+# Function to create CDF graphs for offsets
+def calculate_cdf_graphs(comp_df, step = .01, df_mask = True):
+
+    if df_mask:
+        comp_df = comp_df[mask]
+    
+    def generate_cdf_graph(column, step, **kwargs):
+        # Set min/maxes for the column
+        max_bin, min_bin = np.max(comp_df[column]), np.min(comp_df[column])
+        
+        # Get cumulative data and the count
+        bins, count, cumulative = cumulative_stats(comp_df, column_name = column, bin_start = min_bin, bin_end = max_bin, bin_step = step, df_mask = False)
+        
+        # Use the min and max to determine the base for each column
+        base = np.linspace(min_bin, max_bin + 1, len(cumulative))
+        
+        # Plot the cumulative function
+        plt.plot(base, cumulative * 100, **kwargs)
+    
+    
+    plt.figure(0, figsize=(15,15))
+    generate_cdf_graph("mag", step, label= "Magnitude", c='b', linestyle='--')
+    generate_cdf_graph("xoff", step, label= "Xoff", c='r', linestyle=':')
+    generate_cdf_graph("yoff", step, label= "Yoff", c='g', linestyle='-.')
+    plt.legend(loc=5, fontsize="x-large")
+    plt.grid(True)
+
+    # Setup Labels for graph
+    plt.xlabel('Pixel Offset Value', fontsize=15)
+    plt.ylabel('Percentage of Values', fontsize=15)
+    plt.title('CDF Mars2020 Pixel Offset', fontsize=18)
+    
+    if not use_default_graph_values:
+        plt.xticks(np.arange(x_start, x_end, x_step))
+        plt.yticks(np.arange(y_start, y_end, y_step))
+
+    plt.show()
+    
+def cumulative_stats(comp_df, column_name='mag', bin_start=0, bin_end=100, bin_step=1, df_mask=True):
+    
+    # Grabs the masked data
+    # Allows for using non-mask data
+    if df_mask:
+        data = comp_df[mask][column_name]
+    else:
+        data = comp_df[column_name]
+    
+    # Generates the bins for cumulative stats
+    bins = np.arange(bin_start, bin_end, bin_step)
+    
+    # Puts the data into bins
+    organized_data = np.digitize(data, bins)
+    
+    # Counts the number in each bin
+    count = np.bincount(organized_data)
+    
+    # Calculates total_count for percentage 
+    total_count = np.sum(count)
+    count_percentage = count / total_count
+    
+    # Calculates the cumulative sum using the count_percentage array
+    cumulative_sum = np.cumsum(count_percentage)
+    
+    return bins, count, cumulative_sum
+
+def calculate_cumulative_statistics_df(comp_df, bin_step = .25):
+
+    # Setup values for min and max
+    def generate_column_df(column):
+        # Cumulative Statistics
+        max_val, min_val = np.amax(comp_df[mask][column]), np.amin(comp_df[mask][column])
+        
+        bins, count, cumulative_sum = cumulative_stats(comp_df, column_name=column, bin_start=min_val, bin_end=max_val, bin_step=bin_step)
+        bins = np.append(bins, max_val)
+        
+        # Generates the data for the DataFrame
+        columns = {column.capitalize() + ' Count': count, 
+                   column.capitalize() + ' Cumulative': cumulative_sum, 
+                   column.capitalize() + ' Bins': bins}
+        
+        return pd.DataFrame(data=columns)
+
+    # Generates the dataframe
+    mag_df = generate_column_df("mag")
+    yoff_df = generate_column_df("xoff")
+    xoff_df = generate_column_df("yoff")
+
+    cum_df = pd.concat([xoff_df, yoff_df, mag_df], axis=1)
+    
+    return cum_df
+# Paths and Files
+
+Similarly to the Image Conversion notebook this notebook requires a similar image setup. For now, I would copy the contents of that cell of the image conversion notebook into the cell bellow.
+Each cube requires a "basepath" and the cubes name.
+
+The basepath is the path to the directory containing the cubes. Ideally, you would want to place mutiple cubes within the same directory
+to make opening and accessing them easier. In the cell bellow, define various basepaths and cub names.
+
+You then can define the two cubes however you want using the basepath and a cube.
+# setup the paths to cubes and tiffs
+hirise_basepath = '/work/projects/mars2020_trn/test_images_jupyter/HiRISE_Jezero/'
+ctx_20_basepath = '/work/projects/mars2020_trn/test_images_jupyter/CTX_Jezero/'
+ctx_6_basepath = '/work/projects/mars2020_trn/test_images_jupyter/CTX_Jezero/'
+hrsc_basepath = '/work/projects/mars2020_trn/test_images_jupyter/HRSC_Jezero/'
+
+hirise_dem1 = os.path.join(hirise_basepath, 'DEM_1m_Jezero_CE_isis3.cub')
+hirise_dem2 = os.path.join(hirise_basepath, 'DEM_1m_Jezero_C_isis3.cub')
+
+ctx_dem1 = os.path.join(ctx_6_basepath, 'tfm_abso_Jezero_F05_V6_IAUsph_adj_XYZposAndVelAndAngles_20m_onePassAfterngate.tiff')
+ctx_dem2 = os.path.join(ctx_6_basepath, 'tfm_abso_Jezero_J03_V6_IAUsph_adj_XYZposAndVelAndAngles_20m_onePassAfterngate.tiff')
+
+# setup the paths to cubes and tiffs
+hirise_cub1 = "ESP_023524_1985_1m_o_isis3.cub"
+hirise_cub2 = "ESP_048908_1985_1m_o_isis3.cub"
+ctx_cub1 = "F05_037607_2008_XN_20N282W_v6_PosAndVelAndAngles_20m_o.cub"
+ctx_cub2 = "J03_045994_1986_XN_18N282W_v6_20m_o.cub"
+ctx_cub3 = "F05_037607_2008_XN_20N282W_v6_PosAndVelAndAngles_6m_o.cub"
+ctx_cub4 = "J03_045994_1986_XN_18N282W_v6_6m_o.cub"
+hrsc_cub = "H5270_0000_ND4.IMG"
+
+cub_image1 = os.path.join(hirise_basepath, hirise_cub1)
+cub_image2 = os.path.join(hirise_basepath, hirise_cub2)
+
+# cub_image1 = os.path.join(ctx_6_basepath, ctx_cub3)
+# cub_image2 = os.path.join(ctx_6_basepath, ctx_cub4)
+
+# cub_image1 = os.path.join(ctx_20_basepath, ctx_cub1)
+# cub_image2 = os.path.join(ctx_20_basepath, ctx_cub2)
+
+# cub_image1 = hirise_dem1
+# cub_image2 = hirise_dem2
+
+# cub_image1 = ctx_dem1
+# cub_image2 = ctx_dem2
+# Variables
+You can also define
+
+* Search Size 
+    * Some integer i to generate and i x i search space
+    * Increasing this value will make the overall process take longer but be more precise
+* Template 
+    * Size Some integer i to generate and i x i template
+    * Increasing this value will make the overall process shorter but less precise
+* Grid Size 
+    * Some integer i to generate an i by j grid of points, where j is determined dynamically
+    * Increasing this value will make the overall process longer as there will be more points on the image
+* Correlation Threshold 
+    * Some float <= 1 for how corrlated two points need to be to include in homography calculation
+    * Increasing this value will limit the system to points that are within the given percentile
+* Use Default Graph Values 
+    * As long as this is True, it will autoscale the CDF graphs, if it is turned to False it will then use the   values defined after it to set the grid range 
+* X Axis Values 
+    * x_start: The x axis starting point for the range of values desired for preview on the CDF graph
+    * x_end: The x axis end point for the range of values desired for preview on the CDF graph
+    * x_step: The value of each step that will be taken between (x_start, x_end) Ex. A step value of 5 where the range of values is (0, 100) this would produce 20 ticks on the x axis.
+* Y Axis Values
+    * y_start: The y axis starting point for the range of values desired for preview on the CDF graph
+    * y_end: The y axis end point for the range of values desired for preview on the CDF graph
+    * y_step: The value of each step that will be taken between (y_start, y_end) Ex. A step value of 5 where the range of values is (0, 100) this would produce 20 ticks on the y axis.
+search_size = 101
+template_size = 25
+grid_size = 20
+corr_threshold = .95
+
+use_default_graph_values = True
+
+# X Axis Values
+x_start = 0
+x_end = 100
+x_step = 1
+
+# Y Axis Values
+y_start = 0
+y_end = 100
+y_step = 1
+tiff_image1 = os.path.splitext(cub_image1)[0] + '.tiff'
+tiff_image2 = os.path.splitext(cub_image2)[0] + '.tiff'
+
+tiff_geo1 = GeoDataset(tiff_image1)
+tiff_geo2 = GeoDataset(tiff_image2)
+
+# Setup and redefine all 0 values as NaNs
+arr_image1 = tiff_geo1.read_array(1)
+arr_image1[arr_image1 == 0] = np.NaN
+
+arr_image2 = tiff_geo2.read_array(1)
+arr_image2[arr_image2 == 0] = np.NaN
+# Image Summary Box
+
+This information is based on the current images you are using. All information is pulled from the images themselves.
+image_summary(cub_image1, cub_image2, tiff_geo1, tiff_geo2)
+show_coregistration(arr_image1, arr_image2, alpha = .5)
+# Generate a dataframe of points associated with a grid where each point
+# in the grid is seperated by
+df = generate_point_grid(tiff_geo1, tiff_geo2, arr_image1, arr_image2, grid_size)
+comp_df, H, mask = compute_offsets(df, tiff_geo1, tiff_geo2, template_size, search_size, corr_threshold)
+H
+# CDF Graphs
+
+This next cell calcullates CDF graphs for the magnitude of x-offets and y-offsets, it also displays the CDF line for x-offset and y-offset individually.
+calculate_cdf_graphs(comp_df, step = .2, df_mask=True)
+# Statistical Data
+
+The three cells bellow are all focused on the statistics of the computation.
+
+## Units
+
+__Xoff__: All pixel values, displaying stats on the shift in the x direction <br>
+__Yoff__: All pixel values, displaying stats on the shift in the y direction <br>
+__Corr__: All as percentages, displaying stats on the correlation between point comparisons in the current calculation
+
+This goes for both the table bellow and the three box plots bellow.
+stats_file_name = 'stats.csv'
+
+# Add units / calculates stats
+stats = comp_df[mask][['xoff', 'yoff', 'mag', 'corr', 'rotation']].describe([.25, .5, .75, .99])
+
+# # Calculates rms and adds it to the dataframe
+mean_squared = np.square(stats.loc['mean'])
+std_squared = np.square(stats.loc['std'])
+rms = np.sqrt(mean_squared + std_squared)
+stats.loc['rms'] = rms
+stats = stats.sort_index()
+
+# Converts to CSV using the stats_file_name variable
+stats.to_csv(stats_file_name, index=False)
+
+stats
+# Cumulative Statistics CSV
+
+Running the next cell will produce a CSV of the cumulative statistics of whatever column __('xoff, 'yoff', 'mag')__ you choose.
+cum_df = calculate_cumulative_statistics_df(comp_df, bin_step = .25)
+
+cum_df
+# Run this cell for a CSV of the statistics from above
+
+__stats_file_name__: This can be used for a regular file_name and will convert to a CSV in the same directory or it can be              used to specify a filepath to write the CSV to.
+# file_name for CSV 
+stats_file_name = 'stats.csv'
+
+# Creates the combined stats dataframe
+new_cum_df = pd.concat([stats, cum_df], axis=1)
+
+# Converts the dataframe to CSV
+new_cum_df.to_csv(stats_file_name, encoding='utf-8')
+# Add descriptions/units
+plot = comp_df[mask][['xoff', 'yoff', 'mag']].plot(kind='box', figsize=(10, 10))
+plot.set_ylabel('Pixel Offset (pixels)', fontsize=18)
+plt.show()
+plot = comp_df['corr'][mask].plot(kind='box', figsize=(10, 10))
+plot.set_ylabel('Percentage', fontsize=18)
+plt.show()
+# Quiver Plot Display
+
+Uses the comp_df's x, and y offsets to generate the quiver arrows. While they seem exaggerated they size of a quiver is relative to it's magnitude. Where scale uses the magnitude to draw itself.
+plt.figure(4, figsize=(20, 20))
+display_quiver(comp_df[mask], arr_image2, scale = 20)
+plt.show()
+# Quiver Information to CSV
+Run the next cell to convert the comp_df to CSV, allowing you to load it into another GIS program.
+# file_name for CSV 
+quiver_file_name = 'name_of_quiver.csv'
+
+# Converts above cell to CSV
+comp_df.to_csv(quiver_file_name, encoding='utf-8')
+# Single Point Display
+
+The first value is the point on the image from left to right, bottom to top.<br>That is, the leftmost, bottom point is 0, the next to the right is 1, etc.
+
+The second value is the size of the area to display in pixels as a square.
+examine_point(17, 100, comp_df[mask], arr_image1, arr_image2, alpha = .5)
+# Homography Application
+
+Uses the homography generated by the initial compute offsets function to realign the initial images.
+<br>This is only as accurate as the homography that was generated and is more or less a sanity check.
+dem_geo1 = GeoDataset(hirise_dem1)
+dem_geo2 = GeoDataset(hirise_dem2)
+
+# Setup and redefine all 0 values as NaNs
+arr_image1 = dem_geo1.read_array(1)
+arr_image1[np.isclose(arr_image1, -3.4028227e+38)] = np.NaN
+
+arr_image2 = dem_geo2.read_array(1)
+arr_image2[np.isclose(arr_image2, -3.4028227e+38)] = np.NaN
+show_coregistration(arr_image1, arr_image2, alpha = .5)
+new_image = apply_homography(comp_df[mask], arr_image2, H, height=len(arr_image1[0]), width=len(arr_image1))
+show_coregistration(new_image, arr_image1, alpha = .5)
+plt.figure(figsize=(30, 30))
+diff = abs(new_image) - abs(arr_image1)
+plt.imshow(diff)
+series = pd.Series(data = diff.flatten())
+series.dropna()
+series.describe()
+

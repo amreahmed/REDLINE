@@ -1,0 +1,7327 @@
+{
+  "patches": [
+    {
+      "id": "r660-c550",
+      "index": 0,
+      "diagnosticSplit": "fit",
+      "nativeCtxTopLeftLineSample": [
+        2137,
+        1771
+      ],
+      "ctxTransform": [
+        6.0,
+        0.0,
+        4584289.250853,
+        0.0,
+        -6.0,
+        1096871.140188
+      ],
+      "nativePlacesTransformExpressedInCtxProjection": [
+        0.26357125155277505,
+        0.0,
+        4584268.15756101,
+        0.0,
+        -0.25,
+        1096867.25
+      ],
+      "validMatchingPixelFraction": 0.72357177734375,
+      "candidateCount": 21,
+      "retainedCount": 0,
+      "medianPlacesMatchOffsetM": null,
+      "candidates": [
+        {
+          "id": "r660-c550-p0",
+          "patch": "r660-c550",
+          "ctxNativeLineSampleCentreIndex": [
+            2186,
+            1846
+          ],
+          "ctxPatchPixelXY": [
+            75,
+            49
+          ],
+          "ctxProjectionCentreM": [
+            4584742.250853,
+            1096574.140188
+          ],
+          "variants": {
+            "15": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "21": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "31": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            }
+          },
+          "retainedForDiagnostic": false,
+          "rejectionReason": "masked or outside patch"
+        },
+        {
+          "id": "r660-c550-p1",
+          "patch": "r660-c550",
+          "ctxNativeLineSampleCentreIndex": [
+            2167,
+            1824
+          ],
+          "ctxPatchPixelXY": [
+            53,
+            30
+          ],
+          "ctxProjectionCentreM": [
+            4584610.250853,
+            1096688.140188
+          ],
+          "variants": {
+            "15": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "21": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "31": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            }
+          },
+          "retainedForDiagnostic": false,
+          "rejectionReason": "masked or outside patch"
+        },
+        {
+          "id": "r660-c550-p2",
+          "patch": "r660-c550",
+          "ctxNativeLineSampleCentreIndex": [
+            2191,
+            1866
+          ],
+          "ctxPatchPixelXY": [
+            95,
+            54
+          ],
+          "ctxProjectionCentreM": [
+            4584862.250853,
+            1096544.140188
+          ],
+          "variants": {
+            "15": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "21": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "31": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            }
+          },
+          "retainedForDiagnostic": false,
+          "rejectionReason": "masked or outside patch"
+        },
+        {
+          "id": "r660-c550-p3",
+          "patch": "r660-c550",
+          "ctxNativeLineSampleCentreIndex": [
+            2216,
+            1839
+          ],
+          "ctxPatchPixelXY": [
+            68,
+            79
+          ],
+          "ctxProjectionCentreM": [
+            4584700.250853,
+            1096394.140188
+          ],
+          "variants": {
+            "15": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "21": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "31": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            }
+          },
+          "retainedForDiagnostic": false,
+          "rejectionReason": "masked or outside patch"
+        },
+        {
+          "id": "r660-c550-p4",
+          "patch": "r660-c550",
+          "ctxNativeLineSampleCentreIndex": [
+            2238,
+            1872
+          ],
+          "ctxPatchPixelXY": [
+            101,
+            101
+          ],
+          "ctxProjectionCentreM": [
+            4584898.250853,
+            1096262.140188
+          ],
+          "variants": {
+            "15": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "21": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "31": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            }
+          },
+          "retainedForDiagnostic": false,
+          "rejectionReason": "masked or outside patch"
+        },
+        {
+          "id": "r660-c550-p5",
+          "patch": "r660-c550",
+          "ctxNativeLineSampleCentreIndex": [
+            2186,
+            1814
+          ],
+          "ctxPatchPixelXY": [
+            43,
+            49
+          ],
+          "ctxProjectionCentreM": [
+            4584550.250853,
+            1096574.140188
+          ],
+          "variants": {
+            "15": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "21": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "31": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            }
+          },
+          "retainedForDiagnostic": false,
+          "rejectionReason": "masked or outside patch"
+        },
+        {
+          "id": "r660-c550-p6",
+          "patch": "r660-c550",
+          "ctxNativeLineSampleCentreIndex": [
+            2225,
+            1801
+          ],
+          "ctxPatchPixelXY": [
+            30,
+            88
+          ],
+          "ctxProjectionCentreM": [
+            4584472.250853,
+            1096340.140188
+          ],
+          "variants": {
+            "15": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "21": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "31": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            }
+          },
+          "retainedForDiagnostic": false,
+          "rejectionReason": "masked or outside patch"
+        },
+        {
+          "id": "r660-c550-p7",
+          "patch": "r660-c550",
+          "ctxNativeLineSampleCentreIndex": [
+            2209,
+            1801
+          ],
+          "ctxPatchPixelXY": [
+            30,
+            72
+          ],
+          "ctxProjectionCentreM": [
+            4584472.250853,
+            1096436.140188
+          ],
+          "variants": {
+            "15": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "21": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "31": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            }
+          },
+          "retainedForDiagnostic": false,
+          "rejectionReason": "masked or outside patch"
+        },
+        {
+          "id": "r660-c550-p8",
+          "patch": "r660-c550",
+          "ctxNativeLineSampleCentreIndex": [
+            2207,
+            1819
+          ],
+          "ctxPatchPixelXY": [
+            48,
+            70
+          ],
+          "ctxProjectionCentreM": [
+            4584580.250853,
+            1096448.140188
+          ],
+          "variants": {
+            "15": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "21": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "31": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            }
+          },
+          "retainedForDiagnostic": false,
+          "rejectionReason": "masked or outside patch"
+        },
+        {
+          "id": "r660-c550-p9",
+          "patch": "r660-c550",
+          "ctxNativeLineSampleCentreIndex": [
+            2185,
+            1832
+          ],
+          "ctxPatchPixelXY": [
+            61,
+            48
+          ],
+          "ctxProjectionCentreM": [
+            4584658.250853,
+            1096580.140188
+          ],
+          "variants": {
+            "15": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "21": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "31": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            }
+          },
+          "retainedForDiagnostic": false,
+          "rejectionReason": "masked or outside patch"
+        },
+        {
+          "id": "r660-c550-p10",
+          "patch": "r660-c550",
+          "ctxNativeLineSampleCentreIndex": [
+            2217,
+            1853
+          ],
+          "ctxPatchPixelXY": [
+            82,
+            80
+          ],
+          "ctxProjectionCentreM": [
+            4584784.250853,
+            1096388.140188
+          ],
+          "variants": {
+            "15": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "21": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "31": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            }
+          },
+          "retainedForDiagnostic": false,
+          "rejectionReason": "masked or outside patch"
+        },
+        {
+          "id": "r660-c550-p11",
+          "patch": "r660-c550",
+          "ctxNativeLineSampleCentreIndex": [
+            2172,
+            1842
+          ],
+          "ctxPatchPixelXY": [
+            71,
+            35
+          ],
+          "ctxProjectionCentreM": [
+            4584718.250853,
+            1096658.140188
+          ],
+          "variants": {
+            "15": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "21": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "31": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            }
+          },
+          "retainedForDiagnostic": false,
+          "rejectionReason": "masked or outside patch"
+        },
+        {
+          "id": "r660-c550-p12",
+          "patch": "r660-c550",
+          "ctxNativeLineSampleCentreIndex": [
+            2198,
+            1836
+          ],
+          "ctxPatchPixelXY": [
+            65,
+            61
+          ],
+          "ctxProjectionCentreM": [
+            4584682.250853,
+            1096502.140188
+          ],
+          "variants": {
+            "15": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "21": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "31": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            }
+          },
+          "retainedForDiagnostic": false,
+          "rejectionReason": "masked or outside patch"
+        },
+        {
+          "id": "r660-c550-p13",
+          "patch": "r660-c550",
+          "ctxNativeLineSampleCentreIndex": [
+            2227,
+            1846
+          ],
+          "ctxPatchPixelXY": [
+            75,
+            90
+          ],
+          "ctxProjectionCentreM": [
+            4584742.250853,
+            1096328.140188
+          ],
+          "variants": {
+            "15": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "21": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "31": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            }
+          },
+          "retainedForDiagnostic": false,
+          "rejectionReason": "masked or outside patch"
+        },
+        {
+          "id": "r660-c550-p14",
+          "patch": "r660-c550",
+          "ctxNativeLineSampleCentreIndex": [
+            2166,
+            1869
+          ],
+          "ctxPatchPixelXY": [
+            98,
+            29
+          ],
+          "ctxProjectionCentreM": [
+            4584880.250853,
+            1096694.140188
+          ],
+          "variants": {
+            "15": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "21": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "31": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            }
+          },
+          "retainedForDiagnostic": false,
+          "rejectionReason": "masked or outside patch"
+        },
+        {
+          "id": "r660-c550-p15",
+          "patch": "r660-c550",
+          "ctxNativeLineSampleCentreIndex": [
+            2178,
+            1855
+          ],
+          "ctxPatchPixelXY": [
+            84,
+            41
+          ],
+          "ctxProjectionCentreM": [
+            4584796.250853,
+            1096622.140188
+          ],
+          "variants": {
+            "15": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "21": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "31": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            }
+          },
+          "retainedForDiagnostic": false,
+          "rejectionReason": "masked or outside patch"
+        },
+        {
+          "id": "r660-c550-p16",
+          "patch": "r660-c550",
+          "ctxNativeLineSampleCentreIndex": [
+            2224,
+            1871
+          ],
+          "ctxPatchPixelXY": [
+            100,
+            87
+          ],
+          "ctxProjectionCentreM": [
+            4584892.250853,
+            1096346.140188
+          ],
+          "variants": {
+            "15": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "21": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "31": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            }
+          },
+          "retainedForDiagnostic": false,
+          "rejectionReason": "masked or outside patch"
+        },
+        {
+          "id": "r660-c550-p17",
+          "patch": "r660-c550",
+          "ctxNativeLineSampleCentreIndex": [
+            2175,
+            1804
+          ],
+          "ctxPatchPixelXY": [
+            33,
+            38
+          ],
+          "ctxProjectionCentreM": [
+            4584490.250853,
+            1096640.140188
+          ],
+          "variants": {
+            "15": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "21": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "31": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            }
+          },
+          "retainedForDiagnostic": false,
+          "rejectionReason": "masked or outside patch"
+        },
+        {
+          "id": "r660-c550-p18",
+          "patch": "r660-c550",
+          "ctxNativeLineSampleCentreIndex": [
+            2235,
+            1820
+          ],
+          "ctxPatchPixelXY": [
+            49,
+            98
+          ],
+          "ctxProjectionCentreM": [
+            4584586.250853,
+            1096280.140188
+          ],
+          "variants": {
+            "15": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "21": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "31": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            }
+          },
+          "retainedForDiagnostic": false,
+          "rejectionReason": "masked or outside patch"
+        },
+        {
+          "id": "r660-c550-p19",
+          "patch": "r660-c550",
+          "ctxNativeLineSampleCentreIndex": [
+            2225,
+            1828
+          ],
+          "ctxPatchPixelXY": [
+            57,
+            88
+          ],
+          "ctxProjectionCentreM": [
+            4584634.250853,
+            1096340.140188
+          ],
+          "variants": {
+            "15": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "21": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "31": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            }
+          },
+          "retainedForDiagnostic": false,
+          "rejectionReason": "masked or outside patch"
+        },
+        {
+          "id": "r660-c550-p20",
+          "patch": "r660-c550",
+          "ctxNativeLineSampleCentreIndex": [
+            2163,
+            1852
+          ],
+          "ctxPatchPixelXY": [
+            81,
+            26
+          ],
+          "ctxProjectionCentreM": [
+            4584778.250853,
+            1096712.140188
+          ],
+          "variants": {
+            "15": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "21": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "31": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            }
+          },
+          "retainedForDiagnostic": false,
+          "rejectionReason": "masked or outside patch"
+        }
+      ]
+    },
+    {
+      "id": "r660-c650",
+      "index": 1,
+      "diagnosticSplit": "held_out",
+      "nativeCtxTopLeftLineSample": [
+        2137,
+        2104
+      ],
+      "ctxTransform": [
+        6.0,
+        0.0,
+        4586287.250853,
+        0.0,
+        -6.0,
+        1096871.140188
+      ],
+      "nativePlacesTransformExpressedInCtxProjection": [
+        0.26357125155277505,
+        0.0,
+        4586268.399789044,
+        0.0,
+        -0.25,
+        1096867.25
+      ],
+      "validMatchingPixelFraction": 0.78070068359375,
+      "candidateCount": 22,
+      "retainedCount": 0,
+      "medianPlacesMatchOffsetM": null,
+      "candidates": [
+        {
+          "id": "r660-c650-p0",
+          "patch": "r660-c650",
+          "ctxNativeLineSampleCentreIndex": [
+            2174,
+            2150
+          ],
+          "ctxPatchPixelXY": [
+            46,
+            37
+          ],
+          "ctxProjectionCentreM": [
+            4586566.250853,
+            1096646.140188
+          ],
+          "variants": {
+            "15": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "21": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "31": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            }
+          },
+          "retainedForDiagnostic": false,
+          "rejectionReason": "masked or outside patch"
+        },
+        {
+          "id": "r660-c650-p1",
+          "patch": "r660-c650",
+          "ctxNativeLineSampleCentreIndex": [
+            2206,
+            2171
+          ],
+          "ctxPatchPixelXY": [
+            67,
+            69
+          ],
+          "ctxProjectionCentreM": [
+            4586692.250853,
+            1096454.140188
+          ],
+          "variants": {
+            "15": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "21": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "31": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            }
+          },
+          "retainedForDiagnostic": false,
+          "rejectionReason": "masked or outside patch"
+        },
+        {
+          "id": "r660-c650-p2",
+          "patch": "r660-c650",
+          "ctxNativeLineSampleCentreIndex": [
+            2230,
+            2180
+          ],
+          "ctxPatchPixelXY": [
+            76,
+            93
+          ],
+          "ctxProjectionCentreM": [
+            4586746.250853,
+            1096310.140188
+          ],
+          "variants": {
+            "15": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "21": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "31": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            }
+          },
+          "retainedForDiagnostic": false,
+          "rejectionReason": "masked or outside patch"
+        },
+        {
+          "id": "r660-c650-p3",
+          "patch": "r660-c650",
+          "ctxNativeLineSampleCentreIndex": [
+            2223,
+            2170
+          ],
+          "ctxPatchPixelXY": [
+            66,
+            86
+          ],
+          "ctxProjectionCentreM": [
+            4586686.250853,
+            1096352.140188
+          ],
+          "variants": {
+            "15": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "21": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "31": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            }
+          },
+          "retainedForDiagnostic": false,
+          "rejectionReason": "masked or outside patch"
+        },
+        {
+          "id": "r660-c650-p4",
+          "patch": "r660-c650",
+          "ctxNativeLineSampleCentreIndex": [
+            2202,
+            2155
+          ],
+          "ctxPatchPixelXY": [
+            51,
+            65
+          ],
+          "ctxProjectionCentreM": [
+            4586596.250853,
+            1096478.140188
+          ],
+          "variants": {
+            "15": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "21": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "31": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            }
+          },
+          "retainedForDiagnostic": false,
+          "rejectionReason": "masked or outside patch"
+        },
+        {
+          "id": "r660-c650-p5",
+          "patch": "r660-c650",
+          "ctxNativeLineSampleCentreIndex": [
+            2212,
+            2201
+          ],
+          "ctxPatchPixelXY": [
+            97,
+            75
+          ],
+          "ctxProjectionCentreM": [
+            4586872.250853,
+            1096418.140188
+          ],
+          "variants": {
+            "15": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "21": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "31": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            }
+          },
+          "retainedForDiagnostic": false,
+          "rejectionReason": "masked or outside patch"
+        },
+        {
+          "id": "r660-c650-p6",
+          "patch": "r660-c650",
+          "ctxNativeLineSampleCentreIndex": [
+            2214,
+            2135
+          ],
+          "ctxPatchPixelXY": [
+            31,
+            77
+          ],
+          "ctxProjectionCentreM": [
+            4586476.250853,
+            1096406.140188
+          ],
+          "variants": {
+            "15": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "21": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "31": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            }
+          },
+          "retainedForDiagnostic": false,
+          "rejectionReason": "masked or outside patch"
+        },
+        {
+          "id": "r660-c650-p7",
+          "patch": "r660-c650",
+          "ctxNativeLineSampleCentreIndex": [
+            2185,
+            2182
+          ],
+          "ctxPatchPixelXY": [
+            78,
+            48
+          ],
+          "ctxProjectionCentreM": [
+            4586758.250853,
+            1096580.140188
+          ],
+          "variants": {
+            "15": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "21": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "31": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            }
+          },
+          "retainedForDiagnostic": false,
+          "rejectionReason": "masked or outside patch"
+        },
+        {
+          "id": "r660-c650-p8",
+          "patch": "r660-c650",
+          "ctxNativeLineSampleCentreIndex": [
+            2233,
+            2132
+          ],
+          "ctxPatchPixelXY": [
+            28,
+            96
+          ],
+          "ctxProjectionCentreM": [
+            4586458.250853,
+            1096292.140188
+          ],
+          "variants": {
+            "15": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "21": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "31": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            }
+          },
+          "retainedForDiagnostic": false,
+          "rejectionReason": "masked or outside patch"
+        },
+        {
+          "id": "r660-c650-p9",
+          "patch": "r660-c650",
+          "ctxNativeLineSampleCentreIndex": [
+            2235,
+            2160
+          ],
+          "ctxPatchPixelXY": [
+            56,
+            98
+          ],
+          "ctxProjectionCentreM": [
+            4586626.250853,
+            1096280.140188
+          ],
+          "variants": {
+            "15": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "21": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "31": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            }
+          },
+          "retainedForDiagnostic": false,
+          "rejectionReason": "masked or outside patch"
+        },
+        {
+          "id": "r660-c650-p10",
+          "patch": "r660-c650",
+          "ctxNativeLineSampleCentreIndex": [
+            2174,
+            2133
+          ],
+          "ctxPatchPixelXY": [
+            29,
+            37
+          ],
+          "ctxProjectionCentreM": [
+            4586464.250853,
+            1096646.140188
+          ],
+          "variants": {
+            "15": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "21": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "31": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            }
+          },
+          "retainedForDiagnostic": false,
+          "rejectionReason": "masked or outside patch"
+        },
+        {
+          "id": "r660-c650-p11",
+          "patch": "r660-c650",
+          "ctxNativeLineSampleCentreIndex": [
+            2232,
+            2205
+          ],
+          "ctxPatchPixelXY": [
+            101,
+            95
+          ],
+          "ctxProjectionCentreM": [
+            4586896.250853,
+            1096298.140188
+          ],
+          "variants": {
+            "15": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "21": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "31": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            }
+          },
+          "retainedForDiagnostic": false,
+          "rejectionReason": "masked or outside patch"
+        },
+        {
+          "id": "r660-c650-p12",
+          "patch": "r660-c650",
+          "ctxNativeLineSampleCentreIndex": [
+            2165,
+            2193
+          ],
+          "ctxPatchPixelXY": [
+            89,
+            28
+          ],
+          "ctxProjectionCentreM": [
+            4586824.250853,
+            1096700.140188
+          ],
+          "variants": {
+            "15": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "21": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "31": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            }
+          },
+          "retainedForDiagnostic": false,
+          "rejectionReason": "masked or outside patch"
+        },
+        {
+          "id": "r660-c650-p13",
+          "patch": "r660-c650",
+          "ctxNativeLineSampleCentreIndex": [
+            2227,
+            2149
+          ],
+          "ctxPatchPixelXY": [
+            45,
+            90
+          ],
+          "ctxProjectionCentreM": [
+            4586560.250853,
+            1096328.140188
+          ],
+          "variants": {
+            "15": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "21": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "31": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            }
+          },
+          "retainedForDiagnostic": false,
+          "rejectionReason": "masked or outside patch"
+        },
+        {
+          "id": "r660-c650-p14",
+          "patch": "r660-c650",
+          "ctxNativeLineSampleCentreIndex": [
+            2182,
+            2197
+          ],
+          "ctxPatchPixelXY": [
+            93,
+            45
+          ],
+          "ctxProjectionCentreM": [
+            4586848.250853,
+            1096598.140188
+          ],
+          "variants": {
+            "15": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "21": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "31": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            }
+          },
+          "retainedForDiagnostic": false,
+          "rejectionReason": "masked or outside patch"
+        },
+        {
+          "id": "r660-c650-p15",
+          "patch": "r660-c650",
+          "ctxNativeLineSampleCentreIndex": [
+            2206,
+            2189
+          ],
+          "ctxPatchPixelXY": [
+            85,
+            69
+          ],
+          "ctxProjectionCentreM": [
+            4586800.250853,
+            1096454.140188
+          ],
+          "variants": {
+            "15": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "21": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "31": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            }
+          },
+          "retainedForDiagnostic": false,
+          "rejectionReason": "masked or outside patch"
+        },
+        {
+          "id": "r660-c650-p16",
+          "patch": "r660-c650",
+          "ctxNativeLineSampleCentreIndex": [
+            2173,
+            2169
+          ],
+          "ctxPatchPixelXY": [
+            65,
+            36
+          ],
+          "ctxProjectionCentreM": [
+            4586680.250853,
+            1096652.140188
+          ],
+          "variants": {
+            "15": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "21": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "31": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            }
+          },
+          "retainedForDiagnostic": false,
+          "rejectionReason": "masked or outside patch"
+        },
+        {
+          "id": "r660-c650-p17",
+          "patch": "r660-c650",
+          "ctxNativeLineSampleCentreIndex": [
+            2195,
+            2194
+          ],
+          "ctxPatchPixelXY": [
+            90,
+            58
+          ],
+          "ctxProjectionCentreM": [
+            4586830.250853,
+            1096520.140188
+          ],
+          "variants": {
+            "15": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "21": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "31": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            }
+          },
+          "retainedForDiagnostic": false,
+          "rejectionReason": "masked or outside patch"
+        },
+        {
+          "id": "r660-c650-p18",
+          "patch": "r660-c650",
+          "ctxNativeLineSampleCentreIndex": [
+            2185,
+            2140
+          ],
+          "ctxPatchPixelXY": [
+            36,
+            48
+          ],
+          "ctxProjectionCentreM": [
+            4586506.250853,
+            1096580.140188
+          ],
+          "variants": {
+            "15": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "21": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "31": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            }
+          },
+          "retainedForDiagnostic": false,
+          "rejectionReason": "masked or outside patch"
+        },
+        {
+          "id": "r660-c650-p19",
+          "patch": "r660-c650",
+          "ctxNativeLineSampleCentreIndex": [
+            2217,
+            2159
+          ],
+          "ctxPatchPixelXY": [
+            55,
+            80
+          ],
+          "ctxProjectionCentreM": [
+            4586620.250853,
+            1096388.140188
+          ],
+          "variants": {
+            "15": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "21": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "31": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            }
+          },
+          "retainedForDiagnostic": false,
+          "rejectionReason": "masked or outside patch"
+        },
+        {
+          "id": "r660-c650-p20",
+          "patch": "r660-c650",
+          "ctxNativeLineSampleCentreIndex": [
+            2170,
+            2182
+          ],
+          "ctxPatchPixelXY": [
+            78,
+            33
+          ],
+          "ctxProjectionCentreM": [
+            4586758.250853,
+            1096670.140188
+          ],
+          "variants": {
+            "15": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "21": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "31": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            }
+          },
+          "retainedForDiagnostic": false,
+          "rejectionReason": "masked or outside patch"
+        },
+        {
+          "id": "r660-c650-p21",
+          "patch": "r660-c650",
+          "ctxNativeLineSampleCentreIndex": [
+            2221,
+            2189
+          ],
+          "ctxPatchPixelXY": [
+            85,
+            84
+          ],
+          "ctxProjectionCentreM": [
+            4586800.250853,
+            1096364.140188
+          ],
+          "variants": {
+            "15": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "21": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "31": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            }
+          },
+          "retainedForDiagnostic": false,
+          "rejectionReason": "masked or outside patch"
+        }
+      ]
+    },
+    {
+      "id": "r660-c750",
+      "index": 2,
+      "diagnosticSplit": "fit",
+      "nativeCtxTopLeftLineSample": [
+        2137,
+        2437
+      ],
+      "ctxTransform": [
+        6.0,
+        0.0,
+        4588285.250853,
+        0.0,
+        -6.0,
+        1096871.140188
+      ],
+      "nativePlacesTransformExpressedInCtxProjection": [
+        0.26357125155277505,
+        0.0,
+        4588268.378445826,
+        0.0,
+        -0.25,
+        1096867.25
+      ],
+      "validMatchingPixelFraction": 0.86871337890625,
+      "candidateCount": 26,
+      "retainedCount": 0,
+      "medianPlacesMatchOffsetM": null,
+      "candidates": [
+        {
+          "id": "r660-c750-p0",
+          "patch": "r660-c750",
+          "ctxNativeLineSampleCentreIndex": [
+            2227,
+            2479
+          ],
+          "ctxPatchPixelXY": [
+            42,
+            90
+          ],
+          "ctxProjectionCentreM": [
+            4588540.250853,
+            1096328.140188
+          ],
+          "variants": {
+            "15": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "21": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "31": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            }
+          },
+          "retainedForDiagnostic": false,
+          "rejectionReason": "masked or outside patch"
+        },
+        {
+          "id": "r660-c750-p1",
+          "patch": "r660-c750",
+          "ctxNativeLineSampleCentreIndex": [
+            2229,
+            2504
+          ],
+          "ctxPatchPixelXY": [
+            67,
+            92
+          ],
+          "ctxProjectionCentreM": [
+            4588690.250853,
+            1096316.140188
+          ],
+          "variants": {
+            "15": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "21": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "31": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            }
+          },
+          "retainedForDiagnostic": false,
+          "rejectionReason": "masked or outside patch"
+        },
+        {
+          "id": "r660-c750-p2",
+          "patch": "r660-c750",
+          "ctxNativeLineSampleCentreIndex": [
+            2188,
+            2523
+          ],
+          "ctxPatchPixelXY": [
+            86,
+            51
+          ],
+          "ctxProjectionCentreM": [
+            4588804.250853,
+            1096562.140188
+          ],
+          "variants": {
+            "15": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "21": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "31": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            }
+          },
+          "retainedForDiagnostic": false,
+          "rejectionReason": "masked or outside patch"
+        },
+        {
+          "id": "r660-c750-p3",
+          "patch": "r660-c750",
+          "ctxNativeLineSampleCentreIndex": [
+            2206,
+            2504
+          ],
+          "ctxPatchPixelXY": [
+            67,
+            69
+          ],
+          "ctxProjectionCentreM": [
+            4588690.250853,
+            1096454.140188
+          ],
+          "variants": {
+            "15": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "21": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "31": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            }
+          },
+          "retainedForDiagnostic": false,
+          "rejectionReason": "masked or outside patch"
+        },
+        {
+          "id": "r660-c750-p4",
+          "patch": "r660-c750",
+          "ctxNativeLineSampleCentreIndex": [
+            2210,
+            2479
+          ],
+          "ctxPatchPixelXY": [
+            42,
+            73
+          ],
+          "ctxProjectionCentreM": [
+            4588540.250853,
+            1096430.140188
+          ],
+          "variants": {
+            "15": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "21": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "31": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            }
+          },
+          "retainedForDiagnostic": false,
+          "rejectionReason": "masked or outside patch"
+        },
+        {
+          "id": "r660-c750-p5",
+          "patch": "r660-c750",
+          "ctxNativeLineSampleCentreIndex": [
+            2165,
+            2517
+          ],
+          "ctxPatchPixelXY": [
+            80,
+            28
+          ],
+          "ctxProjectionCentreM": [
+            4588768.250853,
+            1096700.140188
+          ],
+          "variants": {
+            "15": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "21": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "31": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            }
+          },
+          "retainedForDiagnostic": false,
+          "rejectionReason": "masked or outside patch"
+        },
+        {
+          "id": "r660-c750-p6",
+          "patch": "r660-c750",
+          "ctxNativeLineSampleCentreIndex": [
+            2166,
+            2534
+          ],
+          "ctxPatchPixelXY": [
+            97,
+            29
+          ],
+          "ctxProjectionCentreM": [
+            4588870.250853,
+            1096694.140188
+          ],
+          "variants": {
+            "15": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "21": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "31": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            }
+          },
+          "retainedForDiagnostic": false,
+          "rejectionReason": "masked or outside patch"
+        },
+        {
+          "id": "r660-c750-p7",
+          "patch": "r660-c750",
+          "ctxNativeLineSampleCentreIndex": [
+            2237,
+            2464
+          ],
+          "ctxPatchPixelXY": [
+            27,
+            100
+          ],
+          "ctxProjectionCentreM": [
+            4588450.250853,
+            1096268.140188
+          ],
+          "variants": {
+            "15": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "21": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "31": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            }
+          },
+          "retainedForDiagnostic": false,
+          "rejectionReason": "masked or outside patch"
+        },
+        {
+          "id": "r660-c750-p8",
+          "patch": "r660-c750",
+          "ctxNativeLineSampleCentreIndex": [
+            2238,
+            2488
+          ],
+          "ctxPatchPixelXY": [
+            51,
+            101
+          ],
+          "ctxProjectionCentreM": [
+            4588594.250853,
+            1096262.140188
+          ],
+          "variants": {
+            "15": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "21": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "31": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            }
+          },
+          "retainedForDiagnostic": false,
+          "rejectionReason": "masked or outside patch"
+        },
+        {
+          "id": "r660-c750-p9",
+          "patch": "r660-c750",
+          "ctxNativeLineSampleCentreIndex": [
+            2167,
+            2501
+          ],
+          "ctxPatchPixelXY": [
+            64,
+            30
+          ],
+          "ctxProjectionCentreM": [
+            4588672.250853,
+            1096688.140188
+          ],
+          "variants": {
+            "15": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "21": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "31": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            }
+          },
+          "retainedForDiagnostic": false,
+          "rejectionReason": "masked or outside patch"
+        },
+        {
+          "id": "r660-c750-p10",
+          "patch": "r660-c750",
+          "ctxNativeLineSampleCentreIndex": [
+            2205,
+            2491
+          ],
+          "ctxPatchPixelXY": [
+            54,
+            68
+          ],
+          "ctxProjectionCentreM": [
+            4588612.250853,
+            1096460.140188
+          ],
+          "variants": {
+            "15": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "21": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "31": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            }
+          },
+          "retainedForDiagnostic": false,
+          "rejectionReason": "masked or outside patch"
+        },
+        {
+          "id": "r660-c750-p11",
+          "patch": "r660-c750",
+          "ctxNativeLineSampleCentreIndex": [
+            2217,
+            2489
+          ],
+          "ctxPatchPixelXY": [
+            52,
+            80
+          ],
+          "ctxProjectionCentreM": [
+            4588600.250853,
+            1096388.140188
+          ],
+          "variants": {
+            "15": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "21": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "31": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            }
+          },
+          "retainedForDiagnostic": false,
+          "rejectionReason": "masked or outside patch"
+        },
+        {
+          "id": "r660-c750-p12",
+          "patch": "r660-c750",
+          "ctxNativeLineSampleCentreIndex": [
+            2169,
+            2465
+          ],
+          "ctxPatchPixelXY": [
+            28,
+            32
+          ],
+          "ctxProjectionCentreM": [
+            4588456.250853,
+            1096676.140188
+          ],
+          "variants": {
+            "15": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "21": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "31": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            }
+          },
+          "retainedForDiagnostic": false,
+          "rejectionReason": "masked or outside patch"
+        },
+        {
+          "id": "r660-c750-p13",
+          "patch": "r660-c750",
+          "ctxNativeLineSampleCentreIndex": [
+            2202,
+            2534
+          ],
+          "ctxPatchPixelXY": [
+            97,
+            65
+          ],
+          "ctxProjectionCentreM": [
+            4588870.250853,
+            1096478.140188
+          ],
+          "variants": {
+            "15": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "21": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "31": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            }
+          },
+          "retainedForDiagnostic": false,
+          "rejectionReason": "masked or outside patch"
+        },
+        {
+          "id": "r660-c750-p14",
+          "patch": "r660-c750",
+          "ctxNativeLineSampleCentreIndex": [
+            2177,
+            2490
+          ],
+          "ctxPatchPixelXY": [
+            53,
+            40
+          ],
+          "ctxProjectionCentreM": [
+            4588606.250853,
+            1096628.140188
+          ],
+          "variants": {
+            "15": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "21": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "31": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            }
+          },
+          "retainedForDiagnostic": false,
+          "rejectionReason": "masked or outside patch"
+        },
+        {
+          "id": "r660-c750-p15",
+          "patch": "r660-c750",
+          "ctxNativeLineSampleCentreIndex": [
+            2222,
+            2522
+          ],
+          "ctxPatchPixelXY": [
+            85,
+            85
+          ],
+          "ctxProjectionCentreM": [
+            4588798.250853,
+            1096358.140188
+          ],
+          "variants": {
+            "15": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "21": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "31": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            }
+          },
+          "retainedForDiagnostic": false,
+          "rejectionReason": "masked or outside patch"
+        },
+        {
+          "id": "r660-c750-p16",
+          "patch": "r660-c750",
+          "ctxNativeLineSampleCentreIndex": [
+            2196,
+            2464
+          ],
+          "ctxPatchPixelXY": [
+            27,
+            59
+          ],
+          "ctxProjectionCentreM": [
+            4588450.250853,
+            1096514.140188
+          ],
+          "variants": {
+            "15": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "21": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "31": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            }
+          },
+          "retainedForDiagnostic": false,
+          "rejectionReason": "masked or outside patch"
+        },
+        {
+          "id": "r660-c750-p17",
+          "patch": "r660-c750",
+          "ctxNativeLineSampleCentreIndex": [
+            2177,
+            2477
+          ],
+          "ctxPatchPixelXY": [
+            40,
+            40
+          ],
+          "ctxProjectionCentreM": [
+            4588528.250853,
+            1096628.140188
+          ],
+          "variants": {
+            "15": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "21": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "31": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            }
+          },
+          "retainedForDiagnostic": false,
+          "rejectionReason": "masked or outside patch"
+        },
+        {
+          "id": "r660-c750-p18",
+          "patch": "r660-c750",
+          "ctxNativeLineSampleCentreIndex": [
+            2231,
+            2533
+          ],
+          "ctxPatchPixelXY": [
+            96,
+            94
+          ],
+          "ctxProjectionCentreM": [
+            4588864.250853,
+            1096304.140188
+          ],
+          "variants": {
+            "15": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "21": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "31": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            }
+          },
+          "retainedForDiagnostic": false,
+          "rejectionReason": "masked or outside patch"
+        },
+        {
+          "id": "r660-c750-p19",
+          "patch": "r660-c750",
+          "ctxNativeLineSampleCentreIndex": [
+            2193,
+            2491
+          ],
+          "ctxPatchPixelXY": [
+            54,
+            56
+          ],
+          "ctxProjectionCentreM": [
+            4588612.250853,
+            1096532.140188
+          ],
+          "variants": {
+            "15": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "21": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "31": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            }
+          },
+          "retainedForDiagnostic": false,
+          "rejectionReason": "masked or outside patch"
+        },
+        {
+          "id": "r660-c750-p20",
+          "patch": "r660-c750",
+          "ctxNativeLineSampleCentreIndex": [
+            2189,
+            2508
+          ],
+          "ctxPatchPixelXY": [
+            71,
+            52
+          ],
+          "ctxProjectionCentreM": [
+            4588714.250853,
+            1096556.140188
+          ],
+          "variants": {
+            "15": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "21": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "31": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            }
+          },
+          "retainedForDiagnostic": false,
+          "rejectionReason": "masked or outside patch"
+        },
+        {
+          "id": "r660-c750-p21",
+          "patch": "r660-c750",
+          "ctxNativeLineSampleCentreIndex": [
+            2206,
+            2522
+          ],
+          "ctxPatchPixelXY": [
+            85,
+            69
+          ],
+          "ctxProjectionCentreM": [
+            4588798.250853,
+            1096454.140188
+          ],
+          "variants": {
+            "15": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "21": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "31": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            }
+          },
+          "retainedForDiagnostic": false,
+          "rejectionReason": "masked or outside patch"
+        },
+        {
+          "id": "r660-c750-p22",
+          "patch": "r660-c750",
+          "ctxNativeLineSampleCentreIndex": [
+            2194,
+            2477
+          ],
+          "ctxPatchPixelXY": [
+            40,
+            57
+          ],
+          "ctxProjectionCentreM": [
+            4588528.250853,
+            1096526.140188
+          ],
+          "variants": {
+            "15": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "21": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "31": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            }
+          },
+          "retainedForDiagnostic": false,
+          "rejectionReason": "masked or outside patch"
+        },
+        {
+          "id": "r660-c750-p23",
+          "patch": "r660-c750",
+          "ctxNativeLineSampleCentreIndex": [
+            2163,
+            2478
+          ],
+          "ctxPatchPixelXY": [
+            41,
+            26
+          ],
+          "ctxProjectionCentreM": [
+            4588534.250853,
+            1096712.140188
+          ],
+          "variants": {
+            "15": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "21": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "31": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            }
+          },
+          "retainedForDiagnostic": false,
+          "rejectionReason": "masked or outside patch"
+        },
+        {
+          "id": "r660-c750-p24",
+          "patch": "r660-c750",
+          "ctxNativeLineSampleCentreIndex": [
+            2184,
+            2465
+          ],
+          "ctxPatchPixelXY": [
+            28,
+            47
+          ],
+          "ctxProjectionCentreM": [
+            4588456.250853,
+            1096586.140188
+          ],
+          "variants": {
+            "15": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "21": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "31": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            }
+          },
+          "retainedForDiagnostic": false,
+          "rejectionReason": "masked or outside patch"
+        },
+        {
+          "id": "r660-c750-p25",
+          "patch": "r660-c750",
+          "ctxNativeLineSampleCentreIndex": [
+            2236,
+            2520
+          ],
+          "ctxPatchPixelXY": [
+            83,
+            99
+          ],
+          "ctxProjectionCentreM": [
+            4588786.250853,
+            1096274.140188
+          ],
+          "variants": {
+            "15": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "21": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "31": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            }
+          },
+          "retainedForDiagnostic": false,
+          "rejectionReason": "masked or outside patch"
+        }
+      ]
+    },
+    {
+      "id": "r740-c550",
+      "index": 3,
+      "diagnosticSplit": "held_out",
+      "nativeCtxTopLeftLineSample": [
+        2404,
+        1771
+      ],
+      "ctxTransform": [
+        6.0,
+        0.0,
+        4584289.250853,
+        0.0,
+        -6.0,
+        1095269.140188
+      ],
+      "nativePlacesTransformExpressedInCtxProjection": [
+        0.26357125155277505,
+        0.0,
+        4584268.15756101,
+        0.0,
+        -0.25,
+        1095267.25
+      ],
+      "validMatchingPixelFraction": 0.865478515625,
+      "candidateCount": 26,
+      "retainedCount": 0,
+      "medianPlacesMatchOffsetM": null,
+      "candidates": [
+        {
+          "id": "r740-c550-p0",
+          "patch": "r740-c550",
+          "ctxNativeLineSampleCentreIndex": [
+            2432,
+            1801
+          ],
+          "ctxPatchPixelXY": [
+            30,
+            28
+          ],
+          "ctxProjectionCentreM": [
+            4584472.250853,
+            1095098.140188
+          ],
+          "variants": {
+            "15": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "21": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "31": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            }
+          },
+          "retainedForDiagnostic": false,
+          "rejectionReason": "masked or outside patch"
+        },
+        {
+          "id": "r740-c550-p1",
+          "patch": "r740-c550",
+          "ctxNativeLineSampleCentreIndex": [
+            2430,
+            1823
+          ],
+          "ctxPatchPixelXY": [
+            52,
+            26
+          ],
+          "ctxProjectionCentreM": [
+            4584604.250853,
+            1095110.140188
+          ],
+          "variants": {
+            "15": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "21": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "31": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            }
+          },
+          "retainedForDiagnostic": false,
+          "rejectionReason": "masked or outside patch"
+        },
+        {
+          "id": "r740-c550-p2",
+          "patch": "r740-c550",
+          "ctxNativeLineSampleCentreIndex": [
+            2489,
+            1801
+          ],
+          "ctxPatchPixelXY": [
+            30,
+            85
+          ],
+          "ctxProjectionCentreM": [
+            4584472.250853,
+            1094756.140188
+          ],
+          "variants": {
+            "15": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "21": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "31": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            }
+          },
+          "retainedForDiagnostic": false,
+          "rejectionReason": "masked or outside patch"
+        },
+        {
+          "id": "r740-c550-p3",
+          "patch": "r740-c550",
+          "ctxNativeLineSampleCentreIndex": [
+            2437,
+            1838
+          ],
+          "ctxPatchPixelXY": [
+            67,
+            33
+          ],
+          "ctxProjectionCentreM": [
+            4584694.250853,
+            1095068.140188
+          ],
+          "variants": {
+            "15": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "21": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "31": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            }
+          },
+          "retainedForDiagnostic": false,
+          "rejectionReason": "masked or outside patch"
+        },
+        {
+          "id": "r740-c550-p4",
+          "patch": "r740-c550",
+          "ctxNativeLineSampleCentreIndex": [
+            2470,
+            1829
+          ],
+          "ctxPatchPixelXY": [
+            58,
+            66
+          ],
+          "ctxProjectionCentreM": [
+            4584640.250853,
+            1094870.140188
+          ],
+          "variants": {
+            "15": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "21": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "31": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            }
+          },
+          "retainedForDiagnostic": false,
+          "rejectionReason": "masked or outside patch"
+        },
+        {
+          "id": "r740-c550-p5",
+          "patch": "r740-c550",
+          "ctxNativeLineSampleCentreIndex": [
+            2444,
+            1827
+          ],
+          "ctxPatchPixelXY": [
+            56,
+            40
+          ],
+          "ctxProjectionCentreM": [
+            4584628.250853,
+            1095026.140188
+          ],
+          "variants": {
+            "15": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "21": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "31": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            }
+          },
+          "retainedForDiagnostic": false,
+          "rejectionReason": "masked or outside patch"
+        },
+        {
+          "id": "r740-c550-p6",
+          "patch": "r740-c550",
+          "ctxNativeLineSampleCentreIndex": [
+            2490,
+            1814
+          ],
+          "ctxPatchPixelXY": [
+            43,
+            86
+          ],
+          "ctxProjectionCentreM": [
+            4584550.250853,
+            1094750.140188
+          ],
+          "variants": {
+            "15": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "21": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "31": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            }
+          },
+          "retainedForDiagnostic": false,
+          "rejectionReason": "masked or outside patch"
+        },
+        {
+          "id": "r740-c550-p7",
+          "patch": "r740-c550",
+          "ctxNativeLineSampleCentreIndex": [
+            2503,
+            1797
+          ],
+          "ctxPatchPixelXY": [
+            26,
+            99
+          ],
+          "ctxProjectionCentreM": [
+            4584448.250853,
+            1094672.140188
+          ],
+          "variants": {
+            "15": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "21": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "31": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            }
+          },
+          "retainedForDiagnostic": false,
+          "rejectionReason": "masked or outside patch"
+        },
+        {
+          "id": "r740-c550-p8",
+          "patch": "r740-c550",
+          "ctxNativeLineSampleCentreIndex": [
+            2444,
+            1805
+          ],
+          "ctxPatchPixelXY": [
+            34,
+            40
+          ],
+          "ctxProjectionCentreM": [
+            4584496.250853,
+            1095026.140188
+          ],
+          "variants": {
+            "15": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "21": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "31": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            }
+          },
+          "retainedForDiagnostic": false,
+          "rejectionReason": "masked or outside patch"
+        },
+        {
+          "id": "r740-c550-p9",
+          "patch": "r740-c550",
+          "ctxNativeLineSampleCentreIndex": [
+            2456,
+            1810
+          ],
+          "ctxPatchPixelXY": [
+            39,
+            52
+          ],
+          "ctxProjectionCentreM": [
+            4584526.250853,
+            1094954.140188
+          ],
+          "variants": {
+            "15": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "21": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "31": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            }
+          },
+          "retainedForDiagnostic": false,
+          "rejectionReason": "masked or outside patch"
+        },
+        {
+          "id": "r740-c550-p10",
+          "patch": "r740-c550",
+          "ctxNativeLineSampleCentreIndex": [
+            2505,
+            1826
+          ],
+          "ctxPatchPixelXY": [
+            55,
+            101
+          ],
+          "ctxProjectionCentreM": [
+            4584622.250853,
+            1094660.140188
+          ],
+          "variants": {
+            "15": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "21": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "31": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            }
+          },
+          "retainedForDiagnostic": false,
+          "rejectionReason": "masked or outside patch"
+        },
+        {
+          "id": "r740-c550-p11",
+          "patch": "r740-c550",
+          "ctxNativeLineSampleCentreIndex": [
+            2492,
+            1829
+          ],
+          "ctxPatchPixelXY": [
+            58,
+            88
+          ],
+          "ctxProjectionCentreM": [
+            4584640.250853,
+            1094738.140188
+          ],
+          "variants": {
+            "15": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "21": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "31": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            }
+          },
+          "retainedForDiagnostic": false,
+          "rejectionReason": "masked or outside patch"
+        },
+        {
+          "id": "r740-c550-p12",
+          "patch": "r740-c550",
+          "ctxNativeLineSampleCentreIndex": [
+            2481,
+            1845
+          ],
+          "ctxPatchPixelXY": [
+            74,
+            77
+          ],
+          "ctxProjectionCentreM": [
+            4584736.250853,
+            1094804.140188
+          ],
+          "variants": {
+            "15": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "21": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "31": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            }
+          },
+          "retainedForDiagnostic": false,
+          "rejectionReason": "masked or outside patch"
+        },
+        {
+          "id": "r740-c550-p13",
+          "patch": "r740-c550",
+          "ctxNativeLineSampleCentreIndex": [
+            2432,
+            1854
+          ],
+          "ctxPatchPixelXY": [
+            83,
+            28
+          ],
+          "ctxProjectionCentreM": [
+            4584790.250853,
+            1095098.140188
+          ],
+          "variants": {
+            "15": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "21": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "31": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            }
+          },
+          "retainedForDiagnostic": false,
+          "rejectionReason": "masked or outside patch"
+        },
+        {
+          "id": "r740-c550-p14",
+          "patch": "r740-c550",
+          "ctxNativeLineSampleCentreIndex": [
+            2462,
+            1839
+          ],
+          "ctxPatchPixelXY": [
+            68,
+            58
+          ],
+          "ctxProjectionCentreM": [
+            4584700.250853,
+            1094918.140188
+          ],
+          "variants": {
+            "15": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "21": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "31": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            }
+          },
+          "retainedForDiagnostic": false,
+          "rejectionReason": "masked or outside patch"
+        },
+        {
+          "id": "r740-c550-p15",
+          "patch": "r740-c550",
+          "ctxNativeLineSampleCentreIndex": [
+            2467,
+            1815
+          ],
+          "ctxPatchPixelXY": [
+            44,
+            63
+          ],
+          "ctxProjectionCentreM": [
+            4584556.250853,
+            1094888.140188
+          ],
+          "variants": {
+            "15": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "21": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "31": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            }
+          },
+          "retainedForDiagnostic": false,
+          "rejectionReason": "masked or outside patch"
+        },
+        {
+          "id": "r740-c550-p16",
+          "patch": "r740-c550",
+          "ctxNativeLineSampleCentreIndex": [
+            2501,
+            1844
+          ],
+          "ctxPatchPixelXY": [
+            73,
+            97
+          ],
+          "ctxProjectionCentreM": [
+            4584730.250853,
+            1094684.140188
+          ],
+          "variants": {
+            "15": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "21": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "31": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            }
+          },
+          "retainedForDiagnostic": false,
+          "rejectionReason": "masked or outside patch"
+        },
+        {
+          "id": "r740-c550-p17",
+          "patch": "r740-c550",
+          "ctxNativeLineSampleCentreIndex": [
+            2441,
+            1867
+          ],
+          "ctxPatchPixelXY": [
+            96,
+            37
+          ],
+          "ctxProjectionCentreM": [
+            4584868.250853,
+            1095044.140188
+          ],
+          "variants": {
+            "15": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "21": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "31": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            }
+          },
+          "retainedForDiagnostic": false,
+          "rejectionReason": "masked or outside patch"
+        },
+        {
+          "id": "r740-c550-p18",
+          "patch": "r740-c550",
+          "ctxNativeLineSampleCentreIndex": [
+            2478,
+            1806
+          ],
+          "ctxPatchPixelXY": [
+            35,
+            74
+          ],
+          "ctxProjectionCentreM": [
+            4584502.250853,
+            1094822.140188
+          ],
+          "variants": {
+            "15": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "21": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "31": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            }
+          },
+          "retainedForDiagnostic": false,
+          "rejectionReason": "masked or outside patch"
+        },
+        {
+          "id": "r740-c550-p19",
+          "patch": "r740-c550",
+          "ctxNativeLineSampleCentreIndex": [
+            2451,
+            1855
+          ],
+          "ctxPatchPixelXY": [
+            84,
+            47
+          ],
+          "ctxProjectionCentreM": [
+            4584796.250853,
+            1094984.140188
+          ],
+          "variants": {
+            "15": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "21": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "31": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            }
+          },
+          "retainedForDiagnostic": false,
+          "rejectionReason": "masked or outside patch"
+        },
+        {
+          "id": "r740-c550-p20",
+          "patch": "r740-c550",
+          "ctxNativeLineSampleCentreIndex": [
+            2479,
+            1820
+          ],
+          "ctxPatchPixelXY": [
+            49,
+            75
+          ],
+          "ctxProjectionCentreM": [
+            4584586.250853,
+            1094816.140188
+          ],
+          "variants": {
+            "15": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "21": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "31": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            }
+          },
+          "retainedForDiagnostic": false,
+          "rejectionReason": "masked or outside patch"
+        },
+        {
+          "id": "r740-c550-p21",
+          "patch": "r740-c550",
+          "ctxNativeLineSampleCentreIndex": [
+            2490,
+            1869
+          ],
+          "ctxPatchPixelXY": [
+            98,
+            86
+          ],
+          "ctxProjectionCentreM": [
+            4584880.250853,
+            1094750.140188
+          ],
+          "variants": {
+            "15": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "21": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "31": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            }
+          },
+          "retainedForDiagnostic": false,
+          "rejectionReason": "masked or outside patch"
+        },
+        {
+          "id": "r740-c550-p22",
+          "patch": "r740-c550",
+          "ctxNativeLineSampleCentreIndex": [
+            2467,
+            1855
+          ],
+          "ctxPatchPixelXY": [
+            84,
+            63
+          ],
+          "ctxProjectionCentreM": [
+            4584796.250853,
+            1094888.140188
+          ],
+          "variants": {
+            "15": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "21": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "31": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            }
+          },
+          "retainedForDiagnostic": false,
+          "rejectionReason": "masked or outside patch"
+        },
+        {
+          "id": "r740-c550-p23",
+          "patch": "r740-c550",
+          "ctxNativeLineSampleCentreIndex": [
+            2465,
+            1801
+          ],
+          "ctxPatchPixelXY": [
+            30,
+            61
+          ],
+          "ctxProjectionCentreM": [
+            4584472.250853,
+            1094900.140188
+          ],
+          "variants": {
+            "15": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "21": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "31": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            }
+          },
+          "retainedForDiagnostic": false,
+          "rejectionReason": "masked or outside patch"
+        },
+        {
+          "id": "r740-c550-p24",
+          "patch": "r740-c550",
+          "ctxNativeLineSampleCentreIndex": [
+            2505,
+            1868
+          ],
+          "ctxPatchPixelXY": [
+            97,
+            101
+          ],
+          "ctxProjectionCentreM": [
+            4584874.250853,
+            1094660.140188
+          ],
+          "variants": {
+            "15": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "21": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "31": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            }
+          },
+          "retainedForDiagnostic": false,
+          "rejectionReason": "masked or outside patch"
+        },
+        {
+          "id": "r740-c550-p25",
+          "patch": "r740-c550",
+          "ctxNativeLineSampleCentreIndex": [
+            2478,
+            1867
+          ],
+          "ctxPatchPixelXY": [
+            96,
+            74
+          ],
+          "ctxProjectionCentreM": [
+            4584868.250853,
+            1094822.140188
+          ],
+          "variants": {
+            "15": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "21": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "31": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            }
+          },
+          "retainedForDiagnostic": false,
+          "rejectionReason": "masked or outside patch"
+        }
+      ]
+    },
+    {
+      "id": "r740-c650",
+      "index": 4,
+      "diagnosticSplit": "fit",
+      "nativeCtxTopLeftLineSample": [
+        2404,
+        2104
+      ],
+      "ctxTransform": [
+        6.0,
+        0.0,
+        4586287.250853,
+        0.0,
+        -6.0,
+        1095269.140188
+      ],
+      "nativePlacesTransformExpressedInCtxProjection": [
+        0.26357125155277505,
+        0.0,
+        4586268.399789044,
+        0.0,
+        -0.25,
+        1095267.25
+      ],
+      "validMatchingPixelFraction": 0.79901123046875,
+      "candidateCount": 26,
+      "retainedCount": 0,
+      "medianPlacesMatchOffsetM": null,
+      "candidates": [
+        {
+          "id": "r740-c650-p0",
+          "patch": "r740-c650",
+          "ctxNativeLineSampleCentreIndex": [
+            2485,
+            2199
+          ],
+          "ctxPatchPixelXY": [
+            95,
+            81
+          ],
+          "ctxProjectionCentreM": [
+            4586860.250853,
+            1094780.140188
+          ],
+          "variants": {
+            "15": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "21": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "31": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            }
+          },
+          "retainedForDiagnostic": false,
+          "rejectionReason": "masked or outside patch"
+        },
+        {
+          "id": "r740-c650-p1",
+          "patch": "r740-c650",
+          "ctxNativeLineSampleCentreIndex": [
+            2505,
+            2131
+          ],
+          "ctxPatchPixelXY": [
+            27,
+            101
+          ],
+          "ctxProjectionCentreM": [
+            4586452.250853,
+            1094660.140188
+          ],
+          "variants": {
+            "15": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "21": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "31": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            }
+          },
+          "retainedForDiagnostic": false,
+          "rejectionReason": "masked or outside patch"
+        },
+        {
+          "id": "r740-c650-p2",
+          "patch": "r740-c650",
+          "ctxNativeLineSampleCentreIndex": [
+            2492,
+            2177
+          ],
+          "ctxPatchPixelXY": [
+            73,
+            88
+          ],
+          "ctxProjectionCentreM": [
+            4586728.250853,
+            1094738.140188
+          ],
+          "variants": {
+            "15": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "21": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "31": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            }
+          },
+          "retainedForDiagnostic": false,
+          "rejectionReason": "masked or outside patch"
+        },
+        {
+          "id": "r740-c650-p3",
+          "patch": "r740-c650",
+          "ctxNativeLineSampleCentreIndex": [
+            2470,
+            2132
+          ],
+          "ctxPatchPixelXY": [
+            28,
+            66
+          ],
+          "ctxProjectionCentreM": [
+            4586458.250853,
+            1094870.140188
+          ],
+          "variants": {
+            "15": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "21": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "31": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            }
+          },
+          "retainedForDiagnostic": false,
+          "rejectionReason": "masked or outside patch"
+        },
+        {
+          "id": "r740-c650-p4",
+          "patch": "r740-c650",
+          "ctxNativeLineSampleCentreIndex": [
+            2470,
+            2148
+          ],
+          "ctxPatchPixelXY": [
+            44,
+            66
+          ],
+          "ctxProjectionCentreM": [
+            4586554.250853,
+            1094870.140188
+          ],
+          "variants": {
+            "15": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "21": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "31": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            }
+          },
+          "retainedForDiagnostic": false,
+          "rejectionReason": "masked or outside patch"
+        },
+        {
+          "id": "r740-c650-p5",
+          "patch": "r740-c650",
+          "ctxNativeLineSampleCentreIndex": [
+            2479,
+            2184
+          ],
+          "ctxPatchPixelXY": [
+            80,
+            75
+          ],
+          "ctxProjectionCentreM": [
+            4586770.250853,
+            1094816.140188
+          ],
+          "variants": {
+            "15": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "21": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "31": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            }
+          },
+          "retainedForDiagnostic": false,
+          "rejectionReason": "masked or outside patch"
+        },
+        {
+          "id": "r740-c650-p6",
+          "patch": "r740-c650",
+          "ctxNativeLineSampleCentreIndex": [
+            2455,
+            2131
+          ],
+          "ctxPatchPixelXY": [
+            27,
+            51
+          ],
+          "ctxProjectionCentreM": [
+            4586452.250853,
+            1094960.140188
+          ],
+          "variants": {
+            "15": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "21": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "31": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            }
+          },
+          "retainedForDiagnostic": false,
+          "rejectionReason": "masked or outside patch"
+        },
+        {
+          "id": "r740-c650-p7",
+          "patch": "r740-c650",
+          "ctxNativeLineSampleCentreIndex": [
+            2461,
+            2166
+          ],
+          "ctxPatchPixelXY": [
+            62,
+            57
+          ],
+          "ctxProjectionCentreM": [
+            4586662.250853,
+            1094924.140188
+          ],
+          "variants": {
+            "15": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "21": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "31": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            }
+          },
+          "retainedForDiagnostic": false,
+          "rejectionReason": "masked or outside patch"
+        },
+        {
+          "id": "r740-c650-p8",
+          "patch": "r740-c650",
+          "ctxNativeLineSampleCentreIndex": [
+            2445,
+            2163
+          ],
+          "ctxPatchPixelXY": [
+            59,
+            41
+          ],
+          "ctxProjectionCentreM": [
+            4586644.250853,
+            1095020.140188
+          ],
+          "variants": {
+            "15": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "21": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "31": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            }
+          },
+          "retainedForDiagnostic": false,
+          "rejectionReason": "masked or outside patch"
+        },
+        {
+          "id": "r740-c650-p9",
+          "patch": "r740-c650",
+          "ctxNativeLineSampleCentreIndex": [
+            2504,
+            2170
+          ],
+          "ctxPatchPixelXY": [
+            66,
+            100
+          ],
+          "ctxProjectionCentreM": [
+            4586686.250853,
+            1094666.140188
+          ],
+          "variants": {
+            "15": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "21": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "31": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            }
+          },
+          "retainedForDiagnostic": false,
+          "rejectionReason": "masked or outside patch"
+        },
+        {
+          "id": "r740-c650-p10",
+          "patch": "r740-c650",
+          "ctxNativeLineSampleCentreIndex": [
+            2476,
+            2161
+          ],
+          "ctxPatchPixelXY": [
+            57,
+            72
+          ],
+          "ctxProjectionCentreM": [
+            4586632.250853,
+            1094834.140188
+          ],
+          "variants": {
+            "15": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "21": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "31": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            }
+          },
+          "retainedForDiagnostic": false,
+          "rejectionReason": "masked or outside patch"
+        },
+        {
+          "id": "r740-c650-p11",
+          "patch": "r740-c650",
+          "ctxNativeLineSampleCentreIndex": [
+            2431,
+            2187
+          ],
+          "ctxPatchPixelXY": [
+            83,
+            27
+          ],
+          "ctxProjectionCentreM": [
+            4586788.250853,
+            1095104.140188
+          ],
+          "variants": {
+            "15": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "21": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "31": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            }
+          },
+          "retainedForDiagnostic": false,
+          "rejectionReason": "masked or outside patch"
+        },
+        {
+          "id": "r740-c650-p12",
+          "patch": "r740-c650",
+          "ctxNativeLineSampleCentreIndex": [
+            2430,
+            2168
+          ],
+          "ctxPatchPixelXY": [
+            64,
+            26
+          ],
+          "ctxProjectionCentreM": [
+            4586674.250853,
+            1095110.140188
+          ],
+          "variants": {
+            "15": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "21": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "31": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            }
+          },
+          "retainedForDiagnostic": false,
+          "rejectionReason": "masked or outside patch"
+        },
+        {
+          "id": "r740-c650-p13",
+          "patch": "r740-c650",
+          "ctxNativeLineSampleCentreIndex": [
+            2486,
+            2141
+          ],
+          "ctxPatchPixelXY": [
+            37,
+            82
+          ],
+          "ctxProjectionCentreM": [
+            4586512.250853,
+            1094774.140188
+          ],
+          "variants": {
+            "15": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "21": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "31": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            }
+          },
+          "retainedForDiagnostic": false,
+          "rejectionReason": "masked or outside patch"
+        },
+        {
+          "id": "r740-c650-p14",
+          "patch": "r740-c650",
+          "ctxNativeLineSampleCentreIndex": [
+            2457,
+            2186
+          ],
+          "ctxPatchPixelXY": [
+            82,
+            53
+          ],
+          "ctxProjectionCentreM": [
+            4586782.250853,
+            1094948.140188
+          ],
+          "variants": {
+            "15": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "21": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "31": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            }
+          },
+          "retainedForDiagnostic": false,
+          "rejectionReason": "masked or outside patch"
+        },
+        {
+          "id": "r740-c650-p15",
+          "patch": "r740-c650",
+          "ctxNativeLineSampleCentreIndex": [
+            2504,
+            2192
+          ],
+          "ctxPatchPixelXY": [
+            88,
+            100
+          ],
+          "ctxProjectionCentreM": [
+            4586818.250853,
+            1094666.140188
+          ],
+          "variants": {
+            "15": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "21": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "31": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            }
+          },
+          "retainedForDiagnostic": false,
+          "rejectionReason": "masked or outside patch"
+        },
+        {
+          "id": "r740-c650-p16",
+          "patch": "r740-c650",
+          "ctxNativeLineSampleCentreIndex": [
+            2440,
+            2149
+          ],
+          "ctxPatchPixelXY": [
+            45,
+            36
+          ],
+          "ctxProjectionCentreM": [
+            4586560.250853,
+            1095050.140188
+          ],
+          "variants": {
+            "15": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "21": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "31": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            }
+          },
+          "retainedForDiagnostic": false,
+          "rejectionReason": "masked or outside patch"
+        },
+        {
+          "id": "r740-c650-p17",
+          "patch": "r740-c650",
+          "ctxNativeLineSampleCentreIndex": [
+            2437,
+            2202
+          ],
+          "ctxPatchPixelXY": [
+            98,
+            33
+          ],
+          "ctxProjectionCentreM": [
+            4586878.250853,
+            1095068.140188
+          ],
+          "variants": {
+            "15": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "21": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "31": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            }
+          },
+          "retainedForDiagnostic": false,
+          "rejectionReason": "masked or outside patch"
+        },
+        {
+          "id": "r740-c650-p18",
+          "patch": "r740-c650",
+          "ctxNativeLineSampleCentreIndex": [
+            2471,
+            2196
+          ],
+          "ctxPatchPixelXY": [
+            92,
+            67
+          ],
+          "ctxProjectionCentreM": [
+            4586842.250853,
+            1094864.140188
+          ],
+          "variants": {
+            "15": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "21": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "31": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            }
+          },
+          "retainedForDiagnostic": false,
+          "rejectionReason": "masked or outside patch"
+        },
+        {
+          "id": "r740-c650-p19",
+          "patch": "r740-c650",
+          "ctxNativeLineSampleCentreIndex": [
+            2492,
+            2161
+          ],
+          "ctxPatchPixelXY": [
+            57,
+            88
+          ],
+          "ctxProjectionCentreM": [
+            4586632.250853,
+            1094738.140188
+          ],
+          "variants": {
+            "15": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "21": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "31": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            }
+          },
+          "retainedForDiagnostic": false,
+          "rejectionReason": "masked or outside patch"
+        },
+        {
+          "id": "r740-c650-p20",
+          "patch": "r740-c650",
+          "ctxNativeLineSampleCentreIndex": [
+            2443,
+            2187
+          ],
+          "ctxPatchPixelXY": [
+            83,
+            39
+          ],
+          "ctxProjectionCentreM": [
+            4586788.250853,
+            1095032.140188
+          ],
+          "variants": {
+            "15": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "21": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "31": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            }
+          },
+          "retainedForDiagnostic": false,
+          "rejectionReason": "masked or outside patch"
+        },
+        {
+          "id": "r740-c650-p21",
+          "patch": "r740-c650",
+          "ctxNativeLineSampleCentreIndex": [
+            2466,
+            2177
+          ],
+          "ctxPatchPixelXY": [
+            73,
+            62
+          ],
+          "ctxProjectionCentreM": [
+            4586728.250853,
+            1094894.140188
+          ],
+          "variants": {
+            "15": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "21": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "31": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            }
+          },
+          "retainedForDiagnostic": false,
+          "rejectionReason": "masked or outside patch"
+        },
+        {
+          "id": "r740-c650-p22",
+          "patch": "r740-c650",
+          "ctxNativeLineSampleCentreIndex": [
+            2502,
+            2145
+          ],
+          "ctxPatchPixelXY": [
+            41,
+            98
+          ],
+          "ctxProjectionCentreM": [
+            4586536.250853,
+            1094678.140188
+          ],
+          "variants": {
+            "15": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "21": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "31": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            }
+          },
+          "retainedForDiagnostic": false,
+          "rejectionReason": "masked or outside patch"
+        },
+        {
+          "id": "r740-c650-p23",
+          "patch": "r740-c650",
+          "ctxNativeLineSampleCentreIndex": [
+            2454,
+            2204
+          ],
+          "ctxPatchPixelXY": [
+            100,
+            50
+          ],
+          "ctxProjectionCentreM": [
+            4586890.250853,
+            1094966.140188
+          ],
+          "variants": {
+            "15": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "21": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "31": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            }
+          },
+          "retainedForDiagnostic": false,
+          "rejectionReason": "masked or outside patch"
+        },
+        {
+          "id": "r740-c650-p24",
+          "patch": "r740-c650",
+          "ctxNativeLineSampleCentreIndex": [
+            2430,
+            2141
+          ],
+          "ctxPatchPixelXY": [
+            37,
+            26
+          ],
+          "ctxProjectionCentreM": [
+            4586512.250853,
+            1095110.140188
+          ],
+          "variants": {
+            "15": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "21": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "31": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            }
+          },
+          "retainedForDiagnostic": false,
+          "rejectionReason": "masked or outside patch"
+        },
+        {
+          "id": "r740-c650-p25",
+          "patch": "r740-c650",
+          "ctxNativeLineSampleCentreIndex": [
+            2443,
+            2133
+          ],
+          "ctxPatchPixelXY": [
+            29,
+            39
+          ],
+          "ctxProjectionCentreM": [
+            4586464.250853,
+            1095032.140188
+          ],
+          "variants": {
+            "15": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "21": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "31": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            }
+          },
+          "retainedForDiagnostic": false,
+          "rejectionReason": "masked or outside patch"
+        }
+      ]
+    },
+    {
+      "id": "r740-c750",
+      "index": 5,
+      "diagnosticSplit": "held_out",
+      "nativeCtxTopLeftLineSample": [
+        2404,
+        2437
+      ],
+      "ctxTransform": [
+        6.0,
+        0.0,
+        4588285.250853,
+        0.0,
+        -6.0,
+        1095269.140188
+      ],
+      "nativePlacesTransformExpressedInCtxProjection": [
+        0.26357125155277505,
+        0.0,
+        4588268.378445826,
+        0.0,
+        -0.25,
+        1095267.25
+      ],
+      "validMatchingPixelFraction": 0.84295654296875,
+      "candidateCount": 23,
+      "retainedCount": 0,
+      "medianPlacesMatchOffsetM": null,
+      "candidates": [
+        {
+          "id": "r740-c750-p0",
+          "patch": "r740-c750",
+          "ctxNativeLineSampleCentreIndex": [
+            2499,
+            2479
+          ],
+          "ctxPatchPixelXY": [
+            42,
+            95
+          ],
+          "ctxProjectionCentreM": [
+            4588540.250853,
+            1094696.140188
+          ],
+          "variants": {
+            "15": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "21": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "31": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            }
+          },
+          "retainedForDiagnostic": false,
+          "rejectionReason": "masked or outside patch"
+        },
+        {
+          "id": "r740-c750-p1",
+          "patch": "r740-c750",
+          "ctxNativeLineSampleCentreIndex": [
+            2455,
+            2521
+          ],
+          "ctxPatchPixelXY": [
+            84,
+            51
+          ],
+          "ctxProjectionCentreM": [
+            4588792.250853,
+            1094960.140188
+          ],
+          "variants": {
+            "15": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "21": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "31": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            }
+          },
+          "retainedForDiagnostic": false,
+          "rejectionReason": "masked or outside patch"
+        },
+        {
+          "id": "r740-c750-p2",
+          "patch": "r740-c750",
+          "ctxNativeLineSampleCentreIndex": [
+            2494,
+            2501
+          ],
+          "ctxPatchPixelXY": [
+            64,
+            90
+          ],
+          "ctxProjectionCentreM": [
+            4588672.250853,
+            1094726.140188
+          ],
+          "variants": {
+            "15": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "21": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "31": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            }
+          },
+          "retainedForDiagnostic": false,
+          "rejectionReason": "masked or outside patch"
+        },
+        {
+          "id": "r740-c750-p3",
+          "patch": "r740-c750",
+          "ctxNativeLineSampleCentreIndex": [
+            2499,
+            2514
+          ],
+          "ctxPatchPixelXY": [
+            77,
+            95
+          ],
+          "ctxProjectionCentreM": [
+            4588750.250853,
+            1094696.140188
+          ],
+          "variants": {
+            "15": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "21": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "31": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            }
+          },
+          "retainedForDiagnostic": false,
+          "rejectionReason": "masked or outside patch"
+        },
+        {
+          "id": "r740-c750-p4",
+          "patch": "r740-c750",
+          "ctxNativeLineSampleCentreIndex": [
+            2431,
+            2475
+          ],
+          "ctxPatchPixelXY": [
+            38,
+            27
+          ],
+          "ctxProjectionCentreM": [
+            4588516.250853,
+            1095104.140188
+          ],
+          "variants": {
+            "15": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "21": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "31": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            }
+          },
+          "retainedForDiagnostic": false,
+          "rejectionReason": "masked or outside patch"
+        },
+        {
+          "id": "r740-c750-p5",
+          "patch": "r740-c750",
+          "ctxNativeLineSampleCentreIndex": [
+            2475,
+            2480
+          ],
+          "ctxPatchPixelXY": [
+            43,
+            71
+          ],
+          "ctxProjectionCentreM": [
+            4588546.250853,
+            1094840.140188
+          ],
+          "variants": {
+            "15": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "21": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "31": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            }
+          },
+          "retainedForDiagnostic": false,
+          "rejectionReason": "masked or outside patch"
+        },
+        {
+          "id": "r740-c750-p6",
+          "patch": "r740-c750",
+          "ctxNativeLineSampleCentreIndex": [
+            2505,
+            2466
+          ],
+          "ctxPatchPixelXY": [
+            29,
+            101
+          ],
+          "ctxProjectionCentreM": [
+            4588462.250853,
+            1094660.140188
+          ],
+          "variants": {
+            "15": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "21": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "31": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            }
+          },
+          "retainedForDiagnostic": false,
+          "rejectionReason": "masked or outside patch"
+        },
+        {
+          "id": "r740-c750-p7",
+          "patch": "r740-c750",
+          "ctxNativeLineSampleCentreIndex": [
+            2434,
+            2532
+          ],
+          "ctxPatchPixelXY": [
+            95,
+            30
+          ],
+          "ctxProjectionCentreM": [
+            4588858.250853,
+            1095086.140188
+          ],
+          "variants": {
+            "15": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "21": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "31": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            }
+          },
+          "retainedForDiagnostic": false,
+          "rejectionReason": "masked or outside patch"
+        },
+        {
+          "id": "r740-c750-p8",
+          "patch": "r740-c750",
+          "ctxNativeLineSampleCentreIndex": [
+            2502,
+            2535
+          ],
+          "ctxPatchPixelXY": [
+            98,
+            98
+          ],
+          "ctxProjectionCentreM": [
+            4588876.250853,
+            1094678.140188
+          ],
+          "variants": {
+            "15": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "21": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "31": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            }
+          },
+          "retainedForDiagnostic": false,
+          "rejectionReason": "masked or outside patch"
+        },
+        {
+          "id": "r740-c750-p9",
+          "patch": "r740-c750",
+          "ctxNativeLineSampleCentreIndex": [
+            2473,
+            2525
+          ],
+          "ctxPatchPixelXY": [
+            88,
+            69
+          ],
+          "ctxProjectionCentreM": [
+            4588816.250853,
+            1094852.140188
+          ],
+          "variants": {
+            "15": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "21": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "31": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            }
+          },
+          "retainedForDiagnostic": false,
+          "rejectionReason": "masked or outside patch"
+        },
+        {
+          "id": "r740-c750-p10",
+          "patch": "r740-c750",
+          "ctxNativeLineSampleCentreIndex": [
+            2474,
+            2513
+          ],
+          "ctxPatchPixelXY": [
+            76,
+            70
+          ],
+          "ctxProjectionCentreM": [
+            4588744.250853,
+            1094846.140188
+          ],
+          "variants": {
+            "15": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "21": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "31": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            }
+          },
+          "retainedForDiagnostic": false,
+          "rejectionReason": "masked or outside patch"
+        },
+        {
+          "id": "r740-c750-p11",
+          "patch": "r740-c750",
+          "ctxNativeLineSampleCentreIndex": [
+            2445,
+            2506
+          ],
+          "ctxPatchPixelXY": [
+            69,
+            41
+          ],
+          "ctxProjectionCentreM": [
+            4588702.250853,
+            1095020.140188
+          ],
+          "variants": {
+            "15": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "21": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "31": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            }
+          },
+          "retainedForDiagnostic": false,
+          "rejectionReason": "masked or outside patch"
+        },
+        {
+          "id": "r740-c750-p12",
+          "patch": "r740-c750",
+          "ctxNativeLineSampleCentreIndex": [
+            2459,
+            2536
+          ],
+          "ctxPatchPixelXY": [
+            99,
+            55
+          ],
+          "ctxProjectionCentreM": [
+            4588882.250853,
+            1094936.140188
+          ],
+          "variants": {
+            "15": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "21": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "31": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            }
+          },
+          "retainedForDiagnostic": false,
+          "rejectionReason": "masked or outside patch"
+        },
+        {
+          "id": "r740-c750-p13",
+          "patch": "r740-c750",
+          "ctxNativeLineSampleCentreIndex": [
+            2430,
+            2498
+          ],
+          "ctxPatchPixelXY": [
+            61,
+            26
+          ],
+          "ctxProjectionCentreM": [
+            4588654.250853,
+            1095110.140188
+          ],
+          "variants": {
+            "15": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "21": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "31": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            }
+          },
+          "retainedForDiagnostic": false,
+          "rejectionReason": "masked or outside patch"
+        },
+        {
+          "id": "r740-c750-p14",
+          "patch": "r740-c750",
+          "ctxNativeLineSampleCentreIndex": [
+            2437,
+            2517
+          ],
+          "ctxPatchPixelXY": [
+            80,
+            33
+          ],
+          "ctxProjectionCentreM": [
+            4588768.250853,
+            1095068.140188
+          ],
+          "variants": {
+            "15": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "21": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "31": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            }
+          },
+          "retainedForDiagnostic": false,
+          "rejectionReason": "masked or outside patch"
+        },
+        {
+          "id": "r740-c750-p15",
+          "patch": "r740-c750",
+          "ctxNativeLineSampleCentreIndex": [
+            2486,
+            2474
+          ],
+          "ctxPatchPixelXY": [
+            37,
+            82
+          ],
+          "ctxProjectionCentreM": [
+            4588510.250853,
+            1094774.140188
+          ],
+          "variants": {
+            "15": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "21": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "31": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            }
+          },
+          "retainedForDiagnostic": false,
+          "rejectionReason": "masked or outside patch"
+        },
+        {
+          "id": "r740-c750-p16",
+          "patch": "r740-c750",
+          "ctxNativeLineSampleCentreIndex": [
+            2465,
+            2492
+          ],
+          "ctxPatchPixelXY": [
+            55,
+            61
+          ],
+          "ctxProjectionCentreM": [
+            4588618.250853,
+            1094900.140188
+          ],
+          "variants": {
+            "15": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "21": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "31": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            }
+          },
+          "retainedForDiagnostic": false,
+          "rejectionReason": "masked or outside patch"
+        },
+        {
+          "id": "r740-c750-p17",
+          "patch": "r740-c750",
+          "ctxNativeLineSampleCentreIndex": [
+            2464,
+            2506
+          ],
+          "ctxPatchPixelXY": [
+            69,
+            60
+          ],
+          "ctxProjectionCentreM": [
+            4588702.250853,
+            1094906.140188
+          ],
+          "variants": {
+            "15": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "21": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "31": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            }
+          },
+          "retainedForDiagnostic": false,
+          "rejectionReason": "masked or outside patch"
+        },
+        {
+          "id": "r740-c750-p18",
+          "patch": "r740-c750",
+          "ctxNativeLineSampleCentreIndex": [
+            2442,
+            2494
+          ],
+          "ctxPatchPixelXY": [
+            57,
+            38
+          ],
+          "ctxProjectionCentreM": [
+            4588630.250853,
+            1095038.140188
+          ],
+          "variants": {
+            "15": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "21": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "31": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            }
+          },
+          "retainedForDiagnostic": false,
+          "rejectionReason": "masked or outside patch"
+        },
+        {
+          "id": "r740-c750-p19",
+          "patch": "r740-c750",
+          "ctxNativeLineSampleCentreIndex": [
+            2479,
+            2498
+          ],
+          "ctxPatchPixelXY": [
+            61,
+            75
+          ],
+          "ctxProjectionCentreM": [
+            4588654.250853,
+            1094816.140188
+          ],
+          "variants": {
+            "15": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "21": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "31": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            }
+          },
+          "retainedForDiagnostic": false,
+          "rejectionReason": "masked or outside patch"
+        },
+        {
+          "id": "r740-c750-p20",
+          "patch": "r740-c750",
+          "ctxNativeLineSampleCentreIndex": [
+            2465,
+            2466
+          ],
+          "ctxPatchPixelXY": [
+            29,
+            61
+          ],
+          "ctxProjectionCentreM": [
+            4588462.250853,
+            1094900.140188
+          ],
+          "variants": {
+            "15": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "21": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "31": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            }
+          },
+          "retainedForDiagnostic": false,
+          "rejectionReason": "masked or outside patch"
+        },
+        {
+          "id": "r740-c750-p21",
+          "patch": "r740-c750",
+          "ctxNativeLineSampleCentreIndex": [
+            2478,
+            2464
+          ],
+          "ctxPatchPixelXY": [
+            27,
+            74
+          ],
+          "ctxProjectionCentreM": [
+            4588450.250853,
+            1094822.140188
+          ],
+          "variants": {
+            "15": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "21": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "31": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            }
+          },
+          "retainedForDiagnostic": false,
+          "rejectionReason": "masked or outside patch"
+        },
+        {
+          "id": "r740-c750-p22",
+          "patch": "r740-c750",
+          "ctxNativeLineSampleCentreIndex": [
+            2447,
+            2537
+          ],
+          "ctxPatchPixelXY": [
+            100,
+            43
+          ],
+          "ctxProjectionCentreM": [
+            4588888.250853,
+            1095008.140188
+          ],
+          "variants": {
+            "15": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "21": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "31": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            }
+          },
+          "retainedForDiagnostic": false,
+          "rejectionReason": "masked or outside patch"
+        }
+      ]
+    },
+    {
+      "id": "r820-c550",
+      "index": 6,
+      "diagnosticSplit": "fit",
+      "nativeCtxTopLeftLineSample": [
+        2671,
+        1771
+      ],
+      "ctxTransform": [
+        6.0,
+        0.0,
+        4584289.250853,
+        0.0,
+        -6.0,
+        1093667.140188
+      ],
+      "nativePlacesTransformExpressedInCtxProjection": [
+        0.26357125155277505,
+        0.0,
+        4584268.15756101,
+        0.0,
+        -0.25,
+        1093667.25
+      ],
+      "validMatchingPixelFraction": 0.9615478515625,
+      "candidateCount": 27,
+      "retainedCount": 0,
+      "medianPlacesMatchOffsetM": null,
+      "candidates": [
+        {
+          "id": "r820-c550-p0",
+          "patch": "r820-c550",
+          "ctxNativeLineSampleCentreIndex": [
+            2759,
+            1813
+          ],
+          "ctxPatchPixelXY": [
+            42,
+            88
+          ],
+          "ctxProjectionCentreM": [
+            4584544.250853,
+            1093136.140188
+          ],
+          "variants": {
+            "15": {
+              "valid": true,
+              "displacementPixelXY": [
+                -0.36591876956137254,
+                -0.11950683051910951
+              ],
+              "peakNcc": 0.8556965589523315,
+              "competingPeakNccOutsideTwoPixels": 0.46781399846076965,
+              "peakOnSearchEdge": false
+            },
+            "21": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "31": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            }
+          },
+          "retainedForDiagnostic": false,
+          "rejectionReason": "masked or outside patch"
+        },
+        {
+          "id": "r820-c550-p1",
+          "patch": "r820-c550",
+          "ctxNativeLineSampleCentreIndex": [
+            2738,
+            1813
+          ],
+          "ctxPatchPixelXY": [
+            42,
+            67
+          ],
+          "ctxProjectionCentreM": [
+            4584544.250853,
+            1093262.140188
+          ],
+          "variants": {
+            "15": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "21": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "31": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            }
+          },
+          "retainedForDiagnostic": false,
+          "rejectionReason": "masked or outside patch"
+        },
+        {
+          "id": "r820-c550-p2",
+          "patch": "r820-c550",
+          "ctxNativeLineSampleCentreIndex": [
+            2722,
+            1808
+          ],
+          "ctxPatchPixelXY": [
+            37,
+            51
+          ],
+          "ctxProjectionCentreM": [
+            4584514.250853,
+            1093358.140188
+          ],
+          "variants": {
+            "15": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "21": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "31": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            }
+          },
+          "retainedForDiagnostic": false,
+          "rejectionReason": "masked or outside patch"
+        },
+        {
+          "id": "r820-c550-p3",
+          "patch": "r820-c550",
+          "ctxNativeLineSampleCentreIndex": [
+            2714,
+            1819
+          ],
+          "ctxPatchPixelXY": [
+            48,
+            43
+          ],
+          "ctxProjectionCentreM": [
+            4584580.250853,
+            1093406.140188
+          ],
+          "variants": {
+            "15": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "21": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "31": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            }
+          },
+          "retainedForDiagnostic": false,
+          "rejectionReason": "masked or outside patch"
+        },
+        {
+          "id": "r820-c550-p4",
+          "patch": "r820-c550",
+          "ctxNativeLineSampleCentreIndex": [
+            2699,
+            1813
+          ],
+          "ctxPatchPixelXY": [
+            42,
+            28
+          ],
+          "ctxProjectionCentreM": [
+            4584544.250853,
+            1093496.140188
+          ],
+          "variants": {
+            "15": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "21": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "31": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            }
+          },
+          "retainedForDiagnostic": false,
+          "rejectionReason": "masked or outside patch"
+        },
+        {
+          "id": "r820-c550-p5",
+          "patch": "r820-c550",
+          "ctxNativeLineSampleCentreIndex": [
+            2765,
+            1798
+          ],
+          "ctxPatchPixelXY": [
+            27,
+            94
+          ],
+          "ctxProjectionCentreM": [
+            4584454.250853,
+            1093100.140188
+          ],
+          "variants": {
+            "15": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "21": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "31": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            }
+          },
+          "retainedForDiagnostic": false,
+          "rejectionReason": "masked or outside patch"
+        },
+        {
+          "id": "r820-c550-p6",
+          "patch": "r820-c550",
+          "ctxNativeLineSampleCentreIndex": [
+            2771,
+            1822
+          ],
+          "ctxPatchPixelXY": [
+            51,
+            100
+          ],
+          "ctxProjectionCentreM": [
+            4584598.250853,
+            1093064.140188
+          ],
+          "variants": {
+            "15": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "21": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "31": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            }
+          },
+          "retainedForDiagnostic": false,
+          "rejectionReason": "masked or outside patch"
+        },
+        {
+          "id": "r820-c550-p7",
+          "patch": "r820-c550",
+          "ctxNativeLineSampleCentreIndex": [
+            2768,
+            1864
+          ],
+          "ctxPatchPixelXY": [
+            93,
+            97
+          ],
+          "ctxProjectionCentreM": [
+            4584850.250853,
+            1093082.140188
+          ],
+          "variants": {
+            "15": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "21": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "31": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            }
+          },
+          "retainedForDiagnostic": false,
+          "rejectionReason": "masked or outside patch"
+        },
+        {
+          "id": "r820-c550-p8",
+          "patch": "r820-c550",
+          "ctxNativeLineSampleCentreIndex": [
+            2721,
+            1863
+          ],
+          "ctxPatchPixelXY": [
+            92,
+            50
+          ],
+          "ctxProjectionCentreM": [
+            4584844.250853,
+            1093364.140188
+          ],
+          "variants": {
+            "15": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "21": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "31": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            }
+          },
+          "retainedForDiagnostic": false,
+          "rejectionReason": "masked or outside patch"
+        },
+        {
+          "id": "r820-c550-p9",
+          "patch": "r820-c550",
+          "ctxNativeLineSampleCentreIndex": [
+            2751,
+            1822
+          ],
+          "ctxPatchPixelXY": [
+            51,
+            80
+          ],
+          "ctxProjectionCentreM": [
+            4584598.250853,
+            1093184.140188
+          ],
+          "variants": {
+            "15": {
+              "valid": true,
+              "displacementPixelXY": [
+                -0.3220850130886132,
+                0.2159539453051835
+              ],
+              "peakNcc": 0.8910395503044128,
+              "competingPeakNccOutsideTwoPixels": 0.6737642288208008,
+              "peakOnSearchEdge": false
+            },
+            "21": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "31": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            }
+          },
+          "retainedForDiagnostic": false,
+          "rejectionReason": "masked or outside patch"
+        },
+        {
+          "id": "r820-c550-p10",
+          "patch": "r820-c550",
+          "ctxNativeLineSampleCentreIndex": [
+            2751,
+            1804
+          ],
+          "ctxPatchPixelXY": [
+            33,
+            80
+          ],
+          "ctxProjectionCentreM": [
+            4584490.250853,
+            1093184.140188
+          ],
+          "variants": {
+            "15": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "21": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "31": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            }
+          },
+          "retainedForDiagnostic": false,
+          "rejectionReason": "masked or outside patch"
+        },
+        {
+          "id": "r820-c550-p11",
+          "patch": "r820-c550",
+          "ctxNativeLineSampleCentreIndex": [
+            2728,
+            1797
+          ],
+          "ctxPatchPixelXY": [
+            26,
+            57
+          ],
+          "ctxProjectionCentreM": [
+            4584448.250853,
+            1093322.140188
+          ],
+          "variants": {
+            "15": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "21": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "31": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            }
+          },
+          "retainedForDiagnostic": false,
+          "rejectionReason": "masked or outside patch"
+        },
+        {
+          "id": "r820-c550-p12",
+          "patch": "r820-c550",
+          "ctxNativeLineSampleCentreIndex": [
+            2753,
+            1840
+          ],
+          "ctxPatchPixelXY": [
+            69,
+            82
+          ],
+          "ctxProjectionCentreM": [
+            4584706.250853,
+            1093172.140188
+          ],
+          "variants": {
+            "15": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "21": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "31": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            }
+          },
+          "retainedForDiagnostic": false,
+          "rejectionReason": "masked or outside patch"
+        },
+        {
+          "id": "r820-c550-p13",
+          "patch": "r820-c550",
+          "ctxNativeLineSampleCentreIndex": [
+            2724,
+            1828
+          ],
+          "ctxPatchPixelXY": [
+            57,
+            53
+          ],
+          "ctxProjectionCentreM": [
+            4584634.250853,
+            1093346.140188
+          ],
+          "variants": {
+            "15": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "21": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "31": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            }
+          },
+          "retainedForDiagnostic": false,
+          "rejectionReason": "masked or outside patch"
+        },
+        {
+          "id": "r820-c550-p14",
+          "patch": "r820-c550",
+          "ctxNativeLineSampleCentreIndex": [
+            2735,
+            1848
+          ],
+          "ctxPatchPixelXY": [
+            77,
+            64
+          ],
+          "ctxProjectionCentreM": [
+            4584754.250853,
+            1093280.140188
+          ],
+          "variants": {
+            "15": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "21": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "31": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            }
+          },
+          "retainedForDiagnostic": false,
+          "rejectionReason": "masked or outside patch"
+        },
+        {
+          "id": "r820-c550-p15",
+          "patch": "r820-c550",
+          "ctxNativeLineSampleCentreIndex": [
+            2736,
+            1829
+          ],
+          "ctxPatchPixelXY": [
+            58,
+            65
+          ],
+          "ctxProjectionCentreM": [
+            4584640.250853,
+            1093274.140188
+          ],
+          "variants": {
+            "15": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "21": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "31": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            }
+          },
+          "retainedForDiagnostic": false,
+          "rejectionReason": "masked or outside patch"
+        },
+        {
+          "id": "r820-c550-p16",
+          "patch": "r820-c550",
+          "ctxNativeLineSampleCentreIndex": [
+            2733,
+            1860
+          ],
+          "ctxPatchPixelXY": [
+            89,
+            62
+          ],
+          "ctxProjectionCentreM": [
+            4584826.250853,
+            1093292.140188
+          ],
+          "variants": {
+            "15": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "21": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "31": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            }
+          },
+          "retainedForDiagnostic": false,
+          "rejectionReason": "masked or outside patch"
+        },
+        {
+          "id": "r820-c550-p17",
+          "patch": "r820-c550",
+          "ctxNativeLineSampleCentreIndex": [
+            2705,
+            1841
+          ],
+          "ctxPatchPixelXY": [
+            70,
+            34
+          ],
+          "ctxProjectionCentreM": [
+            4584712.250853,
+            1093460.140188
+          ],
+          "variants": {
+            "15": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "21": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "31": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            }
+          },
+          "retainedForDiagnostic": false,
+          "rejectionReason": "masked or outside patch"
+        },
+        {
+          "id": "r820-c550-p18",
+          "patch": "r820-c550",
+          "ctxNativeLineSampleCentreIndex": [
+            2703,
+            1827
+          ],
+          "ctxPatchPixelXY": [
+            56,
+            32
+          ],
+          "ctxProjectionCentreM": [
+            4584628.250853,
+            1093472.140188
+          ],
+          "variants": {
+            "15": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "21": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "31": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            }
+          },
+          "retainedForDiagnostic": false,
+          "rejectionReason": "masked or outside patch"
+        },
+        {
+          "id": "r820-c550-p19",
+          "patch": "r820-c550",
+          "ctxNativeLineSampleCentreIndex": [
+            2698,
+            1868
+          ],
+          "ctxPatchPixelXY": [
+            97,
+            27
+          ],
+          "ctxProjectionCentreM": [
+            4584874.250853,
+            1093502.140188
+          ],
+          "variants": {
+            "15": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "21": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "31": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            }
+          },
+          "retainedForDiagnostic": false,
+          "rejectionReason": "masked or outside patch"
+        },
+        {
+          "id": "r820-c550-p20",
+          "patch": "r820-c550",
+          "ctxNativeLineSampleCentreIndex": [
+            2760,
+            1850
+          ],
+          "ctxPatchPixelXY": [
+            79,
+            89
+          ],
+          "ctxProjectionCentreM": [
+            4584766.250853,
+            1093130.140188
+          ],
+          "variants": {
+            "15": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "21": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "31": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            }
+          },
+          "retainedForDiagnostic": false,
+          "rejectionReason": "masked or outside patch"
+        },
+        {
+          "id": "r820-c550-p21",
+          "patch": "r820-c550",
+          "ctxNativeLineSampleCentreIndex": [
+            2767,
+            1836
+          ],
+          "ctxPatchPixelXY": [
+            65,
+            96
+          ],
+          "ctxProjectionCentreM": [
+            4584682.250853,
+            1093088.140188
+          ],
+          "variants": {
+            "15": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "21": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "31": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            }
+          },
+          "retainedForDiagnostic": false,
+          "rejectionReason": "masked or outside patch"
+        },
+        {
+          "id": "r820-c550-p22",
+          "patch": "r820-c550",
+          "ctxNativeLineSampleCentreIndex": [
+            2711,
+            1798
+          ],
+          "ctxPatchPixelXY": [
+            27,
+            40
+          ],
+          "ctxProjectionCentreM": [
+            4584454.250853,
+            1093424.140188
+          ],
+          "variants": {
+            "15": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "21": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "31": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            }
+          },
+          "retainedForDiagnostic": false,
+          "rejectionReason": "masked or outside patch"
+        },
+        {
+          "id": "r820-c550-p23",
+          "patch": "r820-c550",
+          "ctxNativeLineSampleCentreIndex": [
+            2718,
+            1839
+          ],
+          "ctxPatchPixelXY": [
+            68,
+            47
+          ],
+          "ctxProjectionCentreM": [
+            4584700.250853,
+            1093382.140188
+          ],
+          "variants": {
+            "15": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "21": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "31": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            }
+          },
+          "retainedForDiagnostic": false,
+          "rejectionReason": "masked or outside patch"
+        },
+        {
+          "id": "r820-c550-p24",
+          "patch": "r820-c550",
+          "ctxNativeLineSampleCentreIndex": [
+            2753,
+            1867
+          ],
+          "ctxPatchPixelXY": [
+            96,
+            82
+          ],
+          "ctxProjectionCentreM": [
+            4584868.250853,
+            1093172.140188
+          ],
+          "variants": {
+            "15": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "21": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "31": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            }
+          },
+          "retainedForDiagnostic": false,
+          "rejectionReason": "masked or outside patch"
+        },
+        {
+          "id": "r820-c550-p25",
+          "patch": "r820-c550",
+          "ctxNativeLineSampleCentreIndex": [
+            2697,
+            1850
+          ],
+          "ctxPatchPixelXY": [
+            79,
+            26
+          ],
+          "ctxProjectionCentreM": [
+            4584766.250853,
+            1093508.140188
+          ],
+          "variants": {
+            "15": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "21": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "31": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            }
+          },
+          "retainedForDiagnostic": false,
+          "rejectionReason": "masked or outside patch"
+        },
+        {
+          "id": "r820-c550-p26",
+          "patch": "r820-c550",
+          "ctxNativeLineSampleCentreIndex": [
+            2713,
+            1853
+          ],
+          "ctxPatchPixelXY": [
+            82,
+            42
+          ],
+          "ctxProjectionCentreM": [
+            4584784.250853,
+            1093412.140188
+          ],
+          "variants": {
+            "15": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "21": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "31": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            }
+          },
+          "retainedForDiagnostic": false,
+          "rejectionReason": "masked or outside patch"
+        }
+      ]
+    },
+    {
+      "id": "r820-c650",
+      "index": 7,
+      "diagnosticSplit": "held_out",
+      "nativeCtxTopLeftLineSample": [
+        2671,
+        2104
+      ],
+      "ctxTransform": [
+        6.0,
+        0.0,
+        4586287.250853,
+        0.0,
+        -6.0,
+        1093667.140188
+      ],
+      "nativePlacesTransformExpressedInCtxProjection": [
+        0.26357125155277505,
+        0.0,
+        4586268.399789044,
+        0.0,
+        -0.25,
+        1093667.25
+      ],
+      "validMatchingPixelFraction": 0.7838134765625,
+      "candidateCount": 28,
+      "retainedCount": 0,
+      "medianPlacesMatchOffsetM": null,
+      "candidates": [
+        {
+          "id": "r820-c650-p0",
+          "patch": "r820-c650",
+          "ctxNativeLineSampleCentreIndex": [
+            2697,
+            2134
+          ],
+          "ctxPatchPixelXY": [
+            30,
+            26
+          ],
+          "ctxProjectionCentreM": [
+            4586470.250853,
+            1093508.140188
+          ],
+          "variants": {
+            "15": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "21": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "31": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            }
+          },
+          "retainedForDiagnostic": false,
+          "rejectionReason": "masked or outside patch"
+        },
+        {
+          "id": "r820-c650-p1",
+          "patch": "r820-c650",
+          "ctxNativeLineSampleCentreIndex": [
+            2754,
+            2146
+          ],
+          "ctxPatchPixelXY": [
+            42,
+            83
+          ],
+          "ctxProjectionCentreM": [
+            4586542.250853,
+            1093166.140188
+          ],
+          "variants": {
+            "15": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "21": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "31": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            }
+          },
+          "retainedForDiagnostic": false,
+          "rejectionReason": "masked or outside patch"
+        },
+        {
+          "id": "r820-c650-p2",
+          "patch": "r820-c650",
+          "ctxNativeLineSampleCentreIndex": [
+            2771,
+            2154
+          ],
+          "ctxPatchPixelXY": [
+            50,
+            100
+          ],
+          "ctxProjectionCentreM": [
+            4586590.250853,
+            1093064.140188
+          ],
+          "variants": {
+            "15": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "21": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "31": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            }
+          },
+          "retainedForDiagnostic": false,
+          "rejectionReason": "masked or outside patch"
+        },
+        {
+          "id": "r820-c650-p3",
+          "patch": "r820-c650",
+          "ctxNativeLineSampleCentreIndex": [
+            2712,
+            2138
+          ],
+          "ctxPatchPixelXY": [
+            34,
+            41
+          ],
+          "ctxProjectionCentreM": [
+            4586494.250853,
+            1093418.140188
+          ],
+          "variants": {
+            "15": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "21": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "31": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            }
+          },
+          "retainedForDiagnostic": false,
+          "rejectionReason": "masked or outside patch"
+        },
+        {
+          "id": "r820-c650-p4",
+          "patch": "r820-c650",
+          "ctxNativeLineSampleCentreIndex": [
+            2760,
+            2190
+          ],
+          "ctxPatchPixelXY": [
+            86,
+            89
+          ],
+          "ctxProjectionCentreM": [
+            4586806.250853,
+            1093130.140188
+          ],
+          "variants": {
+            "15": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "21": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "31": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            }
+          },
+          "retainedForDiagnostic": false,
+          "rejectionReason": "masked or outside patch"
+        },
+        {
+          "id": "r820-c650-p5",
+          "patch": "r820-c650",
+          "ctxNativeLineSampleCentreIndex": [
+            2743,
+            2197
+          ],
+          "ctxPatchPixelXY": [
+            93,
+            72
+          ],
+          "ctxProjectionCentreM": [
+            4586848.250853,
+            1093232.140188
+          ],
+          "variants": {
+            "15": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "21": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "31": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            }
+          },
+          "retainedForDiagnostic": false,
+          "rejectionReason": "masked or outside patch"
+        },
+        {
+          "id": "r820-c650-p6",
+          "patch": "r820-c650",
+          "ctxNativeLineSampleCentreIndex": [
+            2729,
+            2204
+          ],
+          "ctxPatchPixelXY": [
+            100,
+            58
+          ],
+          "ctxProjectionCentreM": [
+            4586890.250853,
+            1093316.140188
+          ],
+          "variants": {
+            "15": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "21": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "31": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            }
+          },
+          "retainedForDiagnostic": false,
+          "rejectionReason": "masked or outside patch"
+        },
+        {
+          "id": "r820-c650-p7",
+          "patch": "r820-c650",
+          "ctxNativeLineSampleCentreIndex": [
+            2700,
+            2155
+          ],
+          "ctxPatchPixelXY": [
+            51,
+            29
+          ],
+          "ctxProjectionCentreM": [
+            4586596.250853,
+            1093490.140188
+          ],
+          "variants": {
+            "15": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "21": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "31": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            }
+          },
+          "retainedForDiagnostic": false,
+          "rejectionReason": "masked or outside patch"
+        },
+        {
+          "id": "r820-c650-p8",
+          "patch": "r820-c650",
+          "ctxNativeLineSampleCentreIndex": [
+            2715,
+            2150
+          ],
+          "ctxPatchPixelXY": [
+            46,
+            44
+          ],
+          "ctxProjectionCentreM": [
+            4586566.250853,
+            1093400.140188
+          ],
+          "variants": {
+            "15": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "21": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "31": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            }
+          },
+          "retainedForDiagnostic": false,
+          "rejectionReason": "masked or outside patch"
+        },
+        {
+          "id": "r820-c650-p9",
+          "patch": "r820-c650",
+          "ctxNativeLineSampleCentreIndex": [
+            2754,
+            2163
+          ],
+          "ctxPatchPixelXY": [
+            59,
+            83
+          ],
+          "ctxProjectionCentreM": [
+            4586644.250853,
+            1093166.140188
+          ],
+          "variants": {
+            "15": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "21": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "31": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            }
+          },
+          "retainedForDiagnostic": false,
+          "rejectionReason": "masked or outside patch"
+        },
+        {
+          "id": "r820-c650-p10",
+          "patch": "r820-c650",
+          "ctxNativeLineSampleCentreIndex": [
+            2742,
+            2184
+          ],
+          "ctxPatchPixelXY": [
+            80,
+            71
+          ],
+          "ctxProjectionCentreM": [
+            4586770.250853,
+            1093238.140188
+          ],
+          "variants": {
+            "15": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "21": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "31": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            }
+          },
+          "retainedForDiagnostic": false,
+          "rejectionReason": "masked or outside patch"
+        },
+        {
+          "id": "r820-c650-p11",
+          "patch": "r820-c650",
+          "ctxNativeLineSampleCentreIndex": [
+            2697,
+            2190
+          ],
+          "ctxPatchPixelXY": [
+            86,
+            26
+          ],
+          "ctxProjectionCentreM": [
+            4586806.250853,
+            1093508.140188
+          ],
+          "variants": {
+            "15": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "21": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "31": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            }
+          },
+          "retainedForDiagnostic": false,
+          "rejectionReason": "masked or outside patch"
+        },
+        {
+          "id": "r820-c650-p12",
+          "patch": "r820-c650",
+          "ctxNativeLineSampleCentreIndex": [
+            2727,
+            2131
+          ],
+          "ctxPatchPixelXY": [
+            27,
+            56
+          ],
+          "ctxProjectionCentreM": [
+            4586452.250853,
+            1093328.140188
+          ],
+          "variants": {
+            "15": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "21": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "31": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            }
+          },
+          "retainedForDiagnostic": false,
+          "rejectionReason": "masked or outside patch"
+        },
+        {
+          "id": "r820-c650-p13",
+          "patch": "r820-c650",
+          "ctxNativeLineSampleCentreIndex": [
+            2740,
+            2137
+          ],
+          "ctxPatchPixelXY": [
+            33,
+            69
+          ],
+          "ctxProjectionCentreM": [
+            4586488.250853,
+            1093250.140188
+          ],
+          "variants": {
+            "15": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "21": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "31": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            }
+          },
+          "retainedForDiagnostic": false,
+          "rejectionReason": "masked or outside patch"
+        },
+        {
+          "id": "r820-c650-p14",
+          "patch": "r820-c650",
+          "ctxNativeLineSampleCentreIndex": [
+            2712,
+            2183
+          ],
+          "ctxPatchPixelXY": [
+            79,
+            41
+          ],
+          "ctxProjectionCentreM": [
+            4586764.250853,
+            1093418.140188
+          ],
+          "variants": {
+            "15": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "21": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "31": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            }
+          },
+          "retainedForDiagnostic": false,
+          "rejectionReason": "masked or outside patch"
+        },
+        {
+          "id": "r820-c650-p15",
+          "patch": "r820-c650",
+          "ctxNativeLineSampleCentreIndex": [
+            2713,
+            2197
+          ],
+          "ctxPatchPixelXY": [
+            93,
+            42
+          ],
+          "ctxProjectionCentreM": [
+            4586848.250853,
+            1093412.140188
+          ],
+          "variants": {
+            "15": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "21": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "31": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            }
+          },
+          "retainedForDiagnostic": false,
+          "rejectionReason": "masked or outside patch"
+        },
+        {
+          "id": "r820-c650-p16",
+          "patch": "r820-c650",
+          "ctxNativeLineSampleCentreIndex": [
+            2701,
+            2168
+          ],
+          "ctxPatchPixelXY": [
+            64,
+            30
+          ],
+          "ctxProjectionCentreM": [
+            4586674.250853,
+            1093484.140188
+          ],
+          "variants": {
+            "15": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "21": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "31": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            }
+          },
+          "retainedForDiagnostic": false,
+          "rejectionReason": "masked or outside patch"
+        },
+        {
+          "id": "r820-c650-p17",
+          "patch": "r820-c650",
+          "ctxNativeLineSampleCentreIndex": [
+            2728,
+            2152
+          ],
+          "ctxPatchPixelXY": [
+            48,
+            57
+          ],
+          "ctxProjectionCentreM": [
+            4586578.250853,
+            1093322.140188
+          ],
+          "variants": {
+            "15": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "21": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "31": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            }
+          },
+          "retainedForDiagnostic": false,
+          "rejectionReason": "masked or outside patch"
+        },
+        {
+          "id": "r820-c650-p18",
+          "patch": "r820-c650",
+          "ctxNativeLineSampleCentreIndex": [
+            2770,
+            2136
+          ],
+          "ctxPatchPixelXY": [
+            32,
+            99
+          ],
+          "ctxProjectionCentreM": [
+            4586482.250853,
+            1093070.140188
+          ],
+          "variants": {
+            "15": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "21": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "31": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            }
+          },
+          "retainedForDiagnostic": false,
+          "rejectionReason": "masked or outside patch"
+        },
+        {
+          "id": "r820-c650-p19",
+          "patch": "r820-c650",
+          "ctxNativeLineSampleCentreIndex": [
+            2728,
+            2171
+          ],
+          "ctxPatchPixelXY": [
+            67,
+            57
+          ],
+          "ctxProjectionCentreM": [
+            4586692.250853,
+            1093322.140188
+          ],
+          "variants": {
+            "15": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "21": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "31": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            }
+          },
+          "retainedForDiagnostic": false,
+          "rejectionReason": "masked or outside patch"
+        },
+        {
+          "id": "r820-c650-p20",
+          "patch": "r820-c650",
+          "ctxNativeLineSampleCentreIndex": [
+            2772,
+            2169
+          ],
+          "ctxPatchPixelXY": [
+            65,
+            101
+          ],
+          "ctxProjectionCentreM": [
+            4586680.250853,
+            1093058.140188
+          ],
+          "variants": {
+            "15": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "21": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "31": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            }
+          },
+          "retainedForDiagnostic": false,
+          "rejectionReason": "masked or outside patch"
+        },
+        {
+          "id": "r820-c650-p21",
+          "patch": "r820-c650",
+          "ctxNativeLineSampleCentreIndex": [
+            2697,
+            2203
+          ],
+          "ctxPatchPixelXY": [
+            99,
+            26
+          ],
+          "ctxProjectionCentreM": [
+            4586884.250853,
+            1093508.140188
+          ],
+          "variants": {
+            "15": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "21": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "31": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            }
+          },
+          "retainedForDiagnostic": false,
+          "rejectionReason": "masked or outside patch"
+        },
+        {
+          "id": "r820-c650-p22",
+          "patch": "r820-c650",
+          "ctxNativeLineSampleCentreIndex": [
+            2726,
+            2187
+          ],
+          "ctxPatchPixelXY": [
+            83,
+            55
+          ],
+          "ctxProjectionCentreM": [
+            4586788.250853,
+            1093334.140188
+          ],
+          "variants": {
+            "15": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "21": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "31": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            }
+          },
+          "retainedForDiagnostic": false,
+          "rejectionReason": "masked or outside patch"
+        },
+        {
+          "id": "r820-c650-p23",
+          "patch": "r820-c650",
+          "ctxNativeLineSampleCentreIndex": [
+            2743,
+            2169
+          ],
+          "ctxPatchPixelXY": [
+            65,
+            72
+          ],
+          "ctxProjectionCentreM": [
+            4586680.250853,
+            1093232.140188
+          ],
+          "variants": {
+            "15": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "21": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "31": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            }
+          },
+          "retainedForDiagnostic": false,
+          "rejectionReason": "masked or outside patch"
+        },
+        {
+          "id": "r820-c650-p24",
+          "patch": "r820-c650",
+          "ctxNativeLineSampleCentreIndex": [
+            2769,
+            2204
+          ],
+          "ctxPatchPixelXY": [
+            100,
+            98
+          ],
+          "ctxProjectionCentreM": [
+            4586890.250853,
+            1093076.140188
+          ],
+          "variants": {
+            "15": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "21": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "31": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            }
+          },
+          "retainedForDiagnostic": false,
+          "rejectionReason": "masked or outside patch"
+        },
+        {
+          "id": "r820-c650-p25",
+          "patch": "r820-c650",
+          "ctxNativeLineSampleCentreIndex": [
+            2744,
+            2156
+          ],
+          "ctxPatchPixelXY": [
+            52,
+            73
+          ],
+          "ctxProjectionCentreM": [
+            4586602.250853,
+            1093226.140188
+          ],
+          "variants": {
+            "15": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "21": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "31": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            }
+          },
+          "retainedForDiagnostic": false,
+          "rejectionReason": "masked or outside patch"
+        },
+        {
+          "id": "r820-c650-p26",
+          "patch": "r820-c650",
+          "ctxNativeLineSampleCentreIndex": [
+            2713,
+            2164
+          ],
+          "ctxPatchPixelXY": [
+            60,
+            42
+          ],
+          "ctxProjectionCentreM": [
+            4586650.250853,
+            1093412.140188
+          ],
+          "variants": {
+            "15": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "21": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "31": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            }
+          },
+          "retainedForDiagnostic": false,
+          "rejectionReason": "masked or outside patch"
+        },
+        {
+          "id": "r820-c650-p27",
+          "patch": "r820-c650",
+          "ctxNativeLineSampleCentreIndex": [
+            2763,
+            2178
+          ],
+          "ctxPatchPixelXY": [
+            74,
+            92
+          ],
+          "ctxProjectionCentreM": [
+            4586734.250853,
+            1093112.140188
+          ],
+          "variants": {
+            "15": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "21": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "31": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            }
+          },
+          "retainedForDiagnostic": false,
+          "rejectionReason": "masked or outside patch"
+        }
+      ]
+    },
+    {
+      "id": "r820-c750",
+      "index": 8,
+      "diagnosticSplit": "fit",
+      "nativeCtxTopLeftLineSample": [
+        2671,
+        2437
+      ],
+      "ctxTransform": [
+        6.0,
+        0.0,
+        4588285.250853,
+        0.0,
+        -6.0,
+        1093667.140188
+      ],
+      "nativePlacesTransformExpressedInCtxProjection": [
+        0.26357125155277505,
+        0.0,
+        4588268.378445826,
+        0.0,
+        -0.25,
+        1093667.25
+      ],
+      "validMatchingPixelFraction": 0.92864990234375,
+      "candidateCount": 20,
+      "retainedCount": 1,
+      "medianPlacesMatchOffsetM": [
+        -2.6093927570541577,
+        0.47269980125789335
+      ],
+      "candidates": [
+        {
+          "id": "r820-c750-p0",
+          "patch": "r820-c750",
+          "ctxNativeLineSampleCentreIndex": [
+            2764,
+            2464
+          ],
+          "ctxPatchPixelXY": [
+            27,
+            93
+          ],
+          "ctxProjectionCentreM": [
+            4588450.250853,
+            1093106.140188
+          ],
+          "variants": {
+            "15": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "21": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "31": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            }
+          },
+          "retainedForDiagnostic": false,
+          "rejectionReason": "masked or outside patch"
+        },
+        {
+          "id": "r820-c750-p1",
+          "patch": "r820-c750",
+          "ctxNativeLineSampleCentreIndex": [
+            2756,
+            2477
+          ],
+          "ctxPatchPixelXY": [
+            40,
+            85
+          ],
+          "ctxProjectionCentreM": [
+            4588528.250853,
+            1093154.140188
+          ],
+          "variants": {
+            "15": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "21": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "31": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            }
+          },
+          "retainedForDiagnostic": false,
+          "rejectionReason": "masked or outside patch"
+        },
+        {
+          "id": "r820-c750-p2",
+          "patch": "r820-c750",
+          "ctxNativeLineSampleCentreIndex": [
+            2770,
+            2475
+          ],
+          "ctxPatchPixelXY": [
+            38,
+            99
+          ],
+          "ctxProjectionCentreM": [
+            4588516.250853,
+            1093070.140188
+          ],
+          "variants": {
+            "15": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "21": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "31": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            }
+          },
+          "retainedForDiagnostic": false,
+          "rejectionReason": "masked or outside patch"
+        },
+        {
+          "id": "r820-c750-p3",
+          "patch": "r820-c750",
+          "ctxNativeLineSampleCentreIndex": [
+            2717,
+            2513
+          ],
+          "ctxPatchPixelXY": [
+            76,
+            46
+          ],
+          "ctxProjectionCentreM": [
+            4588744.250853,
+            1093388.140188
+          ],
+          "variants": {
+            "15": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "21": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "31": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            }
+          },
+          "retainedForDiagnostic": false,
+          "rejectionReason": "masked or outside patch"
+        },
+        {
+          "id": "r820-c750-p4",
+          "patch": "r820-c750",
+          "ctxNativeLineSampleCentreIndex": [
+            2749,
+            2495
+          ],
+          "ctxPatchPixelXY": [
+            58,
+            78
+          ],
+          "ctxProjectionCentreM": [
+            4588636.250853,
+            1093196.140188
+          ],
+          "variants": {
+            "15": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "21": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "31": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            }
+          },
+          "retainedForDiagnostic": false,
+          "rejectionReason": "masked or outside patch"
+        },
+        {
+          "id": "r820-c750-p5",
+          "patch": "r820-c750",
+          "ctxNativeLineSampleCentreIndex": [
+            2761,
+            2490
+          ],
+          "ctxPatchPixelXY": [
+            53,
+            90
+          ],
+          "ctxProjectionCentreM": [
+            4588606.250853,
+            1093124.140188
+          ],
+          "variants": {
+            "15": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "21": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "31": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            }
+          },
+          "retainedForDiagnostic": false,
+          "rejectionReason": "masked or outside patch"
+        },
+        {
+          "id": "r820-c750-p6",
+          "patch": "r820-c750",
+          "ctxNativeLineSampleCentreIndex": [
+            2715,
+            2487
+          ],
+          "ctxPatchPixelXY": [
+            50,
+            44
+          ],
+          "ctxProjectionCentreM": [
+            4588588.250853,
+            1093400.140188
+          ],
+          "variants": {
+            "15": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "21": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "31": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            }
+          },
+          "retainedForDiagnostic": false,
+          "rejectionReason": "masked or outside patch"
+        },
+        {
+          "id": "r820-c750-p7",
+          "patch": "r820-c750",
+          "ctxNativeLineSampleCentreIndex": [
+            2710,
+            2500
+          ],
+          "ctxPatchPixelXY": [
+            63,
+            39
+          ],
+          "ctxProjectionCentreM": [
+            4588666.250853,
+            1093430.140188
+          ],
+          "variants": {
+            "15": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "21": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "31": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            }
+          },
+          "retainedForDiagnostic": false,
+          "rejectionReason": "masked or outside patch"
+        },
+        {
+          "id": "r820-c750-p8",
+          "patch": "r820-c750",
+          "ctxNativeLineSampleCentreIndex": [
+            2699,
+            2535
+          ],
+          "ctxPatchPixelXY": [
+            98,
+            28
+          ],
+          "ctxProjectionCentreM": [
+            4588876.250853,
+            1093496.140188
+          ],
+          "variants": {
+            "15": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "21": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "31": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            }
+          },
+          "retainedForDiagnostic": false,
+          "rejectionReason": "masked or outside patch"
+        },
+        {
+          "id": "r820-c750-p9",
+          "patch": "r820-c750",
+          "ctxNativeLineSampleCentreIndex": [
+            2717,
+            2534
+          ],
+          "ctxPatchPixelXY": [
+            97,
+            46
+          ],
+          "ctxProjectionCentreM": [
+            4588870.250853,
+            1093388.140188
+          ],
+          "variants": {
+            "15": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "21": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "31": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            }
+          },
+          "retainedForDiagnostic": false,
+          "rejectionReason": "masked or outside patch"
+        },
+        {
+          "id": "r820-c750-p10",
+          "patch": "r820-c750",
+          "ctxNativeLineSampleCentreIndex": [
+            2755,
+            2508
+          ],
+          "ctxPatchPixelXY": [
+            71,
+            84
+          ],
+          "ctxProjectionCentreM": [
+            4588714.250853,
+            1093160.140188
+          ],
+          "variants": {
+            "15": {
+              "valid": true,
+              "displacementPixelXY": [
+                -0.2888350890805455,
+                -0.12465125462078643
+              ],
+              "peakNcc": 0.7681694030761719,
+              "competingPeakNccOutsideTwoPixels": 0.38788720965385437,
+              "peakOnSearchEdge": false
+            },
+            "21": {
+              "valid": true,
+              "displacementPixelXY": [
+                -0.4348987928423596,
+                -0.0787833002096489
+              ],
+              "peakNcc": 0.7313141226768494,
+              "competingPeakNccOutsideTwoPixels": 0.41894474625587463,
+              "peakOnSearchEdge": false
+            },
+            "31": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            }
+          },
+          "retainedForDiagnostic": true,
+          "rejectionReason": null,
+          "placesMatchOffsetInCtxProjectionM": [
+            -2.6093927570541577,
+            0.47269980125789335
+          ],
+          "placesMatchedNativeCornerLineSample": [
+            15637.548448795453,
+            46197.75782376155
+          ],
+          "templateSizeSensitivityMaximumM": 0.9185777554161229
+        },
+        {
+          "id": "r820-c750-p11",
+          "patch": "r820-c750",
+          "ctxNativeLineSampleCentreIndex": [
+            2757,
+            2538
+          ],
+          "ctxPatchPixelXY": [
+            101,
+            86
+          ],
+          "ctxProjectionCentreM": [
+            4588894.250853,
+            1093148.140188
+          ],
+          "variants": {
+            "15": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "21": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "31": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            }
+          },
+          "retainedForDiagnostic": false,
+          "rejectionReason": "masked or outside patch"
+        },
+        {
+          "id": "r820-c750-p12",
+          "patch": "r820-c750",
+          "ctxNativeLineSampleCentreIndex": [
+            2740,
+            2467
+          ],
+          "ctxPatchPixelXY": [
+            30,
+            69
+          ],
+          "ctxProjectionCentreM": [
+            4588468.250853,
+            1093250.140188
+          ],
+          "variants": {
+            "15": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "21": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "31": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            }
+          },
+          "retainedForDiagnostic": false,
+          "rejectionReason": "masked or outside patch"
+        },
+        {
+          "id": "r820-c750-p13",
+          "patch": "r820-c750",
+          "ctxNativeLineSampleCentreIndex": [
+            2732,
+            2509
+          ],
+          "ctxPatchPixelXY": [
+            72,
+            61
+          ],
+          "ctxProjectionCentreM": [
+            4588720.250853,
+            1093298.140188
+          ],
+          "variants": {
+            "15": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "21": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "31": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            }
+          },
+          "retainedForDiagnostic": false,
+          "rejectionReason": "masked or outside patch"
+        },
+        {
+          "id": "r820-c750-p14",
+          "patch": "r820-c750",
+          "ctxNativeLineSampleCentreIndex": [
+            2736,
+            2537
+          ],
+          "ctxPatchPixelXY": [
+            100,
+            65
+          ],
+          "ctxProjectionCentreM": [
+            4588888.250853,
+            1093274.140188
+          ],
+          "variants": {
+            "15": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "21": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "31": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            }
+          },
+          "retainedForDiagnostic": false,
+          "rejectionReason": "masked or outside patch"
+        },
+        {
+          "id": "r820-c750-p15",
+          "patch": "r820-c750",
+          "ctxNativeLineSampleCentreIndex": [
+            2701,
+            2492
+          ],
+          "ctxPatchPixelXY": [
+            55,
+            30
+          ],
+          "ctxProjectionCentreM": [
+            4588618.250853,
+            1093484.140188
+          ],
+          "variants": {
+            "15": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "21": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "31": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            }
+          },
+          "retainedForDiagnostic": false,
+          "rejectionReason": "masked or outside patch"
+        },
+        {
+          "id": "r820-c750-p16",
+          "patch": "r820-c750",
+          "ctxNativeLineSampleCentreIndex": [
+            2713,
+            2467
+          ],
+          "ctxPatchPixelXY": [
+            30,
+            42
+          ],
+          "ctxProjectionCentreM": [
+            4588468.250853,
+            1093412.140188
+          ],
+          "variants": {
+            "15": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "21": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "31": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            }
+          },
+          "retainedForDiagnostic": false,
+          "rejectionReason": "masked or outside patch"
+        },
+        {
+          "id": "r820-c750-p17",
+          "patch": "r820-c750",
+          "ctxNativeLineSampleCentreIndex": [
+            2734,
+            2496
+          ],
+          "ctxPatchPixelXY": [
+            59,
+            63
+          ],
+          "ctxProjectionCentreM": [
+            4588642.250853,
+            1093286.140188
+          ],
+          "variants": {
+            "15": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "21": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "31": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            }
+          },
+          "retainedForDiagnostic": false,
+          "rejectionReason": "masked or outside patch"
+        },
+        {
+          "id": "r820-c750-p18",
+          "patch": "r820-c750",
+          "ctxNativeLineSampleCentreIndex": [
+            2705,
+            2515
+          ],
+          "ctxPatchPixelXY": [
+            78,
+            34
+          ],
+          "ctxProjectionCentreM": [
+            4588756.250853,
+            1093460.140188
+          ],
+          "variants": {
+            "15": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "21": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "31": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            }
+          },
+          "retainedForDiagnostic": false,
+          "rejectionReason": "masked or outside patch"
+        },
+        {
+          "id": "r820-c750-p19",
+          "patch": "r820-c750",
+          "ctxNativeLineSampleCentreIndex": [
+            2729,
+            2480
+          ],
+          "ctxPatchPixelXY": [
+            43,
+            58
+          ],
+          "ctxProjectionCentreM": [
+            4588546.250853,
+            1093316.140188
+          ],
+          "variants": {
+            "15": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "21": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            },
+            "31": {
+              "valid": false,
+              "reason": "masked or outside patch"
+            }
+          },
+          "retainedForDiagnostic": false,
+          "rejectionReason": "masked or outside patch"
+        }
+      ]
+    }
+  ]
+}

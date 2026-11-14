@@ -14,7 +14,20 @@ The interface opens with the map/globe as the primary view. **Explore**, **Layer
 
 The footer separates **Terrain data**, **Scientific validation** and **Route comparison**. Terrain status reflects actual loading; scientific validation is **Partial**, with native geometry verified and named-feature/height-reference gates unresolved. **Compare routes — unavailable** stays disabled until source-supported terrain costs and pathfinding are verified. Precisely routing to named science features additionally requires feature registration. See [current scientific/terrain verification](docs/scientific-metrics-verification.md). The [UI polish](docs/ui-polish-verification.md) and [UI redesign](docs/ui-redesign-verification.md) records retain the presentation checkpoints.
 
-### Scientific review and terrain arithmetic
+### Scientific gate investigation
+
+The latest [scientific-gate investigation](docs/scientific-gate-resolution-verification.md) retrieves actual PLACES localization/map records, measures relative native-image ties, and verifies complete paired HRSC coverage around the unchanged CTX crop. It preserves all **65,536 CTX cells** and every application interaction. PLACES frame/pixel conventions are verified for release 16.0; the actual cutout label takes precedence over inconsistent orbital-metadata dimensions. Its cutout omits the northern **903.14 m** of our crop, and empirical image ties cover only nine sampled overlap patches. They do not establish absolute named-feature accuracy. A separate **103 × 103 HRSC reference** has 10,609 valid pairs; 10,201 wholly covered footprints support reproducible spherical-area comparisons, with 408 border cells excluded from comparison only.
+
+CTX model aggregates differ from HRSC DA5 by **−68.68 to +29.25 m**, and from its DT5 sphere heights expressed above the app sphere by **+1618.46 to +1710.25 m**. These are support-model diagnostics, not accuracy bounds or an inferred CTX conversion. The exact-product public audit still lacks the final height equation/model/version/sign, and reports a published inter-product tilt. Absolute named-feature accuracy remains unresolved. Scientific validation stays Partial; slopes, terrain costs and routes remain unavailable.
+
+The new tools and separate native reference are outside the production bundle. No `src/`, `public/`, dependency or algorithm change occurred. Exact receipts, raw-byte hashes, attribution and optional pinned evidence-runtime commands are linked from the verification report. A concrete producer clarification request is prepared locally and **has not been sent**.
+
+```powershell
+node --test scripts/test-native-support.mjs
+node scripts/compare-ctx-hrsc-support.mjs --verify-saved
+```
+
+### Prior scientific review and terrain arithmetic — checkpoint e79448a
 
 The 14 November [scientific-control milestone](docs/scientific-control-verification.md) adds reproducible archived rover-site controls and paired HRSC height comparisons. **21 of 41 fixed rover-site definitions map into the preserved crop**, but no image-space residuals or per-site uncertainty validate named-feature registration. The landing kernel's Gaussian latitude was correctly converted to planetocentric latitude; its landing position falls outside this crop. Fixed-site kernel coverage is not a visit date.
 

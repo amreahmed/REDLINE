@@ -1,0 +1,318 @@
+{
+  "pyprojVersion": "3.8.0",
+  "projVersion": "9.8.1",
+  "rasterioVersion": "1.5.2",
+  "gdalVersion": "3.12.2",
+  "axisPolicy": "always_xy: longitude, latitude; positive east, north; metres",
+  "geographicCrs": "+proj=longlat +R=3396000 +no_defs +type=crs",
+  "projectedCrs": "+proj=eqc +lat_ts=0 +lat_0=0 +lon_0=0 +x_0=0 +y_0=0 +R=3396000 +units=m +no_defs +type=crs",
+  "geometricControls": [
+    {
+      "kind": "synthetic geometric control, not Mars observation",
+      "coordinate": [
+        0,
+        0
+      ],
+      "expectedProjectedM": [
+        0,
+        0
+      ],
+      "projProjectedM": [
+        0.0,
+        0.0
+      ],
+      "rasterioProjectedM": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "kind": "synthetic geometric control, not Mars observation",
+      "coordinate": [
+        90,
+        0
+      ],
+      "expectedProjectedM": [
+        5334424.325795469,
+        0
+      ],
+      "projProjectedM": [
+        5334424.325795469,
+        0.0
+      ],
+      "rasterioProjectedM": [
+        5334424.325795469,
+        0.0
+      ]
+    },
+    {
+      "kind": "synthetic geometric control, not Mars observation",
+      "coordinate": [
+        0,
+        90
+      ],
+      "expectedProjectedM": [
+        0,
+        5334424.325795469
+      ],
+      "projProjectedM": [
+        0.0,
+        5334424.325795469
+      ],
+      "rasterioProjectedM": [
+        0.0,
+        5334424.325795469
+      ]
+    },
+    {
+      "kind": "synthetic geometric control, not Mars observation",
+      "coordinate": [
+        -90,
+        0
+      ],
+      "expectedProjectedM": [
+        -5334424.325795469,
+        0
+      ],
+      "projProjectedM": [
+        -5334424.325795469,
+        0.0
+      ],
+      "rasterioProjectedM": [
+        -5334424.325795469,
+        0.0
+      ]
+    }
+  ],
+  "originalFootprintCorners": [
+    {
+      "name": "north-west",
+      "coordinate": [
+        77.33659457394239,
+        18.523470992935692
+      ],
+      "hrscProjectedM": [
+        4583846.792993558,
+        1097911.7140320323
+      ],
+      "nativePixelEdge": [
+        11661.435859871153,
+        13605.265719359359
+      ]
+    },
+    {
+      "name": "north-east",
+      "coordinate": [
+        77.42297207081594,
+        18.523470992935692
+      ],
+      "hrscProjectedM": [
+        4588966.5065549305,
+        1097911.7140320323
+      ],
+      "nativePixelEdge": [
+        11763.83013109861,
+        13605.265719359359
+      ]
+    },
+    {
+      "name": "south-east",
+      "coordinate": [
+        77.42297207081594,
+        18.437093496062143
+      ],
+      "hrscProjectedM": [
+        4588966.5065549305,
+        1092792.000470659
+      ],
+      "nativePixelEdge": [
+        11763.83013109861,
+        13707.659990586824
+      ]
+    },
+    {
+      "name": "south-west",
+      "coordinate": [
+        77.33659457394239,
+        18.437093496062143
+      ],
+      "hrscProjectedM": [
+        4583846.792993558,
+        1092792.000470659
+      ],
+      "nativePixelEdge": [
+        11661.435859871153,
+        13707.659990586824
+      ]
+    }
+  ],
+  "fixtureRadiusChecks": [
+    {
+      "ctxGlobalCell": [
+        586,
+        522
+      ],
+      "coordinate": [
+        77.33676327999098,
+        18.523302286887112
+      ],
+      "hrscGlobalCell": [
+        13605,
+        11661
+      ],
+      "wrongRadiusGlobalCell": [
+        13604,
+        11666
+      ],
+      "wrongRadiusProjectedShiftM": [
+        256.4584188926965,
+        61.42559651704505
+      ]
+    },
+    {
+      "ctxGlobalCell": [
+        586,
+        777
+      ],
+      "coordinate": [
+        77.42280336476735,
+        18.523302286887112
+      ],
+      "hrscGlobalCell": [
+        13605,
+        11763
+      ],
+      "wrongRadiusGlobalCell": [
+        13604,
+        11768
+      ],
+      "wrongRadiusProjectedShiftM": [
+        256.74373861961067,
+        61.42559651704505
+      ]
+    },
+    {
+      "ctxGlobalCell": [
+        841,
+        777
+      ],
+      "coordinate": [
+        77.42280336476735,
+        18.437262202110723
+      ],
+      "hrscGlobalCell": [
+        13707,
+        11763
+      ],
+      "wrongRadiusGlobalCell": [
+        13706,
+        11768
+      ],
+      "wrongRadiusProjectedShiftM": [
+        256.74373861961067,
+        61.14027679129504
+      ]
+    },
+    {
+      "ctxGlobalCell": [
+        841,
+        522
+      ],
+      "coordinate": [
+        77.33676327999098,
+        18.437262202110723
+      ],
+      "hrscGlobalCell": [
+        13707,
+        11661
+      ],
+      "wrongRadiusGlobalCell": [
+        13706,
+        11666
+      ],
+      "wrongRadiusProjectedShiftM": [
+        256.4584188926965,
+        61.14027679129504
+      ]
+    },
+    {
+      "ctxGlobalCell": [
+        714,
+        650
+      ],
+      "coordinate": [
+        77.37995202842774,
+        18.48011353845034
+      ],
+      "hrscGlobalCell": [
+        13656,
+        11712
+      ],
+      "wrongRadiusGlobalCell": [
+        13655,
+        11717
+      ],
+      "wrongRadiusProjectedShiftM": [
+        256.6016382072121,
+        61.28237720369361
+      ]
+    },
+    {
+      "ctxGlobalCell": [
+        650,
+        580
+      ],
+      "coordinate": [
+        77.3563331816264,
+        18.501707912668724
+      ],
+      "hrscGlobalCell": [
+        13631,
+        11684
+      ],
+      "wrongRadiusGlobalCell": [
+        13629,
+        11689
+      ],
+      "wrongRadiusProjectedShiftM": [
+        256.52331514377147,
+        61.35398686048575
+      ]
+    },
+    {
+      "ctxGlobalCell": [
+        800,
+        730
+      ],
+      "coordinate": [
+        77.40694499620072,
+        18.45109609809438
+      ],
+      "hrscGlobalCell": [
+        13691,
+        11744
+      ],
+      "wrongRadiusGlobalCell": [
+        13689,
+        11749
+      ],
+      "wrongRadiusProjectedShiftM": [
+        256.691150277853,
+        61.18615172756836
+      ]
+    }
+  ],
+  "originalFootprintHrscBounds": [
+    4583846.792993558,
+    1092792.000470659,
+    4588966.5065549305,
+    1097911.7140320323
+  ],
+  "nativeWindow": {
+    "startRow": 13605,
+    "startColumn": 11661,
+    "rows": 103,
+    "columns": 103
+  },
+  "registrationLimit": "Independent projection/reader checks establish coordinate and native-grid arithmetic, not empirical landmark registration or source co-registration accuracy"
+}

@@ -1,0 +1,20 @@
+{
+  "purpose": "Named vertical-reference arithmetic only; not an empirical CTX datum correction",
+  "equations": [
+    "radius = 3396000 + DT5",
+    "GMM3_areoid_radius = 3396000 + DT5 - DA5",
+    "height_above_3396190_sphere = DT5 - 190"
+  ],
+  "pairedValidCells": 10609,
+  "dt5MinusDa5M": {
+    "min": -1505,
+    "max": -1489
+  },
+  "impliedGmm3AreoidRadiusM": {
+    "min": 3394495,
+    "max": 3394511
+  },
+  "allPairedRadiusIdentitiesExactInteger": true,
+  "earlierNativeControlPairsMatched": 9,
+  "limit": "This tests internally consistent paired definitions and retained samples; it is not an independent reconstruction of the GMM3 potential model or a local vertical-error bound"
+}

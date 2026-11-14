@@ -1,5 +1,7 @@
 # Scientific controls and remaining validation gates — 14 November 2026
 
+Historical checkpoint `e79448a`. The subsequent [scientific-gate investigation](scientific-gate-resolution-verification.md) adds actual PLACES records, empirical relative imagery ties and complete HRSC footprint diagnostics. Its separate support model does not replace the nine-probe results recorded below or change the unresolved production gates.
+
 This bounded milestone extends checkpoint `9d70fac`. It completes new control-source discovery, reproducible numerical diagnostics and their qualified presentation. **Precise named-feature registration and the exact CTX height reference remain unresolved; physical DEM grades/costs and route comparison are still unavailable.** No A*, DEM correction, source replacement or new scientific algorithm was implemented.
 
 ## Accepted findings

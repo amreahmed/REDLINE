@@ -1,0 +1,491 @@
+{
+  "schemaVersion": 1,
+  "purpose": "Separate native HRSC numerical reference around preserved original CTX crop; not production replacement or independent ground truth",
+  "provider": "DLR HRSC Science Team Global Topography and Mosaics Task Group (GTMTG), Mars Express HRSC",
+  "projection": {
+    "proj": "eqc",
+    "radiusM": 3396000,
+    "standardParallelDeg": 0,
+    "centralMeridianDeg": 0,
+    "latitudeOfOriginDeg": 0,
+    "falseEastingM": 0,
+    "falseNorthingM": 0,
+    "latitudeConvention": "planetocentric on sphere",
+    "longitudeDirection": "east-positive",
+    "longitudeRange": "0-360",
+    "units": "m",
+    "projString": "+proj=eqc +lat_ts=0 +lat_0=0 +lon_0=0 +x_0=0 +y_0=0 +R=3396000 +units=m +no_defs +type=crs"
+  },
+  "grid": {
+    "startRow": 13605,
+    "startColumn": 11661,
+    "rows": 103,
+    "columns": 103
+  },
+  "sourceGeotransform": [
+    4000775,
+    50,
+    0,
+    1778175.0000000002,
+    0,
+    -50
+  ],
+  "cropGeotransform": [
+    4583825,
+    50,
+    0,
+    1097925.0000000002,
+    0,
+    -50
+  ],
+  "geotransformConvention": "GDAL: [upper-left X edge, pixel width, row rotation, upper-left Y edge, column rotation, pixel height]; AREA pixels, centre uses index + 0.5",
+  "nativePostingM": 50,
+  "processing": "Native uncompressed TIFF strip-byte extraction only; signed int16 retained; no resampling/interpolation/CTX conversion",
+  "products": {
+    "dt5": {
+      "productId": "HMC_13E10_DT5",
+      "url": "https://hrscteam.dlr.de/public/data/HMC30/MC13E/HMC_13E10_dt5.tif",
+      "resourceBytes": 638313017,
+      "scale": 1,
+      "offset": 0,
+      "noData": -32768,
+      "units": "m",
+      "verticalReference": "Height above spheroid with radius 3396.0 km|",
+      "positiveDirection": "height above named surface; positive outward/up",
+      "geotiffGeoKeys": [
+        {
+          "key": 1024,
+          "value": 1
+        },
+        {
+          "key": 1025,
+          "value": 1
+        },
+        {
+          "key": 1026,
+          "value": "EQUIDISTANT MARS|"
+        },
+        {
+          "key": 2048,
+          "value": 32767
+        },
+        {
+          "key": 2049,
+          "value": "GCS Name = GCS_MARS|Datum = D_MARS|Ellipsoid = MARS|Primem = Reference_Meridian||"
+        },
+        {
+          "key": 2050,
+          "value": 32767
+        },
+        {
+          "key": 2054,
+          "value": 9102
+        },
+        {
+          "key": 2056,
+          "value": 32767
+        },
+        {
+          "key": 2057,
+          "value": [
+            3396000
+          ]
+        },
+        {
+          "key": 2058,
+          "value": [
+            3396000
+          ]
+        },
+        {
+          "key": 2061,
+          "value": [
+            0
+          ]
+        },
+        {
+          "key": 3072,
+          "value": 32767
+        },
+        {
+          "key": 3074,
+          "value": 32767
+        },
+        {
+          "key": 3075,
+          "value": 17
+        },
+        {
+          "key": 3076,
+          "value": 9001
+        },
+        {
+          "key": 3078,
+          "value": [
+            0
+          ]
+        },
+        {
+          "key": 3082,
+          "value": [
+            0
+          ]
+        },
+        {
+          "key": 3083,
+          "value": [
+            0
+          ]
+        },
+        {
+          "key": 3088,
+          "value": [
+            0
+          ]
+        },
+        {
+          "key": 3089,
+          "value": [
+            0
+          ]
+        },
+        {
+          "key": 4096,
+          "value": 32767
+        },
+        {
+          "key": 4097,
+          "value": "Height above spheroid with radius 3396.0 km|"
+        },
+        {
+          "key": 4098,
+          "value": 32767
+        },
+        {
+          "key": 4099,
+          "value": 9001
+        }
+      ],
+      "encoding": {
+        "file": "hrsc-dt5-native.i16",
+        "sampleType": "int16",
+        "byteOrder": "little-endian",
+        "layout": "row-major",
+        "bytes": 21218,
+        "sha256": "e385f36da8ea9137bdd7cece3ac858a64de1bbf5e036ecc01e942d7e9a5439f2"
+      },
+      "validity": {
+        "file": "hrsc-dt5-validity.u8",
+        "encoding": "uint8",
+        "validValue": 1,
+        "noDataValue": 0,
+        "bytes": 10609,
+        "sha256": "c7129c480eb63e9537de9c8b4678fcbebcabac8ae3450a35bdec8e2a0a63da67"
+      },
+      "summary": {
+        "validCount": 10609,
+        "missingCount": 0,
+        "minM": -4039,
+        "maxM": -3854
+      },
+      "downloadValidators": {
+        "etag": "\"260be239-5b09f305ba9aa\"",
+        "lastModified": "Thu, 01 Oct 2020 17:17:21 GMT",
+        "meaning": "HTTP cache validator/last modification, not acquisition date or scientific version"
+      }
+    },
+    "da5": {
+      "productId": "HMC_13E10_DA5",
+      "url": "https://hrscteam.dlr.de/public/data/HMC30/MC13E/HMC_13E10_da5.tif",
+      "resourceBytes": 638313147,
+      "scale": 1,
+      "offset": 0,
+      "noData": -32768,
+      "units": "m",
+      "verticalReference": "Height above equipotential surface described by potential model GMM3 (PDS dataset MGS-M-MOLA-5-MEGDR-L3-V1.0)|",
+      "positiveDirection": "height above named surface; positive outward/up",
+      "geotiffGeoKeys": [
+        {
+          "key": 1024,
+          "value": 1
+        },
+        {
+          "key": 1025,
+          "value": 1
+        },
+        {
+          "key": 1026,
+          "value": "EQUIDISTANT MARS|"
+        },
+        {
+          "key": 2048,
+          "value": 32767
+        },
+        {
+          "key": 2049,
+          "value": "GCS Name = GCS_MARS|Datum = D_MARS|Ellipsoid = MARS|Primem = Reference_Meridian||"
+        },
+        {
+          "key": 2050,
+          "value": 32767
+        },
+        {
+          "key": 2054,
+          "value": 9102
+        },
+        {
+          "key": 2056,
+          "value": 32767
+        },
+        {
+          "key": 2057,
+          "value": [
+            3396000
+          ]
+        },
+        {
+          "key": 2058,
+          "value": [
+            3396000
+          ]
+        },
+        {
+          "key": 2061,
+          "value": [
+            0
+          ]
+        },
+        {
+          "key": 3072,
+          "value": 32767
+        },
+        {
+          "key": 3074,
+          "value": 32767
+        },
+        {
+          "key": 3075,
+          "value": 17
+        },
+        {
+          "key": 3076,
+          "value": 9001
+        },
+        {
+          "key": 3078,
+          "value": [
+            0
+          ]
+        },
+        {
+          "key": 3082,
+          "value": [
+            0
+          ]
+        },
+        {
+          "key": 3083,
+          "value": [
+            0
+          ]
+        },
+        {
+          "key": 3088,
+          "value": [
+            0
+          ]
+        },
+        {
+          "key": 3089,
+          "value": [
+            0
+          ]
+        },
+        {
+          "key": 4096,
+          "value": 32767
+        },
+        {
+          "key": 4097,
+          "value": "Height above equipotential surface described by potential model GMM3 (PDS dataset MGS-M-MOLA-5-MEGDR-L3-V1.0)|"
+        },
+        {
+          "key": 4098,
+          "value": 32767
+        },
+        {
+          "key": 4099,
+          "value": 9001
+        }
+      ],
+      "encoding": {
+        "file": "hrsc-da5-native.i16",
+        "sampleType": "int16",
+        "byteOrder": "little-endian",
+        "layout": "row-major",
+        "bytes": 21218,
+        "sha256": "c691576fe2531513316f8d527d74343d57296952fb547af84d0a7f36d72ad317"
+      },
+      "validity": {
+        "file": "hrsc-da5-validity.u8",
+        "encoding": "uint8",
+        "validValue": 1,
+        "noDataValue": 0,
+        "bytes": 10609,
+        "sha256": "c7129c480eb63e9537de9c8b4678fcbebcabac8ae3450a35bdec8e2a0a63da67"
+      },
+      "summary": {
+        "validCount": 10609,
+        "missingCount": 0,
+        "minM": -2547,
+        "maxM": -2359
+      },
+      "downloadValidators": {
+        "etag": "\"260be2bb-5b09f2ca93ae6\"",
+        "lastModified": "Thu, 01 Oct 2020 17:16:19 GMT",
+        "meaning": "HTTP cache validator/last modification, not acquisition date or scientific version"
+      }
+    }
+  },
+  "coverage": {
+    "entireAlignedCropPairedValid": true,
+    "pairedValidCount": 10609,
+    "pairedMissingCount": 0,
+    "nativeCellsWhollyInsideOriginalFootprint": 10201,
+    "boundaryOverhangCells": 408,
+    "whollyCoveredGlobalRowsInclusive": [
+      13606,
+      13706
+    ],
+    "whollyCoveredGlobalColumnsInclusive": [
+      11662,
+      11762
+    ],
+    "policy": "Native crop includes all cells intersecting original geographic footprint; retain border cells but reject them for whole-support CTX comparisons",
+    "nativeAlignedCropExtent": {
+      "projectedBoundsM": [
+        4583825,
+        1092775.0000000002,
+        4588975,
+        1097925.0000000002
+      ],
+      "geographicBoundsDeg": [
+        77.33622689238946,
+        18.43680667179286,
+        77.4231153683884,
+        18.52369514779179
+      ],
+      "axisOrder": "west, south, east, north; positive-east longitude, latitude"
+    },
+    "whollyCoveredComparisonExtent": {
+      "projectedBoundsM": [
+        4583875.0,
+        1092825.0000000002,
+        4588925.0,
+        1097875.0000000002
+      ],
+      "geographicBoundsDeg": [
+        77.33707046982634,
+        18.437650249229744,
+        77.42227179095151,
+        18.52285157035491
+      ],
+      "axisOrder": "west, south, east, north; positive-east longitude, latitude"
+    },
+    "originalFootprintExtent": {
+      "projectedBoundsM": [
+        4583846.792993558,
+        1092792.000470659,
+        4588966.5065549305,
+        1097911.7140320323
+      ],
+      "geographicBoundsDeg": [
+        77.3365945739424,
+        18.437093496062143,
+        77.42297207081596,
+        18.523470992935696
+      ],
+      "axisOrder": "west, south, east, north; positive-east longitude, latitude"
+    }
+  },
+  "originalFootprintHrscBounds": [
+    4583846.792993558,
+    1092792.000470659,
+    4588966.5065549305,
+    1097911.7140320323
+  ],
+  "originalCtx": {
+    "productId": "JEZ_ctx_B_soc_008_DTM_MOLAtopography_DeltaGeoid_20m_Eqc_latTs0_lon0",
+    "grid": {
+      "startColumn": 522,
+      "startRow": 586,
+      "columns": 256,
+      "rows": 256
+    },
+    "cells": 65536,
+    "binarySha256": "4c0e428bb3cc4bcd8cbcebc0c2da2558a106fc19e55cfca352097b7eee32fae8",
+    "manifestSha256": "fa63f2181e603eb930d94fcf91444ee5e537b6c046e31537f65daeb0e1cffed9",
+    "datumGate": "unresolved; no relabel or conversion"
+  },
+  "preservedInputs": [
+    {
+      "file": "public/data/jezero-terrain-grid.json",
+      "sha256": "fa63f2181e603eb930d94fcf91444ee5e537b6c046e31537f65daeb0e1cffed9"
+    },
+    {
+      "file": "public/data/jezero-terrain-grid.f32",
+      "sha256": "4c0e428bb3cc4bcd8cbcebc0c2da2558a106fc19e55cfca352097b7eee32fae8"
+    },
+    {
+      "file": "public/data/jezero-terrain-windows.json",
+      "sha256": "7b655f1593091fede555394f2c685386b6a677ed4ca1a8ac0eb910130ea5928a"
+    },
+    {
+      "file": "scripts/prepare-terrain-grid.py",
+      "sha256": "16a75924efacea06d35868d027025849b5b557d4a1b614302d403638055904d3"
+    },
+    {
+      "file": "scripts/prepare-terrain-windows.py",
+      "sha256": "fe40d82bd071af0f48441967bddd70573d34b1ccdd35391889c82a1a8b25e885"
+    },
+    {
+      "file": "docs/evidence/scientific-resolution-2026-11-14/height/hrsc-tiff-contracts.json",
+      "sha256": "d500fb081674d4ace61a09689f74ff16aa817998e54d1f65f6451a966681dc88"
+    },
+    {
+      "file": "docs/evidence/scientific-resolution-2026-11-14/height/hrsc-readme.txt",
+      "sha256": "762209af4334682ad4ab8cf8fed74cfc0665503c85ea58031de7ce71bd8dc46c"
+    },
+    {
+      "file": "docs/evidence/scientific-resolution-2026-11-14/height/hrsc-tiling-naming.pdf",
+      "sha256": "7540d796b186dd497fda2cebc6da8dd3adfda4a203af770b9c89da89de096546"
+    },
+    {
+      "file": "docs/evidence/terrain-validation/source-audit/JEZ_ctx_B_soc_008_DTM_MOLAtopography_DeltaGeoid_20m_Eqc_latTs0_lon0.tif",
+      "sha256": "16a1aa66c3f48c1bca252795827db7b417876217aff0f5e1aff18027fab2327b"
+    }
+  ],
+  "receiptFile": "http-range-receipts.json",
+  "receiptSha256": "4d64623d796c282115fcdd34d9adefbdab29775fb6566801989cc0eb6f5c1de8",
+  "sourceVersion": {
+    "exactAcquisitionDates": null,
+    "scientificReleaseVersion": null,
+    "processingLevel": 5,
+    "subTileIndex": "10",
+    "namingDocumentDate": "2019-10-29",
+    "filenameMeaning": "HMC_13E10: MC-13 eastern half, sub-tile 10; dt5/da5 identify spheroid/areoid Level-5 DTM. The 10 is not a version identifier.",
+    "limit": "Multi-orbit mosaic; exact crop acquisition/orbit contributor list and scientific version not supplied in inspected original TIFF/readme"
+  },
+  "attribution": {
+    "credit": "Terrain data: ESA/DLR/FU Berlin, CC BY-SA 3.0 IGO",
+    "licence": "CC BY-SA 3.0 IGO",
+    "licenceUrl": "https://creativecommons.org/licenses/by-sa/3.0/igo/",
+    "providerTermsUrl": "https://hrscteam.dlr.de/imprint_hrsc_en.php",
+    "savedTermsEvidence": "hrsc-usage-imprint.html",
+    "changeNotice": "Native spatial subset and separately supplied validity mask; original integer height samples retained",
+    "productMethodologyCitation": "Gwinner et al. (2016), Planetary and Space Science 126, 93-138, doi:10.1016/j.pss.2016.02.014"
+  },
+  "resolutionLimit": "50 m grid spacing and 1 m quantization are verified; local effective terrain resolution, native stereo support, acquisition list, horizontal/vertical error and feature registration remain unverified",
+  "lineageLimit": "HRSC is part of CTX control lineage; agreement is diagnostic and cannot validate CTX absolute datum or supply independent ground truth",
+  "applicationIntegration": "none; app, CTX samples/manifests/transforms, routes remain unchanged"
+}

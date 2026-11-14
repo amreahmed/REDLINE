@@ -1,0 +1,145 @@
+Mars Exploration Accomplishments: Orbital Perspective 
+in context with Mars Express  
+R. Jaumann1,2 S. Adeli1, D. Tirsch1, K. Gwinner1 
+1German Aerospace Center (DLR), Inst. of Planetary Research, Berlin, Germany, 2Freie Universitaet Berlin, Inst. 
+of Geological Geosciences, Berlin, Germany. Ralf.Jaumann@dlr.de 
+ 
+Introduction: Numerous spacecraft observed or still 
+observe the Martian surface, subsurface, atmosphere 
+and environment including Mars Global Surveyor, 
+Mars Odyssey, Mars Express, Mars Reconnaissance 
+Orbiter, Mars Orbiter Mission, Maven, and ExoMars 
+Trace Gas Orbiter. Cameras, spectrometers, laser 
+altimeters, and radar experiments enabled 
+investigations of geological processes, interactions of 
+the interior with the surface as well as of the surface 
+with the atmosphere and the exosphere. The spatial 
+resolution of image data reaches ~10 cm/pixel in 
+places [1,2], the global coverage reaches even up to 
+~98% with a resolution better than 20 m/pixel in 
+color [3,4]. Topographic data reach ~10 m/pixel with 
+stereo imaging [3,4] and laser altimetry [5]. Spectral 
+observations in the visible and infrared spectral range 
+yield compositional information about the surface 
+and atmosphere [e.g.,6,7,8,9] as well as information 
+on thermal surface properties [10,11] and shallow 
+subsurface hydrogen content by gamma ray 
+measurements [12]. Radar experiments provided 
+insight into the subsurface [13,14] down to ~4 km 
+depth.  
+Accomplishments: Geomorphological analyses of 
+the Martian surface indicate major modifications by 
+endogenic and exogenic processes on all scales. 
+Endogenic landforms (e.g., tectonic rifts and basaltic 
+shield volcanoes) were found to be very similar to 
+their equivalents on Earth, suggesting that no unique 
+processes are required to explain their formation. 
+Volcanism may have been active up to the very 
+recent past or even to the present, putting important 
+constraints on thermal evolution models 
+[e.g.,15,16,17,18]. Dark dunes contain volcanic 
+material and are evidence for a dynamic surface 
+environment, characterized by widespread erosion, 
+transport, and re-deposition [e.g., 19,20,21]. The 
+analysis of diverse landforms produced by aqueous 
+processes revealed that surface water activity was 
+likely episodic. The amount of liquid water, however, 
+reduced from ancient large paleolakes and valley 
+networks to local outflow channels existed in the 
+recent past (late-mid Amazonian) [e.g.,15,16,22,23]. 
+Particularly important are prominent glacial and 
+periglacial features at polar regions and mid-latitudes, 
+including debris-covered glaciers [e.g.24,25,26]. The 
+identification of hydrated minerals and their 
+geological context has enabled a better understanding 
+of paleoenvironmental conditions and pedogenetic 
+processes [e.g.,26,27]. External processes, affected 
+the evolution and vigor of the Martian hydrologic 
+cycle and influenced the distribution and state of 
+water on, and within, the planet’s crust [e.g.,18] with 
+progressively shrinking reservoirs of groundwater 
+[28]. Various phyllosilicates formed by pH-neutral 
+aqueous alteration very early in the planet's history 
+are found in the oldest, Noachian-aged terrains; 
+sulfates, on the other hand, are indicative of an acidic 
+environment and were formed later during Hesperian 
+times [26,29]. Beginning about 3.0 billion years ago, 
+the Amazonian epoch is dominated by the formation 
+of anhydrous ferric oxides in a slow superficial 
+weathering, with limited and short-lasting surface 
+liquid water across the planet [26]. While the planet’s 
+first billion years, with differentiation, hydrodynamic 
+escape, volcanism, large impacts, erosion, and 
+sedimentation rapidly modified the atmosphere and 
+crust [e.g.,18] geological processes in the following 
+epochs ceased but still had the power to change the 
+surface. In addition, remote sensing of Mars has 
+revealed that the surface is continually changing [e.g., 
+30-32] by modifications due to exogenic processes, 
+including aeolian activity, mass movements, the 
+growth and retreat of the polar caps, and crater-
+forming impacts. Although it could be confirmed 
+from orbit that numerous geological processes were 
+active on Mars and that water played a major role all 
+over its history, small-scale geochemical and possible 
+EPSC Abstracts
+Vol. 13, EPSC-DPS2019-417-1, 2019
+EPSC-DPS Joint Meeting 2019
+c© Author(s) 2019. CC Attribution 4.0 license.
+
+biochemical processes are not accessible by remote-
+sensing from orbit but need in-situ and sample 
+analyses accomplished by rovers and landers. Such 
+landing missions need to count on reliable and 
+precise terrain information provided by orbiter 
+missions for enabling a safe landing on Mars. High-
+resolution digital elevation models from HRSC on-
+board Mars Express are a precious tool used for 
+selecting landing sites of past and upcoming Mars in 
+situ missions (e.g., MSL, ExoMars EDL, Insight (Fig. 
+1), ExoMars Rover (Fig. 2), and Mars 2020 (Fig. 3).  
+ 
+Fig. 1: HRSC DTM of the InSight mission landing 
+site (black ellipse; landed in November 2018 on Mars) 
+located in the flat plains of Elysium Planitia. DTM 
+spatial resolution is 50 m per pixel; north is to the 
+upper right). 
+Fig. 2: HRSC perspective view of the Oxia Planum 
+region comprising the selected landing site (flat area 
+in the center of the image) for the upcoming 
+ExoMars rover, which shall be launched in 2020. 
+DTM spatial resolution is 50 m per pixel; image 
+width is about 180 km; north is to the upper right). 
+Fig. 3: HRSC DTM mosaic of the Mars 2020 rover landing 
+site within Jezero crater. View shows comparison between 
+height above areoid and spheroid, respectively. 
+References: [1] McEwen, A.S. et al. (2007), JGR 112(E5); [2] 
+Malin, M.C. et al. (2007), JGR 112(E5), E05S04; [3] Jaumann, R. 
+et al. (2007), PSS 55, 928-952; [4] Gwinner, K. et al. (2016) PSS 
+126, 93-138; [5] Smith, D.E. et al. (1999), Science 285, 1495–
+1503; [6] Bibring, J.P. et al. (2005), Science 307, 1576–1581; [7] 
+Murchie, S. et al. (2007), JGR 112(E5), E05S03;  [8] Formisano, 
+V. et al. (2005), PSS 53, 963-974; [9] Bertaux, J.-L. at al. (2006) 
+JGR 111(E10), E10S9; [10] Christensen, P.R. et al. (2001), JGR 
+106, 23,823-823,871. [11] Christensen, P.R. et al. (2004), SSR 
+110, 85-100; [12] Boynton, W. V. et al. (2002), Science 297, 81–
+85 ; [13] Picardi, G. et al. (2004), PSS 52, 149-156. [14] Seu, R. et 
+al. (2007), JGR 112, doi: 10.1029/2006JE002745; [15] Jaumann, R. 
+et al. (2015), PSS 112, 53-97; [16] Tanaka, K. et al. (2014), 
+Geologic Map of Mars, U.S.G.S Pamphlet, 43; [17] Neukum, G. et 
+al. (2004), Nature 432, 971–979; [18] Beaty D.W. et al. (2005), 
+Astrobiology 5, 663-689; [19] Greeley, R. et al. (1992), In: 
+Kieffer, H.H. et al. (Eds.), Mars. University of Arizona Press, 730-
+766. [20] Armstrong, J.C. et al. (2005), Icarus 176, 57-74. 
+[21] Tirsch, D. et al. (2011), JGR 116, doi: 10.1029/2009je003562. 
+[22] Adeli, S. et al. (2015), JGR, 1774–1799. [23] Adeli, S. et al. 
+(2016), Icarus, 286–299. [24] Head, J.W. et al. (2005), Nature 434, 
+346-351. [25] Baker, D.M.H. et al. (2010), Icarus 207, 186-209. 
+[26] Shean, D.E. et al. (2007), JGR 112, doi: 
+10.1029/2006je002761. [27] Bibring, J.P. et al. (2006), Science 
+312, 400–404. [28] Murchie, S. et al. (2009), JGR 114(E5), 
+E00Do6. [29] Clifford, S.N. (1993), JGR 98, 10973 ; [30] Le Deit 
+et al. (2012), JGR 117, E00J05; [31] Geissler, P. E. (2005), JGR 
+110(E2), E02001. [32] Malin, M. C. et al. (2006), Science 314, 
+1573-1577. 
+ 

@@ -1,0 +1,72 @@
+Folie 1 HRSC Global Topography and Mosaics Task Group  –  29.10.2019 
+-57°N 
+ 57°N 
+ 30°N 
+ -30°N 
+  0°N 
+ 45°E 
+ 60°E 
+HMC-30 Scheme (modified from Batson, 1990) 
+ 
+Equidistant cylindrical (+/-57° latitude)  
+Polar Stereographic (beyond 65° N and S) 
+Supplementary Lambert conformal or azimutal (+/-30° to +/-65° latitude)  
+ 
+Folie 2 HRSC Global Topography and Mosaics Task Group  –  29.10.2019 
+HMC30 Tiling Scheme and Naming Convention 
+MC-nn, 45° longitude range (60° at mid-latitude ranges) 
+HMC-nnE00 (22.5° longitude range) 
+„sub-tile“ 00 = entire MC half-tile 
+sub-tile 11 
+sub-tile 10 
+sub-tile 12 
+sub-tile 20 
+sub-tile 14 sub-tile 13 
+sub-tile 40 sub-tile 30 
+30° latitude range (equatorial quadrangles) 
+Naming convention for HRSC 
+Level-5 products: 
+ 
+HMC_nnHtt_pp5 
+ 
+HMC = HRSC Mars Chart 
+nn     = MC number 
+H      = E or W for east or west part 
+tt       = sub-tile index 
+pp     = product type identifier 
+  - dt5 spheroid DTM 
+  - da5 areoid DTM 
+  - nd5 panchromatic image 
+  - co5 rgb color image 
+ 
+e.g. HMC_07W44_nd5  
+is the southernmost and easternmost 
+subtile of the pan mosaic for the 
+western half of MC-07 
+  
+ 
+Folie 3 HRSC Global Topography and Mosaics Task Group  –  29.10.2019 
+Example: HMC-11W  
+1b 
+1c 
+2 
+3 
+ 4 
+DTM (50m) 
+1a HMC_11W10_da5 
+1b HMC_11W20_da5 
+1c HMC_11W40_da5 
+ 
+Color mosaic (50m) 
+2 HMC_11W30_co5 
+ 
+Pan mosaic (12.5m) 
+3 HMC_11W41_nd5 
+ 
+Pan-sharp. color (12.5m) 
+4 HMC_11W42_co5ps 
+1a 
+Folie 4 HRSC Global Topography and Mosaics Task Group  –  29.10.2019 
+http://hrscteam.dlr.de/HMC30 
+Folie 5 HRSC Global Topography and Mosaics Task Group  –  29.10.2019 
+http://hrscteam.dlr.de/HMC30 

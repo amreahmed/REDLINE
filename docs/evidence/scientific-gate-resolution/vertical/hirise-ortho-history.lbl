@@ -1,0 +1,13 @@
+Object = gdal_translate
+  GdalVersion       = 3.1.0
+  ProgramPath       = /home/thare/.conda/envs/gdal/bin
+  ExecutionDateTime = 2020-07-07T18:56:14
+  HostName          = astrovm4.wr.usgs.gov
+  UserName          = thare
+  Description       = "GDAL conversion"
+
+  Group = UserParameters
+    FROM = JEZ_hirise_soc_006_orthoMosaic_25cm_Eqc_latTs0_lon0_first.tif
+    TO   = JEZ_hirise_soc_006_orthoMosaic_25cm_Eqc_latTs0_lon0_first.lbl
+  End_Group
+End_Object

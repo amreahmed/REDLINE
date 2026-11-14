@@ -1,0 +1,8 @@
+[
+  { "file": "trn-notebook-conversion.ipynb", "url": "https://raw.githubusercontent.com/acpaquette/mars2020_trn/789a4546f3f434904a2e094b1f9080b05ef703c5/notebooks/00.%20Image%20Conversion.ipynb" },
+  { "file": "trn-notebook-offset.ipynb", "url": "https://raw.githubusercontent.com/acpaquette/mars2020_trn/789a4546f3f434904a2e094b1f9080b05ef703c5/notebooks/offset_computation.ipynb" },
+  { "file": "trn-repo-readme.rst", "url": "https://raw.githubusercontent.com/acpaquette/mars2020_trn/789a4546f3f434904a2e094b1f9080b05ef703c5/readme.rst" },
+  { "file": "trn-upstream-usgs-repo.json", "url": "https://api.github.com/repos/USGS-Astrogeology/mars2020_trn" },
+  { "file": "trn-upstream-doi-repo.json", "url": "https://api.github.com/repos/DOI-USGS/mars2020_trn" },
+  { "file": "socet-set-doi-repo.json", "url": "https://api.github.com/repos/DOI-USGS/socet_set" }
+]

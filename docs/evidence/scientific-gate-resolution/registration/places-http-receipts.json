@@ -1,0 +1,222 @@
+[
+  {
+    "file": "places-root-index.html",
+    "requestedUrl": "https://pds-geosciences.wustl.edu/m2020/urn-nasa-pds-mars2020_rover_places/",
+    "finalUrl": "https://pds-geosciences.wustl.edu/m2020/urn-nasa-pds-mars2020_rover_places/",
+    "retrievedUtc": "2026-11-13T23:27:23.135Z",
+    "status": 200,
+    "bytes": 1442,
+    "sha256": "ebd5ee1695800e6b2a8498a57669a8b115476481e5c1cb2437979299b03c37c2",
+    "contentType": "text/html; charset=UTF-8",
+    "cors": null
+  },
+  {
+    "file": "places-bundle.xml",
+    "requestedUrl": "https://pds-geosciences.wustl.edu/m2020/urn-nasa-pds-mars2020_rover_places/bundle.xml",
+    "finalUrl": "https://pds-geosciences.wustl.edu/m2020/urn-nasa-pds-mars2020_rover_places/bundle.xml",
+    "retrievedUtc": "2026-11-13T23:27:23.186Z",
+    "status": 200,
+    "bytes": 5041,
+    "sha256": "56e922d0747d99c7d37c349ccb0211628c5cfbd4e4557f36eab1527ddea57ccb",
+    "contentType": "application/xml",
+    "cors": null
+  },
+  {
+    "file": "localizations-index.html",
+    "requestedUrl": "https://pds-geosciences.wustl.edu/m2020/urn-nasa-pds-mars2020_rover_places/data_localizations/",
+    "finalUrl": "https://pds-geosciences.wustl.edu/m2020/urn-nasa-pds-mars2020_rover_places/data_localizations/",
+    "retrievedUtc": "2026-11-13T23:27:23.187Z",
+    "status": 200,
+    "bytes": 2362,
+    "sha256": "dcd67a572e934cde9cd43cb71c77824bf93e1bc1ed1dbb6f8e9e32f92c0dac60",
+    "contentType": "text/html; charset=UTF-8",
+    "cors": null
+  },
+  {
+    "file": "maps-index.html",
+    "requestedUrl": "https://pds-geosciences.wustl.edu/m2020/urn-nasa-pds-mars2020_rover_places/data_maps/",
+    "finalUrl": "https://pds-geosciences.wustl.edu/m2020/urn-nasa-pds-mars2020_rover_places/data_maps/",
+    "retrievedUtc": "2026-11-13T23:27:23.188Z",
+    "status": 200,
+    "bytes": 1224,
+    "sha256": "f6c8ffdcc11fcc85eab17df26112c0af5ec7425dba1c9fef9f71cac5d4b76ff5",
+    "contentType": "text/html; charset=UTF-8",
+    "cors": null
+  },
+  {
+    "file": "orbital-index.html",
+    "requestedUrl": "https://pds-geosciences.wustl.edu/m2020/urn-nasa-pds-mars2020_rover_places/data_orbital/",
+    "finalUrl": "https://pds-geosciences.wustl.edu/m2020/urn-nasa-pds-mars2020_rover_places/data_orbital/",
+    "retrievedUtc": "2026-11-13T23:27:23.841Z",
+    "status": 200,
+    "bytes": 6924,
+    "sha256": "9f2d4e0dd6264eed42f37550de1053b9954a42d5953f8a3fa71dc653156118a3",
+    "contentType": "text/html; charset=UTF-8",
+    "cors": null
+  },
+  {
+    "file": "best_tactical.csv",
+    "requestedUrl": "https://pds-geosciences.wustl.edu/m2020/urn-nasa-pds-mars2020_rover_places/data_localizations/best_tactical.csv",
+    "finalUrl": "https://pds-geosciences.wustl.edu/m2020/urn-nasa-pds-mars2020_rover_places/data_localizations/best_tactical.csv",
+    "retrievedUtc": "2026-11-13T23:27:23.842Z",
+    "status": 200,
+    "bytes": 171404,
+    "sha256": "9da19e4f70287fe0d33ba716ff2169c10447c30c7a048583f730e4155226cde9",
+    "contentType": "application/octet-stream",
+    "cors": null
+  },
+  {
+    "file": "best_tactical.csv.xml",
+    "requestedUrl": "https://pds-geosciences.wustl.edu/m2020/urn-nasa-pds-mars2020_rover_places/data_localizations/best_tactical.csv.xml",
+    "finalUrl": "https://pds-geosciences.wustl.edu/m2020/urn-nasa-pds-mars2020_rover_places/data_localizations/best_tactical.csv.xml",
+    "retrievedUtc": "2026-11-13T23:27:23.893Z",
+    "status": 200,
+    "bytes": 15898,
+    "sha256": "777074bc03a3f06be8241b85cd4448cbdac5bff4dfecc443de6757152d22ac79",
+    "contentType": "application/xml",
+    "cors": null
+  },
+  {
+    "file": "view_metadata.csv",
+    "requestedUrl": "https://pds-geosciences.wustl.edu/m2020/urn-nasa-pds-mars2020_rover_places/data_localizations/view_metadata.csv",
+    "finalUrl": "https://pds-geosciences.wustl.edu/m2020/urn-nasa-pds-mars2020_rover_places/data_localizations/view_metadata.csv",
+    "retrievedUtc": "2026-11-13T23:27:23.933Z",
+    "status": 200,
+    "bytes": 284,
+    "sha256": "9698469a50fa596600b0c41871a253e33cb954216f6009746769cc99d0c60c88",
+    "contentType": "application/octet-stream",
+    "cors": null
+  },
+  {
+    "file": "view_metadata.csv.xml",
+    "requestedUrl": "https://pds-geosciences.wustl.edu/m2020/urn-nasa-pds-mars2020_rover_places/data_localizations/view_metadata.csv.xml",
+    "finalUrl": "https://pds-geosciences.wustl.edu/m2020/urn-nasa-pds-mars2020_rover_places/data_localizations/view_metadata.csv.xml",
+    "retrievedUtc": "2026-11-13T23:27:24.013Z",
+    "status": 200,
+    "bytes": 6602,
+    "sha256": "c5e56d115fcc2c0807f31b43e01fa3a9866d09bc5f5a1fb7422b5c34dc2f1376",
+    "contentType": "application/xml",
+    "cors": null
+  },
+  {
+    "file": "m20_orbital_map.xml",
+    "requestedUrl": "https://pds-geosciences.wustl.edu/m2020/urn-nasa-pds-mars2020_rover_places/data_maps/m20_orbital_map.xml",
+    "finalUrl": "https://pds-geosciences.wustl.edu/m2020/urn-nasa-pds-mars2020_rover_places/data_maps/m20_orbital_map.xml",
+    "retrievedUtc": "2026-11-13T23:27:24.518Z",
+    "status": 200,
+    "bytes": 16717,
+    "sha256": "677b0de5644bbb71718cf6818c73f761b85fa96b808638d8d8348ea1be0eb438",
+    "contentType": "application/xml",
+    "cors": null
+  },
+  {
+    "file": "m20_orbital_dem.xml",
+    "requestedUrl": "https://pds-geosciences.wustl.edu/m2020/urn-nasa-pds-mars2020_rover_places/data_maps/m20_orbital_dem.xml",
+    "finalUrl": "https://pds-geosciences.wustl.edu/m2020/urn-nasa-pds-mars2020_rover_places/data_maps/m20_orbital_dem.xml",
+    "retrievedUtc": "2026-11-13T23:27:24.532Z",
+    "status": 200,
+    "bytes": 16565,
+    "sha256": "7a736fabc434f4c6b4da17e0d943858809d10051570cc06570cb47f3c192e111",
+    "contentType": "application/xml",
+    "cors": null
+  },
+  {
+    "file": "orbital_1_metadata.csv",
+    "requestedUrl": "https://pds-geosciences.wustl.edu/m2020/urn-nasa-pds-mars2020_rover_places/data_orbital/orbital_1_metadata.csv",
+    "finalUrl": "https://pds-geosciences.wustl.edu/m2020/urn-nasa-pds-mars2020_rover_places/data_orbital/orbital_1_metadata.csv",
+    "retrievedUtc": "2026-11-13T23:27:24.533Z",
+    "status": 200,
+    "bytes": 1698,
+    "sha256": "f9b2fe818d0a4d3cf6df465321fa4b9946202b79ce76bf54aab5c13b1379700e",
+    "contentType": "application/octet-stream",
+    "cors": null
+  },
+  {
+    "file": "orbital_1_metadata.csv.xml",
+    "requestedUrl": "https://pds-geosciences.wustl.edu/m2020/urn-nasa-pds-mars2020_rover_places/data_orbital/orbital_1_metadata.csv.xml",
+    "finalUrl": "https://pds-geosciences.wustl.edu/m2020/urn-nasa-pds-mars2020_rover_places/data_orbital/orbital_1_metadata.csv.xml",
+    "retrievedUtc": "2026-11-13T23:27:24.533Z",
+    "status": 200,
+    "bytes": 5648,
+    "sha256": "d35deff4e9bd18589d640d843fff6a52a9b024a2cb40046f0a61bf6e544bf1f6",
+    "contentType": "application/xml",
+    "cors": null
+  },
+  {
+    "file": "orbital_2_metadata.csv",
+    "requestedUrl": "https://pds-geosciences.wustl.edu/m2020/urn-nasa-pds-mars2020_rover_places/data_orbital/orbital_2_metadata.csv",
+    "finalUrl": "https://pds-geosciences.wustl.edu/m2020/urn-nasa-pds-mars2020_rover_places/data_orbital/orbital_2_metadata.csv",
+    "retrievedUtc": "2026-11-13T23:27:24.705Z",
+    "status": 200,
+    "bytes": 1462,
+    "sha256": "d680059a0b0abac81a3f7eb82e5de8e5f623d1719350ef25e73d88602b2ffff3",
+    "contentType": "application/octet-stream",
+    "cors": null
+  },
+  {
+    "file": "orbital_2_metadata.csv.xml",
+    "requestedUrl": "https://pds-geosciences.wustl.edu/m2020/urn-nasa-pds-mars2020_rover_places/data_orbital/orbital_2_metadata.csv.xml",
+    "finalUrl": "https://pds-geosciences.wustl.edu/m2020/urn-nasa-pds-mars2020_rover_places/data_orbital/orbital_2_metadata.csv.xml",
+    "retrievedUtc": "2026-11-13T23:27:24.712Z",
+    "status": 200,
+    "bytes": 5648,
+    "sha256": "91ead11966d51b410b9c8031c1179ea2262722cf22f2a4a219aa674c984d0de6",
+    "contentType": "application/xml",
+    "cors": null
+  },
+  {
+    "file": "orbital_origin.csv",
+    "requestedUrl": "https://pds-geosciences.wustl.edu/m2020/urn-nasa-pds-mars2020_rover_places/data_orbital/orbital_origin.csv",
+    "finalUrl": "https://pds-geosciences.wustl.edu/m2020/urn-nasa-pds-mars2020_rover_places/data_orbital/orbital_origin.csv",
+    "retrievedUtc": "2026-11-13T23:27:24.713Z",
+    "status": 200,
+    "bytes": 4952,
+    "sha256": "bf59576e693ee4456f70d20d578a923ab312bd3c4b3e75649c00aebad926d090",
+    "contentType": "application/octet-stream",
+    "cors": null
+  },
+  {
+    "file": "orbital_origin.csv.xml",
+    "requestedUrl": "https://pds-geosciences.wustl.edu/m2020/urn-nasa-pds-mars2020_rover_places/data_orbital/orbital_origin.csv.xml",
+    "finalUrl": "https://pds-geosciences.wustl.edu/m2020/urn-nasa-pds-mars2020_rover_places/data_orbital/orbital_origin.csv.xml",
+    "retrievedUtc": "2026-11-13T23:27:24.713Z",
+    "status": 200,
+    "bytes": 11809,
+    "sha256": "f824b070f1c6f004df393215de085c0e4baf0e13514a7190ed957fbf85061aee",
+    "contentType": "application/xml",
+    "cors": null
+  },
+  {
+    "file": "orbital_origin_global.csv",
+    "requestedUrl": "https://pds-geosciences.wustl.edu/m2020/urn-nasa-pds-mars2020_rover_places/data_orbital/orbital_origin_global.csv",
+    "finalUrl": "https://pds-geosciences.wustl.edu/m2020/urn-nasa-pds-mars2020_rover_places/data_orbital/orbital_origin_global.csv",
+    "retrievedUtc": "2026-11-13T23:27:24.878Z",
+    "status": 200,
+    "bytes": 1370,
+    "sha256": "f6f1a0c23fa57e6b7f1d64d38d61b591804e55e0147cf1c7fcfb14c18e429aa8",
+    "contentType": "application/octet-stream",
+    "cors": null
+  },
+  {
+    "file": "orbital_origin_global.csv.xml",
+    "requestedUrl": "https://pds-geosciences.wustl.edu/m2020/urn-nasa-pds-mars2020_rover_places/data_orbital/orbital_origin_global.csv.xml",
+    "finalUrl": "https://pds-geosciences.wustl.edu/m2020/urn-nasa-pds-mars2020_rover_places/data_orbital/orbital_origin_global.csv.xml",
+    "retrievedUtc": "2026-11-13T23:27:24.884Z",
+    "status": 200,
+    "bytes": 7191,
+    "sha256": "176c9b4b22d876882f3ad59693d83c76fa8aed37f5fe7fba75e2bdde67f846dc",
+    "contentType": "application/xml",
+    "cors": null
+  },
+  {
+    "file": "places-product-md5.txt",
+    "requestedUrl": "https://pds-geosciences.wustl.edu/m2020/urn-nasa-pds-mars2020_rover_places/urn-nasa-pds-mars2020_rover_places.md5",
+    "finalUrl": "https://pds-geosciences.wustl.edu/m2020/urn-nasa-pds-mars2020_rover_places/urn-nasa-pds-mars2020_rover_places.md5",
+    "retrievedUtc": "2026-11-13T23:27:24.896Z",
+    "status": 200,
+    "bytes": 67140,
+    "sha256": "ff9846aba269477f6b57a56aae2f10ef8bc5f94a8c587ec2af376b50c6def7fc",
+    "contentType": "application/octet-stream",
+    "cors": null
+  }
+]

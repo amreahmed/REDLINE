@@ -1,0 +1,144 @@
+{
+  "mapOffsetBytes": 118400,
+  "mapSamples": 59200,
+  "mapLines": 21920,
+  "mapBands": 3,
+  "storage": "BSQ UnsignedByte verified from PDS4 and attached headers",
+  "patches": [
+    {
+      "id": "r660-c550",
+      "nativeDemCentreCell": [
+        660,
+        550
+      ],
+      "ctxProjectionCentreM": [
+        4584673.250853,
+        1096483.140188
+      ],
+      "placesLineStart": 811,
+      "placesSampleStart": 29339,
+      "size": 3072,
+      "placesBandIndexZeroBased": 0
+    },
+    {
+      "id": "r660-c650",
+      "nativeDemCentreCell": [
+        660,
+        650
+      ],
+      "ctxProjectionCentreM": [
+        4586673.250853,
+        1096483.140188
+      ],
+      "placesLineStart": 811,
+      "placesSampleStart": 36928,
+      "size": 3072,
+      "placesBandIndexZeroBased": 0
+    },
+    {
+      "id": "r660-c750",
+      "nativeDemCentreCell": [
+        660,
+        750
+      ],
+      "ctxProjectionCentreM": [
+        4588673.250853,
+        1096483.140188
+      ],
+      "placesLineStart": 811,
+      "placesSampleStart": 44516,
+      "size": 3072,
+      "placesBandIndexZeroBased": 0
+    },
+    {
+      "id": "r740-c550",
+      "nativeDemCentreCell": [
+        740,
+        550
+      ],
+      "ctxProjectionCentreM": [
+        4584673.250853,
+        1094883.140188
+      ],
+      "placesLineStart": 7211,
+      "placesSampleStart": 29339,
+      "size": 3072,
+      "placesBandIndexZeroBased": 0
+    },
+    {
+      "id": "r740-c650",
+      "nativeDemCentreCell": [
+        740,
+        650
+      ],
+      "ctxProjectionCentreM": [
+        4586673.250853,
+        1094883.140188
+      ],
+      "placesLineStart": 7211,
+      "placesSampleStart": 36928,
+      "size": 3072,
+      "placesBandIndexZeroBased": 0
+    },
+    {
+      "id": "r740-c750",
+      "nativeDemCentreCell": [
+        740,
+        750
+      ],
+      "ctxProjectionCentreM": [
+        4588673.250853,
+        1094883.140188
+      ],
+      "placesLineStart": 7211,
+      "placesSampleStart": 44516,
+      "size": 3072,
+      "placesBandIndexZeroBased": 0
+    },
+    {
+      "id": "r820-c550",
+      "nativeDemCentreCell": [
+        820,
+        550
+      ],
+      "ctxProjectionCentreM": [
+        4584673.250853,
+        1093283.140188
+      ],
+      "placesLineStart": 13611,
+      "placesSampleStart": 29339,
+      "size": 3072,
+      "placesBandIndexZeroBased": 0
+    },
+    {
+      "id": "r820-c650",
+      "nativeDemCentreCell": [
+        820,
+        650
+      ],
+      "ctxProjectionCentreM": [
+        4586673.250853,
+        1093283.140188
+      ],
+      "placesLineStart": 13611,
+      "placesSampleStart": 36928,
+      "size": 3072,
+      "placesBandIndexZeroBased": 0
+    },
+    {
+      "id": "r820-c750",
+      "nativeDemCentreCell": [
+        820,
+        750
+      ],
+      "ctxProjectionCentreM": [
+        4588673.250853,
+        1093283.140188
+      ],
+      "placesLineStart": 13611,
+      "placesSampleStart": 44516,
+      "size": 3072,
+      "placesBandIndexZeroBased": 0
+    }
+  ]
+}

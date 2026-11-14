@@ -1,0 +1,187 @@
+{
+  "purpose": "Independent numerical review of root-owned native-footprint comparison; no source correction or empirical accuracy claim",
+  "pythonProjection": {
+    "pyprojVersion": "3.8.0",
+    "projVersion": "9.8.1"
+  },
+  "areaMethod": "Eight-point Gauss-Legendre quadrature of R^2*cos(latitude)*dlatitude*dlongitude over native-cell intersections",
+  "model": "CTX scalar constant over native area; this is a comparison assumption, not a measured footprint mean",
+  "reviewedScripts": [
+    {
+      "file": "scripts/native-support.mjs",
+      "sha256": "716cdfb8e3401436fcb9f647e80ceb0c362a83a0669845d095a3f931f9107866"
+    },
+    {
+      "file": "scripts/compare-ctx-hrsc-support.mjs",
+      "sha256": "1fdb4cdf64111805d3fd8309bf080001d7333ac45087754da4fd0c4242f5cb06"
+    }
+  ],
+  "nativeManifestSha256": "5d7c16b7589df237b3dbb45365cff2b94fc28ffd46764b336783f58bb60c4fdc",
+  "comparisonCsvSha256": "f6a2485367bc376b0201d8f7596ec4b09d5ebde5568a5f8d6c263ffd1d7af195",
+  "selectedChecks": [
+    {
+      "hrscGlobalCell": [
+        13606,
+        11662
+      ],
+      "geographicFootprintDeg": [
+        77.33707046982634,
+        18.522007992918027,
+        77.33791404726323,
+        18.52285157035491
+      ],
+      "ctxSupportGlobalRowsInclusive": [
+        587,
+        590
+      ],
+      "ctxSupportGlobalColumnsInclusive": [
+        523,
+        525
+      ],
+      "ctxSupportCells": 12,
+      "pythonQuadratureScalarM": -2380.117409283262,
+      "jsScalarM": -2380.117409283243,
+      "scalarDifferenceM": -1.9099388737231493e-11,
+      "pythonQuadratureAreaM2": 2370.763672923778,
+      "jsAreaM2": 2370.763672932554,
+      "areaDifferenceM2": -8.776169124757871e-09
+    },
+    {
+      "hrscGlobalCell": [
+        13706,
+        11762
+      ],
+      "geographicFootprintDeg": [
+        77.42142821351462,
+        18.437650249229744,
+        77.42227179095151,
+        18.438493826666626
+      ],
+      "ctxSupportGlobalRowsInclusive": [
+        837,
+        840
+      ],
+      "ctxSupportGlobalColumnsInclusive": [
+        773,
+        775
+      ],
+      "ctxSupportCells": 12,
+      "pythonQuadratureScalarM": -2545.6285783413987,
+      "jsScalarM": -2545.628578341429,
+      "scalarDifferenceM": 3.0468072509393096e-11,
+      "pythonQuadratureAreaM2": 2371.930535472933,
+      "jsAreaM2": 2371.9305354438584,
+      "areaDifferenceM2": 2.907472662627697e-08
+    },
+    {
+      "hrscGlobalCell": [
+        13656,
+        11712
+      ],
+      "geographicFootprintDeg": [
+        77.37924934167047,
+        18.479829121073884,
+        77.38009291910737,
+        18.480672698510766
+      ],
+      "ctxSupportGlobalRowsInclusive": [
+        712,
+        715
+      ],
+      "ctxSupportGlobalColumnsInclusive": [
+        648,
+        650
+      ],
+      "ctxSupportCells": 12,
+      "pythonQuadratureScalarM": -2488.76911752176,
+      "jsScalarM": -2488.7691175217515,
+      "scalarDifferenceM": -8.640199666842818e-12,
+      "pythonQuadratureAreaM2": 2371.3477467682274,
+      "jsAreaM2": 2371.3477467481007,
+      "areaDifferenceM2": 2.0126663002884015e-08
+    },
+    {
+      "hrscGlobalCell": [
+        13650,
+        11711
+      ],
+      "geographicFootprintDeg": [
+        77.3784057642336,
+        18.48489058569518,
+        77.37924934167047,
+        18.485734163132065
+      ],
+      "ctxSupportGlobalRowsInclusive": [
+        697,
+        700
+      ],
+      "ctxSupportGlobalColumnsInclusive": [
+        645,
+        648
+      ],
+      "ctxSupportCells": 16,
+      "pythonQuadratureScalarM": -2476.675588493159,
+      "jsScalarM": -2476.6755884931567,
+      "scalarDifferenceM": -2.2737367544323206e-12,
+      "pythonQuadratureAreaM2": 2371.277725688243,
+      "jsAreaM2": 2371.2777256949025,
+      "areaDifferenceM2": -6.6593202063813806e-09
+    },
+    {
+      "hrscGlobalCell": [
+        13705,
+        11746
+      ],
+      "geographicFootprintDeg": [
+        77.4079309745245,
+        18.438493826666626,
+        77.40877455196137,
+        18.439337404103508
+      ],
+      "ctxSupportGlobalRowsInclusive": [
+        835,
+        837
+      ],
+      "ctxSupportGlobalColumnsInclusive": [
+        733,
+        735
+      ],
+      "ctxSupportCells": 9,
+      "pythonQuadratureScalarM": -2482.748715265064,
+      "jsScalarM": -2482.748715265066,
+      "scalarDifferenceM": 1.8189894035458565e-12,
+      "pythonQuadratureAreaM2": 2371.918892206271,
+      "jsAreaM2": 2371.9188922550084,
+      "areaDifferenceM2": -4.873754733125679e-08
+    },
+    {
+      "hrscGlobalCell": [
+        13653,
+        11710
+      ],
+      "geographicFootprintDeg": [
+        77.37756218679671,
+        18.482359853384533,
+        77.3784057642336,
+        18.483203430821415
+      ],
+      "ctxSupportGlobalRowsInclusive": [
+        705,
+        707
+      ],
+      "ctxSupportGlobalColumnsInclusive": [
+        643,
+        645
+      ],
+      "ctxSupportCells": 9,
+      "pythonQuadratureScalarM": -2484.5368915579784,
+      "jsScalarM": -2484.5368915579647,
+      "scalarDifferenceM": -1.3642420526593924e-11,
+      "pythonQuadratureAreaM2": 2371.3127385768735,
+      "jsAreaM2": 2371.312738556747,
+      "areaDifferenceM2": 2.0126663002884015e-08
+    }
+  ],
+  "assessment": "Radius-ratio geometric conversion is correct for both documented spherical EQC CRSs; surface-area overlap weighting and strict border/NoData rejection are consistent with declared comparison model",
+  "limits": "PROJ/independent quadrature checks establish numerical implementation only; raster posts are not guaranteed areal means and shared HRSC/CTX lineage prevents ground-truth or datum identification claims"
+}

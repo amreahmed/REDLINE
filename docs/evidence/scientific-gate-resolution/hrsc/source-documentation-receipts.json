@@ -1,0 +1,35 @@
+[
+  {
+    "file": "hrsc-usage-imprint.html",
+    "requestedUrl": "https://hrscteam.dlr.de/imprint_hrsc_en.php",
+    "finalUrl": "https://hrscteam.dlr.de/imprint_hrsc_en.php",
+    "startedAt": "2026-11-13T23:46:16.838979Z",
+    "retrievedAt": "2026-11-13T23:46:17.142127Z",
+    "status": 200,
+    "contentType": "text/html; charset=UTF-8",
+    "bytes": 13119,
+    "sha256": "7dd4a1cc4b44e1f5d75980efdabb470290f50b7aab1662a0d71e8f7c01a3ffec"
+  },
+  {
+    "file": "hrsc-methodology-2016.html",
+    "requestedUrl": "https://elib.dlr.de/109617/",
+    "finalUrl": "https://elib.dlr.de/109617/",
+    "startedAt": "2026-11-13T23:46:17.143012Z",
+    "retrievedAt": "2026-11-13T23:46:17.593430Z",
+    "status": 200,
+    "contentType": "text/html; charset=utf-8",
+    "bytes": 57252,
+    "sha256": "5c29242a6dcc0dc724edf26c37ec8fd53524b35ff204e8061771c289689c0283"
+  },
+  {
+    "file": "hrsc-methodology-2010.html",
+    "requestedUrl": "https://elib.dlr.de/68116/",
+    "finalUrl": "https://elib.dlr.de/68116/",
+    "startedAt": "2026-11-13T23:46:17.594738Z",
+    "retrievedAt": "2026-11-13T23:46:17.954484Z",
+    "status": 200,
+    "contentType": "text/html; charset=utf-8",
+    "bytes": 41050,
+    "sha256": "b85efa434f825b8be6a2c07b7c02d72924bf853d41fe5eecc92ebc3cbaf64f0c"
+  }
+]

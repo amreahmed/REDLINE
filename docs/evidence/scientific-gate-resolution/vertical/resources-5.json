@@ -1,0 +1,7 @@
+[
+  { "file": "mars2020-trn-github-repo.json", "url": "https://api.github.com/repos/acpaquette/mars2020_trn" },
+  { "file": "mars2020-trn-github-tree.json", "url": "https://api.github.com/repos/acpaquette/mars2020_trn/git/trees/master?recursive=1" },
+  { "file": "mars2020-trn-github-commits.json", "url": "https://api.github.com/repos/acpaquette/mars2020_trn/commits?per_page=100" },
+  { "file": "socet-set-github-repo.json", "url": "https://api.github.com/repos/USGS-Astrogeology/socet_set" },
+  { "file": "cheng-full-xml-response.xml", "url": "https://onlinelibrary.wiley.com/doi/full-xml/10.1029/2020EA001560" }
+]

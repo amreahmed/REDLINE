@@ -1,0 +1,7 @@
+[
+  { "file": "cheng-2021-response.html", "url": "https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2020EA001560" },
+  { "file": "cheng-crossref.json", "url": "https://api.crossref.org/works/10.1029/2020EA001560" },
+  { "file": "github-repositories-trn.json", "url": "https://api.github.com/search/repositories?q=mars2020+trn&per_page=30" },
+  { "file": "github-repositories-socet.json", "url": "https://api.github.com/search/repositories?q=socet+org%3AUSGS-Astrogeology&per_page=30" },
+  { "file": "github-repositories-delta-geoid.json", "url": "https://api.github.com/search/repositories?q=DeltaGeoid&per_page=30" }
+]

@@ -1,0 +1,63 @@
+{
+  "purpose": "Complete native-footprint comparison diagnostics; not datum identification, independent accuracy or terrain-cost authorization",
+  "originalCtx": {
+    "productId": "JEZ_ctx_B_soc_008_DTM_MOLAtopography_DeltaGeoid_20m_Eqc_latTs0_lon0",
+    "sourceSha256": "16a1aa66c3f48c1bca252795827db7b417876217aff0f5e1aff18027fab2327b",
+    "manifestSha256": "fa63f2181e603eb930d94fcf91444ee5e537b6c046e31537f65daeb0e1cffed9",
+    "binarySha256": "4c0e428bb3cc4bcd8cbcebc0c2da2558a106fc19e55cfca352097b7eee32fae8",
+    "preservedCells": 65536,
+    "verticalStatus": "provider-declared-iau-sphere-unvalidated"
+  },
+  "reference": {
+    "manifestSha256": "5d7c16b7589df237b3dbb45365cff2b94fc28ffd46764b336783f58bb60c4fdc",
+    "assetHashes": {
+      "hrsc-dt5-native.i16": "e385f36da8ea9137bdd7cece3ac858a64de1bbf5e036ecc01e942d7e9a5439f2",
+      "hrsc-dt5-validity.u8": "c7129c480eb63e9537de9c8b4678fcbebcabac8ae3450a35bdec8e2a0a63da67",
+      "hrsc-da5-native.i16": "c691576fe2531513316f8d527d74343d57296952fb547af84d0a7f36d72ad317",
+      "hrsc-da5-validity.u8": "c7129c480eb63e9537de9c8b4678fcbebcabac8ae3450a35bdec8e2a0a63da67"
+    },
+    "nativePostingM": 50,
+    "retainedCells": 10609
+  },
+  "model": "CTX samples constant within native cell footprints; spherical surface-area weighted support at each wholly covered original HRSC cell. Reference original int16 samples retained without interpolation. Geographic edges converted by radius ratio only.",
+  "equation": "CTX mean − DA5; CTX mean − (DT5 − 190 m). The latter adjusts only the documented HRSC sphere height to the app sphere for comparison.",
+  "acceptedComparisons": 10201,
+  "rejected": {
+    "outsideGrid": 408,
+    "missingCtxSupport": 0,
+    "missingReferencePair": 0
+  },
+  "acceptedRowsInclusive": [
+    13606,
+    13706
+  ],
+  "acceptedColumnsInclusive": [
+    11662,
+    11762
+  ],
+  "surfaceAreaFractionOfOriginalCrop": 0.9729522111368522,
+  "ctxMinusDa5": {
+    "count": 10201,
+    "minM": -68.67558849315674,
+    "maxM": 29.25128473493396,
+    "meanM": -10.3905581462102,
+    "medianM": -9.490757480974935
+  },
+  "ctxMinusDt5Above3396190Sphere": {
+    "count": 10201,
+    "minM": 1618.4631084420353,
+    "maxM": 1710.251284734934,
+    "meanM": 1676.68580691604,
+    "medianM": 1677.6017863037064
+  },
+  "perCellFile": "native-support-comparisons.csv",
+  "perCellSha256": "f6a2485367bc376b0201d8f7596ec4b09d5ebde5568a5f8d6c263ffd1d7af195",
+  "limitations": [
+    "A raster sample is not necessarily a measured footprint average; the explicit piecewise-constant support model is a comparison assumption.",
+    "Shared HRSC/CTX control lineage and unmeasured image-registration errors prevent independent absolute accuracy claims.",
+    "The areoid label and sphere label describe HRSC only; similarity cannot prove the final CTX surface, correction model/version or sign.",
+    "50 m posting and 1 m quantization do not establish effective spatial resolution or local vertical error.",
+    "Boundary overhangs are retained in reference evidence but excluded from the comparison; no missing support is normalized away.",
+    "No production terrain asset, scientific gate, transformation, slope, cost or route is modified."
+  ]
+}

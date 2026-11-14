@@ -1,0 +1,214 @@
+{
+  "dt5": {
+    "reader": "Rasterio/GDAL on ephemeral original-offset sparse fixture",
+    "scope": "Only saved crop read; unsaved holes are not source data and fixture is removed",
+    "samplesCompared": 10609,
+    "everyRawInt16Matched": true,
+    "everyMaskMatched": true,
+    "scale": 1.0,
+    "offset": 0.0,
+    "nativeGeotransform": [
+      4000775,
+      50,
+      0,
+      1778175.0000000002,
+      0,
+      -50
+    ],
+    "crsWkt": "PROJCS[\"EQUIDISTANT MARS\",GEOGCS[\"GCS_MARS\",DATUM[\"D_MARS\",SPHEROID[\"MARS\",3396000,0]],PRIMEM[\"Reference_Meridian\",0],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]]],PROJECTION[\"Equirectangular\"],PARAMETER[\"standard_parallel_1\",0],PARAMETER[\"central_meridian\",0],PARAMETER[\"false_easting\",0],PARAMETER[\"false_northing\",0],UNIT[\"metre\",1,AUTHORITY[\"EPSG\",\"9001\"]],AXIS[\"Easting\",EAST],AXIS[\"Northing\",NORTH]]",
+    "geotiffVerticalCitation": "Height above spheroid with radius 3396.0 km|",
+    "metadataRanges": [
+      {
+        "file": "docs/evidence/scientific-resolution-2026-11-14/height/hrsc-dt5-header.bin",
+        "sha256": "8f014bd054082983db6aa4aee40f41fa99dbfe4d036324dda133941b9305cd8b",
+        "contentRange": "bytes 0-65535/638313017"
+      },
+      {
+        "file": "docs/evidence/scientific-resolution-2026-11-14/height/hrsc-dt5-range-638205072-638205073.bin",
+        "sha256": "4cab73ce2a7e6220975001c8a354143267a3c1ce8bf7692313e654481e616a93",
+        "contentRange": "bytes 638205072-638205073/638313017"
+      },
+      {
+        "file": "docs/evidence/scientific-resolution-2026-11-14/height/hrsc-dt5-range-638205074-638205377.bin",
+        "sha256": "b24128b59ececda4cbb1eff0054c23320c5042d158e05a3e7b4bf72559e809dd",
+        "contentRange": "bytes 638205074-638205377/638313017"
+      },
+      {
+        "file": "docs/evidence/scientific-resolution-2026-11-14/height/hrsc-dt5-range-638240958-638312085.bin",
+        "sha256": "635a733b0fc444f5d83276cf06ff0b15ec55ea9c8f3f6b3524ec43e90e7f16b4",
+        "contentRange": "bytes 638240958-638312085/638313017"
+      },
+      {
+        "file": "docs/evidence/scientific-resolution-2026-11-14/height/hrsc-dt5-range-638205394-638240957.bin",
+        "sha256": "491c73aa2f618a8f16aed0bdb2c6ebd1eadf679b541f2ce87a09e84a7b23141f",
+        "contentRange": "bytes 638205394-638240957/638313017"
+      },
+      {
+        "file": "docs/evidence/scientific-resolution-2026-11-14/height/hrsc-dt5-range-638205378-638205385.bin",
+        "sha256": "2aefa085fcca66b9437773316dc7a1aebe8ac11614b03e744f60f0b6f9ae54e1",
+        "contentRange": "bytes 638205378-638205385/638313017"
+      },
+      {
+        "file": "docs/evidence/scientific-resolution-2026-11-14/height/hrsc-dt5-range-638205386-638205393.bin",
+        "sha256": "2aefa085fcca66b9437773316dc7a1aebe8ac11614b03e744f60f0b6f9ae54e1",
+        "contentRange": "bytes 638205386-638205393/638313017"
+      },
+      {
+        "file": "docs/evidence/scientific-resolution-2026-11-14/height/hrsc-dt5-range-638312086-638312111.bin",
+        "sha256": "22721a11a8375540dbfbdf25e695f41f4702037751fac38c23641f55318a46d1",
+        "contentRange": "bytes 638312086-638312111/638313017"
+      },
+      {
+        "file": "docs/evidence/scientific-resolution-2026-11-14/height/hrsc-dt5-range-638312112-638312131.bin",
+        "sha256": "c88db3b0ffda03719944820bb9ab969d57955502b30f1852bd108e6ad031b157",
+        "contentRange": "bytes 638312112-638312131/638313017"
+      },
+      {
+        "file": "docs/evidence/scientific-resolution-2026-11-14/height/hrsc-dt5-range-638312132-638312142.bin",
+        "sha256": "c1668d378d58817588575148e97300bb6d20fabd5384755672c0a1eca4d0ca6b",
+        "contentRange": "bytes 638312132-638312142/638313017"
+      },
+      {
+        "file": "docs/evidence/scientific-resolution-2026-11-14/height/hrsc-dt5-range-638312144-638312167.bin",
+        "sha256": "ef78cd197afc47352da306abf8220a5dcc72648ac74f50e9f2f79ddf506f80b1",
+        "contentRange": "bytes 638312144-638312167/638313017"
+      },
+      {
+        "file": "docs/evidence/scientific-resolution-2026-11-14/height/hrsc-dt5-range-638312168-638312215.bin",
+        "sha256": "7279d25e1feab71ac3bef61abb7a28311d7fd351b9b72e6dcc24aa1fb980bf06",
+        "contentRange": "bytes 638312168-638312215/638313017"
+      },
+      {
+        "file": "docs/evidence/scientific-resolution-2026-11-14/height/hrsc-dt5-range-638312216-638312415.bin",
+        "sha256": "65ff76fbfea5601b6278780c1240afc7fe1b541e4b7646afacd1fcda2382fd45",
+        "contentRange": "bytes 638312216-638312415/638313017"
+      },
+      {
+        "file": "docs/evidence/scientific-resolution-2026-11-14/height/hrsc-dt5-range-638312416-638312479.bin",
+        "sha256": "18d173335e8db10394b21b6095b67a894803016bda829decb7a97a7791669144",
+        "contentRange": "bytes 638312416-638312479/638313017"
+      },
+      {
+        "file": "docs/evidence/scientific-resolution-2026-11-14/height/hrsc-dt5-range-638312480-638312622.bin",
+        "sha256": "c91c797caa1c3caccdfbca778526eb6fb3c27a1baef80a3f6b263705ec34c281",
+        "contentRange": "bytes 638312480-638312622/638313017"
+      },
+      {
+        "file": "docs/evidence/scientific-resolution-2026-11-14/height/hrsc-dt5-range-638312624-638313009.bin",
+        "sha256": "2a849cbaeaeecc47bfea0772755e514dba586e700bbd1a4fe4b082a1c95a43f7",
+        "contentRange": "bytes 638312624-638313009/638313017"
+      },
+      {
+        "file": "docs/evidence/scientific-resolution-2026-11-14/height/hrsc-dt5-range-638313010-638313016.bin",
+        "sha256": "2bcce4830bc3a79f3d179888351eb29d047bd3fc78df00c146386db2749dc96a",
+        "contentRange": "bytes 638313010-638313016/638313017"
+      }
+    ]
+  },
+  "da5": {
+    "reader": "Rasterio/GDAL on ephemeral original-offset sparse fixture",
+    "scope": "Only saved crop read; unsaved holes are not source data and fixture is removed",
+    "samplesCompared": 10609,
+    "everyRawInt16Matched": true,
+    "everyMaskMatched": true,
+    "scale": 1.0,
+    "offset": 0.0,
+    "nativeGeotransform": [
+      4000775,
+      50,
+      0,
+      1778175.0000000002,
+      0,
+      -50
+    ],
+    "crsWkt": "PROJCS[\"EQUIDISTANT MARS\",GEOGCS[\"GCS_MARS\",DATUM[\"D_MARS\",SPHEROID[\"MARS\",3396000,0]],PRIMEM[\"Reference_Meridian\",0],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]]],PROJECTION[\"Equirectangular\"],PARAMETER[\"standard_parallel_1\",0],PARAMETER[\"central_meridian\",0],PARAMETER[\"false_easting\",0],PARAMETER[\"false_northing\",0],UNIT[\"metre\",1,AUTHORITY[\"EPSG\",\"9001\"]],AXIS[\"Easting\",EAST],AXIS[\"Northing\",NORTH]]",
+    "geotiffVerticalCitation": "Height above equipotential surface described by potential model GMM3 (PDS dataset MGS-M-MOLA-5-MEGDR-L3-V1.0)|",
+    "metadataRanges": [
+      {
+        "file": "docs/evidence/scientific-resolution-2026-11-14/height/hrsc-da5-header.bin",
+        "sha256": "9faf65867ef7a6e594985e640da8b50660c8706ecf7a09ffd2f9de72ecc052bd",
+        "contentRange": "bytes 0-65535/638313147"
+      },
+      {
+        "file": "docs/evidence/scientific-resolution-2026-11-14/height/hrsc-da5-range-638205138-638205139.bin",
+        "sha256": "4cab73ce2a7e6220975001c8a354143267a3c1ce8bf7692313e654481e616a93",
+        "contentRange": "bytes 638205138-638205139/638313147"
+      },
+      {
+        "file": "docs/evidence/scientific-resolution-2026-11-14/height/hrsc-da5-range-638205140-638205443.bin",
+        "sha256": "645bed3e818c5db7bb8b5b6100807dacfc6d9ef3193672a1f5c00f2033ff3e3e",
+        "contentRange": "bytes 638205140-638205443/638313147"
+      },
+      {
+        "file": "docs/evidence/scientific-resolution-2026-11-14/height/hrsc-da5-range-638241024-638312151.bin",
+        "sha256": "635a733b0fc444f5d83276cf06ff0b15ec55ea9c8f3f6b3524ec43e90e7f16b4",
+        "contentRange": "bytes 638241024-638312151/638313147"
+      },
+      {
+        "file": "docs/evidence/scientific-resolution-2026-11-14/height/hrsc-da5-range-638205460-638241023.bin",
+        "sha256": "491c73aa2f618a8f16aed0bdb2c6ebd1eadf679b541f2ce87a09e84a7b23141f",
+        "contentRange": "bytes 638205460-638241023/638313147"
+      },
+      {
+        "file": "docs/evidence/scientific-resolution-2026-11-14/height/hrsc-da5-range-638205444-638205451.bin",
+        "sha256": "2aefa085fcca66b9437773316dc7a1aebe8ac11614b03e744f60f0b6f9ae54e1",
+        "contentRange": "bytes 638205444-638205451/638313147"
+      },
+      {
+        "file": "docs/evidence/scientific-resolution-2026-11-14/height/hrsc-da5-range-638205452-638205459.bin",
+        "sha256": "2aefa085fcca66b9437773316dc7a1aebe8ac11614b03e744f60f0b6f9ae54e1",
+        "contentRange": "bytes 638205452-638205459/638313147"
+      },
+      {
+        "file": "docs/evidence/scientific-resolution-2026-11-14/height/hrsc-da5-range-638312152-638312177.bin",
+        "sha256": "22721a11a8375540dbfbdf25e695f41f4702037751fac38c23641f55318a46d1",
+        "contentRange": "bytes 638312152-638312177/638313147"
+      },
+      {
+        "file": "docs/evidence/scientific-resolution-2026-11-14/height/hrsc-da5-range-638312178-638312197.bin",
+        "sha256": "90310a33dc3c26049ac7e1d37a8a3423bff843e77855f1be8f864e45a2098973",
+        "contentRange": "bytes 638312178-638312197/638313147"
+      },
+      {
+        "file": "docs/evidence/scientific-resolution-2026-11-14/height/hrsc-da5-range-638312198-638312208.bin",
+        "sha256": "c1668d378d58817588575148e97300bb6d20fabd5384755672c0a1eca4d0ca6b",
+        "contentRange": "bytes 638312198-638312208/638313147"
+      },
+      {
+        "file": "docs/evidence/scientific-resolution-2026-11-14/height/hrsc-da5-range-638312210-638312233.bin",
+        "sha256": "ef78cd197afc47352da306abf8220a5dcc72648ac74f50e9f2f79ddf506f80b1",
+        "contentRange": "bytes 638312210-638312233/638313147"
+      },
+      {
+        "file": "docs/evidence/scientific-resolution-2026-11-14/height/hrsc-da5-range-638312234-638312281.bin",
+        "sha256": "7279d25e1feab71ac3bef61abb7a28311d7fd351b9b72e6dcc24aa1fb980bf06",
+        "contentRange": "bytes 638312234-638312281/638313147"
+      },
+      {
+        "file": "docs/evidence/scientific-resolution-2026-11-14/height/hrsc-da5-range-638312282-638312481.bin",
+        "sha256": "0085788ed7950b31158770947467a25395c9943882d22e6996ca6754b46cf160",
+        "contentRange": "bytes 638312282-638312481/638313147"
+      },
+      {
+        "file": "docs/evidence/scientific-resolution-2026-11-14/height/hrsc-da5-range-638312482-638312545.bin",
+        "sha256": "18d173335e8db10394b21b6095b67a894803016bda829decb7a97a7791669144",
+        "contentRange": "bytes 638312482-638312545/638313147"
+      },
+      {
+        "file": "docs/evidence/scientific-resolution-2026-11-14/height/hrsc-da5-range-638312546-638312754.bin",
+        "sha256": "3a921fcc95a0f98a06a092aca03cb5d6cdd4fc9dd42ed7b1170726c8727da9f4",
+        "contentRange": "bytes 638312546-638312754/638313147"
+      },
+      {
+        "file": "docs/evidence/scientific-resolution-2026-11-14/height/hrsc-da5-range-638312756-638313139.bin",
+        "sha256": "599d8905ab3eb3e77ace7abb05c1d1ee3a9f6d2279e38a2bf11cd929fb8ce34a",
+        "contentRange": "bytes 638312756-638313139/638313147"
+      },
+      {
+        "file": "docs/evidence/scientific-resolution-2026-11-14/height/hrsc-da5-range-638313140-638313146.bin",
+        "sha256": "2bcce4830bc3a79f3d179888351eb29d047bd3fc78df00c146386db2749dc96a",
+        "contentRange": "bytes 638313140-638313146/638313147"
+      }
+    ]
+  }
+}
