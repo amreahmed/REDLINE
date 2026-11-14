@@ -1,0 +1,124 @@
+{
+  "url": "http://127.0.0.1:4174/",
+  "browser": "isolated headless Chromium",
+  "checks": [
+    "Real NASA globe and navigation remain usable with compact global science status",
+    "Keyboard science access preserves all 11 statuses, technical evidence and byte-identical full audit download",
+    "Switching from science to another drawer restores the current navigation trigger",
+    "Layer selection retains exact identities and MOLA/preliminary/controlled distinctions without global terrain warnings",
+    "Real 65,536-cell grid loads; controlled CTX enables endpoint controls",
+    "Opening science exits map picking; Escape closes the drawer and restores focus",
+    "Actual production worker calculates a qualified shortest grid path",
+    "Wrapped waypoint labels preserve aligned, usable input rows",
+    "Waypoint invalidates old results; two measured paths support keyboard selection",
+    "Controlled layer visibility hides and restores route qualification while preserving calculated paths",
+    "Invalid waypoint draft retains the distinctly labeled active waypoint",
+    "Endpoint change during search terminates its worker and suppresses stale paths",
+    "Explicit cancellation returns to idle and terminates its worker",
+    "Worker startup, malformed-response and timeout failures show actionable retry states",
+    "Retry recovers with the actual worker; clearing waypoint resets comparison",
+    "Exclusive source drawer preserves scientific qualifications and expanded coordinate metadata",
+    "About dialog links to scientific details and restores focus to its visible opener",
+    "tablet: route controls, scientific status, attribution and drawer interaction without horizontal overflow",
+    "mobile: route controls, scientific status, attribution and drawer interaction without horizontal overflow",
+    "small-mobile: route controls, scientific status, attribution and drawer interaction without horizontal overflow",
+    "Clearing endpoints immediately removes paths and blocks calculation",
+    "Selected approximate feature receives its own qualification with full target provenance retained",
+    "Actual NASA tile responses observed; no page or console errors"
+  ],
+  "pageErrors": [],
+  "consoleErrors": [],
+  "tileResponses": 61,
+  "screenshots": [
+    "desktop-overview.png",
+    "desktop-scientific-details.png",
+    "desktop-layer-details.png",
+    "waypoint-alignment.png",
+    "desktop-routes.png",
+    "worker-timeout.png",
+    "tablet-routes.png",
+    "tablet-scientific-details.png",
+    "mobile-routes.png",
+    "mobile-scientific-details.png",
+    "small-mobile-routes.png",
+    "small-mobile-scientific-details.png",
+    "desktop-selected-feature.png"
+  ],
+  "auditDownload": {
+    "filename": "REDLINE-scientific-audit.md",
+    "bytes": 34551,
+    "sha256": "7cc767388a3a5013947c9b920147a9343659391db582e93e1674eab39d44d0f1"
+  },
+  "fieldAlignment": [
+    {
+      "viewport": "desktop",
+      "boxes": [
+        {
+          "top": 737.703125,
+          "height": 44,
+          "width": 155.5
+        },
+        {
+          "top": 737.703125,
+          "height": 44,
+          "width": 155.5
+        }
+      ]
+    },
+    {
+      "viewport": "tablet",
+      "boxes": [
+        {
+          "top": 639.109375,
+          "height": 44,
+          "width": 135.5
+        },
+        {
+          "top": 639.109375,
+          "height": 44,
+          "width": 135.5
+        }
+      ]
+    },
+    {
+      "viewport": "mobile",
+      "boxes": [
+        {
+          "top": 786.390625,
+          "height": 44,
+          "width": 171
+        },
+        {
+          "top": 786.390625,
+          "height": 44,
+          "width": 171
+        }
+      ]
+    },
+    {
+      "viewport": "small-mobile",
+      "boxes": [
+        {
+          "top": 888.015625,
+          "height": 44,
+          "width": 136
+        },
+        {
+          "top": 888.015625,
+          "height": 44,
+          "width": 136
+        }
+      ]
+    }
+  ],
+  "calculatedLabels": [
+    "Shortest grid path4.15 km · 161 cell visits",
+    "Via your waypoint4.89 km · 226 cell visits"
+  ],
+  "workers": {
+    "mode": "normal",
+    "started": 8,
+    "terminated": 8,
+    "active": 0
+  }
+}

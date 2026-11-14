@@ -11,12 +11,19 @@ import type { TerrainGrid } from '../../features/terrain/gridTypes'
 import { TerrainInspection } from '../mission/TerrainInspection'
 import { useEffect, useRef } from 'react'
 import { ScientificValidation } from '../mission/ScientificValidation'
+import { LAYER_QUALIFICATIONS } from '../shared/scientificCopy'
 
-export function InformationPanel({ explorer, visibility, statuses, target, inspectionSequence, planningGrid, onClose }: { explorer: ExplorerSummary; visibility: LayerVisibility; statuses: LayerStatuses; target?: ScienceTarget; inspectionSequence: number; planningGrid?: TerrainGrid; onClose: () => void }) {
+export function InformationPanel({ explorer, visibility, statuses, target, inspectionSequence, scienceRequest = 0, planningGrid, onClose }: { explorer: ExplorerSummary; visibility: LayerVisibility; statuses: LayerStatuses; target?: ScienceTarget; inspectionSequence: number; scienceRequest?: number; planningGrid?: TerrainGrid; onClose: () => void }) {
   const contentRef = useRef<HTMLDivElement>(null)
   useEffect(() => {
     if (target && contentRef.current) contentRef.current.scrollTop = 0
   }, [target, inspectionSequence])
+  useEffect(() => {
+    if (scienceRequest && contentRef.current) {
+      contentRef.current.scrollTop = 0
+      contentRef.current.querySelector<HTMLElement>('#validation-heading')?.focus({ preventScroll: true })
+    }
+  }, [scienceRequest])
   return (
     <aside id="information-panel" className="panel sources-panel" aria-labelledby="information-heading">
       <div className="panel-heading drawer-heading">
@@ -32,9 +39,10 @@ export function InformationPanel({ explorer, visibility, statuses, target, inspe
           <h3 id="globe-source-heading">NASA visual Mars overview</h3>
           <p className="source-mission">NASA / JPL-Caltech visual model</p>
           <p className="source-state" role="status">{explorer.globe.message}</p>
-          <p className="source-warning">No geographic model orientation is validated. The guided map handoff does not transfer a surface location. Neither model geometry nor textures are numerical elevation.</p>
+          <p className="context-qualification">Visual model · scientific orientation unverified</p>
           <details className="source-metadata"><summary>Model details & source links</summary>
             <p className="helper">Official glTF model, {(MARS_GLOBE.inspectedBytes / 1_000_000).toFixed(2)} MB at inspection, with embedded color and normal textures. Display lighting is illustrative.</p>
+            <p className="helper">No geographic model orientation is validated. The approach is scripted and the guided map handoff does not transfer a surface location. Jezero opens at the published approximate crater center, not a precise science target. Neither model geometry nor textures are numerical elevation or evidence of slopes or safe routes.</p>
             <dl className="source-facts"><dt>Coverage</dt><dd>Visual planet overview; geographic orientation unvalidated</dd><dt>Nominal resolution</dt><dd>Not established for quantitative use</dd></dl>
             <div className="source-links"><a href={MARS_GLOBE.sourceUrl} target="_blank" rel="noreferrer">NASA model</a><a href={MARS_GLOBE.usageUrl} target="_blank" rel="noreferrer">Usage guidance</a></div>
           </details>
@@ -47,6 +55,7 @@ export function InformationPanel({ explorer, visibility, statuses, target, inspe
             <section className="source-detail source-overview" key={layer.id} aria-labelledby={`${layer.id}-source-heading`}>
               <h3 id={`${layer.id}-source-heading`}>{layer.name}</h3>
               <p className="source-mission">{layer.mission}</p>
+              <p className="source-id source-product-identity">{layer.productId}</p>
               <p className="source-state">{!visibility[layer.id] ? 'Hidden by you' : status.phase === 'checking' ? 'Checking service metadata' : status.phase === 'unavailable' ? 'Service unavailable' : !explorer.mapShown ? 'Selected for map exploration' : status.coverage === 'outside' ? 'Outside coverage' : layer.id !== 'mola' && !explorer.localDetail ? 'Waiting for local zoom' : layerStatusLabel(status, true)}</p>
               <dl className="source-facts">
                 <dt>Nominal resolution</dt><dd>{layer.resolution}</dd>
@@ -54,7 +63,7 @@ export function InformationPanel({ explorer, visibility, statuses, target, inspe
               </dl>
               {status.detail && <p className="source-warning">{status.detail}</p>}
               {status.missing > 0 && <p className="source-warning">The service reported missing tiles. Those areas contain no imagery from this layer.</p>}
-              <p className="source-warning">{layer.id === 'mola' ? 'Rendered relief imagery, not numerical elevation.' : layer.id === 'ctx' ? 'Preliminary imagery. Fine registration and native latitude interpretation remain unverified.' : 'Rendered imagery, not elevation. Absolute landmark and named-feature registration remain unvalidated.'}</p>
+              <p className="context-qualification">{LAYER_QUALIFICATIONS[layer.id]}</p>
               <details className="source-metadata"><summary>Metadata, limitations & source links</summary>
                 <dl className="source-facts">
                 <dt>Service coverage (degrees)</dt><dd>{layer.extent[0].toFixed(4)} to {layer.extent[2].toFixed(4)} longitude<br />{layer.extent[1].toFixed(4)} to {layer.extent[3].toFixed(4)} latitude</dd>
@@ -62,7 +71,6 @@ export function InformationPanel({ explorer, visibility, statuses, target, inspe
                 </dl>
                 <p className="helper">{layer.limitation}</p>
                 <div className="source-links"><a href={layer.sourceUrl} target="_blank" rel="noreferrer">Source</a><a href={layer.capabilitiesUrl} target="_blank" rel="noreferrer">WMTS metadata</a></div>
-                <p className="source-id">{layer.productId}</p>
               </details>
               <p className="source-credit">{layer.attribution}</p>
             </section>
@@ -78,7 +86,6 @@ export function InformationPanel({ explorer, visibility, statuses, target, inspe
       </div>
       <div className="information-footer">
         <div className="flex items-center gap-2"><Icon name="info" size={16} /><span>Map imagery and numerical terrain are separate</span></div>
-        <p>Grid separation and hypothetical paths use a Mars reference sphere. DEM slopes, terrain costs and safety results remain unavailable.</p>
       </div>
     </aside>
   )

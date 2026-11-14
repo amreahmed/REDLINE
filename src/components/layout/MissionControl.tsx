@@ -4,6 +4,7 @@ import { layerStatusLabel } from '../../features/map/types'
 import type { LayerId, LayerStatuses, LayerVisibility } from '../../features/map/types'
 import type { ExplorerSummary } from '../../features/explorer/types'
 import type { ReactNode } from 'react'
+import { LAYER_QUALIFICATIONS } from '../shared/scientificCopy'
 
 export type MissionSection = 'explore' | 'layers' | 'plan'
 
@@ -38,7 +39,7 @@ export function MissionControl({ explorer, visibility, statuses, onToggle, onRet
         <p className="helper">Explore the Perseverance region through NASA imagery and sourced science references.</p>
         <p className="helper exploration-next-step">Use <strong>Fly to Jezero</strong> in the viewport to open the region.</p>
         {transitionMessage ? <p className="source-state" role="status">{transitionMessage}</p> : explorer.globe.phase !== 'ready' ? <p className={explorer.globe.phase === 'error' ? 'source-warning' : 'source-state'} role="status">{explorer.globe.message}</p> : <p className="source-state" role="status">{explorer.mapShown ? explorer.localDetail ? 'Local map detail active.' : 'Regional map context active.' : 'NASA visual overview ready.'}</p>}
-        <p className="source-warning region-qualification">The approach is scripted. Globe orientation is unvalidated; the map opens at the published approximate crater center.</p>
+        <p className="context-qualification">Navigation uses the published approximate crater center.</p>
       </section>
       <section className="panel-section mission-objective" aria-labelledby="objective-heading">
         <h3 id="objective-heading">What to do next</h3>
@@ -55,7 +56,7 @@ export function MissionControl({ explorer, visibility, statuses, onToggle, onRet
           <h3 id="layers-heading">Imagery selection</h3>
           <Icon name="layers" />
         </div>
-        <p id="layers-note" className="helper mb-4">MOLA shows regional context. CTX imagery appears at local zoom within its footprint.</p>
+        <p id="layers-note" className="helper mb-4">Select rendered imagery for the current map view. CTX appears at local zoom within its footprint.</p>
         <div className="layer-list">
           {MARS_LAYERS.map((layer) => {
             const status = statuses[layer.id]
@@ -64,8 +65,9 @@ export function MissionControl({ explorer, visibility, statuses, onToggle, onRet
               <div key={layer.id} className="map-layer-control">
                 <label className="layer-row map-layer-row flex items-start gap-3">
                   <input type="checkbox" checked={visibility[layer.id]} onChange={() => onToggle(layer.id)} aria-describedby={`${layer.id}-status`} aria-label={layer.name} />
-                  <span><span className="layer-name">{layer.name}</span><span className="layer-description">{layer.description}</span></span>
+                  <span><span className="layer-name">{layer.name}</span><span className="layer-description">{LAYER_QUALIFICATIONS[layer.id]}</span></span>
                 </label>
+                <p className="source-id layer-product-identity">{layer.productId}</p>
                 <p id={`${layer.id}-status`} className="layer-status" data-warning={hasError || status.coverage !== 'inside'} role="status">{!visibility[layer.id] ? 'Hidden by you' : status.phase === 'checking' ? 'Checking service metadata' : status.phase === 'unavailable' ? 'Service unavailable' : !explorer.mapShown ? 'Selected for map exploration' : status.coverage === 'outside' ? 'Outside coverage' : layer.id !== 'mola' && !explorer.localDetail ? 'Zoom closer to Jezero for CTX detail' : layerStatusLabel(status, true)}</p>
                 {visibility[layer.id] && status.enlarged && <p className="helper layer-enlarged">Enlarged beyond native tile detail.</p>}
                 {hasError && <button className="retry-button" type="button" onClick={() => onRetry(layer.id)} disabled={status.phase === 'checking'}>Retry {layer.id === 'controlledCtx' ? 'controlled CTX' : layer.id === 'ctx' ? 'CTX' : 'MOLA'}</button>}
@@ -73,12 +75,8 @@ export function MissionControl({ explorer, visibility, statuses, onToggle, onRet
             )
           })}
         </div>
-        <details className="layer-guidance"><summary>How the layers work</summary><p className="helper">Controlled CTX supports the planning crop and draws above preliminary CTX when both are selected. All map layers are rendered images, separate from numerical terrain. Source details include resolution, coordinate qualifications and attribution.</p></details>
+        <details className="layer-guidance"><summary>How the layers work</summary><p className="helper">Controlled CTX supports the planning crop and draws above preliminary CTX when both are selected. All map layers are rendered images, separate from numerical terrain. Source details include resolution, coordinate qualifications and attribution.</p><p className="helper">Coverage boxes do not guarantee complete imagery. Missing or failed tiles are never replaced with simulated data.</p></details>
       </section>
-      <div className="sidebar-footnote flex items-start gap-2">
-        <Icon name="info" size={16} className="shrink-0" />
-        <p>Coverage boxes do not guarantee complete imagery. Missing or failed tiles are never replaced with simulated data.</p>
-      </div>
       </div>
       <div id="mission-plan-section" className="mission-section-content" hidden={activeSection !== 'plan'}>
         {missionPlanner}

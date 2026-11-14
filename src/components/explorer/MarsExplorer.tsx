@@ -1,7 +1,6 @@
 import { useCallback, useEffect, useRef, useState } from 'react'
 import 'ol/ol.css'
 import { MARS_LAYERS } from '../../data/marsLayers'
-import { JEZERO_NAVIGATION } from '../../data/jezero'
 import { createMarsMap } from '../../features/map/createMarsMap'
 import type { MarsMapController } from '../../features/map/createMarsMap'
 import type { GlobeController, GlobeStatus } from '../../features/globe/createMarsGlobe'
@@ -14,6 +13,7 @@ import type { ExplorerSummary } from '../../features/explorer/types'
 import { createAnimationPlayer, easeInOut } from '../../features/explorer/animation'
 import { createJezeroStages, createReturnStages } from '../../features/explorer/jezeroFlight'
 import { Icon } from '../shared/Icon'
+import { DISTANCE_ONLY_QUALIFICATION } from '../shared/scientificCopy'
 import { SCIENCE_TARGETS, targetById } from '../../data/scienceTargets'
 import type { EndpointRole, MissionSelection, TargetId } from '../../features/mission/types'
 import type { GridSelection } from '../../features/mission/gridSelection'
@@ -311,11 +311,13 @@ export function MarsExplorer({ visibility, statuses, retryRequest, jezeroRequest
   const retryGlobe = () => { setGlobe(initialExplorerSummary.globe); globeStatusRef.current = initialExplorerSummary.globe; setGlobeAttempt((value) => value + 1) }
   const resetView = () => { onNavigate(); if (mapShown) mapRef.current?.focusJezero(); else globeRef.current?.reset() }
   const flightHelp = transitioning ? 'An exploration transition is in progress.' : mapError ? 'The map could not start. Reload to retry.' : globe.phase === 'loading' ? 'The NASA overview is preparing. Open the map directly while it loads.' : globe.phase === 'error' ? 'The NASA overview is unavailable. Open the map directly or retry the overview.' : 'Start the scripted visual approach to the published approximate Jezero crater center.'
+  const visibleRoutes = mapShown && effective.controlledCtx && hypotheticalRoutes.length > 0
+  const selectedReference = targetById(selectedTargetId)
 
   return (
     <section className="map-viewport explorer-viewport" data-grid="false" data-feedback={!!notice || (mapShown && !!mapMessage)} aria-labelledby="explorer-heading">
       <div className="viewport-top map-toolbar explorer-toolbar">
-        <div className="viewport-label"><h1 id="explorer-heading">{mapShown ? 'Mars map' : 'Mars'}</h1><span className="exploration-stage">{mapShown ? (state.localDetail ? 'Local imagery' : 'Regional context') : 'Visual model · orientation unverified'}</span></div>
+        <div className="viewport-label"><h1 id="explorer-heading">{mapShown ? 'Mars map' : 'Mars'}</h1><span className="exploration-stage">{mapShown ? (state.localDetail ? 'Local imagery' : 'Regional context') : 'Visual model'}</span></div>
         <div className="explorer-view-actions">
           <button className="grid-button fly-jezero-button" type="button" title={flightHelp} aria-describedby="flight-help" disabled={transitioning || !!mapError || globe.phase !== 'ready'} onClick={onJezero}><Icon name="orbit" size={17} />Fly to Jezero</button>
           <button className="grid-button view-reset" type="button" title={mapShown ? 'Center the map on approximate Jezero (Home)' : 'Restore the initial globe view (Home)'} disabled={!canNavigate} onClick={resetView}>Reset view</button>
@@ -365,14 +367,14 @@ export function MarsExplorer({ visibility, statuses, retryRequest, jezeroRequest
         {planningGrid && (hypotheticalRoutes.length > 0 || routeWaypoint) && <>{hypotheticalRoutes.some((route) => route.id === 'shortest') && <span><b>━</b> Shortest grid path</span>}{hypotheticalRoutes.some((route) => route.id === 'via') && <span><b>┄</b> Via waypoint</span>}{routeWaypoint && <span><b>W</b> Hypothetical waypoint</span>}<p>Distance-only hypothetical paths · graph connectivity assumed · terrain difficulty and traversability unvalidated</p></>}
       </div>
       <div className="viewport-bottom map-help">
-        <p id="explorer-help">Drag to {mapShown ? 'pan' : 'rotate'}; scroll or pinch to zoom. Arrow keys and + / − work with focus here. Home resets the view. Zoom {mapShown ? 'out for the overview; in near Jezero for CTX detail' : 'in to continue to the real map; the first handoff enters Jezero, later handoffs resume the map area'}. The visual globe does not support geographic picking.</p>
-        <p id="handoff-limit">The globe approach is scripted, not geographically registered. Jezero uses the <a href={JEZERO_NAVIGATION.sourceUrl} target="_blank" rel="noreferrer">published approximate crater center</a>, not a precise science target. Images and geometry are not numerical elevation.</p>
+        <p id="explorer-help">Drag to {mapShown ? 'pan' : 'rotate'}; scroll or pinch to zoom. Arrow keys and + / − work with focus here. Home resets the view. Zoom {mapShown ? 'out for the overview; in near Jezero for CTX detail' : 'in to continue to the real map; the first handoff enters Jezero, later handoffs resume the map area'}.</p>
+        <p id="handoff-limit">Open Scientific validation in the footer for model orientation, source coordinates and measurement limitations.</p>
         {mapShown && globe.phase === 'loading' && <p>The overview is preparing; its approach action will become available when ready. Home centers Jezero directly.</p>}
         {mapShown && globe.phase === 'error' && <p className="source-warning">Overview unavailable. Zoom stays on the map; use Return to overview to retry.</p>}
       </div>
       </div>
       </details>
-      {mapShown && <p className="viewport-qualification">Approximate feature locations · registration unverified</p>}
+      {visibleRoutes ? <p className="viewport-qualification route-qualification">{DISTANCE_ONLY_QUALIFICATION}</p> : mapShown && selectedReference && <p className="viewport-qualification" data-unverified="true">{selectedReference.name}: approximate center · absolute registration unverified</p>}
     </section>
   )
 }

@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import type { useDistanceRouting } from '../../features/routing/useDistanceRouting'
+import { DISTANCE_ONLY_QUALIFICATION } from '../shared/scientificCopy'
 
 type Routing = ReturnType<typeof useDistanceRouting>
 const distance = (value: number) => value >= 1000 ? `${(value / 1000).toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 })} km` : `${value.toLocaleString('en-US', { maximumFractionDigits: 1 })} m`
@@ -34,9 +35,9 @@ export function RoutePlanner({ routing, onShowMap }: { routing: Routing; onShowM
       </div>
       <p className="helper" role="status">{routing.routes.length === 1 ? 'Shortest grid path calculated. Add an optional waypoint for a distance comparison.' : `Both paths calculated. Visiting the waypoint adds ${distance(Math.max(0, routing.state.comparison.via!.distanceM - routing.state.comparison.shortest.distanceM))} in this model.`}</p>
       <button className="grid-button" type="button" onClick={onShowMap}>Show paths on map</button>
-      <p className="helper">The selected path is emphasized on controlled CTX imagery. Paths are calculated, not recorded rover traverses.</p>
+      <p className="helper">The selected path is emphasized on controlled CTX imagery.</p>
     </>}
-    <details className="selection-guidance"><summary>How this model works</summary><p className="helper">A* minimizes the sum of adjacent native-center distances on a 3,396,190 m Mars reference sphere. Eight-neighbor connections are hypothetical. Missing cells are excluded; diagonals require both flank cells. No elevation, slope, roughness or science score enters the cost.</p><p className="helper">A route through a waypoint is the shortest origin-to-waypoint path plus the shortest waypoint-to-destination path. It can revisit a cell. Grid paths may differ from a direct spherical arc.</p></details>
-    <p className="source-warning" id="route-model-note">Simulation: valid data coverage does not prove traversability. Terrain costs and precise named-site routing remain unavailable. Decision-support prototype only. Route scores are model outputs and are not validated human-safety predictions.</p>
+    <p className="context-qualification" id="route-model-note">{DISTANCE_ONLY_QUALIFICATION}</p>
+    <details className="selection-guidance"><summary>How this model works</summary><p className="helper">A* minimizes the sum of adjacent native-center distances on a 3,396,190 m Mars reference sphere. Eight-neighbor connections are hypothetical. Missing cells are excluded; diagonals require both flank cells. No elevation, slope, roughness or science score enters the cost.</p><p className="helper">A route through a waypoint is the shortest origin-to-waypoint path plus the shortest waypoint-to-destination path. It can revisit a cell. Grid paths may differ from a direct spherical arc.</p><p className="helper">Paths are calculated simulations, not recorded rover traverses. Valid data coverage does not prove traversability. Terrain-aware routing and precise named-feature routing are unavailable. Route scores are model outputs, not validated human-safety predictions.</p>{routing.routes[0] && <dl className="source-facts"><dt>Numerical source</dt><dd className="source-id">{routing.routes[0].sourceId}</dd><dt>Source SHA-256</dt><dd className="source-id">{routing.routes[0].sourceHash}</dd><dt>Grid SHA-256</dt><dd className="source-id">{routing.routes[0].gridHash}</dd></dl>}</details>
   </section>
 }

@@ -1,7 +1,7 @@
 import { useRef } from 'react'
 import { Icon } from '../shared/Icon'
 
-export function AboutDialog() {
+export function AboutDialog({ onOpenScientificDetails }: { onOpenScientificDetails: () => void }) {
   const dialogRef = useRef<HTMLDialogElement>(null)
 
   return (
@@ -17,7 +17,8 @@ export function AboutDialog() {
         <p id="about-description">A workspace for exploring Mars and understanding the evidence behind hypothetical surface-route planning.</p>
         <div className="dialog-scope">
           <h3>Mars exploration preview</h3>
-          <p>Zoom from NASA’s visual Mars overview into real Mars Trek MOLA context and Jezero CTX detail. The guided handoff does not transfer a globe surface position: the model’s geographic orientation is unverified. Controlled CTX and numerical terrain share verified source geometry. Grid separation and hypothetical paths use the documented Mars reference sphere. A* compares distance-only grid paths with an optional user waypoint; connectivity assumes traversability. Named-feature registration and the DEM height reference remain unresolved. DEM slopes, terrain costs and safety results are unavailable.</p>
+          <p>Explore NASA’s visual Mars model and sourced MOLA / CTX imagery. Plan compares distance-only hypothetical paths between native grid cells, with an optional waypoint. Scientific validation is Partial; details separate verified geometry and mathematical search from unresolved terrain and feature accuracy.</p>
+          <button type="button" className="scientific-inline-link" onClick={() => { dialogRef.current?.close(); onOpenScientificDetails() }}>View scientific details</button>
         </div>
         <p className="helper">REDLINE is an independent prototype, not an official NASA product or a certified human-safety system.</p>
       </dialog>

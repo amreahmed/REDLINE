@@ -24,17 +24,23 @@ export default function App() {
   const [jezeroRequest, setJezeroRequest] = useState(0)
   const [panels, dispatchPanel] = useReducer(workspacePanels, initialWorkspacePanels)
   const navigationRef = useRef<HTMLElement>(null)
+  const scienceReturnRef = useRef<HTMLElement | null>(null)
+  const [scienceRequest, setScienceRequest] = useState(0)
   const controlsOpen = panels.panel === 'mission'
   const informationOpen = panels.panel === 'sources'
-  const openSources = useCallback(() => dispatchPanel({ type: 'sources' }), [])
+  const openSources = useCallback(() => { scienceReturnRef.current = null; dispatchPanel({ type: 'sources' }) }, [])
+  const openMission = (section: 'explore' | 'layers' | 'plan') => { scienceReturnRef.current = null; dispatchPanel({ type: 'mission', section }) }
   const revealSources = useCallback(() => {
     // Inspection always reveals its context, including when sources are already open.
+    scienceReturnRef.current = null
     dispatchPanel({ type: 'close' })
     dispatchPanel({ type: 'sources' })
   }, [])
   const closePanel = useCallback(() => {
     dispatchPanel({ type: 'close' })
-    navigationRef.current?.querySelector<HTMLButtonElement>('[aria-expanded="true"]')?.focus()
+    const returnTarget = scienceReturnRef.current ?? navigationRef.current?.querySelector<HTMLButtonElement>('[aria-expanded="true"]')
+    scienceReturnRef.current = null
+    returnTarget?.focus()
   }, [])
   const [visibility, setVisibility] = useState<LayerVisibility>({ mola: true, ctx: true, controlledCtx: false })
   const [statuses, setStatuses] = useState<LayerStatuses>({ mola: initialLayerStatus(), ctx: initialLayerStatus(), controlledCtx: initialLayerStatus() })
@@ -49,6 +55,13 @@ export default function App() {
   const [centerPickRequest, setCenterPickRequest] = useState(0)
   const canPick = planning.terrain.phase === 'ready' && visibility.controlledCtx && explorer.phase === 'map' && explorer.localDetail && statuses.controlledCtx.phase === 'available' && statuses.controlledCtx.coverage !== 'outside' && explorer.controlledImageryReady
   const cancelGridPick = planning.cancelPick
+  const revealScience = useCallback(() => {
+    scienceReturnRef.current = document.activeElement instanceof HTMLElement ? document.activeElement : null
+    cancelGridPick()
+    dispatchPanel({ type: 'close' })
+    dispatchPanel({ type: 'sources' })
+    setScienceRequest(value => value + 1)
+  }, [cancelGridPick])
   const planningNavigation = useRef(0)
   const cancelPlanningNavigation = useCallback(() => { planningNavigation.current += 1; cancelGridPick() }, [cancelGridPick])
   const onSummary = useCallback((summary: ExplorerSummary) => {
@@ -116,12 +129,12 @@ export default function App() {
         </div>
         <div className="header-actions flex items-center gap-4">
           <span className="preview-badge">Exploration prototype</span>
-          <AboutDialog />
+          <AboutDialog onOpenScientificDetails={revealScience} />
         </div>
       </header>
       <div className="exploration-layout">
         <nav ref={navigationRef} className="workspace-rail" aria-label="Exploration tools">
-          {([['explore', 'orbit', 'Explore'], ['layers', 'layers', 'Layers'], ['plan', 'pin', 'Plan']] as const).map(([section, icon, label]) => <button key={section} type="button" className="rail-button" title={label === 'Plan' ? 'Choose hypothetical mission endpoints' : label} aria-expanded={controlsOpen && panels.section === section} aria-controls="mission-control" onClick={() => dispatchPanel({ type: 'mission', section })}><Icon name={icon} size={22} /><span>{label}</span></button>)}
+          {([['explore', 'orbit', 'Explore'], ['layers', 'layers', 'Layers'], ['plan', 'pin', 'Plan']] as const).map(([section, icon, label]) => <button key={section} type="button" className="rail-button" title={label === 'Plan' ? 'Choose hypothetical mission endpoints' : label} aria-expanded={controlsOpen && panels.section === section} aria-controls="mission-control" onClick={() => openMission(section)}><Icon name={icon} size={22} /><span>{label}</span></button>)}
           <button type="button" className="rail-button sources-rail-button" title="Sources and scientific status" aria-expanded={informationOpen} aria-controls="information-panel" onClick={openSources}><Icon name="info" size={22} /><span>Sources</span></button>
         </nav>
       <main className="workspace" data-panel={panels.panel ?? 'none'} data-picking={planning.pickRole !== null}>
@@ -131,10 +144,10 @@ export default function App() {
           <FeaturePlanner targets={SCIENCE_TARGETS} selection={missionSelection} selectedId={selectedTargetId} error={selectionError} onInspect={inspectTarget} onAssign={selectEndpoint} onSwap={swap} onClear={clear} />
         </>} /></div>
         <MarsExplorer visibility={visibility} statuses={statuses} retryRequest={retryRequest} jezeroRequest={jezeroRequest} onJezero={openJezero} onStatus={onStatus} onSummary={onSummary} missionSelection={missionSelection} selectedTargetId={selectedTargetId} focusRequest={focusRequest} onInspectTarget={inspectTarget} planningGrid={planning.terrain.phase === 'ready' ? planning.terrain.grid : null} gridSelection={planning.selection} gridFocusRequest={gridFocusRequest} centerPickRequest={centerPickRequest} gridPickRole={canPick ? planning.pickRole : null} gridPickNotice={planning.notice} onPickCoordinate={(coordinate) => { if (canPick) planning.pickCoordinate(coordinate) }} onNavigate={cancelPlanningNavigation} hypotheticalRoutes={routing.routes} selectedRouteId={routing.routes.length ? routing.selectedId : null} routeWaypoint={routing.waypointPoint} />
-        <div className="information-slot" hidden={!informationOpen}><InformationPanel onClose={closePanel} explorer={explorer} visibility={visibility} statuses={statuses} target={targetById(selectedTargetId)} inspectionSequence={focusRequest?.sequence ?? 0} planningGrid={planning.terrain.phase === 'ready' ? planning.terrain.grid : undefined} /></div>
+        <div className="information-slot" hidden={!informationOpen}><InformationPanel onClose={closePanel} explorer={explorer} visibility={visibility} statuses={statuses} target={targetById(selectedTargetId)} inspectionSequence={focusRequest?.sequence ?? 0} scienceRequest={scienceRequest} planningGrid={planning.terrain.phase === 'ready' ? planning.terrain.grid : undefined} /></div>
       </main>
       </div>
-      <MissionStatusBar terrain={planning.terrain} routePhase={routing.state.phase} />
+      <MissionStatusBar terrain={planning.terrain} routePhase={routing.state.phase} activity={controlsOpen ? panels.section : informationOpen ? 'sources' : explorer.mapShown && routing.state.phase !== 'idle' ? 'plan' : 'explore'} onOpenScientificDetails={revealScience} />
     </div>
   )
 }

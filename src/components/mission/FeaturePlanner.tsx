@@ -21,7 +21,7 @@ export function FeaturePlanner({ targets, selection, selectedId, error, onInspec
       <summary>Explore approximate feature references</summary>
     <section className="panel-section feature-planner" aria-labelledby="planning-heading">
       <h3 id="planning-heading">Feature references</h3>
-      <p className="helper reference-qualification">Published approximate centers with NASA science context. Image registration is unverified; these are hypothetical endpoints.</p>
+      <p className="context-qualification reference-qualification">Approximate feature centers · absolute registration unverified</p>
       <label className="field-label" htmlFor="reference-search">Search these three references</label>
       <input id="reference-search" type="search" placeholder="Jezero, Belva, Neretva" value={query} onChange={(event) => setQuery(event.target.value)} />
       <div className="reference-list" aria-label="Supported feature references">
@@ -46,7 +46,7 @@ export function FeaturePlanner({ targets, selection, selectedId, error, onInspec
         <button type="button" className="grid-button" disabled={!hasEndpoints} onClick={onSwap}>Swap endpoints</button>
         <button type="button" className="grid-button" disabled={!hasEndpoints} onClick={onClear}>Clear endpoints</button>
       </div>
-      <p className="helper">Approximate reference centers are separate from grid endpoints. Image colors are not elevation.</p>
+      <p className="helper">Approximate reference centers are separate from grid endpoints.</p>
     </section>
     </details>
   )

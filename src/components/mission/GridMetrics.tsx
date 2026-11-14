@@ -15,10 +15,10 @@ export function GridMetrics({ grid, selection }: { grid: TerrainGrid; selection:
         <p className="helper">Geometric distance between G-O and G-D. This checks endpoint cells only; it does not inspect the terrain between them.</p>
       </>}
     </div>
-    <p className="source-warning">{heightBlocker ? 'DEM slopes and terrain costs unavailable: elevation height reference unresolved.' : 'Terrain arithmetic is validated. Route comparison still requires pathfinding.'}</p>
     <details className="selection-guidance"><summary>Distance model & calculation limits</summary>
       <p className="helper">Shortest surface arc on the documented 3,396,190 m Mars reference sphere, using native planetocentric cell centers. Elevations are not included. This is not a route length or a terrain profile.</p>
       <p className="helper">Grade and cost arithmetic is tested with synthetic fixtures. Real DEM results stay blocked until the numerical band’s height reference supports those calculations. Cost weights are hypothetical planning preferences, not measures of astronaut safety.</p>
+      {heightBlocker && <p className="helper">DEM slopes and terrain costs unavailable: elevation height reference unresolved.</p>}
     </details>
   </div>
 }

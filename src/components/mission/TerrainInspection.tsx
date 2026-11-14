@@ -38,7 +38,7 @@ export function TerrainInspection({ target }: { target?: ScienceTarget }) {
       {state.phase === 'loading' && <p className="source-state" role="status">Loading and checking native terrain windows…</p>}
       {state.phase === 'error' && <div><p className="source-warning" role="alert">{state.message}</p><button className="grid-button" type="button" onClick={() => void load()}>Retry numerical terrain</button></div>}
       {state.phase === 'ready' && <div className="terrain-result" role="status">
-        <p className="source-state">Validated source windows loaded · archived data</p>
+        <p className="source-state">Checked source windows loaded · archived data</p>
         {!target && <p className="helper">Inspect Jezero, Belva or Neretva to view its coordinate neighborhood.</p>}
         {target && !window && <p className="source-warning">No native terrain window is available for this reference.</p>}
         {window && summary && <>
@@ -51,9 +51,10 @@ export function TerrainInspection({ target }: { target?: ScienceTarget }) {
           <p className="helper">The neighborhood illustrates the scale of two-decimal coordinates. It is not an accuracy bound or an elevation measurement at the named feature.</p>
         </>}
       </div>}
-      <p className="source-warning">The provider declares IAU-sphere heights, but independent numerical reference checks expose an unresolved height-reference conflict. Feature-to-DEM registration remains unverified. DEM slopes, terrain costs and safety results stay unavailable. Hypothetical distance-only grid paths do not use these heights.</p>
+      <p className="context-qualification">Provider-value inspection · physical height interpretation unverified</p>
       <details className="source-metadata"><summary>Numerical source & metadata</summary>
         <p className="helper">A separate USGS CTX terrain model provides numerical cells. This is source inspection in its own coordinate frame; the displayed imagery remains visual context.</p>
+        <p className="helper">The provider declares IAU-sphere heights, but independent numerical reference checks expose an unresolved height-reference conflict. Feature-to-DEM registration remains unverified. DEM slopes, terrain costs and safety results stay unavailable. Hypothetical distance-only grid paths do not use these heights.</p>
         <div className="source-links"><a href={productUrl} target="_blank" rel="noreferrer">USGS numerical product</a><a href={metadataUrl} target="_blank" rel="noreferrer">Terrain metadata</a><a href="https://doi.org/10.5066/P906QQT8" target="_blank" rel="noreferrer">Dataset citation</a></div>
       </details>
       <p className="source-credit">Fergason, Galuszka, Hare, Mayer, Redding and Smith (2020) · USGS Astrogeology · NASA/MRO/CTX.</p>

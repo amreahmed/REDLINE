@@ -58,7 +58,7 @@ export function GridPlanner({ terrain, selection, pickRole, notice, canPick, onO
         <GridMetrics grid={terrain.grid} selection={selection} />
       </>}
       {notice && <p className="helper grid-notice" role="status">{notice}</p>}
-      <p className="source-warning">Grid endpoints are hypothetical source-cell choices. Named feature centers remain approximate and independently unregistered. Distance-only grid paths are available below; terrain costs remain unavailable.</p>
+      <p className="context-qualification">Hypothetical native-cell endpoints · distance-only planning</p>
     </section>
   )
 }

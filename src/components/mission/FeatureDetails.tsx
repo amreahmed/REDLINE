@@ -5,7 +5,7 @@ export function FeatureDetails({ target }: { target: ScienceTarget }) {
     <section className="reference-detail" aria-labelledby="reference-details-heading">
       <span className="reference-provenance">Sourced feature reference</span>
       <h3 id="reference-details-heading">{target.name}</h3>
-      <p className="source-warning">Approximate published center. Its position in the preliminary CTX imagery is not independently registered.</p>
+      <p className="context-qualification">Approximate published center · absolute feature-to-DEM registration unverified</p>
       <dl className="source-facts">
         <dt>Reference coordinates</dt><dd>{target.coordinate.lon.toFixed(2)}°E, {target.coordinate.lat.toFixed(2)}°N</dd>
         <dt>Mission context</dt><dd>{target.missionContext}</dd>

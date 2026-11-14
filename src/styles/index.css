@@ -54,6 +54,8 @@ button:focus-visible, a:focus-visible, select:focus-visible, input:focus-visible
 .region-name { font-family: var(--title-font); font-size: 32px; margin: 0 0 12px; }
 .helper { font-size: 14px; line-height: 1.65; color: var(--color-muted); }
 .source-warning { font-size: 13px; line-height: 1.65; color: var(--warning); margin: 14px 0; }
+.context-qualification { color: var(--color-muted); font-size: 13px; line-height: 1.65; margin: 14px 0; }
+.scientific-inline-link { min-height: 44px; padding: 8px 0; color: var(--color-science); text-decoration: underline; text-underline-offset: 3px; }
 .open-region-button { width: 100%; min-height: 48px; padding: 10px 14px; margin: 18px 0 10px; border-radius: 6px; background: var(--color-mars); color: #1b1714; font-size: 14px; font-weight: 650; }
 .open-region-button:hover { background: #f8b391; }
 .exploration-next-step { margin-top: 16px; }
@@ -125,8 +127,15 @@ input[type="number"], input[type="search"], select { width: 100%; min-width: 0; 
 .endpoint-field { margin-bottom: 16px; }
 .route-unavailable { display: flex; align-items: center; justify-content: center; gap: 10px; min-height: 48px; width: 100%; margin: 16px 0; border: 1px solid var(--line); border-radius: 6px; font-size: 14px; }
 .route-prerequisites ul { list-style: disc; padding-left: 20px; color: var(--color-muted); font-size: 13px; line-height: 1.9; margin-top: 12px; }
-.validation-summary { padding: 20px 22px; background: #24221d; border-block: 1px solid #514537; }
-.validation-summary h3 { color: var(--warning); margin-bottom: 8px; }
+.validation-summary { padding: 20px 22px; border-block: 1px solid var(--line); }
+.scientific-summary-line { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; margin-bottom: 8px; }
+.validation-summary h3 { color: var(--color-ink); }
+.validation-summary h3:focus-visible { outline: 2px solid var(--color-science); outline-offset: 4px; }
+.status-label { font-size: 13px; font-weight: 600; color: var(--color-muted); }
+.status-label[data-status="verified"] { color: var(--color-science); }
+.status-label[data-status="unverified"] { color: var(--warning); }
+.scientific-findings .helper { margin-top: 4px; font-size: 13px; }
+.scientific-findings > div + div { margin-top: 18px; }
 .validation-summary .helper + .helper { margin-top: 10px; }
 .validation-summary .source-links a { color: var(--color-science); text-decoration: underline; text-underline-offset: 3px; }
 .source-detail, .reference-detail { padding: 22px; border-bottom: 1px solid var(--line); }
@@ -139,6 +148,7 @@ input[type="number"], input[type="search"], select { width: 100%; min-width: 0; 
 .source-links { display: flex; flex-wrap: wrap; gap: 8px 16px; margin: 14px 0; font-size: 13px; }
 .source-links a { padding-block: 5px; }
 .source-id { overflow-wrap: anywhere; font-size: 12px; line-height: 1.65; color: var(--color-muted); margin: 14px 0; }
+.layer-product-identity { margin: 8px 0 0 32px; }
 .source-credit { color: var(--color-muted); font-size: 12px; line-height: 1.65; margin-top: 12px; }
 .sources-intro { padding: 20px 22px 0; }
 .reference-detail h3 { font-family: var(--title-font); font-size: 26px; margin-top: 8px; }
@@ -175,7 +185,8 @@ input[type="number"], input[type="search"], select { width: 100%; min-width: 0; 
 .explorer-navigation > .grid-button { max-width: 160px; background: #101923ed; }
 .map-position { position: absolute; bottom: 112px; left: 24px; display: grid; gap: 3px; padding: 6px 10px; background: #080d13e6; border-radius: 5px; color: var(--color-muted); font-size: 12px; pointer-events: none; max-width: calc(100% - 48px); }
 .map-position > span:last-child { color: var(--color-ink); }
-.viewport-qualification { position: absolute; bottom: 78px; left: 24px; padding: 4px 10px; max-width: calc(100% - 48px); border-radius: 4px; font-size: 12px; color: var(--warning); background: #080d13ed; pointer-events: none; }
+.viewport-qualification { position: absolute; bottom: 78px; left: 24px; padding: 4px 10px; max-width: calc(100% - 48px); border-radius: 4px; font-size: 12px; color: var(--color-muted); background: #080d13ed; pointer-events: none; }
+.viewport-qualification[data-unverified="true"] { color: var(--warning); }
 .map-credit { position: absolute; bottom: 0; right: 0; max-width: 100%; z-index: 6; padding: 5px 10px; color: var(--color-ink); background: #080d13ed; font-size: 11px; line-height: 1.6; pointer-events: none; }
 .viewport-guide { position: absolute; bottom: 28px; left: 24px; z-index: 8; max-width: calc(100% - 48px); width: 270px; border: 1px solid var(--line); border-radius: 6px; background: #101923f5; }
 .viewport-guide > summary { display: flex; align-items: center; gap: 8px; padding: 8px 12px; min-height: 44px; font-size: 12px; }
@@ -200,11 +211,15 @@ input[type="number"], input[type="search"], select { width: 100%; min-width: 0; 
 .explorer-notice { position: absolute; bottom: 150px; left: 24px; max-width: min(540px,calc(100% - 110px)); z-index: 4; padding: 16px; background: #101923f5; border: 1px solid var(--line); border-radius: 6px; }
 .explorer-notice p { font-size: 14px; line-height: 1.65; }
 .explorer-notice > div { display: flex; gap: 8px; margin-top: 12px; }
-.app-footer { flex-shrink: 0; padding: 8px 24px; border-top: 1px solid var(--line); background: var(--color-panel); font-size: 12px; line-height: 1.5; }
+.app-footer { flex-shrink: 0; display: flex; align-items: center; flex-wrap: wrap; gap: 4px 28px; padding: 2px 24px; border-top: 1px solid var(--line); background: var(--color-panel); font-size: 12px; line-height: 1.5; }
+.scientific-status-link { display: inline-flex; align-items: center; gap: 6px; min-height: 44px; padding: 8px; margin-left: -8px; border-radius: 5px; color: var(--color-muted); }
+.scientific-status-link strong { color: var(--color-ink); font-weight: 600; }
+.scientific-status-link svg { color: var(--color-science); }
 .mission-status-list { display: flex; flex-wrap: wrap; gap: 4px 28px; }
 .mission-status-list > div { display: flex; gap: 8px; }
 .mission-status-list dt { color: var(--color-muted); }
-.mission-status-list dd { color: var(--warning); }
+.mission-status-list dd { color: var(--color-ink); }
+.terrain-load-status[data-phase="error"] dd { color: var(--warning); }
 .terrain-load-status[data-phase="ready"] dd, .terrain-load-status[data-phase="loading"] dd { color: var(--color-science); }
 .skip-link { position: fixed; z-index: 100; top: 8px; left: 8px; transform: translateY(-160%); padding: 12px 18px; border-radius: 5px; background: var(--color-ink); color: var(--color-space); }
 .skip-link:focus { transform: translateY(0); }
@@ -241,6 +256,7 @@ input[type="number"], input[type="search"], select { width: 100%; min-width: 0; 
   .workspace[data-panel] { grid-template-columns: minmax(0,1fr); }
   .workspace[data-panel="mission"], .workspace[data-panel="sources"] { grid-template-rows: minmax(300px,46%) minmax(0,1fr); }
   .workspace[data-panel="mission"]:has(.explorer-viewport[data-feedback="true"]), .workspace[data-panel="sources"]:has(.explorer-viewport[data-feedback="true"]) { grid-template-rows: minmax(360px,46%) minmax(0,1fr); }
+  .workspace[data-panel="mission"]:has(.route-qualification):has(.explorer-notice), .workspace[data-panel="sources"]:has(.route-qualification):has(.explorer-notice) { grid-template-rows: minmax(400px,46%) minmax(0,1fr); }
   .workspace[data-panel="mission"][data-picking="true"], .workspace[data-panel="sources"][data-picking="true"] { grid-template-rows: minmax(420px,46%) minmax(0,1fr); }
   .workspace[data-panel] .explorer-viewport { grid-column: 1; grid-row: 1; }
   .controls-slot, .information-slot { grid-column: 1; grid-row: 2; z-index: 10; border-top: 1px solid #546774; min-height: 0; }
@@ -280,12 +296,12 @@ input[type="number"], input[type="search"], select { width: 100%; min-width: 0; 
   .flight-actions { flex-wrap: wrap; }
   .workspace[data-panel="mission"] .explorer-toolbar, .workspace[data-panel="sources"] .explorer-toolbar { top: 12px; }
   .workspace[data-panel="mission"] .exploration-stage, .workspace[data-panel="sources"] .exploration-stage { display: none; }
-  .app-footer { padding: 6px 12px; font-size: 11px; }
-  .mission-status-list { display: grid; grid-template-columns: 1fr 1fr; gap: 2px 12px; }
+  .app-footer { padding: 0 12px 4px; gap: 0; font-size: 11px; }
+  .mission-status-list { display: grid; width: 100%; grid-template-columns: 1fr 1fr; gap: 2px 12px; }
   .mission-status-list > div { display: block; }
   .mission-status-list dt, .mission-status-list dd { display: inline; }
   .mission-status-list dt::after { content: ': '; }
-  .mission-status-list > .terrain-load-status { grid-column: 1 / -1; }
+  .mission-status-list > .terrain-load-status, .mission-status-list > .route-status { grid-column: 1 / -1; }
 }
 @media (max-width: 360px) {
   .mission-status-list { grid-template-columns: 1fr; }
