@@ -257,18 +257,18 @@ export function MissionPlanningExperience({
               <button
                 type="button"
                 className="grid-button preset-btn"
-                onClick={() => applyPreset(714, 650, 760, 690)}
+                onClick={() => applyPreset(664, 584, 764, 684)}
               >
                 <strong>Belva Rim to Floor</strong>
-                <span>Direct rim traverse (1.4 km)</span>
+                <span>Verified unblocked traverse (664, 584) → (764, 684)</span>
               </button>
               <button
                 type="button"
                 className="grid-button preset-btn"
-                onClick={() => applyPreset(660, 600, 720, 670)}
+                onClick={() => applyPreset(714, 649, 799, 729)}
               >
                 <strong>Neretva Delta Traverse</strong>
-                <span>Sedimentary fan exploration</span>
+                <span>Verified unblocked corridor (714, 649) → (799, 729)</span>
               </button>
             </div>
           </div>
