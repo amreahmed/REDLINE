@@ -30,7 +30,7 @@ export function ScientificValidation() {
       <dl className="scientific-findings">
         {capabilityStatuses.map(finding => <div key={finding.label}><dt>{finding.label}</dt><dd><span className="status-label" data-status={finding.status.toLowerCase()}>{finding.status}</span><p className="helper">{finding.detail}</p></dd></div>)}
       </dl>
-      <p className="helper">Algorithmic correctness and scientific validity are separate. Distance-only hypothetical paths do not use source heights; terrain-aware pathfinding, hazards and safety predictions remain unavailable.</p>
+      <p className="helper">Algorithmic correctness and scientific validity are separate. Distance-only hypothetical paths do not use source heights; scientific terrain-aware pathfinding, hazards and safety predictions remain unavailable. A separate native HRSC DEM supports qualified sphere-relative terrain models, with physical accuracy still unverified.</p>
     </details>
     <details className="source-metadata">
       <summary>Registration evidence & limitations</summary>

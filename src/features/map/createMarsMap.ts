@@ -6,6 +6,8 @@ import View from 'ol/View'
 import { defaults as defaultInteractions } from 'ol/interaction/defaults'
 import VectorLayer from 'ol/layer/Vector'
 import VectorSource from 'ol/source/Vector'
+import ImageLayer from 'ol/layer/Image'
+import ImageStatic from 'ol/source/ImageStatic'
 import type Feature from 'ol/Feature'
 import type Point from 'ol/geom/Point'
 import type Geometry from 'ol/geom/Geometry'
@@ -31,6 +33,8 @@ import type { HypotheticalRoute, RoutePoint } from '../routing/types'
 import type { GlobeImageryLayer } from '../../data/globeLayers'
 import { createGlobeMapImagery, geographicMapContext } from './globeMapImagery'
 import type { GlobeMapImageryStatus } from './globeMapImagery'
+import { terrainModelExtent, terrainModelRouteFeatures, terrainModelRouteStyle, terrainOverlayPixels } from './terrainModelOverlay'
+import type { TerrainMapDisplay } from './terrainModelOverlay'
 
 type LayerRun = { abort: AbortController; status: LayerStatus; imageSupport: WeakMap<Tile, ImageSupport> }
 export type MarsMapController = {
@@ -52,6 +56,7 @@ export type MarsMapController = {
   focusReference: (target: ScienceTarget) => boolean
   setGridOverlay: (bounds: Bounds | null, endpoints: readonly GridOverlayEndpoint[]) => void
   setHypotheticalRoutes: (routes: readonly HypotheticalRoute[], selectedId: 'shortest' | 'via' | null, waypoint: RoutePoint | null) => void
+  setTerrainModel: (display: TerrainMapDisplay | null) => void
   focusGrid: (bounds: Bounds) => void
   pickViewCenter: () => void
   panBy: (horizontal: number, vertical: number) => void
@@ -74,6 +79,10 @@ export function createMarsMap(target: HTMLElement, onStatus: (id: LayerId, statu
   const gridLayer = new VectorLayer({ source: gridSource, style: gridOverlayStyle, zIndex: 30 })
   const routeSource = new VectorSource<Feature<Geometry>>({ wrapX: false })
   const routeLayer = new VectorLayer({ source: routeSource, style: hypotheticalRouteStyle, zIndex: 25 })
+  const terrainRaster = new ImageLayer<ImageStatic>({ zIndex: 21, visible: false })
+  const terrainRouteSource = new VectorSource<Feature<Geometry>>({ wrapX: false })
+  const terrainRouteLayer = new VectorLayer({ source: terrainRouteSource, style: terrainModelRouteStyle, zIndex: 28, visible: false })
+  let terrainDisplay: TerrainMapDisplay | null = null
   let disposed = false
   let active = true
   let hasGridBounds = false
@@ -85,7 +94,7 @@ export function createMarsMap(target: HTMLElement, onStatus: (id: LayerId, statu
   const map = new OlMap({
     target,
     view,
-    layers: [...layers.values(), missionLayer, gridLayer, routeLayer],
+    layers: [...layers.values(), missionLayer, gridLayer, routeLayer, terrainRaster, terrainRouteLayer],
     controls: [],
     interactions: defaultInteractions({ altShiftDragRotate: false, pinchRotate: false, keyboard: options.keyboard }),
     maxTilesLoading: 8,
@@ -101,7 +110,9 @@ export function createMarsMap(target: HTMLElement, onStatus: (id: LayerId, statu
   function syncGridVisibility() {
     const visible = gridOverlayVisible(active && !disposed, layers.get('controlledCtx')?.getVisible() === true, hasGridBounds)
     gridLayer.setVisible(visible)
-    routeLayer.setVisible(visible && routeSource.getFeatures().length > 0)
+    routeLayer.setVisible(visible && !terrainDisplay?.comparison && routeSource.getFeatures().length > 0)
+    terrainRaster.setVisible(visible && !!terrainDisplay && terrainDisplay.overlay !== 'none')
+    terrainRouteLayer.setVisible(visible && terrainRouteSource.getFeatures().length > 0)
   }
   function updateRoutes() {
     routeSource.clear(true)
@@ -306,6 +317,31 @@ export function createMarsMap(target: HTMLElement, onStatus: (id: LayerId, statu
       routeInputs = { routes, selectedId, waypoint }
       updateRoutes()
     },
+    setTerrainModel: (display) => {
+      if (disposed) return
+      terrainDisplay = display
+      terrainRouteSource.clear(true)
+      const oldSource = terrainRaster.getSource()
+      terrainRaster.setSource(null)
+      oldSource?.dispose()
+      if (display) {
+        terrainRouteSource.addFeatures(terrainModelRouteFeatures(display))
+        if (display.overlay !== 'none') {
+          const canvas = document.createElement('canvas')
+          canvas.width = display.analysis.grid.columns
+          canvas.height = display.analysis.grid.rows
+          const context = canvas.getContext('2d')
+          if (context) {
+            const pixels = context.createImageData(canvas.width, canvas.height)
+            pixels.data.set(terrainOverlayPixels(display))
+            context.putImageData(pixels, 0, 0)
+            terrainRaster.setSource(new ImageStatic({ url: canvas.toDataURL('image/png'), imageExtent: terrainModelExtent(display.analysis), projection, interpolate: false, attributions: display.analysis.grid.source.attribution }))
+          }
+          canvas.width = 0; canvas.height = 0
+        }
+      }
+      syncGridVisibility()
+    },
     focusGrid: (bounds) => {
       if (disposed || !validGridBounds(bounds)) return
       view.cancelAnimations()
@@ -340,6 +376,14 @@ export function createMarsMap(target: HTMLElement, onStatus: (id: LayerId, statu
       routeSource.clear(true)
       routeSource.dispose()
       routeLayer.dispose()
+      map.removeLayer(terrainRaster)
+      terrainRaster.getSource()?.dispose()
+      terrainRaster.dispose()
+      map.removeLayer(terrainRouteLayer)
+      terrainRouteSource.clear(true)
+      terrainRouteSource.dispose()
+      terrainRouteLayer.dispose()
+      terrainDisplay = null
       routeInputs = { routes: [], selectedId: null, waypoint: null }
       gridBounds = null
       for (const run of runs.values()) run.abort.abort()

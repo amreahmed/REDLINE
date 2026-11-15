@@ -1,4 +1,8 @@
+/// <reference types="node" />
+import { readFileSync } from 'node:fs'
 import Feature from 'ol/Feature'
+import LineString from 'ol/geom/LineString'
+import Point from 'ol/geom/Point'
 import type { FeatureLike } from 'ol/Feature'
 import type BaseLayer from 'ol/layer/Base'
 import type View from 'ol/View'
@@ -17,6 +21,13 @@ import { TERRAIN_GRID_BINARY_SHA256 } from '../terrain/terrainGrid'
 import { globeLayerById } from '../../data/globeLayers'
 import TileLayer from 'ol/layer/Tile'
 import WMTS from 'ol/source/WMTS'
+import ImageLayer from 'ol/layer/Image'
+import ImageStatic from 'ol/source/ImageStatic'
+import hrscManifestText from '../../../public/data/hrsc-terrain-model.json?raw'
+import { loadHrscModel } from '../terrain/loadHrscModel'
+import { analyzeTerrainModel, DEFAULT_TERRAIN_PROFILE } from '../terrain/terrainModel'
+import { calculateTerrainComparison } from '../routing/terrainRoutes'
+import type { TerrainMapDisplay } from './terrainModelOverlay'
 
 // Mock the DOM renderer only. Controller view, sources, layers and geometry are real OpenLayers objects.
 const runtime = vi.hoisted(() => ({ map: null as MapHarness | null }))
@@ -195,6 +206,95 @@ describe('controlled imagery and grid controller hooks', () => {
     expect(source.getFeatures()).toHaveLength(0)
     controller.setHypotheticalRoutes([hypotheticalRoute], null, null)
     expect(source.getFeatures()).toHaveLength(0)
+  })
+
+  it('renders exact HRSC paths while preserving imagery controls and restoring existing distance routes after model dismissal', async () => {
+    const sampleBytes = Uint8Array.from(readFileSync(new URL('../../../public/data/hrsc-terrain-model.i16', import.meta.url)))
+    const validityBytes = Uint8Array.from(readFileSync(new URL('../../../public/data/hrsc-terrain-model.u8', import.meta.url)))
+    const fetcher = vi.fn<typeof fetch>()
+      .mockResolvedValueOnce(new Response(hrscManifestText, { headers: { 'Content-Type': 'application/json' } }))
+      .mockResolvedValueOnce(new Response(sampleBytes, { headers: { 'Content-Type': 'application/octet-stream' } }))
+      .mockResolvedValueOnce(new Response(validityBytes, { headers: { 'Content-Type': 'application/octet-stream' } }))
+    const grid = await loadHrscModel({ fetcher })
+    const analysis = analyzeTerrainModel(grid, DEFAULT_TERRAIN_PROFILE)
+    const calculated = calculateTerrainComparison(analysis, 30 * 103 + 30, 70 * 103 + 70)
+    if (calculated.status !== 'available') throw new Error(calculated.reason)
+    const display: TerrainMapDisplay = { analysis, comparison: calculated.value, selected: 'terrain', overlay: 'none' }
+    controller = createMarsMap(host, vi.fn(), vi.fn())
+    const map = runtime.map!
+    const imagery = map.layers.slice(0, 3)
+    const distanceLayer = map.layers.find(layer => layer.getZIndex() === 25) as VectorLayer
+    const modelLayer = map.layers.find(layer => layer.getZIndex() === 28) as VectorLayer
+    const rasterLayer = map.layers.find(layer => layer.getZIndex() === 21) as ImageLayer<ImageStatic>
+    const distanceSource = distanceLayer.getSource()!
+    const modelSource = modelLayer.getSource()!
+    controller.setGridOverlay(gridBounds, [])
+    controller.setHypotheticalRoutes([hypotheticalRoute], 'shortest', routePoint(714, 651))
+    const existingFeatures = distanceSource.getFeatures()
+    expect(existingFeatures).toHaveLength(2)
+    expect(distanceLayer.getVisible()).toBe(true)
+    const center = [...map.view.getCenter()!]
+    const resolution = map.view.getResolution()
+
+    controller.setTerrainModel({ ...display, comparison: null })
+    expect(distanceLayer.getVisible()).toBe(true)
+    expect(modelLayer.getVisible()).toBe(false)
+    controller.setTerrainModel(display)
+    expect(distanceLayer.getVisible()).toBe(false)
+    expect(distanceSource.getFeatures()).toEqual(existingFeatures)
+    expect(modelLayer.getVisible()).toBe(true)
+    expect(modelSource.getFeatures()).toHaveLength(4)
+    for (const role of ['distance', 'terrain'] as const) {
+      const feature = modelSource.getFeatures().find(item => item.get('terrainRole') === role)!
+      expect(feature.getGeometry()).toBeInstanceOf(LineString)
+      expect((feature.getGeometry() as LineString).getCoordinates()).toEqual(calculated.value[role].points.map(point => [point.lon, point.lat]))
+      expect(feature.get('selected')).toBe(role === 'terrain')
+      expect(calculated.value[role].source).toEqual(grid.source)
+      expect(calculated.value[role].scientificStatus).toBe('physical-terrain-unverified')
+    }
+    for (const label of ['HRSC origin', 'HRSC destination']) {
+      const marker = modelSource.getFeatures().find(item => item.get('label') === label)!
+      const point = label === 'HRSC origin' ? calculated.value.terrain.points[0] : calculated.value.terrain.points.at(-1)!
+      expect(marker.getGeometry()).toBeInstanceOf(Point)
+      expect((marker.getGeometry() as Point).getCoordinates()).toEqual([point.lon, point.lat])
+    }
+    expect(rasterLayer.getSource()).toBeNull()
+    expect(rasterLayer.getVisible()).toBe(false)
+    expect(map.view.getCenter()).toEqual(center)
+    expect(map.view.getResolution()).toBe(resolution)
+    expect(map.layers.slice(0, 3)).toEqual(imagery)
+
+    controller.setActive(false)
+    expect(modelLayer.getVisible()).toBe(false)
+    expect(distanceLayer.getVisible()).toBe(false)
+    expect(modelSource.getFeatures()).toHaveLength(4)
+    controller.setActive(true)
+    expect(modelLayer.getVisible()).toBe(true)
+    controller.setVisibility({ mola: true, ctx: false, controlledCtx: false })
+    expect(modelLayer.getVisible()).toBe(false)
+    expect(imagery.map(layer => layer.getVisible())).toEqual([true, false, false])
+    controller.setVisibility({ mola: false, ctx: true, controlledCtx: true })
+    expect(modelLayer.getVisible()).toBe(true)
+    expect(distanceLayer.getVisible()).toBe(false)
+    expect(imagery.map(layer => layer.getVisible())).toEqual([false, true, true])
+
+    controller.setTerrainModel(null)
+    expect(modelSource.getFeatures()).toHaveLength(0)
+    expect(modelLayer.getVisible()).toBe(false)
+    expect(distanceSource.getFeatures()).toEqual(existingFeatures)
+    expect(distanceLayer.getVisible()).toBe(true)
+    controller.setTerrainModel(display)
+    controller.dispose()
+    expect(modelSource.getFeatures()).toHaveLength(0)
+    expect(distanceSource.getFeatures()).toHaveLength(0)
+    expect(map.layers).not.toContain(modelLayer)
+    expect(map.layers).not.toContain(rasterLayer)
+    controller.setTerrainModel(display)
+    expect(modelSource.getFeatures()).toHaveLength(0)
+    expect(map.layers).not.toContain(modelLayer)
+    expect(map.dispose).toHaveBeenCalledOnce()
+    expect(grid.values).toHaveLength(10609)
+    expect(grid.valid).toEqual(validityBytes)
   })
   it('fits source bounds and dispatches view-center and free map picks without inspecting references', () => {
     const pick = vi.fn()

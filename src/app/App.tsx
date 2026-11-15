@@ -16,6 +16,8 @@ import { GridPlanner } from '../components/mission/GridPlanner'
 import { useGridPlanning } from '../features/mission/useGridPlanning'
 import { useDistanceRouting } from '../features/routing/useDistanceRouting'
 import { RoutePlanner } from '../components/mission/RoutePlanner'
+import { TerrainRoutePlanner } from '../components/mission/TerrainRoutePlanner'
+import { useTerrainRouting } from '../features/routing/useTerrainRouting'
 import type { ExplorerSummary } from '../features/explorer/types'
 import { initialWorkspacePanels, workspacePanels } from './workspacePanels'
 import { globeLayerById } from '../data/globeLayers'
@@ -68,6 +70,7 @@ export default function App() {
   const [selectionError, setSelectionError] = useState<string | null>(null)
   const planning = useGridPlanning()
   const routing = useDistanceRouting(planning.terrain, planning.selection)
+  const terrainRouting = useTerrainRouting(planning.selection, routing.waypointPoint)
   const [gridFocusRequest, setGridFocusRequest] = useState(0)
   const [centerPickRequest, setCenterPickRequest] = useState(0)
   const canPick = planning.terrain.phase === 'ready' && visibility.controlledCtx && explorer.phase === 'map' && explorer.localDetail && statuses.controlledCtx.phase === 'available' && statuses.controlledCtx.coverage !== 'outside' && explorer.controlledImageryReady
@@ -149,6 +152,8 @@ export default function App() {
   }, [closePanel, explorer, panels.panel, planning.pickRole])
 
   const mode = explorer.mapShown ? explorer.localDetail ? 'Local detail' : 'Regional context' : 'Planet overview'
+  const displayingTerrainRouteState = terrainRouting.visible && terrainRouting.state.phase !== 'idle'
+  const activeRoutePhase = displayingTerrainRouteState ? terrainRouting.state.phase : routing.state.phase
 
   return (
     <div className="app-shell">
@@ -172,14 +177,15 @@ export default function App() {
       <main className="workspace" data-panel={panels.panel ?? 'none'} data-picking={planning.pickRole !== null}>
         <div className="controls-slot" hidden={!controlsOpen}><MissionControl activeSection={panels.section} onClose={closePanel} explorer={explorer} visibility={visibility} statuses={statuses} onToggle={toggleLayer} onRetry={retryLayer} globeLocations={<GlobeLocationControls workspace={globeWorkspace} onCategory={setPoiCategory} onInspect={inspectGlobePoi} onFly={flyGlobePoi} />} globeLayers={<GlobeLayerControls workspace={globeWorkspace} onSelect={selectGlobeLayer} onRetry={() => setGlobeRetryRequest(value => value + 1)} />} missionPlanner={<>
           <GridPlanner terrain={planning.terrain} selection={planning.selection} pickRole={planning.pickRole} notice={planning.notice} canPick={canPick} onOpen={() => void openPlanning()} onAssign={(role, row, column) => { if (canPick) planning.assign(role, row, column) }} onBeginPick={(role) => { if (canPick) { planning.beginPick(role); if (window.matchMedia('(max-width: 640px)').matches) { dispatchPanel({ type: 'close' }); document.getElementById('explorer-workspace')?.focus({ preventScroll: true }) } } }} onUseCenter={() => { if (canPick) setCenterPickRequest((value) => value + 1) }} onCancel={cancelGridPick} onSwap={planning.swap} onClear={planning.clear} />
-          <RoutePlanner routing={routing} onShowMap={() => void openPlanning()} />
+          <RoutePlanner routing={{ ...routing, calculate: () => { terrainRouting.setVisible(false); return routing.calculate() }, selectRoute: id => { terrainRouting.setVisible(false); routing.selectRoute(id) } }} onShowMap={() => { terrainRouting.setVisible(false); void openPlanning() }} />
+          <TerrainRoutePlanner routing={terrainRouting} onShowMap={() => { terrainRouting.setVisible(true); void openPlanning() }} />
           <FeaturePlanner targets={SCIENCE_TARGETS} selection={missionSelection} selectedId={selectedTargetId} error={selectionError} onInspect={inspectTarget} onAssign={selectEndpoint} onSwap={swap} onClear={clear} />
         </>} /></div>
-        <MarsExplorer visibility={visibility} statuses={statuses} retryRequest={retryRequest} jezeroRequest={jezeroRequest} onJezero={openJezero} onStatus={onStatus} onSummary={onSummary} missionSelection={missionSelection} selectedTargetId={selectedTargetId} focusRequest={focusRequest} onInspectTarget={inspectTarget} planningGrid={planning.terrain.phase === 'ready' ? planning.terrain.grid : null} gridSelection={planning.selection} gridFocusRequest={gridFocusRequest} centerPickRequest={centerPickRequest} gridPickRole={canPick ? planning.pickRole : null} gridPickNotice={planning.notice} onPickCoordinate={(coordinate) => { if (canPick) planning.pickCoordinate(coordinate) }} onNavigate={cancelPlanningNavigation} hypotheticalRoutes={routing.routes} selectedRouteId={routing.routes.length ? routing.selectedId : null} routeWaypoint={routing.waypointPoint} globePreferences={globeWorkspace.preferences} globeFlyRequest={globeFlyRequest} globeMapRequest={globeMapRequest} globeRetryRequest={globeRetryRequest} onGlobeView={onGlobeView} onMapImageryStatus={setMapImagery} onGlobeInspect={inspectGlobePoi} onPrepareGeographicMap={prepareGeographicMap} onOpenGeographicMap={() => { cancelPlanningNavigation(); setGlobeMapRequest(value => value + 1) }} />
+        <MarsExplorer visibility={visibility} statuses={statuses} retryRequest={retryRequest} jezeroRequest={jezeroRequest} onJezero={openJezero} onStatus={onStatus} onSummary={onSummary} missionSelection={missionSelection} selectedTargetId={selectedTargetId} focusRequest={focusRequest} onInspectTarget={inspectTarget} planningGrid={planning.terrain.phase === 'ready' ? planning.terrain.grid : null} gridSelection={planning.selection} gridFocusRequest={gridFocusRequest} centerPickRequest={centerPickRequest} gridPickRole={canPick ? planning.pickRole : null} gridPickNotice={planning.notice} onPickCoordinate={(coordinate) => { if (canPick) planning.pickCoordinate(coordinate) }} onNavigate={cancelPlanningNavigation} hypotheticalRoutes={routing.routes} selectedRouteId={routing.routes.length ? routing.selectedId : null} routeWaypoint={routing.waypointPoint} terrainModelDisplay={terrainRouting.display} globePreferences={globeWorkspace.preferences} globeFlyRequest={globeFlyRequest} globeMapRequest={globeMapRequest} globeRetryRequest={globeRetryRequest} onGlobeView={onGlobeView} onMapImageryStatus={setMapImagery} onGlobeInspect={inspectGlobePoi} onPrepareGeographicMap={prepareGeographicMap} onOpenGeographicMap={() => { cancelPlanningNavigation(); setGlobeMapRequest(value => value + 1) }} />
         <div className="information-slot" hidden={!informationOpen}><InformationPanel onClose={closePanel} explorer={explorer} visibility={visibility} statuses={statuses} target={targetById(selectedTargetId)} inspectionSequence={focusRequest?.sequence ?? 0} scienceRequest={scienceRequest} planningGrid={planning.terrain.phase === 'ready' ? planning.terrain.grid : undefined} globeWorkspace={globeWorkspace} globePoi={marsPoiById(globePoiId)} onFlyGlobePoi={() => { const poi = marsPoiById(globePoiId); if (poi) flyGlobePoi(poi) }} /></div>
       </main>
       </div>
-      <MissionStatusBar terrain={planning.terrain} routePhase={routing.state.phase} activity={controlsOpen ? panels.section : informationOpen ? 'sources' : explorer.mapShown && routing.state.phase !== 'idle' ? 'plan' : 'explore'} onOpenScientificDetails={revealScience} />
+      <MissionStatusBar terrain={planning.terrain} routePhase={activeRoutePhase} routeKind={displayingTerrainRouteState ? 'hrsc-model' : 'distance-only'} activity={controlsOpen ? panels.section : informationOpen ? 'sources' : explorer.mapShown && activeRoutePhase !== 'idle' ? 'plan' : 'explore'} onOpenScientificDetails={revealScience} />
     </div>
   )
 }

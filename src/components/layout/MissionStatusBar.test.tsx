@@ -46,6 +46,12 @@ describe('honest mission status', () => {
       expect(markup).toContain('Scientific validation: Partial. Open scientific details')
     }
   })
+  it('identifies qualified HRSC routes without promoting scientific validation', () => {
+    const markup = renderToStaticMarkup(<MissionStatusBar terrain={{ phase: 'idle' }} routePhase="ready" routeKind="hrsc-model" onOpenScientificDetails={vi.fn()} />)
+    expect(markup).toContain('Calculated · qualified HRSC model')
+    expect(markup).toContain('Scientific validation: Partial. Open scientific details')
+    expect(markup).not.toContain('Calculated · distance only')
+  })
   it('exposes a named scientific-details action independently of the current activity', () => {
     const markup = renderToStaticMarkup(<MissionStatusBar terrain={{ phase: 'idle' }} activity="explore" onOpenScientificDetails={vi.fn()} />)
     expect(markup).toContain('<button type="button"')

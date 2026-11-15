@@ -1,0 +1,96 @@
+{
+  "url": "http://127.0.0.1:4174/",
+  "browser": "isolated headless Chromium",
+  "checks": [
+    "Existing geographic globe navigation remains functional",
+    "Original 65,536-cell CTX terrain and hypothetical endpoint controls preserved",
+    "Real HRSC metadata/sample/mask load, HTTP failure and retry",
+    "Qualified source status, source attribution and unsupported capabilities remain explicit",
+    "Actual native DEM route comparison, distinct cost/distance and exact adjacent returned cells",
+    "All terrain overlays, numeric legends and route selection work",
+    "Export retains exact route, rover profile, full provenance, unknown dates and all limitations",
+    "Invalid profile rejected; valid applied weights invalidate and recompute results",
+    "Optional waypoint result survives rerenders and constrains both model routes",
+    "Cancellation terminates background search without stale results",
+    "Changed applied assumptions cancel stale worker work",
+    "Worker startup and invalid-response failures expose retry and recover",
+    "Original CTX distance routes and HRSC model routes can both be restored",
+    "Boundary metric support blocks by default; explicit unknown policy retains unknown results",
+    "tablet layout: no horizontal overflow, aligned readable fields, keyboard access",
+    "mobile layout: no horizontal overflow, aligned readable fields, keyboard access",
+    "Scientific details and keyboard drawer retain all unresolved physical gates",
+    "No page exceptions; actual NASA imagery remains loaded"
+  ],
+  "pageErrors": [],
+  "consoleErrors": [
+    "Failed to load resource: the server responded with a status of 503 (Service Unavailable)"
+  ],
+  "tileResponses": 50,
+  "screenshots": [
+    "desktop-terrain-comparison.png",
+    "tablet-terrain-controls.png",
+    "mobile-terrain-controls.png",
+    "desktop-map-focus.png"
+  ],
+  "comparisons": [
+    {
+      "label": "native-default",
+      "file": "native-default-comparison.json",
+      "distanceM": 2756.4587575641835,
+      "distanceCostM": 5215.76319688093,
+      "terrainDistanceM": 3013.084865816791,
+      "terrainCostM": 5035.384520605762,
+      "sameNodes": false
+    },
+    {
+      "label": "roughness-weight-five",
+      "file": "roughness-weight-five-comparison.json",
+      "distanceM": 2756.4587575641835,
+      "distanceCostM": 6065.7688964354065,
+      "terrainDistanceM": 3013.0837412068,
+      "terrainCostM": 5758.908067462127,
+      "sameNodes": false
+    },
+    {
+      "label": "optional-waypoint",
+      "file": "optional-waypoint-comparison.json",
+      "distanceM": 2756.4587575641835,
+      "distanceCostM": 6065.7688964354065,
+      "terrainDistanceM": 2984.547071213089,
+      "terrainCostM": 5815.566281390651,
+      "sameNodes": false
+    },
+    {
+      "label": "explicit-unknown-support",
+      "file": "explicit-unknown-support-comparison.json",
+      "distanceM": 4871.043830107518,
+      "distanceCostM": 12123.062162557857,
+      "terrainDistanceM": 5355.684717739649,
+      "terrainCostM": 11317.574770834073,
+      "sameNodes": false
+    }
+  ],
+  "worker": {
+    "active": 0,
+    "started": 9,
+    "terminated": 9
+  },
+  "screenshotHashes": [
+    {
+      "file": "desktop-terrain-comparison.png",
+      "sha256": "207c395b9cba8c32f08f015f9860e1cb6d145a257c074ad2592194ea609abd76"
+    },
+    {
+      "file": "tablet-terrain-controls.png",
+      "sha256": "3fec65041946a97873f7c21a196236f6077b71cc6055d1e94f3a9dfda20d840f"
+    },
+    {
+      "file": "mobile-terrain-controls.png",
+      "sha256": "a4fea5485906fc49bb8031fb9859ab336c17ee343ca2b2647bc6713bf86b1ccf"
+    },
+    {
+      "file": "desktop-map-focus.png",
+      "sha256": "53e73901d5b7d9e1e88cdb5a7fc73eafa222c652330a6e0490c069ae82ec4d23"
+    }
+  ]
+}

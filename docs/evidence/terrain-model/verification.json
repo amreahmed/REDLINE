@@ -1,0 +1,56 @@
+{
+  "baseline": "7143d2c",
+  "checks": [
+    {
+      "command": "npm run lint",
+      "result": "passed"
+    },
+    {
+      "command": "npm run typecheck",
+      "result": "passed"
+    },
+    {
+      "command": "npm test",
+      "result": "passed",
+      "testFiles": 55,
+      "tests": 762
+    },
+    {
+      "command": "npm run build",
+      "result": "passed",
+      "advisory": "Existing chunks above 500 kB advisory; no build errors"
+    },
+    {
+      "command": "node docs/evidence/terrain-model/browser/acceptance.mjs",
+      "result": "passed",
+      "browser": "Isolated headless Chromium; fresh browser/context",
+      "groups": 18,
+      "pageExceptions": 0,
+      "successfulNasaTileResponses": 50,
+      "workersStarted": 9,
+      "workersTerminated": 9,
+      "expectedConsoleErrors": "Injected HTTP 503 only"
+    },
+    {
+      "command": "node scripts/prepare-hrsc-model.mjs --verify-saved",
+      "result": "passed",
+      "hrscCells": 10609,
+      "ctxCells": 65536
+    },
+    {
+      "command": "node docs/evidence/terrain-model/verify-preservation.mjs",
+      "result": "passed",
+      "filesCompared": 644,
+      "differingFiles": 0
+    },
+    {
+      "command": "node docs/evidence/science-routing-audit/provenance-height/verify-provenance.mjs --verify-saved",
+      "result": "passed",
+      "comparedCells": 65536,
+      "differingFloat32Bytes": 0
+    }
+  ],
+  "scientificStatus": "Partial; qualified HRSC provider DEM model, physical terrain unverified",
+  "scope": "No original CTX source/cell/coordinate/scientific-gate change; no remote push",
+  "browserEvidence": "browser/results.json"
+}

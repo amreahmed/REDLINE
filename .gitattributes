@@ -25,3 +25,8 @@ docs/evidence/science-routing-audit/registration/*.log whitespace=cr-at-eol,-bla
 docs/evidence/science-routing-audit/**/*.bin -diff
 # Keep newly captured globe source/POI bodies and receipt hashes exact on Windows.
 docs/evidence/global-globe/** -text whitespace=cr-at-eol,-blank-at-eol,-blank-at-eof,-space-before-tab
+# Preserve the new checksum-pinned native model assets and acceptance evidence.
+public/data/hrsc-terrain-model.* -text
+public/data/hrsc-terrain-model.i16 -diff
+public/data/hrsc-terrain-model.u8 -diff
+docs/evidence/terrain-model/** -text whitespace=cr-at-eol,-blank-at-eol,-blank-at-eof,-space-before-tab

@@ -1,0 +1,3228 @@
+{
+  "baseline": "7143d2c",
+  "protectedFilesCompared": 644,
+  "differingFiles": 0,
+  "ctxCells": 65536,
+  "files": [
+    {
+      "file": "docs/evidence/science-routing-audit/algorithm-cost/algorithm-cost-results.json",
+      "bytes": 7531,
+      "sha256": "e4d7f1f87045c37384533ae46c7aca69f50ff4485055edd5e248c955da14c8c1"
+    },
+    {
+      "file": "docs/evidence/science-routing-audit/algorithm-cost/audit.md",
+      "bytes": 13898,
+      "sha256": "e28d0437b0672c596494988a9d7a414bdc1110331e72512c4f57432e886da202"
+    },
+    {
+      "file": "docs/evidence/science-routing-audit/browser/browser-check.mjs",
+      "bytes": 12360,
+      "sha256": "5369401ed8f9542ae78d39e04089bb0b8db038a4dd3e8a801038146b771beb8a"
+    },
+    {
+      "file": "docs/evidence/science-routing-audit/browser/browser-results.json",
+      "bytes": 3032,
+      "sha256": "5663013e69276ee50f99cb73ebacefd05cc2630d588b91db56be0b7bf9ff7040"
+    },
+    {
+      "file": "docs/evidence/science-routing-audit/browser/desktop-routes.png",
+      "bytes": 753188,
+      "sha256": "bb6f7fad1b3673b0de17592d8d65ce440e067e7e7783a7e5b9727ff3daf59830"
+    },
+    {
+      "file": "docs/evidence/science-routing-audit/browser/mobile-routes.png",
+      "bytes": 132823,
+      "sha256": "b056f57d3388c6d25e95d187b82b1f4b09d3c5449f0fd78548e8c744834f8221"
+    },
+    {
+      "file": "docs/evidence/science-routing-audit/browser/small-mobile-routes.png",
+      "bytes": 104287,
+      "sha256": "012535fd91fdd3767f3b87dfa1511593d07e385d32cb5f847274783d905ba596"
+    },
+    {
+      "file": "docs/evidence/science-routing-audit/browser/tablet-routes.png",
+      "bytes": 346839,
+      "sha256": "f438bcb231429c5ba2ae509de0305b677f1e7b788f0084c2a0049bf6aa971712"
+    },
+    {
+      "file": "docs/evidence/science-routing-audit/browser/waypoint-alignment.png",
+      "bytes": 12031,
+      "sha256": "3277b2cfaf12e42baaaea65b36fc2bea6ff0a3a7e577643ecde5c58e1c549cc1"
+    },
+    {
+      "file": "docs/evidence/science-routing-audit/browser/worker-timeout.png",
+      "bytes": 826945,
+      "sha256": "c786f4473c717fe651ed4580f2c8b9365633a0163d9c8c8ee57c15bb9f4eca0f"
+    },
+    {
+      "file": "docs/evidence/science-routing-audit/horizontal/.gitignore",
+      "bytes": 19,
+      "sha256": "ddccd423d6731fa7835eacd1363387788acf53dfdd4ce667d0671c1630dc01cc"
+    },
+    {
+      "file": "docs/evidence/science-routing-audit/horizontal/app-capture.json",
+      "bytes": 10238,
+      "sha256": "a55167016a775245ae9a5891849cce86bc138c244bb839e6e55c509f5958c5ec"
+    },
+    {
+      "file": "docs/evidence/science-routing-audit/horizontal/capture-app.mjs",
+      "bytes": 6420,
+      "sha256": "849fa85126f06a84a9474b64b3ee09b3eae266613ff691752b91f76e55a9478b"
+    },
+    {
+      "file": "docs/evidence/science-routing-audit/horizontal/compare-proj.py",
+      "bytes": 5615,
+      "sha256": "4195967c3cf942504322e8a463d6541a33b915e666db88bd7f4dd94278107aee"
+    },
+    {
+      "file": "docs/evidence/science-routing-audit/horizontal/results.json",
+      "bytes": 14038,
+      "sha256": "25bd56cf73ff154d935a999cc8a7ab8d1cb4717c79869940e9319882782105d5"
+    },
+    {
+      "file": "docs/evidence/science-routing-audit/provenance-height/collect-hirise.mjs",
+      "bytes": 3147,
+      "sha256": "81bdbe66fb7b38ad3ce4fde78b6785439c5487303a59b6d30cde0942d473025c"
+    },
+    {
+      "file": "docs/evidence/science-routing-audit/provenance-height/findings.md",
+      "bytes": 12892,
+      "sha256": "7560421aafb30792be701ac72efd686e7644254171b3b74ec24c2ef5f3ff296b"
+    },
+    {
+      "file": "docs/evidence/science-routing-audit/provenance-height/hirise-dtm-complete.lbl",
+      "bytes": 4305,
+      "sha256": "220e7ff937b18d6eaf5e2eb712c452980053daf6ca9f468bf21219577173d5cd"
+    },
+    {
+      "file": "docs/evidence/science-routing-audit/provenance-height/hirise-dtm-label-range.bin",
+      "bytes": 65536,
+      "sha256": "ef39ad298b65690a2d810ff541b8a3f97245f62d41a57ae1b2260cbb194c7e9d"
+    },
+    {
+      "file": "docs/evidence/science-routing-audit/provenance-height/hirise-product.html",
+      "bytes": 15279,
+      "sha256": "4c2fd321686b112430a2d0cd9d1cd91c00dba64f54907a97dab4413a3d228c92"
+    },
+    {
+      "file": "docs/evidence/science-routing-audit/provenance-height/http-receipts.json",
+      "bytes": 1208,
+      "sha256": "f938ec0d0b6cb2a647e1e260864b245472c38948b598ca1fa85deb2825d35f4f"
+    },
+    {
+      "file": "docs/evidence/science-routing-audit/provenance-height/provenance-checks.json",
+      "bytes": 6334,
+      "sha256": "986aa92558bf500f40767cfbc175fb6c3630104cbe5fbbf1dda1314c1ff3aaaf"
+    },
+    {
+      "file": "docs/evidence/science-routing-audit/provenance-height/verification-runs.json",
+      "bytes": 15018,
+      "sha256": "ffc0d542362e5d642170f751b795a41a2f9d7b55e2b0707654e6a75ab3c8b296"
+    },
+    {
+      "file": "docs/evidence/science-routing-audit/provenance-height/verify-provenance.mjs",
+      "bytes": 9976,
+      "sha256": "ba6479deb1efc15e921087e012ca1d7f547df6671236c5b20f335b4a8ba90e22"
+    },
+    {
+      "file": "docs/evidence/science-routing-audit/registration/.gitignore",
+      "bytes": 89,
+      "sha256": "79f480d8888fc43fba624c2e1cd79a591500a16fea7d944da10155721c8b773f"
+    },
+    {
+      "file": "docs/evidence/science-routing-audit/registration/dataset-relationships-rerun.log",
+      "bytes": 3257,
+      "sha256": "28485e76d5f7b0657ce7251d50aa4abef7b320254a65937485907b81af66c1c1"
+    },
+    {
+      "file": "docs/evidence/science-routing-audit/registration/dataset-relationships.json",
+      "bytes": 3193,
+      "sha256": "9c94fe953243d72f378945235b515b8c5b5de51bbf1245ba79c96ed7e0d76f85"
+    },
+    {
+      "file": "docs/evidence/science-routing-audit/registration/dataset-relationships.log",
+      "bytes": 639,
+      "sha256": "5705833ba5501c256a0fe7a3bda88a7fd95ed41ebfbd37c08f38a1bc034ce25e"
+    },
+    {
+      "file": "docs/evidence/science-routing-audit/registration/dataset-relationships.py",
+      "bytes": 5622,
+      "sha256": "0873d1978a3683934a06ac1f9094e702b8ee4b965953511ab1e29e83544b3f97"
+    },
+    {
+      "file": "docs/evidence/science-routing-audit/registration/findings.md",
+      "bytes": 15058,
+      "sha256": "171ab3802b8ff08b6e8c145c948233f1587f4b89c2c0e988c6353abcd1c940fa"
+    },
+    {
+      "file": "docs/evidence/science-routing-audit/registration/frame-reproduction-summary.json",
+      "bytes": 682,
+      "sha256": "27ef26d12281e52825910fef2e9f39f50cdf1c46f90361dac251fd0dccbb0aa6"
+    },
+    {
+      "file": "docs/evidence/science-routing-audit/registration/frame-reproduction.log",
+      "bytes": 1212,
+      "sha256": "b4f93759e9c07d7b7e6f41caf6ace803cba24a2fc832236fd4cb92dcf23ce09c"
+    },
+    {
+      "file": "docs/evidence/science-routing-audit/registration/independent-residual-summary.json",
+      "bytes": 9113,
+      "sha256": "51cf9b45580b991a1a7429873c67a5775a4562b51928f8cc99b11f144b93bdad"
+    },
+    {
+      "file": "docs/evidence/science-routing-audit/registration/independent-residuals-final.log",
+      "bytes": 5217,
+      "sha256": "0b60e6ae2fcca97d000cd6c0b3965f78eeed32c3902b64ffb63cc626d9a372ae"
+    },
+    {
+      "file": "docs/evidence/science-routing-audit/registration/independent-residuals.log",
+      "bytes": 5217,
+      "sha256": "0b60e6ae2fcca97d000cd6c0b3965f78eeed32c3902b64ffb63cc626d9a372ae"
+    },
+    {
+      "file": "docs/evidence/science-routing-audit/registration/independent-residuals.py",
+      "bytes": 10467,
+      "sha256": "740ce98070a57f0288b23e88803ead9f9885de542bf5feeb489ca8700bca1efa"
+    },
+    {
+      "file": "docs/evidence/science-routing-audit/registration/native-matching-reproduction-summary.json",
+      "bytes": 2384,
+      "sha256": "cdca4cfef34d7143c2fe6e3dfead3da3c7d0b74f6ac55fc798501d62aa2260ec"
+    },
+    {
+      "file": "docs/evidence/science-routing-audit/registration/native-matching-reproduction.log",
+      "bytes": 2336,
+      "sha256": "8b912306042c8891f84f5905190080b01d15f42609e206999a34df0083affcbc"
+    },
+    {
+      "file": "docs/evidence/science-routing-audit/registration/native-patch-plan.json",
+      "bytes": 3136,
+      "sha256": "78a1fe9e7b7950cd1a7bd0fa80c74f3ebc891933d4340d069a319ef1abe1aaf4"
+    },
+    {
+      "file": "docs/evidence/science-routing-audit/registration/places-frame-check.json",
+      "bytes": 98133,
+      "sha256": "e072191d12de4bbe4690aab03c3e1f140f2d2bddd85d8cde50ade9038970658c"
+    },
+    {
+      "file": "docs/evidence/science-routing-audit/registration/plot-registration-residuals-final.log",
+      "bytes": 323,
+      "sha256": "9e650dd25986a96ccef56a76ae17da70b7d6d963d83c17f0d8d713f553fa4f80"
+    },
+    {
+      "file": "docs/evidence/science-routing-audit/registration/plot-registration-residuals.log",
+      "bytes": 291,
+      "sha256": "ec665c3fef6969d374a5af77dad62e69a1b0912a786eb67e4345ce17d9979fb6"
+    },
+    {
+      "file": "docs/evidence/science-routing-audit/registration/plot-registration-residuals.py",
+      "bytes": 3533,
+      "sha256": "6dde06b4c8c4e4c8bd1c2d2bf1f349c7fbf74232b03f5303fd220adafab484f0"
+    },
+    {
+      "file": "docs/evidence/science-routing-audit/registration/registration-checks.json",
+      "bytes": 4192,
+      "sha256": "c71cecf56f70f3467f3e722910b30361605a0a89be55ae5abb9a66dd66722364"
+    },
+    {
+      "file": "docs/evidence/science-routing-audit/registration/relative-image-residuals.csv",
+      "bytes": 73637,
+      "sha256": "27ee0b0f3d814bf00167d0f3855dfbfa6439646dcedca06e64a4154bf66c8b52"
+    },
+    {
+      "file": "docs/evidence/science-routing-audit/registration/relative-registration-diagnostic.png",
+      "bytes": 197577,
+      "sha256": "e6a08c573f50d195ab350169a6783d9310843c997c5122cbec2b107e1d663c31"
+    },
+    {
+      "file": "docs/evidence/science-routing-audit/registration/reproduce-frame-check.py",
+      "bytes": 1868,
+      "sha256": "f514c4a6dbc4b1b4dc396d45b246aafb8a264d1b2a66313b401436ca125123d0"
+    },
+    {
+      "file": "docs/evidence/science-routing-audit/registration/reproduce-native-matching.py",
+      "bytes": 3413,
+      "sha256": "b065a82e9c25737298da7e41c9c8e04ae0128ea1fffa6ac4fcd8058474a3a902"
+    },
+    {
+      "file": "docs/evidence/science-routing-audit/registration/reproduce-source-geometry.mjs",
+      "bytes": 2635,
+      "sha256": "806f2dddd9378390d5952fff27c89269b80a90b2a1a6f0a486041419af8ab389"
+    },
+    {
+      "file": "docs/evidence/science-routing-audit/registration/reproduced-native-image-registration.json.gz",
+      "bytes": 63586,
+      "sha256": "adce0ed3b1b50056343893fef3c896fbce8e72c0c215560e0b778b5dc4afdf02"
+    },
+    {
+      "file": "docs/evidence/science-routing-audit/registration/saved-native-metadata-verification.log",
+      "bytes": 784,
+      "sha256": "16cd0455ad63c2bc7d32a1c9f755d975a840461e6683e618df9b7104dc81dec2"
+    },
+    {
+      "file": "docs/evidence/science-routing-audit/registration/saved-native-patches-verification.log",
+      "bytes": 183,
+      "sha256": "5e1e9ee901a6a4014ee0ceaa0503be511abdbf5af601bf2c0edbfbfa33d7bb9c"
+    },
+    {
+      "file": "docs/evidence/science-routing-audit/registration/saved-places-verification.log",
+      "bytes": 1794,
+      "sha256": "bf9121d415469b0eb3d5d89a4ab3908183dc3b99f9c1fbfff061945c50f69b6d"
+    },
+    {
+      "file": "docs/evidence/science-routing-audit/registration/serialization-note.md",
+      "bytes": 488,
+      "sha256": "3f8ac57b015f82316fdd933493504ae96b2063ecf3c52d7f0039141a70f92942"
+    },
+    {
+      "file": "docs/evidence/science-routing-audit/registration/source-geometry-reproduction-summary.json",
+      "bytes": 2199,
+      "sha256": "975452bca821a517f6c3928b7d2e66ef5cca4c231131b0c90bb9d22b34aa9508"
+    },
+    {
+      "file": "docs/evidence/science-routing-audit/registration/source-geometry-reproduction.log",
+      "bytes": 4002,
+      "sha256": "54486a84b8ddfa115c72258b80c6e233dae78c837530c542d1b5efe90f6c40e6"
+    },
+    {
+      "file": "docs/evidence/scientific-gate-resolution/comparison/audit.json",
+      "bytes": 3214,
+      "sha256": "b225219c4107028568225e64acf0f1e22f5d581784cf215ce226c1ac0cb3b9f1"
+    },
+    {
+      "file": "docs/evidence/scientific-gate-resolution/comparison/native-support-comparisons.csv",
+      "bytes": 1049486,
+      "sha256": "f6a2485367bc376b0201d8f7596ec4b09d5ebde5568a5f8d6c263ffd1d7af195"
+    },
+    {
+      "file": "docs/evidence/scientific-gate-resolution/hrsc/README.md",
+      "bytes": 12067,
+      "sha256": "107f79528979415e6aed81f5baea127a5c2cd74ab23b1dcb48f1f6477ede3422"
+    },
+    {
+      "file": "docs/evidence/scientific-gate-resolution/hrsc/build-hrsc-reference.py",
+      "bytes": 30164,
+      "sha256": "47fc13a751552389333850fe5b874001f8c86e5be2337beadf944bd0239352a5"
+    },
+    {
+      "file": "docs/evidence/scientific-gate-resolution/hrsc/fetch-source-documentation.py",
+      "bytes": 2406,
+      "sha256": "a0edadcc9a50a567f38ea133965fe07ba8661857536078af47b3893b74fd3dd3"
+    },
+    {
+      "file": "docs/evidence/scientific-gate-resolution/hrsc/hrsc-da5-native.i16",
+      "bytes": 21218,
+      "sha256": "c691576fe2531513316f8d527d74343d57296952fb547af84d0a7f36d72ad317"
+    },
+    {
+      "file": "docs/evidence/scientific-gate-resolution/hrsc/hrsc-da5-validity.u8",
+      "bytes": 10609,
+      "sha256": "c7129c480eb63e9537de9c8b4678fcbebcabac8ae3450a35bdec8e2a0a63da67"
+    },
+    {
+      "file": "docs/evidence/scientific-gate-resolution/hrsc/hrsc-dt5-native.i16",
+      "bytes": 21218,
+      "sha256": "e385f36da8ea9137bdd7cece3ac858a64de1bbf5e036ecc01e942d7e9a5439f2"
+    },
+    {
+      "file": "docs/evidence/scientific-gate-resolution/hrsc/hrsc-dt5-validity.u8",
+      "bytes": 10609,
+      "sha256": "c7129c480eb63e9537de9c8b4678fcbebcabac8ae3450a35bdec8e2a0a63da67"
+    },
+    {
+      "file": "docs/evidence/scientific-gate-resolution/hrsc/hrsc-methodology-2010.html",
+      "bytes": 41050,
+      "sha256": "b85efa434f825b8be6a2c07b7c02d72924bf853d41fe5eecc92ebc3cbaf64f0c"
+    },
+    {
+      "file": "docs/evidence/scientific-gate-resolution/hrsc/hrsc-methodology-2016.html",
+      "bytes": 57252,
+      "sha256": "5c29242a6dcc0dc724edf26c37ec8fd53524b35ff204e8061771c289689c0283"
+    },
+    {
+      "file": "docs/evidence/scientific-gate-resolution/hrsc/hrsc-native-reference.json",
+      "bytes": 13744,
+      "sha256": "5d7c16b7589df237b3dbb45365cff2b94fc28ffd46764b336783f58bb60c4fdc"
+    },
+    {
+      "file": "docs/evidence/scientific-gate-resolution/hrsc/hrsc-tiling-naming.txt",
+      "bytes": 1746,
+      "sha256": "141dac41033f31efb98b80408ed4013742a0648aae079a5c4721954e727d95c9"
+    },
+    {
+      "file": "docs/evidence/scientific-gate-resolution/hrsc/hrsc-usage-imprint.html",
+      "bytes": 13119,
+      "sha256": "7dd4a1cc4b44e1f5d75980efdabb470290f50b7aab1662a0d71e8f7c01a3ffec"
+    },
+    {
+      "file": "docs/evidence/scientific-gate-resolution/hrsc/http-range-receipts.json",
+      "bytes": 174279,
+      "sha256": "4d64623d796c282115fcdd34d9adefbdab29775fb6566801989cc0eb6f5c1de8"
+    },
+    {
+      "file": "docs/evidence/scientific-gate-resolution/hrsc/implementation-plan.md",
+      "bytes": 3319,
+      "sha256": "1b439983b9cd84e66ec12c27cd9b2db19143e141a1739d2ec578f3af5c457782"
+    },
+    {
+      "file": "docs/evidence/scientific-gate-resolution/hrsc/native-reader-validation.json",
+      "bytes": 11449,
+      "sha256": "9f3aefacfe3f5a6d14d6e083b7d4980799a03bdf428053bc62013cb5bbd0e781"
+    },
+    {
+      "file": "docs/evidence/scientific-gate-resolution/hrsc/native-support-independent-review.json",
+      "bytes": 5585,
+      "sha256": "3cde7d57bd157e7d9f8aa53a90616a46f36c1d4a8c12eb574497bdca5a0ad7db"
+    },
+    {
+      "file": "docs/evidence/scientific-gate-resolution/hrsc/paired-vertical-validation.json",
+      "bytes": 688,
+      "sha256": "eb9a10cb4de954c7ae1d0f557be82e6ddfa0dab76316f91d08a71de9a359dd42"
+    },
+    {
+      "file": "docs/evidence/scientific-gate-resolution/hrsc/projection-validation.json",
+      "bytes": 6247,
+      "sha256": "851e4d970d0f6c12499a7a96428e07dd136767c2ab399be99b8f24ef5c41882d"
+    },
+    {
+      "file": "docs/evidence/scientific-gate-resolution/hrsc/ranges/hrsc-da5-row-13605-cols-11661-11763.bin",
+      "bytes": 206,
+      "sha256": "e41c81e76ce1b7a0af921113e60518e08af79e8dac88c8b1824856c03cf9d782"
+    },
+    {
+      "file": "docs/evidence/scientific-gate-resolution/hrsc/ranges/hrsc-da5-row-13606-cols-11661-11763.bin",
+      "bytes": 206,
+      "sha256": "07ab2ecf68e989105c2b4e5783e2d585862906379bb872d40346088c31990be6"
+    },
+    {
+      "file": "docs/evidence/scientific-gate-resolution/hrsc/ranges/hrsc-da5-row-13607-cols-11661-11763.bin",
+      "bytes": 206,
+      "sha256": "03aae7dda1bedee6e6b3283796a1a2baa00f76c7b051109a60bdd8f7fffebe72"
+    },
+    {
+      "file": "docs/evidence/scientific-gate-resolution/hrsc/ranges/hrsc-da5-row-13608-cols-11661-11763.bin",
+      "bytes": 206,
+      "sha256": "61b862b885b3714926edd52bc60b096f20b80cb0a6122c29807f1c14a3695f3c"
+    },
+    {
+      "file": "docs/evidence/scientific-gate-resolution/hrsc/ranges/hrsc-da5-row-13609-cols-11661-11763.bin",
+      "bytes": 206,
+      "sha256": "be0a0cdd0a22b07422eed76194ae1e11465cb8a59d4f53f9a5d02d5674acb1d2"
+    },
+    {
+      "file": "docs/evidence/scientific-gate-resolution/hrsc/ranges/hrsc-da5-row-13610-cols-11661-11763.bin",
+      "bytes": 206,
+      "sha256": "203b23e3879e0d1b9a1404dc0ed40a4e8e8b96654e3d1c500544c7a507426369"
+    },
+    {
+      "file": "docs/evidence/scientific-gate-resolution/hrsc/ranges/hrsc-da5-row-13611-cols-11661-11763.bin",
+      "bytes": 206,
+      "sha256": "54ccc694e54f69049f9a6ab4f06fdd8383449e26c54ffc17af1270dca445b67f"
+    },
+    {
+      "file": "docs/evidence/scientific-gate-resolution/hrsc/ranges/hrsc-da5-row-13612-cols-11661-11763.bin",
+      "bytes": 206,
+      "sha256": "fe0400dd9c10198a89e027fdad380332f244bb9927d7c383cb4c1d503441cc94"
+    },
+    {
+      "file": "docs/evidence/scientific-gate-resolution/hrsc/ranges/hrsc-da5-row-13613-cols-11661-11763.bin",
+      "bytes": 206,
+      "sha256": "b8159539c0f20305158f7d2f01ad4c7dfceddd7e162876325a6c0977dc0f2066"
+    },
+    {
+      "file": "docs/evidence/scientific-gate-resolution/hrsc/ranges/hrsc-da5-row-13614-cols-11661-11763.bin",
+      "bytes": 206,
+      "sha256": "1f6b0fab673a1c571c6ccd74da3b9e580fdb30e4f2bde5183623bc79773d3456"
+    },
+    {
+      "file": "docs/evidence/scientific-gate-resolution/hrsc/ranges/hrsc-da5-row-13615-cols-11661-11763.bin",
+      "bytes": 206,
+      "sha256": "3365dd56b21a733229b9d4214e9eb3737e65334b6ef86dc20757b4ceff44bb0a"
+    },
+    {
+      "file": "docs/evidence/scientific-gate-resolution/hrsc/ranges/hrsc-da5-row-13616-cols-11661-11763.bin",
+      "bytes": 206,
+      "sha256": "18ae037c6f930cd228f0e4dca96d6f818ab781bd5c813665455583a03bd319f5"
+    },
+    {
+      "file": "docs/evidence/scientific-gate-resolution/hrsc/ranges/hrsc-da5-row-13617-cols-11661-11763.bin",
+      "bytes": 206,
+      "sha256": "b21c44f08455cfbb3c5b186cfb3eeb62046a4ada38119fd13d4bfdca39efd881"
+    },
+    {
+      "file": "docs/evidence/scientific-gate-resolution/hrsc/ranges/hrsc-da5-row-13618-cols-11661-11763.bin",
+      "bytes": 206,
+      "sha256": "654a0d173a5868d4cca0527dfeefbced797a8b2418ca345bc4bb15a3bab10495"
+    },
+    {
+      "file": "docs/evidence/scientific-gate-resolution/hrsc/ranges/hrsc-da5-row-13619-cols-11661-11763.bin",
+      "bytes": 206,
+      "sha256": "b1961854296a455a8c1e15f45b9c1605b1c58acbcf70ba17023825ad651ee931"
+    },
+    {
+      "file": "docs/evidence/scientific-gate-resolution/hrsc/ranges/hrsc-da5-row-13620-cols-11661-11763.bin",
+      "bytes": 206,
+      "sha256": "fd3f47a350cce3827e96842e0ef1b74aabbb60df2c743937e83ea183786ffab3"
+    },
+    {
+      "file": "docs/evidence/scientific-gate-resolution/hrsc/ranges/hrsc-da5-row-13621-cols-11661-11763.bin",
+      "bytes": 206,
+      "sha256": "22bcb6088a11444a45121f00d6d140e6b318066fe1e3f6130427556bce4dbe00"
+    },
+    {
+      "file": "docs/evidence/scientific-gate-resolution/hrsc/ranges/hrsc-da5-row-13622-cols-11661-11763.bin",
+      "bytes": 206,
+      "sha256": "247b8fd9ed7dd949c2132416848b35aee2323aa10399941d457cab5bca8e5397"
+    },
+    {
+      "file": "docs/evidence/scientific-gate-resolution/hrsc/ranges/hrsc-da5-row-13623-cols-11661-11763.bin",
+      "bytes": 206,
+      "sha256": "829852c30925b685bb0d307778b27a513b6e3cc688ffac45193bf2de68f54b23"
+    },
+    {
+      "file": "docs/evidence/scientific-gate-resolution/hrsc/ranges/hrsc-da5-row-13624-cols-11661-11763.bin",
+      "bytes": 206,
+      "sha256": "8c06a0bfb6bc155905665f33d799cc25b6d5b5b70afcd7cb316049024b665817"
+    },
+    {
+      "file": "docs/evidence/scientific-gate-resolution/hrsc/ranges/hrsc-da5-row-13625-cols-11661-11763.bin",
+      "bytes": 206,
+      "sha256": "a1c55dabab35eb2f761646de1ed16f16dbaab0a863801f3706193370ea99f9af"
+    },
+    {
+      "file": "docs/evidence/scientific-gate-resolution/hrsc/ranges/hrsc-da5-row-13626-cols-11661-11763.bin",
+      "bytes": 206,
+      "sha256": "cbba98f810d31ac80dccd00baed35e958cdab017c689059666408c5e696eed2c"
+    },
+    {
+      "file": "docs/evidence/scientific-gate-resolution/hrsc/ranges/hrsc-da5-row-13627-cols-11661-11763.bin",
+      "bytes": 206,
+      "sha256": "9f9c5f3c599f7c0cb6b0b511232680d9af695a5dd945143e49908feefd0dd0f8"
+    },
+    {
+      "file": "docs/evidence/scientific-gate-resolution/hrsc/ranges/hrsc-da5-row-13628-cols-11661-11763.bin",
+      "bytes": 206,
+      "sha256": "4b97086c9f92c67c81e98cb09b9000ce1f604feda139f8fb6f8525c388de1995"
+    },
+    {
+      "file": "docs/evidence/scientific-gate-resolution/hrsc/ranges/hrsc-da5-row-13629-cols-11661-11763.bin",
+      "bytes": 206,
+      "sha256": "d50c9d2101da7273f7e7ff2391f4dab2f0cb908833909e31f4c5988b08454c32"
+    },
+    {
+      "file": "docs/evidence/scientific-gate-resolution/hrsc/ranges/hrsc-da5-row-13630-cols-11661-11763.bin",
+      "bytes": 206,
+      "sha256": "ae202bfd0ae735d2387ff31157f5ae9846836b64ca767a2b61e0067df6144fed"
+    },
+    {
+      "file": "docs/evidence/scientific-gate-resolution/hrsc/ranges/hrsc-da5-row-13631-cols-11661-11763.bin",
+      "bytes": 206,
+      "sha256": "1779b6aaaa9c46220079438309e6fdab0c318b0333675742148f0cb9208b8783"
+    },
+    {
+      "file": "docs/evidence/scientific-gate-resolution/hrsc/ranges/hrsc-da5-row-13632-cols-11661-11763.bin",
+      "bytes": 206,
+      "sha256": "5d55efa3d4041bc9011f223374a6d6277d727848dbbe28921665c59646b9ca6c"
+    },
+    {
+      "file": "docs/evidence/scientific-gate-resolution/hrsc/ranges/hrsc-da5-row-13633-cols-11661-11763.bin",
+      "bytes": 206,
+      "sha256": "8cfd96a51a47438948e010cbebd338c8a7f4024c10cdd0cbfd0b13abb7efdfff"
+    },
+    {
+      "file": "docs/evidence/scientific-gate-resolution/hrsc/ranges/hrsc-da5-row-13634-cols-11661-11763.bin",
+      "bytes": 206,
+      "sha256": "c6efa842eff366c13b6e7500bbf5b85a9ee47358148bf5b1e7437a9eb6f57983"
+    },
+    {
+      "file": "docs/evidence/scientific-gate-resolution/hrsc/ranges/hrsc-da5-row-13635-cols-11661-11763.bin",
+      "bytes": 206,
+      "sha256": "f8cc0a6ad67583cb7a04df32a5298b50e689e0d9ce1ba26b68b6769dfb001e36"
+    },
+    {
+      "file": "docs/evidence/scientific-gate-resolution/hrsc/ranges/hrsc-da5-row-13636-cols-11661-11763.bin",
+      "bytes": 206,
+      "sha256": "fd50a0914769b1a21353a6769f2994fa9260c16ea84913ba7d459deff230a9ca"
+    },
+    {
+      "file": "docs/evidence/scientific-gate-resolution/hrsc/ranges/hrsc-da5-row-13637-cols-11661-11763.bin",
+      "bytes": 206,
+      "sha256": "efc0481743c189e1bf27c70d084c35b6d23a3eba4664afe0d7f21d20c266ae91"
+    },
+    {
+      "file": "docs/evidence/scientific-gate-resolution/hrsc/ranges/hrsc-da5-row-13638-cols-11661-11763.bin",
+      "bytes": 206,
+      "sha256": "b59c3282dfcc5aa859eec41f4215fa9a32a73083499d0ab9e5602bee475a14ce"
+    },
+    {
+      "file": "docs/evidence/scientific-gate-resolution/hrsc/ranges/hrsc-da5-row-13639-cols-11661-11763.bin",
+      "bytes": 206,
+      "sha256": "6a4c7590398507928afb9215841b2c508ac7e07683c0aad1e7b1a4393a2db22f"
+    },
+    {
+      "file": "docs/evidence/scientific-gate-resolution/hrsc/ranges/hrsc-da5-row-13640-cols-11661-11763.bin",
+      "bytes": 206,
+      "sha256": "7b16cd91b40a76202b7102f8922816fd5963e53ca2993e6c2c185be8281e802d"
+    },
+    {
+      "file": "docs/evidence/scientific-gate-resolution/hrsc/ranges/hrsc-da5-row-13641-cols-11661-11763.bin",
+      "bytes": 206,
+      "sha256": "1f3adff591a070b57c622994783bc8eefbeee8e85a0f6b7ffce86591743a2d0b"
+    },
+    {
+      "file": "docs/evidence/scientific-gate-resolution/hrsc/ranges/hrsc-da5-row-13642-cols-11661-11763.bin",
+      "bytes": 206,
+      "sha256": "08be8b3b8d8974561e78d9a87db66fbe0c20aefdad09b8a505911808f79cfacc"
+    },
+    {
+      "file": "docs/evidence/scientific-gate-resolution/hrsc/ranges/hrsc-da5-row-13643-cols-11661-11763.bin",
+      "bytes": 206,
+      "sha256": "c27eb65760a93f82cae34ce32d7f5c1baa1b82ec73e64afecb5b03f079d3bf5d"
+    },
+    {
+      "file": "docs/evidence/scientific-gate-resolution/hrsc/ranges/hrsc-da5-row-13644-cols-11661-11763.bin",
+      "bytes": 206,
+      "sha256": "bef2954060a99c992a7c10836279c9e3f2a0a69fce47fcb624749b959de63b1d"
+    },
+    {
+      "file": "docs/evidence/scientific-gate-resolution/hrsc/ranges/hrsc-da5-row-13645-cols-11661-11763.bin",
+      "bytes": 206,
+      "sha256": "005907fe9dd16d76d48da59dd310ea4d4db16a0dbd94a55135cec241074d97ac"
+    },
+    {
+      "file": "docs/evidence/scientific-gate-resolution/hrsc/ranges/hrsc-da5-row-13646-cols-11661-11763.bin",
+      "bytes": 206,
+      "sha256": "33d57af8ee6cf81ee9af2cb7fd0ad23c8c15101e54859814e902ca461c4ca5cd"
+    },
+    {
+      "file": "docs/evidence/scientific-gate-resolution/hrsc/ranges/hrsc-da5-row-13647-cols-11661-11763.bin",
+      "bytes": 206,
+      "sha256": "9848350d85cdc69dab2cebfd59e07a4e5e6f09db218c97f36db669bcd571c9f2"
+    },
+    {
+      "file": "docs/evidence/scientific-gate-resolution/hrsc/ranges/hrsc-da5-row-13648-cols-11661-11763.bin",
+      "bytes": 206,
+      "sha256": "90fc53daf5d1e604d31e944fde4197456fb55a1656e143fa14862f3bae26b07f"
+    },
+    {
+      "file": "docs/evidence/scientific-gate-resolution/hrsc/ranges/hrsc-da5-row-13649-cols-11661-11763.bin",
+      "bytes": 206,
+      "sha256": "73c73b63d925944fa663930ce26842b88b04ff2ea3e923d60cd086bb304b9d41"
+    },
+    {
+      "file": "docs/evidence/scientific-gate-resolution/hrsc/ranges/hrsc-da5-row-13650-cols-11661-11763.bin",
+      "bytes": 206,
+      "sha256": "3afc867010206dc82dee4dcc1c5b479adc6ddcaab6c5ae27ceb4398bcc2e7dec"
+    },
+    {
+      "file": "docs/evidence/scientific-gate-resolution/hrsc/ranges/hrsc-da5-row-13651-cols-11661-11763.bin",
+      "bytes": 206,
+      "sha256": "17a226cc3933d68772c3108e732b8c4881d3e7073548a89d5569f05a48fa9a18"
+    },
+    {
+      "file": "docs/evidence/scientific-gate-resolution/hrsc/ranges/hrsc-da5-row-13652-cols-11661-11763.bin",
+      "bytes": 206,
+      "sha256": "4d4f839c8d0937dddad52dfa4fb9a83cef806c0263ff510769f1dd241c628f21"
+    },
+    {
+      "file": "docs/evidence/scientific-gate-resolution/hrsc/ranges/hrsc-da5-row-13653-cols-11661-11763.bin",
+      "bytes": 206,
+      "sha256": "c30eb600b63e8d30256ab2d2961f06f12e63b606ea5d9896c9e511380967ca68"
+    },
+    {
+      "file": "docs/evidence/scientific-gate-resolution/hrsc/ranges/hrsc-da5-row-13654-cols-11661-11763.bin",
+      "bytes": 206,
+      "sha256": "80b6c4910ecf45ab7914a8e7d5981eae3a39b560674eb03a95e10e2a68abfcd8"
+    },
+    {
+      "file": "docs/evidence/scientific-gate-resolution/hrsc/ranges/hrsc-da5-row-13655-cols-11661-11763.bin",
+      "bytes": 206,
+      "sha256": "3c9ab2db562c12604eb4c4a07391e11d98b5855c812d6a26bbb53d7ebab505dd"
+    },
+    {
+      "file": "docs/evidence/scientific-gate-resolution/hrsc/ranges/hrsc-da5-row-13656-cols-11661-11763.bin",
+      "bytes": 206,
+      "sha256": "51d9f49241d87c28a6ed3787c5c4601a1915b4d5cbbcc4cde5bd5dae5b9513cf"
+    },
+    {
+      "file": "docs/evidence/scientific-gate-resolution/hrsc/ranges/hrsc-da5-row-13657-cols-11661-11763.bin",
+      "bytes": 206,
+      "sha256": "bce66165d6a7337b40ff9d2649ad84a8b449198225f4d5dec24fdb9b57800550"
+    },
+    {
+      "file": "docs/evidence/scientific-gate-resolution/hrsc/ranges/hrsc-da5-row-13658-cols-11661-11763.bin",
+      "bytes": 206,
+      "sha256": "b1589a77f51b25808c78cffdf78197f54a6e4209a4bbcd94e1c7355c56a7f2fc"
+    },
+    {
+      "file": "docs/evidence/scientific-gate-resolution/hrsc/ranges/hrsc-da5-row-13659-cols-11661-11763.bin",
+      "bytes": 206,
+      "sha256": "3c2923948762cfda53f1f9b3ffd8c5ba868682b6f21d8418861608854950c8c0"
+    },
+    {
+      "file": "docs/evidence/scientific-gate-resolution/hrsc/ranges/hrsc-da5-row-13660-cols-11661-11763.bin",
+      "bytes": 206,
+      "sha256": "4efc5e25c9ca38b166f81ad1de07ba5e5e2d5a028c8ef11518ec40e8230d6098"
+    },
+    {
+      "file": "docs/evidence/scientific-gate-resolution/hrsc/ranges/hrsc-da5-row-13661-cols-11661-11763.bin",
+      "bytes": 206,
+      "sha256": "8c42f83ee9e21257fbc39d68362623f135a7f98f2ead83ed7b43cc21d768bce8"
+    },
+    {
+      "file": "docs/evidence/scientific-gate-resolution/hrsc/ranges/hrsc-da5-row-13662-cols-11661-11763.bin",
+      "bytes": 206,
+      "sha256": "38576a95ede42381ee2189a7dc364d52593102ee7cb1b531e6769948d8f56236"
+    },
+    {
+      "file": "docs/evidence/scientific-gate-resolution/hrsc/ranges/hrsc-da5-row-13663-cols-11661-11763.bin",
+      "bytes": 206,
+      "sha256": "7398c34ed7a7789a947b5a0f86507030ec7e3e8440c8ebc90f90775a0049973e"
+    },
+    {
+      "file": "docs/evidence/scientific-gate-resolution/hrsc/ranges/hrsc-da5-row-13664-cols-11661-11763.bin",
+      "bytes": 206,
+      "sha256": "f43d29b1a54715a8aa234e0c47b71ce1c4a6ba390a0ab57c16fc732bac117bd4"
+    },
+    {
+      "file": "docs/evidence/scientific-gate-resolution/hrsc/ranges/hrsc-da5-row-13665-cols-11661-11763.bin",
+      "bytes": 206,
+      "sha256": "c29bd9554de6b1a68274771cf8014768b33bb9979341ac127724df0aabfcb553"
+    },
+    {
+      "file": "docs/evidence/scientific-gate-resolution/hrsc/ranges/hrsc-da5-row-13666-cols-11661-11763.bin",
+      "bytes": 206,
+      "sha256": "0c7f4db2db8f8a5f318070a6b55620de4b792120c7c14127bfc73f9a90a6a6fd"
+    },
+    {
+      "file": "docs/evidence/scientific-gate-resolution/hrsc/ranges/hrsc-da5-row-13667-cols-11661-11763.bin",
+      "bytes": 206,
+      "sha256": "98f5623e1c8f78b4c34730e147aff5da0530dcc81406af183a89d34f55335f01"
+    },
+    {
+      "file": "docs/evidence/scientific-gate-resolution/hrsc/ranges/hrsc-da5-row-13668-cols-11661-11763.bin",
+      "bytes": 206,
+      "sha256": "7abbd2556a7f601a1d1cec8b8879160c8f8c7dde538feb2054a2c4780589eb9e"
+    },
+    {
+      "file": "docs/evidence/scientific-gate-resolution/hrsc/ranges/hrsc-da5-row-13669-cols-11661-11763.bin",
+      "bytes": 206,
+      "sha256": "60550f453f641e75aadbc83902a12e5df69828d2fae4438ebb461bdba391166d"
+    },
+    {
+      "file": "docs/evidence/scientific-gate-resolution/hrsc/ranges/hrsc-da5-row-13670-cols-11661-11763.bin",
+      "bytes": 206,
+      "sha256": "2d475c6eb9c8bb41fa0b988e75fe9295a83e7543abb4ea20141e79fe26e31d14"
+    },
+    {
+      "file": "docs/evidence/scientific-gate-resolution/hrsc/ranges/hrsc-da5-row-13671-cols-11661-11763.bin",
+      "bytes": 206,
+      "sha256": "cf933ec154513f7bc4b3a175ed5ae46ae228a5aefcc0db0b976701b3f454bae3"
+    },
+    {
+      "file": "docs/evidence/scientific-gate-resolution/hrsc/ranges/hrsc-da5-row-13672-cols-11661-11763.bin",
+      "bytes": 206,
+      "sha256": "bdbbf0e0884a0df3642ac080b4a40c9dad09cdf7692c8c1c07842f98122264a2"
+    },
+    {
+      "file": "docs/evidence/scientific-gate-resolution/hrsc/ranges/hrsc-da5-row-13673-cols-11661-11763.bin",
+      "bytes": 206,
+      "sha256": "5c9d0d6b04b95494d9ca603faeea8bba9a98bcffd17d1e0b1a10749e2f9493e5"
+    },
+    {
+      "file": "docs/evidence/scientific-gate-resolution/hrsc/ranges/hrsc-da5-row-13674-cols-11661-11763.bin",
+      "bytes": 206,
+      "sha256": "53d5ea25b753477bc64b3f53fa6945ec5b22e68cc2547658f6bf2ec5ca7f181f"
+    },
+    {
+      "file": "docs/evidence/scientific-gate-resolution/hrsc/ranges/hrsc-da5-row-13675-cols-11661-11763.bin",
+      "bytes": 206,
+      "sha256": "85a687cf6f5e1673060ecfca7922e003dbdcfd174b6d0110bcdd4c5f2fd4a8db"
+    },
+    {
+      "file": "docs/evidence/scientific-gate-resolution/hrsc/ranges/hrsc-da5-row-13676-cols-11661-11763.bin",
+      "bytes": 206,
+      "sha256": "a6d3c010fba5e5f85523b7865f56c69fececa5df64ebf37dc8383a3cf3eb74d9"
+    },
+    {
+      "file": "docs/evidence/scientific-gate-resolution/hrsc/ranges/hrsc-da5-row-13677-cols-11661-11763.bin",
+      "bytes": 206,
+      "sha256": "16cceaaa25dd047a7cbeec7678bc0662203f9aa4af4a1adab78ede3a33e8018f"
+    },
+    {
+      "file": "docs/evidence/scientific-gate-resolution/hrsc/ranges/hrsc-da5-row-13678-cols-11661-11763.bin",
+      "bytes": 206,
+      "sha256": "5ba45ab8865a02b18f22a4e612d7bdf6b2bdd24b6e82b69f177dcb9281c08280"
+    },
+    {
+      "file": "docs/evidence/scientific-gate-resolution/hrsc/ranges/hrsc-da5-row-13679-cols-11661-11763.bin",
+      "bytes": 206,
+      "sha256": "ed2c1366410934ac9d4a6f6a12dea5ee4550a267df08e1a01f9c3ddbc1f12a09"
+    },
+    {
+      "file": "docs/evidence/scientific-gate-resolution/hrsc/ranges/hrsc-da5-row-13680-cols-11661-11763.bin",
+      "bytes": 206,
+      "sha256": "727724e68e2ccb487bc213f9110de25741caa44057fd3e61a460bc9c63f267c5"
+    },
+    {
+      "file": "docs/evidence/scientific-gate-resolution/hrsc/ranges/hrsc-da5-row-13681-cols-11661-11763.bin",
+      "bytes": 206,
+      "sha256": "be8bc0cbb04a875855c48a2b7766a783e5a984ed9a603e058db048dc666bd215"
+    },
+    {
+      "file": "docs/evidence/scientific-gate-resolution/hrsc/ranges/hrsc-da5-row-13682-cols-11661-11763.bin",
+      "bytes": 206,
+      "sha256": "cef781c28981e3111b05c11451f718554d21b6495541194767a2b10e1275454a"
+    },
+    {
+      "file": "docs/evidence/scientific-gate-resolution/hrsc/ranges/hrsc-da5-row-13683-cols-11661-11763.bin",
+      "bytes": 206,
+      "sha256": "9a0b1873345d2456b67e76542663fe4ff66768845678ca5f266e6868181caf10"
+    },
+    {
+      "file": "docs/evidence/scientific-gate-resolution/hrsc/ranges/hrsc-da5-row-13684-cols-11661-11763.bin",
+      "bytes": 206,
+      "sha256": "3e2b9f8eca3c3f75a4cb62c1c9f58b871dac061b7d758ae0c368c2debc78e72f"
+    },
+    {
+      "file": "docs/evidence/scientific-gate-resolution/hrsc/ranges/hrsc-da5-row-13685-cols-11661-11763.bin",
+      "bytes": 206,
+      "sha256": "75e07a9a223cf08f0ab82adaeb03ffee8d7a8fa200dd0984c9829a97058bcf00"
+    },
+    {
+      "file": "docs/evidence/scientific-gate-resolution/hrsc/ranges/hrsc-da5-row-13686-cols-11661-11763.bin",
+      "bytes": 206,
+      "sha256": "98fb6126ec8bd51a6d18f0d10b899cd63dc10ff929a45ed8e228d5f65693793e"
+    },
+    {
+      "file": "docs/evidence/scientific-gate-resolution/hrsc/ranges/hrsc-da5-row-13687-cols-11661-11763.bin",
+      "bytes": 206,
+      "sha256": "1bb3ee6351f22e45e1bab011c100c1f6eec09f2e3d75e5ad46eb3b3f989b823c"
+    },
+    {
+      "file": "docs/evidence/scientific-gate-resolution/hrsc/ranges/hrsc-da5-row-13688-cols-11661-11763.bin",
+      "bytes": 206,
+      "sha256": "7885a57fd0dc7960f2600de6e285a05df007013b6ea8cb2df4773b276972c5ba"
+    },
+    {
+      "file": "docs/evidence/scientific-gate-resolution/hrsc/ranges/hrsc-da5-row-13689-cols-11661-11763.bin",
+      "bytes": 206,
+      "sha256": "d970256292c48b6e9467f10014e162073bbdce56cdaca3a54c950dac7150fe57"
+    },
+    {
+      "file": "docs/evidence/scientific-gate-resolution/hrsc/ranges/hrsc-da5-row-13690-cols-11661-11763.bin",
+      "bytes": 206,
+      "sha256": "78f63ec33d5911a914a180282e9588cdf47e5cb6fc0b25c63f4db6e48fdb9553"
+    },
+    {
+      "file": "docs/evidence/scientific-gate-resolution/hrsc/ranges/hrsc-da5-row-13691-cols-11661-11763.bin",
+      "bytes": 206,
+      "sha256": "35691f1c8f93c7f2c07d73243f0abadb6c7fa2a1841060689105ea9968abbb30"
+    },
+    {
+      "file": "docs/evidence/scientific-gate-resolution/hrsc/ranges/hrsc-da5-row-13692-cols-11661-11763.bin",
+      "bytes": 206,
+      "sha256": "96b5d3cd8c2414b11a2171a01980cd060de85bbc66ac64493049e5d4aed1a5f3"
+    },
+    {
+      "file": "docs/evidence/scientific-gate-resolution/hrsc/ranges/hrsc-da5-row-13693-cols-11661-11763.bin",
+      "bytes": 206,
+      "sha256": "6e6ad49d10c38d3ef5516e925dacbfefb1933b29d8f6b0fb3bb371c12044d4fb"
+    },
+    {
+      "file": "docs/evidence/scientific-gate-resolution/hrsc/ranges/hrsc-da5-row-13694-cols-11661-11763.bin",
+      "bytes": 206,
+      "sha256": "faaecf42793a2e81e4096246adb94c42ae4300fed664b64a0c47647cacf85e7b"
+    },
+    {
+      "file": "docs/evidence/scientific-gate-resolution/hrsc/ranges/hrsc-da5-row-13695-cols-11661-11763.bin",
+      "bytes": 206,
+      "sha256": "2c5042d1bef1dddbed3c218a305d4b8c193a35a92bf47de53341befae2dc2df7"
+    },
+    {
+      "file": "docs/evidence/scientific-gate-resolution/hrsc/ranges/hrsc-da5-row-13696-cols-11661-11763.bin",
+      "bytes": 206,
+      "sha256": "f5fa6a9b7b36632188ad234965b9b1a68f8c6c385fe9aa60b7e15625003fe9bf"
+    },
+    {
+      "file": "docs/evidence/scientific-gate-resolution/hrsc/ranges/hrsc-da5-row-13697-cols-11661-11763.bin",
+      "bytes": 206,
+      "sha256": "86b28698a39d3f58ae9691183fd0c63733422d4e8168dc05b65872e28fc4f484"
+    },
+    {
+      "file": "docs/evidence/scientific-gate-resolution/hrsc/ranges/hrsc-da5-row-13698-cols-11661-11763.bin",
+      "bytes": 206,
+      "sha256": "7c2759e55f0d7d4134de0f594c0cf6e5bb21a9bf25b9719540c0042814593648"
+    },
+    {
+      "file": "docs/evidence/scientific-gate-resolution/hrsc/ranges/hrsc-da5-row-13699-cols-11661-11763.bin",
+      "bytes": 206,
+      "sha256": "b8130ed805bf181a157512c2c3af6661fe80b69e9df91cb95e752f1890d1e2ed"
+    },
+    {
+      "file": "docs/evidence/scientific-gate-resolution/hrsc/ranges/hrsc-da5-row-13700-cols-11661-11763.bin",
+      "bytes": 206,
+      "sha256": "513ab45457e3ff66b386c0d2cda3e00a4f95866c84f0badb0d52a29b0c8dd8f7"
+    },
+    {
+      "file": "docs/evidence/scientific-gate-resolution/hrsc/ranges/hrsc-da5-row-13701-cols-11661-11763.bin",
+      "bytes": 206,
+      "sha256": "9f40f1e13f561421e0977133024e2073909a7f0386b3606969cf476255f87488"
+    },
+    {
+      "file": "docs/evidence/scientific-gate-resolution/hrsc/ranges/hrsc-da5-row-13702-cols-11661-11763.bin",
+      "bytes": 206,
+      "sha256": "4133073ab02f5abc9220ebe77ff7cc55bea80152c678f1ddf5d4d452be8be697"
+    },
+    {
+      "file": "docs/evidence/scientific-gate-resolution/hrsc/ranges/hrsc-da5-row-13703-cols-11661-11763.bin",
+      "bytes": 206,
+      "sha256": "288df9857a0b577b53f08cadd54df9c47eb82e42944c54bf950e186b44b00942"
+    },
+    {
+      "file": "docs/evidence/scientific-gate-resolution/hrsc/ranges/hrsc-da5-row-13704-cols-11661-11763.bin",
+      "bytes": 206,
+      "sha256": "bb45377166c86372849b008625d30c29306586b81e05d5fbc00ee22938fa9df9"
+    },
+    {
+      "file": "docs/evidence/scientific-gate-resolution/hrsc/ranges/hrsc-da5-row-13705-cols-11661-11763.bin",
+      "bytes": 206,
+      "sha256": "363512a1d8c2766f3c844e556e3cdaec76e559f1e22216a4d1e7d3656dc92bed"
+    },
+    {
+      "file": "docs/evidence/scientific-gate-resolution/hrsc/ranges/hrsc-da5-row-13706-cols-11661-11763.bin",
+      "bytes": 206,
+      "sha256": "0c1e99c2d1ae394a3a57af3518ea719d10096b20426c81fda8ff4e3798942e10"
+    },
+    {
+      "file": "docs/evidence/scientific-gate-resolution/hrsc/ranges/hrsc-da5-row-13707-cols-11661-11763.bin",
+      "bytes": 206,
+      "sha256": "53bf4a1f5c7ccabc39899bc124cd0cd31f550ea6501961cb48fa95d3e2fae90e"
+    },
+    {
+      "file": "docs/evidence/scientific-gate-resolution/hrsc/ranges/hrsc-dt5-row-13605-cols-11661-11763.bin",
+      "bytes": 206,
+      "sha256": "1740560ee331e996e666977c070ae07ad1301bbbb9bfb9384a7b550448d62722"
+    },
+    {
+      "file": "docs/evidence/scientific-gate-resolution/hrsc/ranges/hrsc-dt5-row-13606-cols-11661-11763.bin",
+      "bytes": 206,
+      "sha256": "6db04d9830c7a826d7983113e49da7b8875c2340f9fbf23eac4b772931ed0c82"
+    },
+    {
+      "file": "docs/evidence/scientific-gate-resolution/hrsc/ranges/hrsc-dt5-row-13607-cols-11661-11763.bin",
+      "bytes": 206,
+      "sha256": "394e32a67982abb1daa6995df20916852c2830a3dc2263920798c391a92bb9de"
+    },
+    {
+      "file": "docs/evidence/scientific-gate-resolution/hrsc/ranges/hrsc-dt5-row-13608-cols-11661-11763.bin",
+      "bytes": 206,
+      "sha256": "fd651f624eae86d2d2b5f0a1bd911f124e1aa4304073e0674f850f7327a545e5"
+    },
+    {
+      "file": "docs/evidence/scientific-gate-resolution/hrsc/ranges/hrsc-dt5-row-13609-cols-11661-11763.bin",
+      "bytes": 206,
+      "sha256": "e91a3bd6624b7c18e9ee2bca7272147d11928aca8c38a07b3b65d474a0bd6c9b"
+    },
+    {
+      "file": "docs/evidence/scientific-gate-resolution/hrsc/ranges/hrsc-dt5-row-13610-cols-11661-11763.bin",
+      "bytes": 206,
+      "sha256": "027b8e4eed84830e1f7bbc35a9b3860977355af48f4ec73c05344bb01fd5a64f"
+    },
+    {
+      "file": "docs/evidence/scientific-gate-resolution/hrsc/ranges/hrsc-dt5-row-13611-cols-11661-11763.bin",
+      "bytes": 206,
+      "sha256": "53cf8319e7ffab9ce0972f44dc7e22a7fc521372a27db764e768aa86d6689a81"
+    },
+    {
+      "file": "docs/evidence/scientific-gate-resolution/hrsc/ranges/hrsc-dt5-row-13612-cols-11661-11763.bin",
+      "bytes": 206,
+      "sha256": "bad419259443b7d2672a2d06d9f6d5b54b5112c994224add0f798a0b18dff6b4"
+    },
+    {
+      "file": "docs/evidence/scientific-gate-resolution/hrsc/ranges/hrsc-dt5-row-13613-cols-11661-11763.bin",
+      "bytes": 206,
+      "sha256": "d9430f276a90dcf94c8c6c7cbe75822d45cfc0be44ab3f39771a7a046b05cb50"
+    },
+    {
+      "file": "docs/evidence/scientific-gate-resolution/hrsc/ranges/hrsc-dt5-row-13614-cols-11661-11763.bin",
+      "bytes": 206,
+      "sha256": "65f03c9379f9210094ab7283e2d27fb392729e10bf3cf86aae8d8b4a74a32c99"
+    },
+    {
+      "file": "docs/evidence/scientific-gate-resolution/hrsc/ranges/hrsc-dt5-row-13615-cols-11661-11763.bin",
+      "bytes": 206,
+      "sha256": "0a0bbe0636f0ca0b121ec148b2e4416967749a59abb07acc236357658a0912f0"
+    },
+    {
+      "file": "docs/evidence/scientific-gate-resolution/hrsc/ranges/hrsc-dt5-row-13616-cols-11661-11763.bin",
+      "bytes": 206,
+      "sha256": "e8bf5e4cd1120196a80f02c3cc2500894b5efea7658b2c01c31b87874e8c34b4"
+    },
+    {
+      "file": "docs/evidence/scientific-gate-resolution/hrsc/ranges/hrsc-dt5-row-13617-cols-11661-11763.bin",
+      "bytes": 206,
+      "sha256": "b1dc268ab45e0927d8bcc7fc2d3e18547eb1448d097e1130fcaf31b2ac81e472"
+    },
+    {
+      "file": "docs/evidence/scientific-gate-resolution/hrsc/ranges/hrsc-dt5-row-13618-cols-11661-11763.bin",
+      "bytes": 206,
+      "sha256": "1b4a6010d2e22bec3e3e42e3a980938278582f95e76e9df6c29dd1c68e896b5a"
+    },
+    {
+      "file": "docs/evidence/scientific-gate-resolution/hrsc/ranges/hrsc-dt5-row-13619-cols-11661-11763.bin",
+      "bytes": 206,
+      "sha256": "99908389db218ca8a7efbe4461a192367727ca97a8948196a6baff2c1e0f73b7"
+    },
+    {
+      "file": "docs/evidence/scientific-gate-resolution/hrsc/ranges/hrsc-dt5-row-13620-cols-11661-11763.bin",
+      "bytes": 206,
+      "sha256": "79ea5b923544b163b277a0a4e0e49b05bc753a4f9445f0ebccd74d17aa017bfb"
+    },
+    {
+      "file": "docs/evidence/scientific-gate-resolution/hrsc/ranges/hrsc-dt5-row-13621-cols-11661-11763.bin",
+      "bytes": 206,
+      "sha256": "0fd2b2d0c747b0be0823fd407175648a5cbf28f6f34050b736493c324b1feb84"
+    },
+    {
+      "file": "docs/evidence/scientific-gate-resolution/hrsc/ranges/hrsc-dt5-row-13622-cols-11661-11763.bin",
+      "bytes": 206,
+      "sha256": "a7764305572b83117ffae9b94fbb570a080819493afd241b58e9328df713ce62"
+    },
+    {
+      "file": "docs/evidence/scientific-gate-resolution/hrsc/ranges/hrsc-dt5-row-13623-cols-11661-11763.bin",
+      "bytes": 206,
+      "sha256": "c75235ae36306e6bf897df6950e7be363baacfba7cd64c4b8e685afa1dd60bba"
+    },
+    {
+      "file": "docs/evidence/scientific-gate-resolution/hrsc/ranges/hrsc-dt5-row-13624-cols-11661-11763.bin",
+      "bytes": 206,
+      "sha256": "b1af115085844c4d01f5aca5755865f9ddc1134139df9d36157b3ddb42d914eb"
+    },
+    {
+      "file": "docs/evidence/scientific-gate-resolution/hrsc/ranges/hrsc-dt5-row-13625-cols-11661-11763.bin",
+      "bytes": 206,
+      "sha256": "470fa07cfffa70355c5c16613cb15c2e842bfd51370bf8fad659a587ba90aebd"
+    },
+    {
+      "file": "docs/evidence/scientific-gate-resolution/hrsc/ranges/hrsc-dt5-row-13626-cols-11661-11763.bin",
+      "bytes": 206,
+      "sha256": "5e0da911ca069ddc654915a6f33735262eff4b33ce0fcb7902a5ca859ec03569"
+    },
+    {
+      "file": "docs/evidence/scientific-gate-resolution/hrsc/ranges/hrsc-dt5-row-13627-cols-11661-11763.bin",
+      "bytes": 206,
+      "sha256": "bca3f6a738d36332de8b83338e45d257549c605d0e0ba4ccded69eec52f0a661"
+    },
+    {
+      "file": "docs/evidence/scientific-gate-resolution/hrsc/ranges/hrsc-dt5-row-13628-cols-11661-11763.bin",
+      "bytes": 206,
+      "sha256": "59dc192360952745a29fbf3004e21c03ead19d027cd0999dfc711528bf6abbe8"
+    },
+    {
+      "file": "docs/evidence/scientific-gate-resolution/hrsc/ranges/hrsc-dt5-row-13629-cols-11661-11763.bin",
+      "bytes": 206,
+      "sha256": "24f6e75d768f39ac7cfac8592ffa1733d25e280dd9490bf2853cab29f9c41f1a"
+    },
+    {
+      "file": "docs/evidence/scientific-gate-resolution/hrsc/ranges/hrsc-dt5-row-13630-cols-11661-11763.bin",
+      "bytes": 206,
+      "sha256": "6898f26841636ac0ac84b533b1427f28b62c06406fcc5dee4332bcbc0764838d"
+    },
+    {
+      "file": "docs/evidence/scientific-gate-resolution/hrsc/ranges/hrsc-dt5-row-13631-cols-11661-11763.bin",
+      "bytes": 206,
+      "sha256": "f0ae25357e977a0f227e06344a48e37ca14795e8a0f8aafb0e35c1447c8a4b1c"
+    },
+    {
+      "file": "docs/evidence/scientific-gate-resolution/hrsc/ranges/hrsc-dt5-row-13632-cols-11661-11763.bin",
+      "bytes": 206,
+      "sha256": "d6b90f8703f62730b49d48909f74e73bedc85862025d8b0388f083acad4c2121"
+    },
+    {
+      "file": "docs/evidence/scientific-gate-resolution/hrsc/ranges/hrsc-dt5-row-13633-cols-11661-11763.bin",
+      "bytes": 206,
+      "sha256": "e2d8df2f0f1e37cd8d8f469b4ac7034380c42aadca240e1725d945021400d929"
+    },
+    {
+      "file": "docs/evidence/scientific-gate-resolution/hrsc/ranges/hrsc-dt5-row-13634-cols-11661-11763.bin",
+      "bytes": 206,
+      "sha256": "52eaaed92dcc87df3c61cf9a3c80d05eb0cf0531002f2efd113d2c144804d62f"
+    },
+    {
+      "file": "docs/evidence/scientific-gate-resolution/hrsc/ranges/hrsc-dt5-row-13635-cols-11661-11763.bin",
+      "bytes": 206,
+      "sha256": "ad8911f6cc875e4f6d1aa8df9c6c1859ab6a817cd692284ecf9881a8072a6f61"
+    },
+    {
+      "file": "docs/evidence/scientific-gate-resolution/hrsc/ranges/hrsc-dt5-row-13636-cols-11661-11763.bin",
+      "bytes": 206,
+      "sha256": "99e6c35bf9678c7c83d38ba479c5a3df68c973de534df7d6a867dd7fdffe7fc4"
+    },
+    {
+      "file": "docs/evidence/scientific-gate-resolution/hrsc/ranges/hrsc-dt5-row-13637-cols-11661-11763.bin",
+      "bytes": 206,
+      "sha256": "65ca336ea2959da0bd96abd8b7cd3fac4cb29173c222e2b63dce699304865049"
+    },
+    {
+      "file": "docs/evidence/scientific-gate-resolution/hrsc/ranges/hrsc-dt5-row-13638-cols-11661-11763.bin",
+      "bytes": 206,
+      "sha256": "def43cc1d2d73f6090098da6c1bc673ce67d4cdddcb95bb8e57d41e1f45ce45e"
+    },
+    {
+      "file": "docs/evidence/scientific-gate-resolution/hrsc/ranges/hrsc-dt5-row-13639-cols-11661-11763.bin",
+      "bytes": 206,
+      "sha256": "4927c24eaa22e7e19d752fbc4c98d49919cb3848a045f15da5df594e7df233be"
+    },
+    {
+      "file": "docs/evidence/scientific-gate-resolution/hrsc/ranges/hrsc-dt5-row-13640-cols-11661-11763.bin",
+      "bytes": 206,
+      "sha256": "33cf0668fd2d3dfdb54834655697dad44fc2eabfef7ef88ac7040eaf9b93e4de"
+    },
+    {
+      "file": "docs/evidence/scientific-gate-resolution/hrsc/ranges/hrsc-dt5-row-13641-cols-11661-11763.bin",
+      "bytes": 206,
+      "sha256": "4c3723f0c94ddd2d722e6daaa1e0a5f7489f53a1e529d46f097fa59bc9d781b5"
+    },
+    {
+      "file": "docs/evidence/scientific-gate-resolution/hrsc/ranges/hrsc-dt5-row-13642-cols-11661-11763.bin",
+      "bytes": 206,
+      "sha256": "0034874aaaf1801611ae6b9d3acc5faa0953b873da1a1a44be9e26e66757db1f"
+    },
+    {
+      "file": "docs/evidence/scientific-gate-resolution/hrsc/ranges/hrsc-dt5-row-13643-cols-11661-11763.bin",
+      "bytes": 206,
+      "sha256": "edcb4d449dbec0c7071ecc9c24ad95609e7b38af3888fa8dde8199f4a461cc83"
+    },
+    {
+      "file": "docs/evidence/scientific-gate-resolution/hrsc/ranges/hrsc-dt5-row-13644-cols-11661-11763.bin",
+      "bytes": 206,
+      "sha256": "8eeb9c59dd6680a49952f8f018dca71b3db7005d54c6e05dcd723ce5e97f83f0"
+    },
+    {
+      "file": "docs/evidence/scientific-gate-resolution/hrsc/ranges/hrsc-dt5-row-13645-cols-11661-11763.bin",
+      "bytes": 206,
+      "sha256": "2851ce7c2d8aac2dd5707da6b77470c3f8c380e38723fb6139f60fd2dde2ee76"
+    },
+    {
+      "file": "docs/evidence/scientific-gate-resolution/hrsc/ranges/hrsc-dt5-row-13646-cols-11661-11763.bin",
+      "bytes": 206,
+      "sha256": "284007d2219a41b8355a79e7e089154b94bbaecded2007a00803ef1f26405955"
+    },
+    {
+      "file": "docs/evidence/scientific-gate-resolution/hrsc/ranges/hrsc-dt5-row-13647-cols-11661-11763.bin",
+      "bytes": 206,
+      "sha256": "aeeff0cb1ed0df23111d492d86ee841d4cd6551316eaa95116c69eec12a2443b"
+    },
+    {
+      "file": "docs/evidence/scientific-gate-resolution/hrsc/ranges/hrsc-dt5-row-13648-cols-11661-11763.bin",
+      "bytes": 206,
+      "sha256": "2c0888183677d4b4e1f0ac6f4ba493fef2178eba26a1822d4e03472e17e65ac5"
+    },
+    {
+      "file": "docs/evidence/scientific-gate-resolution/hrsc/ranges/hrsc-dt5-row-13649-cols-11661-11763.bin",
+      "bytes": 206,
+      "sha256": "6278bb9a6feb40a7e0fb8864330b6c7669eff6c61cfb9affd43af528d1acd447"
+    },
+    {
+      "file": "docs/evidence/scientific-gate-resolution/hrsc/ranges/hrsc-dt5-row-13650-cols-11661-11763.bin",
+      "bytes": 206,
+      "sha256": "014bf2ec0ab0f6182ca580a6e3604be2119d71ada6e5d7daf98c48c65891ec60"
+    },
+    {
+      "file": "docs/evidence/scientific-gate-resolution/hrsc/ranges/hrsc-dt5-row-13651-cols-11661-11763.bin",
+      "bytes": 206,
+      "sha256": "15c3490347582d596211510396b68c4efd11f8f78d3373fe256b595300caf0ce"
+    },
+    {
+      "file": "docs/evidence/scientific-gate-resolution/hrsc/ranges/hrsc-dt5-row-13652-cols-11661-11763.bin",
+      "bytes": 206,
+      "sha256": "cfa6f514458939418db8aa8b68958c55326f6abf99e1918c590e8ab50313b561"
+    },
+    {
+      "file": "docs/evidence/scientific-gate-resolution/hrsc/ranges/hrsc-dt5-row-13653-cols-11661-11763.bin",
+      "bytes": 206,
+      "sha256": "b9272bfdfb135b955b4d2b2bbb96c213e1687de4ccd14a1f71c6773f831fd89e"
+    },
+    {
+      "file": "docs/evidence/scientific-gate-resolution/hrsc/ranges/hrsc-dt5-row-13654-cols-11661-11763.bin",
+      "bytes": 206,
+      "sha256": "8eb3e29bce46f28ba502065cd7c1227f43785c97675aea53e67ab671b1a53ae9"
+    },
+    {
+      "file": "docs/evidence/scientific-gate-resolution/hrsc/ranges/hrsc-dt5-row-13655-cols-11661-11763.bin",
+      "bytes": 206,
+      "sha256": "5e18cc2d775f72c8850cef6220ab8cb237bd86e81fa83fffff52bf3afd7f7544"
+    },
+    {
+      "file": "docs/evidence/scientific-gate-resolution/hrsc/ranges/hrsc-dt5-row-13656-cols-11661-11763.bin",
+      "bytes": 206,
+      "sha256": "996f51ad588323ce5b2eb4011329a986f941b5ef71fe52f95ffcd73b0aa585ee"
+    },
+    {
+      "file": "docs/evidence/scientific-gate-resolution/hrsc/ranges/hrsc-dt5-row-13657-cols-11661-11763.bin",
+      "bytes": 206,
+      "sha256": "2eed8f52909f15681f196c2a0405767c6e7fd0a0fb1f7c116d1886f8aad9f404"
+    },
+    {
+      "file": "docs/evidence/scientific-gate-resolution/hrsc/ranges/hrsc-dt5-row-13658-cols-11661-11763.bin",
+      "bytes": 206,
+      "sha256": "7bc3fb819a08cc3b197d5621ae23e799ad93ac22df10b74132587fce38f36559"
+    },
+    {
+      "file": "docs/evidence/scientific-gate-resolution/hrsc/ranges/hrsc-dt5-row-13659-cols-11661-11763.bin",
+      "bytes": 206,
+      "sha256": "6b8c8949e21bd8ff8602bae485986854623a864d21ef84caccc348810842430c"
+    },
+    {
+      "file": "docs/evidence/scientific-gate-resolution/hrsc/ranges/hrsc-dt5-row-13660-cols-11661-11763.bin",
+      "bytes": 206,
+      "sha256": "0aea7dbaaa2d73bec2c74d31a5f0b85aa10e8895bd5b4a156ea10d39fd28073b"
+    },
+    {
+      "file": "docs/evidence/scientific-gate-resolution/hrsc/ranges/hrsc-dt5-row-13661-cols-11661-11763.bin",
+      "bytes": 206,
+      "sha256": "42e3ea4b87bdc252631dfdd23612ab2d837867a51d0549563be569f97e9183d5"
+    },
+    {
+      "file": "docs/evidence/scientific-gate-resolution/hrsc/ranges/hrsc-dt5-row-13662-cols-11661-11763.bin",
+      "bytes": 206,
+      "sha256": "063c7dcca1f0ddc957f941d8d077c09d2ba54d80bb27ec15a95003815728d990"
+    },
+    {
+      "file": "docs/evidence/scientific-gate-resolution/hrsc/ranges/hrsc-dt5-row-13663-cols-11661-11763.bin",
+      "bytes": 206,
+      "sha256": "6d26fad3424d3a2f3ae92ab8a46c1955237950fd5e626a98ca4d0f6d1629bd13"
+    },
+    {
+      "file": "docs/evidence/scientific-gate-resolution/hrsc/ranges/hrsc-dt5-row-13664-cols-11661-11763.bin",
+      "bytes": 206,
+      "sha256": "3f5ef3c4e45c3c5bd5fe2b8c06c6a2d5a0503983c5dd5b1432915a618f5d5706"
+    },
+    {
+      "file": "docs/evidence/scientific-gate-resolution/hrsc/ranges/hrsc-dt5-row-13665-cols-11661-11763.bin",
+      "bytes": 206,
+      "sha256": "54f0d459b015113600e9028b7f9be846893f4efe40243e6dcc58103fe753154e"
+    },
+    {
+      "file": "docs/evidence/scientific-gate-resolution/hrsc/ranges/hrsc-dt5-row-13666-cols-11661-11763.bin",
+      "bytes": 206,
+      "sha256": "5d7314f94e2b44b6b0bb3457a290418ebfef66077da58ef0d38d1420047cbc52"
+    },
+    {
+      "file": "docs/evidence/scientific-gate-resolution/hrsc/ranges/hrsc-dt5-row-13667-cols-11661-11763.bin",
+      "bytes": 206,
+      "sha256": "503ce5cdfe2dd020004de961ab7997a1d617f5f6f42aada3f459536a82c91e78"
+    },
+    {
+      "file": "docs/evidence/scientific-gate-resolution/hrsc/ranges/hrsc-dt5-row-13668-cols-11661-11763.bin",
+      "bytes": 206,
+      "sha256": "ed8e5318a314d780483761144d03a02cf0cd942a0b6d41635cb9bd846e13bea1"
+    },
+    {
+      "file": "docs/evidence/scientific-gate-resolution/hrsc/ranges/hrsc-dt5-row-13669-cols-11661-11763.bin",
+      "bytes": 206,
+      "sha256": "3a920a0a60be0f70bbd7a7ec82ec28726c41dd023ae498f33f4ea210c4666847"
+    },
+    {
+      "file": "docs/evidence/scientific-gate-resolution/hrsc/ranges/hrsc-dt5-row-13670-cols-11661-11763.bin",
+      "bytes": 206,
+      "sha256": "a2678edffe97198fb7ca75543c331c90c5b7d5fa0e36fa377d65df15cde9143d"
+    },
+    {
+      "file": "docs/evidence/scientific-gate-resolution/hrsc/ranges/hrsc-dt5-row-13671-cols-11661-11763.bin",
+      "bytes": 206,
+      "sha256": "6e749a343820d3dca053c6789a9f1236b293bd9d5bbf766e6522eb44c68a4bfd"
+    },
+    {
+      "file": "docs/evidence/scientific-gate-resolution/hrsc/ranges/hrsc-dt5-row-13672-cols-11661-11763.bin",
+      "bytes": 206,
+      "sha256": "b5b990abae99bf8c09072f29b76180af6013da6fe40d9c6a4be031fd652700ed"
+    },
+    {
+      "file": "docs/evidence/scientific-gate-resolution/hrsc/ranges/hrsc-dt5-row-13673-cols-11661-11763.bin",
+      "bytes": 206,
+      "sha256": "1323b00b39353f72533ec58eacc2e380fe155c94cb885c2477d2d7aa8cc5bc4f"
+    },
+    {
+      "file": "docs/evidence/scientific-gate-resolution/hrsc/ranges/hrsc-dt5-row-13674-cols-11661-11763.bin",
+      "bytes": 206,
+      "sha256": "1116e5ba18a9214f6e5a1b004335f13312a82997002c0056b5cb045ca6ee1576"
+    },
+    {
+      "file": "docs/evidence/scientific-gate-resolution/hrsc/ranges/hrsc-dt5-row-13675-cols-11661-11763.bin",
+      "bytes": 206,
+      "sha256": "7f0dc7422f24bdbf43e34517dfc7800b73976920d7f8f49b2c34682ef325496a"
+    },
+    {
+      "file": "docs/evidence/scientific-gate-resolution/hrsc/ranges/hrsc-dt5-row-13676-cols-11661-11763.bin",
+      "bytes": 206,
+      "sha256": "997750acdf5fc53d67785ec4acf890e18e6e462d3101ca87f41a4468e6475f71"
+    },
+    {
+      "file": "docs/evidence/scientific-gate-resolution/hrsc/ranges/hrsc-dt5-row-13677-cols-11661-11763.bin",
+      "bytes": 206,
+      "sha256": "9cb737a18d6cc9a2561fd05814ab631c777a179e4ea1322cbe2a32ada1199ddd"
+    },
+    {
+      "file": "docs/evidence/scientific-gate-resolution/hrsc/ranges/hrsc-dt5-row-13678-cols-11661-11763.bin",
+      "bytes": 206,
+      "sha256": "14669c4b9bec2d81969ba5e9d2dbf19f17029a30bc393994f512f9c245c5a24c"
+    },
+    {
+      "file": "docs/evidence/scientific-gate-resolution/hrsc/ranges/hrsc-dt5-row-13679-cols-11661-11763.bin",
+      "bytes": 206,
+      "sha256": "93a62f42a023eba83aa1b5f27d72d9810fa7c9c6319d999940032b4e1fa50f1a"
+    },
+    {
+      "file": "docs/evidence/scientific-gate-resolution/hrsc/ranges/hrsc-dt5-row-13680-cols-11661-11763.bin",
+      "bytes": 206,
+      "sha256": "7efd98f0ab53c08f95d649c9ed7f63ecb7abcb6e2e9ed7af96a9759597c418f9"
+    },
+    {
+      "file": "docs/evidence/scientific-gate-resolution/hrsc/ranges/hrsc-dt5-row-13681-cols-11661-11763.bin",
+      "bytes": 206,
+      "sha256": "bd0be9e0c3e92093b16fc058bd2157324c31d19500036745d5cddbd6d30364ab"
+    },
+    {
+      "file": "docs/evidence/scientific-gate-resolution/hrsc/ranges/hrsc-dt5-row-13682-cols-11661-11763.bin",
+      "bytes": 206,
+      "sha256": "fa5c352916d9e2b1c67b8b776b2a38db54f9e38e577ffd48e0f8af45901af66a"
+    },
+    {
+      "file": "docs/evidence/scientific-gate-resolution/hrsc/ranges/hrsc-dt5-row-13683-cols-11661-11763.bin",
+      "bytes": 206,
+      "sha256": "5c96e6cdef49393778f9a44edf9b723ce49e0afd1c343a60a17bcd0aa7a0afed"
+    },
+    {
+      "file": "docs/evidence/scientific-gate-resolution/hrsc/ranges/hrsc-dt5-row-13684-cols-11661-11763.bin",
+      "bytes": 206,
+      "sha256": "786e6ed693717e7b304a005211f378405c0c82542f44515d211cb574855c63b7"
+    },
+    {
+      "file": "docs/evidence/scientific-gate-resolution/hrsc/ranges/hrsc-dt5-row-13685-cols-11661-11763.bin",
+      "bytes": 206,
+      "sha256": "caa65c1b98c1e55162b0ac540d60a193adb650be7e05b17130a3b175ebed8428"
+    },
+    {
+      "file": "docs/evidence/scientific-gate-resolution/hrsc/ranges/hrsc-dt5-row-13686-cols-11661-11763.bin",
+      "bytes": 206,
+      "sha256": "de1a2daa09b5b29d3f14093f857d790b9c5a00a2ef4df20289b4961a543a97fb"
+    },
+    {
+      "file": "docs/evidence/scientific-gate-resolution/hrsc/ranges/hrsc-dt5-row-13687-cols-11661-11763.bin",
+      "bytes": 206,
+      "sha256": "10ebab39531c19c8bf365cdb3759348b474a0b8679433f116762d0456d6bd375"
+    },
+    {
+      "file": "docs/evidence/scientific-gate-resolution/hrsc/ranges/hrsc-dt5-row-13688-cols-11661-11763.bin",
+      "bytes": 206,
+      "sha256": "4d86a73e136223d6d586f3a02f856b91f7b0735f482a1d4c184da336811d81ff"
+    },
+    {
+      "file": "docs/evidence/scientific-gate-resolution/hrsc/ranges/hrsc-dt5-row-13689-cols-11661-11763.bin",
+      "bytes": 206,
+      "sha256": "10349bc6c8b3f9b6d45d271fb54c67dd2eaccae68fc1d1756d3c8fb9a8c11a99"
+    },
+    {
+      "file": "docs/evidence/scientific-gate-resolution/hrsc/ranges/hrsc-dt5-row-13690-cols-11661-11763.bin",
+      "bytes": 206,
+      "sha256": "4c67a7008925b8acd2f2211fc2619c8e3d03903146d34f9416e1cb3444877d08"
+    },
+    {
+      "file": "docs/evidence/scientific-gate-resolution/hrsc/ranges/hrsc-dt5-row-13691-cols-11661-11763.bin",
+      "bytes": 206,
+      "sha256": "06c35cc52db3ae2d142adc2895110efe6969b9793afee68c27682cee16619bc5"
+    },
+    {
+      "file": "docs/evidence/scientific-gate-resolution/hrsc/ranges/hrsc-dt5-row-13692-cols-11661-11763.bin",
+      "bytes": 206,
+      "sha256": "9e2db5c1cdb1dde58802452f8c17314d375b92eda1cf0738d71d967eceacc133"
+    },
+    {
+      "file": "docs/evidence/scientific-gate-resolution/hrsc/ranges/hrsc-dt5-row-13693-cols-11661-11763.bin",
+      "bytes": 206,
+      "sha256": "d7feff92dedbde8db0971a70e8bd9fe4627b114cd63444ded147963eacd10013"
+    },
+    {
+      "file": "docs/evidence/scientific-gate-resolution/hrsc/ranges/hrsc-dt5-row-13694-cols-11661-11763.bin",
+      "bytes": 206,
+      "sha256": "5359b573fb342cf6248cb0b4a9b8f11bf7514a0b04a78466bf015c3a79706c6f"
+    },
+    {
+      "file": "docs/evidence/scientific-gate-resolution/hrsc/ranges/hrsc-dt5-row-13695-cols-11661-11763.bin",
+      "bytes": 206,
+      "sha256": "386edc6fec11afc4a84d4c07691474799e8422ed147d1ef9201bbef0075e0ad2"
+    },
+    {
+      "file": "docs/evidence/scientific-gate-resolution/hrsc/ranges/hrsc-dt5-row-13696-cols-11661-11763.bin",
+      "bytes": 206,
+      "sha256": "ca6b1c938fcdc6bd5c13d7bf22cad32d115c56a1ad451ddb8e9c37ec0f3f8fa9"
+    },
+    {
+      "file": "docs/evidence/scientific-gate-resolution/hrsc/ranges/hrsc-dt5-row-13697-cols-11661-11763.bin",
+      "bytes": 206,
+      "sha256": "e3618ead0ff8cd31e9798575e1d4c0f03cd6fb5f42fa3f7c4caa8f0740ea0384"
+    },
+    {
+      "file": "docs/evidence/scientific-gate-resolution/hrsc/ranges/hrsc-dt5-row-13698-cols-11661-11763.bin",
+      "bytes": 206,
+      "sha256": "f86cad7a878d5865ac07c2036e41dfb840496f375779541d6a86c34baf0ea023"
+    },
+    {
+      "file": "docs/evidence/scientific-gate-resolution/hrsc/ranges/hrsc-dt5-row-13699-cols-11661-11763.bin",
+      "bytes": 206,
+      "sha256": "01902017f5c624874b403a9f7e0b45cd790b20884542ea36ef8bd3594e6adaa7"
+    },
+    {
+      "file": "docs/evidence/scientific-gate-resolution/hrsc/ranges/hrsc-dt5-row-13700-cols-11661-11763.bin",
+      "bytes": 206,
+      "sha256": "94611eafd8ebccbb14354b5237859f8b7a1d352fcbe2987179f2550536fcbbbc"
+    },
+    {
+      "file": "docs/evidence/scientific-gate-resolution/hrsc/ranges/hrsc-dt5-row-13701-cols-11661-11763.bin",
+      "bytes": 206,
+      "sha256": "6272938d07d8203a88b2069ea9151d80183f6f711a6696a7849c7d6653f33780"
+    },
+    {
+      "file": "docs/evidence/scientific-gate-resolution/hrsc/ranges/hrsc-dt5-row-13702-cols-11661-11763.bin",
+      "bytes": 206,
+      "sha256": "d72f19ccd3a511c66135255b093cde04e5b3aac2d1310ace7f3c32b3b758b0ce"
+    },
+    {
+      "file": "docs/evidence/scientific-gate-resolution/hrsc/ranges/hrsc-dt5-row-13703-cols-11661-11763.bin",
+      "bytes": 206,
+      "sha256": "6d98038968831d69f12839465a8f41b382981acc21cd3e9a2350ad0a513ba636"
+    },
+    {
+      "file": "docs/evidence/scientific-gate-resolution/hrsc/ranges/hrsc-dt5-row-13704-cols-11661-11763.bin",
+      "bytes": 206,
+      "sha256": "912acc29adedfdf64ff5562035447dd7200cfaa3c74e8b0d1b15863ff11823e3"
+    },
+    {
+      "file": "docs/evidence/scientific-gate-resolution/hrsc/ranges/hrsc-dt5-row-13705-cols-11661-11763.bin",
+      "bytes": 206,
+      "sha256": "b3b416ad9a3200d34d1d5fb71405c4cfd58c4596fd162692f88b53c772d38ae9"
+    },
+    {
+      "file": "docs/evidence/scientific-gate-resolution/hrsc/ranges/hrsc-dt5-row-13706-cols-11661-11763.bin",
+      "bytes": 206,
+      "sha256": "0757b918898c617a8ca3e0448f0e487bd6cdcfcf1d0c444d8a442d909a6e99e5"
+    },
+    {
+      "file": "docs/evidence/scientific-gate-resolution/hrsc/ranges/hrsc-dt5-row-13707-cols-11661-11763.bin",
+      "bytes": 206,
+      "sha256": "f37a13c6697166b4f500fc73725f51a5bcda0c82a1a70d9df3175fd3327a2408"
+    },
+    {
+      "file": "docs/evidence/scientific-gate-resolution/hrsc/review-native-support.py",
+      "bytes": 6991,
+      "sha256": "bc5005e50876a321bf7fe3e0523b86ca1e8627a750f2a97c4cb70f961f9cfad3"
+    },
+    {
+      "file": "docs/evidence/scientific-gate-resolution/hrsc/source-documentation-receipts.json",
+      "bytes": 1272,
+      "sha256": "35e446c023dd620cc8ae5513dd60a04e12c336bc0c68a079410e388737fd747a"
+    },
+    {
+      "file": "docs/evidence/scientific-gate-resolution/registration/audit.md",
+      "bytes": 14584,
+      "sha256": "fa06f0468bbd842bcb3211ff6e16333ccdd229451c5a86217c62d96480d42ce3"
+    },
+    {
+      "file": "docs/evidence/scientific-gate-resolution/registration/best_tactical-siteframe.xmlx",
+      "bytes": 44648,
+      "sha256": "b0216951213a77485aa1d082ad9b534b31a78b5f815b9be35799eb713995d23b"
+    },
+    {
+      "file": "docs/evidence/scientific-gate-resolution/registration/best_tactical-siteframe.xmlx.xml",
+      "bytes": 1389,
+      "sha256": "b676ae39c9ee2b9d918e65cff44c95aff672a9505a45859b60f4d1927b589b19"
+    },
+    {
+      "file": "docs/evidence/scientific-gate-resolution/registration/best_tactical.csv",
+      "bytes": 171404,
+      "sha256": "9da19e4f70287fe0d33ba716ff2169c10447c30c7a048583f730e4155226cde9"
+    },
+    {
+      "file": "docs/evidence/scientific-gate-resolution/registration/best_tactical.csv.xml",
+      "bytes": 15898,
+      "sha256": "777074bc03a3f06be8241b85cd4448cbdac5bff4dfecc443de6757152d22ac79"
+    },
+    {
+      "file": "docs/evidence/scientific-gate-resolution/registration/compact-native-evidence.py",
+      "bytes": 2841,
+      "sha256": "9cdc2102c93b01dd4a31844ea6a65c1dd8ba3eb9b298bbb2d16a23f8f2aad7be"
+    },
+    {
+      "file": "docs/evidence/scientific-gate-resolution/registration/controlled-ctx-native-pds3.lbl",
+      "bytes": 2281,
+      "sha256": "9a4e1d99ce732d491681c661282bf95abdadaf354c7bec8652bb79e147a84b90"
+    },
+    {
+      "file": "docs/evidence/scientific-gate-resolution/registration/controlled-ctx-native.lbl",
+      "bytes": 1439,
+      "sha256": "a425525be2695ed727daf179563a5898cb2131691e8b21993426764abcf617ca"
+    },
+    {
+      "file": "docs/evidence/scientific-gate-resolution/registration/controlled-ctx-native.xml",
+      "bytes": 16025,
+      "sha256": "c8011a4aa19deebba164aba21ab2ea6326f5bdc7adc01b72bf7dda3d405a4226"
+    },
+    {
+      "file": "docs/evidence/scientific-gate-resolution/registration/ctx-crop-row-range.bin.delta.gz",
+      "bytes": 2594527,
+      "sha256": "9630ec71fe643b696d7f4e3edb28abc14c6a302ec67b6ca40ed0eb6af2069ef9"
+    },
+    {
+      "file": "docs/evidence/scientific-gate-resolution/registration/ctx-header-range.bin.gz",
+      "bytes": 47139,
+      "sha256": "db7742a650fcaa2a9d2bab1b1b77bd64382898d73fc368060344efdf805bd26e"
+    },
+    {
+      "file": "docs/evidence/scientific-gate-resolution/registration/fetch-native-imagery.mjs",
+      "bytes": 2741,
+      "sha256": "b6fc37d2ad60cc978dde8c6c33956497527a75593d10eba7bce28b2c1e8e2cde"
+    },
+    {
+      "file": "docs/evidence/scientific-gate-resolution/registration/fetch-native-patches.mjs",
+      "bytes": 6816,
+      "sha256": "6494f6be9258e00e23e9d965c850e203ce8312c938b336132035a197a7c44216"
+    },
+    {
+      "file": "docs/evidence/scientific-gate-resolution/registration/fetch-places-records.mjs",
+      "bytes": 3634,
+      "sha256": "1c71ac248dcb91576d2e54fc53cbe1f3a88e846542b186fbc39bb6806801a502"
+    },
+    {
+      "file": "docs/evidence/scientific-gate-resolution/registration/inspect-places-frame.py",
+      "bytes": 9009,
+      "sha256": "86f7e0c52abc9a9d4411f60521dfc5bddf7cc0174d55e0727a385fb3fba1b148"
+    },
+    {
+      "file": "docs/evidence/scientific-gate-resolution/registration/localizations-index.html",
+      "bytes": 2362,
+      "sha256": "dcd67a572e934cde9cd43cb71c77824bf93e1bc1ed1dbb6f8e9e32f92c0dac60"
+    },
+    {
+      "file": "docs/evidence/scientific-gate-resolution/registration/m20_orbital_dem.xml",
+      "bytes": 16565,
+      "sha256": "7a736fabc434f4c6b4da17e0d943858809d10051570cc06570cb47f3c192e111"
+    },
+    {
+      "file": "docs/evidence/scientific-gate-resolution/registration/m20_orbital_map.xml",
+      "bytes": 16717,
+      "sha256": "677b0de5644bbb71718cf6818c73f761b85fa96b808638d8d8348ea1be0eb438"
+    },
+    {
+      "file": "docs/evidence/scientific-gate-resolution/registration/maps-index.html",
+      "bytes": 1224,
+      "sha256": "f6c8ffdcc11fcc85eab17df26112c0af5ec7425dba1c9fef9f71cac5d4b76ff5"
+    },
+    {
+      "file": "docs/evidence/scientific-gate-resolution/registration/measure-native-registration.py",
+      "bytes": 19331,
+      "sha256": "b56d65cd491b9d3f380f97479f14fb675d3b8205d8a85337b52a0ab028ec166b"
+    },
+    {
+      "file": "docs/evidence/scientific-gate-resolution/registration/native-image-match-blocker.json",
+      "bytes": 197777,
+      "sha256": "ef3bfe52da05576487c22f85d140ed73fa8c0df2642d5cb331ee2621435fda83"
+    },
+    {
+      "file": "docs/evidence/scientific-gate-resolution/registration/native-image-match-blocker.png",
+      "bytes": 299565,
+      "sha256": "c6026adff77842f3c75d0173a93db87d6d79f4cca80b40e7c96cf6d2ce245cf4"
+    },
+    {
+      "file": "docs/evidence/scientific-gate-resolution/registration/native-image-registration.json",
+      "bytes": 487605,
+      "sha256": "1569d8edc5ab7e6ad8eb653365d4160a33b4a7dabfa0abb46897465212cd5aec"
+    },
+    {
+      "file": "docs/evidence/scientific-gate-resolution/registration/native-image-tie-board.png",
+      "bytes": 984348,
+      "sha256": "d05d5ade19b1e998e15ab290f6fa5ea8c422f44c04a9c0d38ae7fe48c2b04e53"
+    },
+    {
+      "file": "docs/evidence/scientific-gate-resolution/registration/native-imagery-http-receipts.json",
+      "bytes": 4040,
+      "sha256": "c506484bba2e66e0a8ccedb5589c6d50e5f5acdf5037ee2192598a1853331277"
+    },
+    {
+      "file": "docs/evidence/scientific-gate-resolution/registration/native-patch-http-receipts.json.gz",
+      "bytes": 226135,
+      "sha256": "6dbd2b43b671139516ff4012c71ced17ac389a51605a3b2a3f33626fe458a4ce"
+    },
+    {
+      "file": "docs/evidence/scientific-gate-resolution/registration/native-patch-plan.json",
+      "bytes": 3136,
+      "sha256": "78a1fe9e7b7950cd1a7bd0fa80c74f3ebc891933d4340d069a319ef1abe1aaf4"
+    },
+    {
+      "file": "docs/evidence/scientific-gate-resolution/registration/orbital-index.html",
+      "bytes": 6924,
+      "sha256": "9f2d4e0dd6264eed42f37550de1053b9954a42d5953f8a3fa71dc653156118a3"
+    },
+    {
+      "file": "docs/evidence/scientific-gate-resolution/registration/orbital_1_metadata.csv",
+      "bytes": 1698,
+      "sha256": "f9b2fe818d0a4d3cf6df465321fa4b9946202b79ce76bf54aab5c13b1379700e"
+    },
+    {
+      "file": "docs/evidence/scientific-gate-resolution/registration/orbital_1_metadata.csv.xml",
+      "bytes": 5648,
+      "sha256": "d35deff4e9bd18589d640d843fff6a52a9b024a2cb40046f0a61bf6e544bf1f6"
+    },
+    {
+      "file": "docs/evidence/scientific-gate-resolution/registration/orbital_2_metadata.csv",
+      "bytes": 1462,
+      "sha256": "d680059a0b0abac81a3f7eb82e5de8e5f623d1719350ef25e73d88602b2ffff3"
+    },
+    {
+      "file": "docs/evidence/scientific-gate-resolution/registration/orbital_2_metadata.csv.xml",
+      "bytes": 5648,
+      "sha256": "91ead11966d51b410b9c8031c1179ea2262722cf22f2a4a219aa674c984d0de6"
+    },
+    {
+      "file": "docs/evidence/scientific-gate-resolution/registration/orbital_origin.csv",
+      "bytes": 4952,
+      "sha256": "bf59576e693ee4456f70d20d578a923ab312bd3c4b3e75649c00aebad926d090"
+    },
+    {
+      "file": "docs/evidence/scientific-gate-resolution/registration/orbital_origin.csv.xml",
+      "bytes": 11809,
+      "sha256": "f824b070f1c6f004df393215de085c0e4baf0e13514a7190ed957fbf85061aee"
+    },
+    {
+      "file": "docs/evidence/scientific-gate-resolution/registration/orbital_origin_global.csv",
+      "bytes": 1370,
+      "sha256": "f6f1a0c23fa57e6b7f1d64d38d61b591804e55e0147cf1c7fcfb14c18e429aa8"
+    },
+    {
+      "file": "docs/evidence/scientific-gate-resolution/registration/orbital_origin_global.csv.xml",
+      "bytes": 7191,
+      "sha256": "176c9b4b22d876882f3ad59693d83c76fa8aed37f5fe7fba75e2bdde67f846dc"
+    },
+    {
+      "file": "docs/evidence/scientific-gate-resolution/registration/places-bundle.xml",
+      "bytes": 5041,
+      "sha256": "56e922d0747d99c7d37c349ccb0211628c5cfbd4e4557f36eab1527ddea57ccb"
+    },
+    {
+      "file": "docs/evidence/scientific-gate-resolution/registration/places-frame-check.json",
+      "bytes": 98133,
+      "sha256": "e072191d12de4bbe4690aab03c3e1f140f2d2bddd85d8cde50ade9038970658c"
+    },
+    {
+      "file": "docs/evidence/scientific-gate-resolution/registration/places-http-receipts.json",
+      "bytes": 10558,
+      "sha256": "1c90742f55bf56272a2653b509cbbe0a967e31d66cd0ef92b31ef5208f4133b9"
+    },
+    {
+      "file": "docs/evidence/scientific-gate-resolution/registration/places-map-headers.bin",
+      "bytes": 118400,
+      "sha256": "352b09fdc240c3a5dbdf5fdb157d8087b46a1a76ce46d9c88d4b65e9ef0f0bcd"
+    },
+    {
+      "file": "docs/evidence/scientific-gate-resolution/registration/places-native-r660-c550-band0.u8.delta.gz",
+      "bytes": 6672176,
+      "sha256": "1e69d7a5ea310bd4a73df6bb4143888494f4ad26f439a7b0fb66822a6c832e85"
+    },
+    {
+      "file": "docs/evidence/scientific-gate-resolution/registration/places-native-r660-c650-band0.u8.delta.gz",
+      "bytes": 6477647,
+      "sha256": "bfbad4f321f9e0ddd53e06ed6ba98c25d4f2b21cef855554b556dd38e325b6aa"
+    },
+    {
+      "file": "docs/evidence/scientific-gate-resolution/registration/places-native-r660-c750-band0.u8.delta.gz",
+      "bytes": 6413330,
+      "sha256": "deac57e4ce6c8fe51fff4b01d3a218aac0718d404d329dc1544ab85769ced97a"
+    },
+    {
+      "file": "docs/evidence/scientific-gate-resolution/registration/places-native-r740-c550-band0.u8.delta.gz",
+      "bytes": 6166699,
+      "sha256": "c8f697eed8dc090ef58871861716d3943d9337e18af59fbf2a3ea654b686623d"
+    },
+    {
+      "file": "docs/evidence/scientific-gate-resolution/registration/places-native-r740-c650-band0.u8.delta.gz",
+      "bytes": 6312723,
+      "sha256": "d95ceb70d14c6a25c3fa5a031372b28830f0415f523b788f28c2d8f26f82229a"
+    },
+    {
+      "file": "docs/evidence/scientific-gate-resolution/registration/places-native-r740-c750-band0.u8.delta.gz",
+      "bytes": 6092231,
+      "sha256": "65810c9ee2083662b34ace958977ef525501ab6189a6ca57d6f5ff7e4d91f5ab"
+    },
+    {
+      "file": "docs/evidence/scientific-gate-resolution/registration/places-native-r820-c550-band0.u8.delta.gz",
+      "bytes": 6115491,
+      "sha256": "30b99058a2b0ef57bc8624644a2f482c0942d89cf1be81f57bb957aa82bd533b"
+    },
+    {
+      "file": "docs/evidence/scientific-gate-resolution/registration/places-native-r820-c650-band0.u8.delta.gz",
+      "bytes": 6610486,
+      "sha256": "114a49fbb6570c67217aa3b63f3602d41bbeeb2dd7dde623c8cb2f50ee8f036b"
+    },
+    {
+      "file": "docs/evidence/scientific-gate-resolution/registration/places-native-r820-c750-band0.u8.delta.gz",
+      "bytes": 6002600,
+      "sha256": "80e3327c06cd540e197182d07faaa25af6afe98f622824f934abfc86abd0306b"
+    },
+    {
+      "file": "docs/evidence/scientific-gate-resolution/registration/places-product-md5.txt",
+      "bytes": 67140,
+      "sha256": "ff9846aba269477f6b57a56aae2f10ef8bc5f94a8c587ec2af376b50c6def7fc"
+    },
+    {
+      "file": "docs/evidence/scientific-gate-resolution/registration/places-root-index.html",
+      "bytes": 1442,
+      "sha256": "ebd5ee1695800e6b2a8498a57669a8b115476481e5c1cb2437979299b03c37c2"
+    },
+    {
+      "file": "docs/evidence/scientific-gate-resolution/registration/selected-spatial-ties.png",
+      "bytes": 561471,
+      "sha256": "e873bc8f9f0a98ffd3c2c50e855f170ec73667d0e216296f2726a59a7df77afd"
+    },
+    {
+      "file": "docs/evidence/scientific-gate-resolution/registration/view_metadata.csv",
+      "bytes": 284,
+      "sha256": "9698469a50fa596600b0c41871a253e33cb954216f6009746769cc99d0c60c88"
+    },
+    {
+      "file": "docs/evidence/scientific-gate-resolution/registration/view_metadata.csv.xml",
+      "bytes": 6602,
+      "sha256": "c5e56d115fcc2c0807f31b43e01fa3a9866d09bc5f5a1fb7422b5c34dc2f1376"
+    },
+    {
+      "file": "docs/evidence/scientific-gate-resolution/vertical/analyze-public-evidence.mjs",
+      "bytes": 7659,
+      "sha256": "30754e777a21772e94a025a36f8f3763c891290e4a9eff2613d9b9e423feea44"
+    },
+    {
+      "file": "docs/evidence/scientific-gate-resolution/vertical/astrogeology-search-api-ctx.json",
+      "bytes": 12188,
+      "sha256": "82e1250126d729316a91818c637e1494b55c74d1bb7ee750717d22603553fde5"
+    },
+    {
+      "file": "docs/evidence/scientific-gate-resolution/vertical/catalogue-ctx-page.html",
+      "bytes": 502641,
+      "sha256": "c0dbd3e981d367b86859f748fba581d75746cec417aaf49ebaf644f84b95a747"
+    },
+    {
+      "file": "docs/evidence/scientific-gate-resolution/vertical/catalogue-current-metadata.xml",
+      "bytes": 15795,
+      "sha256": "eb33ffc6b48c5b9e0daab173d00d73190859411aa77bd25c4cabfe169644d718"
+    },
+    {
+      "file": "docs/evidence/scientific-gate-resolution/vertical/cheng-2021-response.html",
+      "bytes": 5562,
+      "sha256": "68f8d47b7b721d25a04962dcfc06ed33b769656adb5bf1e5f059185219046c97"
+    },
+    {
+      "file": "docs/evidence/scientific-gate-resolution/vertical/cheng-crossref.json",
+      "bytes": 12359,
+      "sha256": "b158ea043aa90208c713c9d9b0bf074c59c6e49f0a665201d92574ced0dfb078"
+    },
+    {
+      "file": "docs/evidence/scientific-gate-resolution/vertical/cheng-full-xml-response.xml",
+      "bytes": 5566,
+      "sha256": "513fe34087555a66e0a65230282bc307820e309ba318edc3ce61096f56dd28bd"
+    },
+    {
+      "file": "docs/evidence/scientific-gate-resolution/vertical/cheng-web-tool-retrieval.json",
+      "bytes": 61411,
+      "sha256": "9058cdfa028bfc8b2ac0122962fe60384611c79b6321426607532ff1358476eb"
+    },
+    {
+      "file": "docs/evidence/scientific-gate-resolution/vertical/collect-public-evidence.mjs",
+      "bytes": 3261,
+      "sha256": "96bdcdf6f35c44e6048e66488a33af234c36e881ff46d2735938807599368275"
+    },
+    {
+      "file": "docs/evidence/scientific-gate-resolution/vertical/ctx-ckan-activity.json",
+      "bytes": 12188,
+      "sha256": "54581d49f5da196febd515bf75ce51ef598a01d73a7d05d67f9aceb44435846a"
+    },
+    {
+      "file": "docs/evidence/scientific-gate-resolution/vertical/ctx-ckan-package.json",
+      "bytes": 12188,
+      "sha256": "a70fdcac99bc89e8b4adc533da09653ce7408e712cb0ffbe3b147984d04c4ad4"
+    },
+    {
+      "file": "docs/evidence/scientific-gate-resolution/vertical/ctx-ckan-revisions.json",
+      "bytes": 12188,
+      "sha256": "821b01a21d4be93ebc942ad62116195da93981c283532a667131940fb777b9d2"
+    },
+    {
+      "file": "docs/evidence/scientific-gate-resolution/vertical/ctx-current-metadata.xml",
+      "bytes": 15749,
+      "sha256": "91e3b93f58b08314f18d505ad85c708e82968025922bf223da5246316ddd4a9a"
+    },
+    {
+      "file": "docs/evidence/scientific-gate-resolution/vertical/ctx-f05-fgdc.xml",
+      "bytes": 15757,
+      "sha256": "c41ce7db1cbbd85fd0afb34de3780d27d4c4deb26f285036cc3fd6caf9ea35e2"
+    },
+    {
+      "file": "docs/evidence/scientific-gate-resolution/vertical/ctx-j03-fgdc.xml",
+      "bytes": 15752,
+      "sha256": "22f6b1bfd5e4431262a182fececa9b196520763a72bfd6f7734f44a6a8cc9be4"
+    },
+    {
+      "file": "docs/evidence/scientific-gate-resolution/vertical/ctx-j21-j22-fgdc.xml",
+      "bytes": 15749,
+      "sha256": "a68623f64e279c0677504c7d206634929fa4a09f111bde3c715e6e7c0a7e93b2"
+    },
+    {
+      "file": "docs/evidence/scientific-gate-resolution/vertical/ctx-product.html",
+      "bytes": 30486,
+      "sha256": "bdd4d5c124a4d5e872caddece41e14435d1fb960e0bf4134909bb8a3148ce783"
+    },
+    {
+      "file": "docs/evidence/scientific-gate-resolution/vertical/ctx-release-index.html",
+      "bytes": 8692,
+      "sha256": "c11bdbd0a8cee6e91d6a46236c4f3af6c63e8c4a5e04821d75bac0f4aea6c4c6"
+    },
+    {
+      "file": "docs/evidence/scientific-gate-resolution/vertical/ctx-s3-object-list.xml",
+      "bytes": 10412,
+      "sha256": "ca139bdf4a028ed48bce109a50b74f0274c0e91bc0ced0f4d97c458a6c4df7ec"
+    },
+    {
+      "file": "docs/evidence/scientific-gate-resolution/vertical/ctx-s3-versions.xml",
+      "bytes": 263,
+      "sha256": "c8a57cd2fd9a2e5087e89feea845d420a5d0f1e8f8f0b3929546376332f5eb08"
+    },
+    {
+      "file": "docs/evidence/scientific-gate-resolution/vertical/datacite-doi.json",
+      "bytes": 9419,
+      "sha256": "b4e7704231f02c2bd81604fb55afe4e0b2c91f277779682e69318f1e6ffa913c"
+    },
+    {
+      "file": "docs/evidence/scientific-gate-resolution/vertical/doi-release.html",
+      "bytes": 30486,
+      "sha256": "bb65176bc54e8085469ada67da6514b41a48564374a84d0a9a28c38a1718e750"
+    },
+    {
+      "file": "docs/evidence/scientific-gate-resolution/vertical/dtm-quality-2021-copernicus.pdf",
+      "bytes": 1421710,
+      "sha256": "165b2b3b33e2c28bda363f4ffb6168d3cc30d1bd42de7920e681c7140e1df5c0"
+    },
+    {
+      "file": "docs/evidence/scientific-gate-resolution/vertical/dtm-quality-2021-copernicus.txt",
+      "bytes": 56217,
+      "sha256": "de5399edb8b4da1bd2218a807d5ddb2c6d2f0c91078b8aa663dc2754a9ce75ab"
+    },
+    {
+      "file": "docs/evidence/scientific-gate-resolution/vertical/dtm-quality-2021-mdpi.pdf",
+      "bytes": 4641592,
+      "sha256": "3cdd157aec8845897c2eceaae04ef9b1123853ee8031e1c028271d13316d5d50"
+    },
+    {
+      "file": "docs/evidence/scientific-gate-resolution/vertical/dtm-quality-2021-mdpi.txt",
+      "bytes": 148896,
+      "sha256": "31784f929e3847685c9a2a33d03d62d699e969286fff1652288578a18d98bb4c"
+    },
+    {
+      "file": "docs/evidence/scientific-gate-resolution/vertical/dtm-quality-2021.pdf",
+      "bytes": 848554,
+      "sha256": "992ba12a75f0aac7ed8847a3dc82cc14aab75d25144cfd991a43bf037fa2c803"
+    },
+    {
+      "file": "docs/evidence/scientific-gate-resolution/vertical/dtm-quality-2021.txt",
+      "bytes": 53714,
+      "sha256": "268e2147c1b5fe10f95c57f8ca18fe3ad6f112e9052fdbbcd1b0bb05d7da69e6"
+    },
+    {
+      "file": "docs/evidence/scientific-gate-resolution/vertical/findings.md",
+      "bytes": 11022,
+      "sha256": "8ae3765c6b60b88a212863fc2ac157d583b78866e1ea313698d893ca521a51e9"
+    },
+    {
+      "file": "docs/evidence/scientific-gate-resolution/vertical/github-repositories-delta-geoid.json",
+      "bytes": 55,
+      "sha256": "4af480b8ee5b87b369a76c49bd22c9a783908272ebffbe97898f8ab0f0772a5f"
+    },
+    {
+      "file": "docs/evidence/scientific-gate-resolution/vertical/github-repositories-socet.json",
+      "bytes": 55,
+      "sha256": "4af480b8ee5b87b369a76c49bd22c9a783908272ebffbe97898f8ab0f0772a5f"
+    },
+    {
+      "file": "docs/evidence/scientific-gate-resolution/vertical/github-repositories-trn.json",
+      "bytes": 5294,
+      "sha256": "bdab38cd00092eb5b91afac4950a935b771370d355edf41e9a8b2d7f75277367"
+    },
+    {
+      "file": "docs/evidence/scientific-gate-resolution/vertical/hirise-ortho-history.lbl",
+      "bytes": 455,
+      "sha256": "176fed8770a7f3a358e9765e5a3ff1c4b88d3dc89b0cacf31db7c65aba28c6c7"
+    },
+    {
+      "file": "docs/evidence/scientific-gate-resolution/vertical/http-receipts.json",
+      "bytes": 67145,
+      "sha256": "53fa5e2c4de290f12c221324cbe815ca1f5739dffa83f2c589244a5cb5c4fe06"
+    },
+    {
+      "file": "docs/evidence/scientific-gate-resolution/vertical/jpl-trn-geodesy-2019.pdf",
+      "bytes": 1627331,
+      "sha256": "657c9588b822070c2077e9144a6f9a3eded5cf246cd7abc6569cf3562f54348e"
+    },
+    {
+      "file": "docs/evidence/scientific-gate-resolution/vertical/jpl-trn-geodesy-2019.txt",
+      "bytes": 7696,
+      "sha256": "7717134f5d4ed03ab02457e370c20b064d21cbb0f43a367db03c4e06f21932b0"
+    },
+    {
+      "file": "docs/evidence/scientific-gate-resolution/vertical/kirk-tilt-web-tool-retrieval.json",
+      "bytes": 18406,
+      "sha256": "ac39789277e6fd8ee9d15aadf27e6ac9c008e695eece096354c122f854a3b56e"
+    },
+    {
+      "file": "docs/evidence/scientific-gate-resolution/vertical/mars2020-trn-github-commits.json",
+      "bytes": 111317,
+      "sha256": "cfb5424dc4aa3c5dcae523b8eae40697035c01d98e44c1b2680d07817bc96d89"
+    },
+    {
+      "file": "docs/evidence/scientific-gate-resolution/vertical/mars2020-trn-github-repo.json",
+      "bytes": 5291,
+      "sha256": "241471ef573fe8af12e280e9420b6335b6e8611df91e84d8ce9348aa5a95a722"
+    },
+    {
+      "file": "docs/evidence/scientific-gate-resolution/vertical/mars2020-trn-github-tree.json",
+      "bytes": 1125,
+      "sha256": "ef927fd8ad274ce864062885587494d4bbcd95c81cd6237917479389fcad5cdf"
+    },
+    {
+      "file": "docs/evidence/scientific-gate-resolution/vertical/public-evidence-analysis.json",
+      "bytes": 13084,
+      "sha256": "4a82e5cc1503d2d7fa0c7c26a037095baaf29d326b5854871eafc5e8c391bcd1"
+    },
+    {
+      "file": "docs/evidence/scientific-gate-resolution/vertical/resources-2.json",
+      "bytes": 1517,
+      "sha256": "875fe312a5daa7b9b3435ec47ecec52c7efe4423de6c24d6ddecc5e73be32926"
+    },
+    {
+      "file": "docs/evidence/scientific-gate-resolution/vertical/resources-3.json",
+      "bytes": 762,
+      "sha256": "a132405aaed598d77ae9c0b1a3a9a99b31647ec437f314fad0eac942810dedb2"
+    },
+    {
+      "file": "docs/evidence/scientific-gate-resolution/vertical/resources-4.json",
+      "bytes": 627,
+      "sha256": "bfb2568d72cfe1dc513507a746c9314d03acaf167980bbe34ae24c11a81bea47"
+    },
+    {
+      "file": "docs/evidence/scientific-gate-resolution/vertical/resources-5.json",
+      "bytes": 618,
+      "sha256": "a66ef527abaaee5a1115209314c57880e9a69637d015700a4a73d1093d2649f0"
+    },
+    {
+      "file": "docs/evidence/scientific-gate-resolution/vertical/resources-6.json",
+      "bytes": 863,
+      "sha256": "2e643e23c1c4c9c3bd1365bed0be9df5363d5a0e0156e9dcdc79be2086a87672"
+    },
+    {
+      "file": "docs/evidence/scientific-gate-resolution/vertical/resources.json",
+      "bytes": 1714,
+      "sha256": "a9fb2a3bc24357de3f0c653717af4af911aa63ce203726ffc9786daa0ddb576a"
+    },
+    {
+      "file": "docs/evidence/scientific-gate-resolution/vertical/socet-set-doi-repo.json",
+      "bytes": 118,
+      "sha256": "4f50e254a719a6b1b06b529bdaa08980e4acf0878aad0090cba7771f6ebdf0b9"
+    },
+    {
+      "file": "docs/evidence/scientific-gate-resolution/vertical/socet-set-github-repo.json",
+      "bytes": 118,
+      "sha256": "4f50e254a719a6b1b06b529bdaa08980e4acf0878aad0090cba7771f6ebdf0b9"
+    },
+    {
+      "file": "docs/evidence/scientific-gate-resolution/vertical/trn-flight-2019.pdf",
+      "bytes": 1643676,
+      "sha256": "53afe4b88318a20f5e053fac17a11679e73b0da4bcf6d80d16839eef880bc7e2"
+    },
+    {
+      "file": "docs/evidence/scientific-gate-resolution/vertical/trn-flight-2019.txt",
+      "bytes": 8286,
+      "sha256": "a6762e3dd60bde3b1a876a478debb32e1f02b867324b2ec9f1e14a496484d052"
+    },
+    {
+      "file": "docs/evidence/scientific-gate-resolution/vertical/trn-notebook-conversion.ipynb",
+      "bytes": 7313,
+      "sha256": "d332af3d6c4add2996972d3d182a2f7e8529afa882c40590d8b2206e03197e79"
+    },
+    {
+      "file": "docs/evidence/scientific-gate-resolution/vertical/trn-notebook-conversion.txt",
+      "bytes": 4944,
+      "sha256": "720db48259e9550a121d7b5c5d173a0df120179395b94cfa4e0760e311b77e1d"
+    },
+    {
+      "file": "docs/evidence/scientific-gate-resolution/vertical/trn-notebook-offset.ipynb",
+      "bytes": 30057,
+      "sha256": "98eaa14489527a7640df52f10304a0d165d53f4c2053124c87221b0d7c0aba96"
+    },
+    {
+      "file": "docs/evidence/scientific-gate-resolution/vertical/trn-notebook-offset.txt",
+      "bytes": 20866,
+      "sha256": "82bb700fb30f8e6a4b48febff890e4cdfb98868e22fd10d179a44b9dbc4d53ff"
+    },
+    {
+      "file": "docs/evidence/scientific-gate-resolution/vertical/trn-processing-2019-program.html",
+      "bytes": 5579,
+      "sha256": "3a80afe6f9b8dd1b463651a36dde62c7689cda83560ff3f829880e8025c96f74"
+    },
+    {
+      "file": "docs/evidence/scientific-gate-resolution/vertical/trn-processing-2019.pdf",
+      "bytes": 255223,
+      "sha256": "9565037dec61187c23a3f2ebe4e3538a4dc9b78e440ea21c273271075de1a05c"
+    },
+    {
+      "file": "docs/evidence/scientific-gate-resolution/vertical/trn-processing-2019.txt",
+      "bytes": 9653,
+      "sha256": "b77dcf37331e1cc19c79b12d49cdccb3a2f50dbe98859c69d2df1d667ba91592"
+    },
+    {
+      "file": "docs/evidence/scientific-gate-resolution/vertical/trn-repo-readme.rst",
+      "bytes": 93,
+      "sha256": "0b7e9bb43aa6654463a775d33b21fa75ed13127a35e4c9b14a5badb2a81d27cc"
+    },
+    {
+      "file": "docs/evidence/scientific-gate-resolution/vertical/trn-s3-object-list.xml",
+      "bytes": 27267,
+      "sha256": "40fe87bde4974546c8415390cfdc51479c89a4c5a36ecad01e5a02c6e1465f14"
+    },
+    {
+      "file": "docs/evidence/scientific-gate-resolution/vertical/trn-upstream-doi-repo.json",
+      "bytes": 118,
+      "sha256": "4f50e254a719a6b1b06b529bdaa08980e4acf0878aad0090cba7771f6ebdf0b9"
+    },
+    {
+      "file": "docs/evidence/scientific-gate-resolution/vertical/trn-upstream-usgs-repo.json",
+      "bytes": 118,
+      "sha256": "4f50e254a719a6b1b06b529bdaa08980e4acf0878aad0090cba7771f6ebdf0b9"
+    },
+    {
+      "file": "docs/evidence/scientific-gate-resolution/vertical/unsent-provider-clarification.md",
+      "bytes": 3330,
+      "sha256": "905fb662eceeccead65eaa53029d1576ca1e03763155e47a639e41204ec0386e"
+    },
+    {
+      "file": "docs/evidence/scientific-gate-resolution/vertical/usgs-release.html",
+      "bytes": 919,
+      "sha256": "30a75fa19e697e156b2fed1af06e48a79f52d75a43a95e5c2ba360e0fa992c68"
+    },
+    {
+      "file": "docs/evidence/scientific-resolution-2026-11-14/height/alternative-contracts.json",
+      "bytes": 10460,
+      "sha256": "f1ad49bd836491687512e6991db583dc03d5b18aeca91638ab1a94999990c2c1"
+    },
+    {
+      "file": "docs/evidence/scientific-resolution-2026-11-14/height/asp-dem-geoid-source.cc",
+      "bytes": 21975,
+      "sha256": "e44c9ebc5c95464ae7e96d3790b77d4640d44efd7eddcc3186f4f9b35da4f532"
+    },
+    {
+      "file": "docs/evidence/scientific-resolution-2026-11-14/height/ctx-dtm-aux-response.xml",
+      "bytes": 374,
+      "sha256": "a1032fe7db0b6b0b38e1ed89f2d0c0a0bcccd4172aec1974b2d9778c05d0709f"
+    },
+    {
+      "file": "docs/evidence/scientific-resolution-2026-11-14/height/ctx-dtm-history-response.xml",
+      "bytes": 379,
+      "sha256": "7af2bbe2b7bd8678231335a7e78479864878d3b69e03d1832bac50a67e458c9d"
+    },
+    {
+      "file": "docs/evidence/scientific-resolution-2026-11-14/height/ctx-f05-aux.xml",
+      "bytes": 498,
+      "sha256": "27434a435191914c4353be48ff8483ca164ea586a84a94966bf841701596a678"
+    },
+    {
+      "file": "docs/evidence/scientific-resolution-2026-11-14/height/ctx-f05-native.tif",
+      "bytes": 10100597,
+      "sha256": "ea24819518708a36663c4ccbc3f2ead3e3c2f487763f722fb23ea8ca489c7425"
+    },
+    {
+      "file": "docs/evidence/scientific-resolution-2026-11-14/height/ctx-j03-native.tif",
+      "bytes": 19773834,
+      "sha256": "679b577323548b7f5244125d84cfb77d601f89b74b1ef4058dcea51609c1885b"
+    },
+    {
+      "file": "docs/evidence/scientific-resolution-2026-11-14/height/ctx-j21-j22-native.tif",
+      "bytes": 8331582,
+      "sha256": "e33ffc7d3c9af2cd60cd1756ac3a43762568f74e8c4b43b75dfd7c6e760ca241"
+    },
+    {
+      "file": "docs/evidence/scientific-resolution-2026-11-14/height/fetch-new-evidence.mjs",
+      "bytes": 5216,
+      "sha256": "1637d1ed99f1d82a876f4b3f52c8f56b0af30173bc71eb8a87dd77909b4b1b26"
+    },
+    {
+      "file": "docs/evidence/scientific-resolution-2026-11-14/height/findings.md",
+      "bytes": 10883,
+      "sha256": "1ba419c9a9dda96841e869a09121f9e5ac3312736a87db80c348bf59e171f01c"
+    },
+    {
+      "file": "docs/evidence/scientific-resolution-2026-11-14/height/hirise-current-stac-collection.json",
+      "bytes": 3471,
+      "sha256": "cd78ee81896c27f61a9884406c7de9c2cee3b6107a3ac9a7f6deb95d3b8c5742"
+    },
+    {
+      "file": "docs/evidence/scientific-resolution-2026-11-14/height/hirise-current-stac-crop-items.json",
+      "bytes": 20527,
+      "sha256": "00d527eb2904346bab6cb3daefbcfcc43f421853e78815a8214988500f21cfac"
+    },
+    {
+      "file": "docs/evidence/scientific-resolution-2026-11-14/height/hirise-dtm-about.html",
+      "bytes": 21189,
+      "sha256": "78bb364d79e616ceffa5179d1c7dd6ed0bb2ba529d0b9008571baee0ee902bc0"
+    },
+    {
+      "file": "docs/evidence/scientific-resolution-2026-11-14/height/hirise-rdr-sis.pdf",
+      "bytes": 1260783,
+      "sha256": "3a097992dcc75123f41515ee626450a26b1fda2a1d720c9f5722e5ef6c4d535e"
+    },
+    {
+      "file": "docs/evidence/scientific-resolution-2026-11-14/height/hirise-rdr-sis.txt",
+      "bytes": 183955,
+      "sha256": "fa02b962b5c772c6ab64dc464624b66f48b12e49a4031eaaf75d8c34f063adee"
+    },
+    {
+      "file": "docs/evidence/scientific-resolution-2026-11-14/height/hirise-stac-collection.json",
+      "bytes": 45,
+      "sha256": "af4fd3811e63cce89b9eaf67f37b8cadff1f82194fcb9f1e0df2f8abeccfaa0f"
+    },
+    {
+      "file": "docs/evidence/scientific-resolution-2026-11-14/height/hirise-stac-crop-items.json",
+      "bytes": 45,
+      "sha256": "af4fd3811e63cce89b9eaf67f37b8cadff1f82194fcb9f1e0df2f8abeccfaa0f"
+    },
+    {
+      "file": "docs/evidence/scientific-resolution-2026-11-14/height/hrsc-control-comparison.json",
+      "bytes": 7933,
+      "sha256": "1bde9da41e3b51e9cc5708c47208a52caba5c47da89ede4289f52e9d396d55da"
+    },
+    {
+      "file": "docs/evidence/scientific-resolution-2026-11-14/height/hrsc-control-receipts.json",
+      "bytes": 9831,
+      "sha256": "147126510a6b10ad92f79774a6742ab697b0b23d287c103f6dac18f917b45255"
+    },
+    {
+      "file": "docs/evidence/scientific-resolution-2026-11-14/height/hrsc-da5-cell-13605-11661.bin",
+      "bytes": 2,
+      "sha256": "62189f3bbc3703f6a8112f18885253fe59a9f8504f8c24325e1ae8c2dbcab9c0"
+    },
+    {
+      "file": "docs/evidence/scientific-resolution-2026-11-14/height/hrsc-da5-cell-13605-11763.bin",
+      "bytes": 2,
+      "sha256": "24de87a46821f786108057549d240030785b7a5cfa21a6ffdeae2ecfb5b650ee"
+    },
+    {
+      "file": "docs/evidence/scientific-resolution-2026-11-14/height/hrsc-da5-cell-13611-11692.bin",
+      "bytes": 2,
+      "sha256": "e1269ee4f5b9102cd3bca6ffa9fc88003ac350b301572a05f5a87f32a9760445"
+    },
+    {
+      "file": "docs/evidence/scientific-resolution-2026-11-14/height/hrsc-da5-cell-13631-11684.bin",
+      "bytes": 2,
+      "sha256": "c0f6b555692c5ec52a1679313a4d9b5dae024d355b2df596d32b625fc319df97"
+    },
+    {
+      "file": "docs/evidence/scientific-resolution-2026-11-14/height/hrsc-da5-cell-13656-11712.bin",
+      "bytes": 2,
+      "sha256": "9c3c88043ce270ff8a89f4796a630abab7a6b5ad3120422529b8d3b5a51aa22c"
+    },
+    {
+      "file": "docs/evidence/scientific-resolution-2026-11-14/height/hrsc-da5-cell-13691-11744.bin",
+      "bytes": 2,
+      "sha256": "49302b076d87f9d3192fee3601392b164488e33aa39615927cd201267e124c0d"
+    },
+    {
+      "file": "docs/evidence/scientific-resolution-2026-11-14/height/hrsc-da5-cell-13699-11756.bin",
+      "bytes": 2,
+      "sha256": "1a6511cb20e5ff01809dde1f53e9afec30b2fdb3c03db9a478d47259199c3846"
+    },
+    {
+      "file": "docs/evidence/scientific-resolution-2026-11-14/height/hrsc-da5-cell-13707-11661.bin",
+      "bytes": 2,
+      "sha256": "41962d1cb9e5b8eb0b055ed35df564d29c672262b2cf654986b5123936c76ff1"
+    },
+    {
+      "file": "docs/evidence/scientific-resolution-2026-11-14/height/hrsc-da5-cell-13707-11763.bin",
+      "bytes": 2,
+      "sha256": "f9b747c27e98ef611d4a03ecada64bb433b0670a54bed00c34ce3d55c4627bb9"
+    },
+    {
+      "file": "docs/evidence/scientific-resolution-2026-11-14/height/hrsc-da5-header.bin",
+      "bytes": 65536,
+      "sha256": "9faf65867ef7a6e594985e640da8b50660c8706ecf7a09ffd2f9de72ecc052bd"
+    },
+    {
+      "file": "docs/evidence/scientific-resolution-2026-11-14/height/hrsc-da5-range-638205138-638205139.bin",
+      "bytes": 2,
+      "sha256": "4cab73ce2a7e6220975001c8a354143267a3c1ce8bf7692313e654481e616a93"
+    },
+    {
+      "file": "docs/evidence/scientific-resolution-2026-11-14/height/hrsc-da5-range-638205140-638205443.bin",
+      "bytes": 304,
+      "sha256": "645bed3e818c5db7bb8b5b6100807dacfc6d9ef3193672a1f5c00f2033ff3e3e"
+    },
+    {
+      "file": "docs/evidence/scientific-resolution-2026-11-14/height/hrsc-da5-range-638205444-638205451.bin",
+      "bytes": 8,
+      "sha256": "2aefa085fcca66b9437773316dc7a1aebe8ac11614b03e744f60f0b6f9ae54e1"
+    },
+    {
+      "file": "docs/evidence/scientific-resolution-2026-11-14/height/hrsc-da5-range-638205452-638205459.bin",
+      "bytes": 8,
+      "sha256": "2aefa085fcca66b9437773316dc7a1aebe8ac11614b03e744f60f0b6f9ae54e1"
+    },
+    {
+      "file": "docs/evidence/scientific-resolution-2026-11-14/height/hrsc-da5-range-638205460-638241023.bin",
+      "bytes": 35564,
+      "sha256": "491c73aa2f618a8f16aed0bdb2c6ebd1eadf679b541f2ce87a09e84a7b23141f"
+    },
+    {
+      "file": "docs/evidence/scientific-resolution-2026-11-14/height/hrsc-da5-range-638241024-638312151.bin",
+      "bytes": 71128,
+      "sha256": "635a733b0fc444f5d83276cf06ff0b15ec55ea9c8f3f6b3524ec43e90e7f16b4"
+    },
+    {
+      "file": "docs/evidence/scientific-resolution-2026-11-14/height/hrsc-da5-range-638312152-638312177.bin",
+      "bytes": 26,
+      "sha256": "22721a11a8375540dbfbdf25e695f41f4702037751fac38c23641f55318a46d1"
+    },
+    {
+      "file": "docs/evidence/scientific-resolution-2026-11-14/height/hrsc-da5-range-638312178-638312197.bin",
+      "bytes": 20,
+      "sha256": "90310a33dc3c26049ac7e1d37a8a3423bff843e77855f1be8f864e45a2098973"
+    },
+    {
+      "file": "docs/evidence/scientific-resolution-2026-11-14/height/hrsc-da5-range-638312198-638312208.bin",
+      "bytes": 11,
+      "sha256": "c1668d378d58817588575148e97300bb6d20fabd5384755672c0a1eca4d0ca6b"
+    },
+    {
+      "file": "docs/evidence/scientific-resolution-2026-11-14/height/hrsc-da5-range-638312210-638312233.bin",
+      "bytes": 24,
+      "sha256": "ef78cd197afc47352da306abf8220a5dcc72648ac74f50e9f2f79ddf506f80b1"
+    },
+    {
+      "file": "docs/evidence/scientific-resolution-2026-11-14/height/hrsc-da5-range-638312234-638312281.bin",
+      "bytes": 48,
+      "sha256": "7279d25e1feab71ac3bef61abb7a28311d7fd351b9b72e6dcc24aa1fb980bf06"
+    },
+    {
+      "file": "docs/evidence/scientific-resolution-2026-11-14/height/hrsc-da5-range-638312282-638312481.bin",
+      "bytes": 200,
+      "sha256": "0085788ed7950b31158770947467a25395c9943882d22e6996ca6754b46cf160"
+    },
+    {
+      "file": "docs/evidence/scientific-resolution-2026-11-14/height/hrsc-da5-range-638312482-638312545.bin",
+      "bytes": 64,
+      "sha256": "18d173335e8db10394b21b6095b67a894803016bda829decb7a97a7791669144"
+    },
+    {
+      "file": "docs/evidence/scientific-resolution-2026-11-14/height/hrsc-da5-range-638312546-638312754.bin",
+      "bytes": 209,
+      "sha256": "3a921fcc95a0f98a06a092aca03cb5d6cdd4fc9dd42ed7b1170726c8727da9f4"
+    },
+    {
+      "file": "docs/evidence/scientific-resolution-2026-11-14/height/hrsc-da5-range-638312756-638313139.bin",
+      "bytes": 384,
+      "sha256": "599d8905ab3eb3e77ace7abb05c1d1ee3a9f6d2279e38a2bf11cd929fb8ce34a"
+    },
+    {
+      "file": "docs/evidence/scientific-resolution-2026-11-14/height/hrsc-da5-range-638313140-638313146.bin",
+      "bytes": 7,
+      "sha256": "2bcce4830bc3a79f3d179888351eb29d047bd3fc78df00c146386db2749dc96a"
+    },
+    {
+      "file": "docs/evidence/scientific-resolution-2026-11-14/height/hrsc-dt5-cell-13605-11661.bin",
+      "bytes": 2,
+      "sha256": "f1658c7e48c58f6db1b4b6be3d1d20ea60fbaf952a2384acc2d7800a476ca20a"
+    },
+    {
+      "file": "docs/evidence/scientific-resolution-2026-11-14/height/hrsc-dt5-cell-13605-11763.bin",
+      "bytes": 2,
+      "sha256": "cd1e0c12c42be243f2c4a7add7653e15d441f884ef10a133a984a3afd565e483"
+    },
+    {
+      "file": "docs/evidence/scientific-resolution-2026-11-14/height/hrsc-dt5-cell-13611-11692.bin",
+      "bytes": 2,
+      "sha256": "8f58b36039b34183ee4aac4ad1970a5e7e435d810b92e5896b8ff098fc97ea30"
+    },
+    {
+      "file": "docs/evidence/scientific-resolution-2026-11-14/height/hrsc-dt5-cell-13631-11684.bin",
+      "bytes": 2,
+      "sha256": "ea136ecf6f1b6bbd0782d8dba8ba7a5315684315b495b3f33fff92e9bec02812"
+    },
+    {
+      "file": "docs/evidence/scientific-resolution-2026-11-14/height/hrsc-dt5-cell-13656-11712.bin",
+      "bytes": 2,
+      "sha256": "94aedce9ec97cdd0a1b29352680880654692ff64cd0b86b9dd717b8083ae8ea0"
+    },
+    {
+      "file": "docs/evidence/scientific-resolution-2026-11-14/height/hrsc-dt5-cell-13691-11744.bin",
+      "bytes": 2,
+      "sha256": "e539b61f7dd9182cdba32593a9931c407ae3b7900277705599532a20b233d935"
+    },
+    {
+      "file": "docs/evidence/scientific-resolution-2026-11-14/height/hrsc-dt5-cell-13699-11756.bin",
+      "bytes": 2,
+      "sha256": "3149eb4b9275af1ac945499b6cd5668b6848bf507bd0b86fed5728fc775f1563"
+    },
+    {
+      "file": "docs/evidence/scientific-resolution-2026-11-14/height/hrsc-dt5-cell-13707-11661.bin",
+      "bytes": 2,
+      "sha256": "386bd458957227791abd70eb54451da35a62ca8e9940fc13fe8777f06249c068"
+    },
+    {
+      "file": "docs/evidence/scientific-resolution-2026-11-14/height/hrsc-dt5-cell-13707-11763.bin",
+      "bytes": 2,
+      "sha256": "423a764f8ba7a87ee2e5f12f3bee3f0615b146bc48b5917d6122cb094f0cacf8"
+    },
+    {
+      "file": "docs/evidence/scientific-resolution-2026-11-14/height/hrsc-dt5-header.bin",
+      "bytes": 65536,
+      "sha256": "8f014bd054082983db6aa4aee40f41fa99dbfe4d036324dda133941b9305cd8b"
+    },
+    {
+      "file": "docs/evidence/scientific-resolution-2026-11-14/height/hrsc-dt5-range-638205072-638205073.bin",
+      "bytes": 2,
+      "sha256": "4cab73ce2a7e6220975001c8a354143267a3c1ce8bf7692313e654481e616a93"
+    },
+    {
+      "file": "docs/evidence/scientific-resolution-2026-11-14/height/hrsc-dt5-range-638205074-638205377.bin",
+      "bytes": 304,
+      "sha256": "b24128b59ececda4cbb1eff0054c23320c5042d158e05a3e7b4bf72559e809dd"
+    },
+    {
+      "file": "docs/evidence/scientific-resolution-2026-11-14/height/hrsc-dt5-range-638205378-638205385.bin",
+      "bytes": 8,
+      "sha256": "2aefa085fcca66b9437773316dc7a1aebe8ac11614b03e744f60f0b6f9ae54e1"
+    },
+    {
+      "file": "docs/evidence/scientific-resolution-2026-11-14/height/hrsc-dt5-range-638205386-638205393.bin",
+      "bytes": 8,
+      "sha256": "2aefa085fcca66b9437773316dc7a1aebe8ac11614b03e744f60f0b6f9ae54e1"
+    },
+    {
+      "file": "docs/evidence/scientific-resolution-2026-11-14/height/hrsc-dt5-range-638205394-638240957.bin",
+      "bytes": 35564,
+      "sha256": "491c73aa2f618a8f16aed0bdb2c6ebd1eadf679b541f2ce87a09e84a7b23141f"
+    },
+    {
+      "file": "docs/evidence/scientific-resolution-2026-11-14/height/hrsc-dt5-range-638240958-638312085.bin",
+      "bytes": 71128,
+      "sha256": "635a733b0fc444f5d83276cf06ff0b15ec55ea9c8f3f6b3524ec43e90e7f16b4"
+    },
+    {
+      "file": "docs/evidence/scientific-resolution-2026-11-14/height/hrsc-dt5-range-638312086-638312111.bin",
+      "bytes": 26,
+      "sha256": "22721a11a8375540dbfbdf25e695f41f4702037751fac38c23641f55318a46d1"
+    },
+    {
+      "file": "docs/evidence/scientific-resolution-2026-11-14/height/hrsc-dt5-range-638312112-638312131.bin",
+      "bytes": 20,
+      "sha256": "c88db3b0ffda03719944820bb9ab969d57955502b30f1852bd108e6ad031b157"
+    },
+    {
+      "file": "docs/evidence/scientific-resolution-2026-11-14/height/hrsc-dt5-range-638312132-638312142.bin",
+      "bytes": 11,
+      "sha256": "c1668d378d58817588575148e97300bb6d20fabd5384755672c0a1eca4d0ca6b"
+    },
+    {
+      "file": "docs/evidence/scientific-resolution-2026-11-14/height/hrsc-dt5-range-638312144-638312167.bin",
+      "bytes": 24,
+      "sha256": "ef78cd197afc47352da306abf8220a5dcc72648ac74f50e9f2f79ddf506f80b1"
+    },
+    {
+      "file": "docs/evidence/scientific-resolution-2026-11-14/height/hrsc-dt5-range-638312168-638312215.bin",
+      "bytes": 48,
+      "sha256": "7279d25e1feab71ac3bef61abb7a28311d7fd351b9b72e6dcc24aa1fb980bf06"
+    },
+    {
+      "file": "docs/evidence/scientific-resolution-2026-11-14/height/hrsc-dt5-range-638312216-638312415.bin",
+      "bytes": 200,
+      "sha256": "65ff76fbfea5601b6278780c1240afc7fe1b541e4b7646afacd1fcda2382fd45"
+    },
+    {
+      "file": "docs/evidence/scientific-resolution-2026-11-14/height/hrsc-dt5-range-638312416-638312479.bin",
+      "bytes": 64,
+      "sha256": "18d173335e8db10394b21b6095b67a894803016bda829decb7a97a7791669144"
+    },
+    {
+      "file": "docs/evidence/scientific-resolution-2026-11-14/height/hrsc-dt5-range-638312480-638312622.bin",
+      "bytes": 143,
+      "sha256": "c91c797caa1c3caccdfbca778526eb6fb3c27a1baef80a3f6b263705ec34c281"
+    },
+    {
+      "file": "docs/evidence/scientific-resolution-2026-11-14/height/hrsc-dt5-range-638312624-638313009.bin",
+      "bytes": 386,
+      "sha256": "2a849cbaeaeecc47bfea0772755e514dba586e700bbd1a4fe4b082a1c95a43f7"
+    },
+    {
+      "file": "docs/evidence/scientific-resolution-2026-11-14/height/hrsc-dt5-range-638313010-638313016.bin",
+      "bytes": 7,
+      "sha256": "2bcce4830bc3a79f3d179888351eb29d047bd3fc78df00c146386db2749dc96a"
+    },
+    {
+      "file": "docs/evidence/scientific-resolution-2026-11-14/height/hrsc-extra-range-receipts.json",
+      "bytes": 17807,
+      "sha256": "d07f359f29887e46e47bfb4f3b07096c173a7f059950efece958c78b96c3bf4c"
+    },
+    {
+      "file": "docs/evidence/scientific-resolution-2026-11-14/height/hrsc-header-receipts.json",
+      "bytes": 1023,
+      "sha256": "d32b2e103909d7917c7463781df8c6de65e35041cbbd9ac0be40541d915714b9"
+    },
+    {
+      "file": "docs/evidence/scientific-resolution-2026-11-14/height/hrsc-jezero-map-2021.pdf",
+      "bytes": 3643866,
+      "sha256": "c70f7fc9b2a4e0222d803cbeae6b29c8ccba281598ab16f48ec01e9ecb45b4b8"
+    },
+    {
+      "file": "docs/evidence/scientific-resolution-2026-11-14/height/hrsc-mc13e-quads.html",
+      "bytes": 12236,
+      "sha256": "47851836d1fc3953fe5d0f076bd8c2a5afbe00dc9e1600ce32e709008d6ee927"
+    },
+    {
+      "file": "docs/evidence/scientific-resolution-2026-11-14/height/hrsc-readme.txt",
+      "bytes": 3144,
+      "sha256": "762209af4334682ad4ab8cf8fed74cfc0665503c85ea58031de7ce71bd8dc46c"
+    },
+    {
+      "file": "docs/evidence/scientific-resolution-2026-11-14/height/hrsc-tiff-contracts.json",
+      "bytes": 1064053,
+      "sha256": "d500fb081674d4ace61a09689f74ff16aa817998e54d1f65f6451a966681dc88"
+    },
+    {
+      "file": "docs/evidence/scientific-resolution-2026-11-14/height/hrsc-tiling-naming.pdf",
+      "bytes": 1002913,
+      "sha256": "7540d796b186dd497fda2cebc6da8dd3adfda4a203af770b9c89da89de096546"
+    },
+    {
+      "file": "docs/evidence/scientific-resolution-2026-11-14/height/http-receipts.json",
+      "bytes": 11126,
+      "sha256": "6a97ce28e03b764e62a6682922d2813bb409a8389d0ef5f01963db081385703c"
+    },
+    {
+      "file": "docs/evidence/scientific-resolution-2026-11-14/height/inspect-alternatives.py",
+      "bytes": 3347,
+      "sha256": "fee9aac726befb2ad49cc077578007d7680337546600e5fc294c6212130ce2ab"
+    },
+    {
+      "file": "docs/evidence/scientific-resolution-2026-11-14/height/inspect-hrsc-ranges.mjs",
+      "bytes": 5659,
+      "sha256": "89b0622b6facb1a595c2c4356a188a84588969549e5c44991ad94df7e11457a8"
+    },
+    {
+      "file": "docs/evidence/scientific-resolution-2026-11-14/height/jezero-stratigraphy-2021.pdf",
+      "bytes": 13650758,
+      "sha256": "0398fd9ffecd405f9ed732a9e15f82639fb126cf53e3bd5a3b2b3eb219fe5801"
+    },
+    {
+      "file": "docs/evidence/scientific-resolution-2026-11-14/height/jezero-stratigraphy-2021.txt",
+      "bytes": 125146,
+      "sha256": "18d27b24209314fde9bf787ff689ede735cc4dda56a19be08673eea4b47df9d0"
+    },
+    {
+      "file": "docs/evidence/scientific-resolution-2026-11-14/height/probe-hrsc-headers.mjs",
+      "bytes": 2278,
+      "sha256": "d93adf608eddb874e50b71cede35b4e021237cd4b605c8548b8da7ef9dd1e851"
+    },
+    {
+      "file": "docs/evidence/scientific-resolution-2026-11-14/height/sample-hrsc-controls.mjs",
+      "bytes": 6210,
+      "sha256": "112cdfd56197f89b05c0a0272947c54f3f14bf24703eeaced39220bfb91b9cb1"
+    },
+    {
+      "file": "docs/evidence/scientific-resolution-2026-11-14/height/stac-collections.json",
+      "bytes": 64658,
+      "sha256": "1ef852a2cf239d04a9120279586e1b0e964b358d2410596b4e4da482673eb29b"
+    },
+    {
+      "file": "docs/evidence/scientific-resolution-2026-11-14/height/usgs-hirise-ard-docs.html",
+      "bytes": 176888,
+      "sha256": "614a40f93806e878b0113d533720d16096f779f5192327fa5165e6b3ba174f3f"
+    },
+    {
+      "file": "docs/evidence/scientific-resolution-2026-11-14/method-review.md",
+      "bytes": 11472,
+      "sha256": "73e2f3980a850ea9cb805540e021bebae1715fea54c007d4fb09fc0d185e9341"
+    },
+    {
+      "file": "docs/evidence/scientific-resolution-2026-11-14/method-sources/fergason-2017-slopes.pdf",
+      "bytes": 106053,
+      "sha256": "134a3c5f8496a8d22d192cc673c6505cbccf9aedafd6d83321e8123e9712c2d1"
+    },
+    {
+      "file": "docs/evidence/scientific-resolution-2026-11-14/method-sources/fergason-2017-slopes.txt",
+      "bytes": 10355,
+      "sha256": "3d1b6beeb89b7419019da39b6fe55cfbccd1842c354cd8066e9657cdba34195d"
+    },
+    {
+      "file": "docs/evidence/scientific-resolution-2026-11-14/method-sources/gdal-baseline-slope.py",
+      "bytes": 14,
+      "sha256": "d5558cd419c8d46bdc958064cb97f963d1ea793866414c025906ec15033512ed"
+    },
+    {
+      "file": "docs/evidence/scientific-resolution-2026-11-14/method-sources/gwinner-2009-topography.pdf",
+      "bytes": 3368755,
+      "sha256": "d9346b36e8ee6f21bf6634a013796e96d4ff632a91476e78087e99d6fd301600"
+    },
+    {
+      "file": "docs/evidence/scientific-resolution-2026-11-14/method-sources/gwinner-2009-topography.txt",
+      "bytes": 81663,
+      "sha256": "480e99369b4eae94b08b02eeda4d5f00b74763dd8448c06c46a33051aca60e61"
+    },
+    {
+      "file": "docs/evidence/scientific-resolution-2026-11-14/method-sources/http-receipts.json",
+      "bytes": 4806,
+      "sha256": "acdaa42efff1948f1fd529ca1c8c4f941cdfb8f0e02bb5e906447beff08a44d7"
+    },
+    {
+      "file": "docs/evidence/scientific-resolution-2026-11-14/method-sources/jezero-west-slope-isis.lbl",
+      "bytes": 1281,
+      "sha256": "abd7f531e130a7595c1623c2780e0b11951824c11ccca9994666a5c4e8cf8cf8"
+    },
+    {
+      "file": "docs/evidence/scientific-resolution-2026-11-14/method-sources/jezero-west-slope-pds3.lbl",
+      "bytes": 2287,
+      "sha256": "b33ef4e1f79d1ebfe882fcf03b5b2d0799d51c85e7a0f476ff55a29040782379"
+    },
+    {
+      "file": "docs/evidence/scientific-resolution-2026-11-14/method-sources/jezero-west-slopes.html",
+      "bytes": 25552,
+      "sha256": "521c5375210937923763a0263216e2f4b375c1511d72aef1f30e8f3134357f6c"
+    },
+    {
+      "file": "docs/evidence/scientific-resolution-2026-11-14/method-sources/kirk-2020-dtm-quality.html",
+      "bytes": 160246,
+      "sha256": "4921a5569b5066570a763fbe41d427e559e6ea5e2790294bac80fd94efcc4383"
+    },
+    {
+      "file": "docs/evidence/scientific-resolution-2026-11-14/method-sources/kirk-2020-dtm-quality.pdf",
+      "bytes": 1564914,
+      "sha256": "eca51307ebb798bb813aa5337e4ffa193f35a4af6831265610ead1ee61481850"
+    },
+    {
+      "file": "docs/evidence/scientific-resolution-2026-11-14/method-sources/kirk-2021-dtm-quality.html",
+      "bytes": 2194,
+      "sha256": "a7f5affd5619fe6a5af24bda92f274f15569f5a2f7f84cc158584f66ae07a7e5"
+    },
+    {
+      "file": "docs/evidence/scientific-resolution-2026-11-14/method-status.json",
+      "bytes": 2027,
+      "sha256": "6b2a7b4b9128a27f9f927b85498d239247ed84c646b71099b27b160b4d9bd5d6"
+    },
+    {
+      "file": "docs/evidence/scientific-resolution-2026-11-14/registration/Mars2020_Rover_PLACES_PDS_SIS.pdf",
+      "bytes": 1700553,
+      "sha256": "ca3eb9d2a0d992cedf96860f30537ac508e15fb0e2417fb74c5b80cb31418d1a"
+    },
+    {
+      "file": "docs/evidence/scientific-resolution-2026-11-14/registration/Mars2020_Rover_PLACES_PDS_SIS.txt",
+      "bytes": 151020,
+      "sha256": "09001ad8a70f4d10efdab92dd18cc470f0514833fcd9185a4688d31f6023a013"
+    },
+    {
+      "file": "docs/evidence/scientific-resolution-2026-11-14/registration/audit.md",
+      "bytes": 8278,
+      "sha256": "44f5a263ecdc0cb676c561006c6bed21e5775186b264fa12835c4e5b7cd91aa5"
+    },
+    {
+      "file": "docs/evidence/scientific-resolution-2026-11-14/registration/cheng2021-publisher-response.html",
+      "bytes": 5547,
+      "sha256": "fc50fd8e2b878330130e3b8a0a5ccebbcca6d83afef5bb4db1de6f4a5f8721f8"
+    },
+    {
+      "file": "docs/evidence/scientific-resolution-2026-11-14/registration/extract-places-sis.py",
+      "bytes": 1642,
+      "sha256": "ebf489fc815a955bf8d9908e7fa8c85421fba54c8c0b3c808235b99fa7224009"
+    },
+    {
+      "file": "docs/evidence/scientific-resolution-2026-11-14/registration/fetch-control-sources.mjs",
+      "bytes": 3492,
+      "sha256": "78fadbc81274a745a869dc08e1bc0f753bc21ac8e5a23d292547dacb65df4f4b"
+    },
+    {
+      "file": "docs/evidence/scientific-resolution-2026-11-14/registration/fetch-places-sis.mjs",
+      "bytes": 1645,
+      "sha256": "be2d3aeba52b27dbbef18ebb754898fffff0d0dab91c2985fd597303be13f921"
+    },
+    {
+      "file": "docs/evidence/scientific-resolution-2026-11-14/registration/fk-index.html",
+      "bytes": 12320,
+      "sha256": "6cb139a11629e2a49020eeed31ce612be2c170e5ed864880557e79fa9414e49b"
+    },
+    {
+      "file": "docs/evidence/scientific-resolution-2026-11-14/registration/http-receipts.json",
+      "bytes": 6510,
+      "sha256": "8d259d0a595f2cbc631aefd43399e3fb3f28079aa7fb69b8725b08ad3ddd2999"
+    },
+    {
+      "file": "docs/evidence/scientific-resolution-2026-11-14/registration/inspect-spice-controls.py",
+      "bytes": 8159,
+      "sha256": "44ee0929d44a667bb0032897e235633b634353819eabd2a40782e9a92e38fe7c"
+    },
+    {
+      "file": "docs/evidence/scientific-resolution-2026-11-14/registration/m2020_ls_ops210303_iau2000_v1-comments.txt",
+      "bytes": 2026,
+      "sha256": "0393d5e1cadf4349e2a81e739f95bc045ae1077bec661578376a1ef13b041e43"
+    },
+    {
+      "file": "docs/evidence/scientific-resolution-2026-11-14/registration/m2020_ls_ops210303_iau2000_v1.bsp",
+      "bytes": 7168,
+      "sha256": "ddc80b3a864d1d94a4e11c25778fcb28e67d5a44f7a8dc3fa1588699fa68be64"
+    },
+    {
+      "file": "docs/evidence/scientific-resolution-2026-11-14/registration/m2020_ls_ops210303_iau2000_v1.xml",
+      "bytes": 3608,
+      "sha256": "39d905de5a8ff8745a15933982a1350eeb87241a09c3bb4d9201667d4650a0ea"
+    },
+    {
+      "file": "docs/evidence/scientific-resolution-2026-11-14/registration/m2020_surf_rover_loc_0659_0779_v1-comments.txt",
+      "bytes": 80154,
+      "sha256": "eb1f92b6ed78cb3718bd820b87c221d336f718dd9f6bb991a41b1105c3a71d4a"
+    },
+    {
+      "file": "docs/evidence/scientific-resolution-2026-11-14/registration/m2020_surf_rover_loc_0659_0779_v1.bsp",
+      "bytes": 484352,
+      "sha256": "11310d9b2a491086cbd5fb90423c4fd85068b486c7b3f8fb4bfb1d9e9c662dbf"
+    },
+    {
+      "file": "docs/evidence/scientific-resolution-2026-11-14/registration/m2020_surf_rover_loc_0659_0779_v1.xml",
+      "bytes": 3960,
+      "sha256": "50651d2b47983d63bb244522f9fe80dcef29a677579a98e0a12214ae701872d2"
+    },
+    {
+      "file": "docs/evidence/scientific-resolution-2026-11-14/registration/m2020_v04.tf",
+      "bytes": 142335,
+      "sha256": "b48a472f95e3e895ec96f287090f8d262734e63e38617bc76cb0f36fc9537936"
+    },
+    {
+      "file": "docs/evidence/scientific-resolution-2026-11-14/registration/mars2020-spice-archive.html",
+      "bytes": 48798,
+      "sha256": "f03b1023f688c2d703defa835b13ecc0ca7d0887fb4b9e6a29d99bb5f7c553e5"
+    },
+    {
+      "file": "docs/evidence/scientific-resolution-2026-11-14/registration/naif0012.tls",
+      "bytes": 5257,
+      "sha256": "678e32bdb5a744117a467cd9601cd6b373f0e9bc9bbde1371d5eee39600a039b"
+    },
+    {
+      "file": "docs/evidence/scientific-resolution-2026-11-14/registration/pck-index.html",
+      "bytes": 12320,
+      "sha256": "bc3a7ef8edfcfe641b741277c68c50ca3b095f0d42eff91090861d3306181f8a"
+    },
+    {
+      "file": "docs/evidence/scientific-resolution-2026-11-14/registration/pck00010.tpc",
+      "bytes": 126143,
+      "sha256": "59468328349aa730d18bf1f8d7e86efe6e40b75dfb921908f99321b3a7a701d2"
+    },
+    {
+      "file": "docs/evidence/scientific-resolution-2026-11-14/registration/places-sis-extraction.json",
+      "bytes": 373,
+      "sha256": "561d234ccca7bc8f74180825cdca09ceff3efbd2ee9586ca7d14e82fe5e9f8d8"
+    },
+    {
+      "file": "docs/evidence/scientific-resolution-2026-11-14/registration/places-sis-http-receipt.json",
+      "bytes": 523,
+      "sha256": "2a5b15bc9eaa20bb3861a30a88044e86c076fe67deb5e6c19929f909f130d92d"
+    },
+    {
+      "file": "docs/evidence/scientific-resolution-2026-11-14/registration/spice-control-candidates.json",
+      "bytes": 43724,
+      "sha256": "886e03f86f2d295b1fbcf2bb2ea88de5d62d676a2ee4fd50c2d43cc276c728e4"
+    },
+    {
+      "file": "docs/evidence/scientific-resolution-2026-11-14/registration/spk-index.html",
+      "bytes": 25553,
+      "sha256": "1a874f9c1ec8a57943ca20eb72ef61303c857182a6226c30156e91e929263544"
+    },
+    {
+      "file": "docs/evidence/scientific-resolution-2026-11-14/verify-method-evidence.mjs",
+      "bytes": 4724,
+      "sha256": "5766dcf9d51d62771122b2f30abdd0126818a4ac01fa859d2fdff73ab03d2cc3"
+    },
+    {
+      "file": "docs/evidence/scientific-validation/browser/desktop-distance.jpg",
+      "bytes": 205093,
+      "sha256": "e1556357912358f7b5aa3bc3b25625a2aab1edf19c84ffaeb6d30de1a77df93a"
+    },
+    {
+      "file": "docs/evidence/scientific-validation/browser/desktop-scientific-status.jpg",
+      "bytes": 223223,
+      "sha256": "2717fa3812d6be9832e8ededa2ef9d4709a63c485ea0f50ff03f12813b93f08a"
+    },
+    {
+      "file": "docs/evidence/scientific-validation/browser/mobile-distance.jpg",
+      "bytes": 48263,
+      "sha256": "b092f6e4cf94eedc82d19888d0f3b2db339ac332e7d03915555c2b7802c31032"
+    },
+    {
+      "file": "docs/evidence/scientific-validation/browser/tablet-status.jpg",
+      "bytes": 137875,
+      "sha256": "1e0dc7b78509444679fc07f4bc5f3773cc619a15827b1231183e273a4a7c9eda"
+    },
+    {
+      "file": "docs/evidence/scientific-validation/browser/terrain-failed.jpg",
+      "bytes": 35338,
+      "sha256": "62864a7642082a06b524bfd64ef2aba6ae25633ca36257853a5b0f0f9341bd52"
+    },
+    {
+      "file": "docs/evidence/scientific-validation/distance-fixtures.json",
+      "bytes": 3420,
+      "sha256": "394b16b9a43385a10d39e77a94e8c638b4c7cca5f3e13e6f6cde0c242319a079"
+    },
+    {
+      "file": "docs/evidence/scientific-validation/feature-registration-audit.md",
+      "bytes": 9064,
+      "sha256": "945f7accbc64aa6d43a6d2ee64cee3371b2adb46a8e7c573eef425b83030f6c7"
+    },
+    {
+      "file": "docs/evidence/scientific-validation/feature-registration/audit-feature-registration.mjs",
+      "bytes": 10444,
+      "sha256": "0ca21607b62dcfc6c681451711ea8f24461bfa75735c33356ce1223fe69eec96"
+    },
+    {
+      "file": "docs/evidence/scientific-validation/feature-registration/belva.html",
+      "bytes": 40587,
+      "sha256": "a9441436dc403a57ac91e9814b55d7a4ea5caf3e7adcfd7df2d09f978127bda0"
+    },
+    {
+      "file": "docs/evidence/scientific-validation/feature-registration/controlled-image.lbl",
+      "bytes": 1439,
+      "sha256": "a425525be2695ed727daf179563a5898cb2131691e8b21993426764abcf617ca"
+    },
+    {
+      "file": "docs/evidence/scientific-validation/feature-registration/controlled-image.vrt",
+      "bytes": 2876,
+      "sha256": "08ebe6ba11aacb31ca62b65e8f411b3f01197bb7353ad08053e5b3e7e49d281b"
+    },
+    {
+      "file": "docs/evidence/scientific-validation/feature-registration/controlled-image.xml",
+      "bytes": 16025,
+      "sha256": "c8011a4aa19deebba164aba21ab2ea6326f5bdc7adc01b72bf7dda3d405a4226"
+    },
+    {
+      "file": "docs/evidence/scientific-validation/feature-registration/gazetteer-faq.html",
+      "bytes": 36403,
+      "sha256": "d8d6c3f1f56af1e63fbf407ca962b5654325794a1ecbc5e88f1c44b828637aa0"
+    },
+    {
+      "file": "docs/evidence/scientific-validation/feature-registration/http-receipts.json",
+      "bytes": 4907,
+      "sha256": "78f2afca29af78bbe2930c225cd4eb0f173cd082160f5b2483c16ab42825afc9"
+    },
+    {
+      "file": "docs/evidence/scientific-validation/feature-registration/jezero.html",
+      "bytes": 82113,
+      "sha256": "9873e065abaa1f6efbca406a19fdf0acd754c49248b8e1cedab3dae9a5148c25"
+    },
+    {
+      "file": "docs/evidence/scientific-validation/feature-registration/mars-system.html",
+      "bytes": 32881,
+      "sha256": "cee8dc6d2dfb7af69547f6b9e5be65a37389b644d591e90ce2072091fee1ae9f"
+    },
+    {
+      "file": "docs/evidence/scientific-validation/feature-registration/neretva.html",
+      "bytes": 51098,
+      "sha256": "048b9879a59a13ce9751daec8a8a75c6fdafe98ef7f04e0b2f69eee748fa1dad"
+    },
+    {
+      "file": "docs/evidence/scientific-validation/feature-registration/numerical-dem-pds3.lbl",
+      "bytes": 2291,
+      "sha256": "80695163930e29c4ab71953a7e7cf04fd89fd1326047e8a76bc694b1209e2393"
+    },
+    {
+      "file": "docs/evidence/scientific-validation/feature-registration/numerical-dem.lbl",
+      "bytes": 1503,
+      "sha256": "c1b2c8ff34376dcc4cba0defcbf631466ce202cb7ad85208ff3cce91ab048411"
+    },
+    {
+      "file": "docs/evidence/scientific-validation/feature-registration/registration-checks.json",
+      "bytes": 4192,
+      "sha256": "c71cecf56f70f3467f3e722910b30361605a0a89be55ae5abb9a66dd66722364"
+    },
+    {
+      "file": "docs/evidence/scientific-validation/height-reference-audit.md",
+      "bytes": 7910,
+      "sha256": "7252159686e6712cf53ec72d15bc342a840cce39ba7e836d1a8c7af4bb31dccf"
+    },
+    {
+      "file": "docs/evidence/scientific-validation/height-reference/asp-cassis-docs.html",
+      "bytes": 128915,
+      "sha256": "d95814e1c2e530bfaab7b15c973964bf02b170ba4caa8417a07668067a736b25"
+    },
+    {
+      "file": "docs/evidence/scientific-validation/height-reference/audit-height-reference.mjs",
+      "bytes": 4229,
+      "sha256": "a2d13d0cd3496f224c2e7b0914b10e394faaf7082a4f596b99ae1576b8afeff9"
+    },
+    {
+      "file": "docs/evidence/scientific-validation/height-reference/compare-mola-reference.mjs",
+      "bytes": 5729,
+      "sha256": "a3c020060396d580a605da3881a658f8d7329d6c07895dcd5ccad964c0c446f5"
+    },
+    {
+      "file": "docs/evidence/scientific-validation/height-reference/ctx-dtm-fgdc.xml",
+      "bytes": 15749,
+      "sha256": "91e3b93f58b08314f18d505ad85c708e82968025922bf223da5246316ddd4a9a"
+    },
+    {
+      "file": "docs/evidence/scientific-validation/height-reference/ctx-dtm-isis.lbl",
+      "bytes": 1503,
+      "sha256": "c1b2c8ff34376dcc4cba0defcbf631466ce202cb7ad85208ff3cce91ab048411"
+    },
+    {
+      "file": "docs/evidence/scientific-validation/height-reference/ctx-dtm-pds3.lbl",
+      "bytes": 2291,
+      "sha256": "80695163930e29c4ab71953a7e7cf04fd89fd1326047e8a76bc694b1209e2393"
+    },
+    {
+      "file": "docs/evidence/scientific-validation/height-reference/ctx-dtm-product.html",
+      "bytes": 30486,
+      "sha256": "d6bfdcf8edb6cb8fb7f41ac1a740a1de9e869546c3847ba2a8008b6617d19085"
+    },
+    {
+      "file": "docs/evidence/scientific-validation/height-reference/http-receipts.json",
+      "bytes": 7324,
+      "sha256": "e4395d9510e6259bc1093404801dc9918002ed66137fc91651bd705f300e85c0"
+    },
+    {
+      "file": "docs/evidence/scientific-validation/height-reference/mola-a-row-1143.bin",
+      "bytes": 11520,
+      "sha256": "96b65d5b2bae329f4a553c04b9d3a67c2bdb21201794068fc0a31a898ee36a28"
+    },
+    {
+      "file": "docs/evidence/scientific-validation/height-reference/mola-a-row-1144.bin",
+      "bytes": 11520,
+      "sha256": "5633614994bdd7552240f06f516be1a1e7a727142486c7a173d1de275d3372ca"
+    },
+    {
+      "file": "docs/evidence/scientific-validation/height-reference/mola-a-row-1145.bin",
+      "bytes": 11520,
+      "sha256": "548905c7fee7011bdf317d9c9b106cbda332506555e240d290b5d94c1a00603a"
+    },
+    {
+      "file": "docs/evidence/scientific-validation/height-reference/mola-areoid-16.lbl",
+      "bytes": 3760,
+      "sha256": "83b4df3255dade92ab64c7261a3ce54728675e0f1e9c023b56e5facae9ec41ef"
+    },
+    {
+      "file": "docs/evidence/scientific-validation/height-reference/mola-megdr-guide.html",
+      "bytes": 72131,
+      "sha256": "acc4c54e1a449f1abdfaefd8bac091091c8e225bbc627eef7a88470554d1288a"
+    },
+    {
+      "file": "docs/evidence/scientific-validation/height-reference/mola-r-row-1143.bin",
+      "bytes": 11520,
+      "sha256": "eba2a491cb4d1600397602da23cc2b2ae4fced62a0ad926e4b34b8980b09d077"
+    },
+    {
+      "file": "docs/evidence/scientific-validation/height-reference/mola-r-row-1144.bin",
+      "bytes": 11520,
+      "sha256": "be9f3e4b306dadb001ce4f5672979bd361d192cdc1a4b17c9fc7e7a5b750ff3a"
+    },
+    {
+      "file": "docs/evidence/scientific-validation/height-reference/mola-r-row-1145.bin",
+      "bytes": 11520,
+      "sha256": "9dcf117c197cc572289b22cc5c7e0b4c7b7d94f80c958baa706cba1894d83937"
+    },
+    {
+      "file": "docs/evidence/scientific-validation/height-reference/mola-radius-16.lbl",
+      "bytes": 4567,
+      "sha256": "39caa45880c19cb3df1bd8dce0ff33a64d14eee844b03419f84ce30c24d7849c"
+    },
+    {
+      "file": "docs/evidence/scientific-validation/height-reference/mola-range-receipts.json",
+      "bytes": 5376,
+      "sha256": "5b5734d154cd14d29cc5a46b2133d90d3b195146837ae308648976205c73b06f"
+    },
+    {
+      "file": "docs/evidence/scientific-validation/height-reference/mola-reference-comparison.json",
+      "bytes": 5038,
+      "sha256": "3b91cc067af0134b170f6f23a9393683442573b2d1dfad0d323d3d837d18a627"
+    },
+    {
+      "file": "docs/evidence/scientific-validation/height-reference/mola-t-row-1143.bin",
+      "bytes": 11520,
+      "sha256": "69c936ab830abd7a471d007b22ba92bfcd6e6da26466849edab04536d67b1392"
+    },
+    {
+      "file": "docs/evidence/scientific-validation/height-reference/mola-t-row-1144.bin",
+      "bytes": 11520,
+      "sha256": "5d06681c28737fadf3344fd086652d21eabd25ba338163c67c609f9904f59d02"
+    },
+    {
+      "file": "docs/evidence/scientific-validation/height-reference/mola-t-row-1145.bin",
+      "bytes": 11520,
+      "sha256": "62209b84fccd4be1282a88862cda78ac21e9d37d66718ffacf4559e8b42b63dc"
+    },
+    {
+      "file": "docs/evidence/scientific-validation/height-reference/mola-topography-16.lbl",
+      "bytes": 4813,
+      "sha256": "0f2bd919dddb86d83489a008d3007bd915507c892a0f22ce49ad5dd5d2fc7d8a"
+    },
+    {
+      "file": "docs/evidence/scientific-validation/height-reference/stereo-dtm-quality-2020.pdf",
+      "bytes": 1564914,
+      "sha256": "eca51307ebb798bb813aa5337e4ffa193f35a4af6831265610ead1ee61481850"
+    },
+    {
+      "file": "docs/evidence/scientific-validation/height-reference/tao-jezero-2023-response.html",
+      "bytes": 7430,
+      "sha256": "cf908877920fb0c686347274335eebb02238e4985431ee9bfe25531021519bc1"
+    },
+    {
+      "file": "docs/evidence/scientific-validation/height-reference/trn-generation-2020.pdf",
+      "bytes": 281805,
+      "sha256": "9c88a5fdfc0f3778ff17e16f2eccdc6b4a08ff05c5433d177989ca72a70465b1"
+    },
+    {
+      "file": "docs/evidence/scientific-validation/height-reference/trn-generation-2020.txt",
+      "bytes": 9839,
+      "sha256": "92b1c8c5fc567a8b31849fee530dbecbf2824b707f2ed59854588a12c00c5082"
+    },
+    {
+      "file": "docs/evidence/scientific-validation/height-reference/usgs-catalog-fgdc.xml",
+      "bytes": 15795,
+      "sha256": "eb33ffc6b48c5b9e0daab173d00d73190859411aa77bd25c4cabfe169644d718"
+    },
+    {
+      "file": "docs/evidence/scientific-validation/height-reference/verify-native-probes.py",
+      "bytes": 1118,
+      "sha256": "e0b767f4acb82ce0d9e751b2d512577b595c0d7d8af818d1be326f3b7a347918"
+    },
+    {
+      "file": "docs/evidence/scientific-validation/verify-distances.py",
+      "bytes": 3754,
+      "sha256": "a3cd7a02bd737ba8705b8676605b7552f0455d56681186ccda647763bc4d7180"
+    },
+    {
+      "file": "docs/science-routing-audit.md",
+      "bytes": 34551,
+      "sha256": "7cc767388a3a5013947c9b920147a9343659391db582e93e1674eab39d44d0f1"
+    },
+    {
+      "file": "public/data/jezero-terrain-grid.f32",
+      "bytes": 262144,
+      "sha256": "4c0e428bb3cc4bcd8cbcebc0c2da2558a106fc19e55cfca352097b7eee32fae8"
+    },
+    {
+      "file": "public/data/jezero-terrain-grid.json",
+      "bytes": 3147,
+      "sha256": "fa63f2181e603eb930d94fcf91444ee5e537b6c046e31537f65daeb0e1cffed9"
+    },
+    {
+      "file": "public/data/jezero-terrain-windows.json",
+      "bytes": 52868,
+      "sha256": "7b655f1593091fede555394f2c685386b6a677ed4ca1a8ac0eb910130ea5928a"
+    },
+    {
+      "file": "public/favicon.svg",
+      "bytes": 386,
+      "sha256": "79f8710be672a5e0672e0125162e98f51f463ee37d901114d73581ce6dd24a1e"
+    },
+    {
+      "file": "src/data/globeLayers.test.ts",
+      "bytes": 7874,
+      "sha256": "53be8c581093969f5ff15864a2cb414f4d65f0a4ca44266f02e7efb743812a37"
+    },
+    {
+      "file": "src/data/globeLayers.ts",
+      "bytes": 9233,
+      "sha256": "07b6be9753d1860c9b54476d9bec8565cdae51273d65095b1ce1fda72b060c35"
+    },
+    {
+      "file": "src/data/jezero.ts",
+      "bytes": 742,
+      "sha256": "79481e944e05b54c6ac6968532d0f8f19d2ada3a0ed4a9dba97b8d951cee9cd7"
+    },
+    {
+      "file": "src/data/marsGlobe.ts",
+      "bytes": 478,
+      "sha256": "a1ae4566c67111e1f4ff8fb4e19518367277f5f69b55b87102df645eecad49ad"
+    },
+    {
+      "file": "src/data/marsLayers.ts",
+      "bytes": 3248,
+      "sha256": "0b93e3855bc30349ac0efb7d355ee5aa6be3cce547d442f832924758c50a004a"
+    },
+    {
+      "file": "src/data/marsPois.test.ts",
+      "bytes": 11293,
+      "sha256": "5e4a6fc31757e26c4b2e291060fd07c9a929a73500718e2cb670df56cb29bbc5"
+    },
+    {
+      "file": "src/data/marsPois.ts",
+      "bytes": 12584,
+      "sha256": "f11c1a3e69e8d29bb16d4a1faaf39597fb2700b58856f1564f10bb91db709d8d"
+    },
+    {
+      "file": "src/data/scienceTargets.ts",
+      "bytes": 3957,
+      "sha256": "5e19196576f84ad4558ca058d6416676c2b206582e32654148300f068d3e988b"
+    },
+    {
+      "file": "src/data/scientificEvidence.test.ts",
+      "bytes": 3622,
+      "sha256": "23d06e5840f3741ef746550a7f22a6c7baa451bdd31eb74a4fd912f96526dc3f"
+    },
+    {
+      "file": "src/data/scientificEvidence.ts",
+      "bytes": 958,
+      "sha256": "87bc593ef5564e03d343c488dea9da561b5584ec48397ea429f38582aec663ef"
+    },
+    {
+      "file": "src/data/terrainScience.test.ts",
+      "bytes": 2779,
+      "sha256": "e4da766a1200bd2e5fdac211a904b3bd82ec5908fe0f24e0dd181f4b9d495856"
+    },
+    {
+      "file": "src/data/terrainScience.ts",
+      "bytes": 3136,
+      "sha256": "a7ae8f2003feb9e49b4a6d0a926fc970f6891f0b0815c325b439dbc8da34a78a"
+    },
+    {
+      "file": "src/features/globe/asset.test.ts",
+      "bytes": 4985,
+      "sha256": "56e8eecae6fb423d978c7e360623373ff5e972db338137f73d662cfac7873e95"
+    },
+    {
+      "file": "src/features/globe/asset.ts",
+      "bytes": 4238,
+      "sha256": "35c51f7c036385f3461f940c6d944dd9e382ba40a7179f08cbba89ea85b9472d"
+    },
+    {
+      "file": "src/features/globe/createGeographicMarsGlobe.test.ts",
+      "bytes": 18900,
+      "sha256": "1219f1a606c5b6c5e40b5d96c9c2229493f12872d34ae9f19955537505bf0898"
+    },
+    {
+      "file": "src/features/globe/createGeographicMarsGlobe.ts",
+      "bytes": 32150,
+      "sha256": "cdd8a4a9e5052e4aa5514f24600bed4ddafefcde1552fca7b07cb28157319ea6"
+    },
+    {
+      "file": "src/features/globe/createMarsGlobe.test.ts",
+      "bytes": 6543,
+      "sha256": "52c1ebe70ae0355e875abd68dabcda0f7724d051f28af9538f57961d3266ced7"
+    },
+    {
+      "file": "src/features/globe/createMarsGlobe.ts",
+      "bytes": 9146,
+      "sha256": "362f9ed55a670cd2deaf43f94435d290ee89c8bc7af2b8fd1abe25186300a8ee"
+    },
+    {
+      "file": "src/features/globe/explorationTypes.ts",
+      "bytes": 705,
+      "sha256": "2fd0949bb78a4f95c640cc3735bcf8fa1a38d214c19c7c071b16ce114c07c750"
+    },
+    {
+      "file": "src/features/globe/flightPose.test.ts",
+      "bytes": 4175,
+      "sha256": "570cadeb9b6841bd4bd836580347d42320d7a827d22d076b20c10ce641f67ce8"
+    },
+    {
+      "file": "src/features/globe/flightPose.ts",
+      "bytes": 1695,
+      "sha256": "9b77e00f7180fc1c56b31e2055d68eb826b0c5b1000e096b446cdf6760e9903a"
+    },
+    {
+      "file": "src/features/globe/geographicMath.test.ts",
+      "bytes": 3615,
+      "sha256": "823785de1779b355516b900cab7aac3147dff335c51f5f1e990f03250e382d96"
+    },
+    {
+      "file": "src/features/globe/geographicMath.ts",
+      "bytes": 4304,
+      "sha256": "4869378f965a7523db7b35367a056c685e2a5377548e109930d6f01fdac24899"
+    },
+    {
+      "file": "src/features/globe/globeTileLod.test.ts",
+      "bytes": 10431,
+      "sha256": "0c49c0477d6a7e40aa08e98b73dc3178651070004a0fb4be7e6c11dc04920237"
+    },
+    {
+      "file": "src/features/globe/globeTileLod.ts",
+      "bytes": 11543,
+      "sha256": "04e2b8fd2eef43874a5a3c5e2938bf0137ef0da7b028907e2263ffcc59f386ce"
+    },
+    {
+      "file": "src/features/globe/imageryStatus.ts",
+      "bytes": 757,
+      "sha256": "4ecc257913bfa2a11234926195790e86546317e8c2751bacf18d17f2c6812161"
+    },
+    {
+      "file": "src/features/map/frameReadiness.ts",
+      "bytes": 3625,
+      "sha256": "6c4ae31eea391cad698cf6cb80cee693be71195773a7fcbd0894ad6cf135b915"
+    },
+    {
+      "file": "src/features/map/mapProjection.ts",
+      "bytes": 1505,
+      "sha256": "f0d03c6e431713f11e3de4e977283373c889d5a209f30861ea28c07611f16307"
+    },
+    {
+      "file": "src/features/mission/coordinates.test.ts",
+      "bytes": 4559,
+      "sha256": "3a1d1b11539a6252a840e0bd30ff8b82b5e00837e107149b10cb25b1ec600524"
+    },
+    {
+      "file": "src/features/mission/coordinates.ts",
+      "bytes": 951,
+      "sha256": "b3a60f1f028ec1a99ab86148915915fb545ce6250eae769c813ad1ad77d69782"
+    },
+    {
+      "file": "src/features/mission/gridSelection.test.ts",
+      "bytes": 7521,
+      "sha256": "1a4c58758f093532f87a318fbd3f891bb022efac3230023edb5cb1414a700c9f"
+    },
+    {
+      "file": "src/features/mission/gridSelection.ts",
+      "bytes": 1266,
+      "sha256": "907ae20070204b28b1bd2b8f1c93e4bfb3d203760d0e7056f1193b6319393a97"
+    },
+    {
+      "file": "src/features/mission/selection.test.ts",
+      "bytes": 4045,
+      "sha256": "42115721f46c498cff18550fd76a460c62a30cfb83855d0ee79fd2f1109f385a"
+    },
+    {
+      "file": "src/features/mission/selection.ts",
+      "bytes": 1338,
+      "sha256": "03083e1e3c35925f2cab33b33d23f348b1a037e7ef47ae4e9b01a93d46c59951"
+    },
+    {
+      "file": "src/features/mission/types.ts",
+      "bytes": 738,
+      "sha256": "31226ef5233afd7cb97112c263dc661afcc7487426a47307ac32a0ce0de6cf6b"
+    },
+    {
+      "file": "src/features/mission/useGridPlanning.ts",
+      "bytes": 3091,
+      "sha256": "f5aed477b3bd18b31b2708f02936fea8dba355bef01e648d67b6ae880fd09ab4"
+    },
+    {
+      "file": "src/features/routing/distanceRoutes.test.ts",
+      "bytes": 15158,
+      "sha256": "0c7a6c9d5d6ea47954259e350eba89d4220cba736b2dca82af0332c8db155b26"
+    },
+    {
+      "file": "src/features/routing/distanceRoutes.ts",
+      "bytes": 11758,
+      "sha256": "c54163ee3bef5cf46b27ba0da73d7fb1f1272a98d03d02bc40f493fe152958ba"
+    },
+    {
+      "file": "src/features/routing/routeTask.test.ts",
+      "bytes": 6910,
+      "sha256": "22bf42521726a89c1437a8366d69cf36baee520fb360dced2a3db4a7bbf14c36"
+    },
+    {
+      "file": "src/features/routing/routeTask.ts",
+      "bytes": 5608,
+      "sha256": "53ce50e94800a88f67c9137ff106066543121ec0d20d2ab787fc82822240b343"
+    },
+    {
+      "file": "src/features/routing/routeWorker.test.ts",
+      "bytes": 2505,
+      "sha256": "9c6f1681cc6abe1f47fb374613b8b844bf42966812c10a2b93d4626215536075"
+    },
+    {
+      "file": "src/features/routing/routeWorker.ts",
+      "bytes": 1027,
+      "sha256": "5f934b74dd540efaa066cb93b50dca8712b0b5ad819487f6f113d98037ab087b"
+    },
+    {
+      "file": "src/features/routing/routingAudit.test.ts",
+      "bytes": 15771,
+      "sha256": "61cda0d50b056234a6eb6910a16064ddf83dc89d6333665a98a388b9f03b8532"
+    },
+    {
+      "file": "src/features/routing/types.ts",
+      "bytes": 1238,
+      "sha256": "50139b57d5a94234381e587c1748bdcd2cdbd053865262c85db8f78cfb9a781c"
+    },
+    {
+      "file": "src/features/routing/useDistanceRouting.ts",
+      "bytes": 4815,
+      "sha256": "c15b7fd7e84d43d6240ed7a8214648864d34068273c034f7cfdc2a349101db84"
+    },
+    {
+      "file": "src/features/terrain/gridTypes.ts",
+      "bytes": 2728,
+      "sha256": "728646f97d545c44b7913320b70dcc64d30305c70d83a2631a0e051c017a0e11"
+    },
+    {
+      "file": "src/features/terrain/loadTerrain.test.ts",
+      "bytes": 6752,
+      "sha256": "8fa5cd73436fe11a9ad4096822acc475649a0017932fa1caa511cb060f8be354"
+    },
+    {
+      "file": "src/features/terrain/loadTerrain.ts",
+      "bytes": 2914,
+      "sha256": "6c7d11789bbae84266888a7aa4bcb1ce2e4ea97e6a24c6e544adb425601a3f54"
+    },
+    {
+      "file": "src/features/terrain/loadTerrainGrid.test.ts",
+      "bytes": 11912,
+      "sha256": "8dca06c546117165316283d585c4c73bbb40f6f84b67d926898ad716578e624b"
+    },
+    {
+      "file": "src/features/terrain/loadTerrainGrid.ts",
+      "bytes": 5224,
+      "sha256": "68190cf08653e2320d597695ec77541d37ea134bed2e58f1ee2685d1646b2f23"
+    },
+    {
+      "file": "src/features/terrain/sampling.test.ts",
+      "bytes": 9075,
+      "sha256": "66ca298e9d02bee6ddf76385323d16c44f79579bc67aa51ed5e67a7d9fa04540"
+    },
+    {
+      "file": "src/features/terrain/sampling.ts",
+      "bytes": 8045,
+      "sha256": "0f5c5e794d68e7106cf98ebc58cdb62fbe42aebac0c3084ea536b2178ac96820"
+    },
+    {
+      "file": "src/features/terrain/terrainGrid.test.ts",
+      "bytes": 9177,
+      "sha256": "36e81d0484ca689ad2a38d49ce61654a0365ef8ee9c84dafc3cb193d1f524ccd"
+    },
+    {
+      "file": "src/features/terrain/terrainGrid.ts",
+      "bytes": 11160,
+      "sha256": "3b263341e97d244f0972ede72a17c0ed87d1c9b6f4711a726de1f98a8e66cd88"
+    },
+    {
+      "file": "src/features/terrain/terrainMath.test.ts",
+      "bytes": 9038,
+      "sha256": "f5640372629b21620a56172efffcdf0fc0901d8917d29501d067d39bcb650703"
+    },
+    {
+      "file": "src/features/terrain/terrainMath.ts",
+      "bytes": 5276,
+      "sha256": "9d683d164f0db61c59434a19e200495b8e8f1483adcc544a95728134b4093600"
+    },
+    {
+      "file": "src/features/terrain/terrainMetrics.test.ts",
+      "bytes": 8699,
+      "sha256": "41e8b012fadf7b530e83754e81bed3714ebccab3e8b6adb19feb8e3b2220042e"
+    },
+    {
+      "file": "src/features/terrain/terrainMetrics.ts",
+      "bytes": 4340,
+      "sha256": "74548a2adc9d11ae2df8c529e1a319c8ba8f1d22df38afadd57aed81ee234160"
+    },
+    {
+      "file": "src/features/terrain/types.ts",
+      "bytes": 1516,
+      "sha256": "c25635d53fc93c7fc7b5db851e30793de5045b33450025d7c7c6df6efa4367b9"
+    }
+  ]
+}

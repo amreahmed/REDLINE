@@ -28,6 +28,7 @@ import type { GeographicGlobeController, GeographicGlobeView } from '../../featu
 import type { GlobeFlyRequest, GlobePreferences } from '../../features/globe/explorationTypes'
 import type { GlobeMapImageryStatus } from '../../features/map/globeMapImagery'
 import { imageryStatusText } from '../../features/globe/imageryStatus'
+import type { TerrainMapDisplay } from '../../features/map/terrainModelOverlay'
 
 const EMPTY_ROUTES: readonly HypotheticalRoute[] = []
 const geographicController = (controller: GlobeController | null): GeographicGlobeController | null => controller && 'getView' in controller ? controller as GeographicGlobeController : null
@@ -62,6 +63,7 @@ type Props = {
   hypotheticalRoutes?: readonly HypotheticalRoute[]
   selectedRouteId?: 'shortest' | 'via' | null
   routeWaypoint?: RoutePoint | null
+  terrainModelDisplay?: TerrainMapDisplay | null
   globePreferences: GlobePreferences
   globeFlyRequest: GlobeFlyRequest | null
   globeMapRequest: number
@@ -73,7 +75,7 @@ type Props = {
   onOpenGeographicMap: () => void
 }
 
-export function MarsExplorer({ visibility, statuses, retryRequest, jezeroRequest, onJezero, onStatus, onSummary, missionSelection, selectedTargetId, focusRequest, onInspectTarget, planningGrid, gridSelection, gridFocusRequest, centerPickRequest, gridPickRole, gridPickNotice, onPickCoordinate, onNavigate, hypotheticalRoutes = EMPTY_ROUTES, selectedRouteId = null, routeWaypoint = null, globePreferences, globeFlyRequest, globeMapRequest, globeRetryRequest, onGlobeView, onMapImageryStatus, onGlobeInspect, onPrepareGeographicMap, onOpenGeographicMap }: Props) {
+export function MarsExplorer({ visibility, statuses, retryRequest, jezeroRequest, onJezero, onStatus, onSummary, missionSelection, selectedTargetId, focusRequest, onInspectTarget, planningGrid, gridSelection, gridFocusRequest, centerPickRequest, gridPickRole, gridPickNotice, onPickCoordinate, onNavigate, hypotheticalRoutes = EMPTY_ROUTES, selectedRouteId = null, routeWaypoint = null, terrainModelDisplay = null, globePreferences, globeFlyRequest, globeMapRequest, globeRetryRequest, onGlobeView, onMapImageryStatus, onGlobeInspect, onPrepareGeographicMap, onOpenGeographicMap }: Props) {
   const workspaceRef = useRef<HTMLDivElement>(null)
   const globeHostRef = useRef<HTMLDivElement>(null)
   const mapHostRef = useRef<HTMLDivElement>(null)
@@ -100,6 +102,8 @@ export function MarsExplorer({ visibility, statuses, retryRequest, jezeroRequest
   const gridPickRoleRef = useRef(gridPickRole)
   const pickCoordinateRef = useRef(onPickCoordinate)
   const routeInputsRef = useRef({ routes: hypotheticalRoutes, selectedId: selectedRouteId, waypoint: routeWaypoint })
+  const terrainDisplayRef = useRef(terrainModelDisplay)
+  useEffect(() => { terrainDisplayRef.current = terrainModelDisplay; mapRef.current?.setTerrainModel(terrainModelDisplay) }, [terrainModelDisplay])
   const [composition, setComposition] = useState<number | null>(null)
   const [stageMessage, setStageMessage] = useState('Approaching Jezero')
   const [notice, setNotice] = useState<string | null>(null)
@@ -272,6 +276,7 @@ export function MarsExplorer({ visibility, statuses, retryRequest, jezeroRequest
       mapRef.current.setGridOverlay(gridRef.current ? terrainGridBounds(gridRef.current) : null, gridEndpoints(gridSelectionRef.current))
       const routes = routeInputsRef.current
       mapRef.current.setHypotheticalRoutes(routes.routes, routes.selectedId, routes.waypoint)
+      mapRef.current.setTerrainModel(terrainDisplayRef.current)
     } catch {
       queueMicrotask(() => { if (mounted) setMapError('The map renderer could not start. The NASA overview remains available; reload to retry the map.') })
     }
@@ -469,7 +474,7 @@ export function MarsExplorer({ visibility, statuses, retryRequest, jezeroRequest
           <div><p role="status">{stageMessage}</p><span>{globePreferences.mode === 'imagery' ? 'Source-grid navigation · absolute registration unverified' : 'Scripted visual approach · approximate crater navigation'}</span></div>
           <div className="flight-actions"><button type="button" className="grid-button" onClick={skipTransition}>Skip animation</button><button type="button" className="grid-button" onClick={() => cancelTransition()}>Cancel</button></div>
         </div>}
-        <div className="map-credit">{mapShown ? mapGlobeLayer ? globeLayerById(mapGlobeLayer).attribution : 'NASA/JPL-Caltech Mars Trek · MGS/MOLA · MRO/CTX' : globePreferences.mode === 'imagery' ? globeLayerById(globePreferences.layerId).attribution : 'Visual model: NASA/JPL-Caltech'}</div>
+        <div className="map-credit">{mapShown ? mapGlobeLayer ? globeLayerById(mapGlobeLayer).attribution : 'NASA/JPL-Caltech Mars Trek · MGS/MOLA · MRO/CTX' : globePreferences.mode === 'imagery' ? globeLayerById(globePreferences.layerId).attribution : 'Visual model: NASA/JPL-Caltech'}{mapShown && terrainModelDisplay && visibility.controlledCtx && <span className="terrain-map-credit"> · {terrainModelDisplay.analysis.grid.source.attribution}</span>}</div>
       </div>
       {notice && <div className="explorer-notice"><p role="status">{notice}</p><div>{!mapShown && <button className="grid-button" type="button" onClick={() => arriveDirect()}>Open Jezero map</button>}<button className="grid-button" type="button" onClick={() => setNotice(null)}>Dismiss</button></div></div>}
       <div className="explorer-navigation">
@@ -499,7 +504,7 @@ export function MarsExplorer({ visibility, statuses, retryRequest, jezeroRequest
       </div>
       </details>
       {!mapShown && globePreferences.mode === 'imagery' && geographicView && <div className="globe-source-caption" role="status"><strong>{globeLayerById(globePreferences.layerId).name}</strong><span>{imageryStatusText(geographicView.imagery, geographicView.level)}</span><span>{geographicView.latitude.toFixed(3)}° latitude, {geographicView.longitude.toFixed(3)}° longitude</span>{geographicView.transitioningFrom && <span>Previous source visible while loading: {globeLayerById(geographicView.transitioningFrom as GlobeLayerId).name}</span>}{hoveredPoiId && <span>{marsPoiById(hoveredPoiId)?.name}</span>}</div>}
-      {visibleRoutes ? <p className="viewport-qualification route-qualification">{DISTANCE_ONLY_QUALIFICATION}</p> : mapShown && selectedReference && <p className="viewport-qualification" data-unverified="true">{selectedReference.name}: approximate center · absolute registration unverified</p>}
+      {mapShown && state.localDetail && visibility.controlledCtx && terrainModelDisplay?.comparison ? <p className="viewport-qualification route-qualification">HRSC DEM model route · physical terrain and safety unverified</p> : visibleRoutes ? <p className="viewport-qualification route-qualification">{DISTANCE_ONLY_QUALIFICATION}</p> : mapShown && selectedReference && <p className="viewport-qualification" data-unverified="true">{selectedReference.name}: approximate center · absolute registration unverified</p>}
     </section>
   )
 }

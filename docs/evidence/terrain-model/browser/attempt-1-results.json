@@ -1,0 +1,85 @@
+{
+  "url": "http://127.0.0.1:4174/",
+  "browser": "isolated headless Chromium",
+  "checks": [
+    "Existing geographic globe navigation remains functional",
+    "Original 65,536-cell CTX terrain and hypothetical endpoint controls preserved",
+    "Real HRSC metadata/sample/mask load, HTTP failure and retry",
+    "Qualified source status, source attribution and unsupported capabilities remain explicit",
+    "Actual native DEM route comparison, distinct cost/distance and exact adjacent returned cells",
+    "All terrain overlays, numeric legends and route selection work",
+    "Export retains exact route, rover profile, full provenance, unknown dates and all limitations",
+    "Invalid profile rejected; valid applied weights invalidate and recompute results",
+    "Optional waypoint result survives rerenders and constrains both model routes",
+    "Cancellation terminates background search without stale results",
+    "Changed applied assumptions cancel stale worker work",
+    "Worker startup and invalid-response failures expose retry and recover",
+    "Original CTX distance routes and HRSC model routes can both be restored",
+    "tablet layout: no horizontal overflow, aligned readable fields, keyboard access",
+    "mobile layout: no horizontal overflow, aligned readable fields, keyboard access"
+  ],
+  "pageErrors": [],
+  "consoleErrors": [
+    "Failed to load resource: the server responded with a status of 503 (Service Unavailable)"
+  ],
+  "tileResponses": 50,
+  "screenshots": [
+    "desktop-terrain-comparison.png",
+    "tablet-terrain-controls.png",
+    "mobile-terrain-controls.png",
+    "failure.png"
+  ],
+  "comparisons": [
+    {
+      "label": "native-default",
+      "file": "native-default-comparison.json",
+      "distanceM": 2756.4587575641835,
+      "distanceCostM": 5215.76319688093,
+      "terrainDistanceM": 3013.084865816791,
+      "terrainCostM": 5035.384520605762,
+      "sameNodes": false
+    },
+    {
+      "label": "roughness-weight-five",
+      "file": "roughness-weight-five-comparison.json",
+      "distanceM": 2756.4587575641835,
+      "distanceCostM": 6065.7688964354065,
+      "terrainDistanceM": 3013.0837412068,
+      "terrainCostM": 5758.908067462127,
+      "sameNodes": false
+    },
+    {
+      "label": "optional-waypoint",
+      "file": "optional-waypoint-comparison.json",
+      "distanceM": 2756.4587575641835,
+      "distanceCostM": 6065.7688964354065,
+      "terrainDistanceM": 2984.547071213089,
+      "terrainCostM": 5815.566281390651,
+      "sameNodes": false
+    }
+  ],
+  "failure": "locator.click: Timeout 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByRole('button', { name: 'Close mission controls', exact: true })\u001b[22m\n\n    at D:\\Projects\\REDLINE\\docs\\evidence\\terrain-model\\browser\\acceptance.mjs:197:83",
+  "worker": {
+    "active": 0,
+    "started": 7,
+    "terminated": 7
+  },
+  "screenshotHashes": [
+    {
+      "file": "desktop-terrain-comparison.png",
+      "sha256": "49aa839f1fa3a34c4a30290446e4faa6da755715371512a0ef544038afa80e31"
+    },
+    {
+      "file": "tablet-terrain-controls.png",
+      "sha256": "43293a4627e5f5d689565f06790e522c7a841e78a7a53bb7e6c6f21f1954a815"
+    },
+    {
+      "file": "mobile-terrain-controls.png",
+      "sha256": "5ef862d460784ef4a88bb4f0d110d9317d3044c8fe0a677d802ad52b73809261"
+    },
+    {
+      "file": "failure.png",
+      "sha256": "9d0e686e0e81c50954ade6f4ab65ac1d597b2f73acfb90394f90629ad72de9e8"
+    }
+  ]
+}
