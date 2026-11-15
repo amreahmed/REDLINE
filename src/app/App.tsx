@@ -175,7 +175,10 @@ export default function App() {
       <a className="skip-link" href="#explorer-workspace">Skip to workspace</a>
       <header className="app-header flex items-center justify-between gap-4">
         <div className="brand-group flex items-center gap-4">
-          <div className="brand flex items-center gap-3"><span className="brand-mark"><Icon name="orbit" size={29} /></span><span>REDLINE</span></div>
+          <div className="brand flex items-center gap-3">
+            <span className="brand-mark"><Icon name="orbit" size={29} /></span>
+            <span className="brand-wordmark"><span className="brand-red">RED</span><span className="brand-line">LINE</span></span>
+          </div>
           <span className="brand-divider" />
           <div className="header-location"><span>{explorer.mapShown ? 'Mars / Regional map' : 'Mars'}</span><span>{mode}</span></div>
         </div>
