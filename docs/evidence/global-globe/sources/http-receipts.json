@@ -1,0 +1,414 @@
+[
+  {
+    "file": "trek-main-home.html",
+    "requestedUrl": "https://trek.nasa.gov/mars/",
+    "finalUrl": "https://trek.nasa.gov/mars/",
+    "retrievedAt": "2026-11-15T01:38:32.940Z",
+    "status": 200,
+    "bytes": 2488,
+    "sha256": "13635e1d576bcae4d833fe6f7cb9c338ab05743b1ccafcea2e15e4ffb6d56947",
+    "headers": {
+      "content-type": "text/html",
+      "access-control-allow-origin": null,
+      "etag": "\"9b8-65a0b40e2a800\"",
+      "last-modified": "Thu, 27 Aug 2026 18:10:40 GMT"
+    }
+  },
+  {
+    "file": "trek-main-run.js.txt",
+    "requestedUrl": "https://trek.nasa.gov/mars/app/run.js?v=3.4.123-Mars",
+    "finalUrl": "https://trek.nasa.gov/mars/app/run.js?v=3.4.123-Mars",
+    "retrievedAt": "2026-11-15T01:38:33.002Z",
+    "status": 200,
+    "bytes": 1711,
+    "sha256": "364fb67bae666c6462bd588be7cc8c49ebe14c0620d9bc2ef5a6782d3a64c83e",
+    "headers": {
+      "content-type": "application/javascript",
+      "access-control-allow-origin": null,
+      "etag": "\"6af-65a0b4199c300\"",
+      "last-modified": "Thu, 27 Aug 2026 18:10:52 GMT"
+    }
+  },
+  {
+    "file": "trek-main-config.json",
+    "requestedUrl": "https://trek.nasa.gov/mars/jpl/config/config.json",
+    "finalUrl": "https://trek.nasa.gov/mars/jpl/config/config.json",
+    "retrievedAt": "2026-11-15T01:38:33.004Z",
+    "status": 200,
+    "bytes": 11732,
+    "sha256": "a77dd2cb3f972ef001f04424a60ad7013691cbaa89b0eb6999015bf7d52e9082",
+    "headers": {
+      "content-type": "application/json",
+      "access-control-allow-origin": null,
+      "etag": "\"2dd4-65a0b3b1a8dc0\"",
+      "last-modified": "Thu, 27 Aug 2026 18:09:03 GMT"
+    }
+  },
+  {
+    "file": "trek-main-basemap-list.json",
+    "requestedUrl": "https://trek.nasa.gov/mars/jpl/config/basemapList.json",
+    "finalUrl": "https://trek.nasa.gov/mars/jpl/config/basemapList.json",
+    "retrievedAt": "2026-11-15T01:38:33.005Z",
+    "status": 200,
+    "bytes": 498,
+    "sha256": "5db58dc84e884e4198f251f425cd829c4f01835ac760fdabc38a4e06ab4f5758",
+    "headers": {
+      "content-type": "application/json",
+      "access-control-allow-origin": null,
+      "etag": "\"1f2-65a0b3b1a8dc0\"",
+      "last-modified": "Thu, 27 Aug 2026 18:09:03 GMT"
+    }
+  },
+  {
+    "file": "viking-capabilities.xml",
+    "requestedUrl": "https://trek.nasa.gov/tiles/Mars/EQ/Mars_Viking_MDIM21_ClrMosaic_global_232m/1.0.0/WMTSCapabilities.xml",
+    "finalUrl": "https://trek.nasa.gov/tiles/Mars/EQ/Mars_Viking_MDIM21_ClrMosaic_global_232m/1.0.0/WMTSCapabilities.xml",
+    "retrievedAt": "2026-11-15T01:38:33.006Z",
+    "status": 200,
+    "bytes": 7016,
+    "sha256": "977e2037d634f9dc70f654ce176ca7e5775e336d9d4242d323bf55f1b4be4ec6",
+    "headers": {
+      "content-type": "application/xml",
+      "access-control-allow-origin": "*",
+      "etag": "\"1b68-57c7d19d01a9c\"",
+      "last-modified": "Sat, 08 Dec 2018 06:47:09 GMT"
+    }
+  },
+  {
+    "file": "viking-tile0.jpg",
+    "requestedUrl": "https://trek.nasa.gov/tiles/Mars/EQ/Mars_Viking_MDIM21_ClrMosaic_global_232m/1.0.0/default/default028mm/0/0/0.jpg",
+    "finalUrl": "https://trek.nasa.gov/tiles/Mars/EQ/Mars_Viking_MDIM21_ClrMosaic_global_232m/1.0.0/default/default028mm/0/0/0.jpg",
+    "retrievedAt": "2026-11-15T01:38:33.007Z",
+    "status": 200,
+    "bytes": 52978,
+    "sha256": "df9a4f812ff9e74c4bd5a62fa2b955b14e95b14bebd9cfbc16c06f2f82acf9e1",
+    "headers": {
+      "content-type": "image/jpeg",
+      "access-control-allow-origin": "*",
+      "etag": "\"cef2-55f17bb0435b2\"",
+      "last-modified": "Wed, 29 Nov 2017 04:40:10 GMT"
+    }
+  },
+  {
+    "file": "viking-tile1.jpg",
+    "requestedUrl": "https://trek.nasa.gov/tiles/Mars/EQ/Mars_Viking_MDIM21_ClrMosaic_global_232m/1.0.0/default/default028mm/0/0/1.jpg",
+    "finalUrl": "https://trek.nasa.gov/tiles/Mars/EQ/Mars_Viking_MDIM21_ClrMosaic_global_232m/1.0.0/default/default028mm/0/0/1.jpg",
+    "retrievedAt": "2026-11-15T01:38:33.008Z",
+    "status": 200,
+    "bytes": 52404,
+    "sha256": "7f83e5d015481bc907f9e8b88c630e0edf24c02a9ddf9be16bd3d8a8ae6fc92f",
+    "headers": {
+      "content-type": "image/jpeg",
+      "access-control-allow-origin": "*",
+      "etag": "\"ccb4-55f17bb041ee5\"",
+      "last-modified": "Wed, 29 Nov 2017 04:40:10 GMT"
+    }
+  },
+  {
+    "file": "viking-trek-metadata.html",
+    "requestedUrl": "https://trek.nasa.gov/mars/TrekWS/rest/cat/metadata/fgdc/html?label=Mars_Viking_MDIM21_ClrMosaic_global_232m",
+    "finalUrl": "https://trek.nasa.gov/mars/TrekWS/rest/cat/metadata/fgdc/html?label=Mars_Viking_MDIM21_ClrMosaic_global_232m",
+    "retrievedAt": "2026-11-15T01:38:33.009Z",
+    "status": 200,
+    "bytes": 3692,
+    "sha256": "f27267708542c4f914532e0ef63eb2b7e367d5d5991e12fef48e9e5657cce994",
+    "headers": {
+      "content-type": "text/html",
+      "access-control-allow-origin": null,
+      "etag": null,
+      "last-modified": null
+    }
+  },
+  {
+    "file": "viking-trek-abstract.txt",
+    "requestedUrl": "https://trek.nasa.gov/mars/TrekWS/rest/cat/abstract?label=Mars_Viking_MDIM21_ClrMosaic_global_232m",
+    "finalUrl": "https://trek.nasa.gov/mars/TrekWS/rest/cat/abstract?label=Mars_Viking_MDIM21_ClrMosaic_global_232m",
+    "retrievedAt": "2026-11-15T01:38:33.010Z",
+    "status": 200,
+    "bytes": 437,
+    "sha256": "6bfdd6121481bfbfcf0488db4b3255493dbba5b9eef23fdc2d2570a46e97f959",
+    "headers": {
+      "content-type": "text/plain",
+      "access-control-allow-origin": null,
+      "etag": null,
+      "last-modified": null
+    }
+  },
+  {
+    "file": "global-ctx-capabilities.xml",
+    "requestedUrl": "https://trek.nasa.gov/tiles/Mars/EQ/CTX_beta01_uncontrolled_5m_Caltech/1.0.0/WMTSCapabilities.xml",
+    "finalUrl": "https://trek.nasa.gov/tiles/Mars/EQ/CTX_beta01_uncontrolled_5m_Caltech/1.0.0/WMTSCapabilities.xml",
+    "retrievedAt": "2026-11-15T01:38:33.011Z",
+    "status": 200,
+    "bytes": 8057,
+    "sha256": "16919bec258e3292e07f4a1b42d9d847accc929a0d93fa6cb0989b2ba50aafcf",
+    "headers": {
+      "content-type": "application/xml",
+      "access-control-allow-origin": "*",
+      "etag": "\"1f79-5aed078e8adee\"",
+      "last-modified": "Tue, 08 Sep 2020 17:14:48 GMT"
+    }
+  },
+  {
+    "file": "mola-capabilities.xml",
+    "requestedUrl": "https://trek.nasa.gov/tiles/Mars/EQ/Mars_MGS_MOLA_ClrShade_merge_global_463m/1.0.0/WMTSCapabilities.xml",
+    "finalUrl": "https://trek.nasa.gov/tiles/Mars/EQ/Mars_MGS_MOLA_ClrShade_merge_global_463m/1.0.0/WMTSCapabilities.xml",
+    "retrievedAt": "2026-11-15T01:38:33.013Z",
+    "status": 200,
+    "bytes": 7040,
+    "sha256": "2fb4722b5af0417980052354eab806cb9bdea003617548433cec8d8813d8d125",
+    "headers": {
+      "content-type": "application/xml",
+      "access-control-allow-origin": "*",
+      "etag": "\"1b80-57c7d19b7992a\"",
+      "last-modified": "Sat, 08 Dec 2018 06:47:07 GMT"
+    }
+  },
+  {
+    "file": "controlled-ctx-capabilities.xml",
+    "requestedUrl": "https://trek.nasa.gov/tiles/Mars/EQ/JEZ_ctx_B_soc_008_orthoMosaic_6m_Eqc_latTs0_lon0/1.0.0/WMTSCapabilities.xml",
+    "finalUrl": "https://trek.nasa.gov/tiles/Mars/EQ/JEZ_ctx_B_soc_008_orthoMosaic_6m_Eqc_latTs0_lon0/1.0.0/WMTSCapabilities.xml",
+    "retrievedAt": "2026-11-15T01:38:33.014Z",
+    "status": 200,
+    "bytes": 8810,
+    "sha256": "bb58f640da78bcc404a9109f613f2b3f0e3e683ff6625e8f48dcb23e602813b8",
+    "headers": {
+      "content-type": "application/xml",
+      "access-control-allow-origin": "*",
+      "etag": "\"226a-5ab9cc38e0bda\"",
+      "last-modified": "Wed, 29 Jul 2020 23:17:47 GMT"
+    }
+  },
+  {
+    "file": "preliminary-ctx-capabilities.xml",
+    "requestedUrl": "https://trek.nasa.gov/tiles/Mars/EQ/Jezero_CTX_BlockAdj_dd/1.0.0/WMTSCapabilities.xml",
+    "finalUrl": "https://trek.nasa.gov/tiles/Mars/EQ/Jezero_CTX_BlockAdj_dd/1.0.0/WMTSCapabilities.xml",
+    "retrievedAt": "2026-11-15T01:38:33.014Z",
+    "status": 200,
+    "bytes": 8343,
+    "sha256": "aeb623627236fc77bbe62c45a8db6e8c148cba7f70c02006eeb30c4fa377598c",
+    "headers": {
+      "content-type": "application/xml",
+      "access-control-allow-origin": "*",
+      "etag": "\"2097-57c7d19bc19d0\"",
+      "last-modified": "Sat, 08 Dec 2018 06:47:08 GMT"
+    }
+  },
+  {
+    "file": "hirise-capabilities.xml",
+    "requestedUrl": "https://trek.nasa.gov/tiles/Mars/EQ/JEZ_hirise_soc_006_orthoMosaic_25cm_Eqc_latTs0_lon0_first_dd/1.0.0/WMTSCapabilities.xml",
+    "finalUrl": "https://trek.nasa.gov/tiles/Mars/EQ/JEZ_hirise_soc_006_orthoMosaic_25cm_Eqc_latTs0_lon0_first_dd/1.0.0/WMTSCapabilities.xml",
+    "retrievedAt": "2026-11-15T01:38:33.015Z",
+    "status": 200,
+    "bytes": 10037,
+    "sha256": "6a67af4f3e79ed8bf5e625b60d4b9250533f38a8f61e98758410ff8ad9213693",
+    "headers": {
+      "content-type": "application/xml",
+      "access-control-allow-origin": "*",
+      "etag": "\"2735-5ab9e5501665b\"",
+      "last-modified": "Thu, 30 Jul 2020 01:10:02 GMT"
+    }
+  },
+  {
+    "file": "global-ctx-tile0.png",
+    "requestedUrl": "https://astro.arcgis.com/arcgis/rest/services/OnMars/CTX/MapServer/tile/0/0/0",
+    "finalUrl": "https://astro.arcgis.com/arcgis/rest/services/OnMars/CTX/MapServer/tile/0/0/0",
+    "retrievedAt": "2026-11-15T01:38:33.016Z",
+    "status": 200,
+    "bytes": 142334,
+    "sha256": "cd33a66f297de66a5a9707b6b832654ccb4d2c82afcaab718e0aeb8c4b0fe4b7",
+    "headers": {
+      "content-type": "image/png",
+      "access-control-allow-origin": "*",
+      "etag": "u6f2bbeg9ubdf",
+      "last-modified": null
+    }
+  },
+  {
+    "file": "global-ctx-tile1.png",
+    "requestedUrl": "https://astro.arcgis.com/arcgis/rest/services/OnMars/CTX/MapServer/tile/0/0/1",
+    "finalUrl": "https://astro.arcgis.com/arcgis/rest/services/OnMars/CTX/MapServer/tile/0/0/1",
+    "retrievedAt": "2026-11-15T01:38:33.016Z",
+    "status": 200,
+    "bytes": 139011,
+    "sha256": "74341e8e5f6c080537f5d6edd615ba823fe9b4871d8da4f9d758d5b12a062bda",
+    "headers": {
+      "content-type": "image/png",
+      "access-control-allow-origin": "*",
+      "etag": "qld0b0ke9gtc6",
+      "last-modified": null
+    }
+  },
+  {
+    "file": "global-ctx-tile12-jezero.png",
+    "requestedUrl": "https://astro.arcgis.com/arcgis/rest/services/OnMars/CTX/MapServer/tile/12/1628/5856",
+    "finalUrl": "https://astro.arcgis.com/arcgis/rest/services/OnMars/CTX/MapServer/tile/12/1628/5856",
+    "retrievedAt": "2026-11-15T01:38:33.017Z",
+    "status": 200,
+    "bytes": 100288,
+    "sha256": "f24f1dcd5b8c40a299015b431f4584fee134ee5b92a305e6fa34e4123259c12d",
+    "headers": {
+      "content-type": "image/png",
+      "access-control-allow-origin": "*",
+      "etag": "sdgiscasvsnfh",
+      "last-modified": null
+    }
+  },
+  {
+    "file": "global-ctx-arcgis.json",
+    "requestedUrl": "https://astro.arcgis.com/arcgis/rest/services/OnMars/CTX/MapServer?f=pjson",
+    "finalUrl": "https://astro.arcgis.com/arcgis/rest/services/OnMars/CTX/MapServer?f=pjson",
+    "retrievedAt": "2026-11-15T01:38:33.017Z",
+    "status": 200,
+    "bytes": 5608,
+    "sha256": "bce4cb3727f38dfe8c7bf89513140d10eb0f8706a702b70ecbea5b65bd2093e6",
+    "headers": {
+      "content-type": "application/json",
+      "access-control-allow-origin": "*",
+      "etag": null,
+      "last-modified": null
+    }
+  },
+  {
+    "file": "global-ctx-trek-metadata.html",
+    "requestedUrl": "https://trek.nasa.gov/mars/TrekWS/rest/cat/metadata/fgdc/html?label=CTX_beta01_uncontrolled_5m_Caltech",
+    "finalUrl": "https://trek.nasa.gov/mars/TrekWS/rest/cat/metadata/fgdc/html?label=CTX_beta01_uncontrolled_5m_Caltech",
+    "retrievedAt": "2026-11-15T01:38:33.018Z",
+    "status": 200,
+    "bytes": 6455,
+    "sha256": "aa97b082f15c1350eec0dfd2f52047b91cae7ede6cda82b6eae71f260eb29a65",
+    "headers": {
+      "content-type": "text/html",
+      "access-control-allow-origin": null,
+      "etag": null,
+      "last-modified": null
+    }
+  },
+  {
+    "file": "global-ctx-trek-abstract.txt",
+    "requestedUrl": "https://trek.nasa.gov/mars/TrekWS/rest/cat/abstract?label=CTX_beta01_uncontrolled_5m_Caltech",
+    "finalUrl": "https://trek.nasa.gov/mars/TrekWS/rest/cat/abstract?label=CTX_beta01_uncontrolled_5m_Caltech",
+    "retrievedAt": "2026-11-15T01:38:33.020Z",
+    "status": 200,
+    "bytes": 1272,
+    "sha256": "7f8acc396aa9e6265df3c87d319759bfb804ea54ca23ad00430739d09ddd5adf",
+    "headers": {
+      "content-type": "text/plain",
+      "access-control-allow-origin": null,
+      "etag": null,
+      "last-modified": null
+    }
+  },
+  {
+    "file": "hirise-trek-metadata.html",
+    "requestedUrl": "https://trek.nasa.gov/mars/TrekWS/rest/cat/metadata/fgdc/html?label=JEZ_hirise_soc_006_orthoMosaic_25cm_Eqc_latTs0_lon0_first_dd",
+    "finalUrl": "https://trek.nasa.gov/mars/TrekWS/rest/cat/metadata/fgdc/html?label=JEZ_hirise_soc_006_orthoMosaic_25cm_Eqc_latTs0_lon0_first_dd",
+    "retrievedAt": "2026-11-15T01:38:33.021Z",
+    "status": 200,
+    "bytes": 5641,
+    "sha256": "600eda89a222f8c58e184fb0fe01e3e6cd139302bd8326186fc7510349634c90",
+    "headers": {
+      "content-type": "text/html",
+      "access-control-allow-origin": null,
+      "etag": null,
+      "last-modified": null
+    }
+  },
+  {
+    "file": "hirise-usgs-metadata.xml",
+    "requestedUrl": "https://asc-pds-services.s3.us-west-2.amazonaws.com/mosaic/mars2020_trn/HiRISE/JEZ_hirise_soc_006_orthoMosaic_25cm_Eqc_latTs0_lon0.xml",
+    "finalUrl": "https://asc-pds-services.s3.us-west-2.amazonaws.com/mosaic/mars2020_trn/HiRISE/JEZ_hirise_soc_006_orthoMosaic_25cm_Eqc_latTs0_lon0.xml",
+    "retrievedAt": "2026-11-15T01:38:33.022Z",
+    "status": 404,
+    "bytes": 353,
+    "sha256": "0a1735264c6c9a7cac82da1f068a06836264ce5fe7c103709c9855cf5cab5610",
+    "headers": {
+      "content-type": "application/xml",
+      "access-control-allow-origin": "*",
+      "etag": null,
+      "last-modified": null
+    }
+  },
+  {
+    "file": "hirise-usgs-first-metadata.xml",
+    "requestedUrl": "https://asc-pds-services.s3.us-west-2.amazonaws.com/mosaic/mars2020_trn/HiRISE/JEZ_hirise_soc_006_orthoMosaic_25cm_Eqc_latTs0_lon0_first.xml",
+    "finalUrl": "https://asc-pds-services.s3.us-west-2.amazonaws.com/mosaic/mars2020_trn/HiRISE/JEZ_hirise_soc_006_orthoMosaic_25cm_Eqc_latTs0_lon0_first.xml",
+    "retrievedAt": "2026-11-15T01:38:33.023Z",
+    "status": 200,
+    "bytes": 18495,
+    "sha256": "312208bab00962a222daf579c96168b3878e5319c367468986c9da4537d92ff6",
+    "headers": {
+      "content-type": "text/xml",
+      "access-control-allow-origin": "*",
+      "etag": "\"f2d16485c46f91111ff7e643334568bc\"",
+      "last-modified": "Thu, 10 Nov 2022 21:43:39 GMT"
+    }
+  },
+  {
+    "file": "hirise-usgs-first.lbl",
+    "requestedUrl": "https://asc-pds-services.s3.us-west-2.amazonaws.com/mosaic/mars2020_trn/HiRISE/JEZ_hirise_soc_006_orthoMosaic_25cm_Eqc_latTs0_lon0_first.lbl",
+    "finalUrl": "https://asc-pds-services.s3.us-west-2.amazonaws.com/mosaic/mars2020_trn/HiRISE/JEZ_hirise_soc_006_orthoMosaic_25cm_Eqc_latTs0_lon0_first.lbl",
+    "retrievedAt": "2026-11-15T01:38:33.023Z",
+    "status": 200,
+    "bytes": 1458,
+    "sha256": "bae9b7686951ba3ce580152b71bde1d5fcce0e09cfae724a9d49dc5084b64988",
+    "headers": {
+      "content-type": "binary/octet-stream",
+      "access-control-allow-origin": "*",
+      "etag": "\"13d890db4662851c669977dd322f0b88\"",
+      "last-modified": "Thu, 10 Nov 2022 21:40:46 GMT"
+    }
+  },
+  {
+    "file": "hirise-tile.png",
+    "requestedUrl": "https://trek.nasa.gov/tiles/Mars/EQ/JEZ_hirise_soc_006_orthoMosaic_25cm_Eqc_latTs0_lon0_first_dd/1.0.0/default/default028mm/13/3256/11713.png",
+    "finalUrl": "https://trek.nasa.gov/tiles/Mars/EQ/JEZ_hirise_soc_006_orthoMosaic_25cm_Eqc_latTs0_lon0_first_dd/1.0.0/default/default028mm/13/3256/11713.png",
+    "retrievedAt": "2026-11-15T01:38:33.024Z",
+    "status": 200,
+    "bytes": 61392,
+    "sha256": "feba6da125486948763868a063ca8980d3011141ae7bab14b836269e1daab3db",
+    "headers": {
+      "content-type": "image/png",
+      "access-control-allow-origin": "*",
+      "etag": "\"efd0-5ab9e36fa4c31\"",
+      "last-modified": "Thu, 30 Jul 2020 01:01:39 GMT"
+    }
+  },
+  {
+    "file": "mars-trek-services.html",
+    "requestedUrl": "https://trek.nasa.gov/mars/trekWS/",
+    "finalUrl": "https://trek.nasa.gov/mars/trekWS/",
+    "retrievedAt": "2026-11-15T01:38:33.025Z",
+    "status": 404,
+    "bytes": 196,
+    "sha256": "80c3fe2ae1062abf56456f52518bd670f9ec3917b7f85e152b347ac6b6faf880",
+    "headers": {
+      "content-type": "text/html; charset=iso-8859-1",
+      "access-control-allow-origin": null,
+      "etag": null,
+      "last-modified": null
+    }
+  },
+  {
+    "file": "mars-trek-mapservice-capabilities.body",
+    "requestedUrl": "https://trek.nasa.gov/mars/trekWS/MapService?request=GetCapabilities",
+    "finalUrl": "https://trek.nasa.gov/mars/trekWS/MapService?request=GetCapabilities",
+    "retrievedAt": "2026-11-15T01:38:33.025Z",
+    "status": 404,
+    "bytes": 196,
+    "sha256": "80c3fe2ae1062abf56456f52518bd670f9ec3917b7f85e152b347ac6b6faf880",
+    "headers": {
+      "content-type": "text/html; charset=iso-8859-1",
+      "access-control-allow-origin": null,
+      "etag": null,
+      "last-modified": null
+    }
+  },
+  {
+    "file": "caltech-global.html",
+    "requestedUrl": "https://murray-lab.caltech.edu/CTX/",
+    "retrievedAt": "2026-11-15T01:38:33.026Z",
+    "error": "TypeError: fetch failed",
+    "cause": "Error: unable to verify the first certificate; if the root CA is installed locally, try running Node.js with --use-system-ca"
+  }
+]

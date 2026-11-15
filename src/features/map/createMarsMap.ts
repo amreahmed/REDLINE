@@ -28,6 +28,9 @@ import { createMissionFeatures, missionFeatureStyle, missionTargetId } from './f
 import { createGridOverlayFeatures, emitMapCoordinatePick, gridOverlayStyle, gridOverlayVisible, validGridBounds } from './gridOverlay'
 import { createHypotheticalRouteFeatures, hypotheticalRouteStyle } from './routeOverlay'
 import type { HypotheticalRoute, RoutePoint } from '../routing/types'
+import type { GlobeImageryLayer } from '../../data/globeLayers'
+import { createGlobeMapImagery, geographicMapContext } from './globeMapImagery'
+import type { GlobeMapImageryStatus } from './globeMapImagery'
 
 type LayerRun = { abort: AbortController; status: LayerStatus; imageSupport: WeakMap<Tile, ImageSupport> }
 export type MarsMapController = {
@@ -37,6 +40,9 @@ export type MarsMapController = {
   refresh: () => void
   setActive: (active: boolean) => void
   enterContext: (atJezero: boolean, minimumZoom: number) => void
+  enterGeographicContext: (coordinate: readonly [number, number], distance: number) => void
+  setGlobeImagery: (layer: GlobeImageryLayer | null) => void
+  retryGlobeImagery: () => void
   focusJezero: () => void
   prepareJezeroApproach: () => void
   setApproachZoom: (zoom: number) => void
@@ -54,9 +60,12 @@ export type MarsMapController = {
 }
 
 /** Owns the renderer lifecycle; no terrain or physical measurement APIs. */
-export function createMarsMap(target: HTMLElement, onStatus: (id: LayerId, status: LayerStatus) => void, onView: (status: ViewStatus) => void, options: { keyboard?: boolean; onInspectTarget?: (id: TargetId) => void; onPickCoordinate?: (coordinate: [number, number]) => void; onControlledImageryReady?: (ready: boolean) => void } = {}): MarsMapController {
+export function createMarsMap(target: HTMLElement, onStatus: (id: LayerId, status: LayerStatus) => void, onView: (status: ViewStatus) => void, options: { keyboard?: boolean; onInspectTarget?: (id: TargetId) => void; onPickCoordinate?: (coordinate: [number, number]) => void; onControlledImageryReady?: (ready: boolean) => void; onGlobeImageryStatus?: (status: GlobeMapImageryStatus) => void } = {}): MarsMapController {
   const projection = createDisplayProjection()
-  const view = new View({ projection, resolutions: Array.from({ length: MAX_LEVEL + 1 }, (_, z) => 0.703125 / 2 ** z), extent: WORLD_EXTENT, constrainOnlyCenter: true, enableRotation: false })
+  // Extra HiRISE display levels are enabled only while that explicit source is
+  // selected. The original mission/terrain workspace keeps its existing limit.
+  const view = new View({ projection, resolutions: Array.from({ length: 18 }, (_, z) => 0.703125 / 2 ** z), maxZoom: MAX_LEVEL, extent: WORLD_EXTENT, constrainOnlyCenter: true, enableRotation: false })
+  let displayZoomLimit = MAX_LEVEL
   const layers = new Map<LayerId, FrameAwareTileLayer>()
   const runs = new Map<LayerId, LayerRun>()
   const missionSource = new VectorSource<Feature<Point>>({ wrapX: false })
@@ -81,6 +90,7 @@ export function createMarsMap(target: HTMLElement, onStatus: (id: LayerId, statu
     interactions: defaultInteractions({ altShiftDragRotate: false, pinchRotate: false, keyboard: options.keyboard }),
     maxTilesLoading: 8,
   })
+  let globeImagery: ReturnType<typeof createGlobeMapImagery> | undefined
   const inspectMarker = (event: MapBrowserEvent) => {
     if (disposed || !active) return
     const id = map.forEachFeatureAtPixel(event.pixel, (feature) => missionTargetId(feature), { layerFilter: (layer) => layer === missionLayer, hitTolerance: 10 })
@@ -197,7 +207,7 @@ export function createMarsMap(target: HTMLElement, onStatus: (id: LayerId, statu
     const zoom = view.getZoom()
     if (!center || zoom === undefined || disposed) return
     reportControlledImageryReady()
-    onView({ center: [center[0], center[1]], zoom, canZoomIn: zoom < MAX_LEVEL - 0.001, canZoomOut: zoom > 0.001 })
+    onView({ center: [center[0], center[1]], zoom, canZoomIn: zoom < displayZoomLimit - 0.001, canZoomOut: zoom > 0.001 })
     for (const definition of MARS_LAYERS) {
       const run = runs.get(definition.id)
       if (run) emit(definition, run)
@@ -252,6 +262,17 @@ export function createMarsMap(target: HTMLElement, onStatus: (id: LayerId, statu
     refresh,
     setActive: (value) => { if (disposed) return; active = value; missionLayer.setVisible(value); syncGridVisibility(); view.cancelAnimations(); map.getInteractions().forEach((interaction) => interaction.setActive(value)); reportControlledImageryReady(); if (value) refresh() },
     enterContext: (atJezero, minimumZoom) => { refresh(); if (atJezero) view.setCenter(jezeroCenter()); view.setZoom(atJezero ? minimumZoom : Math.max(minimumZoom, view.getZoom() ?? minimumZoom)); reportView() },
+    enterGeographicContext: (coordinate, distance) => { if (disposed) return; const context = geographicMapContext(coordinate, distance, map.getSize() as [number, number] ?? [800, 600]); view.cancelAnimations(); refresh(); view.setCenter(context.center); view.setZoom(context.zoom); reportView() },
+    setGlobeImagery: (layer) => {
+      if (disposed) return
+      displayZoomLimit = layer ? Math.max(MAX_LEVEL, layer.maxZoom) : MAX_LEVEL
+      view.setMaxZoom(displayZoomLimit)
+      if ((view.getZoom() ?? 0) > displayZoomLimit) view.setZoom(displayZoomLimit)
+      if (!globeImagery && layer) globeImagery = createGlobeMapImagery(map, projection, status => options.onGlobeImageryStatus?.(status))
+      globeImagery?.setLayer(layer)
+      reportView()
+    },
+    retryGlobeImagery: () => globeImagery?.retry(),
     focusJezero: () => { if (!disposed) { view.cancelAnimations(); view.setCenter(jezeroCenter()); view.setZoom(JEZERO_DETAIL_ZOOM); reportView() } },
     prepareJezeroApproach: () => { if (!disposed) { view.cancelAnimations(); for (const layer of layers.values()) layer.invalidateFrame(); refresh(); setApproachZoom(JEZERO_CONTEXT_ZOOM) } },
     setApproachZoom,
@@ -297,10 +318,11 @@ export function createMarsMap(target: HTMLElement, onStatus: (id: LayerId, statu
       if (center) emitMapCoordinatePick(center, active && !disposed, false, options.onPickCoordinate)
     },
     panBy: (horizontal, vertical) => { const resolution = view.getResolution() ?? 0; view.adjustCenter([horizontal * resolution * 128, -vertical * resolution * 128]); reportView() },
-    zoomBy: (delta) => { view.setZoom(Math.max(0, Math.min(MAX_LEVEL, (view.getZoom() ?? 0) + delta))); reportView() },
+    zoomBy: (delta) => { view.setZoom(Math.max(0, Math.min(displayZoomLimit, (view.getZoom() ?? 0) + delta))); reportView() },
     dispose: () => {
       if (disposed) return
       disposed = true
+      globeImagery?.dispose()
       reportControlledImageryReady()
       resizeObserver.disconnect()
       map.un('singleclick', inspectMarker)

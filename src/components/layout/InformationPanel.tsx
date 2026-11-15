@@ -12,12 +12,16 @@ import { TerrainInspection } from '../mission/TerrainInspection'
 import { useEffect, useRef } from 'react'
 import { ScientificValidation } from '../mission/ScientificValidation'
 import { LAYER_QUALIFICATIONS } from '../shared/scientificCopy'
+import type { GlobeWorkspace } from '../../features/globe/explorationTypes'
+import type { MarsPoi } from '../../data/marsPois'
+import { GlobeImageryDetails, GlobePoiDetails } from '../explorer/GlobeSourceDetails'
 
-export function InformationPanel({ explorer, visibility, statuses, target, inspectionSequence, scienceRequest = 0, planningGrid, onClose }: { explorer: ExplorerSummary; visibility: LayerVisibility; statuses: LayerStatuses; target?: ScienceTarget; inspectionSequence: number; scienceRequest?: number; planningGrid?: TerrainGrid; onClose: () => void }) {
+export function InformationPanel({ explorer, visibility, statuses, target, inspectionSequence, scienceRequest = 0, planningGrid, onClose, globeWorkspace, globePoi, onFlyGlobePoi }: { explorer: ExplorerSummary; visibility: LayerVisibility; statuses: LayerStatuses; target?: ScienceTarget; inspectionSequence: number; scienceRequest?: number; planningGrid?: TerrainGrid; onClose: () => void; globeWorkspace?: GlobeWorkspace; globePoi?: MarsPoi; onFlyGlobePoi?: () => void }) {
   const contentRef = useRef<HTMLDivElement>(null)
   useEffect(() => {
     if (target && contentRef.current) contentRef.current.scrollTop = 0
   }, [target, inspectionSequence])
+  useEffect(() => { if (globePoi && contentRef.current) { contentRef.current.scrollTop = 0; contentRef.current.querySelector<HTMLElement>('#globe-poi-detail-heading')?.focus({ preventScroll: true }) } }, [globePoi])
   useEffect(() => {
     if (scienceRequest && contentRef.current) {
       contentRef.current.scrollTop = 0
@@ -31,14 +35,16 @@ export function InformationPanel({ explorer, visibility, statuses, target, inspe
         <button className="icon-button drawer-close" type="button" aria-label="Close sources and status" onClick={onClose}><Icon name="close" size={20} /></button>
       </div>
       <div className="sources-content" ref={contentRef}>
+        {globePoi && <GlobePoiDetails poi={globePoi} onFly={() => onFlyGlobePoi?.()} canFly={globeWorkspace?.preferences.mode === 'imagery'} />}
         <ScientificValidation />
+        {globeWorkspace && <GlobeImageryDetails workspace={globeWorkspace} />}
         {target && <FeatureDetails target={target} />}
         {planningGrid && <PlanningTerrainDetails grid={planningGrid} />}
         <TerrainInspection target={target} />
         <section className="source-detail source-overview" aria-labelledby="globe-source-heading">
           <h3 id="globe-source-heading">NASA visual Mars overview</h3>
           <p className="source-mission">NASA / JPL-Caltech visual model</p>
-          <p className="source-state" role="status">{explorer.globe.message}</p>
+          <p className="source-state" role="status">{!globeWorkspace || globeWorkspace.preferences.mode === 'model' ? explorer.globe.message : 'Original NASA GLB retained as a separate visual mode in Layers.'}</p>
           <p className="context-qualification">Visual model · scientific orientation unverified</p>
           <details className="source-metadata"><summary>Model details & source links</summary>
             <p className="helper">Official glTF model, {(MARS_GLOBE.inspectedBytes / 1_000_000).toFixed(2)} MB at inspection, with embedded color and normal textures. Display lighting is illustrative.</p>

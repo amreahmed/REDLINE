@@ -14,6 +14,9 @@ import { frameMatches } from './frameReadiness'
 import type { HypotheticalRoute, RoutePoint } from '../routing/types'
 import { TERRAIN_SOURCE_HASH, TERRAIN_SOURCE_ID } from '../terrain/sampling'
 import { TERRAIN_GRID_BINARY_SHA256 } from '../terrain/terrainGrid'
+import { globeLayerById } from '../../data/globeLayers'
+import TileLayer from 'ol/layer/Tile'
+import WMTS from 'ol/source/WMTS'
 
 // Mock the DOM renderer only. Controller view, sources, layers and geometry are real OpenLayers objects.
 const runtime = vi.hoisted(() => ({ map: null as MapHarness | null }))
@@ -33,6 +36,8 @@ vi.mock('ol/Map', () => ({
     dispose = vi.fn()
     constructor(options: { view: View; layers: BaseLayer[] }) { this.view = options.view; this.layers = options.layers; runtime.map = this }
     getSize() { return [800, 600] }
+    getView() { return this.view }
+    addLayer(layer: BaseLayer) { this.layers.push(layer) }
     updateSize() {}
     getInteractions() { return [{ setActive: vi.fn() }] }
     on(name: string, callback: (event: { pixel: number[]; coordinate: number[] }) => void) { this.events.set(name, callback) }
@@ -61,6 +66,73 @@ const routePoint = (row: number, column: number): RoutePoint => ({ row, column, 
 const hypotheticalRoute: HypotheticalRoute = { id: 'shortest', name: 'Shortest path', points: [routePoint(714, 650), routePoint(714, 651)], distanceM: 25, visitedCells: 2, sourceId: TERRAIN_SOURCE_ID, sourceHash: TERRAIN_SOURCE_HASH, gridHash: TERRAIN_GRID_BINARY_SHA256, model: 'hypothetical-distance-only', referenceRadiusM: 3396190 }
 
 describe('controlled imagery and grid controller hooks', () => {
+  it('enables verified HiRISE detail levels only for its explicit imagery source and restores the mission limit', () => {
+    const viewStatus = vi.fn()
+    controller = createMarsMap(host, vi.fn(), viewStatus)
+    const map = runtime.map!
+    controller.enterGeographicContext([77.45, 18.44], 1.0015)
+    const center = [...map.view.getCenter()!]
+    controller.zoomBy(100)
+    expect(map.view.getZoom()).toBe(13)
+    controller.setGlobeImagery(globeLayerById('hirise'))
+    expect(viewStatus).toHaveBeenLastCalledWith(expect.objectContaining({ canZoomIn: true }))
+    controller.zoomBy(100)
+    expect(map.view.getZoom()).toBe(17)
+    expect(map.view.getResolution()).toBe(0.703125 / 2 ** 17)
+    expect(viewStatus).toHaveBeenLastCalledWith(expect.objectContaining({ canZoomIn: false }))
+    controller.setGlobeImagery(null)
+    expect(map.view.getZoom()).toBe(13)
+    expect(map.view.getCenter()).toEqual(center)
+  })
+  it('adds selected globe imagery without changing regional or mission overlays, preserves view and removes it on disposal', () => {
+    const status = vi.fn()
+    controller = createMarsMap(host, vi.fn(), vi.fn(), { onGlobeImageryStatus: status })
+    const map = runtime.map!
+    const original = [...map.layers]
+    controller.enterGeographicContext([190, -14.5], 2)
+    expect(map.view.getCenter()).toEqual([-170, -14.5])
+    const zoom = map.view.getZoom()
+    controller.setGlobeImagery(globeLayerById('globalCtx'))
+    expect(map.layers.slice(0, original.length)).toEqual(original)
+    const overlay = map.layers[original.length] as TileLayer<WMTS>
+    expect(overlay.getZIndex()).toBe(0.5)
+    expect(overlay.getVisible()).toBe(true)
+    expect(overlay.getSource()).toBeInstanceOf(WMTS)
+    expect(overlay.getSource()!.getTileGrid()!.getTileSize(0)).toBe(512)
+    expect(map.view.getCenter()).toEqual([-170, -14.5])
+    expect(map.view.getZoom()).toBe(zoom)
+    expect(status).toHaveBeenLastCalledWith(expect.objectContaining({ phase: 'loading' }))
+    const initialSource = overlay.getSource()!
+    controller.setGlobeImagery(globeLayerById('hirise'))
+    expect(overlay.getSource()).not.toBe(initialSource)
+    expect(overlay.getSource()!.getTileGrid()!.getTileSize(0)).toBe(256)
+    expect(status).toHaveBeenLastCalledWith(expect.objectContaining({ phase: 'outside' }))
+    expect(map.view.getCenter()).toEqual([-170, -14.5])
+    const changedSource = overlay.getSource()!
+    controller.retryGlobeImagery()
+    expect(overlay.getSource()).not.toBe(changedSource)
+    expect(overlay.getVisible()).toBe(true)
+    controller.setGlobeImagery(null)
+    expect(overlay.getVisible()).toBe(false)
+    expect(overlay.getSource()).toBeNull()
+    expect(map.layers.slice(0, original.length)).toEqual(original)
+    controller.dispose()
+    expect(map.layers).not.toContain(overlay)
+    controller.setGlobeImagery(globeLayerById('globalCtx'))
+    expect(map.layers).not.toContain(overlay)
+  })
+
+  it('preserves globe coordinates when returning to the existing regional workflow', () => {
+    controller = createMarsMap(host, vi.fn(), vi.fn())
+    const map = runtime.map!
+    controller.enterGeographicContext([77.45088572, 18.444627153952787], 1.0015)
+    expect(map.view.getCenter()![0]).toBeCloseTo(77.45088572, 10)
+    expect(map.view.getCenter()![1]).toBe(18.444627153952787)
+    expect(map.view.getZoom()).toBeLessThanOrEqual(13)
+    controller.focusGrid(gridBounds)
+    expect(map.view.getCenter()![0]).toBeCloseTo(77.3, 10)
+    expect(map.view.getCenter()![1]).toBeCloseTo(18.4, 10)
+  })
   it('preserves original layers, renders controlled CTX above preliminary, and applies detail opacity to both', () => {
     controller = createMarsMap(host, vi.fn(), vi.fn())
     const map = runtime.map!

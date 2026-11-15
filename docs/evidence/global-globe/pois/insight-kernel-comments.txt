@@ -1,0 +1,71 @@
+
+INSIGHT Target Landing Site ops181206 (actual site based on the MRO HIRISE image taken on Dec 6, 2018) Coordinates SPK File.
+===========================================================================
+
+     Created by Boris Semenov, NAIF/JPL, Mon Dec 17 08:52:39 PST 2018
+
+
+Objects in the Ephemeris
+--------------------------------------------------------
+
+     This file contains the location of the INSIGHT target landing site
+     ops181206 (actual site based on the MRO HIRISE image taken on Dec 6, 2018) on the surface of Mars. The landing
+     site NAIF ID and name are -189900 and 'INSIGHT_LANDING_SITE'.
+
+
+Approximate Time Coverage
+--------------------------------------------------------
+
+     The coverage of this file is:
+
+        COVERAGE BEGIN TIME (TDB)     COVERAGE END TIME (TDB)
+        -------------------------     ------------------------
+        2000 JAN 01 00:00:00.000      2100 JAN 01 00:00:00.000
+
+
+Site Coordinates
+--------------------------------------------------------
+
+     This file contains the landing site location defined by with the
+     following Gaussian coordinates:
+
+        Lon =  135.623447 degrees East
+        Lat =  4.555681 degrees North
+        Alt =  -2.986224 km
+
+     The corresponding XYZ coordinates were computed by PINPOINT for
+     the triaxial ellipsoid surface defined by the body 499 radii
+     from PcK file 'pck00010.tpc'.
+
+
+Pedigree
+--------------------------------------------------------
+
+     This file was created using PINPOINT Utility Program.
+
+
+Contacts
+--------------------------------------------------------
+
+     If you have any questions regarding this data contact
+
+        Boris V. Semenov, NAIF/JPL,
+        (818)-354-8136,
+        Boris.Semenov@jpl.nasa.gov
+
+
+Appendix. Inputs to Pinpoint
+===========================================================================
+
+        \begindata
+
+           SITES     = ( 'LS' )
+
+           LS_CENTER = 499
+           LS_FRAME  = 'IAU_MARS'
+           LS_IDCODE = -189900
+           LS_LATLON = ( 4.555681 135.623447 -2.986224 )
+           LS_BOUNDS = ( @2001-JAN-01, @2100-JAN-01 )
+
+        \begintext
+

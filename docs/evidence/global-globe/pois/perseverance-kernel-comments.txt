@@ -1,0 +1,71 @@
+
+M2020 Landing Site JEZ (actual, 2021-03-03 solution) Coordinates SPK File.
+===========================================================================
+
+     Created by Boris Semenov, NAIF/JPL, Wed Mar 10 07:41:39 PST 2021
+
+
+Objects in the Ephemeris
+--------------------------------------------------------
+
+     This file contains the location of the M2020 landing site
+     JEZ (actual, 2021-03-03 solution) on the surface of Mars. The landing
+     site NAIF ID and name are -168900 and 'M2020_LANDING_SITE'.
+
+
+Approximate Time Coverage
+--------------------------------------------------------
+
+     The coverage of this file is:
+
+        COVERAGE BEGIN TIME (TDB)     COVERAGE END TIME (TDB)
+        -------------------------     ------------------------
+        2000 JAN 01 00:00:00.000      2100 JAN 01 00:00:00.000
+
+
+Site Coordinates
+--------------------------------------------------------
+
+     This file contains the landing site location defined by with the
+     following Gaussian coordinates:
+
+        Lon =  77.45088572 degrees East
+        Lat =  18.64875816 degrees North
+        Alt =  -2.236421 km
+
+     The corresponding XYZ coordinates were computed by PINPOINT for
+     the triaxial ellipsoid surface defined by the body 499 radii
+     from PcK file 'pck00010.tpc'.
+
+
+Pedigree
+--------------------------------------------------------
+
+     This file was created using PINPOINT Utility Program.
+
+
+Contacts
+--------------------------------------------------------
+
+     If you have any questions regarding this data contact
+
+        Boris V. Semenov, NAIF/JPL,
+        (818)-354-8136,
+        Boris.Semenov@jpl.nasa.gov
+
+
+Appendix. Inputs to Pinpoint
+===========================================================================
+
+        \begindata
+
+           SITES     = ( 'LS' )
+
+           LS_CENTER = 499
+           LS_FRAME  = 'IAU_MARS'
+           LS_IDCODE = -168900
+           LS_LATLON = ( 18.64875816 77.45088572 -2.236421 )
+           LS_BOUNDS = ( @2000-JAN-01, @2100-JAN-01 )
+
+        \begintext
+

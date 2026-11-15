@@ -1,0 +1,128 @@
+[
+  {
+    "id": "olympus",
+    "name": "Olympus Mons",
+    "featureId": "4453",
+    "network": {
+      "id": "25402",
+      "name": "MDIM 2.1"
+    },
+    "coordinateReference": "Planetocentric, +East, 0 - 360",
+    "latitude": 18.65,
+    "longitude": 226.2,
+    "selectedGeometryRows": [
+      "Northmost Latitude 23.68",
+      "Southmost Latitude 13.48",
+      "Eastmost Longitude 232.20",
+      "Westmost Longitude 220.76",
+      "Diameter 610.13 km",
+      "Center Latitude 18.65",
+      "Center Longitude 226.20"
+    ]
+  },
+  {
+    "id": "valles-marineris",
+    "name": "Valles Marineris",
+    "featureId": "6288",
+    "network": {
+      "id": "25547",
+      "name": "MDIM 2.1"
+    },
+    "coordinateReference": "Planetocentric, +East, 0 - 360",
+    "latitude": -14.01,
+    "longitude": 301.41,
+    "selectedGeometryRows": [
+      "Northmost Latitude -2.78",
+      "Southmost Latitude -18.33",
+      "Eastmost Longitude 331.15",
+      "Westmost Longitude 267.60",
+      "Diameter 3761.28 km",
+      "Center Latitude -14.01",
+      "Center Longitude 301.41"
+    ]
+  },
+  {
+    "id": "elysium-mons",
+    "name": "Elysium Mons",
+    "featureId": "1783",
+    "network": {
+      "id": "25474",
+      "name": "MDIM 2.1"
+    },
+    "coordinateReference": "Planetocentric, +East, 0 - 360",
+    "latitude": 25.02,
+    "longitude": 147.21,
+    "selectedGeometryRows": [
+      "Northmost Latitude 28.26",
+      "Southmost Latitude 21.78",
+      "Eastmost Longitude 150.82",
+      "Westmost Longitude 143.59",
+      "Diameter 401.00 km",
+      "Center Latitude 25.02",
+      "Center Longitude 147.21"
+    ]
+  },
+  {
+    "id": "gale",
+    "name": "Gale",
+    "featureId": "2071",
+    "network": {
+      "id": "24129",
+      "name": "MDIM 2.1"
+    },
+    "coordinateReference": "Planetocentric, +East, 0 - 360",
+    "latitude": -5.37,
+    "longitude": 137.81,
+    "selectedGeometryRows": [
+      "Northmost Latitude -4.07",
+      "Southmost Latitude -6.67",
+      "Eastmost Longitude 139.12",
+      "Westmost Longitude 136.51",
+      "Diameter 154.08 km",
+      "Center Latitude -5.37",
+      "Center Longitude 137.81"
+    ]
+  },
+  {
+    "id": "jezero",
+    "name": "Jezero",
+    "featureId": "14300",
+    "network": {
+      "id": "24765",
+      "name": "MDIM 2.1"
+    },
+    "coordinateReference": "Planetocentric, +East, 0 - 360",
+    "latitude": 18.41,
+    "longitude": 77.69,
+    "selectedGeometryRows": [
+      "Northmost Latitude 18.81",
+      "Southmost Latitude 18.01",
+      "Eastmost Longitude 78.11",
+      "Westmost Longitude 77.27",
+      "Diameter 47.52 km",
+      "Center Latitude 18.41",
+      "Center Longitude 77.69"
+    ]
+  },
+  {
+    "id": "hellas",
+    "name": "Hellas Planitia",
+    "featureId": "2432",
+    "network": {
+      "id": "25620",
+      "name": "MDIM 2.1"
+    },
+    "coordinateReference": "Planetocentric, +East, 0 - 360",
+    "latitude": -42.43,
+    "longitude": 70.5,
+    "selectedGeometryRows": [
+      "Northmost Latitude -27.86",
+      "Southmost Latitude -55.42",
+      "Eastmost Longitude 96.12",
+      "Westmost Longitude 45.58",
+      "Diameter 2299.16 km",
+      "Center Latitude -42.43",
+      "Center Longitude 70.50"
+    ]
+  }
+]

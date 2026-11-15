@@ -1,0 +1,207 @@
+[
+  {
+    "name": "coordinate-guidance",
+    "requestedUrl": "https://planetarynames.wr.usgs.gov/Page/MARS/system",
+    "finalUrl": "https://planetarynames.wr.usgs.gov/Page/MARS/system",
+    "status": 200,
+    "retrievedAt": "2026-11-14T23:52:03.572Z",
+    "contentType": "text/html; charset=utf-8",
+    "bytes": 32881,
+    "sha256": "cee8dc6d2dfb7af69547f6b9e5be65a37389b644d591e90ce2072091fee1ae9f"
+  },
+  {
+    "name": "olympus",
+    "requestedUrl": "https://planetarynames.wr.usgs.gov/Feature/4453",
+    "finalUrl": "https://planetarynames.wr.usgs.gov/Feature/4453",
+    "status": 200,
+    "retrievedAt": "2026-11-14T23:52:03.574Z",
+    "contentType": "text/html; charset=utf-8",
+    "bytes": 52537,
+    "sha256": "35671c2e89284303025b82e99d28c6e78385ade515e0d057261a52ce7a0219b7"
+  },
+  {
+    "name": "elysium-mons",
+    "requestedUrl": "https://planetarynames.wr.usgs.gov/Feature/1783",
+    "finalUrl": "https://planetarynames.wr.usgs.gov/Feature/1783",
+    "status": 200,
+    "retrievedAt": "2026-11-14T23:52:03.576Z",
+    "contentType": "text/html; charset=utf-8",
+    "bytes": 47943,
+    "sha256": "5bb6acde3947f86a5b13bc49d38b83be2fd4c0e0f03f43ddc949c65d90feb932"
+  },
+  {
+    "name": "valles-marineris",
+    "requestedUrl": "https://planetarynames.wr.usgs.gov/Feature/6288",
+    "finalUrl": "https://planetarynames.wr.usgs.gov/Feature/6288",
+    "status": 200,
+    "retrievedAt": "2026-11-14T23:52:03.575Z",
+    "contentType": "text/html; charset=utf-8",
+    "bytes": 67242,
+    "sha256": "4465057996e048fcfc0d35a571df3b80ae97da59924841b2b543a3a7a4b3d9e9"
+  },
+  {
+    "name": "gale",
+    "requestedUrl": "https://planetarynames.wr.usgs.gov/Feature/2071",
+    "finalUrl": "https://planetarynames.wr.usgs.gov/Feature/2071",
+    "status": 200,
+    "retrievedAt": "2026-11-14T23:52:03.577Z",
+    "contentType": "text/html; charset=utf-8",
+    "bytes": 83133,
+    "sha256": "f1552484ff8ef4be358d64f227659954313b97f8a8c2b6469c848277866e271e"
+  },
+  {
+    "name": "jezero",
+    "requestedUrl": "https://planetarynames.wr.usgs.gov/Feature/14300",
+    "finalUrl": "https://planetarynames.wr.usgs.gov/Feature/14300",
+    "status": 200,
+    "retrievedAt": "2026-11-14T23:52:03.578Z",
+    "contentType": "text/html; charset=utf-8",
+    "bytes": 82113,
+    "sha256": "9873e065abaa1f6efbca406a19fdf0acd754c49248b8e1cedab3dae9a5148c25"
+  },
+  {
+    "name": "mileage",
+    "requestedUrl": "https://nssdc.gsfc.nasa.gov/planetary/mars_mileage_guide.html",
+    "finalUrl": "https://nssdc.gsfc.nasa.gov/planetary/mars_mileage_guide.html",
+    "status": 200,
+    "retrievedAt": "2026-11-14T23:52:03.510Z",
+    "contentType": "text/html; charset=UTF-8",
+    "bytes": 16837,
+    "sha256": "7ffc600b0dc1edf0bb51f03d9e5dc9775b013b80ec855e12756743db255c437b"
+  },
+  {
+    "name": "viking-mission",
+    "requestedUrl": "https://science.nasa.gov/mission/viking/",
+    "finalUrl": "https://science.nasa.gov/mission/viking/",
+    "status": 200,
+    "retrievedAt": "2026-11-15T00:17:13.352Z",
+    "contentType": "text/html; charset=UTF-8",
+    "bytes": 323358,
+    "sha256": "ce35fa851e6fed5f38cec578b7d9bee89196d60718540bcdc0d97195c9c41065"
+  },
+  {
+    "name": "spirit-mission",
+    "requestedUrl": "https://science.nasa.gov/mission/mer-spirit/",
+    "finalUrl": "https://science.nasa.gov/mission/mer-spirit/",
+    "status": 200,
+    "retrievedAt": "2026-11-15T00:17:13.416Z",
+    "contentType": "text/html; charset=UTF-8",
+    "bytes": 307215,
+    "sha256": "ae3b2ec9eccf1d3427532dac6001a41fca0747beaf7beed7224a685c8b5b6a7c"
+  },
+  {
+    "name": "opportunity-mission",
+    "requestedUrl": "https://science.nasa.gov/mission/mer-opportunity/",
+    "finalUrl": "https://science.nasa.gov/mission/mer-opportunity/",
+    "status": 200,
+    "retrievedAt": "2026-11-15T00:17:13.417Z",
+    "contentType": "text/html; charset=UTF-8",
+    "bytes": 327972,
+    "sha256": "fe8536dc7ddb54ffe190cd6316934a97205e0fb74144cf0a2e9a54c10aabb75a"
+  },
+  {
+    "name": "insight-mission",
+    "requestedUrl": "https://science.nasa.gov/mission/insight/",
+    "finalUrl": "https://science.nasa.gov/mission/insight/",
+    "status": 200,
+    "retrievedAt": "2026-11-15T00:17:13.421Z",
+    "contentType": "text/html; charset=UTF-8",
+    "bytes": 324510,
+    "sha256": "7ccdb97b1cb0c61527057afc260ec984d2e32160d920de82e123d6eb55c3354b"
+  },
+  {
+    "name": "mer-catalog",
+    "requestedUrl": "https://pds-geosciences.wustl.edu/mer/mer1-m-pancam-3-radcal-sci-v2/mer1pc_1002/catalog/mission.cat",
+    "finalUrl": "https://pds-geosciences.wustl.edu/mer/mer1-m-pancam-3-radcal-sci-v2/mer1pc_1002/catalog/mission.cat",
+    "status": 200,
+    "retrievedAt": "2026-11-15T00:17:13.418Z",
+    "contentType": "text/plain",
+    "bytes": 37346,
+    "sha256": "b630607cbd6de6e66b04d50158375213af5c8f4217a41559d8c56e67591ab251"
+  },
+  {
+    "name": "msl-spk-index",
+    "requestedUrl": "https://naif.jpl.nasa.gov/pub/naif/MSL/kernels/spk/",
+    "finalUrl": "https://naif.jpl.nasa.gov/pub/naif/MSL/kernels/spk/",
+    "status": 200,
+    "retrievedAt": "2026-11-15T00:17:13.419Z",
+    "contentType": "text/html;charset=UTF-8",
+    "bytes": 27457,
+    "sha256": "ddabbf75a3ff2fa03b955b66e29608da46cee9fce2f6e386405dbd72a372b322"
+  },
+  {
+    "name": "mars24-landers",
+    "requestedUrl": "https://www.giss.nasa.gov/tools/mars24/help/landers.html",
+    "status": 200,
+    "retrievedAt": "2026-11-15T00:17:14.576Z",
+    "capture": "PowerShell Invoke-WebRequest Content saved as UTF-8 text; raw Node TLS failed before a response",
+    "savedBytes": 26721,
+    "sha256": "201fd7ce3585b212c00b2ca62e1eaf9d0f565fa565fd001d2a2264fb3e18c75c"
+  },
+  {
+    "name": "msl_ls_ops120808_iau2000_v1.bsp",
+    "requestedUrl": "https://naif.jpl.nasa.gov/pub/naif/MSL/kernels/spk/msl_ls_ops120808_iau2000_v1.bsp",
+    "finalUrl": "https://naif.jpl.nasa.gov/pub/naif/MSL/kernels/spk/msl_ls_ops120808_iau2000_v1.bsp",
+    "status": 200,
+    "retrievedAt": "2026-11-15T00:27:45.874Z",
+    "bytes": 7168,
+    "sha256": "0dc0443caac69d0550b6233346fa4c505e1be378354d2bb676e1a32668f1f250"
+  },
+  {
+    "name": "pathfinder-spk-index",
+    "requestedUrl": "https://naif.jpl.nasa.gov/pub/naif/MPF/kernels/spk/",
+    "finalUrl": "https://naif.jpl.nasa.gov/pub/naif/MPF/kernels/spk/",
+    "status": 404,
+    "retrievedAt": "2026-11-15T00:32:31.536Z",
+    "bytes": 196,
+    "sha256": "80c3fe2ae1062abf56456f52518bd670f9ec3917b7f85e152b347ac6b6faf880"
+  },
+  {
+    "name": "insight-spk-index",
+    "requestedUrl": "https://naif.jpl.nasa.gov/pub/naif/INSIGHT/kernels/spk/",
+    "finalUrl": "https://naif.jpl.nasa.gov/pub/naif/INSIGHT/kernels/spk/",
+    "status": 200,
+    "retrievedAt": "2026-11-15T00:32:31.482Z",
+    "bytes": 15847,
+    "sha256": "f02e4b446e8676eaed358ce1f4ee1df72d4baab6d3814aa33c8e074c9db59257"
+  },
+  {
+    "name": "insight_ls_ops181206_iau2000_v1.bsp",
+    "requestedUrl": "https://naif.jpl.nasa.gov/pub/naif/INSIGHT/kernels/spk/insight_ls_ops181206_iau2000_v1.bsp",
+    "finalUrl": "https://naif.jpl.nasa.gov/pub/naif/INSIGHT/kernels/spk/insight_ls_ops181206_iau2000_v1.bsp",
+    "status": 200,
+    "retrievedAt": "2026-11-15T00:36:16.512Z",
+    "bytes": 7168,
+    "sha256": "0cd85240c1b1fea902a6739fd4a1cec63e58a9d68418a2607b9f9edfd22fd4f2"
+  },
+  {
+    "name": "hellas",
+    "requestedUrl": "https://planetarynames.wr.usgs.gov/Feature/2432",
+    "finalUrl": "https://planetarynames.wr.usgs.gov/Feature/2432",
+    "status": 200,
+    "retrievedAt": "2026-11-15T00:46:00.002Z",
+    "contentType": "text/html; charset=utf-8",
+    "bytes": 48674,
+    "sha256": "fc186d634cef77f33daefb0e11a8b9acac2c3d3e96b1716987bd3bde36682f37"
+  },
+  {
+    "name": "curiosity-mission",
+    "requestedUrl": "https://science.nasa.gov/mission/msl-curiosity/",
+    "finalUrl": "https://science.nasa.gov/mission/msl-curiosity/",
+    "status": 200,
+    "retrievedAt": "2026-11-15T00:46:01.108Z",
+    "contentType": "text/html; charset=UTF-8",
+    "bytes": 354396,
+    "sha256": "2bc3df2f6bddd3be5a88bfb42cbac7a87de73b5ebc7ea40f438f3e9c28168037"
+  },
+  {
+    "name": "perseverance-mission",
+    "requestedUrl": "https://science.nasa.gov/mission/mars-2020-perseverance/",
+    "finalUrl": "https://science.nasa.gov/mission/mars-2020-perseverance/",
+    "status": 200,
+    "retrievedAt": "2026-11-15T00:46:01.445Z",
+    "contentType": "text/html; charset=UTF-8",
+    "bytes": 364779,
+    "sha256": "ed9770ba7ed9af00eb156d7456028eec749b701c4f825de616ed21d02e627c7a"
+  }
+]

@@ -17,9 +17,11 @@ type MissionControlProps = {
   missionPlanner: ReactNode
   activeSection: MissionSection
   onClose: () => void
+  globeLocations?: ReactNode
+  globeLayers?: ReactNode
 }
 
-export function MissionControl({ explorer, visibility, statuses, onToggle, onRetry, missionPlanner, activeSection, onClose }: MissionControlProps) {
+export function MissionControl({ explorer, visibility, statuses, onToggle, onRetry, missionPlanner, activeSection, onClose, globeLocations, globeLayers }: MissionControlProps) {
   const sectionHeading = activeSection === 'explore' ? 'Explore' : activeSection === 'layers' ? 'Map layers' : 'Mission endpoints'
   const transitionMessage = explorer.phase === 'flying-to-jezero' ? 'Flying to Jezero…' : explorer.phase === 'entering-map' ? 'Opening map context…' : explorer.phase === 'entering-overview' ? 'Returning to the Mars overview…' : null
   return (
@@ -30,6 +32,7 @@ export function MissionControl({ explorer, visibility, statuses, onToggle, onRet
       </div>
       <div className="mission-sections">
       <div id="mission-explore-section" className="mission-section-content" hidden={activeSection !== 'explore'}>
+      {globeLocations}
       <section className="panel-section region-section" aria-labelledby="region-heading">
         <div className="section-title flex items-center justify-between">
           <h3 id="region-heading">Exploration destination</h3>
@@ -51,6 +54,7 @@ export function MissionControl({ explorer, visibility, statuses, onToggle, onRet
       </section>
       </div>
       <div id="mission-layers-section" className="mission-section-content" hidden={activeSection !== 'layers'}>
+      {globeLayers}
       <section className="panel-section" aria-labelledby="layers-heading">
         <div className="section-title flex items-center justify-between">
           <h3 id="layers-heading">Imagery selection</h3>
