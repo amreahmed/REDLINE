@@ -22,7 +22,7 @@ export type MissionPlanningProps = {
   gridNotice: string | null
   canPick: boolean
   onOpenPlanning: () => void
-  onAssignGridCell: (role: EndpointRole, row: number, column: number) => void
+  onAssignGridCell: (role: EndpointRole, row: number, column: number) => void | Promise<void>
   onBeginPickRole: (role: EndpointRole) => void
   onUseCenter: () => void
   onCancelPick: () => void
@@ -120,9 +120,9 @@ export function MissionPlanningExperience({
   }
 
   // Presets
-  const applyPreset = (oR: number, oC: number, dR: number, dC: number) => {
-    onAssignGridCell('origin', oR, oC)
-    onAssignGridCell('destination', dR, dC)
+  const applyPreset = async (oR: number, oC: number, dR: number, dC: number) => {
+    await onAssignGridCell('origin', oR, oC)
+    await onAssignGridCell('destination', dR, dC)
     setOriginRow(String(oR))
     setOriginCol(String(oC))
     setDestRow(String(dR))

@@ -46,11 +46,13 @@ export function useGridPlanning() {
       activeGrid = await load()
     }
     if (!activeGrid) return
-    const result = assignGridEndpoint(activeGrid, selection, role, row, column)
-    setNotice(result.error ?? `Hypothetical ${role} selected at native row ${row}, column ${column}.`)
-    setSelection(result.selection)
-    if (!result.error) setPickRole(null)
-  }, [terrain, selection])
+    setSelection(prevSelection => {
+      const result = assignGridEndpoint(activeGrid, prevSelection, role, row, column)
+      setNotice(result.error ?? `Hypothetical ${role} selected at native row ${row}, column ${column}.`)
+      return result.selection
+    })
+    setPickRole(null)
+  }, [terrain])
 
   const pickCoordinate = useCallback((coordinate: readonly [number, number]) => {
     if (terrain.phase !== 'ready' || !pickRole) return
