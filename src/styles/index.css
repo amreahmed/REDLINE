@@ -78,6 +78,25 @@ button:hover { background: var(--glass-card-hover); }
 button:disabled { opacity: .5; cursor: not-allowed; }
 button, a, select, input, summary { -webkit-tap-highlight-color: transparent; }
 button:focus-visible, a:focus-visible, select:focus-visible, input:focus-visible, summary:focus-visible { outline: 2px solid var(--color-science); outline-offset: 3px; }
+select, option, optgroup {
+  background-color: #06060a !important;
+  color: #f7f7fa !important;
+}
+select option {
+  background-color: #06060a !important;
+  color: #f7f7fa !important;
+  padding: 8px 12px;
+}
+select optgroup {
+  background-color: #020204 !important;
+  color: #9fa0aa !important;
+  font-weight: 700;
+  padding: 6px 8px;
+}
+select option:checked {
+  background-color: #ff2a3b !important;
+  color: #ffffff !important;
+}
 [hidden] { display: none !important; }
 .app-shell {
   height: 100dvh;
@@ -376,7 +395,7 @@ summary::marker { color: var(--color-science); }
 .grid-cell-fields { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); align-items: end; gap: 12px; margin: 20px 0 24px; }
 .grid-cell-fields > div { min-width: 0; }
 .field-label { display: block; color: var(--color-muted); font-size: 13px; line-height: 1.5; margin-bottom: 8px; font-weight: 500; }
-input[type="number"], input[type="search"], input[type="datetime-local"], select {
+input[type="number"], input[type="search"], input[type="datetime-local"] {
   width: 100%;
   min-width: 0;
   min-height: 44px;
@@ -385,6 +404,18 @@ input[type="number"], input[type="search"], input[type="datetime-local"], select
   border-radius: var(--radius-control);
   background: var(--glass-card);
   color: var(--color-ink);
+  font-size: 14px;
+  transition: var(--transition-smooth);
+}
+select {
+  width: 100%;
+  min-width: 0;
+  min-height: 44px;
+  padding: 10px 14px;
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-control);
+  background-color: #06060a !important;
+  color: var(--color-ink) !important;
   font-size: 14px;
   transition: var(--transition-smooth);
 }
