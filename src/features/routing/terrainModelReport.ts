@@ -2,8 +2,9 @@ import type { TerrainAnalysis } from '../terrain/modelTypes'
 import type { TerrainComparison } from './terrainRoutes'
 import hrscManifest from '../../../public/data/hrsc-terrain-model.json'
 import { parseHrscModelManifest } from '../terrain/hrscModel'
+import type { TravelTimeReport } from './travelTimeReport'
 
-export function terrainModelReport(analysis: TerrainAnalysis, comparison: TerrainComparison | null) {
+export function terrainModelReport(analysis: TerrainAnalysis, comparison: TerrainComparison | null, travelTime?: TravelTimeReport) {
   return {
     reportType: analysis.grid.source.authorization === 'synthetic-test' ? 'REDLINE synthetic test DEM model' : 'REDLINE qualified HRSC DEM model',
     scientificStatus: 'physical-terrain-unverified',
@@ -21,6 +22,7 @@ export function terrainModelReport(analysis: TerrainAnalysis, comparison: Terrai
       search: 'Eight neighbors, no diagonal corner cutting through excluded flanks or restricted directional flank movements. Contracted source-sphere distance heuristic; all admissible costs are at least horizontal distance.',
     },
     routes: comparison,
+    ...(travelTime ? { travelTime } : {}),
     limitations: [
       analysis.grid.source.qualification,
       'Physical Mars slopes, terrain costs, actual traversability, safety and precise named-feature routing remain unverified. These paths are hypothetical native-grid model outputs.',

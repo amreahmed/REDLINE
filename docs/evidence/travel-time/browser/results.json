@@ -1,0 +1,91 @@
+{
+  "url": "http://127.0.0.1:4174/",
+  "browser": "fresh isolated headless Chromium",
+  "timezone": "Africa/Cairo",
+  "checks": [
+    "Existing geographic globe navigation works",
+    "Original 65,536 CTX cells and endpoints preserved; CTX ETA unavailable",
+    "Unavailable source cannot show ETA; retry restores empty configuration",
+    "Both actual HRSC paths have provisional terrain-dependent segment ETA and variable speeds",
+    "Route selection updates the displayed ETA for its exact path",
+    "Applying mobility profile changes both ETAs without A* work or geometry changes",
+    "Earth UTC arrival ignores browser timezone; explicit hold changes arrival, not movement speed",
+    "Invalid drafts fail closed; custom roughness and speed scenarios recalculate existing paths",
+    "Timeline pages exact native movements and resets on route selection",
+    "Timing breakdown, inherited route limits, scenarios, source and limitations remain accessible",
+    "Endpoint changes clear stale ETA and arrival; new route generates a new exact estimate",
+    "Unknown support blocks by default; explicit policy preserves null metrics and assumed speed",
+    "tablet: readable aligned fields, no overflow and keyboard configuration access",
+    "mobile: readable aligned fields, no overflow and keyboard configuration access",
+    "narrow-mobile: readable aligned fields, no overflow and keyboard configuration access",
+    "Clearing departure removes arrival while retaining route duration",
+    "Both map workflows remain functional; CTX never borrows HRSC ETA",
+    "Scientific Partial status and all unresolved physical gates preserved",
+    "No page exceptions; real NASA imagery loaded; only expected injected 503 console error"
+  ],
+  "pageErrors": [],
+  "consoleErrors": [
+    "Failed to load resource: the server responded with a status of 503 (Service Unavailable)"
+  ],
+  "tileResponses": 56,
+  "screenshots": [
+    "desktop-eta.png",
+    "desktop-eta-arrival.png",
+    "desktop-segment-timeline.png",
+    "tablet-eta.png",
+    "tablet-travel-configuration.png",
+    "mobile-eta.png",
+    "mobile-travel-configuration.png",
+    "narrow-mobile-eta.png",
+    "narrow-mobile-travel-configuration.png"
+  ],
+  "exports": [
+    "survey-baseline.json",
+    "transit-profile.json",
+    "departure-utc.json",
+    "explicit-hold.json",
+    "custom-assumptions.json",
+    "changed-endpoint-pending.json",
+    "changed-endpoint.json",
+    "explicit-unknown-support.json"
+  ],
+  "terrainWorkersStarted": 4,
+  "screenshotHashes": [
+    {
+      "file": "desktop-eta.png",
+      "sha256": "1eb13121bb11e801fd9f984f42f73ca0e5ff400e4b8fbcc38d03fee2563fe206"
+    },
+    {
+      "file": "desktop-eta-arrival.png",
+      "sha256": "c3c91e3ab27513ae3513397201e0f1c8bafe9517c986416d7a294cd6c959cacd"
+    },
+    {
+      "file": "desktop-segment-timeline.png",
+      "sha256": "3196b5d9f7a905fea7d3337fc783e8d8f4b8ea5983383ba09953a7ac0896c8b5"
+    },
+    {
+      "file": "tablet-eta.png",
+      "sha256": "42d1cccc93277a8265f2471868a844465d21c02d31f97dc061a717ff030129d2"
+    },
+    {
+      "file": "tablet-travel-configuration.png",
+      "sha256": "a8fb53496683a904ff98e06acb45ffe95cd67294935d7e2c71c6ff7bd63a3adb"
+    },
+    {
+      "file": "mobile-eta.png",
+      "sha256": "c7fd972d0033ffe8fb9b6df4c59e5b08c7024320f5403bda68bd60a1a8cfdde5"
+    },
+    {
+      "file": "mobile-travel-configuration.png",
+      "sha256": "1b292549cc453e47b81e0f56c784778cd31d23c9d7978d77886669f19791cf45"
+    },
+    {
+      "file": "narrow-mobile-eta.png",
+      "sha256": "a14ae986afd1048bb9bb9b9b05a38110e91702467c4c7e76a0d187144fd7c177"
+    },
+    {
+      "file": "narrow-mobile-travel-configuration.png",
+      "sha256": "1f30d8db22fd34bcf4e5653b0af2c4f2293a8d59dff6fe55fb6a48004f087bda"
+    }
+  ]
+}

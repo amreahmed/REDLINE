@@ -30,3 +30,5 @@ public/data/hrsc-terrain-model.* -text
 public/data/hrsc-terrain-model.i16 -diff
 public/data/hrsc-terrain-model.u8 -diff
 docs/evidence/terrain-model/** -text whitespace=cr-at-eol,-blank-at-eol,-blank-at-eof,-space-before-tab
+# Preserve ETA acceptance captures, exported reports and their exact hashes.
+docs/evidence/travel-time/** -text whitespace=cr-at-eol,-blank-at-eol,-blank-at-eof,-space-before-tab

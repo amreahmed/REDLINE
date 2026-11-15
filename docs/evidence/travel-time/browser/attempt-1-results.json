@@ -1,0 +1,50 @@
+{
+  "url": "http://127.0.0.1:4174/",
+  "browser": "fresh isolated headless Chromium",
+  "timezone": "Africa/Cairo",
+  "checks": [
+    "Existing geographic globe navigation works",
+    "Original 65,536 CTX cells and endpoints preserved; CTX ETA unavailable",
+    "Unavailable source cannot show ETA; retry restores empty configuration",
+    "Both actual HRSC paths have provisional terrain-dependent segment ETA and variable speeds",
+    "Route selection updates the displayed ETA for its exact path",
+    "Applying mobility profile changes both ETAs without A* work or geometry changes",
+    "Earth UTC arrival ignores browser timezone; explicit hold changes arrival, not movement speed",
+    "Invalid drafts fail closed; custom roughness and speed scenarios recalculate existing paths",
+    "Timeline pages exact native movements and resets on route selection",
+    "Timing breakdown, inherited route limits, scenarios, source and limitations remain accessible",
+    "Endpoint changes clear stale ETA and arrival; new route generates a new exact estimate",
+    "Unknown support blocks by default; explicit policy preserves null metrics and assumed speed"
+  ],
+  "pageErrors": [],
+  "consoleErrors": [
+    "Failed to load resource: the server responded with a status of 503 (Service Unavailable)"
+  ],
+  "tileResponses": 52,
+  "screenshots": [
+    "desktop-eta.png",
+    "failure.png"
+  ],
+  "exports": [
+    "survey-baseline.json",
+    "transit-profile.json",
+    "departure-utc.json",
+    "explicit-hold.json",
+    "custom-assumptions.json",
+    "changed-endpoint-pending.json",
+    "changed-endpoint.json",
+    "explicit-unknown-support.json"
+  ],
+  "failure": "Error: expect(locator).toBeFocused() failed\n\nLocator:  locator('.travel-time-panel').getByLabel('Planned hold (minutes)', { exact: true })\nExpected: focused\nReceived: inactive\nTimeout:  5000ms\n\nCall log:\n  - Expect \"to.be.focused\" with timeout 5000ms\n  - waiting for locator('.travel-time-panel').getByLabel('Planned hold (minutes)', { exact: true })\n    14 × locator resolved to <input min=\"0\" step=\"any\" value=\"30\" max=\"10080\" type=\"number\" id=\"travel-hold\" aria-describedby=\"travel-hold-note\"/>\n       - unexpected value \"inactive\"\n\n    at captureRawStack (C:\\Users\\LOQ\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\node\\node_modules\\playwright-core\\lib\\coreBundle.js:9681:17)\n    at callMatcherAsStep (C:\\Users\\LOQ\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\node\\node_modules\\playwright\\lib\\matchers\\expect.js:13310:57)\n    at Object.toBeFocused (C:\\Users\\LOQ\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\node\\node_modules\\playwright\\lib\\matchers\\expect.js:13300:23)\n    at D:\\Projects\\REDLINE\\docs\\evidence\\travel-time\\browser\\acceptance.mjs:234:82",
+  "terrainWorkersStarted": 4,
+  "screenshotHashes": [
+    {
+      "file": "desktop-eta.png",
+      "sha256": "32f57de6a0e95ebf9312a5440c92f4fac861484decfa7136dadc0a1e6b7551a0"
+    },
+    {
+      "file": "failure.png",
+      "sha256": "73d6320c7c1943a0395a430254b39a42d32a8d5798354af08b84bd74334c8702"
+    }
+  ]
+}

@@ -3,6 +3,9 @@ import type { useTerrainRouting } from '../../features/routing/useTerrainRouting
 import { terrainModelReport } from '../../features/routing/terrainModelReport'
 import type { TerrainProfile } from '../../features/terrain/modelTypes'
 import type { TerrainOverlayMode } from '../../features/map/terrainModelOverlay'
+import { useTravelTime } from '../../features/routing/useTravelTime'
+import { travelTimeReport } from '../../features/routing/travelTimeReport'
+import { TravelTimePanel } from './TravelTimePanel'
 
 type Routing = ReturnType<typeof useTerrainRouting>
 type NumericProfileKey = Exclude<keyof TerrainProfile, 'unknownPolicy'>
@@ -27,6 +30,7 @@ export function TerrainRoutePlanner({ routing, onShowMap }: { routing: Routing; 
   const [profileNotice, setProfileNotice] = useState<string | null>(null)
   const busy = routing.state.phase === 'loading'
   const selectedRoute = routing.state.phase === 'ready' ? routing.state.comparison[routing.selected] : null
+  const travel = useTravelTime(routing.analysis, routing.state.phase === 'ready' ? routing.state.comparison : null)
   let rangeLabel: string | null = null
   if (routing.analysis && !['none', 'traversability', 'explored'].includes(routing.overlay)) {
     const values = routing.overlay === 'elevation' ? routing.analysis.grid.values : routing.overlay === 'slope' ? routing.analysis.slopeDeg : routing.overlay === 'roughness' ? routing.analysis.roughnessM : routing.analysis.shapeM
@@ -42,7 +46,7 @@ export function TerrainRoutePlanner({ routing, onShowMap }: { routing: Routing; 
   }
   const download = () => {
     if (!routing.analysis) return
-    const report = terrainModelReport(routing.analysis, routing.state.phase === 'ready' ? routing.state.comparison : null)
+    const report = terrainModelReport(routing.analysis, routing.state.phase === 'ready' ? routing.state.comparison : null, travelTimeReport(travel))
     const url = URL.createObjectURL(new Blob([JSON.stringify(report, null, 2)], { type: 'application/json' }))
     const link = document.createElement('a'); link.href = url; link.download = 'REDLINE-HRSC-terrain-model.json'; link.click()
     setTimeout(() => URL.revokeObjectURL(url), 1000)
@@ -96,6 +100,7 @@ export function TerrainRoutePlanner({ routing, onShowMap }: { routing: Routing; 
         <dt>Cell visits / expanded cells</dt><dd>{selectedRoute.nodes.length} / {selectedRoute.exploredNodes.length}</dd><dt>Blocked / unknown search cells</dt><dd>{selectedRoute.blockedSearchCells} / {selectedRoute.unknownSearchCells}</dd><dt>Unknown-support segments</dt><dd>{selectedRoute.unknownSegments}</dd>
       </dl>}
       <p className="helper">Cost-m means cost-equivalent metres, a hypothetical preference score. It is not energy, travel time or safety. Grades are provider DEM estimates relative to a sphere.</p>
+      <TravelTimePanel travel={travel} selected={routing.selected} />
       <details className="selection-guidance"><summary>Scientific details, source & cost model</summary>
         <p className="helper">{routing.analysis.grid.source.qualification}</p>
         <p className="helper">DT5 heights are metres above a 3,396,000 m sphere. Central differences use actual source-sphere ground baselines. Standard deviation uses the configured circular neighborhood; local shape is center height minus neighborhood mean, not curvature.</p>

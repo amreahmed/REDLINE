@@ -104,7 +104,7 @@ summary::marker { color: var(--color-science); }
 .grid-cell-fields { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); align-items: end; gap: 12px; margin: 20px 0 24px; }
 .grid-cell-fields > div { min-width: 0; }
 .field-label { display: block; color: var(--color-muted); font-size: 13px; line-height: 1.5; margin-bottom: 8px; }
-input[type="number"], input[type="search"], select { width: 100%; min-width: 0; min-height: 44px; padding: 10px 12px; border: 1px solid #455969; border-radius: 6px; background: var(--color-space); color: var(--color-ink); font-size: 14px; }
+input[type="number"], input[type="search"], input[type="datetime-local"], select { width: 100%; min-width: 0; min-height: 44px; padding: 10px 12px; border: 1px solid #455969; border-radius: 6px; background: var(--color-space); color: var(--color-ink); font-size: 14px; }
 .grid-endpoint { padding-top: 18px; border-top: 1px solid var(--line); }
 .grid-endpoint h4 { font-size: 15px; font-weight: 600; margin-bottom: 8px; display: flex; align-items: center; gap: 9px; }
 .endpoint-symbol { color: var(--color-science); }
@@ -336,6 +336,31 @@ input[type="number"], input[type="search"], select { width: 100%; min-width: 0; 
 .terrain-route-metrics dt { color: var(--color-muted); }.terrain-route-metrics dd { margin: 0; text-align: right; overflow-wrap: anywhere; }
 .terrain-model-planner .source-credit { overflow-wrap: anywhere; }
 .map-credit { max-width: calc(100% - 24px); white-space: normal; }
+.travel-time-panel { margin: 26px 0 20px; padding: 24px 0 0; border-top: 1px solid var(--line); border-bottom: 0; }
+.travel-applied-profile { font-size: 13px; margin: 10px 0 18px; color: var(--color-muted); }
+.travel-applied-profile > span { display: block; margin-top: 5px; }
+.travel-route-limits { margin: 10px 0; }
+.travel-result { margin: 18px 0 22px; }
+.travel-config-fields { display: grid; grid-template-columns: minmax(0,1fr); gap: 14px 12px; margin: 18px 0; }
+.travel-config-fields > div, .travel-assumption-fields > div { min-width: 0; }
+.travel-assumption-fields { align-items: end; }
+.travel-config-fields .field-label { min-height: 40px; margin-bottom: 5px; display: flex; align-items: flex-end; }
+.travel-time-panel input[type="datetime-local"] { color-scheme: dark; }
+.travel-duration { margin: 22px 0 5px; font-size: 25px; line-height: 1.3; font-weight: 600; color: var(--color-ink); }
+.travel-duration > span { display: block; margin-bottom: 7px; font-size: 13px; font-weight: 400; color: var(--color-muted); }
+.travel-duration > strong { font-size: 30px; font-weight: 600; }
+.travel-arrival { display: grid; gap: 5px; font-size: 13px; line-height: 1.6; }
+.travel-assumption-fields .field-label { min-height: 52px; }
+.travel-range { color: var(--color-muted); font-size: 13px; line-height: 1.6; margin-bottom: 18px; }
+.travel-timeline { list-style: none; padding: 0; margin: 18px 0; }
+.travel-timeline > li { padding: 12px 0 12px 16px; border-left: 2px solid #597681; }
+.travel-timeline > li + li { border-top: 1px solid var(--line); }
+.travel-segment-heading { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: baseline; gap: 6px; font-size: 13px; }
+.travel-segment-metrics { display: grid; grid-template-columns: minmax(0,1fr) minmax(0,1fr); gap: 7px; font-size: 12px; line-height: 1.6; color: var(--color-muted); margin: 8px 0 0; overflow-wrap: anywhere; }
+.travel-segment-metrics dd { margin: 0; text-align: right; color: var(--color-ink); }
+.travel-pagination { display: grid; grid-template-columns: minmax(0,1fr) minmax(0,1fr); align-items: center; gap: 10px; margin: 14px 0; }
+.travel-pagination > span { grid-column: 1 / -1; grid-row: 2; font-size: 12px; color: var(--color-muted); }
+.travel-pagination > button:last-child { grid-column: 2; grid-row: 1; }
 @keyframes drawer-enter { from { opacity: .7; transform: translateX(-8px); } to { opacity: 1; transform: translateX(0); } }
 @keyframes sheet-enter { from { opacity: .7; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
 @media (prefers-reduced-motion: reduce) { *, *::before, *::after { transition: none !important; animation: none !important; scroll-behavior: auto !important; } }

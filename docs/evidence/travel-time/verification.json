@@ -1,0 +1,67 @@
+{
+  "milestone": "Provisional terrain-aware route travel time",
+  "verifiedAtUtc": "2026-11-15 06:27:17 UTC",
+  "baseline": "48410ca",
+  "commands": [
+    {
+      "command": "npm run lint",
+      "exitCode": 0,
+      "result": "PASS; no warnings or errors"
+    },
+    {
+      "command": "npm run typecheck",
+      "exitCode": 0,
+      "result": "PASS"
+    },
+    {
+      "command": "npm test",
+      "exitCode": 0,
+      "result": "825 tests passed across 59 files; 63 new ETA tests"
+    },
+    {
+      "command": "npm run build",
+      "exitCode": 0,
+      "result": "PASS",
+      "advisory": "Existing minified chunks larger than 500 kB"
+    },
+    {
+      "command": "node scripts/prepare-hrsc-model.mjs --verify-saved",
+      "exitCode": 0,
+      "result": "Pinned native HRSC assets and unchanged CTX grid verified"
+    },
+    {
+      "command": "node docs/evidence/travel-time/verify-preservation.mjs --verify-saved",
+      "exitCode": 0,
+      "result": "704 protected baseline files byte-identical; 65,536 CTX cells and 10,609 HRSC cells unchanged"
+    },
+    {
+      "command": "node docs/evidence/travel-time/browser/acceptance.mjs",
+      "exitCode": 0,
+      "result": "19 acceptance groups passed; fresh isolated headless Chromium; no personal browser/device UI"
+    },
+    {
+      "command": "git diff --check",
+      "exitCode": 0,
+      "result": "PASS"
+    }
+  ],
+  "independentReview": "Model, native report formula, provenance and UI audited; no material scientific issue found.",
+  "scientificStatus": "Partial",
+  "etaStatus": "provisional",
+  "protectedCalculations": "DEM values, transformations, terrain analysis, A* behavior and route costs unchanged",
+  "browserEvidence": "browser/results.json",
+  "limitations": [
+    "All mobility parameters are hypothetical, not real NASA rover specifications or measured performance.",
+    "Speed ranges are sensitivity scenarios, not confidence intervals.",
+    "CTX height interpretation remains unresolved; CTX ETA is unavailable.",
+    "No validated environmental, operational, human travel or safety model."
+  ],
+  "visualEvidence": [
+    "browser/desktop-eta.png",
+    "browser/desktop-eta-arrival.png",
+    "browser/desktop-segment-timeline.png",
+    "browser/tablet-travel-configuration.png",
+    "browser/mobile-travel-configuration.png",
+    "browser/narrow-mobile-travel-configuration.png"
+  ]
+}
