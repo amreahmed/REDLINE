@@ -99,7 +99,7 @@ export default function App() {
     if (layer.regionalLayerId === 'mola' || !layer.regionalLayerId) {
       setVisibility((previous) => ({ ...previous, mola: true, ctx: true }))
     } else {
-      setVisibility((previous) => ({ ...previous, mola: true, [layer.regionalLayerId!]: true }))
+      setVisibility((previous) => ({ ...previous, mola: true, ctx: true, [layer.regionalLayerId!]: true }))
     }
   }, [])
   const globeWorkspace = { preferences: { mode: globeMode, layerId: globeLayerId, selectedPoiId: globePoiId, category: poiCategory }, view: explorer.mapShown ? null : globeView, mapImagery: explorer.mapShown && !globeLayerById(globeLayerId).regionalLayerId ? mapImagery : null }

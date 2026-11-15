@@ -13,7 +13,7 @@ import type Point from 'ol/geom/Point'
 import type Geometry from 'ol/geom/Geometry'
 import type Tile from 'ol/Tile'
 import { JEZERO_EXTENT, MARS_LAYERS } from '../../data/marsLayers'
-import { JEZERO_CONTEXT_ZOOM, JEZERO_DETAIL_ZOOM } from '../../data/jezero'
+import { JEZERO_CONTEXT_ZOOM, JEZERO_DETAIL_ZOOM, JEZERO_OVERVIEW_ZOOM } from '../../data/jezero'
 import { readCapabilities } from './capabilities'
 import { coverageForView, MAX_LEVEL, WORLD_EXTENT } from './grid'
 import { createDisplayProjection, createTileSource } from './mapProjection'
@@ -47,7 +47,7 @@ export type MarsMapController = {
   enterGeographicContext: (coordinate: readonly [number, number], distance: number) => void
   setGlobeImagery: (layer: GlobeImageryLayer | null) => void
   retryGlobeImagery: () => void
-  focusJezero: () => void
+  focusJezero: (targetZoom?: number) => void
   prepareJezeroApproach: () => void
   setApproachZoom: (zoom: number) => void
   setDetailOpacity: (opacity: number) => void
@@ -284,7 +284,7 @@ export function createMarsMap(target: HTMLElement, onStatus: (id: LayerId, statu
       reportView()
     },
     retryGlobeImagery: () => globeImagery?.retry(),
-    focusJezero: () => { if (!disposed) { view.cancelAnimations(); view.setCenter(jezeroCenter()); view.setZoom(JEZERO_DETAIL_ZOOM); reportView() } },
+    focusJezero: (targetZoom = JEZERO_OVERVIEW_ZOOM) => { if (!disposed) { view.cancelAnimations(); view.setCenter(jezeroCenter()); view.setZoom(targetZoom); reportView() } },
     prepareJezeroApproach: () => { if (!disposed) { view.cancelAnimations(); for (const layer of layers.values()) layer.invalidateFrame(); refresh(); setApproachZoom(JEZERO_CONTEXT_ZOOM) } },
     setApproachZoom,
     setDetailOpacity: (opacity) => { if (!disposed) { for (const id of DETAIL_LAYER_IDS) layers.get(id)?.setOpacity(clampDetailOpacity(opacity)); reportControlledImageryReady() } },

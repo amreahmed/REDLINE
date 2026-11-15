@@ -9,4 +9,5 @@ export const JEZERO_NAVIGATION = {
 } as const
 
 export const JEZERO_CONTEXT_ZOOM = 4
+export const JEZERO_OVERVIEW_ZOOM = 7.2
 export const JEZERO_DETAIL_ZOOM = 10

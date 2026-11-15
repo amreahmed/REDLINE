@@ -52,8 +52,16 @@ export function GlobeLocationControls({ workspace, onCategory, onInspect, onFly 
     </select>
     <div className="globe-location-list">
       {matches.map(poi => <div className="globe-location-row" key={poi.id}>
-        <button className="reference-button" type="button" aria-pressed={workspace.preferences.selectedPoiId === poi.id} onClick={() => onInspect(poi.id)}><span><span className="reference-name">{poi.name}</span><span className="reference-coordinate">{poi.mission ?? poi.category} · sourced reference</span></span><span className="reference-open">Details</span></button>
-        <button className="grid-button" type="button" disabled={workspace.preferences.mode === 'model'} aria-label={`Fly to ${poi.name}`} onClick={() => onFly(poi)}>Fly to</button>
+        <button className="reference-button" type="button" aria-pressed={workspace.preferences.selectedPoiId === poi.id} onClick={() => onInspect(poi.id)}>
+          <span className="reference-info">
+            <span className="reference-name">{poi.name}</span>
+            <span className="reference-coordinate">{poi.mission ?? poi.category} · sourced reference</span>
+          </span>
+          <span className="reference-open">Details</span>
+        </button>
+        <div className="globe-location-actions">
+          <button className="grid-button location-fly-button" type="button" disabled={workspace.preferences.mode === 'model'} aria-label={`Fly to ${poi.name}`} onClick={() => onFly(poi)}>Fly to</button>
+        </div>
       </div>)}
       {!matches.length && <p className="helper" role="status">No sourced locations match this search and category.</p>}
     </div>

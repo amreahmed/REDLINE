@@ -12,6 +12,7 @@ import { initialExplorerSummary } from '../../features/explorer/types'
 import type { ExplorerSummary } from '../../features/explorer/types'
 import { createAnimationPlayer, easeInOut } from '../../features/explorer/animation'
 import { createJezeroStages, createReturnStages } from '../../features/explorer/jezeroFlight'
+import { JEZERO_OVERVIEW_ZOOM } from '../../data/jezero'
 import { Icon } from '../shared/Icon'
 import { DISTANCE_ONLY_QUALIFICATION } from '../shared/scientificCopy'
 import { SCIENCE_TARGETS, targetById } from '../../data/scienceTargets'
@@ -180,7 +181,7 @@ export function MarsExplorer({ visibility, statuses, retryRequest, jezeroRequest
     playerRef.current?.cancel()
     globeRef.current?.endApproach()
     if (!isTransitioning(stateRef.current)) send({ type: 'fly-jezero' })
-    mapRef.current.focusJezero()
+    mapRef.current.focusJezero(JEZERO_OVERVIEW_ZOOM)
     mapRef.current.setGlobeImagery(null)
     onMapImageryStatus(null)
     pendingGlobeFly.current = null
@@ -228,11 +229,11 @@ export function MarsExplorer({ visibility, statuses, retryRequest, jezeroRequest
       map?.setGlobeImagery(null)
       if (!map) { setNotice('The map could not start. Reload to retry.'); return }
       if (stateRef.current.phase === 'map') {
-        map.focusJezero()
+        map.focusJezero(JEZERO_OVERVIEW_ZOOM)
       } else {
         geographic.flyTo([77.69, 18.41], () => {
           send({ type: 'enter-map' })
-          map.focusJezero()
+          map.focusJezero(JEZERO_OVERVIEW_ZOOM)
         })
       }
       setNotice(null)
@@ -439,7 +440,7 @@ export function MarsExplorer({ visibility, statuses, retryRequest, jezeroRequest
   const move = (horizontal: number, vertical: number) => { if (canNavigate) { if (mapShown) mapRef.current?.panBy(horizontal, vertical); else globeRef.current?.rotate(horizontal * 0.2, vertical * 0.2) } }
   const zoom = (delta: number) => { if (canNavigate) { if (mapShown) mapRef.current?.zoomBy(delta); else globeRef.current?.zoom(delta > 0 ? 1 / 1.2 : 1.2) } }
   const retryGlobe = () => { setGlobe(initialExplorerSummary.globe); globeStatusRef.current = initialExplorerSummary.globe; setGlobeAttempt((value) => value + 1) }
-  const resetView = () => { onNavigate(); if (mapShown) mapRef.current?.focusJezero(); else globeRef.current?.reset() }
+  const resetView = () => { onNavigate(); if (mapShown) mapRef.current?.focusJezero(JEZERO_OVERVIEW_ZOOM); else globeRef.current?.reset() }
   const flightHelp = transitioning ? 'An exploration transition is in progress.' : mapError ? 'The map could not start. Reload to retry.' : globe.phase === 'loading' ? 'The overview is preparing. Open the map directly while it loads.' : globe.phase === 'error' ? 'The overview is unavailable. Open the map directly or retry.' : globePreferences.mode === 'imagery' ? 'Fly to the published approximate Jezero crater center.' : 'Start the scripted visual approach to the published approximate Jezero crater center.'
   const visibleRoutes = mapShown && effective.controlledCtx && hypotheticalRoutes.length > 0
   const selectedReference = targetById(selectedTargetId)
@@ -460,7 +461,7 @@ export function MarsExplorer({ visibility, statuses, retryRequest, jezeroRequest
         const directions: Record<string, [number, number]> = { ArrowLeft: [-1, 0], ArrowRight: [1, 0], ArrowUp: [0, -1], ArrowDown: [0, 1] }
         if (directions[event.key]) { event.preventDefault(); move(...directions[event.key]) }
         if (event.key === 'Enter' && gridPickRole && mapShown) { event.preventDefault(); mapRef.current?.pickViewCenter() }
-        if (['+', '=', '-', 'Home'].includes(event.key)) { event.preventDefault(); if (event.key === 'Home') { onNavigate(); if (mapShown) mapRef.current?.focusJezero(); else globeRef.current?.reset() } else zoom(event.key === '-' ? -1 : 1) }
+        if (['+', '=', '-', 'Home'].includes(event.key)) { event.preventDefault(); if (event.key === 'Home') { onNavigate(); if (mapShown) mapRef.current?.focusJezero(JEZERO_OVERVIEW_ZOOM); else globeRef.current?.reset() } else zoom(event.key === '-' ? -1 : 1) }
       }}>
         <div className="explorer-pane globe-pane" data-visible={!mapShown} style={{ opacity: paneOpacities.globe }} aria-hidden={mapShown} inert={state.phase !== 'overview'}><div className="globe-host" ref={globeHostRef} /></div>
         <div className="explorer-pane map-pane" data-visible={mapShown} style={{ opacity: paneOpacities.map }} aria-hidden={!mapShown} inert={state.phase !== 'map'}><div className="ol-host" ref={mapHostRef} /></div>
