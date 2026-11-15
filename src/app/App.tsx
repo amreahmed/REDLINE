@@ -202,7 +202,7 @@ export default function App() {
             canPick={canPick}
             onOpenPlanning={() => void openPlanning()}
             onAssignGridCell={(role, row, column) => {
-              if (canPick) planning.assign(role, row, column)
+              void planning.assign(role, row, column)
             }}
             onBeginPickRole={(role) => {
               if (canPick) {

@@ -33,9 +33,20 @@ export function useGridPlanning() {
     }
   }
 
-  const assign = useCallback((role: EndpointRole, row: number, column: number) => {
-    if (terrain.phase !== 'ready') return
-    const result = assignGridEndpoint(terrain.grid, selection, role, row, column)
+  // Auto-load planning grid on mount so presets and coordinates work immediately
+  useEffect(() => {
+    if (terrain.phase === 'idle') {
+      void load()
+    }
+  }, [terrain.phase])
+
+  const assign = useCallback(async (role: EndpointRole, row: number, column: number) => {
+    let activeGrid = terrain.phase === 'ready' ? terrain.grid : null
+    if (!activeGrid) {
+      activeGrid = await load()
+    }
+    if (!activeGrid) return
+    const result = assignGridEndpoint(activeGrid, selection, role, row, column)
     setNotice(result.error ?? `Hypothetical ${role} selected at native row ${row}, column ${column}.`)
     setSelection(result.selection)
     if (!result.error) setPickRole(null)
