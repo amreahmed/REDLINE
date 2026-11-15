@@ -31,6 +31,13 @@ export function GlobeLayerControls({ workspace, onSelect, onRetry }: { workspace
       <p className="source-mission">{layer.source}</p>
       <p className="helper">{layer.resolution}</p>
       <p className="context-qualification">{layer.registrationStatus === 'uncontrolled' ? 'Uncontrolled imagery · absolute registration unverified' : layer.registrationStatus === 'source-controlled' ? 'Source-controlled imagery · absolute landmark accuracy unverified' : 'Source coordinates · registration unverified'}</p>
+      {!isGlobal(layer.coverage) && (
+        <div className="regional-layer-notice" style={{ margin: '12px 0', padding: '10px 14px', borderRadius: 'var(--radius-control)', background: 'rgba(22, 163, 174, 0.1)', border: '1px solid rgba(22, 163, 174, 0.3)' }}>
+          <p className="context-qualification" style={{ margin: 0, color: 'var(--color-science)', fontWeight: 500 }}>
+            Regional layer · Footprint centered at Jezero Crater (77.69°E, 18.41°N). Outside this footprint, the global surface remains uncovered by this imagery.
+          </p>
+        </div>
+      )}
       {imagery && <p className={imagery.phase === 'error' || imagery.phase === 'outside' || imagery.failed || imagery.missing ? 'source-warning' : 'source-state'} role="status">{imageryStatusText(imagery, workspace.mapImagery ? undefined : view?.level)}</p>}
       <button className="grid-button" type="button" onClick={onRetry}>Retry selected imagery</button>
       <p className="helper">Source changes preserve the camera location. Outside-footprint areas remain without this imagery.</p>

@@ -14,6 +14,7 @@ import { createAnimationPlayer, easeInOut } from '../../features/explorer/animat
 import { createJezeroStages, createReturnStages } from '../../features/explorer/jezeroFlight'
 import { JEZERO_OVERVIEW_ZOOM } from '../../data/jezero'
 import { Icon } from '../shared/Icon'
+import { FloatingLayerMenu } from './FloatingLayerMenu'
 import { DISTANCE_ONLY_QUALIFICATION } from '../shared/scientificCopy'
 import { SCIENCE_TARGETS, targetById } from '../../data/scienceTargets'
 import type { EndpointRole, MissionSelection, TargetId } from '../../features/mission/types'
@@ -26,10 +27,10 @@ import { globeLayerById } from '../../data/globeLayers'
 import type { GlobeLayerId } from '../../data/globeLayers'
 import { MARS_POIS, marsPoiById } from '../../data/marsPois'
 import type { GeographicGlobeController, GeographicGlobeView } from '../../features/globe/createGeographicMarsGlobe'
-import type { GlobeFlyRequest, GlobePreferences } from '../../features/globe/explorationTypes'
+import type { GlobeFlyRequest, GlobeMode, GlobePreferences } from '../../features/globe/explorationTypes'
 import type { GlobeMapImageryStatus } from '../../features/map/globeMapImagery'
 import { imageryStatusText } from '../../features/globe/imageryStatus'
-import type { TerrainMapDisplay } from '../../features/map/terrainModelOverlay'
+import type { TerrainMapDisplay, TerrainOverlayMode } from '../../features/map/terrainModelOverlay'
 
 const EMPTY_ROUTES: readonly HypotheticalRoute[] = []
 const geographicController = (controller: GlobeController | null): GeographicGlobeController | null => controller && 'getView' in controller ? controller as GeographicGlobeController : null
@@ -74,9 +75,15 @@ type Props = {
   onGlobeInspect: (id: string) => void
   onPrepareGeographicMap: (id: GlobeLayerId) => void
   onOpenGeographicMap: () => void
+  onToggleLayer?: (id: LayerId) => void
+  onSelectGlobeLayer?: (mode: GlobeMode, id: GlobeLayerId) => void
+  onRetryLayer?: (id: LayerId) => void
+  onToggleTerrain?: () => void
+  terrainOverlay?: TerrainOverlayMode
+  onSelectTerrainOverlay?: (mode: TerrainOverlayMode) => void
 }
 
-export function MarsExplorer({ visibility, statuses, retryRequest, jezeroRequest, onJezero, onStatus, onSummary, missionSelection, selectedTargetId, focusRequest, onInspectTarget, planningGrid, gridSelection, gridFocusRequest, centerPickRequest, gridPickRole, gridPickNotice, onPickCoordinate, onNavigate, hypotheticalRoutes = EMPTY_ROUTES, selectedRouteId = null, routeWaypoint = null, terrainModelDisplay = null, globePreferences, globeFlyRequest, globeMapRequest, globeRetryRequest, onGlobeView, onMapImageryStatus, onGlobeInspect, onPrepareGeographicMap, onOpenGeographicMap }: Props) {
+export function MarsExplorer({ visibility, statuses, retryRequest, jezeroRequest, onJezero, onStatus, onSummary, missionSelection, selectedTargetId, focusRequest, onInspectTarget, planningGrid, gridSelection, gridFocusRequest, centerPickRequest, gridPickRole, gridPickNotice, onPickCoordinate, onNavigate, hypotheticalRoutes = EMPTY_ROUTES, selectedRouteId = null, routeWaypoint = null, terrainModelDisplay = null, globePreferences, globeFlyRequest, globeMapRequest, globeRetryRequest, onGlobeView, onMapImageryStatus, onGlobeInspect, onPrepareGeographicMap, onOpenGeographicMap, onToggleLayer, onSelectGlobeLayer, onRetryLayer, onToggleTerrain, terrainOverlay, onSelectTerrainOverlay }: Props) {
   const workspaceRef = useRef<HTMLDivElement>(null)
   const globeHostRef = useRef<HTMLDivElement>(null)
   const mapHostRef = useRef<HTMLDivElement>(null)
@@ -487,6 +494,20 @@ export function MarsExplorer({ visibility, statuses, retryRequest, jezeroRequest
           <button type="button" title="Zoom in (+)" disabled={!canNavigate || (mapShown && !view?.canZoomIn)} aria-label="Zoom in" onClick={() => zoom(1)}>+</button>
           <button type="button" title="Zoom out (−)" disabled={!canNavigate || (mapShown && !view?.canZoomOut)} aria-label="Zoom out" onClick={() => zoom(-1)}>−</button>
         </div>
+        <FloatingLayerMenu
+          mapShown={mapShown}
+          globeMode={globePreferences.mode}
+          globeLayerId={globePreferences.layerId}
+          visibility={visibility}
+          statuses={statuses}
+          onSelectGlobeLayer={onSelectGlobeLayer ?? ((mode, id) => { if (mode === 'imagery') setMapGlobeLayer(id) })}
+          onToggleLayer={onToggleLayer ?? (() => {})}
+          onRetryLayer={onRetryLayer}
+          terrainVisible={terrainModelDisplay !== null}
+          onToggleTerrain={onToggleTerrain}
+          terrainOverlay={terrainOverlay}
+          onSelectTerrainOverlay={onSelectTerrainOverlay}
+        />
         {mapShown && <button className="grid-button" type="button" disabled={transitioning} onClick={() => { onNavigate(); send({ type: 'enter-overview' }) }}>Return to overview</button>}
       </div>
       {mapShown && view && !gridPickRole && !notice && !mapMessage && !busy && <div className="map-position"><span>Service grid center</span><span>{`${view.center[0].toFixed(3)}° lon, ${view.center[1].toFixed(3)}° lat`}</span></div>}
