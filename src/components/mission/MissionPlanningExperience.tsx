@@ -171,18 +171,34 @@ export function MissionPlanningExperience({
   }
 
   const handleCalculateDistance = async () => {
-    await distanceRouting.calculate()
+    terrainRouting.setVisible(true)
+    await Promise.all([
+      distanceRouting.calculate(),
+      terrainRouting.calculate(),
+    ])
     setActiveStage('results')
   }
 
   const handleCalculateTerrain = async () => {
     terrainRouting.setVisible(true)
     terrainRouting.selectRoute('terrain')
-    await terrainRouting.calculate()
+    await Promise.all([
+      terrainRouting.calculate(),
+      distanceRouting.calculate(),
+    ])
     terrainRouting.setVisible(true)
     terrainRouting.selectRoute('terrain')
     setActiveStage('results')
   }
+
+  // When viewing results, if the terrain A* route hasn't run yet, calculate it automatically
+  useEffect(() => {
+    if (activeStage === 'results' && terrainRouting.state.phase === 'idle' && hasGridEndpoints) {
+      terrainRouting.setVisible(true)
+      terrainRouting.selectRoute('terrain')
+      void terrainRouting.calculate()
+    }
+  }, [activeStage, terrainRouting.state.phase, hasGridEndpoints])
 
   const handleDownloadReport = () => {
     if (!terrainRouting.analysis) return

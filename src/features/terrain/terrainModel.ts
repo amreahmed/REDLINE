@@ -75,6 +75,17 @@ export function modelNodeForCoordinate(grid: TerrainModelGrid, lon: number, lat:
   return row >= 0 && row < grid.rows && column >= 0 && column < grid.columns ? row * grid.columns + column : null
 }
 
+export function modelNodeForCoordinateClamped(grid: TerrainModelGrid, lon: number, lat: number): number {
+  if (!Number.isFinite(lon) || !Number.isFinite(lat)) return Math.floor(grid.rows / 2) * grid.columns + Math.floor(grid.columns / 2)
+  const rawCol = Math.floor((lon * DEG * grid.referenceRadiusM - grid.originXM) / grid.pixelWidthM)
+  const rawRow = Math.floor((lat * DEG * grid.referenceRadiusM - grid.originYM) / grid.pixelHeightM)
+  // Clamp to traversable interior (inset by 2 cells so we stay within verified derivative support)
+  const minInset = 2
+  const col = Math.max(minInset, Math.min(grid.columns - 1 - minInset, Number.isFinite(rawCol) ? rawCol : Math.floor(grid.columns / 2)))
+  const row = Math.max(minInset, Math.min(grid.rows - 1 - minInset, Number.isFinite(rawRow) ? rawRow : Math.floor(grid.rows / 2)))
+  return row * grid.columns + col
+}
+
 function sphereDistance(radius: number, a: { lon: number; lat: number }, b: { lon: number; lat: number }): number {
   const vector = (point: { lon: number; lat: number }) => {
     const cosine = Math.cos(point.lat * DEG)

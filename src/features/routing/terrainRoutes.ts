@@ -50,6 +50,42 @@ export type TerrainComparisonResult = {
 type PermittedEdge = { readonly node: number; readonly movement: TerrainMovement }
 type SearchPath = { readonly nodes: readonly number[]; readonly exploredNodes: readonly number[] }
 
+export function findNearestTraversable(analysis: TerrainAnalysis, startNode: number, excludedNode?: number): number {
+  const { grid, profile } = analysis
+  const count = grid.rows * grid.columns
+  const canUse = (node: number) =>
+    Number.isSafeInteger(node) &&
+    node >= 0 &&
+    node < count &&
+    grid.valid[node] === 1 &&
+    Number.isFinite(grid.values[node]) &&
+    analysis.states[node] !== 3 &&
+    (analysis.states[node] !== 0 || profile.unknownPolicy === 'penalize') &&
+    node !== excludedNode
+
+  if (canUse(startNode)) return startNode
+
+  const clampedStart = Math.max(0, Math.min(count - 1, startNode))
+  const startRow = Math.floor(clampedStart / grid.columns)
+  const startCol = clampedStart % grid.columns
+  const maxRadius = Math.max(grid.rows, grid.columns)
+
+  for (let r = 1; r < maxRadius; r++) {
+    for (let dr = -r; dr <= r; dr++) {
+      for (let dc = -r; dc <= r; dc++) {
+        if (Math.abs(dr) !== r && Math.abs(dc) !== r) continue
+        const row = startRow + dr
+        const col = startCol + dc
+        if (row >= 0 && row < grid.rows && col >= 0 && col < grid.columns) {
+          const cand = row * grid.columns + col
+          if (canUse(cand)) return cand
+        }
+      }
+    }
+  }
+  return clampedStart
+}
+
 /**
  * Separate qualified DEM model, never the CTX scientific authorization gate.
  * Both objectives use precisely the same permitted directional graph. The

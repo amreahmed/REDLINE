@@ -3,8 +3,9 @@ import type { GridSelection } from '../mission/gridSelection'
 import type { RoutePoint } from './types'
 import { loadHrscModel } from '../terrain/loadHrscModel'
 import type { TerrainModelGrid, TerrainProfile } from '../terrain/modelTypes'
-import { analyzeTerrainModel, DEFAULT_TERRAIN_PROFILE, modelNodeForCoordinate, modelPoint, validateTerrainProfile } from '../terrain/terrainModel'
+import { analyzeTerrainModel, DEFAULT_TERRAIN_PROFILE, modelNodeForCoordinateClamped, modelPoint, validateTerrainProfile } from '../terrain/terrainModel'
 import { createTerrainRouteTask } from './terrainRouteTask'
+import { findNearestTraversable } from './terrainRoutes'
 import type { TerrainComparison } from './terrainRoutes'
 import type { TerrainOverlayMode, TerrainMapDisplay } from '../map/terrainModelOverlay'
 
@@ -23,9 +24,18 @@ export function useTerrainRouting(selection: GridSelection, waypoint: RoutePoint
   const taskRef = useRef<ReturnType<typeof createTerrainRouteTask> | null>(null)
   const grid = data.phase === 'ready' ? data.grid : null
   const analysis = useMemo(() => grid ? analyzeTerrainModel(grid, profile) : null, [grid, profile])
-  const origin = grid && selection.origin ? modelNodeForCoordinate(grid, selection.origin.lon, selection.origin.lat) : null
-  const destination = grid && selection.destination ? modelNodeForCoordinate(grid, selection.destination.lon, selection.destination.lat) : null
-  const via = grid && waypoint ? modelNodeForCoordinate(grid, waypoint.lon, waypoint.lat) : null
+  
+  const rawOrigin = grid && selection.origin ? modelNodeForCoordinateClamped(grid, selection.origin.lon, selection.origin.lat) : null
+  const rawDestination = grid && selection.destination ? modelNodeForCoordinateClamped(grid, selection.destination.lon, selection.destination.lat) : null
+  const rawVia = grid && waypoint ? modelNodeForCoordinateClamped(grid, waypoint.lon, waypoint.lat) : null
+
+  const origin = rawOrigin !== null && analysis ? findNearestTraversable(analysis, rawOrigin) : rawOrigin
+  let destination = rawDestination !== null && analysis ? findNearestTraversable(analysis, rawDestination, origin ?? undefined) : rawDestination
+  if (origin !== null && destination !== null && origin === destination && grid && analysis) {
+    destination = findNearestTraversable(analysis, (origin + 1) % (grid.rows * grid.columns), origin)
+  }
+  const via = rawVia !== null && analysis && origin !== null && destination !== null ? findNearestTraversable(analysis, rawVia, origin) : rawVia
+
   const key = useMemo(() => ({ grid, profile, origin, destination, via, originLon: selection.origin?.lon, originLat: selection.origin?.lat, destinationLon: selection.destination?.lon, destinationLat: selection.destination?.lat, waypointLon: waypoint?.lon, waypointLat: waypoint?.lat }), [grid, profile, origin, destination, via, selection.origin?.lon, selection.origin?.lat, selection.destination?.lon, selection.destination?.lat, waypoint?.lon, waypoint?.lat])
   
   const currentSignature = useMemo(() => `${grid ? grid.source.gridHash : 'pending'}|${profile.maxUphillDeg},${profile.maxDownhillDeg},${profile.maxRoughnessM},${profile.unknownPolicy}|${selection.origin?.lon},${selection.origin?.lat}|${selection.destination?.lon},${selection.destination?.lat}|${waypoint?.lon},${waypoint?.lat}`, [grid, profile, selection, waypoint])
@@ -41,12 +51,7 @@ export function useTerrainRouting(selection: GridSelection, waypoint: RoutePoint
   }, [data.phase])
 
   const state = (stored.key === key || stored.signature === currentSignature) ? stored.state : IDLE
-  let blocker: string | null = !grid ? 'Load the separately documented HRSC DEM first.' : !selection.origin || !selection.destination ? 'Choose grid origin and destination above.' : origin === null || destination === null ? 'One endpoint is outside HRSC native coverage.' : origin === destination ? 'Both endpoints fall in the same 50 m HRSC cell. Choose more widely separated endpoints.' : waypoint && via === null ? 'The waypoint is outside HRSC coverage.' : null
-  if (!blocker && via !== null && (via === origin || via === destination)) blocker = 'The waypoint falls in an endpoint’s 50 m HRSC cell. Clear it or choose a more widely separated waypoint.'
-  if (!blocker && analysis) for (const [node, label] of [[origin, 'Origin'], [destination, 'Destination'], [via, 'Waypoint']] as const) {
-    if (node === null) continue
-    if (!grid!.valid[node] || analysis.states[node] === 3 || (analysis.states[node] === 0 && profile.unknownPolicy === 'block')) { blocker = `${label} is blocked or has incomplete metric support under this profile. Change the endpoint or review the assumptions.`; break }
-  }
+  const blocker: string | null = !grid ? 'Load the separately documented HRSC DEM first.' : !selection.origin || !selection.destination ? 'Choose grid origin and destination above.' : origin === destination ? 'Both endpoints fall in the same 50 m HRSC cell. Choose more widely separated endpoints.' : null
   const load = async (): Promise<TerrainModelGrid | null> => {
     loadRef.current?.abort()
     const abort = new AbortController()
@@ -69,10 +74,18 @@ export function useTerrainRouting(selection: GridSelection, waypoint: RoutePoint
       activeGrid = await load()
     }
     if (!activeGrid) return
-    const activeOrigin = selection.origin ? modelNodeForCoordinate(activeGrid, selection.origin.lon, selection.origin.lat) : null
-    const activeDestination = selection.destination ? modelNodeForCoordinate(activeGrid, selection.destination.lon, selection.destination.lat) : null
-    const activeVia = waypoint ? modelNodeForCoordinate(activeGrid, waypoint.lon, waypoint.lat) : null
-    if (activeOrigin === null || activeDestination === null || activeOrigin === activeDestination) return
+    const activeAnalysis = analyzeTerrainModel(activeGrid, profile)
+    const rawActiveOrigin = selection.origin ? modelNodeForCoordinateClamped(activeGrid, selection.origin.lon, selection.origin.lat) : null
+    const rawActiveDestination = selection.destination ? modelNodeForCoordinateClamped(activeGrid, selection.destination.lon, selection.destination.lat) : null
+    if (rawActiveOrigin === null || rawActiveDestination === null) return
+
+    const activeOrigin = findNearestTraversable(activeAnalysis, rawActiveOrigin)
+    let activeDestination = findNearestTraversable(activeAnalysis, rawActiveDestination, activeOrigin)
+    if (activeOrigin === activeDestination) {
+      activeDestination = findNearestTraversable(activeAnalysis, (activeOrigin + 1) % (activeGrid.rows * activeGrid.columns), activeOrigin)
+    }
+    const rawActiveVia = waypoint ? modelNodeForCoordinateClamped(activeGrid, waypoint.lon, waypoint.lat) : null
+    const activeVia = rawActiveVia !== null ? findNearestTraversable(activeAnalysis, rawActiveVia, activeOrigin) : null
 
     taskRef.current?.cancel()
     const task = createTerrainRouteTask({ grid: activeGrid, profile, origin: activeOrigin, destination: activeDestination, waypoint: activeVia }, () => new Worker(new URL('./terrainRouteWorker.ts', import.meta.url), { type: 'module' }))
