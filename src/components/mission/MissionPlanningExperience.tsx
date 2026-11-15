@@ -159,15 +159,14 @@ export function MissionPlanningExperience({
   }
 
   const handleCalculateAll = async () => {
-    if (terrainRouting.data.phase !== 'ready') {
-      await terrainRouting.load()
-    }
     terrainRouting.setVisible(true)
     terrainRouting.selectRoute('terrain')
     await Promise.all([
       terrainRouting.calculate(),
       distanceRouting.calculate(),
     ])
+    terrainRouting.setVisible(true)
+    terrainRouting.selectRoute('terrain')
     setActiveStage('results')
   }
 
@@ -177,12 +176,11 @@ export function MissionPlanningExperience({
   }
 
   const handleCalculateTerrain = async () => {
-    if (terrainRouting.data.phase !== 'ready') {
-      await terrainRouting.load()
-    }
     terrainRouting.setVisible(true)
     terrainRouting.selectRoute('terrain')
     await terrainRouting.calculate()
+    terrainRouting.setVisible(true)
+    terrainRouting.selectRoute('terrain')
     setActiveStage('results')
   }
 
@@ -728,6 +726,21 @@ export function MissionPlanningExperience({
 
             <div className="route-options" role="group" aria-label="Select A* route">
               {/* HRSC DEM 50m Terrain Routes (Winding A* & Permitted Distance) */}
+              {terrainRouting.state.phase === 'loading' && (
+                <div style={{ padding: '12px 14px', borderRadius: 'var(--radius-control)', background: 'rgba(255, 42, 59, 0.1)', border: '1px dashed rgba(255, 42, 59, 0.5)' }}>
+                  <p className="helper" style={{ color: '#ff4d5e', margin: 0, fontWeight: 600 }}>
+                    ⚡ Calculating terrain-optimal A* obstacle-avoiding route (Orange Line)…
+                  </p>
+                </div>
+              )}
+              {terrainRouting.state.phase === 'error' && (
+                <div style={{ padding: '12px 14px', borderRadius: 'var(--radius-control)', background: 'rgba(255, 42, 59, 0.08)', border: '1px solid rgba(255, 42, 59, 0.4)' }}>
+                  <p className="source-warning" style={{ margin: '0 0 8px' }}>{terrainRouting.state.reason}</p>
+                  <button type="button" className="grid-button" onClick={() => void terrainRouting.calculate()}>
+                    ⚡ Retry Terrain Route (Orange Line)
+                  </button>
+                </div>
+              )}
               {terrainRouting.state.phase === 'ready' && (['terrain', 'distance'] as const).map(role => {
                 const route = terrainRouting.state.phase === 'ready' ? terrainRouting.state.comparison[role] : null
                 if (!route) return null
