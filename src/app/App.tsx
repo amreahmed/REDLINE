@@ -96,7 +96,11 @@ export default function App() {
   const selectGlobeLayer = (mode: GlobeMode, id: GlobeLayerId) => { cancelPlanningNavigation(); setGlobeMode(mode); setGlobeLayerId(id) }
   const prepareGeographicMap = useCallback((id: GlobeLayerId) => {
     const layer = globeLayerById(id)
-    setVisibility({ mola: layer.regionalLayerId === 'mola', ctx: layer.regionalLayerId === 'ctx', controlledCtx: layer.regionalLayerId === 'controlledCtx' })
+    if (layer.regionalLayerId === 'mola' || !layer.regionalLayerId) {
+      setVisibility((previous) => ({ ...previous, mola: true, ctx: true }))
+    } else {
+      setVisibility((previous) => ({ ...previous, mola: true, [layer.regionalLayerId!]: true }))
+    }
   }, [])
   const globeWorkspace = { preferences: { mode: globeMode, layerId: globeLayerId, selectedPoiId: globePoiId, category: poiCategory }, view: explorer.mapShown ? null : globeView, mapImagery: explorer.mapShown && !globeLayerById(globeLayerId).regionalLayerId ? mapImagery : null }
   const onSummary = useCallback((summary: ExplorerSummary) => {
@@ -109,7 +113,13 @@ export default function App() {
   }, [cancelGridPick])
   const toggleLayer = (id: LayerId) => { cancelPlanningNavigation(); setVisibility((previous) => ({ ...previous, [id]: !previous[id] })) }
   const retryLayer = (id: LayerId) => setRetryRequest((previous) => ({ id, sequence: (previous?.sequence ?? 0) + 1 }))
-  const openJezero = () => { cancelPlanningNavigation(); setJezeroRequest((value) => value + 1) }
+  const openJezero = () => {
+    cancelPlanningNavigation()
+    setGlobeMode('imagery')
+    setGlobeLayerId('mola')
+    setVisibility((previous) => ({ ...previous, mola: true, ctx: true }))
+    setJezeroRequest((value) => value + 1)
+  }
   const openPlanning = async () => {
     cancelGridPick()
     const request = ++planningNavigation.current

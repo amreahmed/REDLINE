@@ -10,12 +10,22 @@ export function GlobeLayerControls({ workspace, onSelect, onRetry }: { workspace
   const { preferences, view } = workspace
   const layer = globeLayerById(preferences.layerId)
   const imagery = workspace.mapImagery ?? view?.imagery
+  const isGlobal = (coverage: readonly number[]) => coverage[0] <= -179 && coverage[2] >= 179 && coverage[1] <= -89 && coverage[3] >= 89
+  const globalSources = GLOBE_LAYERS.filter(source => isGlobal(source.coverage))
+  const regionalSources = GLOBE_LAYERS.filter(source => !isGlobal(source.coverage))
   return <section className="panel-section globe-layer-controls" aria-labelledby="globe-layer-heading">
     <h3 id="globe-layer-heading">Planet surface</h3>
     <label className="field-label" htmlFor="globe-surface-source">Globe imagery source</label>
     <select id="globe-surface-source" value={preferences.mode === 'model' ? 'model' : preferences.layerId} onChange={event => event.target.value === 'model' ? onSelect('model', preferences.layerId) : onSelect('imagery', event.target.value as GlobeLayerId)}>
-      {GLOBE_LAYERS.map(source => <option key={source.id} value={source.id}>{source.name}</option>)}
-      <option value="model">NASA visual 3D model</option>
+      <optgroup label="Global planet basemaps">
+        {globalSources.map(source => <option key={source.id} value={source.id}>{source.name}</option>)}
+      </optgroup>
+      <optgroup label="Regional Jezero coverage (local footprint only)">
+        {regionalSources.map(source => <option key={source.id} value={source.id}>{source.name} (Jezero only)</option>)}
+      </optgroup>
+      <optgroup label="Visual 3D model">
+        <option value="model">NASA visual 3D model</option>
+      </optgroup>
     </select>
     {preferences.mode === 'model' ? <p className="context-qualification">Original NASA GLB · geographic orientation unverified. Geographic markers are available in imagery mode.</p> : <>
       <p className="source-mission">{layer.source}</p>

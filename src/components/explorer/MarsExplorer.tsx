@@ -222,15 +222,18 @@ export function MarsExplorer({ visibility, statuses, retryRequest, jezeroRequest
     geographicController(globeController)?.setApproachTarget([77.69, 18.41])
     const geographic = geographicController(globeController)
     if (geographic) {
-      const id = globalInputsRef.current.preferences.layerId, layer = globeLayerById(id)
-      globalInputsRef.current.onPrepare(id)
-      map?.setGlobeImagery(layer.regionalLayerId ? null : layer)
-      setMapGlobeLayer(layer.regionalLayerId ? null : id)
+      const mola = globeLayerById('mola')
+      geographic.setLayer(mola)
+      setMapGlobeLayer(null)
+      map?.setGlobeImagery(null)
       if (!map) { setNotice('The map could not start. Reload to retry.'); return }
       if (stateRef.current.phase === 'map') {
-        map.enterGeographicContext([77.69, 18.41], 1.0015)
+        map.focusJezero()
       } else {
-        geographic.flyTo([77.69, 18.41], () => send({ type: 'enter-map' }))
+        geographic.flyTo([77.69, 18.41], () => {
+          send({ type: 'enter-map' })
+          map.focusJezero()
+        })
       }
       setNotice(null)
       workspaceRef.current?.focus({ preventScroll: true })
