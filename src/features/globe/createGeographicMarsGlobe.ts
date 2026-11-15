@@ -1,4 +1,4 @@
-import { BackSide, BufferGeometry, CanvasTexture, Color, DirectionalLight, Float32BufferAttribute, Group, HemisphereLight, Mesh, MeshStandardMaterial, PerspectiveCamera, Points, Raycaster, Scene, ShaderMaterial, SphereGeometry, Sprite, SpriteMaterial, SRGBColorSpace, Texture, Vector2, Vector3, WebGLRenderer } from 'three'
+import { AdditiveBlending, BackSide, BufferGeometry, CanvasTexture, Color, DirectionalLight, Float32BufferAttribute, Group, HemisphereLight, Mesh, MeshBasicMaterial, MeshStandardMaterial, PerspectiveCamera, Points, Raycaster, Scene, ShaderMaterial, SphereGeometry, Sprite, SpriteMaterial, SRGBColorSpace, Texture, Vector2, Vector3, WebGLRenderer } from 'three'
 import { OrbitControls } from 'three/addons/controls/OrbitControls.js'
 import type { GlobeController, GlobeStatus } from './createMarsGlobe'
 import { overviewDistanceForAspect } from './flightPose'
@@ -77,29 +77,158 @@ export function createGlobeTileGeometry(tile: GlobeTile, radius = 1): BufferGeom
   return geometry
 }
 
-/** Procedural sky decoration, not an astronomical catalog or measured observation. */
+/** Procedural Milky Way galactic band inspired by authentic celestial orientation and Google Earth style. */
+function createMilkyWay() {
+  const canvas = document.createElement('canvas')
+  canvas.width = 1024
+  canvas.height = 512
+  const ctx = canvas.getContext('2d')
+  if (ctx && typeof ctx.createRadialGradient === 'function' && typeof ctx.createLinearGradient === 'function' && typeof ctx.fillRect === 'function') {
+    ctx.fillStyle = 'rgba(0, 0, 0, 0)'
+    ctx.fillRect(0, 0, 1024, 512)
+
+    // Galactic core bulge
+    const coreGrad = ctx.createRadialGradient(512, 256, 10, 512, 256, 210)
+    coreGrad.addColorStop(0, 'rgba(235, 212, 180, 0.42)')
+    coreGrad.addColorStop(0.25, 'rgba(180, 195, 225, 0.22)')
+    coreGrad.addColorStop(0.6, 'rgba(100, 130, 180, 0.10)')
+    coreGrad.addColorStop(1, 'rgba(0, 0, 0, 0)')
+    ctx.fillStyle = coreGrad
+    ctx.fillRect(0, 0, 1024, 512)
+
+    // Galactic plane band
+    const bandGrad = ctx.createLinearGradient(0, 160, 0, 352)
+    bandGrad.addColorStop(0, 'rgba(0, 0, 0, 0)')
+    bandGrad.addColorStop(0.3, 'rgba(80, 110, 160, 0.08)')
+    bandGrad.addColorStop(0.5, 'rgba(170, 190, 225, 0.16)')
+    bandGrad.addColorStop(0.7, 'rgba(90, 120, 170, 0.08)')
+    bandGrad.addColorStop(1, 'rgba(0, 0, 0, 0)')
+    ctx.fillStyle = bandGrad
+    ctx.fillRect(0, 160, 1024, 192)
+
+    // Procedural dust clouds & absorption lanes
+    let seed = 0x67616c61
+    const random = () => { seed = (Math.imul(seed, 1664525) + 1013904223) >>> 0; return seed / 4294967296 }
+    for (let i = 0; i < 90; i++) {
+      const cx = random() * 1024
+      const distFromCenter = Math.abs(cx - 512) / 512
+      const cy = 256 + (random() * 2 - 1) * 35 * (1 - distFromCenter * 0.5)
+      const radius = 30 + random() * 70
+      const cloudGrad = ctx.createRadialGradient(cx, cy, 2, cx, cy, radius)
+      const isWarm = random() > 0.4
+      const alpha = (0.05 + random() * 0.12) * (1 - distFromCenter * 0.45)
+      if (isWarm) {
+        cloudGrad.addColorStop(0, `rgba(220, 195, 170, ${alpha})`)
+        cloudGrad.addColorStop(1, 'rgba(0, 0, 0, 0)')
+      } else {
+        cloudGrad.addColorStop(0, `rgba(130, 170, 220, ${alpha})`)
+        cloudGrad.addColorStop(1, 'rgba(0, 0, 0, 0)')
+      }
+      ctx.fillStyle = cloudGrad
+      ctx.beginPath()
+      ctx.arc(cx, cy, radius, 0, Math.PI * 2)
+      ctx.fill()
+    }
+
+    // Great rift / dark dust absorption lanes
+    for (let i = 0; i < 35; i++) {
+      const rx = 350 + random() * 320
+      const ry = 256 + (random() * 2 - 1) * 16
+      const rad = 15 + random() * 30
+      const darkGrad = ctx.createRadialGradient(rx, ry, 0, rx, ry, rad)
+      darkGrad.addColorStop(0, 'rgba(2, 5, 11, 0.28)')
+      darkGrad.addColorStop(1, 'rgba(2, 5, 11, 0)')
+      ctx.fillStyle = darkGrad
+      ctx.beginPath()
+      ctx.arc(rx, ry, rad, 0, Math.PI * 2)
+      ctx.fill()
+    }
+  }
+  const texture = new CanvasTexture(canvas)
+  texture.colorSpace = SRGBColorSpace
+  const geometry = new SphereGeometry(140, 48, 32)
+  const material = new MeshBasicMaterial({
+    map: texture,
+    side: BackSide,
+    transparent: true,
+    opacity: 0.85,
+    blending: AdditiveBlending,
+    depthWrite: false,
+  })
+  const mesh = new Mesh(geometry, material)
+  mesh.rotation.set(0.65, 0.35, 0.85)
+  mesh.renderOrder = -200
+  return { mesh, geometry, material, texture }
+}
+
+/** Procedural celestial starfield with multi-magnitude stars, Gaussian point shaders and additive blending. */
 function createSpace() {
   let seed = 0x4d415253
   const random = () => { seed = (Math.imul(seed, 1664525) + 1013904223) >>> 0; return seed / 4294967296 }
   const positions: number[] = [], colors: number[] = [], sizes: number[] = []
-  for (let index = 0; index < 3200; index++) {
-    const z = random() * 2 - 1, longitude = random() * Math.PI * 2
-    const radial = Math.sqrt(1 - z * z)
-    positions.push(Math.cos(longitude) * radial * 90, z * 90, Math.sin(longitude) * radial * 90)
-    const brightness = 0.15 + random() ** 3 * 0.7, warmth = random()
-    colors.push(brightness * (0.85 + warmth * 0.15), brightness * 0.93, brightness * (1 - warmth * 0.12))
-    sizes.push(0.7 + random() ** 5 * 2.1)
+
+  // 1. Bright anchor stars with realistic spectral tints (Sirius, Betelgeuse, Vega, Arcturus, Rigel)
+  const anchorTints: [number, number, number][] = [
+    [0.78, 0.88, 1.0],  // Sirius / Vega blue-white
+    [1.0, 0.94, 0.82],  // Solar warm white
+    [1.0, 0.72, 0.45],  // Betelgeuse / Aldebaran orange-red
+    [1.0, 0.86, 0.58],  // Arcturus golden amber
+    [0.72, 0.82, 1.0],  // Rigel electric cyan-blue
+  ]
+  for (let i = 0; i < 110; i++) {
+    const z = random() * 2 - 1, lon = random() * Math.PI * 2
+    const r = Math.sqrt(1 - z * z)
+    positions.push(Math.cos(lon) * r * 95, z * 95, Math.sin(lon) * r * 95)
+    const tint = anchorTints[Math.floor(random() * anchorTints.length)]
+    const brightness = 0.85 + random() * 0.15
+    colors.push(tint[0] * brightness, tint[1] * brightness, tint[2] * brightness)
+    sizes.push(3.4 + random() * 1.8)
   }
+
+  // 2. Medium stars across the celestial sphere
+  for (let i = 0; i < 900; i++) {
+    const z = random() * 2 - 1, lon = random() * Math.PI * 2
+    const r = Math.sqrt(1 - z * z)
+    positions.push(Math.cos(lon) * r * 95, z * 95, Math.sin(lon) * r * 95)
+    const warmth = random()
+    const brightness = 0.55 + random() * 0.35
+    colors.push(brightness * (0.88 + warmth * 0.12), brightness * 0.94, brightness * (1 - warmth * 0.15))
+    sizes.push(1.8 + random() * 1.3)
+  }
+
+  // 3. Dense faint stellar field concentrated towards the galactic disk
+  const galacticTilt = 0.65
+  for (let i = 0; i < 7500; i++) {
+    let z = (random() * 2 - 1)
+    if (random() > 0.35) {
+      z = (random() * 2 - 1) ** 3 * 0.55
+    }
+    const lon = random() * Math.PI * 2
+    const r = Math.sqrt(Math.max(0, 1 - z * z))
+    const x0 = Math.cos(lon) * r * 95
+    const y0 = z * 95
+    const z0 = Math.sin(lon) * r * 95
+    const y1 = y0 * Math.cos(galacticTilt) - z0 * Math.sin(galacticTilt)
+    const z1 = y0 * Math.sin(galacticTilt) + z0 * Math.cos(galacticTilt)
+    positions.push(x0, y1, z1)
+
+    const brightness = 0.18 + random() ** 2 * 0.45
+    const warmth = random()
+    colors.push(brightness * (0.85 + warmth * 0.15), brightness * 0.92, brightness * (1 - warmth * 0.18))
+    sizes.push(0.9 + random() * 0.8)
+  }
+
   const geometry = new BufferGeometry()
   geometry.setAttribute('position', new Float32BufferAttribute(positions, 3))
   geometry.setAttribute('color', new Float32BufferAttribute(colors, 3))
   geometry.setAttribute('starSize', new Float32BufferAttribute(sizes, 1))
   const material = new ShaderMaterial({
-    transparent: false, depthWrite: false,
-    vertexShader: 'attribute vec3 color; attribute float starSize; varying vec3 tint; void main(){ tint=color; gl_Position=projectionMatrix*modelViewMatrix*vec4(position,1.0); gl_PointSize=starSize; }',
-    fragmentShader: 'varying vec3 tint; void main(){ float r=length(gl_PointCoord-vec2(0.5)); if(r>0.5)discard; gl_FragColor=vec4(tint*(1.0-smoothstep(0.05,0.5,r)),1.0); }',
+    transparent: true,
+    depthWrite: false,
+    blending: AdditiveBlending,
+    vertexShader: 'attribute vec3 color; attribute float starSize; varying vec3 tint; void main(){ tint=color; vec4 mv=modelViewMatrix*vec4(position,1.0); gl_Position=projectionMatrix*mv; gl_PointSize=starSize*1.35; }',
+    fragmentShader: 'varying vec3 tint; void main(){ vec2 c=gl_PointCoord-vec2(0.5); float d=dot(c,c); if(d>0.25)discard; float a=exp(-d*28.0)+exp(-d*7.0)*0.35; gl_FragColor=vec4(tint*a, a); }',
   })
-  // BufferGeometry is used once; the renderer never regenerates the sky per frame.
   return { geometry, material }
 }
 
@@ -147,6 +276,8 @@ export function createGeographicMarsGlobe(host: HTMLElement, onStatus: (status: 
   scene.add(new Mesh(bodyGeometry, bodyMaterial))
   const sun = new DirectionalLight(0xfff5e7, 2.5); sun.position.set(-4, 2, 4)
   scene.add(new HemisphereLight(0xc4d8eb, 0x030509, 0.3), sun)
+  const milkyWay = createMilkyWay()
+  scene.add(milkyWay.mesh)
   const sky = createSpace()
   const stars = new Points(sky.geometry, sky.material)
   stars.renderOrder = -100
@@ -417,7 +548,7 @@ export function createGeographicMarsGlobe(host: HTMLElement, onStatus: (status: 
       renderer.domElement.removeEventListener('pointerdown', pointerDown); renderer.domElement.removeEventListener('pointermove', pointerMove); renderer.domElement.removeEventListener('pointerup', pointerUp); renderer.domElement.removeEventListener('pointerleave', pointerLeave); renderer.domElement.removeEventListener('webglcontextlost', contextLost)
       renderer.domElement.removeEventListener('wheel', wheel, true)
       for (const marker of markers) for (const sprite of [marker.sprite, marker.label]) { sprite.material.map?.dispose(); sprite.material.dispose() }
-      bodyGeometry.dispose(); bodyMaterial.dispose(); sky.geometry.dispose(); sky.material.dispose(); rimGeometry.dispose(); rimMaterial.dispose()
+      bodyGeometry.dispose(); bodyMaterial.dispose(); sky.geometry.dispose(); sky.material.dispose(); milkyWay.geometry.dispose(); milkyWay.material.dispose(); milkyWay.texture.dispose(); rimGeometry.dispose(); rimMaterial.dispose()
       renderer.dispose(); renderer.forceContextLoss(); renderer.domElement.remove()
     },
   }

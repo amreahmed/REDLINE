@@ -1,10 +1,11 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import type { EndpointRole, MissionSelection, ScienceTarget, TargetId } from '../../features/mission/types'
 import type { GridSelection } from '../../features/mission/gridSelection'
 import type { PlanningTerrainState } from '../../features/mission/useGridPlanning'
 import type { useDistanceRouting } from '../../features/routing/useDistanceRouting'
 import type { useTerrainRouting } from '../../features/routing/useTerrainRouting'
 import type { TerrainProfile } from '../../features/terrain/modelTypes'
+import type { TerrainOverlayMode } from '../../features/map/terrainModelOverlay'
 import { terrainModelReport } from '../../features/routing/terrainModelReport'
 import { useTravelTime } from '../../features/routing/useTravelTime'
 import { travelTimeReport } from '../../features/routing/travelTimeReport'
@@ -100,7 +101,23 @@ export function MissionPlanningExperience({
   const isCalculating = distanceRouting.state.phase === 'loading' || terrainRouting.state.phase === 'loading'
 
   const selectedTerrainRoute = terrainRouting.state.phase === 'ready' ? terrainRouting.state.comparison[terrainRouting.selected] : null
+  const selectedDistanceRoute = distanceRouting.routes.find(r => r.id === distanceRouting.selectedId) ?? distanceRouting.routes[0]
   const travel = useTravelTime(terrainRouting.analysis, terrainRouting.state.phase === 'ready' ? terrainRouting.state.comparison : null)
+
+  // Automatically ensure the HRSC DEM is loaded so the A* terrain route (orange line) is ready to calculate
+  useEffect(() => {
+    if (terrainRouting.data.phase === 'idle') {
+      void terrainRouting.load()
+    }
+  }, [terrainRouting])
+
+  let rangeLabel: string | null = null
+  if (terrainRouting.analysis && !['none', 'traversability', 'explored'].includes(terrainRouting.overlay)) {
+    const values = terrainRouting.overlay === 'elevation' ? terrainRouting.analysis.grid.values : terrainRouting.overlay === 'slope' ? terrainRouting.analysis.slopeDeg : terrainRouting.overlay === 'roughness' ? terrainRouting.analysis.roughnessM : terrainRouting.analysis.shapeM
+    let min = Infinity, max = -Infinity
+    for (let node = 0; node < values.length; node++) if (terrainRouting.analysis.grid.valid[node] && Number.isFinite(values[node])) { min = Math.min(min, values[node]); max = Math.max(max, values[node]) }
+    rangeLabel = Number.isFinite(min) ? `${min.toFixed(2)} to ${max.toFixed(2)} ${terrainRouting.overlay === 'slope' ? '°' : 'm'}` : 'No supported values'
+  }
 
   // Presets
   const applyPreset = (oR: number, oC: number, dR: number, dC: number) => {
@@ -110,6 +127,9 @@ export function MissionPlanningExperience({
     setOriginCol(String(oC))
     setDestRow(String(dR))
     setDestCol(String(dC))
+    if (terrainRouting.data.phase === 'idle') {
+      void terrainRouting.load()
+    }
   }
 
   const applyRoverPreset = (preset: 'standard' | 'rugged') => {
@@ -139,11 +159,30 @@ export function MissionPlanningExperience({
   }
 
   const handleCalculateAll = async () => {
-    if (terrainRouting.data.phase === 'ready') {
-      terrainRouting.setVisible(true)
-      await terrainRouting.calculate()
+    if (terrainRouting.data.phase !== 'ready') {
+      await terrainRouting.load()
     }
+    terrainRouting.setVisible(true)
+    terrainRouting.selectRoute('terrain')
+    await Promise.all([
+      terrainRouting.calculate(),
+      distanceRouting.calculate(),
+    ])
+    setActiveStage('results')
+  }
+
+  const handleCalculateDistance = async () => {
     await distanceRouting.calculate()
+    setActiveStage('results')
+  }
+
+  const handleCalculateTerrain = async () => {
+    if (terrainRouting.data.phase !== 'ready') {
+      await terrainRouting.load()
+    }
+    terrainRouting.setVisible(true)
+    terrainRouting.selectRoute('terrain')
+    await terrainRouting.calculate()
     setActiveStage('results')
   }
 
@@ -194,7 +233,7 @@ export function MissionPlanningExperience({
           onClick={() => setActiveStage('results')}
           disabled={!hasResults}
         >
-          <span className="stage-num">4</span>
+          <span className="stage-num">{hasResults ? '✓' : '4'}</span>
           <span className="stage-label">Results</span>
         </button>
       </nav>
@@ -387,6 +426,9 @@ export function MissionPlanningExperience({
             {distanceRouting.waypoint && (
               <p className="helper status-text">Active Waypoint W: Row {distanceRouting.waypoint.row}, Col {distanceRouting.waypoint.column}</p>
             )}
+            {distanceRouting.waypointNotice && (
+              <p className="helper" role="status">{distanceRouting.waypointNotice}</p>
+            )}
           </details>
 
           {/* Sourced Feature References (Jezero, Belva, Neretva) */}
@@ -537,6 +579,20 @@ export function MissionPlanningExperience({
             </button>
           </details>
 
+          {/* Endpoint Mapping & Coverage */}
+          <details className="planning-card selection-guidance">
+            <summary>Endpoint mapping &amp; DEM coverage</summary>
+            <p className="helper">CTX longitude/latitude selects containing HRSC cell. Routing uses that HRSC native center.</p>
+            {(['originPoint', 'destinationPoint'] as const).map((key, index) => (
+              <p className="helper" key={key}>
+                {index === 0 ? 'HRSC origin' : 'HRSC destination'}:{' '}
+                {terrainRouting[key]
+                  ? `Row ${terrainRouting[key]!.row}, Col ${terrainRouting[key]!.column}; ${terrainRouting[key]!.lon.toFixed(6)}°E, ${terrainRouting[key]!.lat.toFixed(6)}°N`
+                  : 'Choose a covered endpoint in Step 1.'}
+              </p>
+            ))}
+          </details>
+
           <p className="context-qualification">
             Hypothetical DEM-based model. Physical traversability and human safety are not validated.
           </p>
@@ -558,7 +614,7 @@ export function MissionPlanningExperience({
           <div className="planning-section-header">
             <div>
               <h3 id="stage-calc-heading" className="planning-section-title">Calculate &amp; Compare Routes</h3>
-              <p className="helper">Run pathfinding algorithms to find the optimal path.</p>
+              <p className="helper">Run pathfinding algorithms to find optimal trajectories.</p>
             </div>
           </div>
 
@@ -574,13 +630,17 @@ export function MissionPlanningExperience({
                 <dd>{gridSelection.destination ? `Row ${gridSelection.destination.row}, Col ${gridSelection.destination.column}` : 'None chosen'}</dd>
               </div>
               <div>
+                <dt>Waypoint</dt>
+                <dd>{distanceRouting.waypoint ? `Row ${distanceRouting.waypoint.row}, Col ${distanceRouting.waypoint.column}` : 'None set (direct route)'}</dd>
+              </div>
+              <div>
                 <dt>Terrain Model</dt>
                 <dd>{terrainRouting.data.phase === 'ready' ? 'HRSC 50m DEM Active' : 'Distance-Only (DEM not loaded)'}</dd>
               </div>
             </dl>
           </div>
 
-          {/* Primary Calculate CTA */}
+          {/* Primary Calculate CTA Block */}
           <div className="calculation-cta-block">
             <button
               type="button"
@@ -591,14 +651,41 @@ export function MissionPlanningExperience({
               {isCalculating
                 ? 'Computing A* paths in background…'
                 : terrainRouting.data.phase === 'ready'
-                ? '⚡ Calculate & Compare Routes (Distance vs Terrain)'
+                ? '⚡ Calculate All Routes (Distance & Terrain Cost)'
                 : '⚡ Calculate Distance-Optimal Route'}
             </button>
+
+            {terrainRouting.data.phase === 'ready' && (
+              <div className="flex gap-2 mt-2">
+                <button
+                  type="button"
+                  className="grid-button flex-1"
+                  disabled={!hasGridEndpoints || isCalculating}
+                  onClick={handleCalculateTerrain}
+                >
+                  Compare DEM Routes (HRSC)
+                </button>
+                <button
+                  type="button"
+                  className="grid-button flex-1"
+                  disabled={!hasGridEndpoints || isCalculating}
+                  onClick={handleCalculateDistance}
+                >
+                  Calculate CTX Grid Paths
+                </button>
+              </div>
+            )}
+
             {!hasGridEndpoints && (
               <p className="source-warning">Select both origin and destination endpoints in Step 1 to calculate routes.</p>
             )}
+            {distanceRouting.blocker && <p className="helper">{distanceRouting.blocker}</p>}
+            {terrainRouting.blocker && <p className="helper">{terrainRouting.blocker}</p>}
+            {distanceRouting.state.phase === 'error' && <p className="source-warning" role="alert">{distanceRouting.state.reason}</p>}
+            {terrainRouting.state.phase === 'error' && <p className="source-warning" role="alert">{terrainRouting.state.reason}</p>}
+
             {isCalculating && (
-              <div className="flex gap-2 justify-center mt-2">
+              <div className="flex gap-2 justify-center mt-3">
                 <button type="button" className="grid-button" onClick={() => { distanceRouting.cancel(); terrainRouting.cancel(); }}>
                   Cancel calculation
                 </button>
@@ -612,6 +699,11 @@ export function MissionPlanningExperience({
             <button type="button" className="grid-button" onClick={() => setActiveStage('rover')}>
               ← Back to Rover Profile
             </button>
+            {hasResults && (
+              <button type="button" className="open-region-button" onClick={() => setActiveStage('results')}>
+                View Results &amp; Comparison →
+              </button>
+            )}
           </div>
         </section>
       )}
@@ -622,89 +714,199 @@ export function MissionPlanningExperience({
           <div className="planning-section-header">
             <div>
               <h3 id="stage-results-heading" className="planning-section-title">Route Comparison &amp; Review</h3>
-              <p className="helper">Compare metrics between distance-optimal and terrain-aware paths.</p>
+              <p className="helper">Select any calculated path to display on the map and compare metrics.</p>
             </div>
             <button type="button" className="grid-button" onClick={handleDownloadReport}>
               Export JSON Report
             </button>
           </div>
 
-          {/* Route Selection Cards */}
-          <div className="route-comparison-cards">
-            {/* Distance-Optimal Route Card */}
-            {distanceRouting.routes.length > 0 && (
-              <div
-                className={`route-result-card ${distanceRouting.selectedId === 'shortest' && !terrainRouting.visible ? 'is-selected' : ''}`}
-                onClick={() => { terrainRouting.setVisible(false); distanceRouting.selectRoute('shortest'); }}
-                role="button"
-                tabIndex={0}
-              >
-                <div className="card-badge distance-badge">Shortest Path</div>
-                <h4 className="result-name">Distance-Optimal Path</h4>
-                <div className="result-metrics-grid">
-                  <div>
-                    <span className="metric-label">Physical Distance</span>
-                    <span className="metric-value">{distance(distanceRouting.routes[0].distanceM)}</span>
-                  </div>
-                  <div>
-                    <span className="metric-label">Grid Cells</span>
-                    <span className="metric-value">{distanceRouting.routes[0].visitedCells}</span>
-                  </div>
-                </div>
-              </div>
-            )}
+          {/* ALL 4 A* ROUTE OPTIONS WITH LINE KEYS */}
+          <div className="planning-card">
+            <h4 className="card-heading">Available A* Trajectory Options</h4>
+            <p className="helper">Click any route option to emphasize on the map:</p>
 
-            {/* Terrain-Optimal Route Card */}
-            {terrainRouting.state.phase === 'ready' && selectedTerrainRoute && (
-              <div
-                className={`route-result-card ${terrainRouting.visible ? 'is-selected' : ''}`}
-                onClick={() => { terrainRouting.setVisible(true); terrainRouting.selectRoute('terrain'); }}
-                role="button"
-                tabIndex={0}
-              >
-                <div className="card-badge terrain-badge">Terrain-Aware</div>
-                <h4 className="result-name">HRSC DEM Low-Cost Path</h4>
-                <div className="result-metrics-grid">
-                  <div>
-                    <span className="metric-label">Physical Distance</span>
-                    <span className="metric-value">{distance(selectedTerrainRoute.horizontalDistanceM)}</span>
-                  </div>
-                  <div>
-                    <span className="metric-label">Model Cost</span>
-                    <span className="metric-value">{selectedTerrainRoute.accumulatedCostM.toFixed(1)} cost-m</span>
-                  </div>
-                  <div>
-                    <span className="metric-label">Max Edge Grade</span>
-                    <span className="metric-value">{metric(selectedTerrainRoute.maxGradeDeg, '°')}</span>
-                  </div>
-                  <div>
-                    <span className="metric-label">Hazard Cells Avoided</span>
-                    <span className="metric-value">{selectedTerrainRoute.blockedSearchCells}</span>
-                  </div>
-                </div>
-              </div>
+            <div className="route-options" role="group" aria-label="Select A* route">
+              {/* HRSC DEM 50m Terrain Routes (Winding A* & Permitted Distance) */}
+              {terrainRouting.state.phase === 'ready' && (['terrain', 'distance'] as const).map(role => {
+                const route = terrainRouting.state.phase === 'ready' ? terrainRouting.state.comparison[role] : null
+                if (!route) return null
+                const isSelected = terrainRouting.visible && terrainRouting.selected === role
+                return (
+                  <button
+                    type="button"
+                    className="route-option"
+                    key={role}
+                    aria-pressed={isSelected}
+                    onClick={() => {
+                      terrainRouting.setVisible(true)
+                      terrainRouting.selectRoute(role)
+                    }}
+                  >
+                    <span className={`route-line-key ${role === 'terrain' ? 'route-line-key-via' : ''}`} aria-hidden="true" />
+                    <span>
+                      <strong>{role === 'terrain' ? 'Lower terrain cost (Winding A* · Orange Line)' : 'Shortest permitted distance (Distance A* · Cyan Line)'}</strong>
+                      <span>{distance(route.horizontalDistanceM)} · {route.accumulatedCostM.toFixed(1)} cost-m (HRSC terrain model)</span>
+                    </span>
+                  </button>
+                )
+              })}
+
+              {/* CTX 6m Distance Grid Routes */}
+              {distanceRouting.routes.map(route => {
+                const isSelected = (!terrainRouting.visible || terrainRouting.state.phase !== 'ready') && distanceRouting.selectedId === route.id
+                return (
+                  <button
+                    className="route-option"
+                    type="button"
+                    key={route.id}
+                    aria-pressed={isSelected}
+                    onClick={() => {
+                      distanceRouting.selectRoute(route.id)
+                      if (terrainRouting.state.phase === 'ready') {
+                        terrainRouting.setVisible(true)
+                        terrainRouting.selectRoute('distance')
+                      } else {
+                        terrainRouting.setVisible(false)
+                      }
+                    }}
+                  >
+                    <span className={`route-line-key ${route.id === 'via' ? 'route-line-key-via' : ''}`} aria-hidden="true" />
+                    <span>
+                      <strong>{route.id === 'shortest' ? 'Shortest grid path (Distance-Only CTX)' : 'Via your waypoint (CTX Grid)'}</strong>
+                      <span>{distance(route.distanceM)} · {route.points.length.toLocaleString()} cell visits (CTX distance model)</span>
+                    </span>
+                  </button>
+                )
+              })}
+            </div>
+
+            {!hasResults && (
+              <p className="helper" role="status">No routes calculated yet. Go to Stage 3 (Calculate) to run the A* routing engine.</p>
             )}
           </div>
 
-          {/* Travel Time & Mission Metrics */}
-          {terrainRouting.state.phase === 'ready' && (
+          {/* ACTIVE ROUTE METRICS */}
+          {terrainRouting.visible && selectedTerrainRoute && (
             <div className="planning-card">
-              <TravelTimePanel travel={travel} selected={terrainRouting.visible ? 'terrain' : 'distance'} />
+              <div className="scientific-summary-line">
+                <h4 className="card-heading">
+                  {terrainRouting.selected === 'terrain' ? 'Lower Terrain Cost Route Metrics' : 'Shortest Permitted Distance Route Metrics'}
+                </h4>
+                <span className="status-label" data-status="verified">HRSC DEM 50m</span>
+              </div>
+              <dl className="terrain-route-metrics">
+                <dt>Horizontal distance</dt><dd>{distance(selectedTerrainRoute.horizontalDistanceM)}</dd>
+                <dt>Accumulated model cost</dt><dd>{selectedTerrainRoute.accumulatedCostM.toFixed(1)} cost-m</dd>
+                <dt>Maximum edge grade</dt><dd>{metric(selectedTerrainRoute.maxGradeDeg, '°')}</dd>
+                <dt>Mean absolute edge grade</dt><dd>{metric(selectedTerrainRoute.meanAbsGradeDeg, '°')}</dd>
+                <dt>Maximum / mean DEM gradient</dt><dd>{metric(selectedTerrainRoute.maxSlopeDeg, '°')} / {metric(selectedTerrainRoute.meanSlopeDeg, '°')}</dd>
+                <dt>Maximum / mean roughness</dt><dd>{metric(selectedTerrainRoute.maxRoughnessM, 'm')} / {metric(selectedTerrainRoute.meanRoughnessM, 'm')}</dd>
+                <dt>Cell visits / expanded cells</dt><dd>{selectedTerrainRoute.nodes.length} / {selectedTerrainRoute.exploredNodes.length}</dd>
+                <dt>Blocked / unknown search cells</dt><dd>{selectedTerrainRoute.blockedSearchCells} / {selectedTerrainRoute.unknownSearchCells}</dd>
+                <dt>Unknown-support segments</dt><dd>{selectedTerrainRoute.unknownSegments}</dd>
+              </dl>
+              <p className="helper">Cost-m means cost-equivalent metres, a hypothetical preference score. It is not energy, travel time or safety.</p>
             </div>
           )}
 
-          {/* Scientific Disclaimer */}
-          <div className="planning-card qualification-card">
-            <h4 className="card-heading">Scientific qualification &amp; evidence</h4>
+          {!terrainRouting.visible && selectedDistanceRoute && (
+            <div className="planning-card">
+              <div className="scientific-summary-line">
+                <h4 className="card-heading">
+                  {distanceRouting.selectedId === 'shortest' ? 'Shortest Grid Path Metrics' : 'Waypoint Route Metrics'}
+                </h4>
+                <span className="status-label" data-status="partial">CTX Grid 6m</span>
+              </div>
+              <dl className="terrain-route-metrics">
+                <dt>Physical distance</dt><dd>{distance(selectedDistanceRoute.distanceM)}</dd>
+                <dt>Connected cell visits</dt><dd>{selectedDistanceRoute.points.length.toLocaleString()}</dd>
+                <dt>Native cell visits</dt><dd>{selectedDistanceRoute.visitedCells.toLocaleString()}</dd>
+                <dt>Origin cell</dt><dd>{gridSelection.origin ? `R${gridSelection.origin.row}, C${gridSelection.origin.column}` : '—'}</dd>
+                <dt>Destination cell</dt><dd>{gridSelection.destination ? `R${gridSelection.destination.row}, C${gridSelection.destination.column}` : '—'}</dd>
+              </dl>
+            </div>
+          )}
+
+          {/* TERRAIN OVERLAY CONTROLS (when HRSC loaded) */}
+          {terrainRouting.analysis && (
+            <div className="planning-card">
+              <h4 className="card-heading">Terrain raster overlay</h4>
+              <label className="field-label" htmlFor="plan-terrain-overlay">Select surface visualization</label>
+              <select
+                id="plan-terrain-overlay"
+                value={terrainRouting.overlay}
+                onChange={e => terrainRouting.setOverlay(e.target.value as TerrainOverlayMode)}
+              >
+                <option value="none">Imagery only</option>
+                <option value="elevation">Provider sphere-relative height</option>
+                <option value="slope">DEM gradient (°)</option>
+                <option value="roughness">Local roughness (m)</option>
+                <option value="shape">Local shape difference (m)</option>
+                <option value="traversability">Model traversability</option>
+                <option value="explored" disabled={!selectedTerrainRoute}>A* expanded cells</option>
+              </select>
+              {terrainRouting.overlay === 'traversability' ? (
+                <div className="terrain-legend" aria-label="Model traversability legend">
+                  {['Unknown', 'Traversable', 'High cost', 'Blocked'].map((label, index) => (
+                    <span key={label}><i className={`terrain-swatch terrain-state-${index}`} aria-hidden="true" />{label}</span>
+                  ))}
+                </div>
+              ) : terrainRouting.overlay !== 'none' && (
+                <p className="helper terrain-raster-key">
+                  {terrainRouting.overlay === 'explored'
+                    ? 'Blue cells: expanded by the selected search.'
+                    : `Blue to warm: ${rangeLabel}. Gray: unknown. One raster pixel per native cell.`}
+                </p>
+              )}
+              <div className="endpoint-actions" style={{ marginTop: '12px' }}>
+                <button
+                  type="button"
+                  className="grid-button"
+                  aria-pressed={terrainRouting.visible}
+                  onClick={() => terrainRouting.setVisible(!terrainRouting.visible)}
+                >
+                  {terrainRouting.visible ? 'Hide HRSC model' : 'Show HRSC model'}
+                </button>
+                <button type="button" className="grid-button" onClick={onOpenPlanning}>
+                  Show terrain on map
+                </button>
+              </div>
+            </div>
+          )}
+
+          {/* TRAVEL TIME PANEL */}
+          {terrainRouting.state.phase === 'ready' && (
+            <div className="planning-card">
+              <TravelTimePanel travel={travel} selected={terrainRouting.visible ? terrainRouting.selected : 'distance'} />
+            </div>
+          )}
+
+          {/* SCIENTIFIC QUALIFICATION & DETAILS */}
+          <details className="planning-card selection-guidance">
+            <summary>Scientific qualification &amp; evidence</summary>
             <p className="helper">
               Model output only. The A* algorithms minimize Euclidean distance and DEM slope/roughness penalties.
               Valid terrain coverage does not guarantee safety. This prototype is not an official NASA navigation instrument.
             </p>
-          </div>
+            {terrainRouting.analysis && (
+              <>
+                <p className="helper">{terrainRouting.analysis.grid.source.qualification}</p>
+                <dl className="source-facts">
+                  <dt>Product</dt><dd>HMC_13E10_DT5</dd>
+                  <dt>Native raster SHA-256</dt><dd className="source-id">{terrainRouting.analysis.grid.source.gridHash}</dd>
+                  <dt>Source evidence SHA-256</dt><dd className="source-id">{terrainRouting.analysis.grid.source.sourceHash}</dd>
+                </dl>
+              </>
+            )}
+          </details>
 
           <div className="stage-actions">
+            <button type="button" className="grid-button" onClick={() => setActiveStage('calculate')}>
+              ← Recalculate
+            </button>
             <button type="button" className="grid-button" onClick={() => setActiveStage('endpoints')}>
-              ← Edit Endpoints
+              Edit Endpoints
             </button>
           </div>
         </section>

@@ -23,24 +23,55 @@
   --warning: #efc382;
   --title-font: "Bahnschrift", "Segoe UI", sans-serif;
 
-  /* Modern Glassmorphism System */
-  --glass-bg: rgba(12, 20, 30, 0.72);
-  --glass-panel: rgba(14, 22, 34, 0.76);
-  --glass-card: rgba(22, 35, 49, 0.55);
-  --glass-card-hover: rgba(30, 48, 68, 0.65);
-  --glass-elevated: rgba(26, 42, 58, 0.75);
-  --glass-border: rgba(255, 255, 255, 0.08);
-  --glass-border-subtle: rgba(255, 255, 255, 0.05);
-  --glass-border-highlight: rgba(131, 215, 223, 0.35);
-  --glass-shadow: 0 16px 40px rgba(0, 0, 0, 0.5), 0 1px 1px rgba(255, 255, 255, 0.06) inset;
-  --glass-card-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
-  --glass-blur: blur(16px);
+  /* Modern Transparent Glass System */
+  --glass-bg: rgba(10, 18, 30, 0.55);
+  --glass-panel: rgba(12, 20, 34, 0.60);
+  --glass-card: rgba(18, 30, 48, 0.36);
+  --glass-card-hover: rgba(28, 48, 72, 0.50);
+  --glass-elevated: rgba(22, 38, 58, 0.52);
+  --glass-border: rgba(255, 255, 255, 0.12);
+  --glass-border-subtle: rgba(255, 255, 255, 0.07);
+  --glass-border-highlight: rgba(131, 215, 223, 0.45);
+  --glass-shadow: 0 16px 40px rgba(0, 0, 0, 0.45), 0 1px 1px rgba(255, 255, 255, 0.08) inset;
+  --glass-card-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+  --glass-blur: blur(20px);
   --radius-panel: 20px;
   --radius-card: 14px;
   --radius-control: 10px;
   --transition-smooth: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
 }
-body { margin: 0; min-width: 0; background: var(--color-space); }
+body {
+  margin: 0;
+  min-width: 0;
+  background-color: #010307;
+  background-image:
+    /* Layer 1: Bright anchor stars */
+    radial-gradient(1.5px 1.5px at 45px 65px, rgba(255, 255, 255, 0.95), transparent),
+    radial-gradient(2px 2px at 190px 145px, rgba(131, 215, 223, 0.95), transparent),
+    radial-gradient(1.5px 1.5px at 330px 85px, rgba(237, 149, 108, 0.9), transparent),
+    radial-gradient(2px 2px at 530px 225px, rgba(255, 255, 255, 0.95), transparent),
+    radial-gradient(1.5px 1.5px at 790px 95px, rgba(200, 230, 255, 0.9), transparent),
+    radial-gradient(2px 2px at 950px 285px, rgba(255, 240, 210, 0.9), transparent),
+    /* Layer 2: Medium stars */
+    radial-gradient(1px 1px at 95px 195px, rgba(255, 255, 255, 0.7), transparent),
+    radial-gradient(1px 1px at 265px 45px, rgba(255, 255, 255, 0.6), transparent),
+    radial-gradient(1px 1px at 435px 175px, rgba(255, 255, 255, 0.75), transparent),
+    radial-gradient(1px 1px at 645px 315px, rgba(255, 255, 255, 0.65), transparent),
+    radial-gradient(1px 1px at 855px 155px, rgba(255, 255, 255, 0.7), transparent),
+    /* Layer 3: Faint stellar dust */
+    radial-gradient(0.75px 0.75px at 135px 115px, rgba(255, 255, 255, 0.45), transparent),
+    radial-gradient(0.75px 0.75px at 385px 295px, rgba(255, 255, 255, 0.4), transparent),
+    radial-gradient(0.75px 0.75px at 715px 55px, rgba(255, 255, 255, 0.5), transparent),
+    /* Deep space nebula clouds */
+    radial-gradient(ellipse 85% 55% at 50% 10%, rgba(18, 34, 54, 0.45), transparent 75%),
+    radial-gradient(ellipse 65% 45% at 80% 70%, rgba(34, 18, 46, 0.28), transparent 60%),
+    radial-gradient(circle 400px at 20% 80%, rgba(15, 30, 48, 0.3), transparent 70%);
+  background-size:
+    400px 400px, 550px 550px, 450px 450px, 700px 700px, 600px 600px, 500px 500px,
+    300px 300px, 350px 350px, 420px 420px, 380px 380px, 460px 460px,
+    200px 200px, 250px 250px, 280px 280px,
+    100% 100%, 100% 100%, 100% 100%;
+}
 button, select, input { font: inherit; }
 button { cursor: pointer; transition: var(--transition-smooth); }
 button:hover { background: var(--glass-card-hover); }
@@ -48,7 +79,14 @@ button:disabled { opacity: .5; cursor: not-allowed; }
 button, a, select, input, summary { -webkit-tap-highlight-color: transparent; }
 button:focus-visible, a:focus-visible, select:focus-visible, input:focus-visible, summary:focus-visible { outline: 2px solid var(--color-science); outline-offset: 3px; }
 [hidden] { display: none !important; }
-.app-shell { height: 100dvh; min-height: 540px; display: flex; flex-direction: column; overflow: hidden; background: var(--color-space); }
+.app-shell {
+  height: 100dvh;
+  min-height: 540px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  background: transparent;
+}
 .app-header {
   flex-shrink: 0;
   height: 68px;
@@ -587,11 +625,11 @@ input[type="number"]:focus, input[type="search"]:focus, input[type="datetime-loc
 }
 .floating-layer-menu {
   position: absolute;
-  top: calc(100% + 10px);
-  right: 0;
+  top: 0;
+  right: calc(100% + 14px);
   width: 320px;
-  max-width: calc(100vw - 32px);
-  max-height: calc(100dvh - 220px);
+  max-width: calc(100vw - 120px);
+  max-height: min(480px, calc(100dvh - 160px));
   display: flex;
   flex-direction: column;
   background: var(--glass-panel);
@@ -600,13 +638,21 @@ input[type="number"]:focus, input[type="search"]:focus, input[type="datetime-loc
   border: 1px solid var(--glass-border);
   border-radius: var(--radius-panel);
   box-shadow: var(--glass-shadow);
-  z-index: 20;
+  z-index: 30;
   overflow: hidden;
   animation: floatIn 0.2s cubic-bezier(0.16, 1, 0.3, 1);
 }
+@media (max-width: 640px) {
+  .floating-layer-menu {
+    right: 0;
+    top: auto;
+    bottom: calc(100% + 10px);
+    max-height: min(380px, calc(100dvh - 180px));
+  }
+}
 @keyframes floatIn {
-  from { opacity: 0; transform: translateY(-8px) scale(0.97); }
-  to { opacity: 1; transform: translateY(0) scale(1); }
+  from { opacity: 0; transform: translateX(8px) scale(0.97); }
+  to { opacity: 1; transform: translateX(0) scale(1); }
 }
 .floating-layer-header {
   display: flex;
